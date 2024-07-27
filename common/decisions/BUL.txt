@@ -189,9 +189,7 @@ BUL_internal_factions = {
 			modifier = {
 				factor = 1.5
 				OR = {
-					BUL_is_communist_stalinist_ai = yes
 					BUL_is_communist_balkan_ai = yes
-					BUL_is_democratic_socialist_ai = yes
 				}
 			}
 		}
@@ -284,9 +282,7 @@ BUL_internal_factions = {
 			modifier = {
 				factor = 1.5
 				OR = {
-					BUL_is_communist_stalinist_ai = yes
 					BUL_is_communist_balkan_ai = yes
-					BUL_is_democratic_socialist_ai = yes
 				}
 			}
 		}
@@ -488,9 +484,7 @@ BUL_internal_factions = {
 			modifier = {
 				factor = 1.5
 				OR = {
-					BUL_is_communist_stalinist_ai = yes
 					BUL_is_communist_balkan_ai = yes
-					BUL_is_democratic_socialist_ai = yes
 				}
 			}
 		}
@@ -576,9 +570,7 @@ BUL_internal_factions = {
 			modifier = {
 				factor = 1.5
 				OR = {
-					BUL_is_communist_stalinist_ai = yes
 					BUL_is_communist_balkan_ai = yes
-					BUL_is_democratic_socialist_ai = yes
 				}
 			}
 		}
@@ -1143,9 +1135,7 @@ BUL_internal_factions = {
 			modifier = {
 				factor = 1.5
 				OR = {
-					BUL_is_communist_stalinist_ai = yes
 					BUL_is_communist_balkan_ai = yes
-					BUL_is_democratic_socialist_ai = yes
 				}
 			}
 		}
@@ -1197,9 +1187,7 @@ BUL_internal_factions = {
 			modifier = {
 				factor = 1.5
 				OR = {
-					BUL_is_communist_stalinist_ai = yes
 					BUL_is_communist_balkan_ai = yes
-					BUL_is_democratic_socialist_ai = yes
 				}
 			}
 		}
@@ -3638,9 +3626,7 @@ BUL_internal_factions = {
 			modifier = {
 				factor = 0
 				OR = {
-					BUL_is_communist_stalinist_ai = yes
 					BUL_is_communist_balkan_ai = yes
-					BUL_is_democratic_socialist_ai = yes
 				}
 			}
 		}
@@ -3719,9 +3705,7 @@ BUL_internal_factions = {
 			modifier = {
 				factor = 0
 				OR = {
-					BUL_is_communist_stalinist_ai = yes
 					BUL_is_communist_balkan_ai = yes
-					BUL_is_democratic_socialist_ai = yes
 				}
 			}
 		}

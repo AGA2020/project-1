@@ -7256,7 +7256,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		visible = {
 			has_completed_focus = SOV_national_academies_of_sciences
 			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_ARM_flag }
-			NOT = { country_exists = ARM }
 		}
 
 		fire_only_once = yes
@@ -7298,7 +7297,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		visible = {
 			has_completed_focus = SOV_national_academies_of_sciences
 			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_AZR_flag }
-			NOT = { country_exists = AZR }
 		}
 
 		fire_only_once = yes
@@ -7340,7 +7338,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		visible = {
 			has_completed_focus = SOV_national_academies_of_sciences
 			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_UZB_flag }
-			NOT = { country_exists = UZB }
 		}
 
 		fire_only_once = yes
@@ -7382,7 +7379,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		visible = {
 			has_completed_focus = SOV_national_academies_of_sciences
 			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_TMS_flag }
-			NOT = { country_exists = TMS }
 		}
 
 		fire_only_once = yes
@@ -7424,7 +7420,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		visible = {
 			has_completed_focus = SOV_national_academies_of_sciences
 			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_KYR_flag }
-			NOT = { country_exists = KYR }
 		}
 
 		fire_only_once = yes
@@ -7466,7 +7461,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		visible = {
 			has_completed_focus = SOV_national_academies_of_sciences
 			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_TAJ_flag }
-			NOT = { country_exists = TAJ }
 		}
 
 		fire_only_once = yes

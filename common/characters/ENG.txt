@@ -199,9 +199,6 @@ characters={
 				original_tag = ENG
 			}
 			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
 			}
 			traits = {
 				army_chief_maneuver_3
@@ -242,9 +239,6 @@ characters={
 				original_tag = ENG
 			}
 			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
 			}
 			
 			traits = {
@@ -430,9 +424,6 @@ characters={
 				original_tag = ENG
 			}
 			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
 			}
 			traits = {
 				military_theorist
@@ -568,9 +559,6 @@ characters={
 				original_tag = ENG
 			}
 			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
 			}
 			traits = {
 				army_chief_offensive_2
@@ -724,9 +712,6 @@ characters={
 				original_tag = ENG
 			}
 			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
 			}
 			traits = {
 				army_regrouping_2
@@ -1005,24 +990,6 @@ characters={
 				small="GFX_idea_generic_army_europe_2"
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = ENG_raymond_briggs
-			ledger = army
-			visible = {
-				has_completed_focus = ENG_eliminate_the_upper_class
-			}
-			available = {
-				has_completed_focus = ENG_eliminate_the_upper_class
-			}
-			allowed = {
-				original_tag = ENG
-			}
-			traits = {
-				military_theorist
-			}
-		}
 	}
 
 	ENG_james_somerville={
@@ -1041,9 +1008,6 @@ characters={
 				original_tag = ENG
 			}
 			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
 			}
 			
 			traits = {
@@ -1516,9 +1480,6 @@ characters={
 				original_tag = ENG
 			}
 			available = {
-				NOT = {
-					has_completed_focus = ENG_eliminate_the_upper_class
-				}
 			}
 			traits = {
 				navy_amphibious_assault_3
@@ -1604,9 +1565,6 @@ characters={
 				if  = {
 					limit  = {
 						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_completed_focus  = ENG_a_change_in_course 
 					}
 				}
 				if  = {

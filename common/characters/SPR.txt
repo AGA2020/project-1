@@ -460,9 +460,6 @@ characters={
 			}
 			available = {
 				has_completed_focus = SPR_demand_ministerial_positions
-				NOT = {
-					has_completed_focus = SPR_crush_the_revolution
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = { tag = SPA }
@@ -1770,9 +1767,6 @@ characters={
 					}
 				}
 				available = {
-					NOT = {
-						has_completed_focus = SPR_communists_in_the_government
-					}
 					custom_trigger_tooltip = {
 						tooltip = SPR_not_nationalist_spain_tt
 						NOT = { tag = SPA }
@@ -2006,9 +2000,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = { tag = SPA }
@@ -2025,32 +2016,6 @@ characters={
 			army={
 				small="GFX_idea_SPR_etelvino_vega"
 			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = SPR_etelvino_vega
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-			}
-			available = {
-				OR = {
-					has_completed_focus = SPR_communists_in_the_government
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_chief_defensive_2 }
-			cost = 100
 		}
 	}
 
@@ -2490,9 +2455,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = { tag = SPA }
@@ -2527,7 +2489,6 @@ characters={
 			available = {
 				OR = {
 					has_completed_focus = SPR_demand_ministerial_positions
-					has_completed_focus = SPR_communists_in_the_government
 				}
 				NOT = {
 					has_completed_focus = SPR_oppose_the_communists
@@ -2603,9 +2564,6 @@ characters={
 					}
 				}
 				available = {
-					NOT = {
-						has_completed_focus = SPR_communists_in_the_government
-					}
 					custom_trigger_tooltip = {
 						tooltip = SPR_not_nationalist_spain_tt
 						NOT = { tag = SPA }
@@ -2664,32 +2622,6 @@ characters={
 				small="GFX_idea_generic_army_europe_6"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = SPR_wilhelm_zaisser
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-			}
-			available = {
-				OR = {
-					has_completed_focus = SPR_communists_in_the_government
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_regrouping_2 }
-			cost = 100
-		}
 	}
 
 	SPR_antonio_escobar_huerta = { # Democratic
@@ -2715,7 +2647,6 @@ characters={
 			}
 			available = {
 				has_completed_focus = SPR_maintain_the_second_republic
-				NOT = { has_completed_focus = SPR_communists_in_the_government }
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = { tag = SPA }
@@ -2751,9 +2682,6 @@ characters={
 					}
 				}
 				available = {
-					NOT = {
-						has_completed_focus = SPR_communists_in_the_government 
-					}
 					custom_trigger_tooltip = {
 						tooltip = SPR_not_nationalist_spain_tt
 						NOT = {
@@ -2832,9 +2760,6 @@ characters={
 					}
 				}
 				available = {
-					NOT = {
-						has_completed_focus = SPR_communists_in_the_government 
-					}
 					custom_trigger_tooltip = {
 						tooltip = SPR_not_nationalist_spain_tt
 						NOT = {
@@ -2919,7 +2844,6 @@ characters={
 				available = {
 					OR = {
 						has_completed_focus = SPR_demand_ministerial_positions 
-						has_completed_focus = SPR_communists_in_the_government 
 					}
 					custom_trigger_tooltip = {
 						tooltip = SPR_not_nationalist_spain_tt
@@ -2999,9 +2923,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government 
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
@@ -3051,9 +2972,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_crush_the_revolution 
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
@@ -3098,9 +3016,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_crush_the_revolution 
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
@@ -3149,9 +3064,6 @@ characters={
 					}
 				}
 				available = {
-					NOT = {
-						has_completed_focus = SPR_communists_in_the_government 
-					}
 					custom_trigger_tooltip = {
 						tooltip = SPR_not_nationalist_spain_tt
 						NOT = {
@@ -3227,9 +3139,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_crush_the_revolution 
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
@@ -3277,9 +3186,6 @@ characters={
 				OR = {
 					has_completed_focus = SPR_demand_ministerial_positions 
 					has_completed_focus = SPR_new_leadership 
-				}
-				NOT = {
-					has_completed_focus = SPR_crush_the_revolution 
 				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
@@ -3376,9 +3282,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government 
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {

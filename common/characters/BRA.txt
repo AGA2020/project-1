@@ -1726,20 +1726,6 @@ characters={
 				large=GFX_portrait_BRA_lampiao
 				small=GFX_portrait_BRA_lampiao_small
 			}
-		}	
-		corps_commander={
-			traits={ trickster guerilla_fighter ranger }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=-1
-			visible = {
-				has_completed_focus = BRA_sway_the_cangaco
-				has_government = communism
-			}
-
 		}
 	}
 

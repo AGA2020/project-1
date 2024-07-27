@@ -59,13 +59,6 @@ country_event = {
 	option = {
 		name = tfv_south_africa.1.c # ENG compromises
 		trigger = {
-			KEN = { exists = no }
-			ZIM = { exists = no }
-			BOT = { exists = no }
-			ZAM = { exists = no }
-			MLW = { exists = no }
-			TZN = { exists = no }
-			UGA = { exists = no }
 		}
 		
 		ai_chance = {
@@ -130,21 +123,6 @@ country_event = {
 				}
 			}
 			puppet = BOT
-		}
-		if = {
-			limit = { 
-				ZAM = { exists = no }
-			}
-			transfer_state = 771
-		}
-		if = {
-			limit = { 
-				ZAM = {
-					exists = yes
-					is_subject_of = ENG
-				}
-			}
-			puppet = ZAM
 		}
 		if = {
 			limit = { 
@@ -240,69 +218,6 @@ country_event = {
 	
 	option = {
 		name = tfv_south_africa.4.a
-		if = {
-			limit = { 
-				BOT = { exists = no }	
-			}
-			release = BOT
-			ENG = {
-				puppet = BOT
-			}
-		}
-		if = {
-			limit = { 
-				ZIM = { exists = no }	
-			}
-			release = ZIM
-			ENG = {
-				puppet = ZIM
-			}
-		}
-		if = {
-			limit = { 
-				ZAM = { exists = no }	
-			}
-			release = ZAM
-			ENG = {
-				puppet = ZAM
-			}
-		}
-		if = {
-			limit = { 
-				MLW = { exists = no }	
-			}
-			release = MLW
-			ENG = {
-				puppet = MLW
-			}
-		}
-		if = {
-			limit = { 
-				TZN = { exists = no }	
-			}
-			release = TZN
-			ENG = {
-				puppet = TZN
-			}
-		}
-		if = {
-			limit = { 
-				KEN = { exists = no } 
-			}
-			release = KEN			
-			ENG = { 
-				puppet = KEN 
-			}
-		}
-		if = {
-			limit = { 
-				UGA = { exists = no }	
-			}
-			release = UGA
-			ENG = {
-				puppet = UGA
-			}
-		}
 		SAF = { transfer_state = 542 }
 		hidden_effect = {
 			news_event = { id = news.261 hours = 6 }
