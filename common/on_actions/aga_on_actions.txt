@@ -1,0 +1,18 @@
+on_actions = {	
+	on_startup = {
+		effect = {
+			if = { 
+				limit = { 
+					AND = { 
+						AST = { is_ai = yes } 
+						SAF = { is_ai = yes } 
+						CAN = { is_ai = yes } 
+						RAJ = { is_ai = yes } 
+						NZL = { is_ai = yes } 
+					}
+				}
+				ENG = { add_research_slot = 1 }
+			}
+		}
+	}
+}

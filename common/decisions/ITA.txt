@@ -2752,9 +2752,6 @@ ITA_balance_of_power_category = {
 
 		visible = {
 			OR = {
-				has_completed_focus = ITA_italo_balbo_focus
-				has_completed_focus = ITA_dino_grandi_focus
-				has_completed_focus = ITA_monarchia_d_italia
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -2859,8 +2856,6 @@ ITA_balance_of_power_category = {
 			original_tag = ITA
 			has_civil_war = no
 			OR = {
-				has_completed_focus = ITA_italo_balbo_focus
-				has_completed_focus = ITA_dino_grandi_focus
 				has_completed_focus = ITA_culto_del_duce
 			}
 		}
@@ -2960,9 +2955,6 @@ ITA_balance_of_power_category = {
 
 		visible = {
 			OR = {
-				has_completed_focus = ITA_italo_balbo_focus
-				has_completed_focus = ITA_dino_grandi_focus
-				has_completed_focus = ITA_monarchia_d_italia
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -3028,9 +3020,6 @@ ITA_balance_of_power_category = {
 
 		visible = {
 			OR = {
-				has_completed_focus = ITA_italo_balbo_focus
-				has_completed_focus = ITA_dino_grandi_focus
-				has_completed_focus = ITA_monarchia_d_italia
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -3096,9 +3085,6 @@ ITA_balance_of_power_category = {
 
 		visible = {
 			OR = {
-				has_completed_focus = ITA_italo_balbo_focus
-				has_completed_focus = ITA_dino_grandi_focus
-				has_completed_focus = ITA_monarchia_d_italia
 				has_completed_focus = ITA_triumph_in_africa_bba
 			}
 		}
@@ -3229,78 +3215,6 @@ ITA_balance_of_power_category = {
 		}
 	}
 
-	ITA_bop_cooperation_with_anarchists = {
-		priority = 106
-		icon = GFX_decision_generic_civil_support
-
-		allowed = {
-			original_tag = ITA
-		}
-
-		visible = {
-			has_completed_focus = ITA_the_popular_front
-		}
-
-		available = {
-			has_government = communism
-		}
-
-		cost = 70
-
-		fire_only_once = yes
-
-		complete_effect = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			ITA_bop_medium_decrease_effect = yes
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	ITA_bop_unify_the_left = {
-		priority = 105
-		icon = GFX_decision_generic_speech
-
-		allowed = {
-			original_tag = ITA
-		}
-
-		visible = {
-			has_completed_focus = ITA_a_leader_steps_forward
-		}
-
-		available = {
-			has_government = communism
-		}
-
-		cost = 70
-
-		fire_only_once = yes
-
-		days_remove = 90
-
-		modifier = {
-			political_power_factor = -0.15
-		}
-
-		remove_effect = {
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			ITA_bop_medium_decrease_effect = yes
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
 	ITA_bop_concesions_to_the_bourgeoisie = {
 		priority = 104
 		icon = GFX_decision_generic_fundraising
@@ -3390,44 +3304,6 @@ ITA_balance_of_power_category = {
 
 		ai_will_do = {
 			base = 1
-		}
-	}
-
-	ITA_bop_utilize_the_mafia = {
-		priority = 102
-		icon = GFX_decision_generic_assassination
-
-		allowed = {
-			original_tag = ITA
-		}
-
-		visible = {
-			has_completed_focus = ITA_cooperate_with_the_mafia
-		}
-
-		available = {
-			has_government = democratic
-		}
-
-		cost = 100
-
-		fire_only_once = yes
-
-		days_remove = 90
-
-		complete_effect = {
-			add_stability = -0.1
-		}
-
-		remove_effect = {
-			add_to_variable = { ITA_re_supply_node_range = 0.1 }
-			custom_effect_tooltip = ITA_bop_utilize_the_mafia_re_tt
-
-			ITA_bop_low_increase_effect = yes
-		}
-
-		ai_will_do = {
-			base = 0.5
 		}
 	}
 }
@@ -6599,82 +6475,6 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 	}
 
-
-	ITA_give_the_dodecanese_islands_to_turkey_for_an_alliance = {
-		priority = 24
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		ai_will_do = {
-			base = 7
-			modifier = {
-				factor = 10
-				TUR = { is_ai = no }
-			}
-		}
-
-		allowed = {
-			original_tag = ITA
-		}
-
-		available = {
-			ITA = {
-				has_completed_focus = ITA_befriend_turkey
-				is_faction_leader = yes
-				controls_state = 164
-			}
-			TUR = {
-				is_subject = no
-				has_civil_war = no
-				NOT = {
-					has_government = communism
-				}
-			}
-		}
-
-		visible = {
-			TUR = {
-				exists = yes
-				NOT = { is_in_faction_with = ROOT }
-			}
-			ITA = {
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-				controls_state = 164
-			}
-			NOT = {
-				has_country_flag = ITA_dodecanese_offered_to_turkey
-			}
-		}
-
-		cost = 75
-
-		complete_effect = {
-
-			random_country = {
-				limit = {
-					original_tag = TUR
-					is_subject = no
-					has_civil_war = no
-					NOT = {
-						has_government = communism
-					}
-				}
-				country_event = {
-				    id = BBA_italy_interaction_events.21
-				    days = 1
-				    random = 4
-				}
-			}
-
-			hidden_effect = {
-				set_country_flag = ITA_dodecanese_offered_to_turkey
-			}
-		}
-	}
-
 }
 
 
@@ -7112,38 +6912,6 @@ ITA_vallo_alpino_del_littorio_dec_cat = {
 }
 
 political_actions = {
-	ITA_vittorio_abdicate = {
-		priority = 10
-
-		icon = GFX_decision_generic_monarchy
-
-		ai_will_do = {
-			base = 0
-		}
-
-		allowed = {
-			original_tag = ITA
-		}
-
-		visible = {
-			has_completed_focus = ITA_power_to_the_king
-			has_country_leader = {
-				character = ITA_vittorio_emanuele_iii
-				ruling_only = yes
-			}
-		}
-
-		available = {
-			has_country_leader = {
-				character = ITA_vittorio_emanuele_iii
-				ruling_only = yes
-			}
-		}
-
-		complete_effect = {
-			ITA_promote_umberto_to_country_leader = yes #This effect also retires Vittorio
-		}
-	}
 }
 
 ITA_italian_mafia_dec_cat = {
@@ -7160,7 +6928,6 @@ ITA_italian_mafia_dec_cat = {
 			}
 			OR = {
 				NOT = { original_tag = ITA }
-				has_completed_focus = ITA_crush_the_mafia
 			}
 		}
 		state_target = yes
