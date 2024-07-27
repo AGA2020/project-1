@@ -665,9 +665,6 @@ characters={
 				}
 	
 				available = {
-					NOT = {
-						has_completed_focus = SPA_no_compromise_on_carlist_ideals
-					}
 					custom_trigger_tooltip = {
 						tooltip = SPA_not_republican_spain_tt
 						NOT = { tag = SPD }
@@ -762,9 +759,6 @@ characters={
 					}
 				}
 				available = {
-					NOT = {
-						has_completed_focus = SPA_no_compromise_on_carlist_ideals
-					}
 					custom_trigger_tooltip = {
 						tooltip = SPA_not_republican_spain_tt
 						NOT = { tag = SPD }
@@ -984,9 +978,6 @@ characters={
 					if = {
 						limit = {
 							NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
-						}
-						NOT = {
-							has_completed_focus = SPA_eliminate_the_carlists
 						}
 					}
 					if = {
@@ -1359,9 +1350,6 @@ characters={
 					limit = {
 						NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
 					}
-					NOT = {
-						has_completed_focus = SPA_eliminate_the_carlists
-					}
 				}
 				if = {
 					limit = {
@@ -1411,9 +1399,6 @@ characters={
 					limit = {
 						NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
 					}
-					NOT = {
-						has_completed_focus = SPA_eliminate_the_carlists
-					}
 				}
 				if = {
 					limit = {
@@ -1457,9 +1442,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPA_no_compromise_on_carlist_ideals
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPA_not_republican_spain_tt
 					NOT = { tag = SPD }
@@ -1498,9 +1480,6 @@ characters={
 					}
 				}
 				available = {
-					NOT = {
-						has_completed_focus = SPA_no_compromise_on_carlist_ideals
-					}
 					custom_trigger_tooltip = {
 						tooltip = SPA_not_republican_spain_tt
 						NOT = { tag = SPD }
@@ -1572,9 +1551,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPA_eliminate_the_carlists
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPA_not_republican_spain_tt
 					NOT = { tag = SPD }
@@ -1719,9 +1695,6 @@ characters={
 					}
 				}
 				available = {
-					NOT = {
-						has_completed_focus = SPA_eliminate_the_carlists
-					}
 					custom_trigger_tooltip = {
 						tooltip = SPA_not_republican_spain_tt
 						NOT = { tag = SPD }
@@ -2069,7 +2042,6 @@ characters={
 			}
 			available = {
 				OR = {
-					has_completed_focus = SPR_demand_ministerial_positions
 					has_completed_focus = SPR_communists_in_the_government
 				}
 				custom_trigger_tooltip = {
@@ -2159,33 +2131,6 @@ characters={
 			army={
 				small="GFX_idea_SPR_mate_zalka"
 			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = SPR_mate_zalka
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-			}
-			available = {
-				has_completed_focus = SPR_demand_ministerial_positions
-				NOT = {
-					has_completed_focus = SPR_crush_the_revolution
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_chief_offensive_2 }
-			cost = 100
 		}
 	}
 
@@ -2435,7 +2380,6 @@ characters={
 			}
 			available = {
 				NOT = {
-					has_completed_focus = SPR_crush_the_revolution
 					has_completed_focus = SPR_regional_defense_council_of_aragon
 				}
 				custom_trigger_tooltip = {
@@ -2736,7 +2680,6 @@ characters={
 			}
 			available = {
 				OR = {
-					has_completed_focus = SPR_the_stalinist_doctrine
 					has_completed_focus = SPR_communists_in_the_government
 				}
 				custom_trigger_tooltip = {
@@ -2991,10 +2934,6 @@ characters={
 				}
 				ai_will_do = {
 					base = 1.000
-					modifier = {
-						factor = 0.000
-						has_completed_focus = SPR_the_stalinist_doctrine 
-					}
 				}
 			}
 		}
@@ -3131,7 +3070,6 @@ characters={
 					factor = 0.000
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_the_stalinist_doctrine 
 						has_completed_focus = SPR_maintain_the_second_republic 
 					}
 				}
@@ -3179,7 +3117,6 @@ characters={
 					factor = 0.000
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_the_stalinist_doctrine 
 						has_completed_focus = SPR_maintain_the_second_republic 
 					}
 				}
@@ -3309,7 +3246,6 @@ characters={
 					factor = 0.000
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_the_stalinist_doctrine 
 						has_completed_focus = SPR_maintain_the_second_republic 
 					}
 				}
@@ -3414,9 +3350,6 @@ characters={
 				}
 				modifier = {
 					factor = 5.000
-					OR = {
-						has_completed_focus = SPR_the_stalinist_doctrine 
-					}
 				}
 			}
 		}
@@ -3559,9 +3492,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPA_no_compromise_on_carlist_ideals
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPA_not_republican_spain_tt
 					NOT = { tag = SPD }
@@ -3598,9 +3528,6 @@ characters={
 
 			available = {
 				NOT = {
-					has_completed_focus = SPA_no_compromise_on_carlist_ideals
-				}
-				NOT = {
 					has_completed_focus = SPA_banish_the_party_leaders
 				}
 				custom_trigger_tooltip = {
@@ -3636,9 +3563,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPA_no_compromise_on_carlist_ideals
-				}
 				NOT = { has_idea = SPA_ramon_serrano_suner }
 				has_completed_focus = SPA_banish_the_party_leaders
 				custom_trigger_tooltip = {
@@ -3677,9 +3601,6 @@ characters={
 				if = {
 					limit = {
 						NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
-					}
-					NOT = {
-						has_completed_focus = SPA_eliminate_the_carlists
 					}
 				}
 				if = {
@@ -3758,9 +3679,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPA_no_compromise_on_carlist_ideals
-				}
 				NOT = { has_idea = SPA_raimundo_fernandez_cuesta }
 				custom_trigger_tooltip = {
 					tooltip = SPA_not_republican_spain_tt
