@@ -2993,14 +2993,6 @@ country_event = {
 					}
 				}
 			}
-			modifier = { #You have good relations with your neighbors, we like that
-				factor = 1.5
-				BUL = {
-					OR = {
-						has_completed_focus = BUL_the_salonika_agreement
-					}
-				}
-			}
 			modifier = { #You are becoming yet another capitalist country, we like that
 				factor = 1.5
 				has_government = democratic
@@ -3214,14 +3206,6 @@ country_event = {
 					NOT = {	has_idea = BUL_imro_05 }
 				}
 			}
-			modifier = { #You have good relations with your neighbors, we like that
-				factor = 1.5
-				BUL = {
-					OR = {
-						has_completed_focus = BUL_the_salonika_agreement
-					}
-				}
-			}
 			modifier = { #You are becoming yet another capitalist country, we like that
 				factor = 1.5
 				has_government = democratic
@@ -3301,14 +3285,6 @@ country_event = {
 					OR = {
 						has_war_with = GER
 						is_in_faction_with = ROOT	
-					}
-				}
-			}
-			modifier = { #You have good relations with your neighbors, we like that
-				factor = 1.5
-				BUL = {
-					OR = {
-						has_completed_focus = BUL_the_salonika_agreement
 					}
 				}
 			}

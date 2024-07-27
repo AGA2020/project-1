@@ -3546,7 +3546,6 @@ country_event = {
 		NOT = { has_country_flag = RAJ_civil_war }
 		NOT = {
 			OR = {
-				ENG = { has_completed_focus = ENG_the_three_nation_solution }
 				AND = {
 					has_dlc = "Together for Victory"
 					has_completed_focus = RAJ_two_nation_theory
@@ -4238,7 +4237,6 @@ country_event = {
 		tag = PAK
 		NOT = { country_exists = BAN }
 		NOT = { has_country_flag = PAK_civil_war }
-		NOT = { ENG = { has_completed_focus = ENG_the_three_nation_solution } }
 		is_subject = no
 		has_war = no
 		has_dlc = "Man the Guns"

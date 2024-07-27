@@ -254,12 +254,6 @@ defined_text = {
 defined_text = {
 	name = GetSuperHeavyAircraftTooltip
 	text = {
-		trigger = {
-			has_completed_focus = ITA_the_king_of_the_skies #Focus grants bonuses
-		}
-		localization_key = ITA_the_king_of_the_skies_dynamic_modifier_tt
-	}
-	text = {
 		localization_key = generic_null
 	}
 }

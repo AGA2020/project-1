@@ -106,16 +106,6 @@ news_event = {
 				}
 				if = {
 					limit = {
-						tag = SPA
-						has_completed_focus = SPA_the_fifth_column
-					}
-					delete_unit_template_and_units = {
-						division_template = "Fifth Columnist Brigade"
-						disband = yes
-					}
-				}
-				if = {
-					limit = {
 						NOT = {
 							tag = SPB
 						}
@@ -348,16 +338,6 @@ news_event = {
 			}
 			if = {
 				limit = {
-					tag = SPA
-					has_completed_focus = SPA_the_fifth_column
-				}
-				delete_unit_template_and_units = {
-					division_template = "Fifth Columnist Brigade"
-					disband = yes
-				}
-			}
-			if = {
-				limit = {
 					NOT = {
 						tag = SPB
 					}
@@ -493,21 +473,9 @@ news_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_completed_focus = SPR_regional_defense_council_of_aragon
-				}
-				set_global_flag = SPR_anarchists_won
-			}
-			if = {
-				limit = {
 					has_completed_focus = SPR_hinder_nkvd_interference
 				}
 				set_global_flag = SPR_poum_won
-			}
-			if = {
-				limit = {
-					has_completed_focus = SPR_the_stalinist_doctrine
-				}
-				set_global_flag = SPR_stalinists_won
 			}
 			if = {
 				limit = {
@@ -521,13 +489,6 @@ news_event = {
 						tag = SPC
 						tag = SPD
 					}
-				}
-				if = {
-					limit = {
-						tag = SPC
-						SPC = { has_completed_focus = SPR_regional_defense_council_of_aragon }
-					}
-					set_global_flag = { flag = SPR_anarchist_victory_timer_flag value = 1 days = 365 }
 				}
 				delete_unit_template_and_units = {
 					division_template = "Guarnición Republicana"
@@ -736,17 +697,6 @@ news_event = {
 			}
 		}
 	}
-	
-	option = {
-		name = lar_news.2.a
-		trigger = {
-			country_exists = SPC
-			SPC = { has_capitulated = no }
-			NOT = { tag = SPC }
-			NOT = { original_tag = SPR }
-			SPC = { has_completed_focus = SPR_regional_defense_council_of_aragon }
-		}
-	}
 	option = {
 		name = lar_news.2.b
 		trigger = {
@@ -865,9 +815,6 @@ news_event = {
 			NOT = {
 				has_government = communism
 			}
-			NOT = {
-				SPD = { has_completed_focus = SPR_the_stalinist_doctrine }
-			}
 			country_exists = SPD
 			SPD = { has_capitulated = no }
 			NOT = { tag = SPD }
@@ -878,45 +825,6 @@ news_event = {
 		trigger = {
 			NOT = { original_tag = SPR }
 			tag = SOV
-			NOT = {
-				SPD = { has_completed_focus = SPR_the_stalinist_doctrine }
-			}
-			country_exists = SPD
-			SPD = { has_capitulated = no }
-			NOT = { tag = SPD }
-		}
-	}
-	option = {
-		name = lar_news.2.g
-		trigger = {
-			NOT = { original_tag = SPR }
-			tag = SOV
-			OR = {
-				SPD = { has_completed_focus = SPR_the_stalinist_doctrine }
-			}
-			country_exists = SPD
-			SPD = { has_capitulated = no }
-			NOT = { tag = SPD }
-		}
-	}
-	option = {
-		name = lar_news.2.h
-		trigger = {
-			NOT = { original_tag = SPR }
-			NOT = { has_government = communism }
-			NOT = {
-				AND = {
-					tag = GER
-					has_government = fascism
-				}
-				AND = {
-					tag = ITA
-					has_government = fascism
-				}
-			}
-			OR = {
-				SPD = { has_completed_focus = SPR_the_stalinist_doctrine }
-			}
 			country_exists = SPD
 			SPD = { has_capitulated = no }
 			NOT = { tag = SPD }
@@ -950,13 +858,6 @@ news_event = {
 			}
 		}
 		effect_tooltip = {
-			if = {
-				limit = {
-					tag = SPC
-					SPC = { has_completed_focus = SPR_regional_defense_council_of_aragon }
-				}
-				set_global_flag = { flag = SPR_anarchist_victory_timer_flag value = 1 days = 365 }
-			}
 			delete_unit_template_and_units = {
 				division_template = "Guarnición Republicana"
 				disband = yes
@@ -1347,7 +1248,6 @@ news_event = {
 				has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
 				has_completed_focus = ENG_god_save_the_king
 				has_completed_focus = GER_return_of_the_kaiser
-				has_completed_focus = ROM_his_majestys_loyal_government
 				has_completed_focus = SPA_restore_the_monarchy
 				has_completed_focus = SAF_a_king_for_our_people
 				has_completed_focus = HOL_the_only_man_in_the_dutch_government
@@ -1377,7 +1277,6 @@ news_event = {
 						has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
 						has_completed_focus = ENG_god_save_the_king
 						has_completed_focus = GER_return_of_the_kaiser
-						has_completed_focus = ROM_his_majestys_loyal_government
 						has_completed_focus = SPA_restore_the_monarchy
 						has_completed_focus = SAF_a_king_for_our_people
 						has_completed_focus = HOL_the_only_man_in_the_dutch_government
@@ -2827,7 +2726,6 @@ news_event = {
 		trigger = {
 			tag = SPD
 			OR = {
-				has_completed_focus = SPR_regional_defense_council_of_aragon
 				has_completed_focus = SPR_hinder_nkvd_interference
 			}
 		}
@@ -2848,7 +2746,6 @@ news_event = {
 			tag = SPD
 			OR = {
 				has_completed_focus = SPR_maintain_the_second_republic
-				has_completed_focus = SPR_the_stalinist_doctrine
 			}
 		}
 		#effect_tooltip = {
