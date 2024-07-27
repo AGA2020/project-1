@@ -7908,7 +7908,6 @@ focus_tree = {
 				has_dlc = "No Step Back"
 				OR = {
 					AND = {
-						has_completed_focus = SOV_the_left_opposition
 						has_completed_focus = SOV_left_opposition_coup
 					}
 					AND = {
