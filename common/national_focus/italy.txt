@@ -1626,7 +1626,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			450 = {
+			451 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
 				NOT = {
 					has_state_flag = benghazi_oil_developed
@@ -1648,7 +1648,7 @@ focus_tree = {
 				amount = 28
 				state = 451
 			}
-			450 = {
+			451 = {
 				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
 				set_state_flag = benghazi_oil_developed
 				add_extra_state_shared_building_slots = 2
@@ -10378,7 +10378,7 @@ focus_tree = {
 	focus = {
 		id = ITA_italian_irredentism
 		icon = GFX_focus_ITA_italian_irredentism
-		prerequisite = { focus = ITA_pact_of_steel focus = ITA_italy_first }
+		prerequisite = { focus = ITA_pact_of_steel }
 
 		x = 3
 		y = 1

@@ -44,7 +44,7 @@ focus_tree = {
 		x = 0
 		y = 0
 		#relative_position_id =
-		mutually_exclusive = { focus = BRA_end_the_state_of_emergency focus = BRA_prepare_for_second_intentona }
+		mutually_exclusive = { focus = BRA_end_the_state_of_emergency }
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -60,7 +60,6 @@ focus_tree = {
 					}
 				}
 				NOT = { has_completed_focus = BRA_end_the_state_of_emergency }
-				NOT = { has_completed_focus = BRA_prepare_for_second_intentona }
 			}
 		}
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -734,18 +733,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 15
-		}
-
-		offset = {
-			x = -33
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = BRA_prepare_for_second_intentona 
-			}
 		}
 
 		offset = {
