@@ -652,6 +652,8 @@ generic_mobile_tank_organization = {
 		position = { x=1 y=1 }
 		relative_position_id = generic_mio_engine_optimization
 
+		limit_to_equipment_type = { armor }
+
 		any_parent = { generic_mio_engine_optimization generic_mio_reduced_fuel_usage }
 		
 		equipment_bonus = {
@@ -682,6 +684,8 @@ generic_mobile_tank_organization = {
 
 		position = { x=6 y=0 }
 		relative_position_id = generic_mio_trait_improved_boogies
+
+		limit_to_equipment_type = { armor }
 
 		equipment_bonus = {
 			defense = 0.05
@@ -744,6 +748,8 @@ generic_mobile_tank_organization = {
 
 		position = { x=0 y=2 }
 		relative_position_id = generic_mio_enlarged_breech
+
+		limit_to_equipment_type = { armor }
 
 		all_parents = { generic_mio_enlarged_breech }
 		

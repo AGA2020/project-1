@@ -141,8 +141,6 @@ NORDIC_has_started_democratic_focus_tree = {
 NORDIC_has_started_monarchist_focus_tree = {
 	OR = {
 		has_completed_focus = NOR_the_chamberlains_overture
-		has_completed_focus = NOR_lurk_in_the_shadows
-		has_completed_focus = SWE_prevent_a_red_dictatorship
 		has_completed_focus = FIN_finnish_neutrality
 		has_completed_focus = DEN_unify_the_right
 	}	
