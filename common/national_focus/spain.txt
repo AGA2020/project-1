@@ -1304,7 +1304,6 @@ focus_tree = {
 	focus = {
 		id = SPA_expand_the_axis_gold_trade
 		available = {
-			NOT = { has_completed_focus = SPA_the_stabilization_plan }
 		}
 		bypass = {
 		}
@@ -2370,23 +2369,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_completed_focus = SPA_supremacy_of_the_communion
-				}
-				custom_effect_tooltip = SPA_restore_the_monarchy_tt
-				hidden_effect = {
-					drop_cosmetic_tag = yes
-					set_cosmetic_tag = SPB_kingdom
-				}
-				news_event = { id = lar_news.17 hours = 6 }
-			}
-			if = {
-				limit = {
-					NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
-				}
-				news_event = { id = lar_news.18 hours = 6 }
-			}
+			news_event = { id = lar_news.18 hours = 6 }
 		}
 	}
 

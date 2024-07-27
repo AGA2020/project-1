@@ -1064,7 +1064,6 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				}
 				NOT = {
 					AND = {
-						has_completed_focus = POR_support_a_spanish_monarchy_in_the_war
 						FROM = { NOT = { tag = SPB } }
 					}
 				}
@@ -1134,12 +1133,8 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = RULE_VOLUNTEERS_SOVIET_CHINA_SUPPORT_CHOSEN_ONE_TT
-				OR = {
-					has_completed_focus = SOV_the_gobi_gambit
-				}
 				NOT = {
 					AND = {
-						has_completed_focus = SOV_the_gobi_gambit
 						FROM = { NOT = { tag = SIK } }
 					}
 				}

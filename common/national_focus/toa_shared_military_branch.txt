@@ -78,68 +78,6 @@ shared_focus = {
 	}
 
 	offset = {
-		x = -29
-		y = 0
-		trigger = {
-			has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
-			}
-			tag = CHL
-			has_completed_focus = CHL_look_to_tradition
-		}	
-	}
-
-	offset = {
-		x = -15
-		y = 0
-		trigger = {
-			has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
-			}
-			tag = CHL
-			has_completed_focus = CHL_address_the_mapuche_conflict
-		}
-	}
-
-	offset = {
-		x = -38
-		y = 0
-		trigger = {
-			has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
-			}
-			has_completed_focus = CHL_endorse_the_constitution
-		}
-	}
-
-	offset = {
-		x = -42
-		y = 0
-		trigger = {
-			has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
-			}
-			has_completed_focus = CHL_denounce_the_anarchy
-		}
-	}
-
-	offset = {
-		x = -7
-		y = 0
-		trigger = {
-			has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
-			}
-			has_completed_focus = CHL_rule_by_decree
-		}
-	}
-
-	offset = {
 		x = -33
 		y = 0
 		trigger = {
