@@ -1009,7 +1009,6 @@ country_event = {
 					NOT = {
 						HOL = { has_completed_focus = HOL_cave_to_the_germans }
 					}
-					HOL = { has_completed_focus = HOL_the_netherlands_first }
 				}
 			}
 			modifier = {
@@ -1042,11 +1041,6 @@ country_event = {
 				original_tag = FRA
 				has_government = democratic
 				HOL = { has_completed_focus = HOL_cave_to_the_germans }
-			}
-			modifier = {
-				factor = 0
-				original_tag = FRA
-				HOL = { has_completed_focus = HOL_the_netherlands_first }
 			}
 			modifier = {
 				factor = 0.1
@@ -1090,7 +1084,6 @@ country_event = {
 					NOT = {
 						HOL = { has_completed_focus = HOL_cave_to_the_germans }
 					}
-					HOL = { has_completed_focus = HOL_the_netherlands_first }
 				}
 			}
 			modifier = {
@@ -1123,11 +1116,6 @@ country_event = {
 				original_tag = FRA
 				has_government = democratic
 				HOL = { has_completed_focus = HOL_cave_to_the_germans }
-			}
-			modifier = {
-				factor = 0
-				original_tag = FRA
-				HOL = { has_completed_focus = HOL_the_netherlands_first }
 			}
 			modifier = {
 				factor = 0.1
@@ -1272,7 +1260,6 @@ country_event = {
 					NOT = {
 						HOL = { has_completed_focus = HOL_cave_to_the_germans }
 					}
-					HOL = { has_completed_focus = HOL_the_netherlands_first }
 				}
 			}
 			modifier = {
@@ -1305,11 +1292,6 @@ country_event = {
 				original_tag = FRA
 				has_government = democratic
 				HOL = { has_completed_focus = HOL_cave_to_the_germans }
-			}
-			modifier = {
-				factor = 0
-				original_tag = FRA
-				HOL = { has_completed_focus = HOL_the_netherlands_first }
 			}
 			modifier = {
 				factor = 0.1
@@ -1360,12 +1342,6 @@ country_event = {
 						progress > 0
 					}
 				}
-			}
-			modifier = {
-				factor = 0
-				original_tag = FRA
-				has_government = communism
-				HOL = { has_completed_focus = HOL_join_the_french }
 			}
 			modifier = {
 				factor = 0
@@ -1468,7 +1444,6 @@ country_event = {
 					NOT = {
 						HOL = { has_completed_focus = HOL_cave_to_the_germans }
 					}
-					HOL = { has_completed_focus = HOL_the_netherlands_first }
 				}
 			}
 			modifier = {
@@ -1501,11 +1476,6 @@ country_event = {
 				original_tag = FRA
 				has_government = democratic
 				HOL = { has_completed_focus = HOL_cave_to_the_germans }
-			}
-			modifier = {
-				factor = 0
-				original_tag = FRA
-				HOL = { has_completed_focus = HOL_the_netherlands_first }
 			}
 			modifier = {
 				factor = 0.1
@@ -1583,12 +1553,6 @@ country_event = {
 						progress > 0
 					}
 				}
-			}
-			modifier = {
-				factor = 0
-				original_tag = FRA
-				has_government = communism
-				HOL = { has_completed_focus = HOL_join_the_french }
 			}
 			modifier = {
 				factor = 0
@@ -1696,7 +1660,6 @@ country_event = {
 					NOT = {
 						HOL = { has_completed_focus = HOL_cave_to_the_germans }
 					}
-					HOL = { has_completed_focus = HOL_the_netherlands_first }
 				}
 			}
 			modifier = {
@@ -1729,11 +1692,6 @@ country_event = {
 				original_tag = FRA
 				has_government = democratic
 				HOL = { has_completed_focus = HOL_cave_to_the_germans }
-			}
-			modifier = {
-				factor = 0
-				original_tag = FRA
-				HOL = { has_completed_focus = HOL_the_netherlands_first }
 			}
 			modifier = {
 				factor = 0.1
@@ -1793,12 +1751,6 @@ country_event = {
 						progress > 0
 					}
 				}
-			}
-			modifier = {
-				factor = 0
-				original_tag = FRA
-				has_government = communism
-				HOL = { has_completed_focus = HOL_join_the_french }
 			}
 			modifier = {
 				factor = 0
@@ -2396,82 +2348,6 @@ country_event = {
 	}
 }
 
-# Zuiderzee event for HOL offering infrastructure build speed
-country_event = {
-	id = mtg_netherlands.64
-	title = mtg_netherlands.64.t
-	desc = mtg_netherlands.64.d
-	picture = GFX_report_event_hol_polderen
-
-	fire_only_once = yes
-	
-	trigger = {
-		original_tag = HOL
-		NOT = { has_completed_focus = HOL_the_zuiderzee_works }
-		focus_progress = {
-			focus = HOL_the_zuiderzee_works
-			progress > 0.33
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 4
-	}
-	
-	# We will invest
-	option = {
-		name = mtg_netherlands.64.a
-		ai_chance = {
-			factor = 0
-		}
-		add_political_power = -50
-		add_timed_idea = { idea = HOL_zuiderzee_infrastructure_advancements days = 365 }
-	}
-
-	# We will not
-	option = {
-		name = mtg_netherlands.64.b
-	}
-}
-
-# Zuiderzee event for HOL offering factory build speed
-country_event = {
-	id = mtg_netherlands.65
-	title = mtg_netherlands.65.t
-	desc = mtg_netherlands.65.d
-	picture = GFX_report_event_hol_polderen
-
-	fire_only_once = yes
-	
-	trigger = {
-		original_tag = HOL
-		NOT = { has_completed_focus = HOL_the_zuiderzee_works }
-		focus_progress = {
-			focus = HOL_the_zuiderzee_works
-			progress > 0.67
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 4
-	}
-	
-	# We will invest
-	option = {
-		name = mtg_netherlands.64.a
-		add_political_power = -50
-		add_timed_idea = { idea = HOL_zuiderzee_industrial_advancements days = 365 }
-	}
-
-	# We will not
-	option = {
-		name = mtg_netherlands.64.b
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
 # Gateway to Europe notification event of ENG taking the lead
 country_event = {
 	id = mtg_netherlands.66
@@ -2802,43 +2678,6 @@ country_event = {
 	}
 }
 
-# Wilhelm II dies (Netherlands)
-country_event = {
-	id = mtg_netherlands.72
-	title = wtt_germany.26.t
-	desc = mtg_netherlands.72.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		original_tag = HOL
-		has_government = neutrality
-		has_completed_focus = HOL_wilhelminism
-		NOT = {
-			any_country = {
-				original_tag = GER
-				has_country_leader = {
-					character = GER_wilhelm_ii
-					ruling_only = yes
-				}
-			}
-		}
-		date > 1939.1.1
-		NOT = { has_country_flag = HOL_wilhelm_ii_died }
-	}
-
-	mean_time_to_happen = {
-		days = 1460	# Died in 1941
-	}
-	
-	# A tragedy
-	option = {
-		name = mtg_netherlands.72.a
-		set_country_flag = HOL_wilhelm_ii_died
-	}
-}
-
 # German Dutch-aided civil war
 country_event = {
 	id = mtg_netherlands.73
@@ -2947,47 +2786,6 @@ country_event = {
 					}
 				}				
 			}
-		}
-	}
-}
-
-# Imperial GER suggesting they become allies when the war has ended and HOL is no longer in a faction
-country_event = {
-	id = mtg_netherlands.74
-	title = mtg_netherlands.74.t
-	desc = mtg_netherlands.74.d
-	picture = GFX_report_event_generic_sign_treaty3
-
-	fire_only_once = yes
-	
-	trigger = {
-		original_tag = HOL
-		has_government = neutrality
-		has_completed_focus = HOL_wilhelminism
-		NOT = { has_war_with = GER }
-		is_in_faction = no
-		any_country = {
-			original_tag = GER
-			has_government = neutrality
-			is_subject_of = HOL
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 4
-	}
-	
-	# OK
-	option = {
-		name = mtg_netherlands.74.a
-		random_country = {
-			limit = {
-				original_tag = GER
-				has_government = neutrality
-			}
-			ROOT = { set_autonomy = { target = PREV autonomy_state = autonomy_free } }
-			create_faction = GER_central_powers_faction
-			add_to_faction = HOL
 		}
 	}
 }

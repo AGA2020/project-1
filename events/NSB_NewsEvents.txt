@@ -190,7 +190,6 @@ news_event = {
 				NOT = {
 					OR = {
 						has_completed_focus = GER_rhineland
-						has_completed_focus = GER_oppose_hitler
 					}
 				}
 			}
@@ -204,7 +203,6 @@ news_event = {
 			GER = {
 				OR = {
 					has_completed_focus = GER_rhineland
-					has_completed_focus = GER_oppose_hitler
 				}
 			}
 		}

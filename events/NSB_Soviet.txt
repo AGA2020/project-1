@@ -6614,10 +6614,6 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				has_completed_focus = POL_organize_the_peasants_strike
-			}
-			modifier = {
-				factor = 2
 				is_in_faction = no
 			}
 			modifier = { #Appropriate PC for Foreign Affairs
