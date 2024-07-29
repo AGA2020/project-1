@@ -2044,12 +2044,6 @@ country_event = {
 				is_in_faction_with = ROM
 				factor = 100
 			}
-			modifier = {
-				tag = GER
-				has_completed_focus = GER_oppose_hitler
-				HUN = { has_completed_focus = HUN_invite_the_habsburg_prince }
-				factor = 0
-			}
 		}
 		add_threat = 1
 		give_guarantee = ROM
@@ -4139,7 +4133,6 @@ country_event = {
 			factor = 75 #if available
 		}
 		trigger = {
-			NOT = { has_completed_focus = ROM_appoint_soviet_friendly_government }
 		}
 		SOV = { country_event = DOD_hungary.114 }
 		

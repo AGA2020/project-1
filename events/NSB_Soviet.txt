@@ -6658,10 +6658,6 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				has_completed_focus = POL_complete_april_constitution
-			}
-			modifier = {
-				factor = 2
 				has_government = fascism
 			}
 		}

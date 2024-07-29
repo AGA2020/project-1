@@ -176,7 +176,6 @@ country_event = {
 					add = -10
 					OR = {
 						has_completed_focus = BUL_unify_the_bourgeois_movement
-						has_completed_focus = BUL_form_a_popular_bloc
 						has_completed_focus = BUL_freedom_of_press
 					}
 				}
@@ -260,8 +259,6 @@ country_event = {
 				modifier = {
 					add = -10
 					OR = {
-						has_completed_focus = BUL_democratic_principles
-						has_completed_focus = BUL_united_front_against_fascism
 						has_completed_focus = BUL_freedom_of_press
 					}
 				}
@@ -325,10 +322,6 @@ country_event = {
 				modifier = {
 					add = 10
 					has_stability < 0.15
-				}
-				modifier = {
-					add = -10
-					has_completed_focus = BUL_appoint_communist_ministers
 				}
 				modifier = {
 					add = -30
@@ -2993,11 +2986,6 @@ country_event = {
 					}
 				}
 			}
-			modifier = { #You are becoming yet another capitalist country, we like that
-				factor = 1.5
-				has_government = democratic
-				BUL = {	has_completed_focus = BUL_democratic_principles }
-			}
 			modifier = { #You think like us, we like that
 				factor = 5
 				BUL = {	has_government = ROOT }
@@ -3206,11 +3194,6 @@ country_event = {
 					NOT = {	has_idea = BUL_imro_05 }
 				}
 			}
-			modifier = { #You are becoming yet another capitalist country, we like that
-				factor = 1.5
-				has_government = democratic
-				BUL = {	has_completed_focus = BUL_democratic_principles }
-			}
 			modifier = { #You think like us, we like that
 				factor = 7
 				BUL = {	has_government = ROOT }
@@ -3287,11 +3270,6 @@ country_event = {
 						is_in_faction_with = ROOT	
 					}
 				}
-			}
-			modifier = { #You are becoming yet another capitalist country, we like that
-				factor = 1.5
-				has_government = democratic
-				BUL = {	has_completed_focus = BUL_democratic_principles }
 			}
 			modifier = { #You think like us, we like that
 				factor = 1.5

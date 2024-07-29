@@ -75,12 +75,6 @@ news_event = {
 			}
 			if = {
 				limit = {
-					has_completed_focus = SPA_supremacy_of_the_communion
-				}
-				set_global_flag = SPR_carlists_won
-			}
-			if = {
-				limit = {
 					OR = {
 						tag = SPA
 						tag = SPB
@@ -467,12 +461,6 @@ news_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_completed_focus = SPR_hinder_nkvd_interference
-				}
-				set_global_flag = SPR_poum_won
-			}
-			if = {
-				limit = {
 					has_completed_focus = SPR_maintain_the_second_republic
 				}
 				set_global_flag = SPR_democrats_won
@@ -689,106 +677,6 @@ news_event = {
 				}
 				SOV = { country_event = { id = NSB_soviet_spanish_civil_war.6 days = 8 random_days = 4 } }
 			}
-		}
-	}
-	option = {
-		name = lar_news.2.b
-		trigger = {
-			NOT = { tag = SOV }
-			NOT = { original_tag = SPR }
-			NOT = {
-				AND = {
-					tag = MEX
-					has_country_leader = {
- 						character = MEX_leon_trotsky
- 					}
-				}
-			}
-			NOT = {
-				is_in_faction_with = SOV
-				AND = {
-					is_in_faction_with = MEX
-					MEX = {
-						has_country_leader = {
- 							character = MEX_leon_trotsky
- 						}
-					}
-				}
-			}
-			has_government = communism
-			country_exists = SPC
-			SPC = { has_capitulated = no }
-			NOT = { tag = SPC }
-			SPC = { has_completed_focus = SPR_hinder_nkvd_interference }
-		}
-	}
-	option = {
-		name = lar_news.2.c
-		trigger = {
-			NOT = { tag = SOV }
-			NOT = { original_tag = SPR }
-			NOT = {
-				AND = {
-					tag = MEX
-					has_country_leader = {
- 						character = MEX_leon_trotsky
- 					}
-				}
-			}
-			NOT = {
-				is_in_faction_with = SOV
-				AND = {
-					is_in_faction_with = MEX
-					MEX = {
-						has_country_leader = {
- 							character = MEX_leon_trotsky
- 						}
-					}
-				}
-			}
-			NOT = {
-				AND = {
-					tag = GER
-					has_government = fascism
-				}
-				AND = {
-					tag = ITA
-					has_government = fascism
-				}
-			}
-			NOT = { has_government = communism }
-			country_exists = SPC
-			SPC = { has_capitulated = no }
-			NOT = { tag = SPC }
-			SPC = { has_completed_focus = SPR_hinder_nkvd_interference }
-		}
-	}
-	option = {
-		name = lar_news.2.d
-		trigger = {
-			NOT = { original_tag = SPR }
-			OR = {
-				tag = SOV
-				is_in_faction_with = SOV
-				AND = {
-					tag = MEX
-					has_country_leader = {
- 						character = MEX_leon_trotsky
- 					}
-				}
-				AND = {
-					is_in_faction_with = MEX
-					MEX = {
-						has_country_leader = {
- 							character = MEX_leon_trotsky
- 						}
-					}
-				}
-			}
-			country_exists = SPC
-			SPC = { has_capitulated = no }
-			NOT = { tag = SPC }
-			SPC = { has_completed_focus = SPR_hinder_nkvd_interference }
 		}
 	}
 	option = {
@@ -2584,23 +2472,6 @@ news_event = {
 		#	}
 		#}
 	}
-
-	option = {
-		name = lar_news.28.f
-		trigger = {
-			tag = SPA
-			has_completed_focus = SPA_supremacy_of_the_communion
-		}
-		#effect_tooltip = {
-		#	every_state = {
-		#		limit = {
-		#			has_state_flag = SPR_sided_with_republicans_flag
-		#		}
-		#		remove_core_of = ROOT
-		#		start_resistance = yes
-		#	}
-		#}
-	}
 }
 
 # News event - Republican Victory but Anarchists might still rise up
@@ -2690,25 +2561,6 @@ news_event = {
 		trigger = {
 			tag = SOV
 		}
-	}
-
-	option = { # SPC
-		name = lar_news.29.d
-		trigger = {
-			tag = SPD
-			OR = {
-				has_completed_focus = SPR_hinder_nkvd_interference
-			}
-		}
-		#effect_tooltip = {
-		#	every_state = {
-		#		limit = {
-		#			has_state_flag = SPR_sided_with_nationalists_flag
-		#		}
-		#		remove_core_of = ROOT
-		#		start_resistance = yes
-		#	}
-		#}
 	}
 
 	option = { # SPD

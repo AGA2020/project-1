@@ -2207,7 +2207,6 @@ country_event = {
 								add = 10
 								has_global_flag = SOV_covert_support_for_poum_flag #POUM UPRISING (SUPPORTED BY SOVIET RIGHT OPPOSITION)
 							}
-							complete_national_focus = SPR_the_anti_fascist_workers_revolution
 						}
 					}
 				}
@@ -4313,7 +4312,6 @@ country_event = {
 			SPA = { add_timed_idea = { idea = SPA_death_before_surrender days = 900 } }
 			set_party_name = { ideology = neutrality long_name = SPR_neutrality_anarchism_party_long name = SPR_neutrality_anarchism_party }
 		}
-		complete_national_focus = SPR_the_anti_fascist_workers_revolution
 	}
 	option = { # Option for Republicans - Anarchism
 		name = lar_spain.2.f
@@ -6876,15 +6874,6 @@ country_event = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
-					NOT = {
-						has_completed_focus = SPR_the_stalinist_doctrine
-					}
-				}
-				complete_national_focus = SPR_the_stalinist_doctrine
-			}
 			SPC = {
 				load_focus_tree = {
 					tree = spanish_focus
@@ -6923,7 +6912,6 @@ country_event = {
 					limit = {
 						has_global_flag = SOV_covert_support_for_poum_flag
 					}
-					complete_national_focus = SPR_the_anti_fascist_workers_revolution
 					complete_national_focus = SPR_arm_the_workers_militias
 					complete_national_focus = SPR_demand_ministerial_positions
 					unlock_national_focus = SPR_hinder_nkvd_interference
@@ -7114,28 +7102,6 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			if = { #If POUM split + Right Oppo is in charge + tehy are supporting the POUM -> Then their volunteers stay in SPC
-				limit = {
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
-					SOV = {
-						has_completed_focus = SOV_covert_support_for_spanish_poum
-						has_completed_focus = SOV_coup_detat
-					}
-				}
-				every_other_country = { #Exclude SOV
-					limit = {
-						NOT = { tag = SOV }
-						ROOT = {
-							has_volunteers_amount_from = {
-							    tag = PREV
-							    count > 0
-							}
-						}
-					}
-					recall_volunteers_from = ROOT
-				}
-			}
-			else = {
 				every_other_country = { #Default
 					limit = {
 						ROOT = {
@@ -7147,7 +7113,6 @@ country_event = {
 					}
 					recall_volunteers_from = ROOT
 				}
-			}
 			
 			set_global_flag = SPR_anarchist_uprising_flag
 			set_global_flag = { flag = SPR_civil_war_startup value = 1 days = 3 } # Make AI avoid attacking for a few days
@@ -7203,118 +7168,6 @@ country_event = {
 				    can_boost_own_ideology = no
 					can_generate_female_aces = yes
 					can_create_collaboration_government = no
-				}
-			}
-			if = {
-				limit = {
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
-				}
-				set_politics = {
-					ruling_party = communism
-				}
-				set_party_name = { ideology = communism long_name = SPR_communism_independent_party_long name = SPR_communism_independent_party }
-				create_country_leader = {
-					name = "Julián Gorkin"
-					desc = "POLITICS_JULIAN_GORKIN_DESC"
-					picture = "GFX_portrait_SPR_julian_gorkin"
-					expire = "1965.1.1"
-					ideology = anarchist_communism
-					traits = {
-						militant_socialist
-					}
-				}
-				add_popularity = {
-				    ideology = fascism
-				    popularity = -1
-				}
-				add_popularity = {
-				    ideology = communism
-				    popularity = -0.05
-				}
-				if = {
-					limit = {
-						democratic > 0.01
-					}
-					set_political_party = {
-					    ideology = democratic
-					    popularity = 1
-					}
-				}
-				#create_field_marshal = {
-				#	name = "José Rovira"
-				#	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-				#	traits = { infantry_officer politically_connected }
-				#	skill = 3
-				#    attack_skill = 2
-				#    defense_skill = 2
-				#    planning_skill = 2
-				#    logistics_skill = 3
-				#}
-				add_field_marshal_role = { #TODO_Manu: All these guys should be handled with the new char system
-					character = SPR_jose_rovira
-					traits = { infantry_officer politically_connected }
-					skill = 3
-				    attack_skill = 2
-				    defense_skill = 2
-				    planning_skill = 2
-				    logistics_skill = 3
-				}
-				create_corps_commander = {
-					name = "Carmel Rosa Baserba"
-					portrait_path = GFX_portrait_Carmel_Rosa_Baserba
-					traits = { trait_cautious infantry_officer }
-					skill = 3
-				    attack_skill = 2
-				    defense_skill = 2
-				    planning_skill = 2
-				    logistics_skill = 2
-				}
-				create_corps_commander = {
-					name = "Luis Rastrollo"
-					portrait_path = GFX_portrait_Luis_Rastrollo
-					traits = { politically_connected }
-					skill = 1
-				    attack_skill = 1
-				    defense_skill = 2
-				    planning_skill = 1
-				    logistics_skill = 1
-				}
-				set_rule = { can_generate_female_aces = yes	}
-
-				#Check for covert depots from Soviets
-				if = {
-					limit = {
-						has_global_flag = SOV_poum_has_covert_depots_from_soviets_flag
-					}
-					add_equipment_to_stockpile = {
-						type = infantry_equipment
-						amount = 6000
-						producer = SOV
-					}
-					add_equipment_to_stockpile = {
-						type = support_equipment
-						amount = 600
-						producer = SOV
-					}
-					add_equipment_to_stockpile = {
-						type = artillery_equipment
-						amount = 120
-						producer = SOV
-					}
-					add_equipment_to_stockpile = {
-						type = motorized_equipment
-						amount = 60
-						producer = SOV
-					}
-					add_equipment_to_stockpile = {
-						type = train_equipment
-						amount = 6
-						producer = SOV
-					}
-					add_opinion_modifier = {
-						target = SOV
-						modifier = SOV_sent_us_weapons
-					}
 				}
 			}
 			remove_ideas = SPR_the_maximum_concession
@@ -8027,42 +7880,6 @@ country_event = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
-					NOT = { has_government = communism }
-				}
-				set_politics = {
-					ruling_party = communism
-				}
-				create_country_leader = {
-					name = "Julián Gorkin"
-					desc = "POLITICS_JULIAN_GORKIN_DESC"
-					picture = "GFX_portrait_SPR_julian_gorkin"
-					expire = "1965.1.1"
-					ideology = anarchist_communism
-					traits = {
-						militant_socialist
-					}
-				}
-				add_popularity = {
-				    ideology = fascism
-				    popularity = -1
-				}
-				add_popularity = {
-				    ideology = communism
-				    popularity = -0.05
-				}
-				if = {
-					limit = {
-						democratic > 0.01
-					}
-					set_political_party = {
-					    ideology = democratic
-					    popularity = 1
-					}
-				}
-			}
 			remove_ideas = SPR_the_maximum_concession
 			add_ideas = closed_economy
 			add_stability = -0.1
@@ -8374,10 +8191,6 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-				has_completed_focus = POR_popular_front
-			}
-			modifier = {
-				factor = 0
 				has_completed_focus = POR_strict_neutrality_in_the_spanish_civil_war
 			}
 		}
@@ -8476,10 +8289,6 @@ country_event = {
 		name = lar_spain.25.a
 		ai_chance = {
 			base = 50
-			modifier = {
-				factor = 0
-				has_completed_focus = POR_popular_front
-			}
 		}
 		custom_effect_tooltip = SPA_the_iberian_pact_tt
 		hidden_effect = {
@@ -11091,111 +10900,6 @@ country_event = {
 				transfer_state = 794
 			}
 		}
-	}
-}
-
-# SPR has Catalonia returned
-country_event = {
-	id = lar_spain.85
-	title = lar_spain.85.t
-	desc = lar_spain.85.desc
-	picture = GFX_report_event_soldiers_marching
-
-	trigger = {
-		tag = SPD
-		has_completed_focus = SPR_war_of_independence
-		has_country_flag = SOV_took_spanish_states
-		has_war_with = SOV
-		SOV = { owns_state = 165 }
-		has_full_control_of_state = 165
-	}
-
-	mean_time_to_happen = {
-		days = 4
-	}
-
-	fire_only_once = yes
-
-	immediate = {
-		hidden_effect = {
-			165 = { save_event_target_as = SPR_stolen_state_name }
-		}
-	}
-
-	option = { # Excellent!
-		name = lar_spain.85.a
-		transfer_state = 165
-		hidden_effect = { SOV = { country_event = { id = lar_spain.88 } } }
-	}
-}
-
-# SPR has Valencia returned
-country_event = {
-	id = lar_spain.86
-	title = lar_spain.85.t
-	desc = lar_spain.85.desc
-	picture = GFX_report_event_soldiers_marching
-
-	trigger = {
-		tag = SPD
-		has_completed_focus = SPR_war_of_independence
-		has_country_flag = SOV_took_spanish_states
-		has_war_with = SOV
-		SOV = { owns_state = 167 }
-		has_full_control_of_state = 167
-	}
-
-	mean_time_to_happen = {
-		days = 4
-	}
-
-	fire_only_once = yes
-
-	immediate = {
-		hidden_effect = {
-			167 = { save_event_target_as = SPR_stolen_state_name }
-		}
-	}
-
-	option = { # Excellent!
-		name = lar_spain.85.a
-		transfer_state = 167
-		hidden_effect = { SOV = { country_event = { id = lar_spain.88 } } }
-	}
-}
-
-# SPR has Eastern Aragon returned
-country_event = {
-	id = lar_spain.87
-	title = lar_spain.85.t
-	desc = lar_spain.85.desc
-	picture = GFX_report_event_soldiers_marching
-
-	trigger = {
-		tag = SPD
-		has_completed_focus = SPR_war_of_independence
-		has_country_flag = SOV_took_spanish_states
-		has_war_with = SOV
-		SOV = { owns_state = 794 }
-		has_full_control_of_state = 794
-	}
-
-	mean_time_to_happen = {
-		days = 4
-	}
-
-	fire_only_once = yes
-
-	immediate = {
-		hidden_effect = {
-			794 = { save_event_target_as = SPR_stolen_state_name }
-		}
-	}
-
-	option = { # Excellent!
-		name = lar_spain.85.a
-		transfer_state = 794
-		hidden_effect = { SOV = { country_event = { id = lar_spain.88 } } }
 	}
 }
 

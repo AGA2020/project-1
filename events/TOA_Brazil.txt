@@ -3080,7 +3080,6 @@ country_event = {
 			OR = {
 				has_completed_focus = BRA_romanticize_the_old_empire
 				has_completed_focus = BRA_tribunal_de_seguranca_nacional
-				has_completed_focus = BRA_launch_the_revolution
 			}
 		}
 	}
