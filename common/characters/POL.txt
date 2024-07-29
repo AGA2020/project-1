@@ -212,33 +212,6 @@ characters = {
 				small="GFX_idea_POL_walery_slawek"
 			}
 		}
-		advisor={	
-			cost = 100
-			slot = political_advisor
-			idea_token = POL_walery_slawek
-			available = {
-				has_completed_focus = POL_the_sanation_left 
-				NOT = {
-					has_country_flag = walery_slawek_is_dead 
-				}
-			}
-			visible = {
-			
-			}
-			allowed = {
-				original_tag = POL
-				OR = {
-					has_dlc = "No Step Back"
-					has_dlc = "Poland: United and Ready"
-				}
-			}
-			traits = {
-				left_sanationist_minister 
-			}
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	POL_maria_koszutska = {
@@ -378,24 +351,6 @@ characters = {
 			}
 			civilian = {
 				large="GFX_portrait_POL_edward_rydz_smigly"
-			}
-		}
-		advisor = {
-			cost = 100
-			slot = theorist
-			idea_token = POL_edward_rydz_smigly
-			ledger = army
-			allowed = {
-				original_tag = POL
-			}
-			available = {
-				has_completed_focus = POL_the_sanation_right
-			}
-			traits = {
-				sanation_militarist
-			}
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 		
@@ -1027,7 +982,6 @@ characters = {
 			available = {
 				OR = {
 					has_completed_focus = POL_modus_vivendi
-					has_completed_focus = POL_integrate_the_falanga 
 				}
 			}
 			allowed = {
@@ -1076,24 +1030,7 @@ characters = {
 				army={
 					small="GFX_idea_POL_mieczyslaw_michalowicz"
 				}
-			}
-			advisor={
-				slot = political_advisor
-				idea_token = POL_mieczyslaw_michalowicz
-				allowed = {
-					original_tag = POL
-					has_dlc = "No Step Back"
-				}
-				available = {
-					has_completed_focus = POL_reassemble_the_sejm 
-				}
-				traits = {
-					socdem_reformist 
-				}
-				ai_will_do = {
-					factor = 0.000
-				}
-			}			
+			}		
 		}
 		instance = {
 			allowed = {
@@ -1115,20 +1052,6 @@ characters = {
 		portraits={
 			army={
 				small="GFX_idea_POL_henryk_floyar_rajchman"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_henryk_floyar_rajchman
-			available = {
-				has_completed_focus = POL_the_sanation_right 
-			}
-			allowed = {
-				original_tag = POL
-				has_dlc = "No Step Back"
-			}
-			traits = {
-				right_industrialist 
 			}
 		}
 	}
@@ -1158,19 +1081,6 @@ characters = {
 				small="GFX_idea_generic_political_advisor_europe_5" #No Portrait
 			}
 		}
-		advisor = {
-			slot = political_advisor
-			idea_token = POL_kazimierz_switalski
-			available = {
-				has_completed_focus = POL_the_sanation_left
-			}
-			allowed = {
-				original_tag = POL
-			}
-			traits = {
-				leftist_legionary
-			}
-		}
 	}
 
 	POL_jozef_beck={
@@ -1198,36 +1108,7 @@ characters = {
 			army={
 				small="GFX_idea_POL_zdzislaw_lubomirski"
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_zdzislaw_lubomirski
-			allowed = {
-					original_tag = POL
-				}
-			available = {
-				has_completed_focus = POL_assemble_the_regency_council
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
-			visible = {
-				has_completed_focus = POL_assemble_the_regency_council
-			}
-			traits = {
-				staunch_aristocrat 
-			}
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.000
-					NOT = {
-						has_government = neutrality 
-					}
-				}
-			}
-		}		
+		}	
 	}
 
 	POL_tadeusz_bielecki={
@@ -1255,8 +1136,7 @@ characters = {
 			idea_token = POL_joachim_stefan_bartoszewicz
 			available = {
 				OR = {
-					has_completed_focus = POL_modus_vivendi 
-					has_completed_focus = POL_reassemble_the_sejm 
+					has_completed_focus = POL_modus_vivendi
 				}
 			}
 			allowed = {
@@ -1278,33 +1158,7 @@ characters = {
 			army={
 				small="GFX_idea_POL_aleksander_kakowski"
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_aleksander_kakowski
-			allowed = {
-				original_tag = POL
-			}
-			available = {
-				has_completed_focus = POL_assemble_the_regency_council
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
-			traits = {
-				autocratic_archbishop 
-			}
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.000
-					NOT = {
-						has_government = neutrality 
-					}
-				}
-			}
-		}		
+		}	
 	}
 
 	POL_stanislaw_radkiewicz={
@@ -1354,9 +1208,7 @@ characters = {
 			idea_token = POL_stanislaw_wojciechowski
 			available = {
 				OR = {
-					has_completed_focus = POL_modus_vivendi 
-					has_completed_focus = POL_reassemble_the_sejm 
-					has_completed_focus = POL_assemble_the_regency_council 
+					has_completed_focus = POL_modus_vivendi
 				}
 			}
 			allowed = {
@@ -1388,7 +1240,6 @@ characters = {
 			available = {
 				OR = {
 					has_completed_focus = POL_support_right_paramilitaries 
-					has_completed_focus = POL_integrate_the_falanga 
 				}
 			}
 			traits = {
@@ -1411,25 +1262,6 @@ characters = {
 		portraits={
 			army={
 				small="GFX_idea_POL_marian_rejewski"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_marian_rejewski
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = POL_expand_polish_intelligence
-				}
-			}
-			allowed = {
-				original_tag = POL
-				has_dlc = "No Step Back"
-			}
-			traits = {
-				mastermind_code_cracker 
 			}
 		}		
 	}

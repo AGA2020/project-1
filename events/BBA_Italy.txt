@@ -25,324 +25,6 @@ add_namespace = BBA_italy_council_deposes_duce
 add_namespace = BBA_italy_human_torpedo_raid
 
 
-# Italy offer for peace - Event for ETH
-country_event = {
-	id = BBA_italy_second_italo_ethiopian_war.1
-	title = BBA_italy_second_italo_ethiopian_war.1.t
-	desc = BBA_italy_second_italo_ethiopian_war.1.desc
-	picture = GFX_report_event_african_soldiers
-	
-	is_triggered_only = yes
-	
-	#ACCEPT
-	option = {
-		name = BBA_italy_second_italo_ethiopian_war.1.a
-		ai_chance = {
-			base = 10
-			modifier = { #If they're stronger than ITA then never accept
-				factor = 0
-				strength_ratio = {
-					tag = FROM
-					ratio > 1
-				}
-			}
-		}
-		effect_tooltip = {
-			if = { #ERITREA
-				limit = {
-					has_full_control_of_state = 550
-				}
-				transfer_state = 550
-				550 = { add_compliance = 50 }
-			}
-			if = { #SOMALILAND
-				limit = {
-					has_full_control_of_state = 559
-				}
-				transfer_state = 559
-				559 = { add_compliance = 50 }
-			}
-			if = { #JUBALAND
-				limit = {
-					has_full_control_of_state = 844
-				}
-				transfer_state = 844
-				844 = { add_compliance = 50 }
-			}
-			if = {
-				limit = {
-					908 = {
-						is_owned_by = FROM
-					}
-				}
-				#AFAR always goes to ETH if owned by ITA
-				transfer_state = 908 
-				908 = { add_compliance = 50 }
-			}
-			white_peace = FROM
-		}
-
-		hidden_effect = {
-			FROM = {
-				country_event = { id = BBA_italy_second_italo_ethiopian_war.2 days = 1 }
-			}
-			if = {
-				limit = {
-					is_in_faction = no
-				}
-				set_country_flag = ETH_forced_ITA_peace_achievement
-			}
-		}
-	}
-	
-	option = {
-		name = BBA_italy_second_italo_ethiopian_war.1.b
-		ai_chance = {
-			base = 1
-			modifier = { #Usually they should accept
-				factor = 0
-				strength_ratio = {
-					tag = FROM
-					ratio < 1
-				}
-			}
-		}
-		FROM = {
-			country_event = { id = BBA_italy_second_italo_ethiopian_war.3 days = 1 }
-		}
-	}
-}
-
-# ETH accepts ITA peace offer - Event for ITA
-country_event = {
-	id = BBA_italy_second_italo_ethiopian_war.2
-	title = BBA_italy_second_italo_ethiopian_war.2.t
-	desc = BBA_italy_second_italo_ethiopian_war.2.desc
-	picture = GFX_report_event_african_soldiers
-	
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			ITA_end_the_italo_ethiopian_war = yes
-		}
-	}
-	
-	#Ok - Already completed initial missiolini focus
-	option = {
-		name = BBA_italy_second_italo_ethiopian_war.2.a
-
-		trigger = {
-			OR = {
-				has_completed_focus = ITA_solid_progress
-				has_completed_focus = ITA_the_abyssinian_fiasco
-			}
-		}
-
-		if = { #ERITREA
-			limit = {
-				FROM = { has_full_control_of_state = 550 }
-			}
-			FROM = {
-				transfer_state = 550
-				550 = { add_compliance = 50 }
-			}
-		}
-		if = { #SOMALILAND
-			limit = {
-				FROM = { has_full_control_of_state = 559 }
-			}
-			FROM = {
-				transfer_state = 559
-				559 = { add_compliance = 50 }
-			}
-		}
-		if = { #JUBALAND
-			limit = {
-				FROM = { has_full_control_of_state = 844 }
-			}
-			FROM = {
-				transfer_state = 844
-				844 = { add_compliance = 50 }
-			}
-		}
-		if = { #AFAR always goes to ETH if owned by ITA
-			limit = {
-				owns_state = 908
-			}
-			FROM = {
-				transfer_state = 908 
-				908 = { add_compliance = 50 }
-			}
-		}
-		white_peace = FROM
-		hidden_effect = {
-			if = {
-				limit = {
-					any_country = {
-						is_in_faction_with = ROOT
-						has_war_with = FROM
-					}
-				}
-				every_other_country = {
-					limit = {
-						is_in_faction_with = ROOT
-						has_war_with = FROM
-					}
-					white_peace = FROM
-				}
-			}
-		}
-
-		ITA_manage_italian_defeat_in_ethiopia_effect = yes
-
-		hidden_effect = {
-			news_event = {
-				id = news.337
-				days = 1
-			}
-		}
-	}
-
-	# Ok - Abyssinian Fiasco
-	option = { 
-		name = BBA_italy_missiolinis.02_north.b
-
-		trigger = {
-			has_dlc = "By Blood Alone" #Abyssinian Fiasco focus not available without BBA
-			NOT = {
-				has_completed_focus = ITA_solid_progress
-				has_completed_focus = ITA_the_abyssinian_fiasco
-			}
-		}
-
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 100
-				OR = {
-					ITA_is_socialist_ai = yes
-					ITA_is_communist_ai = yes
-				}
-			}
-		}
-
-		if = { #ERITREA
-			limit = {
-				FROM = { has_full_control_of_state = 550 }
-			}
-			FROM = {
-				transfer_state = 550
-				550 = { add_compliance = 50 }
-			}
-		}
-		if = { #SOMALILAND
-			limit = {
-				FROM = { has_full_control_of_state = 559 }
-			}
-			FROM = {
-				transfer_state = 559
-				559 = { add_compliance = 50 }
-			}
-		}
-		if = { #JUBALAND
-			limit = {
-				FROM = { has_full_control_of_state = 844 }
-			}
-			FROM = {
-				transfer_state = 844
-				844 = { add_compliance = 50 }
-			}
-		}
-		white_peace = FROM
-
-		complete_national_focus = ITA_the_abyssinian_fiasco
-
-		ITA_manage_italian_defeat_in_ethiopia_effect = yes
-
-		hidden_effect = {
-			news_event = {
-				id = news.337
-				days = 1
-			}
-		}
-	}
-
-	# Ok - Struggle in Ethiopia
-	option = { 
-		name = BBA_italy_missiolinis.02_north.c
-
-		trigger = {
-			NOT = {
-				has_completed_focus = ITA_solid_progress
-				has_completed_focus = ITA_the_abyssinian_fiasco
-			}
-		}
-
-		ai_chance = {
-			base = 10
-		}
-
-		if = { #ERITREA
-			limit = {
-				FROM = { has_full_control_of_state = 550 }
-			}
-			FROM = {
-				transfer_state = 550
-				550 = { add_compliance = 50 }
-			}
-		}
-		if = { #SOMALILAND
-			limit = {
-				FROM = { has_full_control_of_state = 559 }
-			}
-			FROM = {
-				transfer_state = 559
-				559 = { add_compliance = 50 }
-			}
-		}
-		if = { #JUBALAND
-			limit = {
-				FROM = { has_full_control_of_state = 844 }
-			}
-			FROM = {
-				transfer_state = 844
-				844 = { add_compliance = 50 }
-			}
-		}
-		white_peace = FROM
-
-		ITA_manage_italian_defeat_in_ethiopia_effect = yes
-
-		hidden_effect = {
-			news_event = {
-				id = news.337
-				days = 1
-			}
-		}
-
-	}
-}
-
-# ETH refects ITA peace offer - Event for ITA
-country_event = {
-	id = BBA_italy_second_italo_ethiopian_war.3
-	title = BBA_italy_second_italo_ethiopian_war.3.t
-	desc = BBA_italy_second_italo_ethiopian_war.3.desc
-	picture = GFX_report_event_african_soldiers
-	
-	is_triggered_only = yes
-	
-	#Ok
-	option = {
-		name = BBA_italy_second_italo_ethiopian_war.3.a
-
-	}
-}
-
-
-
-
 #########################
 ###### MISSIOLINIS ######
 #########################
@@ -886,7 +568,6 @@ country_event = {
 		
 		trigger = {
 			OR = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
 				NOT = { has_country_flag = ITA_missiolini_conquer_the_north_failed_flag }
 			}
 		}
@@ -905,25 +586,15 @@ country_event = {
 		trigger = {
 			has_dlc = "By Blood Alone" #Abyssinian Fiasco focus not available without BBA
 			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
 				has_country_flag = ITA_missiolini_conquer_the_south_failed_flag
 			}
 		}
 
 		ai_chance = {
 			base = 0
-			modifier = {
-				add = 1000
-				OR = {
-					ITA_is_socialist_ai = yes
-					ITA_is_communist_ai = yes
-				}
-			}
 		}
 
 		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
-		
-		complete_national_focus = ITA_the_abyssinian_fiasco
 	}
 
 	# Oops (Complete Struggle in Ethiopia)
@@ -932,20 +603,12 @@ country_event = {
 
 		trigger = {
 			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
 				has_country_flag = ITA_missiolini_conquer_the_south_failed_flag
 			}
 		}
 
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 0
-				OR = {
-					ITA_is_socialist_ai = yes
-					ITA_is_communist_ai = yes
-				}
-			}
 		}
 
 		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
@@ -981,7 +644,6 @@ country_event = {
 		
 		trigger = {
 			OR = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
 				has_completed_focus = ITA_struggle_in_ethiopia
 				NOT = { has_country_flag = ITA_missiolini_conquer_the_south_failed_flag }
 			}
@@ -1000,7 +662,6 @@ country_event = {
 
 		trigger = {
 			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
 				has_completed_focus = ITA_struggle_in_ethiopia
 				has_country_flag = ITA_missiolini_conquer_the_north_failed_flag
 			}
@@ -1008,18 +669,10 @@ country_event = {
 
 		ai_chance = {
 			base = 0
-			modifier = {
-				add = 1000
-				OR = {
-					ITA_is_socialist_ai = yes
-					ITA_is_communist_ai = yes
-				}
-			}
 		}
 
 		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
 		
-		complete_national_focus = ITA_the_abyssinian_fiasco
 	}
 
 	# Oops (Complete Struggle in Ethiopia)
@@ -1028,7 +681,6 @@ country_event = {
 
 		trigger = {
 			NOT = {
-				has_completed_focus = ITA_the_abyssinian_fiasco
 				has_completed_focus = ITA_struggle_in_ethiopia
 				has_country_flag = ITA_missiolini_conquer_the_north_failed_flag
 			}
@@ -1036,13 +688,6 @@ country_event = {
 
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 0
-				OR = {
-					ITA_is_socialist_ai = yes
-					ITA_is_communist_ai = yes
-				}
-			}
 		}
 
 		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
@@ -3243,9 +2888,6 @@ unit_leader_event = {
 					has_resistance = yes
 				}
 			}
-			ORO = {
-				transfer_state = 271 #SHEWA
-			}
 		}
 		if = {
 			limit = {
@@ -3254,11 +2896,7 @@ unit_leader_event = {
 					has_resistance = yes
 				}
 			}
-			ORO = {
-				transfer_state = 837 #SIDAMO
-			}
 		}
-		puppet = ORO
 		if = {
 			limit = {
 				country_exists = ETH
@@ -3271,7 +2909,7 @@ unit_leader_event = {
 						}
 						remove_any_country_role_from_character = yes
 					}
-					set_nationality = ORO
+					
 				}
 			}
 		}
@@ -3291,13 +2929,11 @@ unit_leader_event = {
 							}
 							remove_any_country_role_from_character = yes
 						}
-						set_nationality = ORO
+						
 					}
 				}
 			}
-			ORO = {
-				promote_character = ETH_haile_selassie_gugsa
-			}
+
 		}
 
 		#Send next event
@@ -3591,9 +3227,7 @@ unit_leader_event = {
 					has_resistance = yes
 				}
 			}
-			GBA = {
-				transfer_state = 838 #ILLUBABOR-KAFFA
-			}
+
 		}
 		if = {
 			limit = {
@@ -3602,13 +3236,11 @@ unit_leader_event = {
 					has_resistance = yes
 				}
 			}
-			GBA = {
-				transfer_state = 839 #WELEGA
-			}
-			839 = { add_core_of = GBA }
+
+
 		}
-		puppet = GBA
-		GBA = { set_cosmetic_tag = jimma }
+
+
 		if = {
 			limit = {
 				country_exists = ETH
@@ -3630,7 +3262,7 @@ unit_leader_event = {
 						}
 						remove_any_country_role_from_character = yes
 					}
-					set_nationality = GBA
+					
 				}
 			}
 		}
@@ -3659,13 +3291,11 @@ unit_leader_event = {
 							}
 							remove_any_country_role_from_character = yes
 						}
-						set_nationality = GBA
+						
 					}
 				}
 			}
-			GBA = {
-				promote_character = ETH_abba_jofir
-			}
+
 		}
 
 		#Send next event
@@ -3921,9 +3551,7 @@ unit_leader_event = {
 					has_resistance = yes
 				}
 			}
-			BEG = {
-				transfer_state = 840 #GOJJAM
-			}
+
 		}
 		if = {
 			limit = {
@@ -3932,13 +3560,11 @@ unit_leader_event = {
 					has_resistance = yes
 				}
 			}
-			BEG = {
-				transfer_state = 841 #BEGEMDER
-			}
-			841 = {add_core_of = BEG}
+
+
 		}
-		puppet = BEG
-		BEG = { set_cosmetic_tag = gojjam }
+
+
 		if = {
 			limit = {
 				country_exists = ETH
@@ -3960,7 +3586,7 @@ unit_leader_event = {
 						}
 						remove_any_country_role_from_character = yes
 					}
-					set_nationality = BEG
+
 				}
 			}
 		}
@@ -3989,13 +3615,11 @@ unit_leader_event = {
 							}
 							remove_any_country_role_from_character = yes
 						}
-						set_nationality = BEG
+	
 					}
 				}
 			}
-			BEG = {
-				promote_character = ETH_hailu_tekle_haymanot
-			}
+
 		}
 
 		#Send next event
@@ -4209,9 +3833,7 @@ unit_leader_event = {
 					has_resistance = yes
 				}
 			}
-			TIG = {
-				transfer_state = 842 #TIGRAY
-			}
+
 		}
 		if = {
 			limit = {
@@ -4220,10 +3842,8 @@ unit_leader_event = {
 					has_resistance = yes
 				}
 			}
-			TIG = {
-				transfer_state = 843 #WELLO
-			}
-			843 = { add_core_of = TIG }
+
+
 		}
 		if = {
 			limit = {
@@ -4233,12 +3853,9 @@ unit_leader_event = {
 					has_resistance = yes
 				}
 			}
-			TIG = {
-				transfer_state = 908 #AFAR
-			}
-			908 = { add_core_of = TIG }
+
 		}
-		puppet = TIG
+
 		if = {
 			limit = {
 				country_exists = ETH
@@ -4260,7 +3877,6 @@ unit_leader_event = {
 						}
 						remove_any_country_role_from_character = yes
 					}
-					set_nationality = TIG
 				}
 			}
 		}
@@ -4289,12 +3905,8 @@ unit_leader_event = {
 							}
 							remove_any_country_role_from_character = yes
 						}
-						set_nationality = TIG
 					}
 				}
-			}
-			TIG = {
-				promote_character = ETH_seyoum_mengesha
 			}
 		}
 
@@ -4360,13 +3972,6 @@ country_event = {
 	trigger = {
 		original_tag = ITA
 		#date > 1940.01.01
-		NOT = {
-			has_completed_focus = ITA_italo_balbo_focus
-			focus_progress = {
-				focus = ITA_italo_balbo_focus
-				progress > 0
-			}
-		}
 		any_enemy_country = {
 			is_major = yes
 		}
@@ -4458,7 +4063,6 @@ country_event = {
 
 	trigger = {
 		has_character = ITA_italo_balbo
-		NOT = { has_completed_focus = ITA_italo_balbo_focus }
 	}
 
 	# Sayonara Balbo
@@ -5837,10 +5441,6 @@ country_event = {
 
 		ai_chance = {
 			base = 1
-			modifier = {
-				factor = 0
-				ITA_is_socialist_ai = yes
-			}
 		}
 
 		ITA_start_anti_fascist_civil_war = yes
@@ -5858,10 +5458,6 @@ country_event = {
 
 		ai_chance = {
 			base = 1
-			modifier = {
-				factor = 0
-				ITA_is_communist_ai = yes
-			}
 		}
 
 		ITA_start_anti_fascist_civil_war = yes
@@ -6646,341 +6242,6 @@ country_event = {
 			add_opinion_modifier = {
 				target = FROM
 				modifier = SOV_sent_us_weapons
-			}
-		}
-	}
-}
-
-
-
- ######   #######  ##     ## ##     ## ##     ## ##    ## ####  ######  ######## 
-##    ## ##     ## ###   ### ###   ### ##     ## ###   ##  ##  ##    ##    ##    
-##       ##     ## #### #### #### #### ##     ## ####  ##  ##  ##          ##    
-##       ##     ## ## ### ## ## ### ## ##     ## ## ## ##  ##   ######     ##    
-##       ##     ## ##     ## ##     ## ##     ## ##  ####  ##        ##    ##    
-##    ## ##     ## ##     ## ##     ## ##     ## ##   ###  ##  ##    ##    ##    
- ######   #######  ##     ## ##     ##  #######  ##    ## ####  ######     ##    
-
-
-#Communist Leadership - Event for ITA
-country_event = {
-	id = BBA_italy_communist_events.01
-	title = BBA_italy_communist_events.01.t
-	desc = BBA_italy_communist_events.01.desc
-	picture = GFX_report_event_communists_in_riga
-
-	is_triggered_only = yes
-
-	#GRAMSCI (COMMIE)
-	option = {
-		name = BBA_italy_communist_events.01.a
-
-		ai_chance = {
-			base = 3
-		}
-
-		trigger = {
-			has_completed_focus = ITA_liberate_gramsci
-		}
-
-		hidden_effect = {
-			if = {
-				limit = {
-					ITA_comitato_di_liberazione_nazionale = {
-						has_ideology = marxism
-					}
-				}
-				remove_country_leader_role = {
-					character = ITA_comitato_di_liberazione_nazionale
-					ideology = marxism
-				}
-			}
-			if = {
-				limit = {
-					ITA_comitato_di_liberazione_nazionale = {
-						has_ideology = socialism
-					}
-				}
-				remove_country_leader_role = {
-					character = ITA_comitato_di_liberazione_nazionale
-					ideology = socialism
-				}
-			}
-		}
-		ITA_add_country_leader_role_to_gramsci = yes		
-	}
-
-	#TOGLIATTI (COMMUNIST)
-	option = {
-		name = BBA_italy_communist_events.01.b
-
-		ai_chance = {
-			base = 1
-		}
-
-		hidden_effect = {
-			remove_country_leader_role = {
-				character = ITA_comitato_di_liberazione_nazionale
-				ideology = marxism
-			} 
-		}
-		promote_character = ITA_palmiro_togliatti
-	}
-
-	#PERTINI (SOCIALIST)
-	option = {
-		name = BBA_italy_communist_events.01.c
-
-		ai_chance = {
-			base = 1
-		}
-
-		hidden_effect = {
-			remove_country_leader_role = {
-				character = ITA_comitato_di_liberazione_nazionale
-				ideology = marxism
-			} 
-		}
-		promote_character = ITA_sandro_pertini
-		set_party_name = {
-			ideology = communism
-			name = ITA_partito_socialista_italiano
-			long_name = ITA_partito_socialista_italiano_long
-		}
-	}
-}
-
-# The New Italian Republic calls for aid - Event for communist an socialist countries
-country_event = {
-	id = BBA_italy_communist_events.02
-	title = BBA_italy_communist_events.02.t
-	desc = BBA_italy_communist_events.02.desc
-	picture = GFX_report_event_generic_rifles
-
-	is_triggered_only = yes
-
-	#Send Help
-	option = {
-		name = BBA_italy_communist_events.02.a
-
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 2
-				has_opinion = {
-					target = FROM
-					value > 25
-				}
-			}
-			modifier = {
-				factor = 2
-				has_opinion = {
-					target = FROM
-					value > 50
-				}
-			}
-		}
-
-		custom_effect_tooltip = ITA_country_supports_new_italian_government_tt
-		hidden_effect = {
-			FROM = {
-				add_to_variable = { ITA_infantry_equipment_from_leftist_aid = 1000 }
-				add_to_variable = { ITA_support_equipment_from_leftist_aid = 100 }
-				add_to_variable = { ITA_trucks_from_leftist_aid = 50 }
-				add_to_variable = { ITA_consumer_goods_from_leftist_aid = -0.005 }
-			}
-		}
-		FROM = {
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = ITA_supported_the_new_government
-			}
-		}
-	}
-
-	#Nej tack my comrade
-	option = {
-		name = BBA_italy_communist_events.02.b
-
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0
-				is_subject_of = FROM
-			}
-		}
-
-
-	}
-}
-
-# International Aid arrives! - Event dispatcher
-country_event = {
-	id = BBA_italy_communist_events.300
-	title = BBA_italy_communist_events.300.t
-	desc = BBA_italy_communist_events.300.desc
-
-	hidden = yes
-
-	is_triggered_only = yes
-
-	immediate = {
-		if = { #People are supporting
-			limit = {
-				check_variable = { ITA_trucks_from_leftist_aid > 0 }
-			}
-			country_event = BBA_italy_communist_events.03
-		}
-		else = { #No one supported T_T
-			country_event = BBA_italy_communist_events.04
-		}
-	}
-}
-
-# International Aid arrives! - Event for ITA
-country_event = {
-	id = BBA_italy_communist_events.03
-	title = BBA_italy_communist_events.03.t
-	desc = BBA_italy_communist_events.03.desc
-	picture = GFX_report_event_generic_rifles
-
-	is_triggered_only = yes
-
-	#Send Help
-	option = {
-		name = BBA_italy_communist_events.03.a
-
-		custom_effect_tooltip = ITA_international_support_arrives_tt
-		add_equipment_to_stockpile = { 
-			type = infantry_equipment
-			amount = ROOT.ITA_infantry_equipment_from_leftist_aid
-			producer = ROOT
-		}
-		add_equipment_to_stockpile = { 
-			type = support_equipment
-			amount = ROOT.ITA_support_equipment_from_leftist_aid
-			producer = ROOT
-		}
-		add_equipment_to_stockpile = { 
-			type = motorized_equipment
-			amount = ROOT.ITA_trucks_from_leftist_aid
-			producer = ROOT
-		}
-		custom_effect_tooltip = ITA_international_support_consumer_goods_tt
-		hidden_effect = {
-			add_dynamic_modifier = { modifier = ITA_international_aid days = 730 } #WARNING this days value needs to match the one in the tooltip ITA_international_support_arrives_tt
-		}
-	}
-}
-
-# No International Aid received - Event for ITA
-country_event = {
-	id = BBA_italy_communist_events.04
-	title = BBA_italy_communist_events.04.t
-	desc = BBA_italy_communist_events.04.desc
-	picture = GFX_report_event_generic_rifles
-
-	is_triggered_only = yes
-
-	#Send Help
-	option = {
-		name = BBA_italy_communist_events.04.a
-
-		add_political_power = 25
-	}
-}
-
-# Military Cooperation - Event for Italian allies
-country_event = {
-	id = BBA_italy_communist_events.05
-	title = BBA_italy_communist_events.05.t
-	desc = BBA_italy_communist_events.05.desc
-	picture = GFX_report_event_soldiers_marching
-
-	is_triggered_only = yes
-
-	#Military Cooperation
-	option = {
-		name = BBA_italy_communist_events.05.a
-
-		if = {
-			limit = {
-				is_faction_leader = yes
-			}
-			army_experience = 25
-			air_experience = 25
-			navy_experience = 25
-
-			add_doctrine_cost_reduction = {
-				name = ITA_army_modernization
-				cost_reduction = 1
-				uses = 1
-				category = land_doctrine
-			}
-		}
-		else = {
-			army_experience = 15
-			air_experience = 15
-			navy_experience = 15
-
-			add_doctrine_cost_reduction = {
-				name = ITA_army_modernization
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-}
-
-#Gramsci gets a new leader trait
-country_event = {
-	id = BBA_italy_communist_events.09
-	title = BBA_italy_communist_events.09.t
-	desc = BBA_italy_communist_events.09.desc
-	picture = GFX_report_event_ITA_gramsci
-
-	fire_only_once = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		has_character = ITA_antonio_gramsci
-	}
-
-	#Ok
-	option = {
-		name = BBA_italy_communist_events.09.a
-		if = {	
-			limit = {
-				ITA_antonio_gramsci = { 
-					is_country_leader = yes
-				}
-			}
-			ITA_antonio_gramsci = {
-				swap_country_leader_traits = {
-					remove = indisposed_political_scientist
-					add = cultural_hegemony_theorist
-				}
-			}
-		}
-		else = {
-			effect_tooltip = {
-				remove_trait = {
-					character = ITA_antonio_gramsci
-					ideology = marxism
-					trait = indisposed_political_scientist
-				}
-				add_trait = {
-					character = ITA_antonio_gramsci
-					ideology = marxism
-					trait = cultural_hegemony_theorist
-				}
-			}
-			hidden_effect = {
-				ITA_antonio_gramsci = {
-					set_character_flag = ITA_improve_gramscis_trait_flag
-				}
 			}
 		}
 	}
@@ -10679,12 +9940,6 @@ country_event = {
 				}
 			}
 			modifier = {
-				add = 25
-				ITA = {
-					has_completed_focus = ITA_anglo_italian_pact
-				}
-			}
-			modifier = {
 				add = 15
 				ITA = {
 					has_country_leader = {
@@ -10858,12 +10113,6 @@ country_event = {
 				}
 			}
 			modifier = {
-				add = 25
-				ITA = {
-					has_completed_focus = ITA_anglo_italian_pact
-				}
-			}
-			modifier = {
 				add = 15
 				ITA = {
 					has_country_leader = {
@@ -11020,12 +10269,6 @@ country_event = {
 				has_opinion = {
 					target = ITA
 					value > 70
-				}
-			}
-			modifier = {
-				add = 25
-				ITA = {
-					has_completed_focus = ITA_anglo_italian_pact
 				}
 			}
 			modifier = {
@@ -11896,12 +11139,6 @@ country_event = {
 				has_opinion = {
 					target = ITA
 					value > 70
-				}
-			}
-			modifier = {
-				add = 25
-				ITA = {
-					has_completed_focus = ITA_anglo_italian_pact
 				}
 			}
 			modifier = {

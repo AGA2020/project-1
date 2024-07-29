@@ -2795,30 +2795,6 @@ characters = {
 		allowed_civil_war = {
 			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_enrico_fermi
-			allowed = {
-				original_tag = ITA
-				has_dlc = "By Blood Alone"
-			}
-			available = {
-				OR = {
-					has_completed_focus = ITA_meritocracy
-				}
-			}
-			research_bonus = {
-				nuclear = 0.15
-			}
-			traits = {
-				nuclear_scientist # Nuclear guy
-			}
-
-			ai_will_do = {
-				base = 0.100
-			}
-		}
 	}
 
 	ITA_vittorio_emanuele_orlando = {
@@ -2831,34 +2807,6 @@ characters = {
 
 		allowed_civil_war = {
 			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_vittorio_emanuele_orlando
-			allowed = {
-				original_tag = ITA
-				has_dlc = "By Blood Alone"
-			}
-			available = {
-				OR = {
-					has_completed_focus = ITA_meritocracy
-				}
-			}
-			traits = {
-				old_figurehead
-			}
-
-			ai_will_do = {
-				base = 0.300
-				modifier = {
-					factor = 0.5
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
-			}
 		}
 	}
 
@@ -2905,32 +2853,6 @@ characters = {
 
 		allowed_civil_war = {
 			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_pietro_d_acquarone
-			allowed = {
-				original_tag = ITA
-				has_dlc = "By Blood Alone"
-			}
-			available = {
-				has_completed_focus = ITA_convene_the_grand_council
-			}
-			traits = {
-				staunch_monarchist
-			}
-
-			ai_will_do = {
-				base = 0
-				modifier = {
-					add = 100
-					OR = {
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
-			}
 		}
 	}
 
@@ -3381,44 +3303,6 @@ characters = {
 			expire = "1965.1.1.1"
 			id = -1
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_palmiro_togliatti
-			allowed = {
-				original_tag = ITA
-				has_dlc = "By Blood Alone"
-			}
-			available = {
-				OR = {
-					has_completed_focus = ITA_unite_the_opposition
-				}
-				NOT = { has_completed_focus = ITA_culto_del_duce }
-				NOT = { has_completed_focus = ITA_convene_the_grand_council }
-				NOT = { 
-					has_country_leader = {
-						character = ITA_palmiro_togliatti
-						ruling_only = yes
-					}
-				}
-			}
-			
-			traits = {
-				marxist_fundamentalist
-			}
-			
-			ai_will_do = {
-				base = 0.100
-				modifier = {
-					factor = 10
-					has_stability < 0.3
-				}
-				modifier = {
-					factor = 0
-					ITA_is_socialist_ai = yes
-				}
-			}
-		}
 	}
 
 	ITA_sandro_pertini = {
@@ -3439,40 +3323,6 @@ characters = {
 			traits = { staunch_anti_fascist }
 			expire = "1965.1.1.1"
 			id = -1
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_sandro_pertini
-			allowed = {
-				original_tag = ITA
-				has_dlc = "By Blood Alone"
-			}
-			available = {
-				OR = {
-					has_completed_focus = ITA_the_abyssinian_fiasco
-				}
-				NOT = { has_completed_focus = ITA_culto_del_duce }
-				NOT = { has_completed_focus = ITA_convene_the_grand_council }
-				NOT = { 
-					has_country_leader = {
-						character = ITA_sandro_pertini
-						ruling_only = yes
-					}
-				}
-			}
-			
-			traits = {
-				marxist_philosopher
-			}
-			
-			ai_will_do = {
-				base = 1.000
-				modifier = {
-					factor = 0
-					ITA_is_socialist_ai = yes
-				}
-			}
 		}
 	}
 

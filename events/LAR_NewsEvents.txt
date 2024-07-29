@@ -69,12 +69,6 @@ news_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					has_completed_focus = SPA_the_phalanx_ascendant
-				}
-				set_global_flag = SPR_falange_won
-			}
-			if = {
-				limit = {
 					has_completed_focus = SPA_unify_the_nationalist_front
 				}
 				set_global_flag = SPR_franco_won
@@ -1247,10 +1241,7 @@ news_event = {
 			OR = {
 				has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
 				has_completed_focus = ENG_god_save_the_king
-				has_completed_focus = GER_return_of_the_kaiser
 				has_completed_focus = SPA_restore_the_monarchy
-				has_completed_focus = SAF_a_king_for_our_people
-				has_completed_focus = HOL_the_only_man_in_the_dutch_government
 			}
 		}
 	}
@@ -1276,10 +1267,7 @@ news_event = {
 					NOT = {
 						has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
 						has_completed_focus = ENG_god_save_the_king
-						has_completed_focus = GER_return_of_the_kaiser
 						has_completed_focus = SPA_restore_the_monarchy
-						has_completed_focus = SAF_a_king_for_our_people
-						has_completed_focus = HOL_the_only_man_in_the_dutch_government
 						tag = FRA
 					}
 				}
@@ -2578,23 +2566,6 @@ news_event = {
 		trigger = {
 			tag = SOV
 		}
-	}
-
-	option = {
-		name = lar_news.28.d
-		trigger = {
-			tag = SPA
-			has_completed_focus = SPA_the_phalanx_ascendant
-		}
-		#effect_tooltip = {
-		#	every_state = {
-		#		limit = {
-		#			has_state_flag = SPR_sided_with_republicans_flag
-		#		}
-		#		remove_core_of = ROOT
-		#		start_resistance = yes
-		#	}
-		#}
 	}
 
 	option = {

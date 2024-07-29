@@ -7674,7 +7674,6 @@ SOV_increase_opposition_army_support_small = {
 			}
 		}
 	}
-	SOV_get_centre_military_support = yes 
 }
 
 SOV_increase_opposition_navy_support_small = {
@@ -7693,7 +7692,6 @@ SOV_increase_opposition_navy_support_small = {
 			}
 		}
 	}
-	SOV_get_centre_military_support = yes 
 }
 
 SOV_add_armed_forces_support_state = {
@@ -7724,7 +7722,6 @@ SOV_add_armed_forces_support_state = {
 				25 = {
 				}
 			}
-			SOV_get_centre_military_support = yes 
 		}
 
 	}
@@ -7751,7 +7748,6 @@ SOV_decrease_all_opposition_army = {
 		max = 0.9
 		min = 0.1
 	}
-	SOV_get_centre_military_support = yes 
 }
 SOV_decrease_all_opposition_navy = {
 	custom_effect_tooltip = SOV_decrease_all_opposition_navy_tt
@@ -7773,7 +7769,6 @@ SOV_decrease_all_opposition_navy = {
 		max = 0.9
 		min = 0.1
 	}
-	SOV_get_centre_military_support = yes 
 }
 SOV_decrease_all_opposition_air = {
 	custom_effect_tooltip = SOV_decrease_all_opposition_air_tt
@@ -7795,7 +7790,6 @@ SOV_decrease_all_opposition_air = {
 		max = 0.9
 		min = 0.1
 	}
-	SOV_get_centre_military_support = yes 
 }
 
 SOV_set_up_dynamic_modifiers_civil_war = { #Used for Stalinist side in the CW

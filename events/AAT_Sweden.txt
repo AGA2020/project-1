@@ -5136,20 +5136,6 @@ country_event = {
 			random_hours = 2 # optional - can take hours/days/months
 		}
 
-		SWE_king_gustaf_v = {
-			add_country_leader_role = {
-				country_leader={
-					ideology=centrism
-					expire="1965.1.1.1"
-					id = -1
-				}
-				promote_leader = yes
-			}
-			set_portraits = {
-				civilian = { large =GFX_portrait_SWE_gustaf_v_patches }
-			}
-		}
-
 
 		hidden_effect = {
 			add_popularity = {
@@ -5165,12 +5151,6 @@ country_event = {
 			every_other_country = {
 				limit = {
 					original_tag = SWE
-					NOT = {
-						has_country_leader = {
-							character = SWE_king_gustaf_v
-							ruling_only = yes
-						}
-					}
 				}
 
 				add_equipment_to_stockpile = { 
@@ -5293,65 +5273,45 @@ country_event = {
 			}
 			random_list = {
 				12.5 = {
-					SWE_king_gustaf_v = {
-						add_trait = { trait = the_spider ideology = centrism }
-					}
+
 				}
 
 				12.5 = {
-					SWE_king_gustaf_v = {
-						add_trait = { trait = untethered ideology = centrism }
-					}
+
 				}
 				12.5 = {
 					if = {
 						limit = { has_dlc = "La Resistance" }
-						SWE_king_gustaf_v = {
-							add_trait = { trait = mild_mannered ideology = centrism }
-						}
+
 					}
 					else = {
-						SWE_king_gustaf_v = {
-							add_trait = { trait = mild_mannered_no_lar ideology = centrism }
-						}
+	
 					}
 				}
 
 				12.5 = {
-					SWE_king_gustaf_v = {
-						add_trait = { trait = hyena ideology = centrism }
-					}
+	
 				}
 
 				12.5 = {
-					SWE_king_gustaf_v = {
-						add_trait = { trait = lucky ideology = centrism }
-					}
+	
 				}
 
 				12.5 = {
-					SWE_king_gustaf_v = {
-						add_trait = { trait = amnesiac ideology = centrism }
-					}
+		
 				}
 
 				12.5 = {
-					SWE_king_gustaf_v = {
-						add_trait = { trait = unbreakable ideology = centrism }
-					}
+		
 				}
 
 				12.5 = {
 					if = {
 						limit = { has_dlc = "La Resistance" }
-						SWE_king_gustaf_v = {
-							add_trait = { trait = trusty ideology = centrism }
-						}
+				
 					}
 					else = {
-						SWE_king_gustaf_v = {
-							add_trait = { trait = trusty_no_lar ideology = centrism }
-						}
+					
 					}
 				}
 			}
