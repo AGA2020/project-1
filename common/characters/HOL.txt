@@ -91,32 +91,6 @@ characters={
 	}
 	
 	HOL_willem_schermerhorn={
-		advisor={
-			slot = political_advisor
-			idea_token = HOL_willem_schermerhorn
-			allowed  = {
-					original_tag  = HOL
-				}
-				available  = {
-					if  = {
-						limit  = {
-							has_dlc = "Man the Guns"
-						}
-						has_completed_focus  = HOL_unity_through_democracy 
-					}
-					if  = {
-						limit  = {
-							has_dlc = "Man the Guns"
-						}
-						not  = {
-							has_autonomy_state  = autonomy_supervised_state
-						}
-					}
-				}
-				traits  = {
-					democratic_reformer 
-				}
-		}
 		name=HOL_willem_schermerhorn
 		portraits={
 			army={

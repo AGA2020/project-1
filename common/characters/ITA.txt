@@ -2738,21 +2738,6 @@ characters = {
 		allowed_civil_war = {
 			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
-		
-		corps_commander = {
-			traits = { infantry_officer armor_officer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = 0
-			visible = {
-				OR = {
-					has_completed_focus = ITA_italian_socialism
-				}
-			}
-		}
 	}
 
 	ITA_ugo_luca = {
@@ -2975,31 +2960,6 @@ characters = {
 
 		allowed_civil_war = {
 			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_guido_de_ruggiero
-			allowed = {
-				original_tag = ITA
-				has_dlc = "By Blood Alone"
-			}
-			available = {
-				OR = {
-					has_completed_focus = ITA_italian_socialism
-				}
-			}
-			traits = {
-				liberal_professor # Liberal Philosophy professor and Minister of Education
-			}
-
-			ai_will_do = {
-				base = 0.300
-				modifier = {
-					factor = 0
-					ITA_is_communist_ai = yes
-				}
-			}
 		}
 	}
 

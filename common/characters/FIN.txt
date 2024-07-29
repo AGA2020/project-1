@@ -277,16 +277,6 @@ characters = {
 				small = GFX_portrait_FIN_kurt_martti_wallenius_small
 			}
 		}
-		corps_commander = {
-			traits = { infantry_officer ranger jaeger }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 3
-			planning_skill = 1
-			logistics_skill = 2
-			legacy_id = -1
-			visible = { has_completed_focus = FIN_patriotic_peoples_movement }
-		}
 	}
 
 	FIN_fanni_luukkonen = {
@@ -491,20 +481,6 @@ characters = {
 			army = {
 				small = GFX_portrait_FIN_akseli_anttila_small
 				large = GFX_portrait_FIN_akseli_anttila
-			}
-		}
-		corps_commander = {
-			traits = { infantry_officer reckless }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
-			legacy_id = -1
-			visible = {
-				OR = {
-					has_completed_focus = FIN_pragmatic_socialism
-				}
 			}
 		}
 	}
@@ -1837,21 +1813,6 @@ characters = {
 				small = GFX_portrait_FIN_mandi_hannula_small
 			}
 		}
-		advisor = {
-			slot = political_advisor #SDP
-			idea_token = FIN_mandi_hannula
-			allowed = {
-				original_tag = FIN
-				has_dlc = "Arms Against Tyranny"
-			}
-			available = {
-				has_completed_focus = FIN_social_democratic_womens_union
-			}
-			cost = 70
-			traits = {
-				womens_rights_activist
-			}
-		}
 	}
 
 	FIN_otto_brusiin = {
@@ -2033,23 +1994,6 @@ characters = {
 		portraits = {
 			civilian = {
 				small = GFX_portrait_FIN_sandra_lehtinen_small
-			}
-		}
-		advisor = {
-			slot = political_advisor #
-			idea_token = FIN_sandra_lehtinen
-			allowed = {
-				original_tag = FIN
-				has_dlc = "Arms Against Tyranny"
-			}
-			available = {
-				OR = {
-					has_completed_focus = FIN_social_democratic_womens_union
-				}
-			}
-			cost = 70
-			traits = {
-				veteran_trade_unionist 
 			}
 		}
 	}

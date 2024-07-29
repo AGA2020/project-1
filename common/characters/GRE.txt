@@ -1498,29 +1498,6 @@ characters={
 				large="GFX_portrait_gre_emmanouil_tsouderos" #Can become country leader later
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_emmanouil_tsouderos
-			allowed = {
-				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
-			available = {
-				has_completed_focus = GRE_fiscal_responsibility 
-				NOT = {
-					OR = {
-						has_government = communism 
-						has_country_leader = {
-							character = GRE_emmanouil_tsouderos
-							ruling_only = yes 
-						}
-					}
-				}
-			}
-			traits = {
-				financial_expert 
-			}
-		}
 	}
 
 	GRE_damaskinos={

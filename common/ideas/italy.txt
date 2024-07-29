@@ -2755,9 +2755,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				OR = {
-					has_completed_focus = ITA_reorganize_regio_esercito
-				}
+
 			}
 					
 			modifier = {
@@ -2780,7 +2778,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_completed_focus = ITA_proclaim_the_italian_empire
+
 			}
 			
 			modifier = {

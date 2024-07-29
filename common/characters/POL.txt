@@ -950,23 +950,6 @@ characters = {
 			}
 		}
 		gender = female
-		advisor = {
-			cost = 100
-			slot = political_advisor
-			idea_token = POL_wanda_wasilewska
-			ledger = army
-			available = {
-				OR = {
-					has_completed_focus = POL_modus_vivendi
-				}
-			}
-			allowed = {
-				original_tag = POL
-			}
-			traits = {
-				leftist_intellectual
-			}
-		}
 	}
 
 	POL_jan_mosdorf={
@@ -974,22 +957,6 @@ characters = {
 		portraits={
 			army={
 				small="GFX_idea_POL_jan_mosdorf"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_jan_mosdorf
-			available = {
-				OR = {
-					has_completed_focus = POL_modus_vivendi
-				}
-			}
-			allowed = {
-				original_tag = POL
-				has_dlc = "No Step Back"
-			}
-			traits = {
-				national_propagandist 
 			}
 		}
 	}
@@ -1131,25 +1098,6 @@ characters = {
 				small="GFX_idea_POL_joachim_stefan_bartoszewicz"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_joachim_stefan_bartoszewicz
-			available = {
-				OR = {
-					has_completed_focus = POL_modus_vivendi
-				}
-			}
-			allowed = {
-				original_tag = POL
-				OR = {
-					has_dlc = "Poland: United and Ready"
-					has_dlc = "No Step Back"
-				}			
-			}
-			traits = {
-				national_determinist 
-			}
-		}
 	}
 
 	POL_aleksander_kakowski={
@@ -1201,25 +1149,6 @@ characters = {
 		portraits={
 			army={
 				small="GFX_idea_POL_stanislaw_wojciechowski"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_stanislaw_wojciechowski
-			available = {
-				OR = {
-					has_completed_focus = POL_modus_vivendi
-				}
-			}
-			allowed = {
-				original_tag = POL
-				OR = {
-					has_dlc = "Poland: United and Ready"
-					has_dlc = "No Step Back"
-				}			
-			}
-			traits = {
-				noble_beurocrat 
 			}
 		}
 	}

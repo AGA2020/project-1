@@ -9,32 +9,6 @@ characters={
 				small="GFX_idea_ENG_winston_churchill"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_winston_churchill
-			available  = {
-				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				royalist_bulldog 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
 
 		country_leader={
 			ideology=conservatism
@@ -69,24 +43,6 @@ characters={
 			}
 			army={
 				small="GFX_idea_ENG_oswald_mosley"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_oswald_mosley
-			available  = {
-				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				economic_organizer 
-			}
-			ai_will_do  = {
-				factor  = 1.000
 			}
 		}
 		
@@ -1876,24 +1832,6 @@ characters={
 				small="GFX_idea_ENG_david_lloyd_george"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_david_lloyd_george
-			available  = {
-				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				old_figurehead 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
 	}
 
 # Communist ministers, intentionally without loc so they are 'randomized'
@@ -2171,34 +2109,6 @@ characters={
 				small="GFX_idea_ENG_corgis_1"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_corgis_1
-			available  = {
-				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
-				has_country_leader  = {
-					name = "Elizabeth II"
-					ruling_only  = yes 
-				}
-			}
-			visible  = {
-				has_country_leader  = {
-					name = "Elizabeth II"
-					ruling_only  = yes 
-				}
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				face_licker 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
 	}
 
 	ENG_corgis_2={
@@ -2208,34 +2118,6 @@ characters={
 				small="GFX_idea_ENG_corgis_2"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_corgis_2
-			available  = {
-				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
-				has_country_leader  = {
-					name = "Elizabeth II"
-					ruling_only  = yes 
-				}
-			}
-			visible  = {
-				has_country_leader  = {
-					name = "Elizabeth II"
-					ruling_only  = yes 
-				}
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				heels_nipper 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
 	}
 
 	ENG_corgis_3={
@@ -2243,34 +2125,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ENG_corgis_3"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_corgis_3
-			available  = {
-				has_government  = neutrality 
-				has_completed_focus  = ENG_the_kings_party 
-				has_country_leader  = {
-					name = "Elizabeth II"
-					ruling_only  = yes 
-				}
-			}
-			visible  = {
-				has_country_leader  = {
-					name = "Elizabeth II"
-					ruling_only  = yes 
-				}
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				snuggler 
-			}
-			ai_will_do  = {
-				factor  = 1.000
 			}
 		}
 	}
