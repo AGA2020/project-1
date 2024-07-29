@@ -34,23 +34,6 @@ LIT_iron_wolf_appeasement = {
 	priority = 9
 }
 
-support_polish_falange_decisions = {
-	
-	icon = saf_anti_colonialist_crusade
-
-	allowed = {
-		original_tag = LIT
-		has_dlc = "No Step Back"
-	}
-
-	visible = {
-		has_completed_focus = LIT_support_polish_fascists
-		NOT = { POL = { has_government = fascism } }
-		NOT = { POL = { has_country_flag = banned_fascism_flag } }
-	}
-	priority = 9
-}
-
 ################
 ##### EST ######
 ################

@@ -335,16 +335,12 @@ BRA_cangaceiro_decision_cat = {
 			NOT = {
 				OR = {
 					has_country_flag = BRA_anti_cangaceiro_op_in_progress
-					has_completed_focus = BRA_sway_the_cangaco
 				}
 			}
 			has_completed_focus = BRA_deal_with_the_cangaceiro
 		}
 		
 		visible = {
-			NOT = {
-				has_completed_focus = BRA_sway_the_cangaco
-			}
 		}
 
 		ai_will_do = {
@@ -420,23 +416,14 @@ BRA_cangaceiro_decision_cat = {
 			original_tag = BRA
 		}	
 		available = {
-			OR = {
 				NOT = {
 					any_owned_state = {
 						has_dynamic_modifier = {
 							modifier = BRA_cangaceiro_state
 						}
 					}
-					has_completed_focus = BRA_sway_the_cangaco
 				}
-				has_completed_focus = BRA_sway_the_cangaco
-			}
 		}
-		#visible = {
-		#	NOT = {
-		#		has_completed_focus = BRA_sway_the_cangaco
-		#	}
-		#}
 		days_mission_timeout = 365
 		activation = {
 			AND = {
@@ -444,9 +431,6 @@ BRA_cangaceiro_decision_cat = {
 					has_dynamic_modifier = {
 						modifier = BRA_cangaceiro_state
 					}
-				}
-				NOT = {
-					has_completed_focus = BRA_sway_the_cangaco
 				}
 			}
 		}
@@ -524,144 +508,6 @@ BRA_good_neighbor_decisions = {
 			country_event = {
 				id = JUNO_brazil_events.18
 				hours = 1
-			}
-		}
-	}
-}
-
-BRA_mercosul_decisions = {
-	BRA_invite_to_mercosul = {
-		icon = GFX_decision_eng_trade_unions_support
-		allowed = {
-			original_tag = BRA
-		}
-		visible = {
-			has_completed_focus	= BRA_form_mercosul
-		}
-		available = {
-			has_completed_focus	= BRA_form_mercosul
-			FROM = {
-				has_opinion = {
-					target = ROOT
-					value > 24
-				}
-			}
-			NOT = {
-				has_war_with = FROM
-			}
-		}
-		on_map_mode = map_and_decisions_view
-		target_trigger = {
-		    FROM = { 
-		    	AND = {
-		    		NOT = { 
-		    			has_country_flag = BRA_mercosul_member_flag 
-		    			tag = ROOT
-		    		}
-		    		OR = { 
-		    			is_subject = no
-		    			is_subject_of = ROOT
-		    		}
-		    	}
-		    	capital_scope = { is_on_continent = south_america }
-		    }
-		}
-		cost = 20
-		ai_will_do = {
-			base = 35
-			modifier = {
-				factor = 0
-				is_in_faction = yes
-			}
-		}
-		fire_only_once = no
-		days_remove = 10
-		complete_effect = {
-
-		}
-		remove_effect = {
-			FROM = {
-				country_event = {
-					id = JUNO_brazil_events.50
-					hours = 1
-				}
-			}
-			custom_effect_tooltip = BRA_invite_to_organization_of_american_states_tt
-		}
-	}	
-}
-
-BRA_amazonian_settlement_cat = {
-
-	BRA_amazonian_settlement_in_state = {
-
-		icon = GFX_decision_generic_construction
-
-		ai_will_do = {
-			base = 10
-		}
-
-		allowed = {
-			original_tag = BRA
-		}
-
-		available = {
-			has_completed_focus = BRA_amazonian_settlement
-			NOT = {
-				has_country_flag = BRA_amazonian_settlement_in_progress
-			}
-		}
-
-		visible = {
-			has_completed_focus = BRA_amazonian_settlement
-		}
-
-		state_target = yes
-
-		target_trigger = {
-			FROM = {
-				is_owned_and_controlled_by = ROOT
-				NOT = {
-					OR = {
-						has_state_flag = BRA_amazonian_settlement_complete
-						state = 961
-						state = 962
-						state = 963
-						state = 964
-						state = 965
-						state = 966
-						state = 967
-						state = 968
-					}
-				}
-				OR = { 
-					region = 285
-					region = 163
-				}
-			}
-		}
-		on_map_mode = map_and_decisions_view
-		cost = 50
-
-		fire_only_once = yes
-		days_remove = 35
-
-		#modifier =
-
-		complete_effect = {
-			set_country_flag = BRA_amazonian_settlement_in_progress
-		}
-
-		remove_effect = {
-
-			clr_country_flag = BRA_amazonian_settlement_in_progress
-
-			FROM = {
-				set_state_flag = BRA_amazonian_settlement_complete
-
-				add_dynamic_modifier = {
-					modifier = BRA_amazonian_settlement_modifier
-				}
 			}
 		}
 	}

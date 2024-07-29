@@ -2386,25 +2386,6 @@ characters = {
 		allowed_civil_war = {
 			has_government = communism
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_vyacheslav_molotov
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				has_completed_focus = SOV_policy_of_individual_security
-			}
-			traits = {
-				pc_for_foreign_affairs_molotov 
-			}
-		}
 	}
 
 	SOV_maksim_litvinov = {
@@ -2691,33 +2672,6 @@ characters = {
 		allowed_civil_war = {
 			has_government = communism
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_grigory_sokolnikov
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				OR = {
-					has_completed_focus = SOV_the_need_for_policy_changes 
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				peoples_commissar_of_finance 
-			}
-		}
 	}
 
 	SOV_grigory_zinovyev = {
@@ -2736,44 +2690,6 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_grigory_zinovyev
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				has_completed_focus = SOV_align_the_zinovyevites
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-					AND = {
-						has_completed_focus = SOV_coup_detat
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				communist_theorist
 			}
 		}		
 	}
@@ -2794,41 +2710,6 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_lev_kamenev
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				has_completed_focus = SOV_align_the_zinovyevites
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				appeasing_technocrat 
 			}
 		}
 	}
@@ -2856,7 +2737,6 @@ characters = {
 			available = {
 				OR = {
 					has_completed_focus = SOV_patriarch_of_all_russia
-					has_completed_focus = SOV_the_declaration
 				}
 			}
 			traits = {

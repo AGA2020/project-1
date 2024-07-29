@@ -444,30 +444,6 @@ characters={
 				small=GFX_portrait_SPR_janos_galicz_small
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = SPR_janos_galicz
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-			}
-			available = {
-				has_completed_focus = SPR_demand_ministerial_positions
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_logistics_1 }
-			cost =  50
-		}
 		
 		corps_commander={
 			traits={ trait_reckless }
@@ -1945,27 +1921,6 @@ characters={
 				small="GFX_idea_SPR_anarchist_council"
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = SPR_council_of_theorists
-			ledger = military
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-				has_completed_focus = SPR_regional_defense_council_of_aragon
-			}
-			available = {
-				has_completed_focus = SPR_communal_military_strategies
-			}
-			traits = { council_of_theorists }
-		}
 	}
 
 	SPR_domenec_batet = { # Democratic
@@ -2334,9 +2289,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_regional_defense_council_of_aragon
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = { tag = SPA }
@@ -2461,35 +2413,6 @@ characters={
 			army={
 				small="GFX_idea_SPR_francisco_ciutat_de_miguel"
 			}
-		}
-		advisor={	
-			slot = high_command
-			idea_token = SPR_francisco_ciutat_de_miguel
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-			}
-			available = {
-				OR = {
-					has_completed_focus = SPR_demand_ministerial_positions
-				}
-				NOT = {
-					has_completed_focus = SPR_oppose_the_communists
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_infantry_2 }
-			cost = 100
 		}
 	}
 
@@ -2688,8 +2611,7 @@ characters={
 					modifier = {
 						factor = 0.000
 						OR = {
-							has_completed_focus = SPA_a_great_spain 
-							has_completed_focus = SPR_hinder_nkvd_interference 
+							has_completed_focus = SPA_a_great_spain
 						}
 					}
 				}
@@ -2767,7 +2689,6 @@ characters={
 						factor = 0.000
 						OR = {
 							has_completed_focus = SPA_a_great_spain 
-							has_completed_focus = SPR_hinder_nkvd_interference 
 						}
 					}
 				}
@@ -2818,38 +2739,6 @@ characters={
 				}
 			}
 			gender = female
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_dolores_ibarruri
-				allowed = {
-					has_dlc = "La Resistance"
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						tag = SPA 
-						tag = SPB 
-					}
-				}
-				available = {
-					OR = {
-						has_completed_focus = SPR_demand_ministerial_positions 
-					}
-					custom_trigger_tooltip = {
-						tooltip = SPR_not_nationalist_spain_tt
-						NOT = {
-							tag = SPA 
-							tag = SPB 
-						}
-					}
-				}
-				traits = {
-					la_pasionaria 
-				}
-				ai_will_do = {
-					base = 1.000
-				}
-			}
 		}
 		instance = {
 			allowed = {
@@ -2928,9 +2817,7 @@ characters={
 				modifier = {
 					factor = 0.000
 					OR = {
-						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_regional_defense_council_of_aragon 
-						has_completed_focus = SPR_the_anti_fascist_workers_revolution 
+						has_completed_focus = SPA_a_great_spain
 					}
 				}
 				modifier = {
@@ -3070,8 +2957,7 @@ characters={
 					modifier = {
 						factor = 0.000
 						OR = {
-							has_completed_focus = SPA_a_great_spain 
-							has_completed_focus = SPR_hinder_nkvd_interference 
+							has_completed_focus = SPA_a_great_spain
 						}
 					}
 				}
@@ -3174,7 +3060,6 @@ characters={
 			}
 			available = {
 				OR = {
-					has_completed_focus = SPR_demand_ministerial_positions 
 					has_completed_focus = SPR_new_leadership 
 				}
 				custom_trigger_tooltip = {
@@ -3193,7 +3078,6 @@ characters={
 					factor = 0.000
 					OR = {
 						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_the_anti_fascist_workers_revolution 
 					}
 				}
 			}
@@ -3221,9 +3105,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_hinder_nkvd_interference 
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
@@ -3239,8 +3120,7 @@ characters={
 				modifier = {
 					factor = 0.000
 					OR = {
-						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_hinder_nkvd_interference 
+						has_completed_focus = SPA_a_great_spain
 						has_completed_focus = SPR_oppose_the_communists 
 					}
 				}
@@ -3287,9 +3167,7 @@ characters={
 				modifier = {
 					factor = 0.000
 					OR = {
-						has_completed_focus = SPA_a_great_spain 
-						has_completed_focus = SPR_regional_defense_council_of_aragon 
-						has_completed_focus = SPR_the_anti_fascist_workers_revolution 
+						has_completed_focus = SPA_a_great_spain
 					}
 				}
 			}
@@ -3534,11 +3412,6 @@ characters={
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPA_the_phalanx_ascendant
-					has_completed_focus = SPR_regional_defense_council_of_aragon
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
-				}
 			}
 			traits = {
 				war_industrialist 
