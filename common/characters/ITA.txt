@@ -1928,13 +1928,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 0.3
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -1994,13 +1987,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 0.3
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2049,13 +2035,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2105,13 +2084,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2168,15 +2140,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 1.000
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
 			}
 		}
 
@@ -2218,13 +2181,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 1.000
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
 			}
 		}		
 	}
@@ -2255,15 +2211,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 3.000
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2295,15 +2242,6 @@ characters = {
 
 			ai_will_do = {
 				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2335,15 +2273,6 @@ characters = {
 
 			ai_will_do = {
 				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2378,13 +2307,6 @@ characters = {
 
 			ai_will_do = {
 				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2421,10 +2343,6 @@ characters = {
 					factor = 0
 					OR = {
 						ITA_is_historical_ai = yes
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
 					}
 				}
 			}
@@ -2458,15 +2376,6 @@ characters = {
 
 			ai_will_do = {
 				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2508,14 +2417,6 @@ characters = {
 
 			ai_will_do = {
 				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2548,14 +2449,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 0.500
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2586,15 +2479,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 0.000
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
 			}
 		}
 	}
@@ -2638,15 +2522,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 0.000
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_communist_ai = yes
-						ITA_is_socialist_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
-					}
-				}
 			}
 		}		
 	}
@@ -2901,10 +2776,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 0.000
-				modifier = {
-					factor = 0
-					ITA_is_socialist_ai = no
-				}
 			}
 		}
 

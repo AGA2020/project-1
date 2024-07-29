@@ -1,4 +1,98 @@
 operations = {
+    annex_new_zealand = {
+        # icon = generic_operation
+        allowed = {
+            tag = ENG
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            NZL = {
+                is_ai = yes
+            }
+        }
+        targets = {
+            NZL
+        }
+        complete_effect = {
+            NZL = {
+                transfer_units_fraction = {
+                    target = ENG
+                    size = 1
+                    stockpile_ratio = 1
+                    army_ratio = 1
+                    navy_ratio = 1
+                    air_ratio = 1
+                    keep_unit_leaders_trigger = {
+                        always = no
+                    }
+                }
+            }
+            ENG = {
+                annex_country = {
+                    target = NZL
+                    transfer_troops = yes
+                }
+            }
+            every_state = {
+                limit = {
+                    is_core_of = NZL
+                    is_controlled_by = ENG
+                }
+                add_compliance = 50
+            }
+        }
+    }
+    annex_new_zealand_ast = {
+        # icon = generic_operation
+        allowed = {
+            tag = AST
+        }
+        fire_only_once = yes
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        available = {
+            NZL = {
+                is_ai = yes
+            }
+        }
+        targets = {
+            NZL
+        }
+        complete_effect = {
+            NZL = {
+                transfer_units_fraction = {
+                    target = AST
+                    size = 1
+                    stockpile_ratio = 1
+                    army_ratio = 1
+                    navy_ratio = 1
+                    air_ratio = 1
+                    keep_unit_leaders_trigger = {
+                        always = no
+                    }
+                }
+            }
+            AST = {
+                annex_country = {
+                    target = NZL
+                    transfer_troops = yes
+                }
+            }
+            every_state = {
+                limit = {
+                    is_core_of = NZL
+                    is_controlled_by = AST
+                }
+                add_compliance = 100
+            }
+        }
+    }
     annex_hungary = {
             # icon = generic_operation
             allowed = {
@@ -10,6 +104,13 @@ operations = {
                 factor = 0
             }
             available = {
+            OR = {
+            date>1938.1.1
+            ENG = { controls_state = 439 }
+            ENG = { controls_state = 275 }
+            ENG = { controls_state = 276 }
+            ENG = { controls_state = 285 }
+            }
                 HUN = {
                     is_ai = yes
                 }
@@ -71,6 +172,13 @@ operations = {
                 factor = 0
             }
             available = {
+            OR = {
+            date>1938.1.1
+            ENG = { controls_state = 439 }
+            ENG = { controls_state = 275 }
+            ENG = { controls_state = 276 }
+            ENG = { controls_state = 285 }
+            }
                 ROM = {
                     is_ai = yes
                 }
@@ -128,6 +236,13 @@ operations = {
                 factor = 0
             }
             available = {
+            OR = {
+            date>1938.1.1
+            ENG = { controls_state = 439 }
+            ENG = { controls_state = 275 }
+            ENG = { controls_state = 276 }
+            ENG = { controls_state = 285 }
+            }
                 BUL = {
                     is_ai = yes
                 }
@@ -168,72 +283,149 @@ operations = {
 
         }
 
-#     annex_spain = {
-#            # icon = generic_operation
-#            allowed = {
-#                tag = GER
-#            }
-#            fire_only_once = yes
-#            cost = 0
-#            ai_will_do = {
-#                factor = 0
-#            }
-#            available = {
-#                SPR = {
-#                    is_ai = yes
-#                }
-#
-#            }
-#            visible = {
-#                SPR = {
-#                    is_ai = yes
-#                }
-#            }
-#            targets = {
-#                SPR
-#            }
-#            complete_effect = {
-#                SPR = {
-#                    transfer_units_fraction = {
-#                        target = GER
-#                        size = 1
-#                        stockpile_ratio = 1
-#                        army_ratio = 1
-#                        navy_ratio = 1
-#                        air_ratio = 1
-#                        keep_unit_leaders_trigger = {
-#                            always = no
-#                        }
-#                    }
-#                }
-#                GER = {
-#                    annex_country = {
-#                        target = SPR
-#                        transfer_troops = yes
-#                    }
-#                }
-#                171 = { add_compliance = 100 }
-#                790 = { add_compliance = 100 }
-#                174 = { add_compliance = 100 }
-#                792 = { add_compliance = 100 }
-#                169 = { add_compliance = 100 }
-#                168 = { add_compliance = 100 }
-#                166 = { add_compliance = 100 } 
-#                41 = { add_compliance = 100 }  
-#                789 = { add_compliance = 100 }
-#                173 = { add_compliance = 100 } 
-#                167 = { add_compliance = 100 }
-#                165 = { add_compliance = 100 } 
-#                791 = { add_compliance = 100 }   
-#                176 = { add_compliance = 100 } 
-#                793 = { add_compliance = 100 } 
-#                172 = { add_compliance = 100 } 
-#                794 = { add_compliance = 100 }
-#                170 = { add_compliance = 100 }
-#                175 = { add_compliance = 100 } 
-#                788 = { add_compliance = 100 }                                                                       
-#            }
-#
-#        }       
+     annex_spain = {
+            # icon = generic_operation
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            cost = 0
+            ai_will_do = {
+                factor = 0
+            }
+            available = {
+            OR = {
+            date>1938.1.1
+            ENG = { controls_state = 439 }
+            ENG = { controls_state = 275 }
+            ENG = { controls_state = 276 }
+            ENG = { controls_state = 285 }
+            }
+            has_global_flag = scw_over
+                SPR = {
+                    is_ai = yes
+                }
+
+            }
+            visible = {
+                SPR = {
+                    is_ai = yes
+                }
+            }
+            targets = {
+                SPR
+            }
+            complete_effect = {
+                SPR = {
+                    transfer_units_fraction = {
+                        target = GER
+                        size = 1
+                        stockpile_ratio = 1
+                        army_ratio = 1
+                        navy_ratio = 1
+                        air_ratio = 1
+                        keep_unit_leaders_trigger = {
+                            always = no
+                        }
+                    }
+                }
+                WST = { transfer_state = 178 }
+                WST = { transfer_state = 177 }
+                WST = { transfer_state = 290 }
+                WST = { transfer_state = 297 }
+                WST = { transfer_state = 699 }                                   
+                GER = {
+                    annex_country = {
+                        target = SPR
+                        transfer_troops = yes
+                    }
+                }
+                171 = { add_compliance = 100 }
+                790 = { add_compliance = 100 }
+                174 = { add_compliance = 100 }
+                792 = { add_compliance = 100 }
+                169 = { add_compliance = 100 }
+                168 = { add_compliance = 100 }
+                166 = { add_compliance = 100 } 
+                41 = { add_compliance = 100 }  
+                789 = { add_compliance = 100 }
+                173 = { add_compliance = 100 } 
+                167 = { add_compliance = 100 }
+                165 = { add_compliance = 100 } 
+                791 = { add_compliance = 100 }   
+                176 = { add_compliance = 100 } 
+                793 = { add_compliance = 100 } 
+                172 = { add_compliance = 100 } 
+                794 = { add_compliance = 100 }
+                170 = { add_compliance = 100 }
+                175 = { add_compliance = 100 } 
+                788 = { add_compliance = 100 }                                                                       
+            }                                     
+        }       
+
+    annex_finland = {
+            # icon = generic_operation
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            cost = 0
+            ai_will_do = {
+                factor = 0
+            }
+            available = {
+            OR = {
+            date>1938.1.1
+            ENG = { controls_state = 439 }
+            ENG = { controls_state = 275 }
+            ENG = { controls_state = 276 }
+            ENG = { controls_state = 285 }
+            }
+                FIN = {
+                    is_ai = yes
+                }
+            }
+            visible = {
+                FIN = {
+                    is_ai = yes
+                }
+            }
+            targets = {
+                FIN
+            }
+            complete_effect = {
+                FIN = {
+                    transfer_units_fraction = {
+                        target = GER
+                        size = 1
+                        stockpile_ratio = 1
+                        army_ratio = 1
+                        navy_ratio = 1
+                        air_ratio = 1
+                        keep_unit_leaders_trigger = {
+                            always = no
+                        }
+                    }
+                }
+                GER = {
+                    annex_country = {
+                        target = FIN
+                        transfer_troops = yes
+                    }
+                }
+                926 = { add_compliance = 100 }
+                111 = { add_compliance = 100 }
+                927 = { add_compliance = 100 }
+                149 = { add_compliance = 100 }
+                930 = { add_compliance = 100 }  
+                146 = { add_compliance = 100 }            
+                928 = { add_compliance = 100 }         
+                150 = { add_compliance = 100 }      
+                929 = { add_compliance = 100 }       
+                147 = { add_compliance = 100 }  
+                148 = { add_compliance = 100 }                                                                                              
+            }
+
+        }
 
 }
