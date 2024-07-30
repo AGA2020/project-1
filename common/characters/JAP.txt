@@ -64,11 +64,11 @@ characters={
 		}
 
 		corps_commander={
-			traits={ brilliant_strategist politically_connected trickster trait_engineer }
-			skill=5
-			attack_skill=4
-			defense_skill=5
-			planning_skill=3
+			traits={ brilliant_strategist politically_connected trickster trait_engineer organizer infantry_leader panzer_leader trickster }
+			skill=6
+			attack_skill=5
+			defense_skill=6
+			planning_skill=4
 			logistics_skill=4
 			legacy_id=0
 		}
@@ -188,12 +188,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer infantry_officer trickster }
-			skill=4
-			attack_skill=4
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=4
+			traits={ career_officer infantry_officer organizer infantry_leader panzer_leader trickster }
+			skill=6
+			attack_skill=6
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=5
 			legacy_id=0
 		}
 	}
@@ -245,14 +245,14 @@ characters={
 		name=JAP_toshizo_nishio
 		portraits={
 			army={
-				large=GFX_portrait_JAP_toshizo_nishio
-				small=GFX_portrait_JAP_toshizo_nishio_small
+				large="gfx/leaders/JAP/Portrait_Japan_Toshizo_Nishio.dds"
+				small="gfx/interface/ideas/idea_JAP_toshizo_nishio.dds"
 			}
 		}
 		corps_commander={
-			traits={ brilliant_strategist infantry_officer }
-			skill=3
-			attack_skill=3
+			traits = { organizer infantry_leader trait_engineer infantry_expert naval_invader commando trickster trait_mountaineer jungle_rat }
+			skill=8
+			attack_skill=5
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=2
@@ -307,11 +307,11 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ inflexible_strategist trait_reckless JAP_samurai_lineage }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
+			traits={ inflexible_strategist trait_reckless JAP_samurai_lineage organizer infantry_leader panzer_leader trickster }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=3
 			logistics_skill=2
 			legacy_id=0
 		}
@@ -512,12 +512,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer politically_connected fortress_buster }
-			skill=3
-			attack_skill=1
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=3
+			traits={ career_officer politically_connected fortress_buster organizer infantry_leader panzer_leader trickster }
+			skill=6
+			attack_skill=4
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=5
 			legacy_id=0
 		}
 	}
@@ -625,9 +625,9 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ career_officer infantry_officer commando }
-			skill=3
-			attack_skill=3
+			traits = {  commando naval_invader infantry_leader infantry_expert trait_engineer hill_fighter ranger trait_mountaineer }
+			skill=7
+			attack_skill=5
 			defense_skill=1
 			planning_skill=3
 			logistics_skill=3
@@ -1389,6 +1389,40 @@ characters={
 				small="GFX_idea_sanzo_nosaka"
 			}
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = sanzo_nosaka
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Waking the Tiger"
+					}
+					has_completed_focus = JAP_the_unthinkable_option 
+				}
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+			}
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				communist_revolutionary 
+			}
+			do_effect = {
+				NOT = {
+					has_government = communism 
+				}
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
 	}
 
 	JAP_kijuro_shidehara={
@@ -1396,6 +1430,40 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_kijuro_shidehara"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = kijuro_shidehara
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Waking the Tiger"
+					}
+					has_completed_focus = JAP_strengthen_civilian_government 
+				}
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+			}
+			allowed = {
+				original_tag = JAP
+			}
+			traits = {
+				democratic_reformer 
+			}
+			do_effect = {
+				NOT = {
+					has_government = democratic 
+				}
+			}
+			ai_will_do = {
+				factor = 0.000
 			}
 		}
 	}

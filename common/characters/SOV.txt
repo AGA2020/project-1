@@ -2828,32 +2828,6 @@ characters = {
 			}
 		}		
 	}
-
-	SOV_grigory_semyonov = {
-		name = SOV_grigory_semyonov
-		portraits = {
-			army = {
-				small = "GFX_idea_SOV_grigory_semyonov"
-				large = "GFX_portrait_SOV_grigory_semyonov"
-			}
-		}
-
-		corps_commander = {
-			traits = { cavalry_officer cavalry_leader }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 3
-			legacy_id = 0
-			visible = {
-				OR = {
-					has_idea = SOV_grigory_semyonov
-				}
-			}
-		}
-	}
-
 	SOV_nikolay_ustryalov = {
 		name = SOV_nikolay_ustryalov
 		portraits = {
