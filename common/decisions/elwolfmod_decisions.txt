@@ -346,6 +346,7 @@ operations = {
 			factor = 0
 		}
 		available = {
+		has_global_flag = { flag = annex value > 0 }
 			CAN = {
 				is_ai = yes
 			}
@@ -380,6 +381,38 @@ operations = {
 				}
 				add_compliance = 50
 			}
+            hidden_effect = { 
+                if = {
+                    limit = { 
+                        has_global_flag = { flag = annex value = 1 }
+                    }
+                    set_global_flag = { flag = annex value = 0 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 2 }
+                    }
+                    set_global_flag = { flag = annex value = 1 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 3 }
+                    }
+                    set_global_flag = { flag = annex value = 2 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 4 }
+                    }
+                    set_global_flag = { flag = annex value = 3 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 5 }
+                    }
+                    set_global_flag = { flag = annex value = 4 }
+                }
+            }
 		}
 	}
 	annex_south_africa = {
@@ -393,6 +426,7 @@ operations = {
 			factor = 0
 		}
 		available = {
+		has_global_flag = { flag = annex value > 0 }
 			SAF = {
 				is_ai = yes
 			}
@@ -427,7 +461,40 @@ operations = {
 				}
 				add_compliance = 50
 			}
+            hidden_effect = { 
+                if = {
+                    limit = { 
+                        has_global_flag = { flag = annex value = 1 }
+                    }
+                    set_global_flag = { flag = annex value = 0 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 2 }
+                    }
+                    set_global_flag = { flag = annex value = 1 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 3 }
+                    }
+                    set_global_flag = { flag = annex value = 2 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 4 }
+                    }
+                    set_global_flag = { flag = annex value = 3 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 5 }
+                    }
+                    set_global_flag = { flag = annex value = 4 }
+                }
+            }
 		}
+
 	}
 	annex_british_raj = {
 		# icon = generic_operation
@@ -440,14 +507,17 @@ operations = {
 			factor = 0
 		}
 		available = {
+		has_global_flag = { flag = annex value > 0 }
 			RAJ = {
 				is_ai = yes
 			}
+
 		}
 		targets = {
 			RAJ
 		}
 		complete_effect = {
+                hidden_effect = { set_global_flag = { flag = annex value = 0 } }
 			RAJ = {
 				transfer_units_fraction = {
 					target = ENG
@@ -474,6 +544,39 @@ operations = {
 				}
 				add_compliance = 50
 			}
+            hidden_effect = { 
+                if = {
+                    limit = { 
+                        has_global_flag = { flag = annex value = 1 }
+                    }
+                    set_global_flag = { flag = annex value = 0 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 2 }
+                    }
+                    set_global_flag = { flag = annex value = 1 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 3 }
+                    }
+                    set_global_flag = { flag = annex value = 2 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 4 }
+                    }
+                    set_global_flag = { flag = annex value = 3 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 5 }
+                    }
+                    set_global_flag = { flag = annex value = 4 }
+                }
+            }
+
 		}
 	}
 	annex_australia = {
@@ -487,6 +590,7 @@ operations = {
 			factor = 0
 		}
 		available = {
+		has_global_flag = { flag = annex value > 0 }
 			AST = {
 				is_ai = yes
 			}
@@ -521,6 +625,38 @@ operations = {
 				}
 				add_compliance = 50
 			}
+            hidden_effect = { 
+                if = {
+                    limit = { 
+                        has_global_flag = { flag = annex value = 1 }
+                    }
+                    set_global_flag = { flag = annex value = 0 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 2 }
+                    }
+                    set_global_flag = { flag = annex value = 1 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 3 }
+                    }
+                    set_global_flag = { flag = annex value = 2 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 4 }
+                    }
+                    set_global_flag = { flag = annex value = 3 }
+                }
+                ELSE_IF = { 
+                    limit = { 
+                        has_global_flag = { flag = annex value = 5 }
+                    }
+                    set_global_flag = { flag = annex value = 4 }
+                }
+            }
 		}
 	}
 	annex_philippines= {

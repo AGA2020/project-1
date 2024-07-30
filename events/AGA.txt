@@ -1,0 +1,21 @@
+﻿add_namespace = aga
+
+news_event = {
+	id = aga.1
+	title = aga.1.t
+	desc = aga.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = aga.1.a
+			every_country = {
+				limit = {
+					is_playable_country = yes
+				}
+				air_experience = -10				
+			}
+	}
+}
+
