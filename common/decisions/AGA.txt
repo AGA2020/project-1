@@ -1,453 +1,4 @@
 operations = {
-
-   range_improvements_allies = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = ENG
-                tag = USA
-                tag = SOV
-                tag = FRA
-                tag = CAN
-                tag = RAJ
-                tag = SAF
-                tag = BRA
-                tag = MEX
-                tag = AST
-                tag = NZL
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                ENG = { has_tech = range_improvements }
-                USA = { has_tech = range_improvements }
-                SOV = { has_tech = range_improvements }      
-                FRA = { has_tech = range_improvements }      
-                CAN = { has_tech = range_improvements }  
-                RAJ = { has_tech = range_improvements }
-                SAF = { has_tech = range_improvements }
-                BRA = { has_tech = range_improvements }      
-                MEX = { has_tech = range_improvements }      
-                AST = { has_tech = range_improvements } 
-                NZL = { has_tech = range_improvements }                                                                                          
-            }
-        }
-        complete_effect = {
-            set_technology = { range_improvements = 1 }
-        }
-    }
-
-   range_improvements_axis = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = GER
-                tag = SPR
-                tag = ITA
-                tag = HUN
-                tag = FIN
-                tag = ROM
-                tag = DEN
-                tag = JAP
-                tag = MAN
-                tag = SIA
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                GER = { has_tech = range_improvements }
-                SPR = { has_tech = range_improvements }
-                ITA = { has_tech = range_improvements }      
-                HUN = { has_tech = range_improvements }      
-                FIN = { has_tech = range_improvements }  
-                ROM = { has_tech = range_improvements }
-                DEN = { has_tech = range_improvements }
-                JAP = { has_tech = range_improvements }      
-                MAN = { has_tech = range_improvements }      
-                SIA = { has_tech = range_improvements }                                                                        
-            }
-        }
-        complete_effect = {
-            set_technology = { range_improvements = 1 }
-        }
-    }
-
-   advanced_small_airframe_axis = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = GER
-                tag = SPR
-                tag = ITA
-                tag = HUN
-                tag = FIN
-                tag = ROM
-                tag = DEN
-                tag = JAP
-                tag = MAN
-                tag = SIA
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                GER = { has_tech = advanced_small_airframe }
-                SPR = { has_tech = advanced_small_airframe }
-                ITA = { has_tech = advanced_small_airframe }      
-                HUN = { has_tech = advanced_small_airframe }      
-                FIN = { has_tech = advanced_small_airframe }  
-                ROM = { has_tech = advanced_small_airframe }
-                DEN = { has_tech = advanced_small_airframe }
-                JAP = { has_tech = advanced_small_airframe }      
-                MAN = { has_tech = advanced_small_airframe }      
-                SIA = { has_tech = advanced_small_airframe }                                                                        
-            }
-        }
-        complete_effect = {
-            set_technology = { advanced_small_airframe = 1 }
-        }
-    }
-
-  advanced_small_airframe_allies = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = ENG
-                tag = USA
-                tag = SOV
-                tag = FRA
-                tag = CAN
-                tag = RAJ
-                tag = SAF
-                tag = BRA
-                tag = MEX
-                tag = AST
-                tag = NZL
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                ENG = { has_tech = advanced_small_airframe }
-                USA = { has_tech = advanced_small_airframe }
-                SOV = { has_tech = advanced_small_airframe }      
-                FRA = { has_tech = advanced_small_airframe }      
-                CAN = { has_tech = advanced_small_airframe }  
-                RAJ = { has_tech = advanced_small_airframe }
-                SAF = { has_tech = advanced_small_airframe }
-                BRA = { has_tech = advanced_small_airframe }      
-                MEX = { has_tech = advanced_small_airframe }      
-                AST = { has_tech = advanced_small_airframe }  
-                NZL = { has_tech = advanced_small_airframe }                                                                                        
-            }
-        }
-        complete_effect = {
-            set_technology = { advanced_small_airframe = 1 }
-        }
-    }
-
-  improved_small_airframe_allies = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = ENG
-                tag = USA
-                tag = SOV
-                tag = FRA
-                tag = CAN
-                tag = RAJ
-                tag = SAF
-                tag = BRA
-                tag = MEX
-                tag = AST
-                tag = NZL
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                ENG = { has_tech = improved_small_airframe }
-                USA = { has_tech = improved_small_airframe }
-                SOV = { has_tech = improved_small_airframe }      
-                FRA = { has_tech = improved_small_airframe }      
-                CAN = { has_tech = improved_small_airframe }  
-                RAJ = { has_tech = improved_small_airframe }
-                SAF = { has_tech = improved_small_airframe }
-                BRA = { has_tech = improved_small_airframe }      
-                MEX = { has_tech = improved_small_airframe }      
-                AST = { has_tech = improved_small_airframe }  
-                NZL = { has_tech = improved_small_airframe }                                                                                        
-            }
-        }
-        complete_effect = {
-            set_technology = { improved_small_airframe = 1 }
-        }
-    }
-   improved_small_airframe_axis = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = GER
-                tag = SPR
-                tag = ITA
-                tag = HUN
-                tag = FIN
-                tag = ROM
-                tag = DEN
-                tag = JAP
-                tag = MAN
-                tag = SIA
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                GER = { has_tech = improved_small_airframe }
-                SPR = { has_tech = improved_small_airframe }
-                ITA = { has_tech = improved_small_airframe }      
-                HUN = { has_tech = improved_small_airframe }      
-                FIN = { has_tech = improved_small_airframe }  
-                ROM = { has_tech = improved_small_airframe }
-                DEN = { has_tech = improved_small_airframe }
-                JAP = { has_tech = improved_small_airframe }      
-                MAN = { has_tech = improved_small_airframe }      
-                SIA = { has_tech = improved_small_airframe }                                                                        
-            }
-        }
-        complete_effect = {
-            set_technology = { improved_small_airframe = 1 }
-        }
-    }
-  heavymg_allies = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = ENG
-                tag = USA
-                tag = SOV
-                tag = FRA
-                tag = CAN
-                tag = RAJ
-                tag = SAF
-                tag = BRA
-                tag = MEX
-                tag = AST
-                tag = NZL
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                ENG = { has_tech = aa_hmg }
-                USA = { has_tech = aa_hmg }
-                SOV = { has_tech = aa_hmg }      
-                FRA = { has_tech = aa_hmg }      
-                CAN = { has_tech = aa_hmg }  
-                RAJ = { has_tech = aa_hmg }
-                SAF = { has_tech = aa_hmg }
-                BRA = { has_tech = aa_hmg }      
-                MEX = { has_tech = aa_hmg }      
-                AST = { has_tech = aa_hmg }  
-                NZL = { has_tech = aa_hmg }                                                                                        
-            }
-        }
-        complete_effect = {
-            set_technology = { aa_hmg = 1 }
-        }
-    }
-   heavymg_axis = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = GER
-                tag = SPR
-                tag = ITA
-                tag = HUN
-                tag = FIN
-                tag = ROM
-                tag = DEN
-                tag = JAP
-                tag = MAN
-                tag = SIA
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                GER = { has_tech = aa_hmg }
-                SPR = { has_tech = aa_hmg }
-                ITA = { has_tech = aa_hmg }      
-                HUN = { has_tech = aa_hmg }      
-                FIN = { has_tech = aa_hmg }  
-                ROM = { has_tech = aa_hmg }
-                DEN = { has_tech = aa_hmg }
-                JAP = { has_tech = aa_hmg }      
-                MAN = { has_tech = aa_hmg }      
-                SIA = { has_tech = aa_hmg }                                                                        
-            }
-        }
-        complete_effect = {
-            set_technology = { aa_hmg = 1 }
-        }
-    }
-   engine3_allies = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = ENG
-                tag = USA
-                tag = SOV
-                tag = FRA
-                tag = CAN
-                tag = RAJ
-                tag = SAF
-                tag = BRA
-                tag = MEX
-                tag = AST
-                tag = NZL
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                ENG = { has_tech = engines_3 }
-                USA = { has_tech = engines_3 }
-                SOV = { has_tech = engines_3 }      
-                FRA = { has_tech = engines_3 }      
-                CAN = { has_tech = engines_3 }  
-                RAJ = { has_tech = engines_3 }
-                SAF = { has_tech = engines_3 }
-                BRA = { has_tech = engines_3 }      
-                MEX = { has_tech = engines_3 }      
-                AST = { has_tech = engines_3 }   
-                NZL = { has_tech = engines_3 }                                                                       
-            }
-        }
-        complete_effect = {
-            set_technology = { engines_3 = 1 }
-        }
-    }
-   engine4_allies = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = ENG
-                tag = USA
-                tag = SOV
-                tag = FRA
-                tag = CAN
-                tag = RAJ
-                tag = SAF
-                tag = BRA
-                tag = MEX
-                tag = AST
-                tag = NZL
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                ENG = { has_tech = engines_4 }
-                USA = { has_tech = engines_4 }
-                SOV = { has_tech = engines_4 }      
-                FRA = { has_tech = engines_4 }      
-                CAN = { has_tech = engines_4 }  
-                RAJ = { has_tech = engines_4 }
-                SAF = { has_tech = engines_4 }
-                BRA = { has_tech = engines_4 }      
-                MEX = { has_tech = engines_4 }      
-                AST = { has_tech = engines_4 }   
-                NZL = { has_tech = engines_4 }                                                                       
-            }
-        }
-        complete_effect = {
-            set_technology = { engines_4 = 1 }
-        }
-    }    
-    engine3_axis = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = GER
-                tag = SPR
-                tag = ITA
-                tag = HUN
-                tag = FIN
-                tag = ROM
-                tag = DEN
-                tag = JAP
-                tag = MAN
-                tag = SIA
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                GER = { has_tech = engines_3 }
-                SPR = { has_tech = engines_3 }
-                ITA = { has_tech = engines_3 }      
-                HUN = { has_tech = engines_3 }      
-                FIN = { has_tech = engines_3 }  
-                ROM = { has_tech = engines_3 }
-                DEN = { has_tech = engines_3 }
-                JAP = { has_tech = engines_3 }      
-                MAN = { has_tech = engines_3 }      
-                SIA = { has_tech = engines_3 }                                                       
-            }
-        }
-        complete_effect = {
-            set_technology = { engines_3 = 1 }
-        }
-    }
-    engine4_axis = {
-        # icon = generic_operation
-        allowed = {
-            OR = {
-                tag = GER
-                tag = SPR
-                tag = ITA
-                tag = HUN
-                tag = FIN
-                tag = ROM
-                tag = DEN
-                tag = JAP
-                tag = MAN
-                tag = SIA
-            }
-        }
-        fire_only_once = yes
-        cost = 0
-        available = {
-            OR = {
-                GER = { has_tech = engines_4 }
-                SPR = { has_tech = engines_4 }
-                ITA = { has_tech = engines_4 }      
-                HUN = { has_tech = engines_4 }      
-                FIN = { has_tech = engines_4 }  
-                ROM = { has_tech = engines_4 }
-                DEN = { has_tech = engines_4 }
-                JAP = { has_tech = engines_4 }      
-                MAN = { has_tech = engines_4 }      
-                SIA = { has_tech = engines_4 }                                                       
-            }
-        }
-        complete_effect = {
-            set_technology = { engines_4 = 1 }
-        }
-    }    
     annex_new_zealand = {
         # icon = generic_operation
         allowed = {
@@ -528,167 +79,7 @@ operations = {
             }
         }
     }
-    annex_brazil_eng = {
-        # icon = generic_operation
-        allowed = {
-            tag = ENG
-        }
-        fire_only_once = yes
-        cost = 0
-        ai_will_do = {
-            factor = 0
-        }
-        available = {
-            has_global_flag = { flag = annex value > 0 }
-            BRA = {
-                is_ai = yes
-            }
-        }
-        targets = {
-            BRA
-        }
-        complete_effect = {
-            BRA = {
-                transfer_units_fraction = {
-                    target = ENG
-                    size = 1
-                    stockpile_ratio = 1
-                    army_ratio = 1
-                    navy_ratio = 1
-                    air_ratio = 1
-                    keep_unit_leaders_trigger = {
-                        always = no
-                    }
-                }
-            }
-            ENG = {
-                annex_country = {
-                    target = BRA
-                    transfer_troops = yes
-                }
-            }
-            every_state = {
-                limit = {
-                    is_core_of = BRA
-                    is_controlled_by = ENG
-                }
-                add_compliance = 100
-            }
-            hidden_effect = { 
-                if = {
-                    limit = { 
-                        has_global_flag = { flag = annex value = 1 }
-                    }
-                    set_global_flag = { flag = annex value = 0 }
-                }
-                ELSE_IF = { 
-                    limit = { 
-                        has_global_flag = { flag = annex value = 2 }
-                    }
-                    set_global_flag = { flag = annex value = 1 }
-                }
-                ELSE_IF = { 
-                    limit = { 
-                        has_global_flag = { flag = annex value = 3 }
-                    }
-                    set_global_flag = { flag = annex value = 2 }
-                }
-                ELSE_IF = { 
-                    limit = { 
-                        has_global_flag = { flag = annex value = 4 }
-                    }
-                    set_global_flag = { flag = annex value = 3 }
-                }
-                ELSE_IF = { 
-                    limit = { 
-                        has_global_flag = { flag = annex value = 5 }
-                    }
-                    set_global_flag = { flag = annex value = 4 }
-                }
-            }
-        }
-    }
-    annex_brazil = {
-        # icon = generic_operation
-        allowed = {
-            tag = USA
-        }
-        fire_only_once = yes
-        cost = 0
-        ai_will_do = {
-            factor = 0
-        }
-        available = {
-            has_global_flag = { flag = annex value > 0 }
-            BRA = {
-                is_ai = yes
-            }
-        }
-        targets = {
-            BRA
-        }
-        complete_effect = {
-            BRA = {
-                transfer_units_fraction = {
-                    target = USA
-                    size = 1
-                    stockpile_ratio = 1
-                    army_ratio = 1
-                    navy_ratio = 1
-                    air_ratio = 1
-                    keep_unit_leaders_trigger = {
-                        always = no
-                    }
-                }
-            }
-            USA = {
-                annex_country = {
-                    target = BRA
-                    transfer_troops = yes
-                }
-            }
-            every_state = {
-                limit = {
-                    is_core_of = BRA
-                    is_controlled_by = USA
-                }
-                add_compliance = 100
-            }
-            hidden_effect = { 
-                if = {
-                    limit = { 
-                        has_global_flag = { flag = annex value = 1 }
-                    }
-                    set_global_flag = { flag = annex value = 0 }
-                }
-                ELSE_IF = { 
-                    limit = { 
-                        has_global_flag = { flag = annex value = 2 }
-                    }
-                    set_global_flag = { flag = annex value = 1 }
-                }
-                ELSE_IF = { 
-                    limit = { 
-                        has_global_flag = { flag = annex value = 3 }
-                    }
-                    set_global_flag = { flag = annex value = 2 }
-                }
-                ELSE_IF = { 
-                    limit = { 
-                        has_global_flag = { flag = annex value = 4 }
-                    }
-                    set_global_flag = { flag = annex value = 3 }
-                }
-                ELSE_IF = { 
-                    limit = { 
-                        has_global_flag = { flag = annex value = 5 }
-                    }
-                    set_global_flag = { flag = annex value = 4 }
-                }
-            }
-        }
-    }
-    annex_hungary = {
+    annex_hungary_germany = {
             # icon = generic_operation
             allowed = {
                 tag = GER
@@ -699,13 +90,14 @@ operations = {
                 factor = 0
             }
             available = {
-            OR = {
-            date>1937.1.1
-            ENG = { controls_state = 439 }
-            ENG = { controls_state = 275 }
-            ENG = { controls_state = 276 }
-            ENG = { controls_state = 285 }
-            }
+                NOT = { has_global_flag = ger_annexed_minor }
+                OR = {
+                    date>1937.1.1
+                    ENG = { controls_state = 439 }
+                    ENG = { controls_state = 275 }
+                    ENG = { controls_state = 276 }
+                    ENG = { controls_state = 285 }
+                }
                 HUN = {
                     is_ai = yes
                 }
@@ -741,57 +133,81 @@ operations = {
                 155 = { add_compliance = 100 }
                 154 = { add_compliance = 100 }
                 43 = { add_compliance = 100 }
-                hidden_effect = { 
+                hidden_effect = {
+                set_global_flag = ger_annexed_minor
                     SOV = {             
                         823= {
-                            add_extra_state_shared_building_slots = 5 
+                            add_extra_state_shared_building_slots = 7 
                             add_building_construction = {
                                 type = industrial_complex
-                                level = 5
+                                level = 7
                                 instant_build = yes
                             }
                         }
+                    }               
+                }     
+            }
+        }
+    annex_hungary_italy = {
+            # icon = generic_operation
+            allowed = {
+                tag = ITA
+            }
+            fire_only_once = yes
+            cost = 0
+            ai_will_do = {
+                factor = 0
+            }
+            available = {
+            OR = {
+            date>1937.1.1
+            ENG = { controls_state = 439 }
+            ENG = { controls_state = 275 }
+            ENG = { controls_state = 276 }
+            ENG = { controls_state = 285 }
+            has_global_flag = ger_annexed_minor 
+            }
+                HUN = {
+                    is_ai = yes
+                }
+            }
+            visible = {
+                HUN = {
+                    is_ai = yes
+                }
+            }
+            targets = {
+                HUN
+            }
+            complete_effect = {
+                HUN = {
+                    transfer_units_fraction = {
+                        target = ITA
+                        size = 1
+                        stockpile_ratio = 1
+                        army_ratio = 1
+                        navy_ratio = 1
+                        air_ratio = 1
+                        keep_unit_leaders_trigger = {
+                            always = no
+                        }
                     }
                 }
-                hidden_effect = { 
-                    if = {
-                        limit = { 
-                            has_global_flag = { flag = annex value = 0 }
-                        }
-                        set_global_flag = { flag = annex value = 1 }
+                ITA = {
+                    annex_country = {
+                        target = HUN
+                        transfer_troops = yes
                     }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 1 }
-                        }
-                        set_global_flag = { flag = annex value = 2 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 2 }
-                        }
-                        set_global_flag = { flag = annex value = 3 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 3 }
-                        }
-                        set_global_flag = { flag = annex value = 4 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 3 }
-                        }
-                        set_global_flag = { flag = annex value = 5 }
-                    }
-                }       
+                }
+                155 = { add_compliance = 100 }
+                154 = { add_compliance = 100 }
+                43 = { add_compliance = 100 } 
             }
-
         }
     annex_romania = {
             # icon = generic_operation
             allowed = {
-                tag = GER
+                tag = ITA
             }
             fire_only_once = yes
             cost = 0
@@ -821,7 +237,7 @@ operations = {
             complete_effect = {
                 ROM = {
                     transfer_units_fraction = {
-                        target = GER
+                        target = ITA
                         size = 1
                         stockpile_ratio = 1
                         army_ratio = 1
@@ -832,7 +248,7 @@ operations = {
                         }
                     }
                 }
-                GER = {
+                ITA = {
                     annex_country = {
                         target = ROM
                         transfer_troops = yes
@@ -849,42 +265,10 @@ operations = {
                 84 = { add_compliance = 100 }
                 78 = { add_compliance = 100 }
                 766 = { add_compliance = 100 }
-                hidden_effect = { 
-                    if = {
-                        limit = { 
-                            has_global_flag = { flag = annex value = 0 }
-                        }
-                        set_global_flag = { flag = annex value = 1 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 1 }
-                        }
-                        set_global_flag = { flag = annex value = 2 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 2 }
-                        }
-                        set_global_flag = { flag = annex value = 3 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 3 }
-                        }
-                        set_global_flag = { flag = annex value = 4 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 3 }
-                        }
-                        set_global_flag = { flag = annex value = 5 }
-                    }
-                }
             }
 
         } 
-    annex_bulgaria = {
+    annex_bulgaria_germany = {
             # icon = generic_operation
             allowed = {
                 tag = GER
@@ -895,6 +279,7 @@ operations = {
                 factor = 0
             }
             available = {
+            NOT = { has_global_flag = ger_annexed_minor }
             OR = {
             date>1937.1.1
             ENG = { controls_state = 439 }
@@ -950,46 +335,14 @@ operations = {
                         }
                     }
                 }
-                hidden_effect = { 
-                    if = {
-                        limit = { 
-                            has_global_flag = { flag = annex value = 0 }
-                        }
-                        set_global_flag = { flag = annex value = 1 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 1 }
-                        }
-                        set_global_flag = { flag = annex value = 2 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 2 }
-                        }
-                        set_global_flag = { flag = annex value = 3 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 3 }
-                        }
-                        set_global_flag = { flag = annex value = 4 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 3 }
-                        }
-                        set_global_flag = { flag = annex value = 5 }
-                    }
-                }
             }
 
         }
 
-     annex_spain = {
+    annex_bulgaria_italy = {
             # icon = generic_operation
             allowed = {
-                tag = GER
+                tag = ITA
             }
             fire_only_once = yes
             cost = 0
@@ -999,6 +352,77 @@ operations = {
             available = {
             OR = {
             date>1937.1.1
+            ENG = { controls_state = 439 }
+            ENG = { controls_state = 275 }
+            ENG = { controls_state = 276 }
+            ENG = { controls_state = 285 }
+            has_global_flag = ger_annexed_minor
+            }
+                BUL = {
+                    is_ai = yes
+                }
+            }
+            visible = {
+                BUL = {
+                    is_ai = yes
+                }
+            }
+            targets = {
+                BUL
+            }
+            complete_effect = {
+                BUL = {
+                    transfer_units_fraction = {
+                        target = ITA
+                        size = 1
+                        stockpile_ratio = 1
+                        army_ratio = 1
+                        navy_ratio = 1
+                        air_ratio = 1
+                        keep_unit_leaders_trigger = {
+                            always = no
+                        }
+                    }
+                }
+                ITA = {
+                    annex_country = {
+                        target = BUL
+                        transfer_troops = yes
+                    }
+                }
+                48 = { add_compliance = 100 }
+                212 = { add_compliance = 100 }
+                801 = { add_compliance = 100 }
+                211 = { add_compliance = 100 }
+                hidden_effect = { 
+                    SOV = {             
+                        823= {
+                            add_extra_state_shared_building_slots = 5 
+                            add_building_construction = {
+                                type = industrial_complex
+                                level = 5
+                                instant_build = yes
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+     annex_spain = {
+            # icon = generic_operation
+            allowed = {
+                tag = ITA
+            }
+            fire_only_once = yes
+            cost = 0
+            ai_will_do = {
+                factor = 0
+            }
+            available = {
+            OR = {
+            date>1939.1.1
             ENG = { controls_state = 439 }
             ENG = { controls_state = 275 }
             ENG = { controls_state = 276 }
@@ -1021,7 +445,7 @@ operations = {
             complete_effect = {
                 SPR = {
                     transfer_units_fraction = {
-                        target = GER
+                        target = ITA
                         size = 1
                         stockpile_ratio = 1
                         army_ratio = 1
@@ -1037,7 +461,7 @@ operations = {
                 WST = { transfer_state = 290 }
                 WST = { transfer_state = 297 }
                 WST = { transfer_state = 699 }                                   
-                GER = {
+                ITA = {
                     annex_country = {
                         target = SPR
                         transfer_troops = yes
@@ -1062,138 +486,7 @@ operations = {
                 794 = { add_compliance = 100 }
                 170 = { add_compliance = 100 }
                 175 = { add_compliance = 100 } 
-                788 = { add_compliance = 100 } 
-                hidden_effect = { 
-                    if = {
-                        limit = { 
-                            has_global_flag = { flag = annex value = 0 }
-                        }
-                        set_global_flag = { flag = annex value = 1 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 1 }
-                        }
-                        set_global_flag = { flag = annex value = 2 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 2 }
-                        }
-                        set_global_flag = { flag = annex value = 3 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 3 }
-                        }
-                        set_global_flag = { flag = annex value = 4 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 3 }
-                        }
-                        set_global_flag = { flag = annex value = 5 }
-                    }
-                }                                                                      
-            }                                     
+                788 = { add_compliance = 100 }                                     
         }       
-
-    annex_finland = {
-            # icon = generic_operation
-            allowed = {
-                tag = GER
-            }
-            fire_only_once = yes
-            cost = 0
-            ai_will_do = {
-                factor = 0
-            }
-            available = {
-            OR = {
-            date>1937.1.1
-            ENG = { controls_state = 439 }
-            ENG = { controls_state = 275 }
-            ENG = { controls_state = 276 }
-            ENG = { controls_state = 285 }
-            }
-                FIN = {
-                    is_ai = yes
-                }
-            }
-            visible = {
-                FIN = {
-                    is_ai = yes
-                }
-            }
-            targets = {
-                FIN
-            }
-            complete_effect = {
-                FIN = {
-                    transfer_units_fraction = {
-                        target = GER
-                        size = 1
-                        stockpile_ratio = 1
-                        army_ratio = 1
-                        navy_ratio = 1
-                        air_ratio = 1
-                        keep_unit_leaders_trigger = {
-                            always = no
-                        }
-                    }
-                }
-                GER = {
-                    annex_country = {
-                        target = FIN
-                        transfer_troops = yes
-                    }
-                }
-                926 = { add_compliance = 100 }
-                111 = { add_compliance = 100 }
-                927 = { add_compliance = 100 }
-                149 = { add_compliance = 100 }
-                930 = { add_compliance = 100 }  
-                146 = { add_compliance = 100 }            
-                928 = { add_compliance = 100 }         
-                150 = { add_compliance = 100 }      
-                929 = { add_compliance = 100 }       
-                147 = { add_compliance = 100 }  
-                148 = { add_compliance = 100 }   
-                hidden_effect = { 
-                    if = {
-                        limit = { 
-                            has_global_flag = { flag = annex value = 0 }
-                        }
-                        set_global_flag = { flag = annex value = 1 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 1 }
-                        }
-                        set_global_flag = { flag = annex value = 2 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 2 }
-                        }
-                        set_global_flag = { flag = annex value = 3 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 3 }
-                        }
-                        set_global_flag = { flag = annex value = 4 }
-                    }
-                    ELSE_IF = { 
-                        limit = { 
-                            has_global_flag = { flag = annex value = 3 }
-                        }
-                        set_global_flag = { flag = annex value = 5 }
-                    }
-                }
-
-            }
-
-        }
 
 }

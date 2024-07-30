@@ -1,7 +1,9 @@
 ﻿l_english:
- annex_hungary:0 "Annex Hungary"
+ annex_hungary_germany:0 "Annex Hungary"
+ annex_hungary_italy:0 "Annex Hungary"
  annex_romania:0 "Annex Romania"
- annex_bulgaria:0 "Annex Bulgaria"
+ annex_bulgaria_germany:0 "Annex Bulgaria"
+ annex_bulgaria_italy:0 "Annex Bulgaria"
  annex_spain:0 "Annex Spain"
  annex_finland:0 "Annex Finland"
  annex_new_zealand:0 "Annex New Zealand"
@@ -19,3 +21,5 @@
  annex_brazil:0 "Annex Brazil"
  annex_brazil_eng:0 "Annex Brazil"
  range_improvements_axis:0 "Range Improvements Axis"
+ ger_annexed_minor:0 "Germany Annexed Hungary or Bulgaria"
+ eng_annexed_minor:0 "Uk Annexed Canada or Ast"

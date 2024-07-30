@@ -2797,8 +2797,6 @@ ITA_balance_of_power_category = {
 					OR = {
 						ITA_is_alt_fascist_balbo_ai = yes
 						ITA_is_alt_fascist_grandi_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
 					}
 					has_country_leader = {
 						character = ITA_benito_mussolini
@@ -2933,8 +2931,6 @@ ITA_balance_of_power_category = {
 					OR = {
 						ITA_is_alt_fascist_balbo_ai = yes
 						ITA_is_alt_fascist_grandi_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
 					}
 					has_country_leader = {
 						character = ITA_benito_mussolini
@@ -2998,8 +2994,6 @@ ITA_balance_of_power_category = {
 					OR = {
 						ITA_is_alt_fascist_balbo_ai = yes
 						ITA_is_alt_fascist_grandi_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
 					}
 					has_country_leader = {
 						character = ITA_benito_mussolini
@@ -3063,8 +3057,6 @@ ITA_balance_of_power_category = {
 					OR = {
 						ITA_is_alt_fascist_balbo_ai = yes
 						ITA_is_alt_fascist_grandi_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
 					}
 					has_country_leader = {
 						character = ITA_benito_mussolini
@@ -3128,8 +3120,6 @@ ITA_balance_of_power_category = {
 					OR = {
 						ITA_is_alt_fascist_balbo_ai = yes
 						ITA_is_alt_fascist_grandi_ai = yes
-						ITA_is_monarchist_ai = yes
-						ITA_is_christian_democracy_ai = yes
 					}
 					has_country_leader = {
 						character = ITA_benito_mussolini
@@ -5344,7 +5334,7 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		targets = { YUG BUL ROM }
-		#targets = { BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS MNT TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
+		#targets = { BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
 
 		target_trigger = {
 			SOV_basic_pressure_government_triggers = yes
@@ -5414,7 +5404,7 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		targets = { YUG BUL ROM }
-		#targets = { BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS MNT TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
+		#targets = { BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
 
 		target_trigger = {
 			SOV_basic_promote_rallies_triggers = yes
@@ -5493,7 +5483,7 @@ ITA_diplomacy_balkan_decision_category = {
 			}
 		}
 
-		targets = { YUG CRO MNT SLV BOS HRZ MAC SER KOS TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
+		targets = { YUG CRO SLV BOS HRZ MAC SER KOS TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
 
 		target_trigger = {
 			ITA_basic_ultimatum_triggers = yes
@@ -5574,7 +5564,7 @@ ITA_diplomacy_balkan_decision_category = {
 			}
 		}
 
-		targets = { BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS MNT TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
+		targets = { BUL GRE YUG ALB ROM TUR SLV BOS HRZ MAC SER CRO KOS TRA } #These are all tags included in scripted trigger "BUL_is_balkan_nation = yes"
 
 		target_trigger = {
 			SOV_basic_fight_alongside_comrades_triggers = yes
@@ -5834,10 +5824,6 @@ ITA_diplomacy_balkan_decision_category = {
 				factor = 0.2
 				ITA_is_historical_ai = yes
 			}
-			modifier = {
-				factor = 0
-				ITA_is_monarchist_ai = yes
-			}
 		}
 
 		allowed = {
@@ -5935,10 +5921,6 @@ ITA_diplomacy_balkan_decision_category = {
 				factor = 0.2
 				ITA_is_historical_ai = yes
 			}
-			modifier = {
-				factor = 0
-				ITA_is_monarchist_ai = yes
-			}
 		}
 
 		allowed = {
@@ -5946,9 +5928,6 @@ ITA_diplomacy_balkan_decision_category = {
 		}
 
 		available = {
-			MNT = {
-				exists = no
-			}
 			105 = {
 				is_controlled_by = ITA
 			}
@@ -5972,73 +5951,7 @@ ITA_diplomacy_balkan_decision_category = {
 		cost = 50
 
 		complete_effect = {
-			MNT = {
-				transfer_state = 105
-			}
-			IF = {
-				limit = {
-					has_dlc = "Together for Victory"
-				}
-				ITA = {
-					set_autonomy = {
-					    target = MNT
-					    autonomy_state = autonomy_reichskommissariat
-					    end_wars = no
-					    end_civil_wars = no
-					}
-				}
-			}
-			IF = {
-				limit = {
-					NOT = {
-						has_dlc = "Together for Victory"
-					}
-				}
-				ITA = {
-					puppet = MNT
-				}
-			}
-			MNT = {
-				division_template = {
-				    name = "Montenegrin Chetniks"
-				    is_locked = yes
-				    division_names_group = ITA_INF_01
-				    regiments = {
-				        mountaineers = { x = 0 y = 0 }
-				        mountaineers = { x = 0 y = 1 }
-				        mountaineers = { x = 0 y = 2 }
-				        mountaineers = { x = 1 y = 0 }
-				        mountaineers = { x = 1 y = 1 }
-				        mountaineers = { x = 1 y = 2 }
-				    }
-				}
-			}
-			105 = {
-				create_unit = {
-				    division = "name = \"First Montenegrin Chetnik Brigade\" division_template = \"Montenegrin Chetniks\" start_experience_factor = 0.5 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
-				    owner = MNT
-				}
 
-				create_unit = {
-				    division = "name = \"Second Montenegrin Chetnik Brigade\" division_template = \"Montenegrin Chetniks\" start_experience_factor = 0.5 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
-				    owner = MNT
-				}
-
-				create_unit = {
-				    division = "name = \"Third Montenegrin Chetnik Brigade\" division_template = \"Montenegrin Chetniks\" start_experience_factor = 0.5 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
-				    owner = MNT
-				}
-			}
-
-			hidden_effect = {
-				set_country_flag = ITA_established_montenegro
-				MNT = {
-					country_event = {
-					    id = BBA_italy_interaction_events.7
-					    days = 0
-					}
-				}
-			}
 		}
 	}
 
@@ -6203,10 +6116,6 @@ ITA_diplomacy_balkan_decision_category = {
 			NOT = {
 				105 = {
 					is_controlled_by = ITA
-				}
-				any_subject_country = {
-					original_tag = MNT
-					controls_state = 105
 				}
 				any_country = {
 					is_subject_of = ITA

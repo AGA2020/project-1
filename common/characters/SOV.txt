@@ -2535,9 +2535,6 @@ characters = {
 		}
 
 		allowed_civil_war = {
-			OR = {
-				SOV_is_right_opposition = yes 
-			}
 
 		}
 
@@ -2553,9 +2550,6 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes 
-				}
 				is_country_leader = no
 				if = {
 					limit = {
@@ -2583,9 +2577,6 @@ characters = {
 		}
 
 		allowed_civil_war = {
-			OR = {
-				SOV_is_right_opposition = yes
-			}
 		}
 
 		advisor = {
@@ -2600,9 +2591,6 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes 
-				}
 				is_country_leader = no
 				if = {
 					limit = {
@@ -2646,9 +2634,6 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes
-				}
 				if = {
 					limit = {
 						has_character_flag = SOV_exiled_flag

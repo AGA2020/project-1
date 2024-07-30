@@ -392,10 +392,6 @@ characters={
 			}	
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					add = 100
-					NOR_is_trotskyist_ai = yes 
-				}
 			}
 			available = {
 				has_country_flag = NOR_trotsky_embraced
