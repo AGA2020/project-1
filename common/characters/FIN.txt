@@ -1729,10 +1729,6 @@ characters = {
 				ai_will_do = {
 					base = 1.000
 					modifier = {
-						factor = 10
-						FIN_is_democratic_ai = yes
-					}
-					modifier = {
 						factor = 0
 						FIN_is_historical_ai = yes
 					}

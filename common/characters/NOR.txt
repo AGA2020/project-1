@@ -156,10 +156,6 @@ characters={
 			}
 			ai_will_do = {
 				base = 0
-				modifier = {
-					add = 200
-					NOR_is_monarchist_ai = yes
-				}
 			}
 		}
 	}
@@ -340,10 +336,6 @@ characters={
 			}
 			ai_will_do = {
 				base = 0
-				modifier = {
-					add = 50
-					NOR_is_stalinist_ai = yes
-				}
 			}
 		}
 	}
