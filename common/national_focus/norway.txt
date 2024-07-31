@@ -79,9 +79,6 @@ focus_tree = {
 				limit = {
 					has_hide_rule = yes 
 				}
-				NOT = {
-					has_completed_focus = NOR_vote_of_no_confidence
-				}
 			}
 		}
 
@@ -552,33 +549,13 @@ focus_tree = {
 				show_effect_tooltip = yes 
 				show_modifiers = yes 
 			}
-			
-			if = {
-				limit = {
-					NOT = {
-						has_completed_focus = NOR_vote_of_no_confidence
-					}
-				}
-				remove_ideas = { NOR_broken_gun_ns_3 }
-			}
+			remove_ideas = { NOR_broken_gun_ns_3 }
 
 			custom_effect_tooltip = when_at_war_TT
-			if = {
-				limit = {
-					has_completed_focus = NOR_vote_of_no_confidence
-				}
-				unlock_decision_tooltip = {
-					decision = NOR_alt_dem_integrate_militias
-					show_effect_tooltip = yes 
-					show_modifiers = yes 
-				}
-			}
-			else = {
-				unlock_decision_tooltip = {
-					decision = NOR_dem_his_integrate_militias
-					show_effect_tooltip = yes 
-					show_modifiers = yes 
-				}
+			unlock_decision_tooltip = {
+				decision = NOR_dem_his_integrate_militias
+				show_effect_tooltip = yes 
+				show_modifiers = yes 
 			}
 		}
 	}

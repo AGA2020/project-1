@@ -403,7 +403,6 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_2_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_2 }
 			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -467,7 +466,6 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_3_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_3 }
 			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -529,7 +527,6 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_4_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_4 }
 			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -561,7 +558,6 @@ focus_tree = {
 
 		available = {
 			SOV_third_five_year_plan_available = yes
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -665,7 +661,6 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_3_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_3 }
 			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -923,7 +918,6 @@ focus_tree = {
 
 		available = {
 			SOV_third_five_year_plan_available = yes
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1002,7 +996,6 @@ focus_tree = {
 
 		available = {
 			SOV_fourth_five_year_plan_available = yes
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_PROPAGANDA}
@@ -1041,7 +1034,6 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_5_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_5 }
 			}
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1118,7 +1110,6 @@ focus_tree = {
 
 		available = {
 			num_subjects > 0
-			NOT = { has_completed_focus = SOV_curtailment_of_the_collective_farms }
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
