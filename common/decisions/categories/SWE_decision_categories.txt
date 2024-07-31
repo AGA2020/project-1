@@ -204,16 +204,6 @@ SWE_coax_nordic_defense_council_cat = {
 				has_country_flag = rejected_nordic_defense_council
 			}
 
-			ICE = {
-				exists = yes
-				has_capitulated = no
-				OR = {
-					is_subject = no
-					is_subject_of = DEN
-				}
-				is_ai = yes
-			}
-
 			DEN = {
 				exists = yes
 				has_capitulated = no

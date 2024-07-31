@@ -2,7 +2,6 @@
 #BUL_is_historical_ai
 #BUL_is_communist_stalinist_ai
 #BUL_is_democratic_socialist_ai
-#BUL_is_democratic_liberal_ai
 #BUL_is_fascist_axis_ai
 #BUL_is_monarchist_ferdinand_ai
 
@@ -182,7 +181,6 @@ BUL_internal_factions = {
 				OR = {
 					BUL_is_fascist_axis_ai = yes
 					BUL_is_monarchist_ferdinand_ai = yes
-					BUL_is_democratic_liberal_ai = yes
 				}
 			}
 			modifier = {
@@ -836,7 +834,6 @@ BUL_internal_factions = {
 				OR = {
 					BUL_is_fascist_axis_ai = yes
 					BUL_is_monarchist_ferdinand_ai = yes
-					BUL_is_democratic_liberal_ai = yes
 				}
 			}
 		}
@@ -1119,12 +1116,6 @@ BUL_internal_factions = {
 
 		ai_will_do = {
 			base = 3
-			modifier = {
-				factor = 1.5
-				OR = {
-					BUL_is_communist_balkan_ai = yes
-				}
-			}
 		}
 
 		allowed = { 
@@ -1171,12 +1162,6 @@ BUL_internal_factions = {
 
 		ai_will_do = {
 			base = 3
-			modifier = {
-				factor = 1.5
-				OR = {
-					BUL_is_communist_balkan_ai = yes
-				}
-			}
 		}
 
 		allowed = { 
@@ -1991,7 +1976,6 @@ BUL_internal_factions = {
 				OR = {
 					BUL_is_fascist_axis_ai = yes
 					BUL_is_monarchist_ferdinand_ai = yes
-					BUL_is_democratic_liberal_ai = yes
 					#AND = { #TODO_Manu: Check how the AI performs without this. Might be necessary to not add it to help the FF coup.
 					#	BUL_is_historical_ai = yes
 					#	date > 1940.6.1
@@ -2276,7 +2260,6 @@ BUL_internal_factions = {
 				OR = {
 					BUL_is_fascist_axis_ai = yes
 					BUL_is_monarchist_ferdinand_ai = yes
-					BUL_is_democratic_liberal_ai = yes
 				}
 			}
 		}
@@ -2500,7 +2483,6 @@ BUL_internal_factions = {
 				OR = {
 					BUL_is_fascist_axis_ai = yes
 					BUL_is_monarchist_ferdinand_ai = yes
-					BUL_is_democratic_liberal_ai = yes
 				}
 			}
 		}
@@ -3609,12 +3591,6 @@ BUL_internal_factions = {
 
 		ai_will_do = {
 			base = 100
-			modifier = {
-				factor = 0
-				OR = {
-					BUL_is_communist_balkan_ai = yes
-				}
-			}
 		}
 
 		allowed = { 
@@ -3688,12 +3664,6 @@ BUL_internal_factions = {
 
 		ai_will_do = {
 			base = 100
-			modifier = {
-				factor = 0
-				OR = {
-					BUL_is_communist_balkan_ai = yes
-				}
-			}
 		}
 
 		allowed = { 
