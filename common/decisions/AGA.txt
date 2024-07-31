@@ -1,4 +1,302 @@
 operations = {
+  advanced_small_airframe_axis = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                tag = GER
+                tag = SPR
+                tag = ITA
+                tag = HUN
+                tag = FIN
+                tag = ROM
+                tag = DEN
+                tag = JAP
+                tag = MAN
+                tag = SIA
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        available = {
+            OR = {
+                GER = { has_tech = advanced_small_airframe }
+                SPR = { has_tech = advanced_small_airframe }
+                ITA = { has_tech = advanced_small_airframe }      
+                HUN = { has_tech = advanced_small_airframe }      
+                FIN = { has_tech = advanced_small_airframe }  
+                ROM = { has_tech = advanced_small_airframe }
+                DEN = { has_tech = advanced_small_airframe }
+                JAP = { has_tech = advanced_small_airframe }      
+                MAN = { has_tech = advanced_small_airframe }      
+                SIA = { has_tech = advanced_small_airframe }                                                                        
+            }
+        }
+        complete_effect = {
+            set_technology = { advanced_small_airframe = 1 }
+        }
+    }
+
+  advanced_small_airframe_allies = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                tag = ENG
+                tag = USA
+                tag = SOV
+                tag = FRA
+                tag = CAN
+                tag = RAJ
+                tag = SAF
+                tag = BRA
+                tag = MEX
+                tag = AST
+                tag = NZL
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        available = {
+            OR = {
+                ENG = { has_tech = advanced_small_airframe }
+                USA = { has_tech = advanced_small_airframe }
+                SOV = { has_tech = advanced_small_airframe }      
+                FRA = { has_tech = advanced_small_airframe }      
+                CAN = { has_tech = advanced_small_airframe }  
+                RAJ = { has_tech = advanced_small_airframe }
+                SAF = { has_tech = advanced_small_airframe }
+                BRA = { has_tech = advanced_small_airframe }      
+                MEX = { has_tech = advanced_small_airframe }      
+                AST = { has_tech = advanced_small_airframe }  
+                NZL = { has_tech = advanced_small_airframe }                                                                                        
+            }
+        }
+        complete_effect = {
+            set_technology = { advanced_small_airframe = 1 }
+        }
+    }
+
+  improved_small_airframe_allies = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                tag = ENG
+                tag = USA
+                tag = SOV
+                tag = FRA
+                tag = CAN
+                tag = RAJ
+                tag = SAF
+                tag = BRA
+                tag = MEX
+                tag = AST
+                tag = NZL
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        available = {
+            OR = {
+                ENG = { has_tech = improved_small_airframe }
+                USA = { has_tech = improved_small_airframe }
+                SOV = { has_tech = improved_small_airframe }      
+                FRA = { has_tech = improved_small_airframe }      
+                CAN = { has_tech = improved_small_airframe }  
+                RAJ = { has_tech = improved_small_airframe }
+                SAF = { has_tech = improved_small_airframe }
+                BRA = { has_tech = improved_small_airframe }      
+                MEX = { has_tech = improved_small_airframe }      
+                AST = { has_tech = improved_small_airframe }  
+                NZL = { has_tech = improved_small_airframe }                                                                                        
+            }
+        }
+        complete_effect = {
+            set_technology = { improved_small_airframe = 1 }
+        }
+    }
+   improved_small_airframe_axis = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                tag = GER
+                tag = SPR
+                tag = ITA
+                tag = HUN
+                tag = FIN
+                tag = ROM
+                tag = DEN
+                tag = JAP
+                tag = MAN
+                tag = SIA
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        available = {
+            OR = {
+                GER = { has_tech = improved_small_airframe }
+                SPR = { has_tech = improved_small_airframe }
+                ITA = { has_tech = improved_small_airframe }      
+                HUN = { has_tech = improved_small_airframe }      
+                FIN = { has_tech = improved_small_airframe }  
+                ROM = { has_tech = improved_small_airframe }
+                DEN = { has_tech = improved_small_airframe }
+                JAP = { has_tech = improved_small_airframe }      
+                MAN = { has_tech = improved_small_airframe }      
+                SIA = { has_tech = improved_small_airframe }                                                                        
+            }
+        }
+        complete_effect = {
+            set_technology = { improved_small_airframe = 1 }
+        }
+    }
+  engine3_allies = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                tag = ENG
+                tag = USA
+                tag = SOV
+                tag = FRA
+                tag = CAN
+                tag = RAJ
+                tag = SAF
+                tag = BRA
+                tag = MEX
+                tag = AST
+                tag = NZL
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        available = {
+            OR = {
+                ENG = { has_tech = engines_3 }
+                USA = { has_tech = engines_3 }
+                SOV = { has_tech = engines_3 }      
+                FRA = { has_tech = engines_3 }      
+                CAN = { has_tech = engines_3 }  
+                RAJ = { has_tech = engines_3 }
+                SAF = { has_tech = engines_3 }
+                BRA = { has_tech = engines_3 }      
+                MEX = { has_tech = engines_3 }      
+                AST = { has_tech = engines_3 }   
+                NZL = { has_tech = engines_3 }                                                                       
+            }
+        }
+        complete_effect = {
+            set_technology = { engines_3 = 1 }
+        }
+    }
+   engine4_allies = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                tag = ENG
+                tag = USA
+                tag = SOV
+                tag = FRA
+                tag = CAN
+                tag = RAJ
+                tag = SAF
+                tag = BRA
+                tag = MEX
+                tag = AST
+                tag = NZL
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        available = {
+            OR = {
+                ENG = { has_tech = engines_4 }
+                USA = { has_tech = engines_4 }
+                SOV = { has_tech = engines_4 }      
+                FRA = { has_tech = engines_4 }      
+                CAN = { has_tech = engines_4 }  
+                RAJ = { has_tech = engines_4 }
+                SAF = { has_tech = engines_4 }
+                BRA = { has_tech = engines_4 }      
+                MEX = { has_tech = engines_4 }      
+                AST = { has_tech = engines_4 }   
+                NZL = { has_tech = engines_4 }                                                                       
+            }
+        }
+        complete_effect = {
+            set_technology = { engines_4 = 1 }
+        }
+    }    
+    engine3_axis = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                tag = GER
+                tag = SPR
+                tag = ITA
+                tag = HUN
+                tag = FIN
+                tag = ROM
+                tag = DEN
+                tag = JAP
+                tag = MAN
+                tag = SIA
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        available = {
+            OR = {
+                GER = { has_tech = engines_3 }
+                SPR = { has_tech = engines_3 }
+                ITA = { has_tech = engines_3 }      
+                HUN = { has_tech = engines_3 }      
+                FIN = { has_tech = engines_3 }  
+                ROM = { has_tech = engines_3 }
+                DEN = { has_tech = engines_3 }
+                JAP = { has_tech = engines_3 }      
+                MAN = { has_tech = engines_3 }      
+                SIA = { has_tech = engines_3 }                                                       
+            }
+        }
+        complete_effect = {
+            set_technology = { engines_3 = 1 }
+        }
+    }
+    engine4_axis = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                tag = GER
+                tag = SPR
+                tag = ITA
+                tag = HUN
+                tag = FIN
+                tag = ROM
+                tag = DEN
+                tag = JAP
+                tag = MAN
+                tag = SIA
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        available = {
+            OR = {
+                GER = { has_tech = engines_4 }
+                SPR = { has_tech = engines_4 }
+                ITA = { has_tech = engines_4 }      
+                HUN = { has_tech = engines_4 }      
+                FIN = { has_tech = engines_4 }  
+                ROM = { has_tech = engines_4 }
+                DEN = { has_tech = engines_4 }
+                JAP = { has_tech = engines_4 }      
+                MAN = { has_tech = engines_4 }      
+                SIA = { has_tech = engines_4 }                                                       
+            }
+        }
+        complete_effect = {
+            set_technology = { engines_4 = 1 }
+        }
+    }    
     annex_new_zealand = {
         # icon = generic_operation
         allowed = {

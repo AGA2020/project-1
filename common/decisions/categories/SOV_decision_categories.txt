@@ -341,17 +341,3 @@ SOV_permanent_revolution_dec_cat = {
 		has_completed_focus = SOV_the_permanent_revolution
 	}
 }
-
-SOV_panslavic_nationalism = {
-	priority = 75
-
-	icon = generic_formable_nations
-
-	allowed = {
-		original_tag = SOV
-	}
-
-	visible = {
-		has_completed_focus = SOV_panslavic_nationalism
-	}
-}

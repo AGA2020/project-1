@@ -2474,7 +2474,6 @@ BUL_internal_factions = {
 
 		visible = {
 			OR = {
-				has_completed_focus = BUL_oppose_the_royal_dictatorship
 				has_completed_focus = BUL_power_to_the_tsar
 			}
 			check_variable = { BUL_bzns_popularity = 65 compare = less_than_or_equals }
@@ -7323,31 +7322,10 @@ BUL_foreign_agreements = {
 				BUL_is_valid_subject = yes
 			}
 			#Manage Cap
-			if = { # Being in faction grants 10 civs cap
-				limit = {
-					is_in_faction_with = SOV
-					has_completed_focus = BUL_soviet_bulgarian_treaty_of_mutual_assistance
-				}
-				custom_trigger_tooltip = {
-					tooltip = BUL_soviet_industrial_agreements_cap_faction_tt
-					check_variable = { BUL_soviet_industrial_investments < BUL_industrial_investments_max_cap }
-				}
-			}
-			else_if = { # Approaching country grants 5 civs cap
-				limit = {
-					has_completed_focus = BUL_soviet_bulgarian_treaty_of_mutual_assistance
-				}
-				custom_trigger_tooltip = {
-					tooltip = BUL_soviet_industrial_agreements_cap_approach_tt
-					check_variable = { BUL_soviet_industrial_investments < BUL_industrial_investments_medium_cap }
-				}
-			}
-			else = { #Basic Cap
 				custom_trigger_tooltip = {
 					tooltip = BUL_soviet_industrial_agreements_cap_basic_tt
 					check_variable = { BUL_soviet_industrial_investments < BUL_industrial_investments_basic_cap }
 				}
-			}
 			NOT = { has_war_with = SOV }
 			NOT = { is_justifying_wargoal_against = SOV }
 			OR = {
@@ -8541,14 +8519,6 @@ BUL_the_balkan_federation_dream = {
 					FROM = { original_tag = YUG }
 					has_completed_focus = BUL_treaty_of_perpetual_friendship
 				}
-				AND = {
-					FROM = {
-						BUL_is_balkan_nation = yes
-						NOT = { original_tag = YUG }
-						NOT = { original_tag = ROOT }
-					}
-					has_completed_focus = BUL_balkan_federation_of_socialist_republics
-				}
 			}
 		}
 
@@ -8632,17 +8602,6 @@ BUL_the_balkan_federation_dream = {
 						NOT = { has_government = communism }
 					}
 					has_completed_focus = BUL_treaty_of_perpetual_friendship
-				}
-				AND = {
-					FROM = {
-						BUL_is_balkan_nation = yes
-						NOT = { original_tag = YUG }
-						NOT = { original_tag = ROOT }
-						has_capitulated = no
-						NOT = { is_in_faction_with = ROOT }
-						NOT = { has_government = communism }
-					}
-					has_completed_focus = BUL_balkan_federation_of_socialist_republics
 				}
 			}
 		}
@@ -8739,14 +8698,6 @@ BUL_the_balkan_federation_dream = {
 				AND = {
 					FROM = { original_tag = YUG }
 					has_completed_focus = BUL_treaty_of_perpetual_friendship
-				}
-				AND = {
-					FROM = {
-						BUL_is_balkan_nation = yes
-						NOT = { original_tag = YUG }
-						NOT = { original_tag = ROOT }
-					}
-					has_completed_focus = BUL_balkan_federation_of_socialist_republics
 				}
 			}
 		}
@@ -9663,105 +9614,6 @@ BUL_dominance_in_the_seas = {
 
 		complete_effect = { #SUCCESS
 			set_country_flag = BUL_black_sea_mission_success_flag
-			add_stability = 0.1
-			add_war_support = 0.1
-			if = {
-				limit = {
-					has_idea = BUL_supremacy_on_the_bosporus
-				}
-				modify_timed_idea = {
-					idea = BUL_supremacy_on_the_bosporus
-					days = 180
-				}
-			}
-			BUL_add_improved_prussia_of_the_balkans_ns = yes
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-
-	BUL_dominance_in_the_aegean_sea_mission = {
-
-		icon = GFX_decision_generic_operation
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 0.01
-				is_major = yes
-				OR = {
-					has_war = no
-					alliance_strength_ratio > 1
-				}
-			}
-		}
-
-		allowed = {
-			original_tag = BUL
-		}
-
-		available = { #GOAL
-			NOT = {
-				any_state = {
-					BUL_state_is_in_the_aegean_sea = yes
-					controller = {
-						NOT = {
-							OR = {
-								tag = ROOT
-								is_subject_of = ROOT
-								is_in_faction_with = ROOT
-							}
-						}
-					}
-				}
-			}
-		}
-
-		activation = {
-			has_completed_focus = BUL_dominance_in_the_aegean_sea
-		}
-		
-		visible = {
-			has_completed_focus = BUL_dominance_in_the_aegean_sea
-		}
-
-		days_mission_timeout = 730
-
-		fire_only_once = yes
-
-		is_good = no
-
-		highlight_states = {
-			highlight_states_trigger = { 
-				BUL_state_is_in_the_aegean_sea = yes
-				controller = {
-					NOT = {
-						OR = {
-							tag = ROOT
-							is_subject_of = ROOT
-							is_in_faction_with = ROOT
-						}
-					}
-				}
-			}
-		}
-		
-		timeout_effect = { #FAIL
-			set_country_flag = BUL_aegean_sea_mission_failure_flag
-			add_stability = -0.1
-			add_war_support = -0.1
-			every_state = {
-				limit = {
-					has_state_flag = BUL_dominance_in_the_seas_claim_flag
-				}
-				remove_claim_by = ROOT
-				clr_state_flag = BUL_dominance_in_the_seas_claim_flag
-			}
-			BUL_add_weakened_prussia_of_the_balkans_ns = yes
-			mark_focus_tree_layout_dirty = yes
-		}
-
-		complete_effect = { #SUCCESS
-			set_country_flag = BUL_aegean_sea_mission_success_flag
 			add_stability = 0.1
 			add_war_support = 0.1
 			if = {

@@ -1142,10 +1142,6 @@
 					has_completed_focus = JAP_purge_the_kodoha_faction
 				}
 			}
-			modifier = {
-				factor = 10
-				has_completed_focus = JAP_technological_exchange
-			}
 		}
 
 		available = {
@@ -1469,10 +1465,6 @@
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 10
-				has_completed_focus = JAP_technological_exchange
-			}
 		}
 
 		available = {
