@@ -2902,7 +2902,6 @@ country_event = {
 					}
 				}
 			}
-			SLO = { transfer_state = 70 }
 		}
 		if = {
 			limit = {
@@ -2913,7 +2912,6 @@ country_event = {
 					}
 				}
 			}
-			SLO = { transfer_state = 71 }
 		}
 		if = {
 			limit = {
@@ -2946,7 +2944,6 @@ country_event = {
 					}
 				}
 			}
-			SLO = { transfer_state = 73 }
 		}
 
 		if = {
@@ -2958,17 +2955,7 @@ country_event = {
 					}
 				}
 			}
-			SLO = { transfer_state = 664 }
 		}
-		if = {
-			limit = { country_exists = CZE }
-			SLO = {
-				inherit_technology = CZE
-			}
-			annex_country = { target = CZE }
-			add_war_support = 0.1
-		}
-		puppet = SLO
 		every_state = {
 			limit = {
 				is_core_of = CZE
@@ -2992,7 +2979,6 @@ country_event = {
 		every_state = {
 			limit = {
 				is_core_of = CZE
-				NOT = { is_core_of = SLO }
 				NOT = { state = 72 }
 			}
 			add_claim_by = GER
@@ -3009,16 +2995,6 @@ country_event = {
 
 		hidden_effect = {
 			country_event = { hours = 6 id = news.60 }
-			every_state = {
-				limit = {
-					is_owned_by = SLO
-				}
-				add_core_of = SLO
-			}
-			SLO = {
-				load_oob = SLO_1939
-				add_manpower = 9876
-			}
 		}
 	}
 	option = {
@@ -3176,7 +3152,6 @@ country_event = {
 					}
 				}
 			}
-			SLO = { transfer_state = 70 }
 		}
 		if = {
 			limit = {
@@ -3187,7 +3162,6 @@ country_event = {
 					}
 				}
 			}
-			SLO = { transfer_state = 71 }
 		}
 		if = {
 			limit = {
@@ -3211,7 +3185,6 @@ country_event = {
 					}
 				}
 			}
-			SLO = { transfer_state = 73 }
 		}
 		if = {
 			limit = {
@@ -3222,19 +3195,10 @@ country_event = {
 					}
 				}
 			}
-			SLO = { transfer_state = 664 }
 		}
 		if = {
 			limit = { country_exists = CZE }
 			annex_country = { target = CZE }
-		}
-		add_to_faction = SLO
-		SLO = {
-			add_ai_strategy = {
-				type = alliance
-				id = "GER"
-				value = 200
-			}
 		}
 		if = {
 			limit = {
@@ -4346,10 +4310,6 @@ country_event = {
 		GER = { country_event = { id = germany.81 days = 1 } }
 		effect_tooltip = {
 			if = {
-				limit = { SLO = { exists = yes } }
-				annex_country = { target = SLO }
-			}
-			if = {
 				limit = { GER = { owns_state = 70 } }
 				transfer_state = 70
 			}
@@ -4423,10 +4383,6 @@ country_event = {
 
 	option = {
 		name = germany.81.a
-		if = {
-			limit = { SLO = { exists = yes } }
-			POL = { annex_country = { target = SLO } }
-		}
 		if = {
 			limit = { owns_state = 70 }
 			POL = { transfer_state = 70 }
@@ -5252,21 +5208,6 @@ country_event = {
 		effect_tooltip = {
 			add_political_power = -25
 			add_named_threat = { threat = 3 name = GER_fate_of_yugoslavia }
-			CRO = {
-				if = {
-					limit = { YUG = { owns_state = 103 } }
-					transfer_state = 103
-				}
-				if = {
-					limit = { YUG = { owns_state = 104 } }
-					transfer_state = 104
-				}
-				if = {
-					limit = { YUG = { owns_state = 109 } }
-					transfer_state = 109
-				}
-			}
-			puppet = CRO
 			annex_country = { target = YUG transfer_troops = no }
 		}
 		custom_effect_tooltip = yugoslavia_mefo_bills_tt
@@ -5283,22 +5224,6 @@ country_event = {
 		custom_effect_tooltip = germany.98_tt
 		effect_tooltip = {
 			add_named_threat = { threat = 2 name = GER_fate_of_yugoslavia }
-
-			CRO = {
-				if = {
-					limit = { YUG = { owns_state = 103 } }
-					transfer_state = 103
-				}
-				if = {
-					limit = { YUG = { owns_state = 104 } }
-					transfer_state = 104
-				}
-				if = {
-					limit = { YUG = { owns_state = 109 } }
-					transfer_state = 109
-				}
-			}
-			puppet = CRO
 			puppet = YUG
 			hidden_effect = {
 				set_global_flag = GER_fate_of_yugoslavia_puppet_CRO_YUG

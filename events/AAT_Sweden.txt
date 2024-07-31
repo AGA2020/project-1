@@ -2071,25 +2071,6 @@ country_event = {
 		}
 	}
 }
-
-#Persson is released
-country_event = { 
-	id = AAT_Sweden.9
-	title = AAT_Sweden.9.t
-	desc = AAT_Sweden.9.desc
-	picture = GFX_report_event_german_troops_paris
-	is_triggered_only = yes
-
-	option = {
-		name = AAT_Sweden.9.a
-		add_manpower = 1
-		SWE_rikard_persson = {
-			set_character_flag = has_rikard_persson
-		}
-		show_unit_leaders_tooltip = SWE_rikard_persson
-	}
-}
-
 #Sods off to make booze
 country_event = { 
 	id = AAT_Sweden.10
@@ -3689,13 +3670,6 @@ country_event = { #yes
 
 				add = 8
 			}
-
-			modifier = {
-				ICE = {
-					has_completed_focus = ICE_break_with_the_crown 
-				}
-				factor = 0.5
-			}
 		}
 
 		if = {
@@ -3716,24 +3690,6 @@ country_event = { #yes
 			}
 
 			FROM = { transfer_state = 101 }
-		}
-
-		if = {
-			limit = {
-				ICE = {
-					has_capitulated = no
-					exists = yes
-					is_subject_of = ROOT
-				}
-			}
-
-			FROM = {
-				set_autonomy = {
-					target = ICE
-					autonomy_state = autonomy_integrated_puppet
-					end_wars = no
-				}
-			}
 		}
 
 		FROM = {
@@ -3773,11 +3729,6 @@ country_event = { #yes
 					type = take_state_focus
 					target = PREV
 					generator = { 337 101 } # optional 
-				}
-
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = ICE
 				}
 			}
 		}
@@ -3819,18 +3770,6 @@ country_event = { #overseas territories is accepted
 					set_state_owner_to = ROOT 
 				}
 			}
-
-			if = {
-				limit = {
-					ICE = {
-						is_subject_of = ROOT
-					}
-				}
-
-				ROOT = {
-					puppet = ICE 
-				}
-			}
 		}
 	}
 }
@@ -3848,11 +3787,6 @@ country_event = { #overseas is rejected
 			type = take_state_focus
 			target = FROM
 			generator = { 337 101 } # optional 
-		}
-
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = ICE
 		}
 	}
 }
@@ -7843,15 +7777,6 @@ country_event = {
 		}
 
 		#cant use FROM here due to ICE being a puppet, and DEN is the one sending  that event via Sweden
-		hidden_effect = {
-			if = {
-				limit = {
-					ICE = { is_subject_of = PREV }
-				}
-
-				set_country_flag = SWE_ice_was_a_subject_of_den
-			}
-		}
 
 		SWE = { 
 			add_to_array = {
@@ -7914,19 +7839,6 @@ country_event = {
 				NOR_jacob_ager_laurantzon = { set_nationality = SWE }
 
 			}
-		}
-
-		if = {
-			limit = {
-				has_country_flag = SWE_ice_was_a_subject_of_den
-			}
-			#scope to SWE to not break loc
-			SWE = {
-				ICE = {
-					country_event = { id = AAT_Sweden_nordic_defense_council.1 hours = 3 }
-				}
-			}
-			clr_country_flag = SWE_ice_was_a_subject_of_den
 		}
 		# Transfer Army 
         add_ideas = SWE_nordic_centralized_army

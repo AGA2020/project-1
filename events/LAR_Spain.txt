@@ -6170,21 +6170,6 @@ country_event = {
 			## SPB triggers Carlist Uprising ##
 			### All foreign Aid goes to SPA ###
 			#Portuguese Op. modifier goes to SPA
-			if = {
-				limit = {
-					has_opinion_modifier = POR_helped_in_civil_war
-				}
-				remove_opinion_modifier = {
-					target = POR
-					modifier = POR_helped_in_civil_war
-				}
-				SPA = {
-					add_opinion_modifier = {
-					    target = POR
-					    modifier = POR_helped_in_civil_war
-					}
-				}
-			}
 			if = {#Country supporting SPA
 				limit = { 
 					any_country = { has_country_flag = supports_SPA_flag }
@@ -7679,21 +7664,6 @@ country_event = {
 			## SPC triggers Anarchist Uprising ##
 			### Foreign aid goes to SPD ###
 			#Op. modifier goes to SPD.
-			if = {
-				limit = {
-					has_opinion_modifier = POR_helped_in_civil_war
-				}
-				remove_opinion_modifier = {
-					target = POR
-					modifier = POR_helped_in_civil_war
-				}
-				SPD = {
-					add_opinion_modifier = {
-					    target = POR
-					    modifier = POR_helped_in_civil_war
-					}
-				}
-			}
 			if = { #Country supporting SPD
 				limit = {
 					any_country = { has_country_flag = supports_SPD_flag }
@@ -8055,10 +8025,9 @@ country_event = {
 	
 	trigger = {
 		tag = SPR
-		has_completed_focus = SPA_a_great_spain
+		has_completed_focus = SPA_con_paquito
 		NOT = { has_global_flag = spanish_civil_war }
 		NOT = { has_global_flag = scw_over }
-		date > 1936.8.10
 	}
 
 	mean_time_to_happen = {
@@ -8069,8 +8038,8 @@ country_event = {
 	
 	option = {
 		name = lar_spain.18.a
-		add_ideas = SPA_awaiting_the_rebellion
 		custom_effect_tooltip = lar_spain.18.a_tt
+		hidden_effect = { country_event = { id = lar_spain.2 } }
 	}
 }
 
