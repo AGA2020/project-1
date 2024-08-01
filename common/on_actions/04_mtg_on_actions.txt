@@ -606,11 +606,6 @@ on_actions = {
 					release = ETH #For 1939 bookmark
 					release = LBA
 					release = ERI
-					release = SOM
-					transfer_units_fraction = {
-						target = SOM
-						size = 1
-					}
 
 					#Delete all BBA extra templates
 					if = {
@@ -796,13 +791,6 @@ on_actions = {
 					release = NMB
 				}
 				702 = { add_core_of = GNB }
-				POR = {
-					delete_unit = { state = 540 }
-					delete_unit = { state = 544 }
-					release = MZB
-					release = ANG
-					release = GNB
-				}
 				SPR = {
 					delete_unit = { state = 290 }
 					release = WES
@@ -839,7 +827,6 @@ on_actions = {
 					delete_unit = { state = 638 }
 					delete_unit = { state = 642 }
 					delete_unit = { state = 727 }
-					release = HAW
 					release = GUM
 				}
 				JAP = {
@@ -874,82 +861,6 @@ on_actions = {
 						option = OCEANIA_UNITED
 					}
 				}
-				284 = { 
-					add_core_of = HAW
-				}
-				629 = {
-					add_core_of = HAW
-				}
-				630 = {
-					add_core_of = HAW
-				}
-				631 = {
-					add_core_of = HAW
-				}
-				632 = {
-					add_core_of = HAW
-				}
-				633 = {
-					add_core_of = HAW
-				}
-				634 = {
-					add_core_of = HAW
-				}
-				635 = {
-					add_core_of = HAW
-				}
-				636 = {
-					add_core_of = HAW
-				}
-				638 = {
-					add_core_of = HAW
-				}
-				639 = {
-					add_core_of = HAW
-				}
-				641 = {
-					add_core_of = HAW
-				}
-				642 = {
-					add_core_of = HAW
-				}
-				643 = {
-					add_core_of = HAW
-				}
-				646 = {
-					add_core_of = HAW
-				}
-				647 = {
-					add_core_of = HAW
-				}
-				648 = { 
-					add_core_of = HAW 
-				}
-				684 = {
-					add_core_of = HAW
-				}
-				723 = {
-					add_core_of = HAW
-				}
-				725 = {
-					add_core_of = HAW
-				}
-				726 = {
-					add_core_of = HAW
-				}
-				727 = {
-					add_core_of = HAW
-				}
-				734 = {
-					add_core_of = HAW
-				}
-				645 = {
-					add_core_of = HAW
-				} #Iwo Jima
-				ENG = {
-					release = HAW
-					set_autonomy = { target = AST autonomy_state = autonomy_free }
-				}
 				USA = {
 					delete_unit = { state = 629 }
 					delete_unit = { state = 630 }
@@ -958,7 +869,6 @@ on_actions = {
 					delete_unit = { state = 638 }
 					delete_unit = { state = 642 }
 					delete_unit = { state = 727 }
-					release = HAW
 				}
 				JAP = {
 					delete_unit = { state = 684 }
@@ -967,21 +877,11 @@ on_actions = {
 					delete_unit = { state = 646 }
 					delete_unit = { state = 648 }
 					delete_unit = { state = 645 }
-					release = HAW
-				}
-				FRA = {
-					release = HAW
 				}
 				AST = {
-					release = HAW
 					release = PNG
 				}
-				HAW = {
-					change_tag_from = NZL
-				}
 				set_global_flag = form_polynesia_flag
-				
-				524 = { add_core_of = HAW } #Taiwan
 				
 				284 = { 
 					add_extra_state_shared_building_slots = 1
@@ -1151,11 +1051,6 @@ on_actions = {
 						instant_build = yes
 					}
 				} #Iwo Jima
-				
-				HAW = {
-					set_cosmetic_tag = united_polynesia
-					country_event = tfv_new_zealand.8
-				}
 			}
 			if = {
 				limit = {
@@ -1291,17 +1186,9 @@ on_actions = {
 				}
 				173 = { add_core_of = ADU }
 				118 = { add_core_of = ADU }
-				167 = { add_core_of = CAT }
-				177 = { add_core_of = CAT }
-				794 = { add_core_of = CAT }
-				166 = { add_core_of = CAT }
-				114 = { add_core_of = CAT }
-				115 = { add_core_of = CAT }
-				116 = { add_core_of = CAT }
 				792 = { remove_core_of = NAV }
 				SPR = {
 					delete_unit = { state = 177 }
-					release = CAT
 					release = NAV
 					release = GLC
 					release = ADU
@@ -1313,10 +1200,6 @@ on_actions = {
 					set_political_party = {
 						ideology = neutrality
 						popularity = 85
-					}
-					transfer_units_fraction = {
-						target = CAT
-						size = 0.2
 					}
 					transfer_units_fraction = {
 						target = GLC
@@ -1346,21 +1229,6 @@ on_actions = {
 				ENG = {
 					delete_unit = { state = 118 }
 					release = ADU
-					release = CAT
-				}
-				ITA = {
-					release = CAT
-				}
-				CAT = {
-					set_politics = {
-						ruling_party = neutrality
-						elections_allowed = no
-					}
-					set_political_party = {
-						ideology = neutrality
-						popularity = 85
-					}
-					set_cosmetic_tag = CAT_aragon
 				}
 				NAV = {
 					set_politics = {
@@ -1430,9 +1298,6 @@ on_actions = {
 				115 = { add_core_of = ITA }
 				
 				#Kingdom of Naples
-				117 = { add_core_of = CAT }
-				156 = { add_core_of = CAT }
-				849 = { add_core_of = CAT }
 			}
 			if = {
 				limit = {
@@ -1442,7 +1307,6 @@ on_actions = {
 					}
 				}
 				SPR = {
-					release = CAT
 					release = NAV
 					release = GLC
 				}
