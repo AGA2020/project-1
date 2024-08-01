@@ -59,7 +59,6 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				NOT = { has_completed_focus = FIN_right_wing_policies }
 			}
 		}
 
@@ -82,8 +81,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		mutually_exclusive = { focus = FIN_right_wing_policies }
 		
 		cost = 5
 
@@ -1303,23 +1300,11 @@ focus_tree = {
 	focus = {
 		id = FIN_weapon_caches
 		icon = GFX_focus_FIN_weapon_caches
-		prerequisite = { focus = FIN_finnish_neutrality focus = FIN_right_wing_policies }
+		prerequisite = { focus = FIN_finnish_neutrality}
 
 		x = 3
 		y = 0
 		relative_position_id = FIN_reach_out_to_scandinavia
-
-		offset = {
-			x = -25
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = FIN_right_wing_policies
-			}
-		}
 
 		cost = 5
 
@@ -1337,7 +1322,7 @@ focus_tree = {
 	focus = {
 		id = FIN_national_unity
 		icon = GFX_focus_EST_national_pride_in_finland
-		prerequisite = { focus = FIN_finnish_neutrality focus = FIN_right_wing_policies }
+		prerequisite = { focus = FIN_finnish_neutrality }
 
 		x = 3
 		y = 0
@@ -1791,24 +1776,7 @@ focus_tree = {
 
 		x = 13
 		y = 0
-		relative_position_id = FIN_right_wing_policies
-
-		offset = {
-			x = -14
-			y = 0
-			trigger = {
-				OR = {
-					NOT = { has_dlc = "Arms Against Tyranny" }
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = FIN_finnish_neutrality
-					}
-				}
-			}
-		}
+		relative_position_id = FIN_finnish_neutrality
 
 		cost = 10
 		available = {

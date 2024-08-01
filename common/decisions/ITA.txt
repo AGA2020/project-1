@@ -2804,10 +2804,6 @@ ITA_balance_of_power_category = {
 					}
 				}
 			}
-			modifier = {
-				factor = 0
-				ITA_is_socialist_ai = yes
-			}
 		}
 	}
 

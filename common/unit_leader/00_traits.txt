@@ -1295,7 +1295,11 @@ leader_traits = {
 				acclimatization_cold_climate_gain_factor = 0.1
 				acclimatization_hot_climate_gain_factor = 0.1
 			}
-			
+			allowed = {
+			tag = GER
+			tag = SOV
+			}
+
 			ai_will_do = {
 				factor = 1
 			}

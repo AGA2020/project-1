@@ -2299,7 +2299,7 @@ focus_tree = {
 		x = -10
 		y = 0
 		relative_position_id = BRA_tribunal_de_seguranca_nacional
-		mutually_exclusive = { focus = BRA_tribunal_de_seguranca_nacional focus = BRA_prepare_for_second_intentona }
+		mutually_exclusive = { focus = BRA_tribunal_de_seguranca_nacional }
 		cost = 5
 		ai_will_do = {
 			factor = 5
@@ -2314,7 +2314,6 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				NOT = { has_completed_focus = BRA_prepare_for_second_intentona }
 				NOT = { has_completed_focus = BRA_tribunal_de_seguranca_nacional }
 			}
 		}
@@ -2942,7 +2941,6 @@ focus_tree = {
 					}
 				}
 				NOT = { has_completed_focus = BRA_tribunal_de_seguranca_nacional }
-				NOT = { has_completed_focus = BRA_prepare_for_second_intentona }
 			}
 		}
 		x = 1

@@ -2743,42 +2743,6 @@ characters = {
 			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
-		advisor = {
-			slot = political_advisor
-			idea_token = ivanoe_bonomi
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				ITA_is_going_antifascist_in_bba = yes
-				NOT = { 
-					has_country_leader = {
-						character = ITA_ivanoe_bonomi
-						ruling_only = yes
-					}
-				}
-			}
-			traits = {
-				democratic_reformer 
-			}
-			do_effect = {
-				NOT = {
-					has_government = democratic 
-				}
-			}
-			ai_will_do = {
-				base = 0.000
-			}
-		}
-
 		country_leader = {
 			ideology = liberalism
 			traits = { moderate_reformist }
@@ -3052,36 +3016,6 @@ characters = {
 
 		allowed_civil_war = {
 			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = amadeo_bordiga
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				ITA_is_going_antifascist_in_bba = yes
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			traits = {
-				communist_revolutionary 
-			}
-			do_effect = {
-				NOT = {
-					has_government = communism 
-				}
-			}
-			ai_will_do = {
-				base = 0.000
-			}
 		}
 	}
 

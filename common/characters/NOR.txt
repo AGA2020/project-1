@@ -219,10 +219,6 @@ characters={
 			}
 			ai_will_do = {
 				base = 0
-				modifier = {
-					add = 200
-					NOR_is_fascist_ai = yes
-				}
 			}
 		}
 	}

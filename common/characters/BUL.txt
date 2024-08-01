@@ -1235,7 +1235,6 @@ characters = {
 					modifier = {
 						factor = 0.000
 						or = {
-							BUL_is_communist_stalinist_ai = yes
 							BUL_is_communist_balkan_ai = yes
 						}
 					}
@@ -1761,7 +1760,6 @@ characters = {
 				modifier = {
 					factor = 3.000
 					OR = {
-						BUL_is_communist_stalinist_ai = yes 
 						BUL_is_communist_balkan_ai = yes 
 					}
 				}
@@ -1769,7 +1767,6 @@ characters = {
 					factor = 0
 					NOT = {
 						OR = {
-							BUL_is_communist_stalinist_ai = yes 
 							BUL_is_communist_balkan_ai = yes 
 						}
 					}

@@ -147,10 +147,6 @@ SOV_paranoia_system = {
 				add = 100
 				check_variable = { SOV_paranoia > 75 }
 			}
-			modifier = {
-				factor = 2
-				SOV_is_opposition = yes
-			}
 		}
 
 		allowed = {
@@ -301,10 +297,6 @@ SOV_paranoia_system = {
 
 			SOV_pick_regular_purge_army_type_effect = yes
 			SOV_paranoia_medium_decrease_effect = yes
-			IF = {
-				limit = { SOV_is_opposition = yes }
-				SOV_decrease_all_opposition_army = yes
-			}
 
 			custom_effect_tooltip = SOV_paranoia_inspection_cd_tt
 		}
@@ -366,10 +358,6 @@ SOV_paranoia_system = {
 
 			SOV_pick_regular_purge_navy_type_effect = yes
 			SOV_paranoia_low_decrease_effect = yes
-			IF = {
-				limit = { SOV_is_opposition = yes }
-				SOV_decrease_all_opposition_navy = yes
-			}
 
 			custom_effect_tooltip = SOV_paranoia_inspection_cd_tt
 		}
@@ -425,10 +413,6 @@ SOV_paranoia_system = {
 
 			SOV_pick_regular_purge_airforce_type_effect = yes
 			SOV_paranoia_low_decrease_effect = yes
-			IF = {
-				limit = { SOV_is_opposition = yes }
-				SOV_decrease_all_opposition_air = yes
-			}
 			custom_effect_tooltip = SOV_paranoia_inspection_cd_tt
 		}
 	}
@@ -7281,8 +7265,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		ai_will_do = { #Integrated republics go after puppets
 			base = 0.5
 		}
-
-		cosmetic_tag = AZR
 		cosmetic_ideology = communism
 
 		allowed = {
@@ -7309,7 +7291,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		}
 
 		remove_effect = {
-			AZR = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_AZR_flag
 		}
 	}

@@ -7903,12 +7903,7 @@ focus_tree = {
 				limit = {
 					has_any_power_balance = no
 				}
-				if = {
-					limit = {
-						NOT = { has_completed_focus = ITA_defy_the_duce	}
-					}
-					ITA_initiate_balance_of_power_effect = yes
-				}
+				ITA_initiate_balance_of_power_effect = yes
 			}
 			else_if = {
 				limit = {
@@ -8167,7 +8162,6 @@ focus_tree = {
 					ruling_only = yes
 				}
 				has_completed_focus = ITA_capo_supremo
-				has_completed_focus = ITA_divino_duce
 			}
 			is_subject = no
 		}
@@ -8226,7 +8220,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_culto_del_duce
 		prerequisite = { focus = ITA_triumph_in_africa_bba }
 
-		mutually_exclusive = { focus = ITA_convene_the_grand_council focus = ITA_defy_the_duce }
+		mutually_exclusive = { focus = ITA_convene_the_grand_council }
 
 		x = 0
 		y = 2
@@ -8743,13 +8737,8 @@ focus_tree = {
 					popup = no
 				}
 			}
-			if = {
-				limit = {
-					NOT = { has_completed_focus = ITA_disband_the_blackshirts }
-				}
 				custom_effect_tooltip = available_political_advisor
 				show_ideas_tooltip = ITA_renato_ricci
-			}
 		}
 	}
 
@@ -9791,10 +9780,7 @@ focus_tree = {
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
 		available = {
-			NOT = {
-				has_completed_focus = ITA_unite_the_opposition
-				has_completed_focus = ITA_defy_the_duce
-			}
+
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -10986,15 +10972,6 @@ focus_tree = {
 						else = {
 							promote_character = ITA_prince_umberto
 						}
-					}
-				}
-				else_if = {
-					limit = {
-						has_completed_focus = ITA_unite_the_opposition
-					}
-					set_politics = {
-						ruling_party = communism
-						elections_allowed = no
 					}
 				}
 
