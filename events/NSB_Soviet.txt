@@ -140,10 +140,6 @@ country_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -210,10 +206,6 @@ country_event = {
 			modifier = { #Don't go to negative PP please
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
-			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
 			}
 
 		}
@@ -311,10 +303,6 @@ country_event = {
 			modifier = { #Don't go to negative PP please
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
-			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
 			}
 		}
 
@@ -430,10 +418,6 @@ country_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_great_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -535,10 +519,6 @@ unit_leader_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -609,10 +589,6 @@ country_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -677,10 +653,6 @@ country_event = {
 			modifier = { #Don't go to negative PP please
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
-			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
 			}
 		}
 
@@ -846,10 +818,6 @@ unit_leader_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -981,10 +949,6 @@ country_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_great_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -1099,10 +1063,6 @@ country_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_great_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -1195,10 +1155,6 @@ unit_leader_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -1269,10 +1225,6 @@ country_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -1341,10 +1293,6 @@ country_event = {
 			modifier = { #Don't go to negative PP please
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
-			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
 			}
 		}
 
@@ -1447,10 +1395,6 @@ country_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_great_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -1551,10 +1495,6 @@ country_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_great_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -1624,10 +1564,6 @@ country_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -1690,10 +1626,6 @@ country_event = {
 			modifier = { #Don't go to negative PP please
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_regular_pay
-			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
 			}
 		}
 
@@ -1804,10 +1736,6 @@ country_event = {
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_great_pay
 			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
-			}
 		}
 
 		trigger = {
@@ -1889,10 +1817,6 @@ country_event = {
 			modifier = { #Don't go to negative PP please
 				factor = 0
 				has_political_power < SOV_purge_event_pp_to_avoid_great_pay
-			}
-			modifier = { #Don't risk starting CW too early
-				factor = 0
-				SOV_is_opposition = yes 
 			}
 		}
 
@@ -7806,20 +7730,6 @@ country_event = {
 					has_government = fascism
 				}
 			}
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 1.5
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_maksim_litvinov
-				}
-			}
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 1.2
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_vyacheslav_molotov
-				}
-			}
 		}
 		trigger = {
 			NOT = { has_manpower < 80000 } # Don't show if not having the troops avaialable
@@ -7955,20 +7865,6 @@ country_event = {
 				factor = 5 # Military wants this!
 				JAP = { 
 					has_government = fascism
-				}
-			}
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 1.5
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_maksim_litvinov
-				}
-			}
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 1.2
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_vyacheslav_molotov
 				}
 			}
 		}
@@ -8241,20 +8137,6 @@ country_event = {
 					has_government = fascism
 				}
 			}
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 0.8
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_maksim_litvinov
-				}
-			}
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 1.2
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_vyacheslav_molotov
-				}
-			}
 		}
 		ROOT = {
 			custom_effect_tooltip = SOV_baku_oil_fields_tt
@@ -8443,20 +8325,6 @@ country_event = {
 		name = NSB_soviet_civil_war_common.110.a
 		ai_chance = {
 			base = 5 # in general Germany should be pretty interested in wrecking havoc in the USSR
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 0.8
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_maksim_litvinov
-				}
-			}
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 1.2
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_vyacheslav_molotov
-				}
-			}
 		}
 		ROOT = {
 			custom_effect_tooltip = SOV_ukraine_insurrection_tt
@@ -8604,20 +8472,6 @@ country_event = {
 		name = NSB_soviet_civil_war_common.115.a
 		ai_chance = {
 			base = 5 # in general the UK should be pretty interested in restoring Belarus
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 1.2
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_maksim_litvinov
-				}
-			}
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 0.8
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_vyacheslav_molotov
-				}
-			}
 		}
 		ROOT = {
 			custom_effect_tooltip = SOV_belarus_tt
@@ -8708,20 +8562,6 @@ country_event = {
 		name = NSB_soviet_civil_war_common.118.a
 		ai_chance = { 
 			base = 40
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 1.5
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_maksim_litvinov
-				}
-			}
-			modifier = { #Appropriate PC for Foreign Affairs
-				factor = 1.2
-				FROM = {
-					SOV_is_opposition = yes
-					has_idea = SOV_vyacheslav_molotov
-				}
-			}
 		}
 		trigger = {
 			has_equipment = {
