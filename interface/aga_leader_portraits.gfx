@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_Portrait_Soviet_Power_Vacuum"
+		texturefile = "gfx/leaders/SOV/Portraits_Soviet_Congress_of_Soviets.dds"
+	}
+}

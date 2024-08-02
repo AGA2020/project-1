@@ -13,19 +13,14 @@ news_event = {
 	major = yes	
 
 	trigger = {
-	has_global_flag = sovietfallen1
-	NOT = { has_global_flag = stalin }
-	}
-	
-	mean_time_to_happen = {
-		days = 1
+		SOV = { surrender_progress > 0.95 }	
 	}
 	
 	immediate = {
 	set_global_flag = stalin
-	hidden_effect = {
-		sound_effect = sovietfallen
-		}
+		hidden_effect = { 
+			SOV = { kill_country_leader = yes }
+		 }
 	}
 	
 	option = {
