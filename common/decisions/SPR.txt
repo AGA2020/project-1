@@ -12533,12 +12533,6 @@ political_actions = {
 		available = {
 			if = {
 				limit = {
-					has_completed_focus = SPA_the_phalanx_ascendant
-				}
-				hidden_trigger = { always = no }
-			}
-			if = {
-				limit = {
 					has_completed_focus = SPA_unify_the_nationalist_front
 				}
 				has_completed_focus = SPA_fuse_the_parties
@@ -12560,12 +12554,6 @@ political_actions = {
 		}
 
 		visible = {
-			if = {
-				limit = {
-					has_completed_focus = SPA_the_phalanx_ascendant
-				}
-				NOT = { has_completed_focus = SPA_eliminate_the_carlists }
-			}
 			if = {
 				limit = {
 					has_completed_focus = SPA_unify_the_nationalist_front

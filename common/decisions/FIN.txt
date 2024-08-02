@@ -1759,7 +1759,6 @@ FIN_the_path_to_socialism = {
 		}
 
 		visible = {
-			NOT = { has_completed_focus = FIN_social_democracy }
 			NOT = { has_government = communism }
 		}
 
@@ -1808,7 +1807,6 @@ FIN_the_path_to_socialism = {
 		}
 
 		visible = {
-			NOT = { has_completed_focus = FIN_social_democracy }
 			NOT = { has_government = communism }
 		}
 
@@ -1857,12 +1855,9 @@ FIN_the_path_to_socialism = {
 			country_exists = SOV
 			SOV = { has_government = communism }
 			NOT = { has_war_with = SOV }
-			NOT = { has_completed_focus = FIN_antagonize_the_soviets }
 		}
 
 		visible = {
-			NOT = { has_completed_focus = FIN_social_democracy }
-			NOT = { has_completed_focus = FIN_antagonize_the_soviets }
 			NOT = { has_government = communism }
 		}
 
@@ -1901,12 +1896,9 @@ FIN_the_path_to_socialism = {
 			country_exists = SOV
 			SOV = { has_government = communism }
 			NOT = { has_war_with = SOV }
-			NOT = { has_completed_focus = FIN_antagonize_the_soviets }
 		}
 
 		visible = {
-			NOT = { has_completed_focus = FIN_social_democracy }
-			NOT = { has_completed_focus = FIN_antagonize_the_soviets }
 			NOT = { has_government = communism }
 		}
 
@@ -1928,47 +1920,6 @@ FIN_the_path_to_socialism = {
 	#####################
 	##### DEMOCRATS #####
 	#####################
-	FIN_call_to_union_activism = {
-		priority = 50
-
-		icon = GFX_decision_generic_political_rally
-
-		ai_will_do = {
-			base = 2
-		}
-
-		allowed = {
-			original_tag = FIN
-		}
-
-		available = {
-			has_idea = FIN_karl_august_fagerholm
-			has_completed_focus = FIN_social_democracy
-		}
-
-		visible = {
-			NOT = { has_government = democratic }
-		}
-
-		cancel_if_not_visible = yes
-
-		fire_only_once = yes
-
-		cost = 15
-
-		days_remove = 30
-
-		modifier = {
-			stability_weekly_factor = -0.005
-		}
-
-		remove_effect = {
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
-		}
-	}
 
 	FIN_push_for_cabinet_participation = {
 		priority = 50
