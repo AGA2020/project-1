@@ -1166,10 +1166,6 @@
 			if = {
 				limit = { 
 					has_dlc = "Battle for the Bosporus"
-					NOT = {
-						is_in_faction_with = TUR
-						TUR = { is_faction_leader = yes }
-					}
 				}
 				every_other_country = {
 					limit = {
@@ -1179,20 +1175,6 @@
 						target = ROM
 						modifier = BFTB_balkan_pact_ally
 					}
-					if = {
-						limit = {
-							is_in_faction_with = TUR
-							TUR = { is_faction_leader = no }
-						}
-						hidden_effect = {
-							ROOT = {
-								remove_opinion_modifier = {
-									target = PREV
-									modifier = BFTB_balkan_pact_ally
-								}
-							}
-						}
-					}
 				}
 			}
 			hidden_effect = { 
@@ -1200,10 +1182,6 @@
 				if = { 
 					limit = {
 						has_dlc = "Battle for the Bosporus"
-						NOT = {
-							is_in_faction_with = TUR
-							TUR = { is_faction_leader = yes }
-						}
 					}
 					remove_opinion_modifier = {
 						target = BUL
@@ -1238,11 +1216,6 @@
 			}
 			diplomatic_relation = {
 				country = GRE
-				relation = guarantee
-				active = no
-			}
-			diplomatic_relation = {
-				country = TUR
 				relation = guarantee
 				active = no
 			}
