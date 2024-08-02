@@ -13,7 +13,8 @@ news_event = {
 	major = yes	
 
 	trigger = {
-		SOV = { surrender_progress > 0.95 }	
+		SOV = { surrender_progress > 0.95 }
+		NOT = { has_global_flag = stalin }
 	}
 	
 	immediate = {
