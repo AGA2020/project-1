@@ -8190,10 +8190,6 @@ country_event = {
 				has_opinion = { target = FROM value > 99 }
 			}
 			modifier = {
-				factor = 0.5
-				has_completed_focus = POR_support_the_spanish_nationalists
-			}
-			modifier = {
 				factor = 0
 				has_completed_focus = POR_send_assistance
 			}
@@ -8315,20 +8311,11 @@ country_event = {
 				has_opinion = { target = FROM value > 99 }
 			}
 			modifier = {
-				factor = 0.5
-				has_completed_focus = POR_support_the_spanish_nationalists
-			}
-			modifier = {
 				factor = 0
 				focus_progress = {
 				    focus = POR_iberian_summit
 				    progress > 0
 				}
-			}
-			modifier = {
-				factor = 0
-				has_completed_focus = POR_support_the_spanish_nationalists
-				is_historical_focus_on = yes
 			}
 		}
 		hidden_effect = {

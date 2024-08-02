@@ -3646,43 +3646,6 @@ SOV_manage_spanish_generals_exiled_in_ussr_effect = {
 			set_country_flag = SOV_go_go_general_flag
 		}
 	}
-	else_if = { #El Campesino
-		limit = {
-			ROOT = { tag = SPD }
-			SOV = {
-				has_country_flag = SOV_spanish_refugee_generals_welcome_flag
-				OR = {
-					has_completed_focus = SOV_the_left_opposition
-				}
-			}
-		}
-		ROOT = { SPR_valentin_gonzalez = { set_nationality = SOV } }
-		SOV = {
-			SPR_valentin_gonzalez = {
-				set_variable = { SOV.SOV_spanish_general = THIS }
-				#El Campesino joins the USSR as an Anti-Stalinist
-				if = {
-					limit = {
-						has_trait = trait_SPR_republican_loyalties
-					}
-					remove_unit_leader_trait = trait_SPR_republican_loyalties
-				}
-				if = {
-					limit = {
-						has_trait = trait_SPR_stalinist_loyalties
-					}
-					remove_unit_leader_trait = trait_SPR_stalinist_loyalties
-				}
-				if = {
-					limit = {
-						NOT = { has_trait = trait_SPR_anti_stalinist_loyalties }
-					}
-					add_unit_leader_trait = trait_SPR_anti_stalinist_loyalties
-				}
-			}
-			set_country_flag = SOV_go_go_general_flag
-		}
-	}
 	if = {
 		limit = {
 			SOV = { has_country_flag = SOV_go_go_general_flag }

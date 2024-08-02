@@ -488,33 +488,11 @@ on_actions = {
 					set_demilitarized_zone = yes
 					add_dynamic_modifier = { modifier =  international_city }
 				}
-				if = {
-					limit = {
-						has_completed_focus = POL_clamp_down_on_danzig
-					}
-					85 = {
-						remove_dynamic_modifier = {
-							modifier = international_city
-						}
-						add_dynamic_modifier = {
-							modifier = international_city_2
-						}
-						force_enable_resistance = { 
-							clear = no
-							occupier = POL
-							occupied = DNZ
-						}
-						start_resistance = DNZ
-						set_resistance = 40
-						set_compliance = 30
-					}
-				}
 			}
 			if = {
 				limit = {
 					has_DLC = "No Step Back"
 					is_baltic_state = yes
-					NOT = { has_completed_focus = BALTIC_purge_of_our_own }
 				}
 				add_ideas = BALTIC_popular_resistance
 			}
@@ -775,13 +753,6 @@ on_actions = {
 				if = { #Give Estonia their focus tree back if the Vapsid win the civil war.
 					limit = { has_government = fascism }
 					if = {
-						limit = { has_completed_focus = EST_era_of_silence }
-						uncomplete_national_focus = {
-							focus = EST_era_of_silence
-							uncomplete_children = yes
-						}
-					}
-					if = {
 						limit = { has_completed_focus = BALTIC_restore_workers_republic }
 						uncomplete_national_focus = {
 							focus = BALTIC_restore_workers_republic
@@ -799,17 +770,9 @@ on_actions = {
 							uncomplete_children = yes
 						}
 					}
-					complete_national_focus = EST_era_of_silence
 				}
 				if = { #In case of communist uprising
 					limit = { has_government = communism }
-					if = {
-						limit = { has_completed_focus = EST_era_of_silence }
-						uncomplete_national_focus = {
-							focus = EST_era_of_silence
-							uncomplete_children = yes
-						}
-					}
 					complete_national_focus = BALTIC_restore_workers_republic
 				}
 			}
@@ -1249,15 +1212,6 @@ on_actions = {
 							}
 							uncomplete_national_focus = {
 								focus = HUN_economic_intervention
-								uncomplete_children = yes
-							}
-						}
-						if = {
-							limit = {
-								has_completed_focus = HUN_elect_a_democratic_king
-							}
-							uncomplete_national_focus = {
-								focus = HUN_elect_a_democratic_king
 								uncomplete_children = yes
 							}
 						}
@@ -1843,20 +1797,6 @@ on_actions = {
 
 	on_release_as_puppet = { 
 		effect = { 
-			if = {
-				limit = {
-					FROM = { 
-						tag = SOV 
-						has_completed_focus = SOV_autonomous_soviet_republics
-					}
-				}
-				ROOT = {
-					add_ideas = {
-						SOV_system_decentralization_idea
-						SOV_the_local_soviets_idea
-					}
-				}
-			}
 			if = {
 				limit = {
 					FROM = { 

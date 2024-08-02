@@ -1127,8 +1127,6 @@ news_event = {
 		name = lar_news.8.a #royalists
 		trigger = {
 			OR = {
-				has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
-				has_completed_focus = ENG_god_save_the_king
 				has_completed_focus = SPA_restore_the_monarchy
 			}
 		}
@@ -1153,8 +1151,6 @@ news_event = {
 				AND = {
 					has_government = neutrality
 					NOT = {
-						has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
-						has_completed_focus = ENG_god_save_the_king
 						has_completed_focus = SPA_restore_the_monarchy
 						tag = FRA
 					}
