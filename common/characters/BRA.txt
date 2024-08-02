@@ -194,8 +194,7 @@ characters={
 				}
 				available = {
 					OR = { 
-						has_completed_focus = BRA_posts_for_generals 
-						has_completed_focus = BRA_issue_lordships
+						has_completed_focus = BRA_posts_for_generals
 					}
 					is_country_leader = NO
 				}
@@ -1152,10 +1151,6 @@ characters={
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 10
-					has_completed_focus	= BRA_prepare_for_second_intentona
-				}
 			}
 		}		
 	}
@@ -1182,18 +1177,6 @@ characters={
 			traits  = {
 				SWI_soviet_spy
 			}
-		}	
-		corps_commander={
-			visible = {
-				has_completed_focus = BRA_equality_for_women
-			}
-			traits={}
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=-1
 		}	
 	}
 
@@ -1424,21 +1407,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_BRA_geremia_lunardelli_small"
-			}
-		}
-		advisor={
-			cost = 100
-			slot = political_advisor
-			idea_token = BRA_geremia_lunarelli
-			allowed  = {
-				original_tag  = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-			available  = {
-				has_completed_focus = BRA_promote_agriculture
-			}
-			traits  = {
-				 BRA_coffee_king
 			}
 		}		
 	}

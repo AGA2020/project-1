@@ -1046,19 +1046,12 @@ ideas = {
 			allowed = {
 				OR = {
 					original_tag = BRA
-					original_tag = ARG
 				}
 				has_dlc = "Trial of Allegiance"
 			}
 
 
 			available = {
-				OR = {
-					AND = {
-						FROM = { original_tag = ARG }
-						FROM = { has_completed_focus = ARG_russian_manufacturers }
-					}
-				}
 
 			}
 
@@ -1118,18 +1111,11 @@ ideas = {
 
 			visible = {
 				OR = {
-					original_tag = ARG
 					original_tag = BRA
 				}
 			}
 
 			available = {
-				OR = {
-					AND = {
-						original_tag = ARG
-						has_completed_focus = ARG_russian_manufacturers
-					}
-				}
 			}
 
 			research_bonus = {
@@ -1156,18 +1142,11 @@ ideas = {
 
 			 allowed = {
 				OR = {
-					original_tag = ARG
 					original_tag = BRA
 				}
 				has_dlc = "Trial of Allegiance"
 			}
 			available = {
-				OR = {
-					AND = {
-						original_tag = ARG
-						has_completed_focus = ARG_russian_manufacturers
-					}
-				}
 			}
 
 			research_bonus = {

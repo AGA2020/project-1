@@ -256,17 +256,6 @@ characters={
 			traits = { NOR_germanophile_officer }
 			id=-1
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = NOR_jonas_lie
-			allowed  = {
-				NOR_AAT = yes
-			}
-			available = {
-				has_completed_focus = NOR_squash_dissent
-			}
-			traits  = { NOR_ruthless_police_captain }
-		}
 
 	}
 
@@ -383,7 +372,6 @@ characters={
 			}
 			available = {
 				has_country_flag = NOR_trotsky_embraced
-				NOT = { has_completed_focus = NOR_compromise_with_the_nkp } 
 				NOT = { has_government = fascism } 
 				NOT = { has_government = neutrality }
 				NOR_trotsky_not_in_sov = yes 
@@ -397,9 +385,6 @@ characters={
 			visible = {
 				has_completed_focus = NOR_a_resurgent_labor_movement
 				has_country_flag = NOR_trotsky_embraced
-				NOT = {	
-					has_completed_focus = NOR_compromise_with_the_nkp 
-				}
 			}
 			traits={  }
 			skill=3

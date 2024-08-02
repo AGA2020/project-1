@@ -1377,22 +1377,7 @@ ideas = {
 	}
 	industrial_concern = {
 
-		ICE_siemens = {
-			picture = siemens
-			allowed = {
-				original_tag = ICE
-				has_dlc = "Arms Against Tyranny"
-			}
-			available = {
-				has_completed_focus = ICE_research_cooperation
-			}
-			
-			research_bonus = {
-				electronics = 0.15
-			}
-			
-			traits = { electronics_concern }
-		}
+
 		ICE_aalborg_portland = {
 			name = DEN_aalborg_portland
 			picture = generic_industrial_concern_2

@@ -366,15 +366,6 @@ ideas = {
 					NOT = { has_idea = limited_conscription }
 				}
 
-				modifier = {
-					factor = 100
-					OR = {
-						original_tag = URG
-						original_tag = PAR
-					}
-					has_completed_focus = GUAY_coup_detat
-				}
-
 			}
 
 			cost = 150
@@ -535,15 +526,6 @@ ideas = {
 				modifier = {
 					factor = 0
 					NOT = { has_idea = extensive_conscription }
-				}
-
-								modifier = {
-					factor = 100
-					OR = {
-						original_tag = URG
-						original_tag = PAR
-					}
-					has_completed_focus = GUAY_coup_detat
 				}
 
 			}

@@ -1992,7 +1992,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_completed_focus = ITA_new_forms_of_weaponry
+				
 			}
 
 			modifier = {
@@ -2210,7 +2210,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_completed_focus = ITA_guarantee_austrian_independence
+				
 			}
 			
 			modifier = {
@@ -2368,7 +2368,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_completed_focus = ITA_the_fight_against_stalinism
+				
 			}
 			
 			targeted_modifier = {
@@ -2391,7 +2391,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_completed_focus = ITA_planned_economy
+
 			}
 
 			cancel = {
@@ -2466,7 +2466,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_completed_focus = ITA_aid_for_the_spanish_republic
+				
 			}
 
 			cancel = {
@@ -2523,7 +2523,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_completed_focus = ITA_bring_down_fascist_strongholds
+			
 			}
 	
 			modifier = {
@@ -2562,7 +2562,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_completed_focus = ITA_appease_the_military
+				
 			}
 	
 			modifier = {
@@ -2662,7 +2662,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_completed_focus = ITA_a_greater_purpose
+				
 			}
 
 			modifier = {
@@ -2683,7 +2683,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_completed_focus = ITA_spreading_the_eagles_wings
+				
 			}
 	
 			modifier = {
@@ -2709,7 +2709,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_completed_focus = ITA_italian_hegemony
+				
 			}
 
 			modifier = {

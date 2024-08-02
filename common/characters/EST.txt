@@ -598,20 +598,6 @@ characters={
 				small="GFX_idea_EST_august_jakobson"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = EST_august_jakobson
-			allowed = {
-					original_tag = EST
-					has_dlc = "No Step Back"
-			}
-			available = {
-				has_completed_focus = BALTIC_revolutionary_cabinet 
-			}
-			traits = {
-				revolutionary_poet 
-			}
-		}
 	}
 
 	EST_juri_uluots={
@@ -649,20 +635,6 @@ characters={
 				small="GFX_idea_EST_voldemar_voolmann"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = EST_voldemar_voolman
-			allowed = {
-				original_tag = EST
-				has_dlc = "No Step Back"
-			}
-			available = {
-				has_completed_focus = BALTIC_revolutionary_cabinet 
-			}
-			traits = {
-				socialist_justice 
-			}
-		}
 	}
 
 	EST_henrik_allik={
@@ -670,20 +642,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_EST_hendrik_allik"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = EST_henrik_allik
-			allowed = {
-					original_tag = EST
-					has_dlc = "No Step Back"
-			}
-			available = {
-				has_completed_focus = BALTIC_revolutionary_cabinet 
-			}
-			traits = {
-				patriotic_socialist 
 			}
 		}
 	}
