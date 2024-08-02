@@ -1,0 +1,36 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = dfu_news
+
+news_event = {
+	id = dfu_news.10
+	title = dfu_news.10.t
+	desc = dfu_news.10.desc
+	picture = GFX_news_event_stalin
+	
+	major = yes	
+
+	trigger = {
+	has_global_flag = sovietfallen1
+	NOT = { has_global_flag = stalin }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+	set_global_flag = stalin
+	hidden_effect = {
+		sound_effect = sovietfallen
+		}
+	}
+	
+	option = {
+		name = dfu_news.10.a
+	}
+
+}
+																						

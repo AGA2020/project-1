@@ -309,7 +309,8 @@ elwolfmod_capitulations_on_actions = {
 			country_event = france.14
 		}
 		set_global_flag = fall_of_france
-	} else if = {
+	} 
+	else_if = {
 		limit = {
 			AND = {
 				original_tag = FRA
@@ -438,8 +439,17 @@ elwolfmod_capitulations_on_actions = {
             transfer_state = 853
 		}
 		BUL = {
-			transfer_state = 106
-			transfer_state = 803
+			if = {
+				limit = { is_ai = no }
+				transfer_state = 106
+				transfer_state = 803
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+				}
+				ITA = { transfer_state = 106 transfer_state = 803 }
+			}
 			if = {
 				limit = { NOT = { has_idea = peace_training } }
 				add_ideas = peace_training
@@ -467,6 +477,23 @@ elwolfmod_capitulations_on_actions = {
 				transfer_troops = no
 			}
 		}
+	}
+	# Ireland
+	if = {
+		limit = { 
+			original_tag = IRE 
+			ENG = { has_war_with = IRE }
+		} 
+		ENG = {
+			add_named_threat = { 
+				threat = 3.7 
+				name = elwolf_ire
+			}
+			annex_country = {
+				target = IRE
+				transfer_troops = no
+			}
+		}
 	} 
 	# Greece
 	if = {
@@ -482,13 +509,33 @@ elwolfmod_capitulations_on_actions = {
 			transfer_navy = { target = ITA }
 		}
 		BUL = {
-			add_named_threat = { 
-				threat = 3.7 
-				name = elwolf_gre
+			if = {
+				limit = { 
+					is_ai = no 
+				}
+				annex_country = {
+					target = GRE
+					transfer_troops = no
+				}
+				add_named_threat = { 
+					threat = 3.7 
+					name = elwolf_gre
+				}
 			}
-			annex_country = {
-				target = GRE
-				transfer_troops = no
+		}
+		ITA = {
+			if = {
+				limit = { 
+					BUL = { is_ai = yes } 
+				}
+				annex_country = {
+					target = GRE
+					transfer_troops = no
+				}
+				add_named_threat = { 
+					threat = 3.7 
+					name = elwolf_gre
+				}
 			}
 		}
 	} 
