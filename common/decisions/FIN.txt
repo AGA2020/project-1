@@ -517,7 +517,6 @@ FIN_national_defense_category = {
 		visible = {
 			OR = {
 				has_completed_focus = FIN_weapon_caches
-				has_completed_focus = FIN_defensive_preparations
 			}
 		}
 
@@ -843,7 +842,6 @@ FIN_national_defense_category = {
 		visible = {
 			OR = {
 				has_completed_focus = FIN_coastal_defense
-				has_completed_focus = FIN_defensive_preparations
 			}
 			OR = {
 				has_full_control_of_state = 111
@@ -1092,7 +1090,6 @@ FIN_national_defense_category = {
 		visible = {
 			OR = {
 				has_completed_focus = FIN_sea_mines_strategy
-				has_completed_focus = FIN_defensive_preparations
 			}
 			has_full_control_of_state = 111
 		}
@@ -1676,52 +1673,6 @@ FIN_balance_of_power_category = {
 			#Increase cost
 			multiply_variable = { FIN_organize_the_opposition_dec_cost = FIN_bop_decision_cost_multiplier }
 			custom_effect_tooltip = FIN_organize_the_opposition_cost_increase_tt
-		}
-	}
-
-	FIN_appoint_yrjo_leino_as_president = {
-		priority = 50
-
-		icon = GFX_decision_generic_speech
-
-		ai_will_do = {
-			base = 0
-		}
-
-		allowed = {
-			original_tag = FIN
-			has_dlc = "Arms Against Tyranny"
-		}
-
-		available = {
-			NOT = {
-				has_country_leader = {
-					ruling_only = yes
-					character = FIN_otto_wille_kuusinen
-				}
-			}
-		}
-
-		visible = {
-			has_government = communism
-			has_completed_focus = FIN_the_red_watch
-			NOT = {
-				has_country_leader = {
-					ruling_only = yes
-					character = FIN_yrjo_leino
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		cost = 15
-
-		complete_effect = {
-			promote_character = {
-				character = FIN_yrjo_leino 
-				ideology = marxism 
-			}
 		}
 	}
 }

@@ -63,7 +63,6 @@ focus_tree = {
 	
 		x = 8
 		y = 0
-		relative_position_id = NOR_vote_of_no_confidence
 
 		offset = {
 			x = -17 
@@ -758,14 +757,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = NOR_restart_public_investment
 
-		offset = {
-			x = -1 
-			y = 0 
-			trigger = {
-				has_hide_rule = yes
-				has_completed_focus = NOR_vote_of_no_confidence
-			}
-		}
 		cost = 5
 		available = {
 		}
@@ -1215,15 +1206,6 @@ focus_tree = {
 		y = 0
 
 		relative_position_id = NOR_the_stumbling_storting
-
-		offset = {
-			x = -29
-			y = 0 
-			trigger = {
-				has_hide_rule = yes
-				has_completed_focus = NOR_vote_of_no_confidence 
-			}
-		}
 
 		offset = {
 			x = -20

@@ -915,34 +915,6 @@ ideas = {
 			}
 		}
 
-		YUG_ikarus = {
-		
-			picture = generic_air_manufacturer_3
-			
-			available = {
-				has_completed_focus = YUG_ikarus
-			}
-
-			allowed = {
-				original_tag = YUG
-				has_dlc = "Death or Dishonor"
-			}
-			
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { light_aircraft_manufacturer }
-			
-			equipment_bonus = {
-				# produced under licence: Hawker Fury, Potez 25, Avia BH-33, own flying boats and recon aircrafts
-			}
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
 		rogozarski = {
 			
 			picture = generic_air_manufacturer_2

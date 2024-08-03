@@ -11725,13 +11725,6 @@ focus_tree = {
 				}
 				else_if = {
 					limit = {
-						has_completed_focus = ITA_italo_balbo_focus
-						has_character = ITA_italo_balbo
-					}
-					promote_character = ITA_italo_balbo
-				}
-				else_if = {
-					limit = {
 						has_completed_focus = ITA_culto_del_duce
 						has_character = ITA_benito_mussolini
 					}
