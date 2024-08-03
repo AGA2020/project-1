@@ -163,26 +163,6 @@ characters = {
 				large="GFX_portrait_POL_ignacy_moscicki"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_ignacy_moscicki
-			available = {
-				OR = {
-					has_completed_focus = POL_ozon 
-					has_completed_focus = POL_dissolve_the_bbwr 
-				}
-			}
-			allowed = {
-				original_tag = POL
-				OR = {
-					has_dlc = "No Step Back"
-					has_dlc = "Poland: United and Ready"
-				}
-			}
-			traits = {
-				the_king_of_the_castle 
-			}
-		}
 		
 		country_leader = {
 			ideology=oligarchism
@@ -1147,30 +1127,6 @@ characters = {
 		portraits={
 			army={
 				small="GFX_idea_POL_jerzy_rutkowski"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_jerzy_rutkowski
-			allowed = {
-				original_tag = POL
-			}
-			available = {
-				OR = {
-					has_completed_focus = POL_support_right_paramilitaries 
-				}
-			}
-			traits = {
-				falangist_militarist 
-			}
-			ai_will_do = {
-				factor = 1.000
-				modifier = {
-					factor = 0.000
-					NOT = {
-						has_government = fascism 
-					}
-				}
 			}
 		}		
 	}

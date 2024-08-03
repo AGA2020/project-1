@@ -379,12 +379,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard trait_reckless cavalry_officer }
-			skill=4
-			attack_skill=3
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=4
+			traits={ trickster panzer_leader armor_officer trait_engineer }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 4
+			logistics_skill = 4
 			legacy_id=0
 		}
 	}

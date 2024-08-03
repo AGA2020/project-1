@@ -181,12 +181,12 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ trait_reckless media_personality armor_officer war_hero trickster adaptable_allower }
-			skill=4
-			attack_skill=4
-			defense_skill=4
-			planning_skill=2
-			logistics_skill=3
+			traits={ desert_fox trait_reckless trait_engineer media_personality panzer_leader war_hero trickster adaptable_allower }
+			skill = 6
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 4
+			logistics_skill = 4
 			legacy_id=4
 		}
 	}

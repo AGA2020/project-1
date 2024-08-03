@@ -158,7 +158,6 @@ DEN_fortification_category = {
 	
 	visible = {
 		OR = {
-			has_completed_focus = DEN_build_a_modern_dannevirke
 			has_completed_focus = DEN_refortify_tunestillingen
 		}
 	}
@@ -178,7 +177,6 @@ DEN_development_category = {
 		OR = {
 			has_completed_focus = DEN_expand_the_industries
 			has_completed_focus = DEN_modernize_agricultural_machinery 
-			has_completed_focus = DEN_modernize_industrial_machinery 
 		}
 	}
 }
@@ -253,22 +251,6 @@ DEN_danish_faction_category = {
 			has_country_flag = DEN_create_northern_national_front_flag
 			has_completed_focus = DEN_scandinavian_security
 		}
-	}
-}
-
-DEN_influence_countries_category = { 
-	icon = GFX_decision_category_generic_democracy #TODO_DANNE: change
-	picture = GFX_decision_cat_generic_nordic_league
-	
-	allowed = {
-		original_tag = DEN
-		has_dlc = "Arms Against Tyranny"
-	}
-	
-	priority = 40
-	
-	visible = {
-		has_completed_focus = DEN_sway_the_nordics
 	}
 }
 

@@ -1083,9 +1083,7 @@ focus_tree = {
 		relative_position_id = BRA_radio_nacional
 		cost = 5
 		available = {
-			NOT = {
-				has_completed_focus = BRA_sway_the_cangaco
-			}
+
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }

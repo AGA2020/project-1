@@ -718,9 +718,6 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = { tag = SPA }
@@ -827,9 +824,6 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = { tag = SPA }
@@ -865,7 +859,6 @@ every_possible_country = {
 			available = {
 				OR = {
 					has_completed_focus = SPR_demand_ministerial_positions
-					has_completed_focus = SPR_communists_in_the_government
 				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
@@ -1153,9 +1146,6 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = { tag = SPA }
@@ -1191,7 +1181,6 @@ every_possible_country = {
 			available = {
 				OR = {
 					has_completed_focus = SPR_demand_ministerial_positions
-					has_completed_focus = SPR_communists_in_the_government
 				}
 				NOT = {
 					has_completed_focus = SPR_oppose_the_communists
@@ -1265,9 +1254,6 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = { tag = SPA }
@@ -1308,32 +1294,6 @@ every_possible_country = {
 				small=GFX_portrait_SPR_wilhelm_zaisser_small
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = SPR_wilhelm_zaisser
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-			}
-			available = {
-				OR = {
-					has_completed_focus = SPR_communists_in_the_government
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}	
-			traits = { army_regrouping_2 }
-			cost = 100
-		}
 	}
 
 	generate_character = {
@@ -1360,7 +1320,6 @@ every_possible_country = {
 			}
 			available = {
 				has_completed_focus = SPR_maintain_the_second_republic
-				NOT = { has_completed_focus = SPR_communists_in_the_government }
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = { tag = SPA }
@@ -1468,9 +1427,6 @@ every_possible_country = {
 			available = {
 				OR = {
 					AND = {
-						NOT = {
-							has_completed_focus = SPR_communists_in_the_government 
-						}
 						custom_trigger_tooltip = {
 							tooltip = SPR_not_nationalist_spain_tt
 							NOT = {
@@ -1530,9 +1486,6 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government 
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
@@ -1586,8 +1539,7 @@ every_possible_country = {
 				OR = {
 					AND = {
 						OR = {
-							has_completed_focus = SPR_demand_ministerial_positions 
-							has_completed_focus = SPR_communists_in_the_government 
+							has_completed_focus = SPR_demand_ministerial_positions
 						}
 						custom_trigger_tooltip = {
 							tooltip = SPR_not_nationalist_spain_tt
@@ -1641,9 +1593,6 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government 
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
@@ -1790,9 +1739,6 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government 
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
@@ -2061,9 +2007,6 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPR_communists_in_the_government 
-				}
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
