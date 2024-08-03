@@ -1132,7 +1132,6 @@ on_actions = {
 				limit = {
 					FROM = {
 						tag = SPB
-						has_completed_focus = SPA_supremacy_of_the_communion
 					}
 					original_tag = SPR
 					SPR_scw_in_progress = yes
@@ -1208,7 +1207,6 @@ on_actions = {
 				limit = {
 					FROM = {
 						tag = SPC
-						has_completed_focus = SPR_the_anti_fascist_workers_revolution
 					}
 					original_tag = SPR
 					SPR_scw_in_progress = yes
@@ -1246,7 +1244,6 @@ on_actions = {
 				limit = {
 					FROM = {
 						tag = SPD
-						has_completed_focus = SPR_the_anti_fascist_workers_revolution
 					}
 					original_tag = SPR
 					SPR_scw_in_progress = yes
@@ -1302,10 +1299,8 @@ on_actions = {
 						}
 					}
 					OR = {
-						has_completed_focus = SPA_strengthen_the_supreme_reality_of_spain
 						has_completed_focus = SPA_adopt_the_26_points
 						has_completed_focus = SPA_confirm_the_fueros
-						has_completed_focus = SPR_all_must_bear_the_torch
 					}
 				}
 				FROM.FROM = {
@@ -1421,7 +1416,6 @@ on_actions = {
 					}
 					SPC = {
 						exists = yes
-						has_completed_focus = SPR_portuguese_anarchism
 					}
 				}
 				SPC = { country_event = lar_spain.50 }

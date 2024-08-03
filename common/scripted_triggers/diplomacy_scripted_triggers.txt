@@ -1009,7 +1009,6 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				NOT = { tag = SPC }
 				FROM = {
 					tag = SPC
-					has_completed_focus = SPR_regional_defense_council_of_aragon
 				}
 			}
 			custom_trigger_tooltip = {
@@ -1033,7 +1032,6 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				NOT = { tag = SPC }
 				FROM = {
 					tag = SPC
-					has_completed_focus = SPR_regional_defense_council_of_aragon
 				}
 			}
 			custom_trigger_tooltip = {
@@ -1052,13 +1050,11 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				tooltip = RULE_VOLUNTEERS_PORTUGAL_SCW_TT
 				NOT = {
 					AND = {
-						has_completed_focus = POR_support_the_spanish_republic
 						FROM = { NOT = { tag = SPD } }
 					}
 				}
 				NOT = {
 					AND = {
-						has_completed_focus = POR_support_the_spanish_nationalists
 						FROM = { NOT = { tag = SPA } }
 					}
 				}
@@ -1286,7 +1282,6 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				NOT = { tag = SPC }
 				FROM = {
 					tag = SPC
-					has_completed_focus = SPR_regional_defense_council_of_aragon
 				}
 			}
 			custom_trigger_tooltip = {

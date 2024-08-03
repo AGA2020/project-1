@@ -1726,32 +1726,6 @@ country_event = {
 	#	}
 	#}
 
-	option = { # Religious candidate: Jesús Degollado Guízar
-		name = mexico.19.p
-		
-		trigger = {
-			has_completed_focus = MEX_focus_legion_of_christ
-			NOT = {
-				has_country_leader = {
-					character = MEX_jesus_degollado_guizar
-				}
-			}
-			has_government = fascism
-		}
-
-		add_country_leader_role = {
-			character = MEX_jesus_degollado_guizar
-			country_leader = {
-				expire = "1965.1.1"
-				ideology = falangism
-				traits = {
-					cristero_general
-				}
-			}
-			promote_leader = yes
-		}
-	}
-
 	option = { # Falangist candidate: Salvador Abascal
 		name = mexico.19.q
 		

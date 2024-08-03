@@ -68,18 +68,7 @@ country_event = {
 			modifier = {
 				OR = {
 					has_country_flag = URG_AI_RANDOM_DEMOCRATIC_ALT
-					
-					has_game_rule = {
-						rule = URG_AI_BEHAVIOR
-						option = DEMOCRATIC_ALT
-					}
-
-					has_country_flag = URG_AI_RANDOM_FASCIST
-					
-					has_game_rule = {
-						rule = URG_AI_BEHAVIOR
-						option = FASCIST
-					}		
+					has_country_flag = URG_AI_RANDOM_FASCIST	
 				}
 				factor = 0
 			}
@@ -122,11 +111,6 @@ country_event = {
 				add = 100
 				OR = {
 					has_country_flag = URG_AI_RANDOM_DEMOCRATIC_ALT
-					
-					has_game_rule = {
-						rule = URG_AI_BEHAVIOR
-						option = DEMOCRATIC_ALT
-					}	
 				}	
 			}
 			
@@ -214,12 +198,7 @@ country_event = {
 			modifier = {
 				OR = {
 
-					has_country_flag = URG_AI_RANDOM_FASCIST
-					
-					has_game_rule = {
-						rule = URG_AI_BEHAVIOR
-						option = FASCIST
-					}		
+					has_country_flag = URG_AI_RANDOM_FASCIST		
 				}
 				add = 100
 			}
@@ -1202,17 +1181,6 @@ country_event = {
 			}
 			
 		}
-
-		hidden_effect = {
-			IF = {
-				limit = {
-					NOT = {
-						has_completed_focus = CHL_policies_of_arturo_alessandri
-					}
-				}
-				unlock_national_focus = CHL_policies_of_arturo_alessandri
-			}
-		}
 		
 		complete_national_focus = CHL_1938_chilean_presidential_election
 
@@ -1268,18 +1236,6 @@ country_event = {
 			}
 			
 		}
-
-		hidden_effect = {
-			IF = {
-				limit = {
-					NOT = {
-						has_completed_focus = CHL_policies_of_arturo_alessandri
-					}
-				}
-				unlock_national_focus = CHL_policies_of_arturo_alessandri
-			}
-		}
-		
 		complete_national_focus = CHL_1938_chilean_presidential_election
 
 		custom_effect_tooltip = CHL_skip_one_line_tt
@@ -1336,17 +1292,6 @@ country_event = {
 				}
 			}
 			
-		}
-
-		hidden_effect = {
-			IF = {
-				limit = {
-					NOT = {
-						has_completed_focus = CHL_policies_of_arturo_alessandri
-					}
-				}
-				unlock_national_focus = CHL_policies_of_arturo_alessandri
-			}
 		}
 		
 		complete_national_focus = CHL_1938_chilean_presidential_election

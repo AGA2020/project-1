@@ -187,7 +187,6 @@ ITA_missiolini_progress_in_ethiopia_success_effect = {
 	else_if = { #Second mission to succeed
 		limit = {
 			NOT = { has_completed_focus = ITA_the_abyssinian_fiasco }
-			NOT = { has_completed_focus = ITA_struggle_in_ethiopia }
 		}
 		complete_national_focus = ITA_solid_progress
 	}
@@ -1757,15 +1756,6 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 					uncomplete_children = yes
 				}
 			}
-			if = { #ETH-ITA war focus
-				limit = {
-					has_completed_focus = ITA_struggle_in_ethiopia
-				}
-				uncomplete_national_focus = {
-					focus = ITA_struggle_in_ethiopia
-				}
-				unlock_national_focus = ITA_the_abyssinian_fiasco
-			}
 
 			#COMPLETE FOCUS
 			unlock_national_focus = ITA_unite_the_opposition
@@ -1785,15 +1775,6 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 					focus = ITA_pact_of_steel
 					uncomplete_children = yes
 				}
-			}
-			if = { #ETH-ITA war focus
-				limit = {
-					has_completed_focus = ITA_the_abyssinian_fiasco
-				}
-				uncomplete_national_focus = {
-					focus = ITA_the_abyssinian_fiasco
-				}
-				unlock_national_focus = ITA_struggle_in_ethiopia
 			}
 			#COMPLETE FOCUS
 			if = {

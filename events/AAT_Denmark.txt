@@ -1611,12 +1611,6 @@ country_event = { #Danish Declares Independence
 				factor = 5
 				is_major = yes
 			}
-			modifier = {
-				factor = 2
-				FROM = {
-					has_completed_focus = DEN_seek_independence
-				}
-			}
 		}
 		effect_tooltip = {
 			ROOT = { end_puppet = FROM }
@@ -1784,9 +1778,7 @@ country_event = { #Denmark becomes independent peacefully
 		DEN_drop_occupation_tag = yes
 		if = {
 			limit = {
-				NOT = {
-					has_completed_focus = DEN_pledge_allegiance
-				}
+
 			}
 			IF = {
 				limit = {
@@ -3089,62 +3081,6 @@ country_event = { #Denmark is denied ships
 
 	option = { #Who needs their crappy ships anyways
 		name = denmark_resistance_event.3.a #Intentional	
-	}
-}
-
-country_event = { #The King rides
-	id = denmark_resistance_event.30
-	title = denmark_resistance_event.30.t
-	desc = denmark_resistance_event.30.desc
-	picture = GFX_report_event_DEN_christian_x
-
-	trigger = {
-		original_tag = DEN
-		is_subject = yes
-		OR = {
-			has_completed_focus = DEN_seek_independence
-		}
-		NOT = { has_country_flag = DEN_exiled_royal_family }
-		has_character = DEN_christian_x
-	}
-
-	mean_time_to_happen = {
-		days = 180
-	}
-
-	fire_only_once = yes
-
-	option = { #Sure
-		name = denmark_resistance_event.30.a 
-
-		add_stability = 0.05
-		add_war_support = 0.05
-
-		if = {
-			limit = {
-				has_dynamic_modifier = { modifier = DEN_resistance_dynamic_modifier_improved } 
-			}
-			custom_effect_tooltip = DEN_modify_danish_resistance_dynamic_modifier
-		}
-		else_if = {
-			limit = {
-				NOT = { 
-					has_dynamic_modifier = { modifier = DEN_resistance_dynamic_modifier } 
-				}
-			}
-			add_dynamic_modifier = { modifier = DEN_resistance_dynamic_modifier }
-		}
-		else = {
-			custom_effect_tooltip = DEN_modify_danish_resistance_dynamic_modifier
-		}
-		add_to_variable = {
-			DEN_resistance_target_on_our_occupied_states = 0.05
-			tooltip = resistance_target_on_our_occupied_states_tt
-		}
-		add_to_variable = {
-			DEN_resistance_compliance_growth_on_our_occupied_states = -0.05
-			tooltip = compliance_growth_on_our_occupied_states_tt
-		}
 	}
 }
 

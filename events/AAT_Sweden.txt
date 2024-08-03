@@ -7036,15 +7036,7 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		if = {
-			limit = {
-				has_completed_focus = SWE_undermine_the_fascists
-			}
-			add_popularity = { ideology = neutrality popularity = 0.10 }
-		}
-		else = {
-			add_popularity = { ideology = fascism popularity = 0.10 }
-		}
+		add_popularity = { ideology = fascism popularity = 0.10 }
 
 		#SWE_increase_stormtrupper_cap = yes
 		clr_country_flag = SWE_appeal_for_support_in_progress
@@ -7063,15 +7055,7 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		if = {
-			limit = {
-				has_completed_focus = SWE_undermine_the_fascists
-			}
-			add_popularity = { ideology = neutrality popularity = 0.10 }
-		}
-		else = {
-			add_popularity = { ideology = fascism popularity = 0.10 }
-		}
+		add_popularity = { ideology = fascism popularity = 0.10 }
 		#SWE_increase_stormtrupper_cap = yes
 		clr_country_flag = SWE_appeal_for_support_in_progress
 		custom_effect_tooltip = SWE_appeal_for_support_dec_tt
@@ -7089,15 +7073,7 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		if = {
-			limit = {
-				has_completed_focus = SWE_undermine_the_fascists
-			}
-			add_popularity = { ideology = neutrality popularity = 0.10 }
-		}
-		else = {
-			add_popularity = { ideology = fascism popularity = 0.10 }
-		}
+		add_popularity = { ideology = fascism popularity = 0.10 }
 		#SWE_increase_stormtrupper_cap = yes
 		clr_country_flag = SWE_appeal_for_support_in_progress
 		custom_effect_tooltip = SWE_appeal_for_support_dec_tt
@@ -7115,15 +7091,7 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		if = {
-			limit = {
-				has_completed_focus = SWE_undermine_the_fascists
-			}
-			add_popularity = { ideology = neutrality popularity = 0.10 }
-		}
-		else = {
-			add_popularity = { ideology = fascism popularity = 0.10 }
-		}
+		add_popularity = { ideology = fascism popularity = 0.10 }
 		#SWE_increase_stormtrupper_cap = yes
 		clr_country_flag = SWE_appeal_for_support_in_progress
 		custom_effect_tooltip = SWE_appeal_for_support_dec_tt

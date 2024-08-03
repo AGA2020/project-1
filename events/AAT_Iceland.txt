@@ -1379,43 +1379,6 @@ country_event = {
 			ruling_party = democratic
 		}
 	}
-
-	# Brynjolólfur is the people's vote
-	option = { 
-		name = iceland_events.45.d
-		ai_chance = {
-			base = 1
-		}
-		trigger = {
-			has_completed_focus = ICE_fighting_as_equals
-			DEN = { has_government = communism }
-		}
-		set_politics = {
-			ruling_party = communism
-		}
-		ICE_brynjolfur_bjarnason = {
-			promote_character = yes 
-		}
-	}
-
-	# Gísli, Gísli, he's our man, if he can't do it .... great
-	option = { 
-		name = iceland_events.45.e
-		ai_chance = {
-			base = 1
-		}
-		trigger = {
-			has_completed_focus = ICE_fighting_as_equals
-			DEN = { has_government = fascism }
-		}
-		set_politics = {
-			ruling_party = fascism
-		}
-		ICE_gisli_sigurbjornsson = {
-			promote_character = yes 
-		}
-	}
-	
 }
 
 # We have run out of oil

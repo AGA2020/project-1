@@ -9637,7 +9637,6 @@ country_event = {
 			    tag = ROOT
 			    count > 0
 			}
-			has_completed_focus = SPR_relocate_the_gold_reserves
 		}
 		OR = {
 			has_country_flag = SPR_relocated_gold_reserves_selection_flag_sov
