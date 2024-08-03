@@ -9300,18 +9300,6 @@ country_event = {
 	# that works for us
 	option = { 
 		name = BBA_italy_interaction_events.22.a 
-
-		TUR = {
-			transfer_state = 164
-		}
-		TUR = {
-			add_opinion_modifier = {
-			    target = ITA
-			    modifier = ITA_sold_stuff_to_us
-			}
-			add_ideas = ITA_dodecanese_treaty_idea
-		}
-		ITA = { add_to_faction = TUR }
 	}
 }
 
@@ -9327,13 +9315,6 @@ country_event = {
 	# alright.. on to the next one I guess
 	option = { 
 		name = BBA_italy_interaction_events.23.a 
-
-		ITA = {
-			add_opinion_modifier = {
-			    target = TUR
-			    modifier = faction_traitor
-			}
-		}
 	}
 }
 
