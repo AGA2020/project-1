@@ -2064,7 +2064,6 @@ on_actions = {
 						has_idea = FIN_the_lone_wolf
 					}
 				}
-				add_to_tech_sharing_group = FIN_joint_research_and_development_program
 			}
 		}
 
@@ -2224,20 +2223,6 @@ on_actions = {
 					}
 					add_dynamic_modifier = { modifier = NOR_independent_norway_dmod	}
 				}
-			}
-		}
-
-		#FINLAND LONE WOLF STUFF - Remove from tech group
-		effect = {
-			if = {
-				limit = {
-					is_in_tech_sharing_group = FIN_joint_research_and_development_program
-					FROM = {
-						original_tag = FIN
-						has_idea = FIN_the_lone_wolf
-					}
-				}
-				remove_from_tech_sharing_group = FIN_joint_research_and_development_program
 			}
 		}
 		#DENMARK becomes free without completing DEN_declare_independence

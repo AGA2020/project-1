@@ -8310,19 +8310,6 @@ focus_tree = {
 						NOT = { has_war_with = SPR }
 				    }
 				}
-				else = {
-					if = {
-						limit = {
-							has_completed_focus = SOV_covert_support_for_spanish_poum
-						}
-						country_exists = SPC
-						NOT = { has_war_with = SPC }
-					}
-					else = {
-						country_exists = SPD
-						NOT = { has_war_with = SPD }
-					}
-				}
 			}
 			else = {
 				any_other_country = {
@@ -8345,17 +8332,6 @@ focus_tree = {
 			add_timed_idea = { idea = SOV_military_advisors_in_spain days = 1095 }
 			
 			if = {
-				limit = {
-					has_dlc = "La Resistance"
-					has_completed_focus = SOV_covert_support_for_spanish_poum
-					has_global_flag = SPR_anarchist_uprising_flag
-					country_exists = SPC				}
-				SPC = {
-					hidden_effect = { country_event = { id = NSB_soviet_foreign_politics_events.20 hours = 2 random_hours = 1 } }
-					effect_tooltip = { add_timed_idea = {idea = SOV_soviet_advisors_spr days = 1095 } }
-				}
-			}
-			else_if = {
 				limit = {
 					has_dlc = "La Resistance"
 					country_exists = SPD

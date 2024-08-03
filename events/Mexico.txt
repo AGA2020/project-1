@@ -4226,28 +4226,12 @@ country_event = {
 				owns_state = 695
 				has_full_control_of_state = 695
 			}
-			release = CRC
-			CRC = {
-				add_timed_idea = {
-					idea = MEX_bolivarian_agitation
-					days = 720
-				}
-				set_country_flag = received_MEX_bolivarian_agitation
-			}
 		}
 		if = {
 			limit = {
 				original_tag = HOL
 				owns_state = 309
 				has_full_control_of_state = 309
-			}
-			release = SUR
-			SUR = {
-				add_timed_idea = {
-					idea = MEX_bolivarian_agitation
-					days = 720
-				}			
-				set_country_flag = received_MEX_bolivarian_agitation
 			}
 		}
 		if = {
@@ -4309,14 +4293,6 @@ country_event = {
 				has_full_control_of_state = 690
 				owns_state = 693
 				has_full_control_of_state = 693				
-			}
-			release = BAH
-			BAH = {
-				add_timed_idea = {
-					idea = MEX_bolivarian_agitation
-					days = 720
-				}			
-				set_country_flag = received_MEX_bolivarian_agitation
 			}
 		}								
 		FROM = { country_event = { id = mexico.55 hours = 6 } }

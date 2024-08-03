@@ -47,15 +47,6 @@ peace_action_modifiers = {
     DEN_topple_former_overlords_government = {
         category = events_or_focuses
         peace_action_type = { force_government liberate }
-        enable = {
-            ROOT = {
-                original_tag = DEN
-                 has_completed_focus = DEN_secure_danish_freedom  
-            }
-            FROM.FROM = {
-                original_tag = var:DEN.DEN_overlord_nation
-            }
-        }
         cost_multiplier = 0.7 #30% cost reduction
     }
 

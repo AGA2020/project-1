@@ -1837,12 +1837,6 @@ defined_text = {
 		localization_key = SOV_the_molotov_line_name_exiles
 	}
 	text = {
-		trigger = {
-			has_completed_focus = SOV_left_opposition_coup
-		}
-		localization_key = SOV_the_molotov_line_name_left
-	}
-	text = {
 		localization_key = SOV_the_molotov_line_name_default
 	}
 }

@@ -1498,17 +1498,6 @@ country_event = { #BRA requests tech sharing
 					add_to_tech_sharing_group = BRA_USA_tech_sharing_group
 				}
 			}
-			IF = {
-				limit = {
-					FROM = {
-						has_completed_focus = BRA_south_american_research_cooperation
-					}
-				}
-				add_to_tech_sharing_group = BRA_south_american_tech_sharing_group
-				FROM = {
-					add_to_tech_sharing_group = BRA_south_american_tech_sharing_group
-				}
-			}
 		}
 	}
 
@@ -1555,17 +1544,6 @@ country_event = { #USA agrees to share tech
 			add_to_tech_sharing_group = BRA_USA_tech_sharing_group
 			FROM = {
 				add_to_tech_sharing_group = BRA_USA_tech_sharing_group
-			}
-		}
-		IF = {
-			limit = {
-				FROM = {
-					has_completed_focus = BRA_south_american_research_cooperation
-				}
-			}
-			add_to_tech_sharing_group = BRA_south_american_tech_sharing_group
-			FROM = {
-				add_to_tech_sharing_group = BRA_south_american_tech_sharing_group
 			}
 		}
 	}

@@ -4228,30 +4228,6 @@ DEN_independence_war_effects = {
 	}
 
 	if = {
-		limit = { #Mostly for TT purposes
-			has_completed_focus = DEN_form_the_danish_freedom_council
-		}
-		37 = {
-			create_unit = { 
-				division = "name = \"1. Modstandsbevægelse Militia\" division_template = \"Modstandsbevægelsen Militia\" start_experience_factor = 0.5" 
-				owner = ROOT
-			}
-			create_unit = { 
-				division = "name = \"2. Modstandsbevægelse Militia\" division_template = \"Modstandsbevægelsen Militia\" start_experience_factor = 0.5" 
-				owner = ROOT
-			}
-			create_unit = { 
-				division = "name = \"3. Modstandsbevægelse Militia\" division_template = \"Modstandsbevægelsen Militia\" start_experience_factor = 0.5" 
-				owner = ROOT
-			}
-			create_unit = { 
-				division = "name = \"4. Modstandsbevægelse Militia\" division_template = \"Modstandsbevægelsen Militia\" start_experience_factor = 0.5" 
-				owner = ROOT
-			}
-		}
-	}
-
-	if = {
 		limit = {
 			NOT = { has_rule = can_access_market }
 		}

@@ -2022,15 +2022,6 @@ news_event = {
 								owns_state = 296
 								has_full_control_of_state = 296
 							}
-							ANG = {
-								is_subject_of = PREV
-							}
-							MZB = {
-								is_subject_of = PREV
-							}
-							GNB = {
-								is_subject_of = PREV
-							}
 						}
 					}
 					AND = {

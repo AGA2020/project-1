@@ -132,11 +132,6 @@ SWE_the_old_enemy_stirs_trigger = {
 SWE_refuge_for_revolutionaries_trigger = {
 	hidden_trigger = {
 		SWE_AAT = yes
-		SWE = { 
-			has_completed_focus = SWE_refuge_from_war 
-			exists = yes
-			is_subject = no
-		}
 	}
 }
 

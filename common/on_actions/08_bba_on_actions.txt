@@ -171,17 +171,6 @@ on_actions = {
 					}
 				}
 			}
-			if = {
-				limit = {
-					SWI_bba = yes
-				}
-				SWI = { 
-
-					SWI_find_democratic_planes_seller = yes 
-					SWI_find_biggest_fascist_neighbor = yes
-					SWI_update_neighbor_opinion_balance = yes
-				} 
-			}
 
 		}
 	}
@@ -357,28 +346,8 @@ on_actions = {
 					disband = no 
 				}
 			}
-			if = { #For when Switzerland wants to go back to the Good Old Times 
-				limit = {
-					SWI_bba = yes
-					has_idea = SWI_old_switzerland_idea
-				}			
-				add_ideas = {
-					SWI_swiss_neutrality
-					SWI_citizen_militia_1
-				}
-				remove_ideas = { SWI_old_switzerland_idea }
-				retire_character = SWI_henri_guisan 
-			}
 		
 
-		}
-		effect = {
-			if = {
-				limit = {
-					SWI_bba = yes 
-				}
-				SWI_make_helvetia_peace = yes 
-			}
 		}
 	}
 	#ROOT = country that joined a war
@@ -422,15 +391,6 @@ on_actions = {
 						}
 					}
 				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					SWI_bba = yes
-					SWI_has_any_spirit_of_helvetia = yes
-				}
-				SWI_make_helvetia_war = yes 
 			}
 		}
 	}
@@ -1186,9 +1146,7 @@ on_actions = {
 	#ROOT = nation being released, FROM = overlord
 
 	on_release_as_puppet = {
-		effect = {
-			SWI_on_action_puppet_selection = yes #If it's SWI, it will check which Cosmetic Tag will apply
-		}
+
 	}
 	on_puppet = { #ROOT = nation being puppeted, FROM = overlord
 		effect = {
@@ -1220,7 +1178,7 @@ on_actions = {
 		}
 		
 		effect = {
-			SWI_on_action_puppet_selection = yes #If it's SWI, it will check which Cosmetic Tag will apply
+
 		}
 
 		# In case of historical split of N and S Korea try to locate the correct leaders

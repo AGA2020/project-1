@@ -644,7 +644,6 @@ country_event = {
 		
 		trigger = {
 			OR = {
-				has_completed_focus = ITA_struggle_in_ethiopia
 				NOT = { has_country_flag = ITA_missiolini_conquer_the_south_failed_flag }
 			}
 		}
@@ -662,7 +661,6 @@ country_event = {
 
 		trigger = {
 			NOT = {
-				has_completed_focus = ITA_struggle_in_ethiopia
 				has_country_flag = ITA_missiolini_conquer_the_north_failed_flag
 			}
 		}
@@ -681,7 +679,6 @@ country_event = {
 
 		trigger = {
 			NOT = {
-				has_completed_focus = ITA_struggle_in_ethiopia
 				has_country_flag = ITA_missiolini_conquer_the_north_failed_flag
 			}
 		}
@@ -691,8 +688,6 @@ country_event = {
 		}
 
 		ITA_missiolini_progress_in_ethiopia_failure_effect = yes
-		
-		complete_national_focus = ITA_struggle_in_ethiopia
 	}
 }
 
@@ -7662,10 +7657,6 @@ country_event = {
 						add = 10
 						has_completed_focus = ITA_regional_development
 						has_completed_focus = ITA_develop_ethiopia
-					}
-					modifier = {
-						add = 5
-						has_completed_focus = ITA_ethiopian_war_logistics_bba
 					}
 					modifier = {
 						add = 5

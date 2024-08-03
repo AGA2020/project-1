@@ -1933,12 +1933,6 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_completed_focus = ENG_no_further_appeasement
-			}
-			add_political_power = -200
-		}
-		if = {
-			limit = {
 				tag = HOL
 			}
 			ENG = { country_event = germany.40 }

@@ -191,13 +191,6 @@ defined_text = {
 		}
 		localization_key = NOR_communist_preparation_decisions_category_desc_stalinist
 	}
-	text = { # Going Trotsky 
-		trigger = {
-			has_country_flag = NOR_trotsky_embraced
-			has_completed_focus = NOR_prosecute_the_nkp
-		}
-		localization_key = NOR_communist_preparation_decisions_category_desc_trostkyist
-	}
 	text = {
 		localization_key = NOR_communist_preparation_decisions_category_desc_other
 	}

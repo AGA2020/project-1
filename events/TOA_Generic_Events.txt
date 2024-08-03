@@ -1033,10 +1033,6 @@ country_event = {
 			days = 360
 		}
 		custom_effect_tooltip = CHL_relief_efforts_idea_tt
-		effect_tooltip = {
-			CHL_anarchic_society_level_down = yes
-		}
-
 		IF = {
 			limit = {
 				original_tag = CHL
