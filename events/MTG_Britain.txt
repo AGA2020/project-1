@@ -1308,11 +1308,6 @@ country_event = {
 	option = {
 		name = mtg_britain.20.a
 		add_opinion_modifier = { target = ENG modifier = ENG_three_nation_solution }
-		release = BAN
-		ENG = { set_autonomy = { target = BAN autonomy_state = autonomy_colony } }
-		BAN = {
-			add_ideas = ENG_guided_by_britain_raj_1
-		}
 		if = {
 			limit = {
 				has_idea = RAJ_marginalized_muslim_community_angry
@@ -1354,15 +1349,6 @@ country_event = {
 			if = {
 				limit = {
 					tag = RAJ
-					NOT = { is_subject = no }
-					NOT = { has_autonomy_state = autonomy_dominion }
-					has_dlc = "Together for Victory"
-				}
-				set_autonomy = { target = RAJ autonomy_state = autonomy_dominion }
-			}
-			if = {
-				limit = {
-					tag = BAN
 					NOT = { is_subject = no }
 					NOT = { has_autonomy_state = autonomy_dominion }
 					has_dlc = "Together for Victory"
@@ -3697,178 +3683,6 @@ country_event = {
    					division_template = "Hindu Militia"
 				}
 			}
-		}
-	}
-}
-
-# Event for PAK starting civil war
-country_event = {
-	id = mtg_britain.76
-	title = mtg_britain.76.t
-	desc = mtg_britain.76.d
-	picture = GFX_report_event_ger_civil_war
-
-	trigger = {
-		tag = PAK
-		NOT = { country_exists = BAN }
-		NOT = { has_country_flag = PAK_civil_war }
-		is_subject = no
-		has_war = no
-		has_dlc = "Man the Guns"
-	}
-	
-	fire_only_once = yes
-
-	mean_time_to_happen = { days = 180 }
-	
-	# We won't back down!
-	option = {
-		name = mtg_britain.76.a
-		set_country_flag = PAK_civil_war
-		release = BAN
-		hidden_effect = {
-			BAN = {
-				division_template = {
-					name = "Bangladeshi Liberation Army"
-					priority = 1
-					division_names_group = RAJ_INF_01
-					is_locked = yes
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-					}
-				}
-				# East Bengal (Bangladesh)
-				430 = {
-					create_unit = {
-						division = "name = \"1. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"2. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"3. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"4. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"5. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"6. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"7. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"8. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"9. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"10. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"11. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"12. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"13. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"14. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-					create_unit = {
-						division = "name = \"15. Bangladeshi Liberation Army\" division_template = \"Bangladeshi Liberation Army\" start_experience_factor = 0.5" 
-						owner = BAN
-					}
-				}
-				declare_war_on = {
-					target = ROOT
-					type = annex_everything
-				}
-			}
-			hidden_effect = { country_event = { id = mtg_britain.77 days = 270 random_days = 95 } }
-		}
-	}
-	# Give them their independence
-	option = {
-		name = mtg_britain.76.b
-		ai_chance = {
-			factor = 0
-		}
-		release = BAN
-		set_country_flag = PAK_civil_war
-	}
-}
-
-# Event for PAK ending civil war if Bangladesh hasn't been dealt with.
-country_event = {
-	id = mtg_britain.77
-	title = mtg_britain.77.t
-	desc = mtg_britain.77.d
-	picture = GFX_report_event_generic_sign_treaty2
-
-	trigger = {
-		has_war_with = BAN
-	}
-
-	is_triggered_only = yes
-	
-	# Let's make peace
-	option = {
-		name = mtg_britain.77.a
-		white_peace = BAN
-		BAN = { country_event = { id = mtg_britain.78 } }
-	}
-
-	# All or nothing - no peace!
-	option = {
-		name = mtg_britain.77.b
-		ai_chance = {
-			factor = 0
-		}
-		add_war_support = -0.1
-	}
-}
-
-# Event for BAN notifying of white peace
-country_event = {
-	id = mtg_britain.78
-	title = mtg_britain.78.t
-	desc = mtg_britain.78.d
-	picture = GFX_report_event_generic_sign_treaty2
-
-	is_triggered_only = yes
-	
-	# Ok
-	option = {
-		name = mtg_britain.75.a
-		effect_tooltip = { BAN = { white_peace = PAK } }
-		delete_unit_template_and_units = {
-   			division_template = "Bangladeshi Liberation Army"
 		}
 	}
 }

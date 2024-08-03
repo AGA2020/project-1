@@ -75,61 +75,6 @@ defined_text = { #Country
 	text = { localization_key = "" }
 }
 
-defined_text = { #Country
-	name = GetPoliticalSupport_PRC
-	text = {
-		trigger = {
-			has_event_target = scope_PRC			
-		}
-		localization_key = PRC_political_support
-	}
-	text = { localization_key = "" }
-}
-
-defined_text = { #Country
-	name = GetPoliticalSupport_GXC
-	text = {
-		trigger = {
-			has_event_target = scope_GXC			
-		}
-		localization_key = GXC_political_support
-	}
-	text = { localization_key = "" }
-}
-
-defined_text = { #Country
-	name = GetPoliticalSupport_YUN
-	text = {
-		trigger = {
-			has_event_target = scope_YUN			
-		}
-		localization_key = YUN_political_support
-	}
-	text = { localization_key = "" }
-}
-
-defined_text = { #Country
-	name = GetPoliticalSupport_XSM
-	text = {
-		trigger = {
-			has_event_target = scope_XSM			
-		}
-		localization_key = XSM_political_support
-	}
-	text = { localization_key = "" }
-}
-
-defined_text = { #Country
-	name = GetPoliticalSupport_SIK
-	text = {
-		trigger = {
-			has_event_target = scope_SIK			
-		}
-		localization_key = SIK_political_support
-	}
-	text = { localization_key = "" }
-}
-
 ### #  # #   #        ## #  # ###  ###   ##  ###  ###     ###  ###  ##  ##  
 #   #  # #   #       #   #  # #  # #  # #  # #  #  #      #  # #   #   #  # 
 ##  #  # #   #        #  #  # ###  ###  #  # ###   #      #  # ##   #  #    
@@ -155,50 +100,6 @@ defined_text = { #Country
 			has_event_target = scope_PRC			
 		}
 		localization_key = PRC_full_political_support
-	}
-	text = { localization_key = "" }
-}
-
-defined_text = { #Country
-	name = GetFullPoliticalSupport_GXC
-	text = {
-		trigger = {
-			has_event_target = scope_GXC			
-		}
-		localization_key = GXC_full_political_support
-	}
-	text = { localization_key = "" }
-}
-
-defined_text = { #Country
-	name = GetFullPoliticalSupport_YUN
-	text = {
-		trigger = {
-			has_event_target = scope_YUN			
-		}
-		localization_key = YUN_full_political_support
-	}
-	text = { localization_key = "" }
-}
-
-defined_text = { #Country
-	name = GetFullPoliticalSupport_XSM
-	text = {
-		trigger = {
-			has_event_target = scope_XSM			
-		}
-		localization_key = XSM_full_political_support
-	}
-	text = { localization_key = "" }
-}
-
-defined_text = { #Country
-	name = GetFullPoliticalSupport_SIK
-	text = {
-		trigger = {
-			has_event_target = scope_SIK			
-		}
-		localization_key = SIK_full_political_support
 	}
 	text = { localization_key = "" }
 }
@@ -263,59 +164,6 @@ defined_text = { #Event target scope_<TAG>
 			original_tag = CHI
 		}
 		localization_key = CHI_warlord_support
-	}
-	text = { localization_key = "" }
-}
-
-
-defined_text = { #Country
-	name = GetWarlordSupportFromGXC
-	text = {
-		trigger = {
-			GXC = {
-				has_country_flag = warlord_supports_@PREV
-			}
-		}
-		localization_key = warlord_support_from_GXC
-	}
-	text = { localization_key = "" }
-}
-
-defined_text = { #Country
-	name = GetWarlordSupportFromYUN
-	text = {
-		trigger = {
-			YUN = {
-				has_country_flag = warlord_supports_@PREV
-			}
-		}
-		localization_key = warlord_support_from_YUN
-	}
-	text = { localization_key = "" }
-}
-
-defined_text = { #Country
-	name = GetWarlordSupportFromXSM
-	text = {
-		trigger = {
-			XSM = {
-				has_country_flag = warlord_supports_@PREV
-			}
-		}
-		localization_key = warlord_support_from_XSM
-	}
-	text = { localization_key = "" }
-}
-
-defined_text = { #Country
-	name = GetWarlordSupportFromSIK
-	text = {
-		trigger = {
-			SIK = {
-				has_country_flag = warlord_supports_@PREV
-			}
-		}
-		localization_key = warlord_support_from_SIK
 	}
 	text = { localization_key = "" }
 }

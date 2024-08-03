@@ -1736,9 +1736,6 @@ news_event = {
 							owns_state = 783
 							has_full_control_of_state = 783
 						}
-						WES = {
-							is_subject_of = PREV
-						}
 					}
 				}
 				AND = {
@@ -1751,9 +1748,6 @@ news_event = {
 						AND = {
 							owns_state = 309
 							has_full_control_of_state = 309
-						}
-						INS = {
-							is_subject_of = PREV
 						}
 					}
 				}
@@ -1773,9 +1767,6 @@ news_event = {
 							has_full_control_of_state = 889
 							owns_state = 890
 							has_full_control_of_state = 890
-						}
-						COG = {
-							is_subject_of = PREV
 						}
 					}
 				}
@@ -2039,9 +2030,6 @@ news_event = {
 								owns_state = 783
 								has_full_control_of_state = 783
 							}
-							WES = {
-								is_subject_of = PREV
-							}
 						}
 					}
 					AND = {
@@ -2054,9 +2042,6 @@ news_event = {
 							AND = {
 								owns_state = 309
 								has_full_control_of_state = 309
-							}
-							INS = {
-								is_subject_of = PREV
 							}
 						}
 					}
@@ -2076,9 +2061,6 @@ news_event = {
 								has_full_control_of_state = 889
 								owns_state = 890
 								has_full_control_of_state = 890
-							}
-							COG = {
-								is_subject_of = PREV
 							}
 						}
 					}

@@ -3486,7 +3486,6 @@ on_actions = {
 					NORDIC_is_nordic = yes
 				}
 				set_country_flag = NORDIC_alliance_member
-				NORDIC_add_to_nordic_alliance = yes 
 			}
 		}
 
@@ -3537,7 +3536,6 @@ on_actions = {
 				}
 				FROM = {
 					set_country_flag = NORDIC_alliance_member
-					NORDIC_add_to_nordic_alliance = yes 
 				}
 			}
 		}

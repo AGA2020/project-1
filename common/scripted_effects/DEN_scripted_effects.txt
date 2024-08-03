@@ -504,51 +504,6 @@ DEN_fascists_takes_over = {
 	}
 }
 
-DEN_erik_scavenius_takes_over = {	
-	if = {
-		limit = {
-			NOT = { has_government = democratic }
-		}
-		set_politics = {
-			ruling_party = democratic
-			elections_allowed = yes
-			long_name = DEN_democratic_venstre_party
-			name = DEN_democratic_venstre_party_long
-		}
-		DEN_erik_scavenius = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = liberalism
-					traits = { DEN_venstre }
-					expire = "1965.1.1.1"
-				}
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			DEN_erik_scavenius = { is_country_leader = no }
-		}
-		DEN_remove_democratic_leader = yes
-		set_party_name = {
-			ideology = democratic
-			name = DEN_democratic_venstre_party
-			long_name = DEN_democratic_venstre_party_long
-		}
-		DEN_erik_scavenius = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = liberalism
-					traits = { DEN_venstre }
-					expire = "1965.1.1.1"
-				}
-			}
-		}
-	}
-}
-
 DEN_the_king_takes_over = {	
 	if = {
 		limit = {
