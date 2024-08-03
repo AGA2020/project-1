@@ -107,11 +107,6 @@ SWE_ball_bearings_cat ={
 	priority = 81
 	visible = {
 		OR = {
-			AND = {
-				tag = SWE
-				has_completed_focus = SWE_license_skf_ball_bearings 	
-				has_capitulated = no
-			}
 
 			has_idea = SWE_ball_bearing_idea_food_partner
 			has_idea = SWE_ball_bearing_idea_research_partner

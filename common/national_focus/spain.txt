@@ -35,10 +35,6 @@ focus_tree = {
 			trigger = {
 				has_global_flag = spanish_civil_war
 				has_completed_focus = SPA_a_great_spain
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
 			}
 		}
 		offset = {
@@ -47,10 +43,6 @@ focus_tree = {
 			trigger = {
 				has_global_flag = spanish_civil_war
 				has_completed_focus = SPR_the_popular_front
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
 			}
 		}
 	}
@@ -80,10 +72,6 @@ focus_tree = {
 		allow_branch = {
 			if = {
 				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
 				}
 				OR = {
 					NOT = {
@@ -107,10 +95,6 @@ focus_tree = {
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				has_global_flag = spanish_civil_war
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
 			}
 		}
 		cost = 5
@@ -161,10 +145,6 @@ focus_tree = {
 			trigger = {
 				has_completed_focus = SPA_a_great_spain
 				has_global_flag = spanish_civil_war
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
 			}
 		}
 		relative_position_id = SPA_a_great_spain
@@ -358,23 +338,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SPA_a_great_spain }
 		cancel_if_invalid = yes
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				OR = {
-					NOT = {
-						has_global_flag = spanish_civil_war
-					}
-					AND = {
-						NOT = { has_completed_focus = SPA_a_great_spain }
-						has_global_flag = spanish_civil_war
-					}
-				}
-			}
+
 		}
 		
 		icon = GFX_goal_generic_national_unity
@@ -386,10 +350,6 @@ focus_tree = {
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				has_global_flag = spanish_civil_war
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
 			}
 		}
 		cost = 5
@@ -440,10 +400,6 @@ focus_tree = {
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				has_global_flag = spanish_civil_war
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
 			}
 		}
 		relative_position_id = SPR_the_popular_front
@@ -491,10 +447,6 @@ focus_tree = {
 			trigger = {
 				has_completed_focus = SPR_the_popular_front
 				has_global_flag = spanish_civil_war
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
 			}
 		}
 		relative_position_id = SPR_the_popular_front

@@ -44,15 +44,6 @@ defined_text = {
 	text = {
 		trigger = {
 			original_tag = BRA
-			has_government = communism
-			has_completed_focus = BRA_cangaco_coup
-		}
-		localization_key = BRA_kgbrazil_cangaco
-	}
-
-	text = {
-		trigger = {
-			original_tag = BRA
 			has_dlc = "La Resistance" 
 			has_intelligence_agency = yes
 		}

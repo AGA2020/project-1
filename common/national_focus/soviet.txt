@@ -6306,7 +6306,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_completed_focus = SOV_socialist_humanism
+		
 		}
 		
 		search_filters = {}

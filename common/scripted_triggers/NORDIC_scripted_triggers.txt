@@ -131,15 +131,12 @@ NORDIC_has_started_democratic_focus_tree = {
 	OR = {
 		has_completed_focus = NOR_continue_nygaardsvold_government
 		has_completed_focus = FIN_finnish_neutrality
-		has_completed_focus = SWE_the_nordic_defense_council
 	}
 } 
 
 NORDIC_has_started_monarchist_focus_tree = {
 	OR = {
-		has_completed_focus = NOR_the_chamberlains_overture
 		has_completed_focus = FIN_finnish_neutrality
-		has_completed_focus = DEN_unify_the_right
 	}	
 }
 

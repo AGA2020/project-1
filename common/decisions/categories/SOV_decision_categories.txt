@@ -179,45 +179,6 @@ SOV_diplomacy_middle_east_decision_category = {
 	}
 }
 
-SOV_diplomacy_asia_decision_category = {
-	priority = 22
-
-	icon = generic_foreign_policy
-
-	allowed = {
-		original_tag = SOV
-	}
-
-	visible = {
-		OR = {
-			AND = {
-				has_completed_focus = SOV_the_threat_from_the_land_of_the_rising_sun
-				any_country = {
-					OR = {
-						SOV_is_free_chinese_tag = yes
-					}
-					exists = yes
-				}
-			}
-			AND = {
-				has_completed_focus = SOV_reconcile_japan
-				any_country = {
-					OR = {
-						AND = {
-							tag = JAP
-							is_subject = no
-						}
-						AND = {
-							SOV_is_free_chinese_tag = yes
-							is_in_faction_with = JAP
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 SOV_soviet_aid_decision_category = { #Dec cat for Sinkiang (mission dummies go here)
 	icon = decision_category_generic_communism
 
@@ -299,19 +260,5 @@ SOV_comecon_dec_cat = {
 
 	visible = {
 		has_completed_focus = SOV_found_the_comecon
-	}
-}
-
-SOV_permanent_revolution_dec_cat = {
-	priority = 90
-
-	icon = GFX_decision_category_SOV_permanent_revolution
-
-	allowed = {
-		original_tag = SOV
-	}
-
-	visible = {
-		has_completed_focus = SOV_the_permanent_revolution
 	}
 }

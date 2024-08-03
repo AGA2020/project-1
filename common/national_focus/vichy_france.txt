@@ -2455,10 +2455,6 @@
 				date < 1940.1.1
 			}
 			modifier = {
-				factor = 0
-				NOT = { GER = { has_completed_focus = GER_central_european_alliance } }
-			}
-			modifier = {
 				factor = 200
 				GER = { has_war_with = SOV }
 			}
