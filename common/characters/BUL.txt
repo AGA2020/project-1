@@ -1536,23 +1536,7 @@ characters = {
 			ai_will_do = {
 				base = 1.000
 				modifier = {
-					factor = 2.000
-					OR = {
-						BUL_is_democratic_socialist_ai = yes 
-						BUL_is_democratic_liberal_ai = yes 
-					}
-					NOT = {
-						has_government = democratic 
-					}
-				}
-				modifier = {
 					factor = 0
-					NOT = {
-						OR = {
-							BUL_is_democratic_socialist_ai = yes 
-							BUL_is_democratic_liberal_ai = yes 
-						}
-					}
 				}
 			}
 		}
@@ -1711,13 +1695,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 1.000
-				modifier = {
-					factor = 2.000
-					OR = {
-						BUL_is_democratic_socialist_ai = yes 
-						BUL_is_democratic_liberal_ai = yes 
-					}
-				}
 				modifier = {
 					factor = 2
 					OR = {

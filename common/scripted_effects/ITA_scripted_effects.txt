@@ -1086,45 +1086,6 @@ ITA_missiolini_occupy_ticino_success_effect = {
 		}
 
 		custom_effect_tooltip = ITA_missiolini_occupy_ticino_occupation_effects
-		every_controlled_state = {
-			limit = {
-				is_core_of = SWI
-				is_fully_controlled_by = ROOT
-				has_resistance = yes
-			}
-			add_compliance = 5 #WARNING CHANGING THESE NUMBERS REQUIRES CHANGING THE TOOLTIPS
-			add_resistance = -5
-		}
-
-		if = {
-			limit = {
-				has_subject_autonomy_feature = yes
-			}
-			if = {
-				limit = {
-					SWI = {
-						is_subject_of = ROOT
-					}
-				}
-				SWI = {
-					add_autonomy_score = {
-						value = -35
-						localization = ITA_missiolini_firmly_established_italian_administration_autonomy_text
-					}
-				}
-			}
-			else = {
-				custom_effect_tooltip = ITA_missiolini_occupy_ticino_subject_effects
-				effect_tooltip = {
-					SWI = {
-						add_autonomy_score = {
-							value = -35
-							localization = ITA_missiolini_firmly_established_italian_administration_autonomy_text
-						}
-					}
-				}
-			}
-		}
 	}
 	else = { # GREATER REWARD (from To Live as a Lion focus)
 		add_political_power = 65
@@ -1135,45 +1096,6 @@ ITA_missiolini_occupy_ticino_success_effect = {
 		}
 
 		custom_effect_tooltip = ITA_missiolini_occupy_ticino_occupation_effects
-		every_controlled_state = {
-			limit = {
-				is_core_of = SWI
-				is_fully_controlled_by = ROOT
-				has_resistance = yes
-			}
-			add_compliance = 5 #WARNING CHANGING THESE NUMBERS REQUIRES CHANGING THE TOOLTIPS
-			add_resistance = -5
-		}
-
-		if = {
-			limit = {
-				has_subject_autonomy_feature = yes
-			}
-			if = {
-				limit = {
-					SWI = {
-						is_subject_of = ROOT
-					}
-				}
-				SWI = {
-					add_autonomy_score = {
-						value = -50
-						localization = ITA_missiolini_firmly_established_italian_administration_autonomy_text
-					}
-				}
-			}
-			else = {
-				custom_effect_tooltip = ITA_missiolini_occupy_ticino_subject_effects
-				effect_tooltip = {
-					SWI = {
-						add_autonomy_score = {
-							value = -50
-							localization = ITA_missiolini_firmly_established_italian_administration_autonomy_text
-						}
-					}
-				}
-			}
-		}
 	}
 }
 

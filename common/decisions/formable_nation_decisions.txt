@@ -3082,87 +3082,19 @@ form_transcaucasus_category = {
 			hidden_effect = { 
 			
 				set_global_flag = crimean_khanate_restored_flag
-				
-				CRI = {
-					transfer_state = 137 # Crimea
-					transfer_state = 196 # Kherson
-					if = {
-						limit = {
-							ROOT = { controls_state = 200 } #Zaporozhe
-						}
-						add_state_core = 200
-						transfer_state = 200
-					}
-					if = {
-						limit = {
-							ROOT = { controls_state = 227 } #Stalino
-						}
-						add_state_core = 227
-						transfer_state = 227
-					}
-					if = {
-						limit = {
-							ROOT = { controls_state = 218 } #Rostov
-						}
-						add_state_core = 218
-						transfer_state = 218
-					}
-					if = {
-						limit = {
-							ROOT = { controls_state = 228 } #Voroshilovgrad
-						}
-						add_state_core = 228
-						transfer_state = 228
-					}
-					if = {
-						limit = {
-							ROOT = { controls_state = 234 } #Krasnodar
-						}
-						add_state_core = 234
-						transfer_state = 234
-					}
-					if = {
-						limit = {
-							ROOT = { controls_state = 245 } #Millerovo
-						}
-						add_state_core = 245
-						transfer_state = 245
-					}
-					if = {
-						limit = {
-							ROOT = { controls_state = 226 } #Dnipropetrovsk
-						}
-						add_state_core = 226
-						transfer_state = 226
-					}
-					load_oob = "CRI_khanate_soldiers"
-				}
-				
-				puppet = CRI
+			
 				
 				if = {
 					limit = {
 						has_war_with = SOV
 					}
-					CRI = {
-						add_to_war = {
-							targeted_alliance = ROOT 
-							enemy = SOV
-							hostility_reason = asked_to_join
-						}
-					}
+
 				}
 				if = {
 					limit = {
 						has_war_with = UKR
 					}
-					CRI = {
-						add_to_war = {
-							targeted_alliance = ROOT 
-							enemy = UKR
-							hostility_reason = asked_to_join
-						}
-					}
+
 				}
 				
 				

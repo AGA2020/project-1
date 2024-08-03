@@ -4575,66 +4575,6 @@ focus = {
 
 			custom_effect_tooltip = ETH_a_federal_empire_tt
 			effect_tooltip = {
-				IF = {
-					limit  = {
-						any_owned_state = { is_core_of = HAR HAR = {exists = no } }
-					}
-					release_puppet = HAR  
-				}
-				IF = {
-					limit  = {
-						any_owned_state = { is_core_of = TIG TIG = {exists = no } }
-					}
-					release_puppet = TIG  
-				}
-				IF = {
-					limit  = {
-						any_owned_state = { is_core_of = AFA AFA = {exists = no } }
-					}
-					release_puppet = AFA  
-				}
-				IF = {
-					limit  = {
-						any_owned_state = { is_core_of = BEG BEG = {exists = no } }
-					}
-					release_puppet = BEG  
-				}
-				IF = {
-					limit  = {
-						any_owned_state = { is_core_of = GBA GBA = {exists = no } }
-					}
-					release_puppet = GBA  
-				}
-				IF = {
-					limit  = {
-						any_owned_state = { is_core_of = SID SID = {exists = no } }
-					}
-					release_puppet = SID  
-				}
-				IF = {
-					limit  = {
-						any_owned_state = { is_core_of = ORO ORO = {exists = no } NOT = { state = 271 } }
-					}
-					release_puppet = ORO  
-				}
-				IF = {
-					limit  = {
-						any_owned_state = { is_core_of = QEM QEM = {exists = no } NOT = { state = 271 } }
-					}
-					release_puppet = QEM  
-				}
-				IF = {
-					limit  = {
-						any_owned_state = { is_core_of = SOM SOM = {exists = no } NOT = { state = 271 } }
-					}
-					release_puppet = SOM  
-				}
-				IF = {
-					limit  = {
-						any_owned_state = { is_core_of = ERI ERI = {exists = no } NOT = { state = 271 } }
-					}
-					release_puppet = ERI  
-				}
 				custom_effect_tooltip = ETH_federal_factories_tt 
 			}
 			ETH_create_federation = yes 	

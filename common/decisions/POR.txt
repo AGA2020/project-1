@@ -1,120 +1,4 @@
 POR_arms_purchases = {
-
-	POR_buy_ships_britain = {
-
-		icon = eng_trade_unions_support
-
-		available = {
-			ENG = {
-				has_war = no
-				has_opinion = {
-					target = ROOT
-					value > 0
-				}
-			}
-		}
-
-		cost = 0
-
-		ai_will_do = {
-			base = 10
-			modifier = {
-				factor = 5
-				ENG = { has_government = ROOT }
-				NOT = { has_government = fascism }
-			}
-			modifier = {
-				factor = 0
-				has_country_flag = POR_ships_purchase_timer
-			}
-			modifier = {
-				factor = 0
-				has_government = fascism
-				ENG = { 
-					NOT = { 
-						has_government = fascism 	 
-					}
-				}
-			}
-		}
-		
-		visible = {
-			has_completed_focus = POR_second_navy_reequipment
-			ENG = {
-				exists = yes
-				NOT = { has_war_with = ROOT }
-				has_civil_war = no
-				has_capitulated = no
-				owns_state = 126 #Owns London
-			}
-			NOT = {	has_country_flag = POR_ships_purchase_in_progress_flag }
-			NOT = { has_country_flag = POR_british_ships_purchase_rejected_flag }
-		}
-		complete_effect = {
-			ENG = {
-				country_event = { id = lar_portugal_purchase_ships.1 }
-			}
-			set_country_flag = POR_ships_purchase_in_progress_flag
-			set_country_flag = {
-  				flag = POR_ships_purchase_timer
-    			days = 180
-    			value = 1
-			}
-		}
-	}
-
-	POR_buy_ships_italy = {
-
-		icon = eng_trade_unions_support
-
-		available = {
-			ITA = {
-				has_war = no
-				has_opinion = {
-					target = ROOT
-					value > 0
-				}
-			}
-		}
-
-		cost = 0
-
-		ai_will_do = {
-			base = 10
-			modifier = {
-				factor = 5
-				ITA = { has_government = ROOT }
-			}
-			modifier = {
-				factor = 0
-				has_country_flag = POR_ships_purchase_timer
-			}
-		}
-		
-		visible = {
-			has_completed_focus = POR_second_navy_reequipment
-			ITA = {
-				exists = yes
-				NOT = { has_war_with = ROOT }
-				has_civil_war = no
-				has_capitulated = no
-				owns_state = 2 #Owns Rome
-			}
-			NOT = { has_country_flag = POR_ships_purchase_in_progress_flag }
-			NOT = { has_country_flag = POR_british_ships_purchase_rejected_flag }
-		}
-		complete_effect = {
-			ITA = {
-				country_event = { id = lar_portugal_purchase_ships.1 }
-			}
-			set_country_flag = POR_ships_purchase_in_progress_flag
-			set_country_flag = {
-  				flag = POR_ships_purchase_timer
-    			days = 180
-    			value = 1
-			}
-		}
-	}
 }
 
 POR_naval_blockade = {
@@ -126,9 +10,6 @@ POR_naval_blockade = {
 		}
 
 		visible = {
-			POR = {
-				has_completed_focus = POR_refuse_the_naval_blockade
-			}
 			NOT = { 
 				has_country_flag = POR_evade_blockade_flag 
 				has_country_flag = POR_cancel_evade_blockade_flag 
@@ -155,7 +36,6 @@ POR_naval_blockade = {
 		cancel_trigger = {
 			OR= {
 				NOT = { has_war_with = ENG }
-				has_war_with = POR
 				has_country_flag = POR_cancel_evade_blockade_flag
 				has_capitulated = yes
 			}
@@ -170,13 +50,6 @@ POR_naval_blockade = {
 		#Fail
 		cancel_effect = {
 			add_war_support = -0.1
-			POR = {
-				add_equipment_to_stockpile = {
-		            type = convoy_1
-		            amount = 50
-	       		}
-				add_offsite_building = { type = industrial_complex  level = -1 }
-			}
 			set_country_flag = POR_cancel_evade_blockade_flag
 			clr_country_flag = POR_evade_blockade_flag
 		}
@@ -186,22 +59,8 @@ POR_naval_blockade = {
 			add_war_support = 0.1
 			set_country_flag = POR_evade_blockade_flag
 			effect_tooltip = {
-				POR = { 
-					add_equipment_to_stockpile = {
-			            type = convoy_1
-			            amount = -50
-		       		}
-					add_offsite_building = { type = industrial_complex  level = 1 }
-				}
 			}
 			hidden_effect=  { 
-				POR = { 
-					country_event = lar_portugal_naval_blockade.2 
-					activate_targeted_decision = { 
-						target = ROOT 
-						decision = POR_portugal_cancel_blockade_evasion_for_country
-					}
-				}
 			}
 		}
 	}
@@ -233,53 +92,6 @@ POR_naval_blockade = {
 			add_war_support = -0.1
 			set_country_flag = POR_cancel_evade_blockade_flag
 			clr_country_flag = POR_evade_blockade_flag
-		}
-	}
-
-	POR_portugal_cancel_blockade_evasion_for_country = {
-
-		icon = generic_break_treaty
-
-		available = {
-			always = yes
-		}
-
-		cost = 0
-		fire_only_once = yes
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 1
-				OR = {
-					has_equipment = {
-					    convoy_1 < 5
-					}
-					AND = {
-						has_opinion = { target = FROM value < -10 }
-						NOT = { has_war_with = FROM }
-					}
-				}
-			}
-		}
-
-		visible = {
-			original_tag = POR
-			country_exists = FROM
-			FROM = {
-           		has_country_flag = POR_evade_blockade_flag
-           		NOT = { 
-           			has_country_flag = POR_cancel_evade_blockade_flag
-           			has_war_with = POR
-           		}
-           	}
-		}		
-
-		complete_effect = {
-			FROM = {
-				add_war_support = -0.1
-				set_country_flag = POR_cancel_evade_blockade_flag
-				clr_country_flag = POR_evade_blockade_flag
-			}
 		}
 	}
 

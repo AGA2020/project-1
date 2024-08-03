@@ -222,51 +222,6 @@ defined_text = { #Country
 		}
 		localization_key = CHI_state_support
 	}
-	text = {
-		trigger = {
-			original_tag = PRC
-			any_state = {
-				has_state_flag = majority_political_platform_@PREV
-			}
-		}
-		localization_key = PRC_state_support
-	}
-	text = {
-		trigger = {
-			original_tag = GXC
-			any_state = {
-				has_state_flag = majority_political_platform_@PREV
-			}
-		}
-		localization_key = GXC_state_support
-	}
-	text = {
-		trigger = {
-			original_tag = YUN
-			any_state = {
-				has_state_flag = majority_political_platform_@PREV
-			}
-		}
-		localization_key = YUN_state_support
-	}
-	text = {
-		trigger = {
-			original_tag = XSM
-			any_state = {
-				has_state_flag = majority_political_platform_@PREV
-			}
-		}
-		localization_key = XSM_state_support
-	}
-	text = {
-		trigger = {
-			original_tag = SIK
-			any_state = {
-				has_state_flag = majority_political_platform_@PREV
-			}
-		}
-		localization_key = SIK_state_support
-	}
 	text = { localization_key = "" }
 }
 

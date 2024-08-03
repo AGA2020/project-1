@@ -7385,8 +7385,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		ai_will_do = { #Integrated republics go after puppets
 			base = 0.5
 		}
-
-		cosmetic_tag = KYR
 		cosmetic_ideology = communism
 
 		allowed = {
@@ -7413,7 +7411,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		}
 
 		remove_effect = {
-			KYR = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_KYR_flag
 		}
 	}
@@ -7426,8 +7423,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		ai_will_do = { #Integrated republics go after puppets
 			base = 0.5
 		}
-
-		cosmetic_tag = TAJ
 		cosmetic_ideology = communism
 
 		allowed = {
@@ -7454,7 +7449,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		}
 
 		remove_effect = {
-			TAJ = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_TAJ_flag
 		}
 	}

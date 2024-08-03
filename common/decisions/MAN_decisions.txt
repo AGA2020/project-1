@@ -544,50 +544,6 @@ MAN_banditry_category = {
 	}
 }
 
-MAN_war_preparations = {
-
-	MAN_disband_the_banners = {
-		available = { 
-
-		}
-		visible = {
-			has_country_flag = MAN_manchu_banner_raised
-		}
-		cost = 0
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		complete_effect = {
-			delete_unit_template_and_units = { division_template = "Manchu Banner" }
-			clr_country_flag = MAN_manchu_banner_raised
-		}
-	}
-	MAN_remove_underground_gun_shops = {
-		available = {
-			has_idea = MAN_underground_gun_shops
-		}
-		visible = {
-			has_idea = MAN_underground_gun_shops
-		}
-		cost = 0
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_war = yes
-				factor = 0
-			}
-		}
-		complete_effect = {
-			remove_ideas = MAN_underground_gun_shops
-			add_offsite_building = { type = arms_factory level = -3 }
-		}
-	}
-}
-
 prospect_for_resources = {
 
 	MAN_develop_kirin_aluminium_deposits = { #328

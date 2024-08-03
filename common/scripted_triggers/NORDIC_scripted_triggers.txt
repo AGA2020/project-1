@@ -93,7 +93,6 @@ NORDIC_democratic_alliance_viable = {
 			AND = {
 				NORDIC_is_democratic = yes 
 				NORDIC_alliance_created_already = no 
-				NORDIC_has_started_communist_focus_tree = no
 				NORDIC_has_started_monarchist_focus_tree = no
 			}
 			AND = {
@@ -114,13 +113,11 @@ NORDIC_monarchist_alliance_viable = {
 				has_government = fascism 
 				NORDIC_alliance_created_already = no
 				NORDIC_has_started_democratic_focus_tree = no
-				NORDIC_has_started_communist_focus_tree = no 
 			}
 			AND = {
 				NORDIC_is_monarchist = yes 
 				NORDIC_alliance_created_already = no 
 				NORDIC_has_started_democratic_focus_tree = no
-				NORDIC_has_started_communist_focus_tree = no
 			}
 			AND = {
 				NORDIC_has_started_monarchist_focus_tree = yes 

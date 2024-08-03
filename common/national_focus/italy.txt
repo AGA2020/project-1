@@ -8724,7 +8724,6 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_government = fascism
-			ITA_has_disbanded_blackshirts = no
 		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
@@ -8753,7 +8752,6 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_government = fascism
-			ITA_has_disbanded_blackshirts = no
 		}
 
 		search_filters = {}
@@ -8781,7 +8779,6 @@ focus_tree = {
 				is_core_of = ROOT
 				is_fully_controlled_by = ROOT
 			}
-			ITA_has_disbanded_blackshirts = no
 		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER}
@@ -8833,7 +8830,6 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_government = fascism
-			ITA_has_disbanded_blackshirts = no
 		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER}
