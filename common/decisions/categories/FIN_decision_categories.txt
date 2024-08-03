@@ -149,7 +149,6 @@ FIN_coup_preparations = {
 		has_completed_focus = FIN_prepare_a_military_coup
 		is_subject = no
 		has_civil_war = no
-		NOT = { has_completed_focus = FIN_a_fascist_regime }
 	}
 }
 

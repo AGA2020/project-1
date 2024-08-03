@@ -137,9 +137,6 @@ country_event = { # Fascists Ransack Trotsky's residence
 			}
 		}
 		trigger = {
-			NOT = {
-				has_completed_focus = NOR_compromise_with_the_nkp
-			}
 		}
 		country_event = {
 			id = AAT_norway.4

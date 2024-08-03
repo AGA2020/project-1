@@ -99,44 +99,6 @@ SWE_ebba_palmstierna_cat = {
 #	}
 #}
 
-SWE_train_the_sheltered_cat = {
-	allowed = {
-		tag = SWE
-		has_dlc = "Arms Against Tyranny"
-	}
-	priority = 100
-	scripted_gui = swe_train_the_sheltered_scripted_ui
-	visible_when_empty = yes
-	visible = {
-		has_completed_focus = SWE_train_the_sheltered
-		has_capitulated = no
-		exists = yes
-		NOT = {
-			has_country_flag = SWE_has_activated_train_the_sheltered
-		}
-	}
-}
-
-SWE_military_matters ={
-	allowed = {
-		tag = SWE
-		has_dlc = "Arms Against Tyranny"	
-	}
-	priority = 80
-	visible = {
-		OR = {
-			has_completed_focus = SWE_jagartrupper
-			has_completed_focus = SWE_hemvarnet
-
-		}
-
-		exists = yes
-		has_capitulated = no
-		is_subject = no
-
-	}
-}
-
 
 SWE_ball_bearings_cat ={
 	allowed = {

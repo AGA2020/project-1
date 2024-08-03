@@ -10932,44 +10932,6 @@ focus_tree = {
 			effect_tooltip = {
 				set_country_flag = ITA_rds_cw_flag
 				#Leader back
-				if = {
-					limit = {
-						has_completed_focus = ITA_monarchia_d_italia
-					}
-					if = { #Safety check for ideology
-						limit = {
-							NOT = { has_government = neutrality }
-						}
-						set_politics = {
-							ruling_party = neutrality
-							elections_allowed = no
-						}
-					}
-					if = {
-						limit = {
-							has_character = ITA_vittorio_emanuele_iii
-							NOT = { has_country_leader = { character = ITA_vittorio_emanuele_iii ruling_only = yes } }
-							NOT = { has_country_flag = ITA_vittorio_emmanuele_dead_flag }
-						}
-						promote_character = ITA_vittorio_emanuele_iii
-					}
-					else_if = {
-						limit = {
-							has_character = ITA_prince_umberto
-							NOT = { has_country_leader = { character = ITA_prince_umberto ruling_only = yes } }
-							has_country_flag = ITA_vittorio_emmanuele_dead_flag
-						}
-						if = {
-							limit = {
-								NOT = { ITA_prince_umberto = { has_ideology_group = neutrality } }#Checking for the country_leader role
-							}
-							ITA_promote_umberto_to_country_leader = yes
-						}
-						else = {
-							promote_character = ITA_prince_umberto
-						}
-					}
-				}
 
 				#Puppet
 				if = {
@@ -11675,44 +11637,6 @@ focus_tree = {
 				set_country_flag = ITA_rsi_cw_flag
 				#Leader back
 				if = {
-					limit = {
-						has_completed_focus = ITA_monarchia_d_italia
-					}
-					if = { #Safety check for ideology
-						limit = {
-							NOT = { has_government = neutrality }
-						}
-						set_politics = {
-							ruling_party = neutrality
-							elections_allowed = no
-						}
-					}
-					if = {
-						limit = {
-							has_character = ITA_vittorio_emanuele_iii
-							NOT = { has_country_leader = { character = ITA_vittorio_emanuele_iii ruling_only = yes } }
-							NOT = { has_country_flag = ITA_vittorio_emmanuele_dead_flag }
-						}
-						promote_character = ITA_vittorio_emanuele_iii
-					}
-					else_if = {
-						limit = {
-							has_character = ITA_prince_umberto
-							NOT = { has_country_leader = { character = ITA_prince_umberto ruling_only = yes } }
-							has_country_flag = ITA_vittorio_emmanuele_dead_flag
-						}
-						if = {
-							limit = {
-								NOT = { ITA_prince_umberto = { has_ideology_group = neutrality } }#Checking for the country_leader role
-							}
-							ITA_promote_umberto_to_country_leader = yes
-						}
-						else = {
-							promote_character = ITA_prince_umberto
-						}
-					}
-				}
-				else_if = {
 					limit = {
 						has_completed_focus = ITA_culto_del_duce
 						has_character = ITA_benito_mussolini

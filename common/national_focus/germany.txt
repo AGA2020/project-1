@@ -2135,7 +2135,7 @@ focus_tree = {
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = GER_army_innovation }
 		available = {
-			NOT = { has_completed_focus = GER_anti_soviet_pact }
+		
 		}
 		#cancel = { 
 		#	OR = {

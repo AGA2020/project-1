@@ -120,9 +120,7 @@ DEN_orlogsvaerftet_organization = {
         relative_position_id = generic_mio_trait_long_range_raiding
 
         available = {
-            owner = {
-                has_completed_focus = DEN_appropriate_odense_staalskibsvaerft
-            }
+
         }
 
         production_bonus = {

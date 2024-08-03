@@ -629,12 +629,6 @@ defined_text = { #Italy Guarentees Major Back Tooltip
 
 defined_text = { #Titles Vittorio Emanuele III Dies
 	name = GetVittorioDiesEventTitles
-	text = { #Emperor Title
-		trigger = { 
-			has_completed_focus = ITA_proclaim_the_italian_empire
-		}
-		localization_key = bba_news.106.t_emperor
-	}
 	text = { #King Title
 		localization_key = bba_news.106.t_king
 	}
@@ -642,12 +636,6 @@ defined_text = { #Titles Vittorio Emanuele III Dies
 
 defined_text = { #Desc Vittorio Emanuele III Dies
 	name = GetVittorioDiesEventDesc
-	text = { #Emperor Desc
-		trigger = { 
-			has_completed_focus = ITA_proclaim_the_italian_empire
-		}
-		localization_key = bba_news.106.desc_emperor
-	}
 	text = { #King Desc
 		localization_key = bba_news.106.desc_king
 	}

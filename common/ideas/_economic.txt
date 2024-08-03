@@ -487,7 +487,6 @@ ideas = {
 			allowed_to_remove = {
 				OR = {
 					has_war = yes
-					has_completed_focus = POL_integrate_gdansk_industries
 					NOT = {
 						owns_state = 85
 						owns_state = 807

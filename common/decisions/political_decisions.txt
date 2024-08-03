@@ -1886,23 +1886,12 @@ political_actions = {
 				add = 10
 				tag = AUS
 				fascism > 0.45
-				GER = { has_completed_focus = GER_reestablish_free_elections }
-			}
-			modifier = {
-				add = 10
-				tag = AUS
-				fascism > 0.45
 				has_completed_focus = liberty_ethos
 			}
 			modifier = {
 				factor = 0
 				original_tag = SPR
 				NOT = { has_global_flag = spanish_civil_war }
-			}
-			modifier = {
-				add = 40
-				original_tag = ITA
-				has_completed_focus = ITA_monarchia_d_italia
 			}
 		}
     }

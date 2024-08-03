@@ -1,96 +1,10 @@
 GUAY_military_coup = {
 	
-	# Expand the Forestry in Araucania
-	GUAY_military_coup_mission  = {
-		icon = GFX_decision_revolt 
-		allowed = {
-			OR = {
-				original_tag = URG
-				original_tag = PAR
-			}
-		}
-		visible = {
-			always = yes
-		}
-		is_good = no
-		available = {   has_completed_focus = GUAY_appease_the_generals }
-
-		activation = {
-			has_civil_war = no
-			has_completed_focus = GUAY_coup_detat
-			NOT = { has_completed_focus = GUAY_appease_the_generals }
-		}
-		days_mission_timeout = 750
-		timeout_effect = {
-			start_civil_war = {
-				ideology = neutrality
-				#ruling_party = <tag_ideology>
-				size = 0.6 # (0-1) Size modifier of the revolt. Affects stockpile, army, air and navy as well
-			}
-		}
-	}
 }
 
 GUAY_military_play_cat = {
 
-	GUAY_military_play_bra = {
-		name = ARMY_ON_BORDER_WAR_TOOLTIP
-		allowed = {
-			OR = {
-				original_tag = URG
-				original_tag = PAR
-			}
-		}
-		visible = {
-			always = yes
-		}
-		is_good = no
-		available = { 
-			if = {
-				limit = {
-					original_tag = PAR
-				}
 
-				504 = {
-					is_controlled_by = ROOT
-				}
-			}
-			else = {
-				502 = {
-					is_controlled_by = ROOT
-				}
-			}
-
-		}
-		fire_only_once = yes
-		activation = {
-			OR = {
-				has_war_with = BRA
-				any_enemy_country = {
-					original_tag = BRA
-					BRA = { has_civil_war = yes }
-				}
-			}
-			has_completed_focus = GUAY_rekindle_old_gripes
-		}
-		days_mission_timeout = 365
-		complete_effect = {
-			if = {
-				limit = { BRA = { has_civil_war = yes } }
-				every_country = {
-					limit = { original_tag = BRA }
-					country_event = { id = JUNO_guay_events.6 hours = 2 } 
-				} 
-			}
-			else = {
-				BRA = { country_event = { id = JUNO_guay_events.6 hours = 2 } }
-			}
-		}
-		timeout_effect = {
-			add_stability = -0.1
-			add_war_support = -0.15
-		}
-	}
 }
 
 

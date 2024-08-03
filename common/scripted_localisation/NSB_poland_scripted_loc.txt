@@ -75,12 +75,6 @@ defined_text = { # Country
 		}
 		localization_key = lithuania_strength
 	}
-	text = {
-		trigger = {
-			LIT = { has_completed_focus = LIT_support_monarchism_in_POL }
-		}
-		localization_key = poland_strength
-	}
 }
 
 defined_text = { # Country
@@ -90,12 +84,6 @@ defined_text = { # Country
 			POL = { has_completed_focus = POL_support_monarchism_in_LIT }
 		}
 		localization_key = LIT_neutrality
-	}
-	text = {
-		trigger = {
-			LIT = { has_completed_focus = LIT_support_monarchism_in_POL }
-		}
-		localization_key = POL_neutrality
 	}
 }
 defined_text = { #Choosing descriptions for Dismantle the Soviet Empire focus
