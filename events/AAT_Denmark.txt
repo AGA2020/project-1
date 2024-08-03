@@ -138,7 +138,6 @@ country_event = { #Vote of No Confidence
 		}
 		trigger = {
 			DEN_thorvald_stauning = { is_country_leader = no }
-			DEN_vilhelm_buhl = { is_country_leader = no }
 			check_variable = { DEN_democratic_popularity > 29 }
 			NOT = { has_country_flag = banned_democratic_flag }
 		}
@@ -3693,114 +3692,6 @@ country_event = { #Denmark: Choose new country leader
 		else = {
 			country_event = { id = denmark_overlord_events.13 days = 1 } 
 		}
-	}
-}
-country_event = { #Denmark: Choose democratic country leader
-	id = denmark_overlord_events.12
-	title = denmark_overlord_events.11.t #Intentional
-	desc = denmark_overlord_events.12.desc
-	picture = GFX_report_event_DEN_danish_politics
-
-	is_triggered_only = yes
-
-	option = { #A Social Democrat
-		name = denmark_overlord_events.12.a 
-		ai_chance = {
-			base = 1
-		}
-		trigger = {
-			AND = {
-				has_character = DEN_thorvald_stauning
-				DEN_thorvald_stauning = { is_country_leader = no }
-			}
-			DEN_vilhelm_buhl = { is_country_leader = no }
-		}
-		DEN_socialdemokratiet_takes_over = yes
-		OVERLORD = { country_event = { id = denmark_overlord_events.14 days = 1 } }
-	}
-	option = { #A Liberal Democrat
-		name = denmark_overlord_events.12.b
-		ai_chance = {
-			base = 1
-		}
-		trigger= {
-			DEN_knud_kristensen = { is_country_leader = no }
-		}
-		DEN_venstre_takes_over = yes
-		OVERLORD = { country_event = { id = denmark_overlord_events.14 days = 1 } }
-	}
-	option = { #A Conservative Democrat
-		name = denmark_overlord_events.12.c 
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 10
-				OR = {
-					DEN_rearming_ai = yes
-					DEN_royal_ai  = yes
-					DEN_fascist_ai = yes
-				}
-			}
-		}
-		trigger= {
-			DEN_christmas_moller = { is_country_leader = no }
-			NOT = { 
-				DEN_christmas_moller = {
-					has_character_flag = DEN_political_agitator_flag
-				}
-			}
-		}
-		DEN_konservative_takes_over = yes
-		OVERLORD = { country_event = { id = denmark_overlord_events.14 days = 1 } }
-	}
-	option = { #An Outsider
-		name = denmark_overlord_events.12.d 
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 5
-				is_historical_focus_on = yes
-			}
-			modifier = {
-				factor = 5
-				OR = {
-					DEN_historical_ai = yes
-					DEN_rearming_ai = yes
-				}
-			}
-		}
-		trigger= {
-			DEN_erik_scavenius = { is_country_leader = no }
-		}
-		DEN_erik_scavenius_takes_over = yes
-		OVERLORD = { country_event = { id = denmark_overlord_events.14 days = 1 } }
-	}
-}
-country_event = { #Denmark: Choose fascist country leader
-	id = denmark_overlord_events.13
-	title = denmark_overlord_events.11.t #Intentional
-	desc = denmark_overlord_events.13.desc
-	picture = GFX_report_event_DEN_fascist_troops
-
-	is_triggered_only = yes
-
-	option = {
-		name = denmark_overlord_events.13.a 
-		ai_chance = {
-			base = 10
-		}
-		promote_character = DEN_frits_clausen
-		DEN_fascists_takes_over = yes
-		
-	}
-	option = { 
-		name = denmark_overlord_events.13.b
-		ai_chance = {
-			base = 1
-		}
-		promote_character = DEN_cay_lembcke
-		DEN_fascists_takes_over = yes
-		
 	}
 }
 country_event = { #Overlord: New Danish Leader

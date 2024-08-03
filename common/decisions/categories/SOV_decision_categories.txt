@@ -166,7 +166,6 @@ SOV_diplomacy_middle_east_decision_category = {
 
 	visible = {
 		OR = {
-			has_completed_focus = SOV_support_afghan_ideology
 			has_completed_focus = SOV_the_khakimov_proposal
 		}
 		OR = {

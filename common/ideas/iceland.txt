@@ -1375,31 +1375,4 @@ ideas = {
 
 
 	}
-	industrial_concern = {
-
-
-		ICE_aalborg_portland = {
-			name = DEN_aalborg_portland
-			picture = generic_industrial_concern_2
-			
-			allowed = {
-				original_tag = ICE
-				has_dlc = "Arms Against Tyranny"
-			}
-
-			visible = {
-				
-			}
-
-			available = {
-				has_completed_focus = ICE_industrial_cooperation
-			}
-			
-			research_bonus = {
-				excavation_tech = 0.15
-			}
-			
-			traits = { construction_company }
-		}	
-	}
 }

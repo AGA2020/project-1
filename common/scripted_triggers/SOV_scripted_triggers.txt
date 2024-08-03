@@ -901,32 +901,6 @@ SOV_is_going_historical_stalinist = { # Add/Change stuff here instead of doing i
 	has_completed_focus = SOV_the_centre	
 }
 
-SOV_target_capital_is_on_unlocked_continent_fifth_columnists = {
-	OR = {
-		AND = {
-			has_completed_focus = SOV_the_onslaught_on_colonialism
-			FROM = {
-				capital_scope = {
-					is_on_continent = africa
-				}
-			}
-		}
-	}
-}
-
-SOV_target_capital_is_on_unlocked_continent_uprisings = {
-	OR = {
-		AND = {
-			has_completed_focus = SOV_the_onslaught_on_colonialism
-			FROM = {
-				capital_scope = {
-					is_on_continent = africa
-				}
-			}
-		}
-	}
-}
-
 SOV_basic_pressure_government_triggers = { #Used in foreign politics targeted decs - Expected Scope: ROOT = SOV // FROM = Target
 	country_exists = FROM
 	NOT = { has_war_with = FROM }

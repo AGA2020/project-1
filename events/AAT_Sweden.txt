@@ -1783,10 +1783,6 @@ country_event = {
 		ai_chance = {
 			base = 1
 			modifier = {
-				has_game_rule = {
-					rule = SWE_ai_behavior
-					option = SWE_DEMOCRATIC_DEM_ALT
-				}
 				factor = 0
 			}
 		}
@@ -1825,10 +1821,6 @@ country_event = {
 				add = 0.5
 				OR = {
 					is_historical_focus_on = no
-					has_game_rule = {
-					rule = SWE_ai_behavior
-					option = SWE_DEMOCRATIC_DEM_ALT
-					}
 				}
 			}
 		}
@@ -1880,10 +1872,6 @@ country_event = {
 				add = 0.5
 				OR = {
 					is_historical_focus_on = no
-					has_game_rule = {
-						rule = SWE_ai_behavior
-						option = SWE_DEMOCRATIC_DEM_ALT
-					}
 				}
 			}
 		}
@@ -1942,10 +1930,6 @@ country_event = {
 			modifier = {
 				OR = {
 					is_historical_focus_on = no
-					has_game_rule = {
-						rule = SWE_ai_behavior
-						option = SWE_DEMOCRATIC_DEM_ALT
-					}
 				}
 				factor = 0.5
 			}
@@ -7791,21 +7775,6 @@ country_event = { # Kilbom ousts Flyg
 	desc = AAT_Sweden_communism.7.desc
 	is_triggered_only = yes
 	picture = GFX_report_event_german_politician_speech
-	option = { #Pick Kilbom
-		name = AAT_Sweden_communism.7.a
-		custom_effect_tooltip = AAT_Sweden_communism__7_tt_1
-		retire_country_leader = yes
-		SWE_karl_kilbom = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = marxism
-					traits = { anti_soviet_socialist likes_allies dislikes_soviet dislikes_germany }
-				}
-			}
-		}
-		
-	}
 
 	option = { #Pick Sven
 		name = AAT_Sweden_communism.7.b

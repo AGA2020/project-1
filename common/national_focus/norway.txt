@@ -1216,17 +1216,6 @@ focus_tree = {
 			}
 		}
 
-		offset = {
-			x = -8
-			y = 0
-			trigger = {
-				has_hide_rule = yes
-				OR = {
-					has_completed_focus = NOR_the_chamberlains_overture
-				}
-			}
-		}
-
 		cost = 10
 		available = {
 			NOR_broken_gun_trigger = yes 

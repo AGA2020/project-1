@@ -246,18 +246,6 @@ DEN_available_candidates = {
 	}
 	if = {
 		limit = {
-			check_variable = { DEN_democratic_popularity > 29 }
-			NOT = { 
-				has_country_leader =  {
-					ruling_only = yes 
-					character = DEN_christmas_moller
-				}
-			}
-		}
-		custom_effect_tooltip = DEN_christmas_moller
-	}
-	if = {
-		limit = {
 			check_variable = { DEN_communism_popularity > 19 }
 			NOT = { 
 				has_country_leader =  {
@@ -431,51 +419,6 @@ DEN_communists_takes_over = {
 	}
 }
 
-DEN_konservative_takes_over = {
-	if = {
-		limit = {
-			NOT = { has_government = democratic }
-		}
-		set_politics = {
-			ruling_party = democratic
-			elections_allowed = yes
-			long_name = DEN_democratic_konservative_party
-			name = DEN_democratic_konservative_party_long
-		}
-		DEN_christmas_moller = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = conservatism
-					traits = { DEN_konservativ }
-					expire = "1965.1.1.1"
-				}
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			DEN_christmas_moller = { is_country_leader = no }
-		}
-		DEN_remove_democratic_leader = yes
-		set_party_name = {
-			ideology = democratic
-			name = DEN_democratic_konservative_party
-			long_name = DEN_democratic_konservative_party_long
-		}
-		DEN_christmas_moller = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = conservatism
-					traits = { DEN_konservativ }
-					expire = "1965.1.1.1"
-				}
-			}
-		}
-	}
-}
-
 DEN_bondepartiet_takes_over = {
 	if = {
 		limit = {
@@ -517,16 +460,6 @@ DEN_the_king_takes_over = {
 				long_name = DEN_neutrality_monarchist_party_long
 				name = DEN_neutrality_monarchist_party
 			}
-			DEN_frederik_ix = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = despotism
-						expire = "1965.1.1.1"
-						traits = { DEN_the_king }
-					}
-				}
-			}
 		}
 		else = {
 			set_politics = {
@@ -538,24 +471,11 @@ DEN_the_king_takes_over = {
 	}
 	else_if = {
 		if = {
-			limit = {
-				#DEN_frederik_ix = { is_country_leader = no }
-			}
 			DEN_remove_neutral_leader = yes
 			set_politics = {
 				ruling_party = neutrality
 				long_name = DEN_neutrality_monarchist_party_long
 				name = DEN_neutrality_monarchist_party
-			}
-			DEN_frederik_ix = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = despotism
-						expire = "1965.1.1.1"
-						traits = { DEN_the_king }
-					}
-				}
 			}
 		}
 		else = {

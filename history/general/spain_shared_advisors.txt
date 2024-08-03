@@ -222,7 +222,6 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
 				custom_trigger_tooltip = {
 					tooltip = SPA_not_republican_spain_tt
 					NOT = { tag = SPD }
@@ -259,14 +258,9 @@ every_possible_country = {
 				}
 			}
 			available = {
-				if = {
-					limit = {
-						NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
-					}
 					NOT = {
 						has_completed_focus = SPA_eliminate_the_carlists
 					}
-				}
 				if = {
 					limit = {
 						has_completed_focus = SPA_unify_the_nationalist_front
@@ -392,14 +386,9 @@ every_possible_country = {
 				}
 			}
 			available = {
-				if = {
-					limit = {
-						NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
-					}
 					NOT = {
 						has_completed_focus = SPA_eliminate_the_carlists
 					}
-				}
 				if = {
 					limit = {
 						has_completed_focus = SPA_unify_the_nationalist_front
@@ -443,14 +432,9 @@ every_possible_country = {
 				}
 			}
 			available = {
-				if = {
-					limit = {
-						NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
-					}
 					NOT = {
 						has_completed_focus = SPA_eliminate_the_carlists
 					}
-				}
 				if = {
 					limit = {
 						has_completed_focus = SPA_unify_the_nationalist_front
@@ -2161,14 +2145,9 @@ every_possible_country = {
 				}
 			}
 			available = {
-				if = {
-					limit = {
-						NOT = { has_completed_focus = SPA_supremacy_of_the_communion }
-					}
 					NOT = {
 						has_completed_focus = SPA_eliminate_the_carlists
 					}
-				}
 				if = {
 					limit = {
 						has_completed_focus = SPA_unify_the_nationalist_front
@@ -2213,7 +2192,6 @@ every_possible_country = {
 			available = {
 				NOT = {
 					has_completed_focus = SPA_the_phalanx_ascendant
-					has_completed_focus = SPA_supremacy_of_the_communion
 					has_completed_focus = SPR_regional_defense_council_of_aragon
 					has_completed_focus = SPR_the_anti_fascist_workers_revolution
 				}
@@ -2269,31 +2247,6 @@ every_possible_country = {
 				small="GFX_idea_SPA_luis_hernando_de_larramendi"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_luis_hernando_de_larramendi
-			name = SPA_luis_hernando_de_larramendi 
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
-			available = {
-				has_completed_focus = SPA_supremacy_of_the_communion
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
-			}
-			traits = {
-				traditionalist_theorist 
-			}
-		}
 	}
 
 	generate_character = {
@@ -2339,31 +2292,6 @@ every_possible_country = {
 				small="GFX_idea_generic_political_advisor_europe_2"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_martin_de_riquer
-			name = SPA_martin_de_riquer 
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
-			available = {
-				has_completed_focus = SPA_supremacy_of_the_communion
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
-			}
-			traits = {
-				carlist_intellectual 
-			}
-		}
 	}
 	
 	generate_character = {
@@ -2372,31 +2300,6 @@ every_possible_country = {
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_1"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_mauricio_de_sivatte
-			name = SPA_mauricio_de_sivatte 
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
-			available = {
-				has_completed_focus = SPA_supremacy_of_the_communion
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
-			}
-			traits = {
-				regional_traditionalist_leader 
 			}
 		}
 	}

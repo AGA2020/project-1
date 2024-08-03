@@ -1691,9 +1691,6 @@ news_event = {
 						MAN = {
 							is_subject_of = PREV
 						}
-						MEN = {
-							is_subject_of = PREV
-						}
 					}
 				}
 				AND = {
@@ -1983,9 +1980,6 @@ news_event = {
 								has_full_control_of_state = 524
 							}
 							MAN = {
-								is_subject_of = PREV
-							}
-							MEN = {
 								is_subject_of = PREV
 							}
 						}

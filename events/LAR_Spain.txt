@@ -7698,44 +7698,6 @@ country_event = {
 							prefer_name = "NRP Dão"
 							target = SPD
 						}
-						POR = {
-							if = {
-								limit = {
-									check_variable = { POR.POR_ships_revolted > 1 }
-								}
-								ROOT = {
-									transfer_ship = {
-										type = destroyer
-										prefer_name = "NRP Douro"
-										target = SPD
-									}
-								}
-								if = {
-									limit = {
-										check_variable = { POR.POR_ships_revolted > 2 }
-									}
-									ROOT = {
-										transfer_ship = {
-											type = destroyer
-											prefer_name = "NRP Tejo"
-											target = SPD
-										}
-									}
-									if = {
-										limit = {
-											check_variable = { POR.POR_ships_revolted > 3 }
-										}
-										ROOT = {
-											transfer_ship = {
-												type = destroyer
-												prefer_name = "NRP Tamega"
-												target = SPD
-											}
-										}
-									}
-								}
-							}
-						}
 					}
 					clr_country_flag = POR_got_portuguese_mutineers_flag
 				}
@@ -8122,10 +8084,7 @@ country_event = {
 	option = { # OK
 		name = lar_spain.23.a
 		effect_tooltip = {
-			POR = {
-				add_timed_idea = { idea = SPA_spanish_civil_war_commitments days = 730 }
-				add_opinion_modifier = { target = ROOT modifier = SPA_spanish_civil_war_commitments }
-			}
+
 		}
 		add_manpower = 20000
 	}

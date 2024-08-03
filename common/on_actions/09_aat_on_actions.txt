@@ -527,93 +527,6 @@ on_actions = {
 		}
 	}
 
-	on_weekly_SWE = {
-		effect = {
-			if = {
-				limit = {
-					has_dynamic_modifier = {
-					 	modifier = SWE_folkhemmet_communism
-					 } 
-				}
-				SWE_calc_communist_folkhemmet = yes
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					NOT = { has_country_flag = SWE_has_unlocked_vattenfall_upgrade }
-				}
-
-				set_temp_variable = { SWE_northern_infra = 0 }
-				if = {
-					limit = { 666 = { controller = { original_tag = SWE } } }
-					666 = { PREV = { add_to_temp_variable = { SWE_northern_infra = PREV.infrastructure_level } } }
-				}
-
-				if = {
-					limit = { 918 = { controller = { original_tag = SWE } } }
-					918 = { PREV = { add_to_temp_variable = { SWE_northern_infra = PREV.infrastructure_level } } }
-				}
-
-				if = {
-					limit = { 38 = { controller = { original_tag = SWE } } }
-					38 = { PREV = { add_to_temp_variable = { SWE_northern_infra = PREV.infrastructure_level } } }
-				}
-
-				if = {
-					limit = { check_variable = { SWE_northern_infra > 11 } }
-					set_country_flag = SWE_has_unlocked_vattenfall_upgrade
-					if = {
-						limit = {
-							has_idea = SWE_vattenfall
-						}
-
-						swap_ideas = {
-							remove_idea = SWE_vattenfall
-							add_idea = SWE_vattenfall_upgrade
-						}
-					}
-				}
-			}
-
-			###
-			if = {
-				limit = { 
-					has_completed_focus = SWE_strike_the_capitalist_beast_down 
-					NOT = { has_completed_focus = SWE_police_reforms }
-				}
-				set_temp_variable = { SWE_opposing_support = 0 }
-				set_temp_variable = { SWE_opposing_support = party_popularity@fascism }
-				add_to_temp_variable = { SWE_opposing_support = party_popularity@neutrality }
-
-				if = {
-					limit = {
-						check_variable = { SWE_opposing_support > 0.45 }
-						has_idea = SWE_fascist_counter_revolution_1
-						NOT = { has_idea = SWE_fascist_counter_revolution_2 }
-					}
-
-					country_event = { id = AAT_Sweden_communism.3 hours = 2 }
-				}
-				else = {
-					add_to_temp_variable = { SWE_opposing_support = party_popularity@democratic }
-					if = {
-						limit = {
-							has_idea = SWE_fascist_counter_revolution_2
-							check_variable = { SWE_opposing_support > 0.69 }
-						}
-						country_event = { id = AAT_Sweden_communism.4 hours = 2 }
-					}
-				}
-			}
-			SWE_is_norway_mostly_occupied = yes
-			SWE_is_finland_mostly_occupied = yes
-			SWE_is_denmark_mostly_occupied = yes
-
-			#Train the Sheltered
-		}
-	}
-
 	on_monthly_NOR = {
 		effect = {
 			if = {
@@ -1128,46 +1041,6 @@ on_actions = {
 				}
 				ROOT = {
 					set_country_flag = NOR_attacked_norway
-				}
-				NOR = {
-					set_variable = { NOR_cw_fascist_attacker = ROOT }
-					if = { # Norway has chosen Fascist branch
-						limit = {
-							has_completed_focus = NOR_lurk_in_the_shadows
-							NOT = { has_completed_focus = NOR_nasjonal_samling }
-
-						}
-						country_event = { 
-							id = AAT_norway.199
-							hours = 1
-						}
-					}
-					#else_if = {  # Democratic but Quisling is still around
-					#	limit = {
-					#		NOR = {	 
-					#			has_completed_focus = NOR_continue_nygaardsvold_government 
-					#			NOT = { has_completed_focus = NOR_arrest_quisling }
-					#			is_subject = no
-					#		}
-					#	}
-					#	complete_national_focus = NOR_fascist_invasion_of_norway
-					#	var:NOR.NOR_cw_fascist_attacker = {
-					#		country_event = {
-					#			id = AAT_norway.14
-					#			hours = 1 
-					#		}
-					#	}
-					#}
-					#else_if = { # Democratic but Quisling is arrrested
-					# 
-					#	limit = {
-					#		NOR = {
-					#			has_completed_focus = NOR_continue_nygaardsvold_government 
-					#			is_subject = no
-					#		}
-					#	}
-					#	complete_national_focus = NOR_fascist_invasion_of_norway
-					#}
 				}
 			}
 		}
@@ -2373,21 +2246,7 @@ on_actions = {
 							has_cosmetic_tag = NOR_alt_democratic
 						}
 					}
-					if = {
-						limit = {
-							has_completed_focus = NOR_compromise_with_the_nkp 
-						}
-						set_cosmetic_tag = NOR_SOV_communism
-					}
-					else_if = {
-						limit = {
-							has_completed_focus = NOR_prosecute_the_nkp
-						}
-						set_cosmetic_tag = NOR_trotsky_communism
-					}
-					else = {
-						set_cosmetic_tag = NOR_cw_communism 
-					}
+					set_cosmetic_tag = NOR_cw_communism 
 				}
 				else_if = {
 					limit = {

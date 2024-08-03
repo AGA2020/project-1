@@ -181,23 +181,6 @@ characters={
 				factor = 1.000
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = LIT_stasys_rastikis_government
-			allowed = {
-				original_tag = LIT
-				has_dlc = "No Step Back"
-			}
-			available = {
-				has_completed_focus = LIT_a_martial_prime_minister 
-			}
-			traits = {
-				veteran_minister 
-			}
-			ai_will_do = {
-				factor = 10.000
-			}
-		}
 
 		field_marshal={
 			traits={ old_guard trait_cautious BALTIC_anti_bolshevik }
