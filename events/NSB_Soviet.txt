@@ -6545,13 +6545,6 @@ country_event = {
 					SOV = { has_completed_focus = SOV_claims_on_poland }
 				}
 			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_completed_focus = POL_assemble_the_regency_council
-					has_completed_focus = POL_nationalist_constitution
-				}
-			}
 		}
 
 		FROM = { country_event = { id = NSB_soviet_policies_of_collective_security.12 hours = 8 random_hours = 4 } } #Answer to FRA (potentially) who will in turn asnswer to SOV, so FROM is available for effects that can't use variables

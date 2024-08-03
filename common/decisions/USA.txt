@@ -859,47 +859,6 @@ foreign_politics = {
 			}
 		}
 	}
-	USA_join_the_unions = {
-		icon = infiltrate_state
-		visible = {
-			SOV = {
-				has_war = yes
-				is_in_faction_with = USA
-			}
-			has_completed_focus = USA_unholy_alliance
-		}
-		available = {
-			SOV = {
-				surrender_progress > 0.8
-			}
-		}
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 0
-		}
-		complete_effect = {
-			if = {
-				limit = {
-					NOT = { ROOT = { has_war_together_with = SOV } }
-				}
-
-				SOV = {	
-					every_enemy_country = {
-						ROOT = {
-							declare_war_on = {	
-								target = PREV
-								type = annex_everything
-							}
-						}
-					}
-				}
-			}
-			annex_country = { target = SOV transfer_troops = yes}
-
-				 
-			
-		}
-	}
 }
 USA_war_plans = {
 

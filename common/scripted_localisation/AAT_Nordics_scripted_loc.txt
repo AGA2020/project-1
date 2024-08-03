@@ -115,19 +115,6 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			var:global.nordic_faction_creator = {
-				original_tag = FIN
-				OR = {
-					has_completed_focus = FIN_united_under_the_north_star
-					has_completed_focus = FIN_northern_defense_front
-				}
-
-			}
-		}
-		localization_key = FIN_northern_defense_front_faction
-	}
-	text = {
-		trigger = {
 			NORDIC_democratic_alliance_viable = yes
 		}
 		localization_key = NORDIC_alliance_democratic

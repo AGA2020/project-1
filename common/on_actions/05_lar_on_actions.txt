@@ -1306,7 +1306,6 @@ on_actions = {
 						has_completed_focus = SPA_adopt_the_26_points
 						has_completed_focus = SPA_confirm_the_fueros
 						has_completed_focus = SPR_all_must_bear_the_torch
-						has_completed_focus = SPR_all_must_do_their_part
 					}
 				}
 				FROM.FROM = {
@@ -1321,15 +1320,6 @@ on_actions = {
 							state = 165
 							state = 171
 							state = 792
-						}
-					}
-					OR = {
-						AND = {
-							has_completed_focus = SPR_united_under_socialism
-							NOT = { has_completed_focus = SPR_all_must_do_their_part }
-						}
-						AND = {
-							has_completed_focus = SPR_solidify_government_control
 						}
 					}
 				}

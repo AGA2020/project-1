@@ -192,7 +192,6 @@ BRA_ensure_support_cat = {
 		}	
 		available = {
 			OR = {
-				has_completed_focus = BRA_estado_moderno
 				has_completed_focus = BRA_estado_novo
 			}
 		}

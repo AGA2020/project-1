@@ -1,45 +1,5 @@
 
 
-#Category only allowed for CHI
-CHI_anti_imperialism = {
-	
-	CHI_release_korea = {
-
-		icon = generic_nationalism
-
-		available = {
-			country_exists = KOR
-		}
-
-		days_mission_timeout = 180
-
-		fire_only_once = yes
-		activation = {			
-			owns_state = 525
-			owns_state = 527
-			KOR = {
-				exists = no
-			}
-			has_completed_focus = CHI_commit_to_korean_independence
-		}
-
-		visible = {
-			owns_state = 525
-			owns_state = 527
-			KOR = {
-				exists = no
-			}
-			has_completed_focus = CHI_commit_to_korean_independence
-		}
-		complete_effect = {
-			add_political_power = 50
-		}
-		timeout_effect = {
-			add_stability = -0.1 #naughty
-		}
-	}
-}
-
 
 #Category allowed for all potential nationalist china
 #Category visible when CHI_army_reform focus is completed
@@ -77,50 +37,7 @@ CHI_army_reform = {
 }
 
 economy_decisions = {
-	CHI_forced_loans = {
 
-		icon = ger_mefo_bills
-
-		available = {
-			has_hyper_inflation = yes
-		}
-
-		cost = 100
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				OR = {
-					has_idea = CHI_hyper_inflation_none
-					has_idea = CHI_hyper_inflation_1
-				}
-				factor = 0
-			}
-			modifier = {
-				has_idea = CHI_hyper_inflation_3
-				factor = 2
-			}
-			modifier = {
-				has_idea = CHI_hyper_inflation_4
-				factor = 5
-			}
-			modifier = {
-				has_idea = CHI_hyper_inflation_5
-				factor = 10
-			}
-		}
-
-		visible = {
-			has_completed_focus = CHI_forced_loans
-		}
-
-		days_re_enable = 90
-
-		complete_effect = {
-			CHI_hyper_inflation_level_down = yes
-			add_stability = -0.03
-			add_war_support = -0.03
-		}		
-	}
 }
 
 
