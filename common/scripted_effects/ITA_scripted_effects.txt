@@ -1738,15 +1738,6 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 					has_global_flag = ITA_democratic_cw_flag
 				}
 			}
-			if = { #ALT-FASCIST/MONARCHIST BRANCH
-				limit = {
-					has_completed_focus = ITA_convene_the_grand_council
-				}
-				uncomplete_national_focus = {
-					focus = ITA_convene_the_grand_council
-					uncomplete_children = yes
-				}
-			}
 			if = { #FASCIST FOREIGN AFFAIRS BRANCH
 				limit = {
 					has_completed_focus = ITA_foreign_affairs
@@ -1784,7 +1775,6 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 				unlock_national_focus = ITA_undermine_the_duce
 				unlock_national_focus = ITA_conspiracies_in_the_shadows
 			}
-			unlock_national_focus = ITA_convene_the_grand_council
 			unlock_national_focus = ITA_depose_mussolini
 			unlock_national_focus = ITA_monarchia_d_italia
 		}
@@ -2763,30 +2753,6 @@ ITA_start_anti_fascist_civil_war = { #The one triggered via focus
 	ITA_bop_remove_bop_effect = yes
 
 
-	if = {
-		limit = {
-			has_completed_focus = ITA_unite_the_opposition
-		}
-		start_civil_war = {
-			ideology = fascism
-			ruling_party = communism #Original tag
-			size = 0.5
-			states = all
-			states_filter = {
-				NOT = { has_state_flag = ITA_cw_state_split }
-			}
-
-			#keep_unit_leaders_trigger = {
-			#	OR = {
-			#		has_unit_leader_flag = ITA_cw_unit_leader_antifascist_side_flag
-			#		has_unit_leader_flag = ITA_cw_unit_leader_monarchist_side_flag
-			#	}
-			#}
-
-			keep_all_characters = yes
-		}
-	}
-	else = {
 		start_civil_war = {
 			ideology = fascism
 			ruling_party = communism #Original tag
@@ -2805,7 +2771,6 @@ ITA_start_anti_fascist_civil_war = { #The one triggered via focus
 
 			keep_all_characters = yes
 		}
-	}
 
 	#If at war with ETH (while ETH controls any state), make sure controlled ETH states go to fascist side (Part II)
 	hidden_effect = {
@@ -2866,79 +2831,7 @@ ITA_anti_fascist_civil_war_deal_with_fascist_side = {
 		ITA_manage_national_spirits_in_civil_war = yes
 
 		#DAMAGE FROM ANTIFA FOCUSES
-		if = {
-			limit = {
-				ROOT = { has_completed_focus = ITA_organize_strikes_in_the_north }
-			}
-			set_temp_variable = { temp_targets_index = 0 }
-			while_loop_effect = {
-				limit = {
-					check_variable = { temp_targets_index = 4 compare = less_than }
-					any_owned_state = {
-						NOT = { has_state_flag = ITA_sabotaged_state_flag }
-					}
-				}
-				random_owned_state = {
-					limit = {
-						NOT = { has_state_flag = ITA_sabotaged_state_flag }
-						is_core_of = PREV
-						OR = {
-							industrial_complex > 0
-							arms_factory > 0
-							dockyard > 0
-						}
-						#Exclude small states with low development
-						NOT = {
-							state = 114 # SARDEGNA
-							state = 852 # ISTRIA
-							#state = 39 # ALTO ADIGE
-							state = 850 # TRENTINO
-						}
-					}
-					if = {
-						limit = {
-							industrial_complex > 0
-						}
-						damage_building = {
-							type = industrial_complex
-							damage = 2
-						}
-					}
-					if = {
-						limit = {
-							arms_factory > 0
-						}
-						damage_building = {
-							type = arms_factory
-							damage = 2.5
-						}
-					}
-					if = {
-						limit = {
-							dockyard > 0
-						}
-						damage_building = {
-							type = dockyard
-							damage = 1.5
-						}
-					}
-					set_state_flag = ITA_sabotaged_state_flag
-					#log = "Sabotage in [THIS.GetName]"
-				}
-				add_to_temp_variable = { temp_targets_index = 1 }
-			}
-			hidden_effect = {
-				every_owned_state = {
-					limit = {
-						has_state_flag = ITA_sabotaged_state_flag
-					}
-					clr_state_flag = ITA_sabotaged_state_flag
-				}
-			}
-		}
-		else = {
 			set_capital = { state = 159 } # LOMBARDY (Milano)
-		}
 
 		# SPAWN SOME BLACKSHIRTS TO HELP OUT AI
 		capital_scope = {

@@ -2189,7 +2189,6 @@ country_event = {
 								factor = 0
 								has_global_flag = SOV_covert_support_for_poum_flag #POUM UPRISING (SUPPORTED BY SOVIET RIGHT OPPOSITION)
 							}
-							complete_national_focus = SPR_regional_defense_council_of_aragon
 						}
 						10 = {
 							modifier = {
@@ -4047,7 +4046,6 @@ country_event = {
 								factor = 0
 								ROOT = { has_country_flag = SPA_con_paquito_flag }
 							}
-							complete_national_focus = SPA_the_phalanx_ascendant
 						}
 						10 = {
 							modifier = {
@@ -4196,7 +4194,6 @@ country_event = {
 			SPD = { add_timed_idea = { idea = SPR_death_before_surrender days = 900 } }
 			set_party_name = { ideology = neutrality long_name = SPR_neutrality_military_junta_party_long name = SPR_neutrality_military_junta_party }
 		}
-		complete_national_focus = SPA_the_phalanx_ascendant
 	}
 	option = { # Option for Nationalists - Carlism
 		name = lar_spain.2.c
@@ -4355,7 +4352,6 @@ country_event = {
 			SPA = { add_timed_idea = { idea = SPA_death_before_surrender days = 900 } }
 			set_party_name = { ideology = neutrality long_name = SPR_neutrality_anarchism_party_long name = SPR_neutrality_anarchism_party }
 		}
-		complete_national_focus = SPR_regional_defense_council_of_aragon
 	}
 }
 
@@ -6158,7 +6154,6 @@ country_event = {
 				unlock_national_focus = SPA_the_army_of_africa
 				unlock_national_focus = SPA_secure_the_northern_garrisons
 				unlock_national_focus = SPA_sin_paquito
-				complete_national_focus = SPA_the_phalanx_ascendant
 				complete_national_focus = SPA_secure_the_national_defense_council
 				complete_national_focus = SPA_suspend_the_constitution
 				unlock_national_focus = SPA_eliminate_the_carlists
@@ -6902,7 +6897,6 @@ country_event = {
 					unlock_national_focus = SPR_hinder_nkvd_interference
 				}
 				else = { #REGULAR ANARCHIST UPRISING
-					complete_national_focus = SPR_regional_defense_council_of_aragon
 					complete_national_focus = SPR_arm_the_people
 					complete_national_focus = SPR_appropriate_the_means_of_production
 					unlock_national_focus = SPR_the_maximum_concession
@@ -7101,60 +7095,6 @@ country_event = {
 			
 			set_global_flag = SPR_anarchist_uprising_flag
 			set_global_flag = { flag = SPR_civil_war_startup value = 1 days = 3 } # Make AI avoid attacking for a few days
-			if = {
-				limit = {
-					has_completed_focus = SPR_regional_defense_council_of_aragon
-				}
-				set_politics = {
-					ruling_party = neutrality
-				}
-				set_party_name = { ideology = communism long_name = SPR_communism_independent_party_long name = SPR_communism_independent_party }
-				create_country_leader = {
-					name = "Julián Gorkin"
-					desc = "POLITICS_JULIAN_GORKIN_DESC"
-					picture = "GFX_portrait_SPR_julian_gorkin"
-					expire = "1965.1.1"
-					ideology = anarchist_communism
-					traits = {
-						militant_socialist
-					}
-				}
-				create_country_leader = {
-					name = "Anarchist Commune"
-					desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
-					picture = "GFX_portrait_SPR_anarchist_commune"
-					expire = "1965.1.1"
-					ideology = anarchism
-					traits = {
-						our_right_to_survive
-					}
-				}
-				add_popularity = {
-				    ideology = fascism
-				    popularity = -1
-				}
-				add_popularity = {
-				    ideology = communism
-				    popularity = -0.25
-				}
-				if = {
-					limit = {
-						democratic > 0.01
-					}
-					set_political_party = {
-					    ideology = democratic
-					    popularity = 1
-					}
-				}
-				set_rule = {
-				    can_puppet = no
-				    can_create_factions = no
-				    can_join_factions = no
-				    can_boost_own_ideology = no
-					can_generate_female_aces = yes
-					can_create_collaboration_government = no
-				}
-			}
 			remove_ideas = SPR_the_maximum_concession
 			add_ideas = closed_economy
 			SPC = {
@@ -7814,42 +7754,6 @@ country_event = {
 	option = {
 		name = lar_spain.10.a
 		effect_tooltip = {
-			if = {
-				limit = {
-					has_completed_focus = SPR_regional_defense_council_of_aragon
-					NOT = { has_government = neutrality }
-				}
-				set_politics = {
-					ruling_party = neutrality
-				}
-				create_country_leader = {
-					name = "Anarchist Commune"
-					desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
-					picture = "GFX_portrait_SPR_anarchist_commune"
-					expire = "1965.1.1"
-					ideology = anarchism
-					traits = {
-						our_right_to_survive
-					}
-				}
-				add_popularity = {
-				    ideology = fascism
-				    popularity = -1
-				}
-				add_popularity = {
-				    ideology = communism
-				    popularity = -0.15
-				}
-				if = {
-					limit = {
-						democratic > 0.01
-					}
-					set_political_party = {
-					    ideology = democratic
-					    popularity = 1
-					}
-				}
-			}
 			remove_ideas = SPR_the_maximum_concession
 			add_ideas = closed_economy
 			add_stability = -0.1
@@ -10456,7 +10360,6 @@ country_event = {
 			is_ai = no
 		}
 		has_completed_focus = SPA_a_great_spain
-		NOT = { has_completed_focus = SPA_the_phalanx_ascendant }
 		NOT = { has_global_flag = SPB_alfonso_xiii_dead }
 		date > 1940.2.28
 	}

@@ -99,19 +99,6 @@ SWE_ebba_palmstierna_cat = {
 #	}
 #}
 
-SWE_rationing_policies = {
-	allowed = {
-		tag = SWE
-		has_dlc = "Arms Against Tyranny"
-	}
-	priority = 97
-	visible = {
-		has_capitulated = no
-		exists = yes
-		has_completed_focus = SWE_rationing
-	}
-}
-
 SWE_train_the_sheltered_cat = {
 	allowed = {
 		tag = SWE

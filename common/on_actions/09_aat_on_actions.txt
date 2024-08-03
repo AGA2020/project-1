@@ -484,18 +484,6 @@ on_actions = {
 						}
 						unlock_national_focus = FIN_right_wing_policies
 					}
-					if = {
-						limit = {
-							NOT = { has_completed_focus = FIN_prepare_a_military_coup }
-						}
-						unlock_national_focus = FIN_prepare_a_military_coup
-					}
-					if = {
-						limit = {
-							NOT = { has_completed_focus = FIN_a_fascist_regime }
-						}
-						unlock_national_focus = FIN_a_fascist_regime
-					}
 				}
 				
 				FIN_initiate_balance_of_power_effect = yes
@@ -623,42 +611,6 @@ on_actions = {
 			SWE_is_denmark_mostly_occupied = yes
 
 			#Train the Sheltered
-			if = {
-				limit = {
-					NOT = { has_country_flag = SWE_has_activated_train_the_sheltered }
-					has_completed_focus = SWE_train_the_sheltered
-					is_eligible_for_train_the_sheltered = yes
-				}
-
-				if = {
-					limit = { check_variable = { SWE_train_the_sheltered_manpower_current_manpower < SWE_train_the_sheltered_manpower_current_cap } }
-				
-					add_to_variable = { var:SWE_train_the_sheltered_manpower_current_manpower = var:SWE_train_the_sheltered_manpower_gain_per_level_growth_base }
-					set_temp_variable_to_random = { 
-						var = SWE_randomSpread 
-						min = SWE_train_the_sheltered_manpower_gain_per_level_growth_spread_min
-						max = SWE_train_the_sheltered_manpower_gain_per_level_growth_spread_max
-						integer = yes 
-					}
-
-					#prevents going over the manpower limit for 1 month in case it overflows
-					if = {
-						limit = {
-							set_temp_variable = { SWE_current_manpower = SWE_train_the_sheltered_manpower_current_manpower }
-							add_to_temp_variable = { SWE_current_manpower = SWE_randomSpread }
-							check_variable = { SWE_current_manpower > SWE_train_the_sheltered_manpower_current_cap }
-						}
-						set_variable = { SWE_train_the_sheltered_manpower_current_manpower = SWE_train_the_sheltered_manpower_current_cap }
-					}
-					else = {
-						add_to_variable = { SWE_train_the_sheltered_manpower_current_manpower = SWE_randomSpread }
-					}
-
-				}
-				else = {
-					set_variable = { SWE_train_the_sheltered_manpower_current_manpower = SWE_train_the_sheltered_manpower_current_cap }
-				}
-			}
 		}
 	}
 
@@ -1033,30 +985,6 @@ on_actions = {
 					925 = {
 						#set_demilitarized_zone = no
 					}
-				}
-			}
-		}
-
-		effect = { #manpower gain from train the sheltered focus
-			if = { 
-				limit = {
-					SWE = { 
-						has_completed_focus =  SWE_train_the_sheltered
-						NOT = { has_country_flag = SWE_has_activated_train_the_sheltered }
-						is_eligible_for_train_the_sheltered = yes
-					}
-					OR = { 
-						FROM = {
-							tag = SWE
-						}
-						ROOT = {
-							tag = SWE
-						}
-					}
-				}
-				SWE = {
-					set_country_flag = SWE_has_activated_train_the_sheltered
-					add_manpower = var:SWE_train_the_sheltered_manpower_current_manpower
 				}
 			}
 		}
@@ -1542,27 +1470,11 @@ on_actions = {
 						ROOT = {
 							NOT = {
 								original_Tag = FIN
-								has_completed_focus = FIN_confederated_finno_russian_republics
 							}
 						}
 					}
 					FROM.FROM = {
 						remove_dynamic_modifier = { modifier = FIN_confederation_of_finno_russian_republics_dm }
-					}
-				}
-				else_if = {
-					limit = {
-						ROOT = {
-							original_tag = FIN
-							has_completed_focus = FIN_confederated_finno_russian_republics
-						}
-						FROM.FROM = {
-							is_core_of = SOV
-							NOT = { has_dynamic_modifier = { modifier = FIN_confederation_of_finno_russian_republics_dm } }
-						}
-					}
-					FROM.FROM = {
-						add_dynamic_modifier = { modifier = FIN_confederation_of_finno_russian_republics_dm }
 					}
 				}
 			}
@@ -2486,12 +2398,6 @@ on_actions = {
 							has_cosmetic_tag = NOR_cw_communism
 							has_cosmetic_tag = NOR_neutrality_purple_flag 					
 						}
-					}
-					if = {
-						limit = {
-							has_completed_focus = NOR_reviving_the_norgesveldet
-						}
-						set_cosmetic_tag = NOR_norgesveldet_fascism
 					}
 					else_if = {
 						limit = {

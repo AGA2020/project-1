@@ -239,19 +239,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetRailwayGunsTooltip
-	text = {
-		trigger = {
-			has_completed_focus = ITA_mobilize_the_railway_guns #Focus grants bonuses
-		}
-		localization_key = ITA_mobilize_the_railway_guns_dynamic_modifier_tt
-	}
-	text = {
-		localization_key = generic_null
-	}
-}
-
-defined_text = {
 	name = GetSuperHeavyAircraftTooltip
 	text = {
 		trigger = {
@@ -697,19 +684,6 @@ defined_text = { #Moschettieri del Duce name based on political path
 	name = GetAppropriateMoschetieridelDuceName
 	text = { # Default - Duce
 		localization_key = ITA_moschettieri_del_duce_default
-	}
-}
-
-defined_text = { #Albanian Fascist Militia name based on political path
-	name = GetAppropriateAlbanianFascistMilitiaName
-	text = { # King
-		trigger = { 
-			has_completed_focus = ITA_monarchia_d_italia
-		}
-		localization_key = ITA_albanian_fascist_militia_alt
-	}
-	text = { # Default - Duce
-		localization_key = ITA_albanian_fascist_militia_default
 	}
 }
 

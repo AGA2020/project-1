@@ -1222,7 +1222,6 @@ focus_tree = {
 			trigger = {
 				has_hide_rule = yes
 				OR = {
-					has_completed_focus = NOR_lurk_in_the_shadows
 					has_completed_focus = NOR_the_chamberlains_overture
 				}
 			}

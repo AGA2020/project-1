@@ -640,13 +640,6 @@ NOR_deploy_prep_fasc_basic_effects = {
 	}
 	if = {
 		limit = {
-			check_variable = { NOR_state_preparation > 2 }
-			ROOT = { has_completed_focus = NOR_the_secret_army } 
-		}
-		NOR_spawn_militias_in_state = yes 
-	}
-	if = {
-		limit = {
 			has_dynamic_modifier = { modifier = NOR_prep_fasc_dmod_1 }
 		}
 		remove_dynamic_modifier = { modifier = NOR_prep_fasc_dmod_1 }

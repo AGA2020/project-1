@@ -2940,7 +2940,6 @@ country_event = {
 		trigger = {
 			OR = {
 				has_completed_focus = BRA_free_speech
-				has_completed_focus = BRA_prepare_for_second_intentona
 			}
 		}
 		ai_chance = {

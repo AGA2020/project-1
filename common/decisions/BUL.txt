@@ -7135,21 +7135,10 @@ BUL_foreign_agreements = {
 				}
 				BUL_is_valid_subject = yes
 			}
-			if = { # Approaching country grants 5 civs cap
-				limit = {
-					has_completed_focus = BUL_approach_the_united_kingdom
-				}
-				custom_trigger_tooltip = {
-					tooltip = BUL_british_industrial_agreements_cap_approach_tt
-					check_variable = { BUL_british_industrial_investments < BUL_industrial_investments_medium_cap }
-				}
-			}
-			else = { #Basic Cap
 				custom_trigger_tooltip = {
 					tooltip = BUL_british_industrial_agreements_cap_basic_tt
 					check_variable = { BUL_british_industrial_investments < BUL_industrial_investments_basic_cap }
 				}
-			}
 			NOT = { has_war_with = ENG }
 			NOT = { is_justifying_wargoal_against = ENG }
 			OR = {

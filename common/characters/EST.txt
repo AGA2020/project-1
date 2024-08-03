@@ -98,36 +98,6 @@ characters={
 				small="GFX_idea_EST_jaan_tonisson"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = EST_jaan_tonisson
-			allowed = {
-				original_tag = EST
-			}
-			available = {
-				IF = { 
-					limit = { has_dlc = "No Step Back" }
-					has_completed_focus = EST_establish_the_rahvuskogu 
-				}
-			}
-			traits = {
-				democratic_reformer 
-			}
-			ai_will_do = {
-				factor = 0
-				modifier = {
-					add = 100
-					OR = {
-						has_government = democratic
-						has_country_flag = EST_AI_RANDOM_DEMOCRATIC
-						has_game_rule = {
-							rule = EST_ai_behavior
-							option = DEMOCRATIC
-						}
-					}
-				}
-			}
-		}
 		country_leader={
 			ideology=conservatism
 			expire="1965.1.1.1"

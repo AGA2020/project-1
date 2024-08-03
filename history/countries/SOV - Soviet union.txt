@@ -43,8 +43,6 @@ recruit_character = SOV_maksim_litvinov
 recruit_character = SOV_lev_trotsky
 recruit_character = SOV_ivan_smirnov
 recruit_character = SOV_ivar_smilga
-recruit_character = SOV_karl_radek
-recruit_character = SOV_yevgeny_preobrazhensky
 recruit_character = SOV_aleksandr_shlyapnikov
 recruit_character = SOV_nikolay_bukharin
 recruit_character = SOV_aleksey_rykov
@@ -52,7 +50,6 @@ recruit_character = SOV_mikhail_tomsky
 recruit_character = SOV_grigory_sokolnikov
 recruit_character = SOV_grigory_zinovyev
 recruit_character = SOV_lev_kamenev
-recruit_character = SOV_martemyan_ryutin
 recruit_character = SOV_patriarch_sergy
 recruit_character = SOV_aleksandr_kerensky
 recruit_character = SOV_konstantin_rodzayevsky
@@ -269,9 +266,6 @@ SOV_ivar_smilga = {
 SOV_karl_radek = {
 	set_character_flag = SOV_aligned_left_opposition_flag
 }
-SOV_yevgeny_preobrazhensky = {
-	set_character_flag = SOV_aligned_left_opposition_flag
-}
 SOV_aleksandr_shlyapnikov = {
 	set_character_flag = SOV_aligned_left_opposition_flag
 }
@@ -289,7 +283,6 @@ SOV_grigory_sokolnikov = {
 }
 #SOV_grigory_zinovyev -> Will be aligned with either left or right opposition via focus
 #SOV_lev_kamenev -> Will be aligned with either left or right opposition via focus
-#SOV_martemyan_ryutin -> Will be aligned with either left or right opposition via focus
 if = {
 	limit = {
 		has_dlc = "No Step Back"
@@ -337,9 +330,6 @@ SOV_grigory_zinovyev = {
 	set_character_flag = SOV_imprisoned_flag
 }
 SOV_lev_kamenev = {
-	set_character_flag = SOV_imprisoned_flag
-}
-SOV_martemyan_ryutin = {
 	set_character_flag = SOV_imprisoned_flag
 }
 	
@@ -925,8 +915,6 @@ add_ideas = {
 	SOV_aleksandr_shlyapnikov = { SOV_purge_character_effect = yes }
 	SOV_karl_radek = { SOV_purge_character_effect = yes }
 	SOV_ivar_smilga = { SOV_purge_character_effect = yes }
-	SOV_yevgeny_preobrazhensky = { SOV_purge_character_effect = yes }
-	SOV_martemyan_ryutin = { SOV_purge_character_effect = yes }
 	if = {
 		limit = {
 			has_dlc = "No Step Back"

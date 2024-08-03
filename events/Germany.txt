@@ -6411,18 +6411,6 @@ country_event = {
 			factor = 50
 			modifier = {
 				factor = 0
-				POL = {
-					OR = {
-						has_completed_focus = POL_protect_czechozlovakia
-					}
-				}
-				OR = {
-					is_guaranteed_by = POL
-					is_in_faction_with = POL
-				}
-			}
-			modifier = {
-				factor = 0
 				any_other_country = {
 					is_major = yes
 					has_guaranteed = CZE

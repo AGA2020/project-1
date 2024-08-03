@@ -2133,30 +2133,7 @@ ideas = {
 	}
 
 	industrial_concern = {
-		
-		GRE_dep = {
-			
-			picture = gre_dep
-		
-			allowed = {
-				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = { 
-				has_completed_focus = GRE_lignite_liquefaction
-			}			
-			
-			research_bonus = {
-				synth_resources = 0.1
-			}
-			
-			traits = { refinery_concern }
-			
-			modifier = {
-				fuel_gain_factor_from_states = 0.15
-			}
-		}
+	
 	}
 
 	materiel_manufacturer = {

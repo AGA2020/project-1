@@ -11714,13 +11714,6 @@ focus_tree = {
 				}
 				else_if = {
 					limit = {
-						has_completed_focus = ITA_dino_grandi_focus
-						has_character = ITA_dino_grandi
-					}
-					promote_character = ITA_dino_grandi
-				}
-				else_if = {
-					limit = {
 						has_completed_focus = ITA_culto_del_duce
 						has_character = ITA_benito_mussolini
 					}
