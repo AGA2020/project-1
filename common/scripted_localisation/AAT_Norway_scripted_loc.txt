@@ -183,8 +183,7 @@ defined_text = {
 				original_tag = SOV 
 				has_government = communism 
 				NOT = { 
-					has_war_with = NOR 
-					has_completed_focus = SOV_the_left_opposition
+					has_war_with = NOR
 				}
 
 			}
@@ -337,7 +336,6 @@ defined_text = {
 			any_other_country = { 
 				original_tag = SOV
 				has_government = communism
-				NOT = { has_completed_focus = SOV_the_left_opposition }
 				has_capitulated = no
 			}
 		}

@@ -106,15 +106,6 @@ defined_text = {
 	name = NORDIC_get_alliance_name
 	text = {
 		trigger = {
-			var:global.nordic_faction_creator = {
-				original_tag = SWE
-				has_completed_focus = SWE_decentralized_nordic_army_command
-			}
-		}
-		localization_key = SWE_nordic_defense_council
-	}
-	text = {
-		trigger = {
 			NORDIC_democratic_alliance_viable = yes
 		}
 		localization_key = NORDIC_alliance_democratic

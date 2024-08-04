@@ -847,24 +847,6 @@ country_event = {
 			HUN = {
 				transfer_state = 664 #might as well throw them a bone
 			}
-			else = { #Need to get rid of everything
-				SLO = { transfer_state = 664 }
-			}
-		}
-		SLO = {
-			transfer_state = 70
-			transfer_state = 71
-			transfer_state = 72
-			transfer_state = 73
-			add_state_core = 70
-			add_state_core = 71
-			add_state_core = 72
-			add_state_core = 73
-
-		}
-		ROM = {
-			puppet = SLO
-			annex_country = { target = CZE } #cleanup
 		}
 	}
 	option = {# refuse
@@ -2812,25 +2794,7 @@ country_event = {
 								owner = { tag = FROM }
 							}
 						}
-						if = {
-							limit = { MOL = { exists = no } }
-							release_puppet = MOL 
-							MOL = { save_event_target_as = released_nation_target }
-						}
-						else = {
-							create_dynamic_country = {
-								original_tag = MOL
-								save_event_target_as = released_nation_target
-							}
-						}
 						event_target:released_nation_target = {
-							every_state = {
-								limit = {
-									is_core_of = MOL
-									controller = { tag = event_target:romania_third_party_target }
-								}
-								PREV = { transfer_state = PREV }
-							}
 							PREV = {
 								puppet = PREV
 								if = {
@@ -2856,14 +2820,6 @@ country_event = {
 							original_tag = FROM
 							
 							save_event_target_as = released_nation_target
-							every_state = {
-								limit = {
-									is_core_of = FROM
-									NOT = { is_core_of = MOL }
-									controller = { tag = event_target:romania_third_party_target }
-								}
-								PREV = { transfer_state = PREV }
-							}
 							PREV = {
 								puppet = PREV
 								if = {

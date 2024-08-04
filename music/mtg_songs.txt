@@ -41,10 +41,6 @@ music = {
 			factor = 2
 		}
 		modifier = {
-			has_completed_focus = USA_democratic_socialism
-			factor = 3
-		}
-		modifier = {
 			original_tag = USA
 			has_war_with = CSA
 			factor = 3.5
@@ -62,10 +58,6 @@ music = {
 			has_idea_with_trait = fascist_demagogue
 			not = { has_government = fascism }
 			factor = 2
-		}
-		modifier = {
-			has_completed_focus = USA_honor_the_confederacy
-			factor = 3
 		}
 		modifier = {
 			has_civil_war = yes

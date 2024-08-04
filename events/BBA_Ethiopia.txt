@@ -6637,22 +6637,7 @@ country_event = {
 		name = BBA_ethiopia_communist_events.33.a
 		ai_chance = {
 			base = 10
-		}
-		release = ERI
-		hidden_effect = {
-			ERI = {
-				set_popularities = {
-					democratic = 20
-					fascism = 5
-					neutrality = 15
-					communism = 60
-				}
-				set_politics = {
-					ruling_party = communism
-					elections_allowed = no
-				}
-			}
-		}		
+		}	
 	}
 	#Refuse to release
 	option = {

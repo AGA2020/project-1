@@ -432,9 +432,6 @@ on_actions = {
 			if = {
 				limit = {
 					original_tag = POL
-					NOT = {
-						has_completed_focus = POL_ban_the_nazi_party
-					}
 				}
 				85 = {
 					add_core_of = DNZ

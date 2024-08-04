@@ -241,14 +241,6 @@ defined_text = {
 defined_text = {
 	name = GetSuperHeavyTanksTooltip
 	text = {
-		trigger = {
-			OR = {
-				has_completed_focus = ITA_modern_musculus #Focus grants bonuses
-			}
-		}
-		localization_key = ITA_modern_musculus_dynamic_modifier_tt
-	}
-	text = {
 		localization_key = generic_null
 	}
 }

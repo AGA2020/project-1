@@ -7781,15 +7781,6 @@ country_event = {
 						transfer_state = PREV
 					}
 				}
-				else_if = {
-					limit = {
-						is_core_of = TUR
-						country_exists = TUR
-					}
-					TUR = {
-						transfer_state = PREV
-					}
-				}
 				else_if = { # Check for releasables
 					limit = {
 						any_country = {

@@ -184,10 +184,7 @@ ITA_missiolini_progress_in_ethiopia_success_effect = {
 		}
 		set_country_flag = ITA_missiolini_progress_in_ethiopia_one_mission_successful_flag
 	}
-	else_if = { #Second mission to succeed
-		limit = {
-			NOT = { has_completed_focus = ITA_the_abyssinian_fiasco }
-		}
+	else= { #Second mission to succeed
 		complete_national_focus = ITA_solid_progress
 	}
 }

@@ -713,30 +713,5 @@ on_actions = {
 				}
 			}
 		}
-
-		effect = {
-			if = {
-				limit = {
-					has_dlc = "Trial of Allegiance"
-					ROOT = {
-						original_tag = PAR
-					}
-				}
-
-				PAR = {
-					every_core_state = {
-						limit = {
-							has_dynamic_modifier = {
-								modifier = idea_PAR_river_navy
-							}
-						}
-
-						remove_dynamic_modifier = {
-							modifier = idea_PAR_river_navy
-						}
-					}
-				}
-			}
-		}
 	}
 }

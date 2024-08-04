@@ -287,8 +287,6 @@ country_event = { #Vote of No Confidence
 
 		DEN_dove_is_removed_from_power = yes
 
-		DEN_konservative_takes_over = yes
-
 		if = {
 			limit = {
 				NOT = {
@@ -997,7 +995,6 @@ country_event = { #Democratic Leader
 			}
 		}	
 		DEN_dove_is_removed_from_power = yes
-		DEN_konservative_takes_over = yes
 	}
 }
 
@@ -4214,7 +4211,6 @@ country_event = { #Denmark: Choose democratic country leader
 				DEN_rearming_ai = yes
 			}
 		}
-		DEN_konservative_takes_over = yes
 		OVERLORD = { country_event = { id = denmark_overlord_events.23 days = 1 } }
 	}
 }
@@ -4335,7 +4331,6 @@ country_event = { #Overlord: Denmark refuses to change government form
 						has_government = democratic
 					}
 				}
-				DEN_erik_scavenius_takes_over = yes
 			}
 		}
 		FROM = { country_event = { id = denmark_overlord_events.25 days = 1 }}
@@ -4426,7 +4421,6 @@ country_event = { #Denmark: Overlord tries to install its own government form
 					has_government = democratic
 				}
 			}
-			DEN_erik_scavenius_takes_over = yes
 		}
 		FROM = { country_event = { id = denmark_overlord_events.23 days = 1 }}
 	}
@@ -7403,12 +7397,6 @@ country_event = { #Denmark Demands Iceland's Annexation
 				NOT = { is_subject_of = FROM }
 			}
 		}
-		FROM = {
-			annex_country = {
-				target = ICE
-				transfer_troops = yes
-			}
-		}
 
 		custom_effect_tooltip = GAME_OVER_TT
 
@@ -7461,12 +7449,6 @@ country_event = { #Denmark annexes Iceland
 	option = { #Great
 		name = denmark_expansion_event.2.a
 		add_political_power = 50
-		effect_tooltip = {
-			annex_country = {
-				target = ICE
-				transfer_troops = yes
-			}
-		}
 	}
 }
 country_event = { #Denmark is refused Icelandic Annexation
@@ -7481,10 +7463,6 @@ country_event = { #Denmark is refused Icelandic Annexation
 
 	option = { #War it is
 		name = denmark_expansion_event.3.a
-		create_wargoal = {
-		    type = annex_everything
-		    target = ICE
-		}
 	}
 }
 country_event = { #Denmark Demands Iceland from Overlord
@@ -7508,9 +7486,6 @@ country_event = { #Denmark Demands Iceland from Overlord
 				}
 			}
 			
-		}
-		effect_tooltip = {
-			FROM = { puppet = ICE }
 		}
 
 		hidden_effect = {
@@ -7557,7 +7532,6 @@ country_event = { #Denmark puppets Iceland
 	option = { #Great
 		name = denmark_expansion_event.5.a
 		add_political_power = 50
-		ROOT = { puppet = ICE }
 		unlock_decision_tooltip = DEN_integrate_iceland
 		set_country_flag = DEN_can_integrate_iceland_flag
 	}
@@ -7574,10 +7548,6 @@ country_event = { #Denmark is refused Icelandic puppet
 
 	option = { #War it is
 		name = denmark_expansion_event.6.a
-		create_wargoal = {
-		    type = annex_everything
-		    target = ICE
-		}
 	}
 }
 
@@ -8116,16 +8086,6 @@ country_event = { #Denmark Demands Icelandic Territory
 		add_stability = -0.1
 		add_war_support = -0.05
 
-		effect_tooltip = {
-			every_state = {
-				limit = {
-					is_controlled_by = ROOT 
-					is_core_of = ICE
-				}
-				transfer_state_to = FROM
-			}
-		}
-
 		hidden_effect = {
 			FROM = { 
 				country_event = { id = denmark_expansion_event.201 hours = 2 }
@@ -8169,13 +8129,6 @@ country_event = { #Denmark gets Icelandic Territory
 	option = { #Great
 		name = denmark_expansion_event.201.a
 		add_political_power = 25
-		every_state = {
-			limit = {
-				is_controlled_by = FROM 
-				is_core_of = ICE
-			}
-			transfer_state_to = ROOT
-		}
 	}
 }
 country_event = { #Denmark is refused Icelandic Territory
@@ -9774,20 +9727,6 @@ country_event = { #The Danish King seeks refuge
 				}
 				ENG = { country_event = { id =  denmark_fascist_event.1 days = 5 }}
 			}
-			else_if = {
-				limit = {
-					ICE = {
-						NOT = { has_country_flag = DEN_received_danish_king_flag }
-						is_subject = no
-						has_civil_war = no
-						OR = {
-							NOT = { has_government = communism }
-							NOT = { has_government = fascism }
-						}
-					}
-				}
-				ICE = { country_event = { id =  denmark_fascist_event.1 days = 5 }}
-			}
 		}
 	}
 }
@@ -9836,16 +9775,6 @@ country_event = { #Stauning Dies
 				has_country_leader = {
 					character = DEN_thorvald_stauning
 					ruling_only = yes
-				}
-			}
-			DEN_vilhelm_buhl = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = socialism
-						expire = "1965.1.1.1"
-						traits = { DEN_socialdemokrat }
-					}
 				}
 			}
 		}

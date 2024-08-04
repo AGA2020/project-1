@@ -708,10 +708,6 @@ country_event = {
 				has_war_with = HUN
 				factor = 0 #lol
 			}
-			modifier = {
-				has_completed_focus = CZE_rapprochement_with_hungary
-				factor = 3
-			}
 		}
 
 		#FRA block

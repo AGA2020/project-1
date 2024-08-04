@@ -71,34 +71,6 @@ NORDIC_create_nordic_alliance = {
 			}
 		}
 	}
-	else_if = {
-		limit = {
-			#NORDIC_has_started_communist_focus_tree = yes 
-			NORDIC_is_communist = yes 
-		}
-		set_global_flag = NORDIC_communist_alliance_formed 
-		set_country_flag = NORDIC_union_leader
-		set_faction_name = NORDIC_alliance_communist
-		
-		set_variable = { NORDIC_communist_alliance_leader_dmod_max_eff = 0 }
-		set_variable = { NORDIC_communist_alliance_leader_dmod_max_planning = 0 }
-		set_variable = { NORDIC_communist_alliance_leader_dmod_research = 0 }
-		set_variable = { NORDIC_communist_alliance_leader_dmod_resource_penalty = 0 }
-		set_variable = { NORDIC_democratic_alliance_member_dmod_max_eff = 0 }
-		set_variable = { NORDIC_communist_alliance_member_dmod_max_planning = 0 }
-		set_variable = { NORDIC_communist_alliance_member_dmod_research = 0 }
-		set_variable = { NORDIC_communist_alliance_member_dmod_resource_penalty = 0 }
-
-		add_dynamic_modifier = { modifier = NORDIC_communist_alliance_leader_dmod }
-
-		every_other_country = {
-			limit = {
-				NORDIC_is_communist = yes
-				is_in_faction_with = ROOT 
-				is_subject = no 
-			}
-		}
-	}
 	else = {
 		set_global_flag = NORDIC_monarchist_alliance_formed
 		set_country_flag = NORDIC_league_leader  

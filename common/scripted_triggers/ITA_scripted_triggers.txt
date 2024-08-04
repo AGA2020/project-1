@@ -357,18 +357,6 @@ ITA_is_southern_designer_improved = { #Only meant to be used for tooltip purpose
 	}
 }
 
-ITA_has_rejected_monarchy = { # Used to change NS names from Regio/a to something not referencing monarchy
-	OR = {
-		has_government = communism
-		AND = {
-			has_government = democratic
-			has_completed_focus = ITA_the_italian_republic
-		}
-		has_completed_focus = ITA_capo_supremo
-		tag = RSI
-	}
-}
-
 ITA_basic_ultimatum_triggers = { #Used in foreign politics targeted decs - Expected Scope: ROOT = ITA // FROM = Target
 	country_exists = FROM
 	FROM = {

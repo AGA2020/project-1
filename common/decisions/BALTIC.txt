@@ -242,7 +242,6 @@ infiltrate_belarus_decisions = {
 		activation = {
 			ROOT = {
 				has_completed_focus = BALTIC_belarus_ssr
-				NOT = { has_completed_focus = BALTIC_seek_support_of_soviets }
 			}
 			NOT = { has_global_flag = belarus_baltic_resolved }
 		}

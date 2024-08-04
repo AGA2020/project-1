@@ -259,14 +259,7 @@ DEN_available_candidates = {
 	if = {
 		limit = {
 			check_variable = { DEN_neutrality_popularity > 19 }
-			NOT = { 
-				has_country_leader =  {
-					ruling_only = yes 
-					character = DEN_knud_bach
-				}
-			}
 		}
-		custom_effect_tooltip = DEN_knud_bach
 	}
 }
 
@@ -565,45 +558,6 @@ DEN_remove_neutral_leader = {
 	if = {
 		limit = {
 			has_country_leader = {
-				character = DEN_knud_bach
-				ruling_only = yes
-			}
-		}
-		DEN_knud_bach  = {
-			remove_country_leader_role = {
-				ideology = oligarchism
-			}
-		}
-	}
-	if = {
-		limit = {
-			has_country_leader = {
-				character = DEN_knud_bach_2
-				ruling_only = yes
-			}
-		}
-		DEN_knud_bach_2  = {
-			remove_country_leader_role = {
-				ideology = oligarchism
-			}
-		}
-	}
-	if = {
-		limit = {
-			has_country_leader = {
-				character = DEN_knud_bach_3
-				ruling_only = yes
-			}
-		}
-		DEN_knud_bach_3  = {
-			remove_country_leader_role = {
-				ideology = oligarchism
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_country_leader = {
 				character = DEN_freedom_council
 				ruling_only = yes
 			}
@@ -619,7 +573,6 @@ DEN_warhawk_is_removed_from_power = {
 	if = {
 		limit = {
 			OR = {
-				DEN_knud_bach = { is_country_leader = yes }
 				DEN_christmas_moller = { is_country_leader = yes }
 			}
 		}

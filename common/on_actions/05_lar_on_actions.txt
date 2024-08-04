@@ -1300,7 +1300,6 @@ on_actions = {
 					}
 					OR = {
 						has_completed_focus = SPA_adopt_the_26_points
-						has_completed_focus = SPA_confirm_the_fueros
 					}
 				}
 				FROM.FROM = {

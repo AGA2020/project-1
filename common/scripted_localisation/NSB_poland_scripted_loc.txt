@@ -66,26 +66,6 @@ defined_text = { # Country
 		localization_key = trotskyite
 	}
 }
-
-defined_text = { # Country
-	name = GetPolRoyalClaimStrength
-	text = {
-		trigger = {
-			POL = { has_completed_focus = POL_support_monarchism_in_LIT }
-		}
-		localization_key = lithuania_strength
-	}
-}
-
-defined_text = { # Country
-	name = GetRoyalClaim
-	text = {
-		trigger = {
-			POL = { has_completed_focus = POL_support_monarchism_in_LIT }
-		}
-		localization_key = LIT_neutrality
-	}
-}
 defined_text = { #Choosing descriptions for Dismantle the Soviet Empire focus
 	name = GetDismantleSovietEmpireDesc
 	text = {

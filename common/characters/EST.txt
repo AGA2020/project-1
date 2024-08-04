@@ -116,22 +116,6 @@ characters={
 				large="GFX_portrait_EST_andres_larka"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = EST_andres_larka
-			allowed = {
-				original_tag = EST
-			}
-			available = {
-				IF = { 
-					limit = { has_dlc = "No Step Back" }
-					has_completed_focus = EST_rally_the_nation 
-				}
-			}
-			traits = {
-				fascist_demagogue 
-			}
-		}
 
 		field_marshal={
 			traits={ old_guard }
