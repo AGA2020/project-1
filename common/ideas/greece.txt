@@ -2205,29 +2205,6 @@ ideas = {
 			
 			traits = { motorized_equipment_manufacturer }
 		}
-
-		GRE_grabin_design_bureau = {
-
-			picture = grabin_design_bureau
-			
-			allowed = {
-				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
-
-			available = {
-				NOT = { has_war_with = SOV }
-				has_completed_focus = GRE_appeal_to_the_soviet_union
-			}
-
-			cost = 120
-			
-			research_bonus = {
-				artillery = 0.15
-			}
-			
-			traits = { artillery_manufacturer }
-		}
 	}
 
 	hidden_ideas = {

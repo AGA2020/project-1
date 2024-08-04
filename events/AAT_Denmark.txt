@@ -7425,10 +7425,6 @@ country_event = { #Denmark Demands Iceland's Annexation
 					value < 0
 				}
 			}
-			modifier = {
-				factor = 10
-				has_completed_focus = ICE_not_our_king
-			}
 		}
 		ROOT = { end_puppet = FROM }
 		FROM = { 

@@ -436,20 +436,9 @@ ITA_power_balance = {
 							}
 						}
 					}
-					if = {
-						limit = {
-							has_completed_focus = ITA_democratic_king
-						}
-						promote_character = {
-							character = ITA_vittorio_emanuele_iii
-							ideology = democratic
-						}
-					}
-					else = {
-						promote_character = {
-							character = ITA_vittorio_emanuele_iii
-							ideology = neutrality
-						}
+					promote_character = {
+						character = ITA_vittorio_emanuele_iii
+						ideology = neutrality
 					}
 				}
 			}

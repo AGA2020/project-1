@@ -246,33 +246,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetSuperHeavyShipsTooltip
-	text = {
-		trigger = {
-			has_completed_focus = ITA_caligulas_pride #Focus grants bonuses
-		}
-		localization_key = ITA_caligulas_pride_dynamic_modifier_tt
-	}
-	text = {
-		localization_key = generic_null
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-defined_text = {
 	name = GetRsiOverlord
 	text = {
 		trigger = {

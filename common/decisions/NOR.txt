@@ -64,13 +64,6 @@
 		}
 	}
 
-	NOR_start_allied_prep = {
-		complete_effect = {
-			complete_national_focus = NOR_vote_of_no_confidence
-		}
-
-	}
-
 	start_comm_prep = {
 		complete_effect = {
 			complete_national_focus = NOR_compromise_with_the_nkp 
@@ -1476,117 +1469,6 @@ NOR_historical_deploy_prep_decisions_category = {
 
 
 NOR_allied_democratic_preparation_decisions_category = {
-	NOR_prepare_state_alt_dem = { # Decision to prepare the state for Alt Democratic
-	
-		icon = {
-			key = GFX_decision_NOR_prepare_state_dem_0
-			trigger = {
-				FROM = {
-					NOT = {
-						has_variable = NOR_state_preparation
-					}  
-				}
-			}
-		}		
-		icon = {
-			key = GFX_decision_NOR_prepare_state_dem_1
-			trigger = {
-				FROM ={
-					check_variable = { NOR_state_preparation = 1 }
-				}
-			}
-		}
-		icon = {
-			key = GFX_decision_NOR_prepare_state_dem_2
-			trigger = {
-				FROM = {
-					check_variable = { NOR_state_preparation = 2 }
-				}
-			}
-		}
-		icon = {
-			key = GFX_decision_NOR_prepare_state_dem_3
-			trigger = {
-				FROM = {
-					check_variable = { NOR_state_preparation = 3 }
-				}
-			}
-		}
-
-		visible = {
-			has_completed_focus = NOR_vote_of_no_confidence
-			NOT = { has_country_flag = NOR_preps_system_has_been_reset }
-			has_war = no 
-			OR = {
-				ROOT = {
-					has_country_flag = NOR_going_dem_allied
-					#NOT = { has_country_flag = NOR_active_preparation }
-				}
-				FROM = {
-					has_state_flag = NOR_preparing_state
-				}
-			}
-		}
-
-		available = {
-			FROM = {
-				check_variable = { NOR_state_preparation < 3 } 
-			}
-		}
-
-		state_target = yes
-
-		custom_cost_trigger = {
-			has_equipment = {
-				convoy_1 > NOR_prep_alt_dem_convoy_cost_trigger
-			}
-			has_political_power > NOR_prep_alt_dem_pp_cost_trigger
-		}
-
-		custom_cost_text = decision_cost_alt_dem_prepare_convoy_pp
-		
-		targets = {
-			state = 110 # Oslofjord
-			state = 921 # Telemark
-			state = 922 # Agder
-			state = 142 # Vestlandet
-			state = 920 # Opplandene 
-			state = 143 # Trondelag
-			state = 923 # Helgeland
-			state = 144 # Nordland 
-			state = 924 # Troms 
-			state = 925 # Finnmark
-		}
-
-		target_trigger = {
-			FROM = {
-				is_core_of = NOR
-				NOT = {	state = 914	} # Not Jan Mayen 
-				OR = {
-					NOT = { has_variable = NOR_state_preparation }
-					check_variable = { NOR_state_preparation < 3 }
-					has_state_flag = NOR_preparing_state
-				}
-			}
-		}
-
-		
-		days_remove = NOR_prep_his_remove_days
-	 
-		complete_effect = {
-			FROM = { 
-				NOR_start_state_preparation = yes 
-			} 
-		}
-
-		modifier = {
-			stability_weekly = -0.01
-		}
-
-		remove_effect = {
-			FROM = { NOR_end_state_preparation = yes }
-		}
-	}
 
 	NOR_alt_dem_naval_expansion = {
 		

@@ -141,11 +141,7 @@ GER_daimler_benz_organization = {
 	allowed = {	
 		OR = {
 			tag = GER 
-			tag = HUN 
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
+			tag = HUN
 		}
 	}
 
@@ -155,16 +151,6 @@ GER_daimler_benz_organization = {
 				FROM = { NOT = { original_tag = GER } }
 			}
 			FROM = { NOT = { has_war_with = GER } }
-		}
-		IF = {
-			limit = {
-				FROM = {
-					original_tag = BRA
-				}
-			}
-			FROM = {
-				has_completed_focus = BRA_german_tanks
-			}
 		}
 	}
 

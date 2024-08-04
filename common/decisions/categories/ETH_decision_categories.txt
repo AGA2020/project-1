@@ -232,7 +232,6 @@ ETH_exploit_french_weakness_category = {
 	visible = {
 		OR = {
 			has_completed_focus = ETH_exploit_french_weakness
-			has_completed_focus = ETH_demand_DJI
 		}
 	}
 	priority = {

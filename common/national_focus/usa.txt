@@ -225,126 +225,6 @@ focus = {
 		remove_idea = home_of_the_free
 		add_idea = home_of_the_free_2
 				}
-			}
-	}
-	focus = {
-		id = USA_agricultural_adjustment_act
-		icon = GFX_goal_generic_consumer_goods
-		x = 0
-		y = 1
-		prerequisite = { focus = USA_wpa }
-		relative_position_id = USA_wpa
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_medium_support_trigger = yes
-			has_government = democratic
-		}
-		
-		bypass = {
-			not = {
-				OR = {
-					has_idea = great_depression
-					has_idea = great_depression_2
-					has_idea = great_depression_3
-				}
-			}
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			USA_great_depression_level_down = yes
-			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
-			USA_congress_medium_opposition = yes
-			custom_effect_tooltip = USA_great_depression_cooldown_tt
-			unlock_decision_tooltip = { decision = USA_pay_farm_subsidies show_effect_tooltip = yes }
-		}
-	}
-	focus = {
-		id = USA_fair_labour_standards_act
-		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		x = 0
-		y = 2
-		prerequisite = { focus = USA_agricultural_adjustment_act }
-		relative_position_id = USA_wpa
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_medium_support_trigger = yes
-			has_government = democratic
-			not = { has_country_flag = USA_great_depression_cooldown }
-		}
-		
-		bypass = {
-			not = {
-				OR = {
-					has_idea = great_depression
-					has_idea = great_depression_2
-					has_idea = great_depression_3
-				}
-			}
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			USA_great_depression_level_down = yes
-			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
-			custom_effect_tooltip = USA_great_depression_cooldown_tt
-			USA_congress_medium_opposition = yes
-		}
-	}
-	focus = {
-		id = USA_federal_housing_act
-		icon = GFX_goal_generic_construct_civilian
-		x = 0
-		y = 3
-		prerequisite = { focus = USA_fair_labour_standards_act }
-		relative_position_id = USA_wpa
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_medium_support_trigger = yes
-			has_government = democratic
-			not = { has_country_flag = USA_great_depression_cooldown }
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		complete_tooltip = {
-			every_owned_state = {
-				limit = {
-					has_state_flag = USA_federal_housing_act
-				}
-				add_extra_state_shared_building_slots = 1
-			}
-		}
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			USA_great_depression_level_down = yes
-			USA_congress_medium_opposition = yes
 			custom_effect_tooltip = federal_housing_tt
 			hidden_effect = {
 				random_owned_controlled_state = {
@@ -412,6 +292,118 @@ focus = {
 					set_state_flag = USA_federal_housing_act
 				}
 			}
+		}
+	}
+	focus = {
+		id = USA_adjusted_compensation_act
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_wpa }
+		relative_position_id = USA_wpa
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_medium_support_trigger = yes
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		completion_reward = {
+		USA_great_depression_level_down = yes
+		USA_congress_medium_opposition = yes
+		set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
+		custom_effect_tooltip = USA_great_depression_cooldown_tt
+		hidden_effect = { add_timed_idea = { idea = USA_legislation_being_drafted days = 230 } }
+		}
+	}
+	focus = {
+		id = USA_agricultural_adjustment_act
+		icon = GFX_focus_generic_agricultural_subsidies
+		x = 0
+		y = 1
+		prerequisite = { focus = USA_adjusted_compensation_act }
+		relative_position_id = USA_adjusted_compensation_act
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_medium_support_trigger = yes
+			not = { has_country_flag = USA_great_depression_cooldown }
+			has_government = democratic
+		}
+		
+		bypass = {
+			not = {
+				OR = {
+					has_idea = great_depression
+					has_idea = great_depression_2
+					has_idea = great_depression_3
+				}
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			USA_great_depression_level_down = yes
+			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
+			USA_congress_medium_opposition = yes
+			custom_effect_tooltip = USA_great_depression_cooldown_tt
+			unlock_decision_tooltip = { decision = USA_pay_farm_subsidies show_effect_tooltip = yes }
+		}
+	}
+	focus = {
+		id = USA_fair_labour_standards_act
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 0
+		y = 3
+		prerequisite = { focus = USA_agricultural_adjustment_act }
+		relative_position_id = USA_wpa
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			congress_medium_support_trigger = yes
+			has_government = democratic
+			not = { has_country_flag = USA_great_depression_cooldown }
+		}
+		
+		bypass = {
+			not = {
+				OR = {
+					has_idea = great_depression
+					has_idea = great_depression_2
+					has_idea = great_depression_3
+				}
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			USA_great_depression_level_down = yes
+			USA_congress_medium_opposition = yes
 		}
 	}
 	focus = {

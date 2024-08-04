@@ -163,12 +163,6 @@ on_actions = {
 
 					add_ai_strategy = { 
 						type = alliance 
-						id = PRC
-						value = -250
-					}
-
-					add_ai_strategy = { 
-						type = alliance 
 						id = USA
 						value = -15
 					}

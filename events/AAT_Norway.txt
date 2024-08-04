@@ -104,14 +104,9 @@ country_event = { # Fascists Ransack Trotsky's residence
 		ai_chance = {
 			base = 1
 			modifier = {
-				add = 20
-				has_completed_focus = NOR_vote_of_no_confidence 
-			}
-			modifier = {
 				factor = 0 
 				OR = {
 					NOR_is_historical_ai = yes 
-					has_completed_focus = NOR_lurk_in_the_shadows
 				}
 			}
 		}

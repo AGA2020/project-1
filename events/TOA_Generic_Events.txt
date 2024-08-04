@@ -707,11 +707,6 @@ country_event = {
 				}
 			}
 
-			hidden_effect = {
-				PAR_Jose_Felix_Estigarribia = { set_nationality = ROOT } 
-				set_country_flag = PAR_is_going_democratic
-			}
-
 			swap_ideas = { remove_idea = BOL_toll_of_the_chaco_war add_idea = BOL_toll_of_the_chaco_war_2 }
 
 			#news_event = { 
@@ -966,12 +961,6 @@ country_event = {
 			days = 360
 		}
 		custom_effect_tooltip = CHL_relief_efforts_idea_tt
-		IF = {
-			limit = {
-				original_tag = CHL
-			}
-			CHL_anarchic_society_level_up = yes
-		}
 
 		news_event = { 
 			id = south_american_news.13 
@@ -997,13 +986,6 @@ country_event = {
 		add_manpower = -4000
 
 		add_command_power = 25
-
-		IF = {
-			limit = {
-				original_tag = CHL
-			}
-			CHL_anarchic_society_level_up = yes
-		}
 
 		news_event = { 
 			id = south_american_news.13 

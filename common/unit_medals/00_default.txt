@@ -28,219 +28,10 @@ unit_medals = {
 	
 	### NOR
 
-	krigskorset = { #Historical
-		
-		available = {
-			should_have_norwegian_medals_trigger = yes
-		}
-
-		frame = 1
-		icon = "GFX_medal_icon_nor"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			army_morale_factor = 0.1
-			experience_loss_factor = -0.07
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-	
-	haakon_viis_frihetskors = { #Historical 
-		
-		available = {
-			should_have_norwegian_medals_trigger = yes
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-		}
-
-		frame = 2
-		icon = "GFX_medal_icon_nor"
-		
-		cost = @cost
-		
-		unit_modifiers = { 
-			supply_consumption_factor = -0.1
-			recon_factor = 0.05
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-	krigsmedaljen = { #Historical
-		
-		available = {
-			should_have_norwegian_medals_trigger = yes
-		}
-
-		frame = 3
-		icon = "GFX_medal_icon_nor"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			max_dig_in_factor = 0.1
-			army_defence_factor = 0.05
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-	haakon_viis_frihetsmedalje = { #Historical
-		
-		available = {
-			should_have_norwegian_medals_trigger = yes
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-		}
-
-		frame = 4
-		icon = "GFX_medal_icon_nor"
-		
-		cost = @cost
-		
-		unit_modifiers = {		
-			breakthrough_factor = 0.1
-			army_attack_factor = 0.05
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-	folketskors = { # Alternate
-		
-		available = {
-			should_have_norwegian_medals_trigger = yes
-			has_government = communism
-		}
-
-		frame = 3
-		icon = "GFX_medal_icon_communism"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			army_org_factor = 0.08
-			experience_loss_factor = -0.1			
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-	norgeskors = { # Alternate
-		
-		available = {
-			should_have_norwegian_medals_trigger = yes
-			has_government = fascism
-		}
-
-		frame = 4
-		icon = "GFX_medal_icon_fascism"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			army_org_factor = 0.1
-			breakthrough_factor = 0.07
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-	deltagermedaljen = { #Historical
-		
-		available = {
-			should_have_norwegian_medals_trigger = yes
-		}
-
-		frame = 5
-		icon = "GFX_medal_icon_nor"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			army_fuel_consumption_factor = -0.1
-			supply_consumption_factor = -0.05
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-	haakon_viis_70arsmedalje = { #Historical
-		
-		available = {
-			should_have_norwegian_medals_trigger = yes
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-			date > 1942.8.3
-		}
-
-		frame = 6
-		icon = "GFX_medal_icon_nor"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			army_attack_factor = 0.1
-			army_morale_factor = 0.05
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-	st_olavsmedaljen = { #Historical
-		
-		available = {
-			should_have_norwegian_medals_trigger = yes
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-		}
-
-		frame = 7
-		icon = "GFX_medal_icon_nor"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			equipment_capture_factor = 0.1
-			breakthrough_factor = 0.05
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
 	### FIN 
 	mannerheim_cross = { #Historical
 		
 		available = {
-			should_have_finnish_medals_trigger = yes
 			NOT = { has_government = communism }
 		}
 		frame = 1
@@ -261,7 +52,6 @@ unit_medals = {
 	order_of_the_red_star_finland = { #Alt-Communist (Made-up)
 		
 		available = {
-			should_have_finnish_medals_trigger = yes
 			has_government = communism
 		}
 		frame = 2
@@ -282,7 +72,7 @@ unit_medals = {
 	cross_of_liberty = {
 		
 		available = {
-			should_have_finnish_medals_trigger = yes
+
 		}
 		frame = 3
 		icon = "GFX_medal_icon_fin"
@@ -302,7 +92,6 @@ unit_medals = {
 	order_of_the_white_rose = { #Historical
 		
 		available = {
-			should_have_finnish_medals_trigger = yes
 		}
 		frame = 4
 		icon = "GFX_medal_icon_fin"
@@ -322,7 +111,7 @@ unit_medals = {
 	order_of_the_lion = { #Historical
 		
 		available = {
-			should_have_finnish_medals_trigger = yes
+
 		}
 		frame = 5
 		icon = "GFX_medal_icon_fin"
@@ -1142,113 +931,6 @@ unit_medals = {
 	}
 
 	### CHL ###
-
-	chilean_medal_of_valor = {
-		
-		available = {
-			should_have_chilean_medals_trigger = yes
-			
-		}
-		frame = 1
-		icon = "GFX_medal_icon_chl"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			army_morale_factor = 0.1
-			experience_loss_factor = -0.05
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-	order_of_bernardo_o_higgins = {
-		
-		available = {
-			should_have_chilean_medals_trigger = yes
-		}
-		frame = 2
-		icon = "GFX_medal_icon_chl"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			army_org_factor = 0.1
-			army_strength_factor = 0.05
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-	chilean_order_of_merit = {
-		
-		available = {
-			should_have_chilean_medals_trigger = yes
-		}
-		frame = 3
-		icon = "GFX_medal_icon_chl"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			army_attack_factor = 0.05	
-			breakthrough_factor = 0.05
-			army_strength_factor = 0.05
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-	carabineros_medal_of_chile = {
-		
-		available = {
-			should_have_chilean_medals_trigger = yes
-		}
-		frame = 4
-		icon = "GFX_medal_icon_chl"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			recon_factor = 0.15
-			supply_consumption_factor = -0.1
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-	legion_of_merit_of_chile = {
-		
-		available = {
-			should_have_chilean_medals_trigger = yes
-		}
-		frame = 5
-		icon = "GFX_medal_icon_chl"
-		
-		cost = @cost
-		
-		unit_modifiers = {
-			army_org_factor = 0.1
-			army_morale_factor = 0.05
-		}
-
-		one_time_effect = {
-			add_divisional_commander_xp = 100
-		}
-	}
-
-
-
-
-	
 	### Generic Democratic
 	
 	democratic_gallantry = {

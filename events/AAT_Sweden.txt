@@ -2083,52 +2083,6 @@ country_event = {
 	}
 }
 
-#Landsverk is seized by Germany
-country_event = { 
-	id = AAT_Sweden.11
-	title = AAT_Sweden.11.t
-	desc = AAT_Sweden.11.desc
-	picture = GFX_report_event_german_troops_paris
-	fire_only_once = yes
-	trigger = {
-		original_tag = SWE
-		has_war_with = GER
-		has_completed_focus = SWE_allow_landsverk_to_operate
-		
-	}
-	mean_time_to_happen = { days = 14 }
-		#He needs to stay
-	option = {
-		name = AAT_Sweden.11.a
-		activate_mission = SWE_landsverk_is_siezed
-		random_core_state = {
-			prioritize = { 138 }
-			limit = {
-				is_fully_controlled_by = ROOT
-			}
-			add_extra_state_shared_building_slots = -1
-			add_building_construction = {
-				type = arms_factory
-				level = -1
-				instant_build = yes
-			}
-		}
-
-		random_core_state = {
-			prioritize = { 138 }
-			limit = {
-				is_fully_controlled_by = ROOT
-			}
-			add_extra_state_shared_building_slots = -1
-			add_building_construction = {
-				type = arms_factory
-				level = -1
-				instant_build = yes
-			}
-		}
-	}
-}
-
 #Per Albin bus gets caught
 country_event = { 
 	id = AAT_Sweden.12

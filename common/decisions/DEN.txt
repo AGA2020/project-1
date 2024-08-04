@@ -452,7 +452,6 @@ DEN_balance_of_power_category = {
 			modifier = {
 				add = 75
 				DEN_rearming_ai = yes
-				DEN_christmas_moller = { is_country_leader = no }
 				has_political_power > 200
 				has_war = no
 			}
@@ -502,7 +501,6 @@ DEN_balance_of_power_category = {
 			modifier = {
 				add = 50
 				DEN_rearming_ai = yes
-				DEN_christmas_moller = { is_country_leader = no }
 				has_political_power > 200
 				has_war = no
 			}
@@ -534,7 +532,6 @@ DEN_balance_of_power_category = {
 						DEN_knud_bach = { is_country_leader = yes }
 						DEN_christian_x = { is_country_leader = yes }
 						DEN_frits_clausen = { is_country_leader = yes }
-						DEN_christmas_moller = { is_country_leader = yes }
 						DEN_cay_lembcke = { is_country_leader = yes }
 					}
 				}
@@ -612,61 +609,6 @@ DEN_balance_of_power_category = {
 				}
 				DEN_bop_low_increase_effect = yes
 			}
-		}
-	}
-
-	DEN_bop_ban_all_political_uniforms = {
-		priority = 99
-		icon = GFX_decision_eng_trade_unions_demand
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 75
-				OR = {
-					DEN_historical_ai = yes
-					DEN_rearming_ai = yes
-				}
-				has_political_power > 100
-			}
-		}
-
-		allowed = {
-			original_tag = DEN
-		}
-
-		visible = {
-			has_completed_focus = DEN_social_stability
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-			NOT = {
-				has_country_flag = DEN_banned_all_uniforms_flag
-			}
-		}
-
-		available = {
-		}
-
-		cost = DEN_decision_medium_cost
-
-
-		complete_effect = {
-			DEN_bop_very_low_decrease_effect = yes
-			if = {
-				limit = {
-					DEN_has_political_edicts_dynamic_modifier = no
-				}
-				add_dynamic_modifier = { modifier = DEN_political_edicts_dynamic_modifier }
-			}
-			else = { custom_effect_tooltip = DEN_modify_political_edicts_dynamic_modifier }
-			add_to_variable = {
-				DEN_political_edicts_drift_defence_factor = 0.15
-				tooltip = drift_defence_factor_tt
-			}
-
-			set_country_flag = DEN_banned_all_uniforms_flag
 		}
 	}
 
@@ -2452,108 +2394,7 @@ DEN_development_category = {
 
 DEN_military_category = {
 
-	DEN_deploy_landstormen = {
-		priority = 99
-		icon = GFX_decision_generic_military
 
-		ai_will_do = { 
-			base = 75
-		}
-
-		allowed = { 
-			original_tag = DEN
-		}
-
-		#on_map_mode = map_and_decisions_view
-		
-		available = {
-			has_war = yes
-			has_manpower > 9999
-			FROM = { is_controlled_by = ROOT }
-		}
-
-		state_target = yes
-
-		targets = {
-			state = 37
-			state = 911
-			state = 99
-			state = 912
-			state = 910
-			state = 337
-			state = 101
-		}
-
-		target_trigger = {
-			FROM = {
-				is_core_of = DEN
-			}
-		}
-	
-		visible = {
-			has_country_flag = DEN_can_deploy_landstorm_flag
-			NOT = { has_country_flag = DEN_landstormen_deployed }
-			FROM = { is_controlled_by = ROOT }
-		}
-
-		cancel_trigger = { 
-			OR = {
-				has_war = no
-				NOT = { FROM = { is_controlled_by = ROOT } } 
-				has_country_flag = DEN_recall_landstormen
-			}
-		}
-
-		ai_hint_pp_cost = 50
-		custom_cost_trigger = {
-			has_political_power > 49
-			command_power > 49
-		}
-
-		custom_cost_text = decision_cost_CP_50_pp_50
-
-		fire_only_once = no
-		
-		days_remove = 10
-
-		complete_effect = {
-			hidden_effect = {
-				add_political_power = -50
-				add_command_power = -50
-			}
-			set_country_flag = DEN_landstormen_deployed
-		}
-		
-		remove_effect = {
-			FROM = {
-				create_unit = { 
-					division = "name = \"1. Brigade\" division_template = \"Landstormen Militia\" 	start_experience_factor = 0.8" 
-					owner = ROOT
-				}
-				create_unit = { 
-					division = "name = \"1. Brigade\" division_template = \"Landstormen Militia\" 	start_experience_factor = 0.8" 
-					owner = ROOT
-				}
-				create_unit = { 
-					division = "name = \"1. Brigade\" division_template = \"Landstormen Militia\" 	start_experience_factor = 0.8" 
-					owner = ROOT
-				}
-				create_unit = { 
-					division = "name = \"1. Brigade\" division_template = \"Landstormen Militia\" 	start_experience_factor = 0.8" 
-					owner = ROOT
-				}
-				create_unit = { 
-					division = "name = \"1. Brigade\" division_template = \"Landstormen Militia\" 	start_experience_factor = 0.8" 
-					owner = ROOT
-				}
-				create_unit = { 
-					division = "name = \"1. Brigade\" division_template = \"Landstormen Militia\" 	start_experience_factor = 0.8" 
-					owner = ROOT
-				}
-			}
-			add_manpower = -10000
-		}
-	}
 	DEN_recall_landstormen = {
 		priority = 99
 		icon = GFX_decision_eng_blackshirt_march 
