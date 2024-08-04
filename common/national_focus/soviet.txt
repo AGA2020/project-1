@@ -249,6 +249,28 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_Tolkach
+		icon = GFX_SOV_planned_economy_ccp_2d_sov_compatibility
+		prerequisite = { focus = SOV_heavy_industry }
+		relative_position_id = SOV_heavy_industry
+		x = 1
+		y = 1
+		cost = 10
+		available = {
+		}
+		ai_will_do = {
+			factor = 8 
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				add_idea = home_of_revolution_2
+				remove_idea = home_of_revolution
+			}
+		}
+	}
+
+	focus = {
 		id = SOV_finish_the_five_year_plan
 
 		icon = GFX_focus_generic_industry_1

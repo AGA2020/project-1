@@ -7026,17 +7026,6 @@ SOV_set_up_right_opposition_militia = {
 				division = "name = \"Peasant Militia brigade\" division_template = \"Bukharinist Peasant Militia\" start_experience_factor = 0.01 start_equipment_factor = 0.55" owner = ROOT
 			}
 		}
-		# More Peasant Militia if collectivization has been reversed
-		IF = {
-			limit = {
-				ROOT = { has_completed_focus = SOV_reverse_the_collectivization_process }
-				NOT = { has_state_category = enclave }
-				NOT = { has_state_category = wasteland }
-			}
-			create_unit = {
-				division = "name = \"Peasant Militia brigade\" division_template = \"Bukharinist Peasant Militia\" start_experience_factor = 0.01 start_equipment_factor = 0.55" owner = ROOT
-			}
-		}
 	}
 }
 
