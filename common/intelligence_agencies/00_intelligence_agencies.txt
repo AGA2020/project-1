@@ -294,22 +294,6 @@ intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_SWI_swi_buero_ha
 	names = { "Buero Ha" }
-	
-	available = { 
-		tag = SWI
-		NOT = {
-			has_government = fascism
-		}
-		has_completed_focus = SWI_buero_ha
-	}
-	
-	default = { 		
-		tag = SWI
-		NOT = {
-			has_government = fascism
-		}
-		has_completed_focus = SWI_buero_ha
-	} 
 }
 
 intelligence_agency = {

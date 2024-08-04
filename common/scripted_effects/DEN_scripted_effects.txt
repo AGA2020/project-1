@@ -211,10 +211,6 @@ DEN_available_candidates = {
 			check_variable = { DEN_democratic_popularity > 29 }
 			NOT = { 
 				has_character = DEN_thorvald_stauning
-				has_country_leader =  {
-					ruling_only = yes 
-					character = DEN_vilhelm_buhl
-				}
 			}
 		}
 		custom_effect_tooltip = DEN_vilhelm_buhl
@@ -278,16 +274,6 @@ DEN_socialdemokratiet_takes_over = {
 				long_name = DEN_democratic_party
 				name = DEN_democratic_party_long
 			}
-			DEN_vilhelm_buhl = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = socialism
-						expire = "1965.1.1.1"
-						traits = { DEN_socialdemokrat }
-					}
-				}
-			}
 		}
 		else = {
 			set_politics = {
@@ -321,16 +307,6 @@ DEN_socialdemokratiet_takes_over = {
 				ideology = democratic
 				name = DEN_democratic_party
 				long_name = DEN_democratic_party_long
-			}
-			DEN_vilhelm_buhl = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = socialism
-						expire = "1965.1.1.1"
-						traits = { DEN_socialdemokrat }
-					}
-				}
 			}
 		}
 		else = {
@@ -519,18 +495,6 @@ DEN_remove_democratic_leader = {
 	else_if = {
 		limit = {
 			has_country_leader = {
-				character = DEN_vilhelm_buhl
-				ruling_only = yes
-			}
-		}
-		remove_country_leader_role = {
-			character = DEN_vilhelm_buhl
-			ideology = socialism
-		}
-	}
-	else_if = {
-		limit = {
-			has_country_leader = {
 				character = DEN_knud_kristensen
 				ruling_only = yes
 			}
@@ -585,7 +549,6 @@ DEN_dove_is_removed_from_power = {
 		limit = {
 			OR = {
 				DEN_thorvald_stauning = { is_country_leader = yes }
-				DEN_vilhelm_buhl = { is_country_leader = yes }
 				DEN_knud_kristensen = { is_country_leader = yes }
 				DEN_aksel_larsen = { is_country_leader = yes }
 			}
@@ -3775,18 +3738,6 @@ DEN_create_the_plenipotentiary = { #This is set up in an event and will create a
 			FROM = { #Overlord Scope
 				original_tag = GER
 				has_government = fascism
-			}
-		}
-		DEN_werner_best = {
-			add_country_leader_role = {
-				country_leader = {
-					ideology = nazism
-					expire = "1965.1.1.1"
-					id = -1
-					traits = {
-						DEN_plenipotentiary
-					}
-				}
 			}
 		}
 	}

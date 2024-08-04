@@ -1154,21 +1154,6 @@ country_event = {
 		}
 		retire_character = CHL_arturo_alessandri
 
-		IF = {
-			limit = {
-				has_completed_focus = CHL_prop_up_gustavo_ross
-			}
-			add_stability = 0.05
-
-			add_political_power = 75
-
-			add_trait = {
-			    character = CHL_gustavo_ross_santa_maria
-			    ideology = liberalism
-			    trait = JUNO_popular_among_the_people
-			}
-		}
-
 		country_event = {
 			id = CHL_political_events.18
 			days = 1

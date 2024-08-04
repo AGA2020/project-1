@@ -35,24 +35,6 @@ DEN_occupation_category = {
 	}
 }
 
-DEN_resistance_category = { 
-	icon = GFX_decision_category_DEN_resistance
-	
-	allowed = {
-		original_tag = DEN
-		has_dlc = "Arms Against Tyranny"
-	}
-	
-	priority = 99
-	
-	visible = {
-		is_subject = yes
-		OR = {
-			has_completed_focus = DEN_align_with_foreign_powers
-		}
-	}
-}
-
 DEN_overlord_category = { 
 	icon = GFX_decision_category_power_struggle
 	

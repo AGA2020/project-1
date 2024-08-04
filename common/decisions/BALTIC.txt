@@ -49,7 +49,6 @@ BALTIC_entente = {
 				is_historical_focus_on = no
 				NOT = {
 					has_completed_focus = EST_look_north
-					has_completed_focus = LAT_look_north
 					#has_completed_focus = LIT_look_north #TODO
 				}
 			}

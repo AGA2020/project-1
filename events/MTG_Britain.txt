@@ -48,7 +48,6 @@ country_event = {
 	# 	trigger = {
 	# 		NOT = {
 	# 			OR = {
-	# 				has_completed_focus = ENG_organize_the_blackshirts
 	# 				has_completed_focus = ENG_concessions_to_the_trade_unions
 	# 				has_completed_focus = ENG_steady_as_she_goes
 	# 			}
@@ -63,10 +62,6 @@ country_event = {
 	# 		modifier = {
 	# 			factor = 0
 	# 			has_completed_focus = ENG_steady_as_she_goes
-	# 		}
-	# 		modifier = {
-	# 			factor = 0
-	# 			has_completed_focus = ENG_organize_the_blackshirts
 	# 		}
 	# 		modifier = {
 	# 			factor = 0
@@ -123,7 +118,6 @@ country_event = {
 	# 	trigger = {
 	# 		NOT = {
 	# 			OR = {
-	# 				has_completed_focus = ENG_organize_the_blackshirts
 	# 				has_completed_focus = ENG_concessions_to_the_trade_unions
 	# 				has_completed_focus = ENG_steady_as_she_goes
 	# 			}
@@ -138,10 +132,6 @@ country_event = {
 	# 		modifier = {
 	# 			factor = 0
 	# 			has_completed_focus = ENG_steady_as_she_goes
-	# 		}
-	# 		modifier = {
-	# 			factor = 0
-	# 			has_completed_focus = ENG_organize_the_blackshirts
 	# 		}
 	# 		modifier = {
 	# 			factor = 0
@@ -1504,295 +1494,6 @@ country_event = {
 	# Ok
 	option = {
 		name = unfortunate
-	}
-}
-
-# Organize the Blackshirts civil war event
-country_event = {
-	id = mtg_britain.33
-	title = mtg_britain.33.t
-	desc = mtg_britain.33.d
-	picture = GFX_report_event_ger_civil_war
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = ENG
-		has_completed_focus = ENG_organize_the_blackshirts
-		NOT = { has_government = fascism }
-		has_stability < 0.5
-	}
-	
-	mean_time_to_happen = {
-		days = 4
-	}
-
-	immediate = {
-		hidden_effect = {
-			add_stability = 30
-			every_state = {
-				limit = {
-					is_owned_by = ENG
-					NOT = { has_state_flag = ENG_has_blackshirt_support }
-				}
-				set_state_flag = ENG_has_no_blackshirt_support
-			}
-			random_owned_state = {
-				limit = {
-					has_state_flag = ENG_has_blackshirt_support
-				}
-				ENG = { set_capital = { state = PREV } }
-			}
-			start_civil_war = {
-				ruling_party = fascism
-				ideology = democratic
-				size = 0.5
-				states = all
-				states_filter = {
-					has_state_flag = ENG_has_no_blackshirt_support
-				}
-			}
-			set_politics = {
-				ruling_party = fascism
-				elections_allowed = no
-			}
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.51
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.05
-			}
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.15
-			}
-			random_other_country = {
-				limit = {
-					original_tag = ENG
-					has_government = democratic
-				}
-				save_event_target_as = democratic_uk_civil_war
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_id = 999
-						}
-					}
-					set_nationality = ENG
-				}
-				ENG = {
-					transfer_navy = { target = PREV }
-					hidden_effect = {
-						every_unit_leader = {
-							limit = {
-								OR = {
-									has_id = 983
-									has_id = 984
-									has_id = 985
-									has_id = 986
-									has_id = 987
-									has_id = 988
-									has_id = 989
-									has_id = 990
-									has_id = 991
-									has_id = 992
-								}
-							}
-							set_nationality = event_target:democratic_uk_civil_war
-						}
-					}
-				}
-			}
-			event_target:democratic_uk_civil_war = {
-				if = {
-					limit = {
-						has_full_control_of_state = 126
-					}
-					set_capital = { state = 126 }
-				}
-				else_if = {
-					limit = {
-						has_full_control_of_state = 132
-					}
-					set_capital = { state = 132 }
-				}
-				else_if = {
-					limit = {
-						has_full_control_of_state = 128
-					}
-					set_capital = { state = 128 }
-				}
-				else_if = {
-					limit = {
-						has_full_control_of_state = 127
-					}
-					set_capital = { state = 127 }
-				}
-				else_if = {
-					limit = {
-						has_full_control_of_state = 132
-					}
-					set_capital = { state = 132 }
-				}
-				else_if = {
-					limit = {
-						has_full_control_of_state = 130
-					}
-					set_capital = { state = 130 }
-				}
-				else_if = {
-					limit = {
-						has_full_control_of_state = 121
-					}
-					set_capital = { state = 121 }
-				}
-				else_if = {
-					limit = {
-						has_full_control_of_state = 133
-					}
-					set_capital = { state = 133 }
-				}
-				else = {
-					random_owned_state = {
-						limit = {
-							is_on_continent = europe
-						}
-						event_target:democratic_uk_civil_war = { set_capital = { state = PREV } }
-					}
-				}
-			}
-			event_target:democratic_uk_civil_war = {
-				division_template = {
-					name = "Loyalist Brigade"
-					priority = 1
-					division_names_group = ENG_DEM_01
-					is_locked = yes
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-					}
-				}
-				every_owned_state = {
-					limit = {
-						is_on_continent = europe
-					}
-					create_unit = {
-						division = "division_template = \"Loyalist Brigade\" start_experience_factor = 0 start_equipment_factor = 1"
-						owner = PREV
-					}
-					create_unit = {
-						division = "division_template = \"Loyalist Brigade\" start_experience_factor = 0 start_equipment_factor = 1"
-						owner = PREV
-					}
-				}
-			}
-		}
-	}
-	
-	# Ok
-	option = {
-		name = mtg_britain.33.a
-		custom_effect_tooltip = ENG_democratic_civil_war_tt
-		hidden_effect = {
-			RAJ = { retire_country_leader = yes }
-		}
-		hidden_effect = { news_event = { id = mtg_news.41 days = 1 } }
-		division_template = {
-			name = "Blackshirt Brigade"
-			priority = 1
-			division_names_group = ENG_FAS_01
-			is_locked = yes
-			regiments = {
-				infantry = { x = 0 y = 0 }
-				infantry = { x = 0 y = 1 }
-				infantry = { x = 0 y = 2 }
-			}
-		}
-		every_owned_state = {
-			limit = {
-				is_on_continent = europe
-			}
-			create_unit = {
-				division = "division_template = \"Blackshirt Brigade\" start_experience_factor = 0 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "division_template = \"Blackshirt Brigade\" start_experience_factor = 0 start_equipment_factor = 1"
-				owner = ROOT
-			}
-		}
-	}
-}
-
-# End of British Fascist Civil War event
-country_event = {
-	id = mtg_britain.34
-	title = mtg_britain.34.t
-	desc = mtg_britain.34.d
-	picture = GFX_report_event_fascist_speech
-
-	is_triggered_only = yes
-	
-	# Ok
-	option = {
-		name = mtg_britain.34.a
-		add_ideas = ENG_george_vi
-		hidden_effect = {
-			RAJ = {
-				leave_faction = yes
-				drop_cosmetic_tag = yes
-				retire_country_leader = yes
-			}
-			MAL = {
-				drop_cosmetic_tag = yes
-				retire_country_leader = yes
-			}
-			CAN = {
-				if = {
-					limit = {
-						has_completed_focus = CAN_strengthen_the_commonwealth_ties
-					}
-					set_faction_name = "ENG_commonwealth_of_nations"
-					every_other_country = {
-						limit = {
-							NOT = { tag = SAF }
-							NOT = { tag = AST }
-							NOT = { tag = NZL }
-						}
-						CAN = {
-							add_ai_strategy = {
-								type = alliance
-								id = PREV
-								value = -200
-							}
-						}
-					}
-				}
-			}
-		}
-		custom_effect_tooltip = mtg_britain.34_tt
-		hidden_effect = { news_event = { id = mtg_news.42 days = 1 } }
-		delete_unit_template_and_units = { division_template = "Blackshirt Brigade" }
-	}
-}
-
-# March on Downing Street event
-country_event = {
-	id = mtg_britain.35
-	title = mtg_britain.35.t
-	desc = mtg_britain.35.d
-	picture = GFX_report_event_eng_mosley_march_on_downing_street
-
-	is_triggered_only = yes
-	
-	# Ok
-	option = {
-		name = mtg_britain.35.a
-		set_politics = { ruling_party = fascism elections_allowed = no }
-		add_timed_idea = { idea = ENG_restoring_public_order days = 365 }
 	}
 }
 

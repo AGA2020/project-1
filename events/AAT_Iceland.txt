@@ -1363,9 +1363,6 @@ country_event = {
 		set_politics = {
 			ruling_party = democratic
 		}
-		ICE_hermann_jonasson = {
-			promote_character = yes 
-		}
 		
 	}
 
