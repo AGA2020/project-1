@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType={
+        name = "GFX_GER_Goerings_Four_Year_Plan"
+        texturefile = "gfx/interface/goals/GER_Goerings_Four_Year_Plan.dds"
+    }
+}
