@@ -197,6 +197,37 @@ focus = {
 		}
 	}
 	focus = {
+		id = USA_federal_housing_act
+		icon = GFX_america_goal_champagn
+		x = -2
+		y = 1
+		prerequisite = { focus = USA_wpa }
+		relative_position_id = USA_wpa
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_government = democratic
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+		remove_idea = home_of_the_free
+		add_idea = home_of_the_free_2
+				}
+			}
+	}
+	focus = {
 		id = USA_agricultural_adjustment_act
 		icon = GFX_goal_generic_consumer_goods
 		x = 0

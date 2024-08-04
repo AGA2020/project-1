@@ -24,3 +24,5 @@
  ger_annexed_minor:0 "Germany Annexed Hungary or Bulgaria"
  eng_annexed_minor:0 "Uk Annexed Canada or Ast"
  Soviet_Power_Vacuum:0 "Soviet Power Vacuum"
+ USA_federal_housing_act:1 "Federal Housing Act"
+ USA_federal_housing_act_desc:1 "As part of our ongoing efforts to eradicate poverty in the United States, we will create a program of federally-subsidized housing."
