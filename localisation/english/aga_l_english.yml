@@ -36,3 +36,5 @@
   GER_reichswerke_expansion_desc:0 "Under the directives of the Nazi regime, the Reichswerke Hermann Göring is spearheading an ambitious industrial expansion project. By increasing the maximum building slots in our states by 10%, we will create the necessary infrastructure to bolster our war production capabilities. This expansion is critical to ensuring that our military forces are well-supplied and ready to achieve total victory. The Reich's industrial power will know no bounds as we build a stronger, more resilient Germany."
  sour_loser_2:0 "Bitter Loser"
  sour_loser_2_desc:0 "Bitterness over defeat in the Great War dominates the politics of this nation."
+ water_mediterranean:0 "Mediterranean(Ocean)"
+ water_fjords_mediterranean:0 "Mediterranean(Fjords and Archipelagos)"
