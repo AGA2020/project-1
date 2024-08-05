@@ -1389,40 +1389,6 @@ characters={
 				small="GFX_idea_sanzo_nosaka"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = sanzo_nosaka
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-					}
-					has_completed_focus = JAP_the_unthinkable_option 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			allowed = {
-				original_tag = JAP
-			}
-			traits = {
-				communist_revolutionary 
-			}
-			do_effect = {
-				NOT = {
-					has_government = communism 
-				}
-			}
-			ai_will_do = {
-				factor = 0.000
-			}
-		}
 	}
 
 	JAP_kijuro_shidehara={

@@ -103,30 +103,6 @@ ideas = {
 			
 			traits = { construction_company }
 		}
-
-		DEN_danske_stalvalsevaerket_ns = {
-
-			picture = idea_DEN_danske_stalvalsevaerket_ns 
-			
-			allowed = {
-				original_tag = DEN
-				has_dlc = "Arms Against Tyranny"
-			}
-
-			available = {
-				has_completed_focus = DEN_danske_stalvalsevaerket
-			}
-			
-			research_bonus = {
-				industry = 0.15
-			}
-			
-			traits = { industrial_concern }
-
-			modifier = {
-				production_lack_of_resource_penalty_factor = -0.1
-			}
-		}
 	}
 
 
