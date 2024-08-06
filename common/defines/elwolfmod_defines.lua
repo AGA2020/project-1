@@ -23,8 +23,8 @@ NDefines.NGame.LAG_DAYS_FOR_PAUSE = 30
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 13 							    -- WAS 48 | drastically cuts down on save file sizes after WW2 starts and well into barbarossa
 NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14					     	    -- WAS 60 | less messages lying around at the top of your screen
 
-NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP = "elwolfmod"
-NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP_NAME = "elwolfmod"
+NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP = "project1"
+NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP_NAME = "project1"
 
 NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0                     -- Removed for game stability/reducing chance of desync
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 9999						    -- Unlimited special forces
@@ -42,10 +42,6 @@ NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 0					-- Free license
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1                        -- Free license
 NDefines.NProduction.BASE_LICENSE_IC_COST = 0						    -- Base IC cost for lended license
 
--- Free Templates
-NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 20 	--Base cost to unlock a regiment slot,
-NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 5	--Base cost to change a regiment column.
-NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 10 	--Base cost to unlock a support slot
 -- Free Designs
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 0				    -- XP cost for adding a new equipment module in an empty slot when creating an equipment variant.
 NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 0				-- XP cost for replacing one equipment module with an unrelated module when creating an equipment variant.
