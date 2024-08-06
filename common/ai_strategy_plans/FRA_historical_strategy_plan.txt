@@ -8,6 +8,12 @@ FRA_historical_plan = {
 	enable = {
 		original_tag = FRA
 	}
+	abort = {
+		has_game_rule = {
+			rule = FRA_ai_behavior
+			option = DEFAULT
+		}
+	}
 
 	ai_national_focuses = {
 		FRA_begin_rearmament
