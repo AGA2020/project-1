@@ -1518,7 +1518,6 @@ country_event = {
 					ITA_is_historical_ai = yes #Historical ITA has 50%-50% chances of accepting
 					ITA_is_alt_fascist_balbo_ai = yes
 					ITA_is_alt_fascist_grandi_ai = yes
-					ITA_is_monarchist_ai = yes
 				}
 			}
 		}
@@ -1586,7 +1585,6 @@ country_event = {
 				OR = {
 					ITA_is_alt_fascist_balbo_ai = yes
 					ITA_is_alt_fascist_grandi_ai = yes
-					ITA_is_monarchist_ai = yes
 				}
 			}
 		}

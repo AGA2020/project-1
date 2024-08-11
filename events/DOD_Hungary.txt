@@ -888,10 +888,6 @@ country_event = {
 		name = DOD_hungary.32.c
 		ai_chance = {
 			factor = 45
-			modifier = {
-				ENG = { has_completed_focus = uk_balkan_strategy }
-				factor = 2
-			}
 		}
 		trigger = {
 			ENG = {
@@ -1491,16 +1487,6 @@ country_event = {
 				}
 			}
 			FRA = { country_event = { id = DOD_hungary.60 } } #France given option to intervene, if they don't have bigger problems
-		}
-		if = {
-			limit = { 
-				ENG = {
-					has_war = no
-					has_government = democratic
-					has_completed_focus = uk_balkan_strategy
-				}
-			}
-			ENG = { country_event = { id = DOD_hungary.60 } } #Britain given option to intervene, if they don't have bigger problems
 		}
 	}
 
@@ -4930,25 +4916,6 @@ country_event = {
 			}
 		}
 		ITA = { country_event = DOD_hungary.146 }
-	}
-	option = {# appeal to Britain
-		name = DOD_hungary.145.e
-		ai_chance = {
-			factor = 35
-			modifier = {
-				is_in_faction_with = ENG
-				factor = 10
-			}
-		}
-		trigger = {
-			ENG = {
-				has_completed_focus = uk_balkan_strategy
-			}
-			NOT = {
-				has_war_with = ENG
-			}
-		}
-		ENG = { country_event = DOD_hungary.146 }
 	}
 
 }

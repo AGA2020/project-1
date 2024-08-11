@@ -8990,10 +8990,6 @@ country_event = {
 		ai_chance = {
 			base = 95
 			modifier = {
-				factor = 0.1
-				has_completed_focus = POR_the_royal_iberian_alliance
-			}
-			modifier = {
 				factor = 0.8
 				NOT = { has_war_with = FROM }
 				has_war = yes

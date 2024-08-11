@@ -4145,7 +4145,6 @@ country_event = {
 				factor = 0.5
 			}
 		}
-		GER = { puppet = TUR }
 		SOV = {
 			transfer_state = 354
 			transfer_state = 353
@@ -4170,28 +4169,11 @@ country_event = {
 			}
 		}
 		trigger = {
-			TUR = {
-				is_puppet = no
-			}
 			NOT = {
 				has_war_with = ENG
 			}
-			NOT = {
-				any_other_country = {
-					is_in_faction_with = ENG
-					has_war_with = TUR
-				}
-			}
 			ENG = {
 				is_faction_leader = yes
-			}
-		}
-		ENG = { add_to_faction = TUR }
-		TUR = {
-			add_ai_strategy = {
-				type = alliance
-				id = "ENG"
-				value = 200
 			}
 		}
 		hidden_effect = {

@@ -109,7 +109,6 @@ focus_tree = {
 			NOT = {
 				OR = {
 					has_completed_focus = BRA_estado_novo
-					has_completed_focus = BRA_estado_moderno
 				}
 			}
 		}

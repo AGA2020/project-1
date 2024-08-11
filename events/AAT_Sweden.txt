@@ -2099,14 +2099,6 @@ country_event = {
 	option = {
 		name = AAT_Sweden.12.a
 		kill_country_leader = yes
-		SWE_tage_erlander = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = socialism
-				}
-			}
-		}
 	}
 }
 
@@ -6895,16 +6887,6 @@ country_event = {
 		name =  AAT_Sweden_nationalists.4.b
 		ai_chance = {
 			base = 10
-		}
-		SWE_birger_furugard = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = nazism
-					expire = "1965.1.1"
-					traits = { national_socialist_veterinarian }
-				}
-			}
 		}
 	}
 }

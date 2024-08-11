@@ -330,7 +330,6 @@ country_event = { #Vote of No Confidence
 			}
 		}
 		trigger = {
-			DEN_knud_bach = { is_country_leader = no }
 			check_variable = { DEN_neutrality_popularity > 19 }
 		}
 
@@ -1629,12 +1628,6 @@ country_event = { #Danish Declares Independence
 		name = denmark_occupation_event.6.b
 		ai_chance = {
 			base = 1
-			modifier = {
-				factor = 5
-				FROM = {
-					has_completed_focus = DEN_pledge_allegiance
-				}
-			}
 			modifier = {
 				factor = 10
 				has_government = FROM
@@ -3665,30 +3658,13 @@ country_event = { #Denmark: Choose new country leader
 				has_country_flag = DEN_banned_fascism_flag
 				has_country_flag = banned_fascism_flag
 				AND = {
-					DEN_cay_lembcke = {
-						has_character_flag = DEN_political_agitator_flag
-					}
 					DEN_frits_clausen = {
 						has_character_flag = DEN_political_agitator_flag
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				DEN_cay_lembcke = { is_country_leader = yes }
-			} 
-			promote_character = DEN_frits_clausen
-		}
-		else_if = {
-			limit = {
-				DEN_frits_clausen = { is_country_leader = yes }
-			}
-			promote_character = DEN_cay_lembcke
-		}
-		else = {
-			country_event = { id = denmark_overlord_events.13 days = 1 } 
-		}
+		country_event = { id = denmark_overlord_events.13 days = 1 } 
 	}
 }
 country_event = { #Overlord: New Danish Leader

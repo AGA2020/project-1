@@ -763,32 +763,6 @@ every_possible_country = {
 				small="GFX_idea_SPR_etelvino_vega"
 			}
 		}
-		advisor={
-			slot = army_chief
-			idea_token = SPR_etelvino_vega
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-			}
-			available = {
-				OR = {
-					has_completed_focus = SPR_demand_ministerial_positions
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_chief_defensive_2 }
-			cost = 100
-		}
 	}
 
 	generate_character = {
@@ -798,30 +772,6 @@ every_possible_country = {
 			army={
 				small="GFX_idea_SPR_mate_zalka"
 			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = SPR_mate_zalka
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-			}
-			available = {
-				has_completed_focus = SPR_demand_ministerial_positions
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_chief_offensive_2 }
-			cost = 100
 		}
 	}
 
@@ -1077,35 +1027,6 @@ every_possible_country = {
 			army={
 				small="GFX_idea_SPR_francisco_ciutat_de_miguel"
 			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = SPR_francisco_ciutat_de_miguel
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-			}
-			available = {
-				OR = {
-					has_completed_focus = SPR_demand_ministerial_positions
-				}
-				NOT = {
-					has_completed_focus = SPR_oppose_the_communists
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_infantry_2 }
-			cost = 100
 		}
 	}
 
@@ -2105,31 +2026,6 @@ every_possible_country = {
 		portraits={
 			army={
 				small="GFX_idea_SPA_jose_antonio_primo_de_rivera"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_jose_antonio_primo_de_rivera
-			name = SPA_jose_antonio_primo_de_rivera 
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPD
-					tag = SPC
-				}
-			}
-			available = {
-				has_completed_focus = SPA_primo_de_rivera_prisoner_exchange
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
-			}
-			traits = {
-				falangist_figurehead 
 			}
 		}
 	}
