@@ -1262,30 +1262,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_reichswerke_expansion
-		icon = GFX_GER_Goerings_Four_Year_Plan
-		dynamic = yes
-		prerequisite = { focus = GER_hermann_goring_werke }
-		x = 1
-		y = 2
-		relative_position_id = GER_hermann_goring_werke
-		cost = 10
-		ai_will_do = {
-			factor = 9
-		}
-
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			swap_ideas = {
-					remove_idea = sour_loser
-					add_idea = sour_loser_2
-			}
-		}
-	}
-
-	focus = {
 		id = GER_kdf_wagen
 		icon = GFX_goal_generic_construct_civ_factory
 		dynamic = yes
