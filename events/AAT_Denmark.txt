@@ -9804,16 +9804,6 @@ country_event = { #The King Dies
 					ruling_only = yes
 				}
 			}
-			DEN_frederik_ix = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = despotism
-						expire = "1965.1.1.1"
-						traits = { DEN_the_king }
-					}
-				}
-			}
 		}
 
 		hidden_effect = {

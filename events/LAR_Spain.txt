@@ -9173,9 +9173,6 @@ country_event = {
 			    popularity = 100
 			}
 		}
-		POR ={
-			set_rule = { can_join_factions = no	}
-		}
 	}
 }
 

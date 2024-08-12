@@ -1386,49 +1386,6 @@ on_actions = {
 			#	}
 			#
 
-			if = {
-				limit = {
-					SWE = {
-						has_completed_focus = SWE_finlands_cause_is_ours
-						has_idea = SWE_gateway_to_peace
-					}
-					FROM.FROM = {
-						state = 195 #Leningrad
-					}
-
-					FROM = { 
-						original_tag = SOV 
-						OR = {
-							has_war_with = FIN
-							has_war_with = SWE
-						}
-					}
-
-					ROOT = {
-						OR = {
-							original_tag = FIN
-							original_tag = SWE
-							is_subject_of = SWE
-							FIN = {
-								any_allied_country = {
-									has_war_with = SOV
-								}
-							}
-
-							SWE = {
-								any_allied_country = {
-									has_war_with = SOV
-								}
-							}
-						}
-					}
-				}
-
-				FROM = {  
-					country_event = { id = AAT_Sweden.26 hours = 2 random_hours = 2 }	
-				}
-			}
-
 			#	ROOT is new controller, FROM is old controller, FROM.FROM is state ID.
 			if = {
 				limit = {

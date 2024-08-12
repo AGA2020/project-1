@@ -1109,7 +1109,6 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = ETH_expanding_the_railway_network
 			}
 
 			cost = 75
@@ -1133,7 +1132,6 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = ETH_invest_in_the_east
 			}
 			cost = 125
 						
@@ -1151,7 +1149,6 @@ ideas = {
 				has_dlc = "By Blood Alone"
 			}
 			available = {
-				has_completed_focus = ETH_modernizing_the_industry
 			}
 			cost = 150
 			research_bonus = {
@@ -1168,7 +1165,6 @@ ideas = {
 				has_dlc = "By Blood Alone"
 			}
 			available = {
-				has_completed_focus = ETH_invite_foreign_prospectors
 			}
 			cost = 150
 
@@ -1193,7 +1189,6 @@ ideas = {
 				has_dlc = "By Blood Alone"
 			}
 			available = {
-				has_completed_focus = ETH_invite_foreign_prospectors
 			}
 
 			
@@ -1215,19 +1210,7 @@ ideas = {
 				has_dlc = "By Blood Alone"
 			}
 			visible = {
-				has_completed_focus = ETH_invite_foreign_industrialists
-				IF = {
-					limit = {NOT = {has_idea = ETH_english_electric}}
-					ENG = {
-						has_opinion = {
-							target = ETH
-							value > 75
-						}
-					}
-				}
-				ELSE = {
 					NOT = {has_war_with = ENG}
-				}
 			}
 			
 			research_bonus = {
@@ -1247,19 +1230,7 @@ ideas = {
 				has_dlc = "By Blood Alone"
 			}
 			visible = {
-				has_completed_focus = ETH_invite_foreign_industrialists
-				IF = {
-					limit = {NOT = {has_idea = ETH_CZE_skoda_works_2}}
-					CZE = {
-						has_opinion = {
-							target = ETH
-							value > 75
-						}
-					}
-				}
-				ELSE = {
 					NOT = {has_war_with = CZE}
-				}
 			}
 
 			research_bonus = {
@@ -1281,7 +1252,6 @@ ideas = {
 				has_dlc = "By Blood Alone"
 			}
 			available = {
-				has_completed_focus = ETH_invest_in_the_west
 			}
 			cost = 150
 
@@ -1300,7 +1270,6 @@ ideas = {
 				has_dlc = "By Blood Alone"
 			}
 			available = {
-				has_completed_focus = ETH_invest_in_the_north
 			}
 			cost = 150
 
@@ -1352,19 +1321,7 @@ ideas = {
 
 			picture = generic_artillery_manufacturer_2
 			visible = {
-				has_completed_focus = ETH_invite_foreign_industrialists
-				IF = {
-					limit = {NOT = {has_idea = ETH_CZE_skoda_artillery}}
-					CZE = {
-						has_opinion = {
-							target = ETH
-							value > 75
-						}
-					}
-				}
-				ELSE = {
 					NOT = {has_war_with = CZE}
-				}
 			}
 			allowed = {
 				original_tag = ETH
@@ -1389,19 +1346,7 @@ ideas = {
 				has_dlc = "By Blood Alone"
 			}
 			visible = {
-				has_completed_focus = ETH_invite_foreign_industrialists
-				IF = {
-					limit = {NOT = {has_idea = ETH_mas}}
-					FRA = {
-						has_opinion = {
-							target = ETH
-							value > 75
-						}
-					}
-				}
-				ELSE = {
 					NOT = {has_war_with = FRA}
-				}
 			}							
 			research_bonus = {
 				infantry_weapons = 0.15
@@ -1416,19 +1361,7 @@ ideas = {
 				has_dlc = "By Blood Alone"
 			}
 			visible = {
-				has_completed_focus = ETH_invite_foreign_industrialists
-				IF = {
-					limit = {NOT = {has_idea = ETH_scania}}
-					SWE = {
-						has_opinion = {
-							target = ETH
-							value > 75
-						}
-					}
-				}
-				ELSE = {
 					NOT = {has_war_with = SWE}
-				}
 			}
 			research_bonus = {
 				motorized_equipment = 0.15
@@ -1449,19 +1382,7 @@ ideas = {
 				has_dlc = "By Blood Alone"
 			}
 			visible = {
-				has_completed_focus = ETH_invite_foreign_industrialists
-				IF = {
-					limit = {NOT = {has_idea = ETH_bofors}}
-					SWE = {
-						has_opinion = {
-							target = ETH
-							value > 75
-						}
-					}
-				}
-				ELSE = {
 					NOT = {has_war_with = SWE}
-				}
 			}
 			research_bonus = {
 				artillery = 0.15

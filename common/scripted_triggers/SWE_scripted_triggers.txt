@@ -19,16 +19,8 @@ SWE_is_historical_ai = {
 		OR = {
 			AND = {
 				is_historical_focus_on = yes 
-				has_game_rule = {
-					rule = SWE_AI_BEHAVIOR
-					option = DEFAULT
-				}
 			}
 			has_country_flag = SWE_AI_RANDOM_HISTORICAL
-			has_game_rule = {
-				rule = SWE_ai_behavior
-				option = HISTORICAL
-			}
 		}	
 }
 
