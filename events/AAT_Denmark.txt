@@ -1700,13 +1700,6 @@ country_event = { #Danish Liberation War
 				}
 			}
 		}
-		
-		if = {
-			limit = {
-				has_completed_focus = DEN_form_the_danish_freedom_council
-			}
-			DEN_freedom_council_takes_over = yes
-		}
 
 		DEN_independence_war_effects = yes
 

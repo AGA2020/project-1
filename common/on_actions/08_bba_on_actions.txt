@@ -741,34 +741,6 @@ on_actions = {
 				}
 			}
 		}
-
-		effect = {
-			#Italy defends Austria from Germany
-			if = {
-				limit = {
-					ROOT = { 
-						original_tag = GER 
-					}
-					FROM = { 
-						original_tag = AUS 
-					}
-					ITA = {
-						has_completed_focus = ITA_guarantee_austrian_independence
-					}
-				}
-
-				AUS = {
-					give_military_access = ITA
-				}
-				
-				ITA = {
-					add_timed_idea = {
-						idea = ITA_alpine_defense
-						days = 360
-					}
-				}
-			}
-		}
 	}
 
 	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
@@ -848,26 +820,6 @@ on_actions = {
 				ITA_bop_high_increase_effect = yes
 				ITA_bop_decrease_lost_core_modifier = yes
 				#log = "Reducing BoP modifier penalty due to getting back core [FROM.FROM.GetName]"
-			}
-		}
-
-		#Cooperatives for Intensive Exploitation
-		effect = {
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = ITA
-						has_completed_focus = ITA_cooperatives_for_intensive_exploitation
-					}
-					FROM.FROM = {
-						is_on_continent = africa
-						state_has_any_resource = yes
-						NOT = { has_dynamic_modifier = { modifier = ITA_cooperatives_for_intensive_exploitation_dm } }
-					}
-				}
-				FROM.FROM = {
-					add_dynamic_modifier = { modifier = ITA_cooperatives_for_intensive_exploitation_dm }
-				}
 			}
 		}
 

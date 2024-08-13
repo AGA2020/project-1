@@ -13,7 +13,7 @@
 #	}
 # 
 NORDIC_rename_faction = {
-	NOT = { has_completed_focus = SWE_decentralized_nordic_army_command }
+
 }
 NORDIC_is_nordic = {
 	OR = {
