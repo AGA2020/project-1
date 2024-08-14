@@ -1732,12 +1732,6 @@ defined_text = {
 defined_text = {
 	name = GetBalkanFactionName
 	text = {
-		trigger = {
-			has_completed_focus = BUL_balkan_federation_of_socialist_republics
-		}
-		localization_key = BUL_bury_the_grudges_of_the_past_communist
-	}
-	text = {
 		localization_key = BUL_bury_the_grudges_of_the_past_no_faction
 	}
 }

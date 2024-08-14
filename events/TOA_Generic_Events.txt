@@ -251,10 +251,6 @@ country_event = {
 
 		add_manpower = 120000
 
-		PAR_rafael_franco = {
-			promote_leader = yes
-		}
-
 		news_event = { 
 			id = south_american_news.8 
 			days = 3

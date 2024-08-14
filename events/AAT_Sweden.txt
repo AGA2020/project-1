@@ -1671,18 +1671,6 @@ country_event = {
 		}
 		custom_effect_tooltip = AAT_Sweden.1.b_tt
 		set_country_flag = SWE_1936_per_albin_is_pm
-		effect_tooltip = {
-			SWE_fallen_riksdag = {
-				add_country_leader_role = {
-					country_leader = {
-						ideology = liberalism
-						expire="1965.1.1.1"
-						traits = { SWE_fallen_riksdag_trait } 
-					}
-					promote_leader = yes
-				}
-			}
-		}
 		custom_effect_tooltip = SWE_defense_act_tt
 	}
 
@@ -1716,18 +1704,7 @@ country_event = {
 		
 		set_country_flag = SWE_1936_gosta_bagge_is_pm
 
-		effect_tooltip = {
-			SWE_gosta_bagge = {
-				add_trait = {
-					trait = minister_of_ecclesiastical_affairs
-				}
 
-				add_trait = {
-					trait = SWE_minor_opposition_party_in_power
-
-				}
-			}
-		}
 		custom_effect_tooltip = SWE_defense_act_tt
 	}
 }
@@ -1743,16 +1720,6 @@ country_event = {
 	option = {
 		name = AAT_Sweden.2.a	
 		retire_country_leader = yes
-		SWE_fallen_riksdag = {
-			add_country_leader_role = {
-				country_leader = {
-					ideology = liberalism
-					expire="1965.1.1.1"
-					traits = { SWE_fallen_riksdag_trait } 
-				}
-				promote_leader = yes
-			}
-		}
 		clr_country_flag = SWE_1936_per_albin_is_pm
 		set_country_flag = SWE_1936_fallen_riksdag
 		hidden_effect = {
@@ -1875,26 +1842,7 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				NOT = {
-					has_country_leader = {
-						ruling_only = yes
-						character = SWE_gosta_bagge
-					}
-				}
-			}
 			retire_country_leader = yes
-			SWE_gosta_bagge = {
-				add_country_leader_role = {
-					country_leader = {
-						ideology = conservatism
-						expire="1965.1.1.1"
-						traits = { minister_of_ecclesiastical_affairs } 
-					}
-					promote_leader = yes
-				}
-			}
 			hidden_effect = {
 				set_politics = {
 					ruling_party = democratic
@@ -1914,7 +1862,6 @@ country_event = {
 				name = SWE_aat_hogern
 				long_name = SWE_aat_hogern_long
 			}		
-		}
 	}
 
 	#Wigfors
@@ -1932,12 +1879,6 @@ country_event = {
 					is_historical_focus_on = no
 				}
 				factor = 0.5
-			}
-		}
-		trigger = {
-			has_country_leader = {
-				ruling_only = yes
-				character = SWE_fallen_riksdag 
 			}
 		}	
 		retire_country_leader = yes
