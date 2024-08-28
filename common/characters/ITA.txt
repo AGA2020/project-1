@@ -293,12 +293,12 @@ characters = {
 		}
 		
 		field_marshal = {
-			traits = { old_guard trait_cautious panzer_leader trait_engineer }
-			skill = 6
-			attack_skill = 6
-			defense_skill = 6
-			planning_skill = 4
-			logistics_skill = 4
+			traits = { old_guard trait_cautious politically_connected defensive_doctrine }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 			legacy_id = 0
 		}
 	}
@@ -373,8 +373,8 @@ characters = {
 		corps_commander={
 			traits = {  cavalry_leader armor_officer war_hero panzer_leader trait_engineer infantry_leader trickster organizer desert_fox trait_mountaineer }
 			skill=6
-			attack_skill=5
-			defense_skill=5
+			attack_skill=6
+			defense_skill=6
 			planning_skill=5
 			logistics_skill=4
 			legacy_id=0
