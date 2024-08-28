@@ -414,7 +414,7 @@
 		will_lead_to_war_with = USA
 		will_lead_to_war_with = FRA
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
