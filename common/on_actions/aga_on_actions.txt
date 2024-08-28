@@ -27,4 +27,24 @@ on_actions = {
 			}
 		}
 	}
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = ENG
+					}
+					ENG = { has_war = yes }	
+				}
+				JAP = { declare_war_on = { target = USA type = annex_everything } }
+				JAP = { declare_war_on = { target = FRA type = annex_everything } }
+				JAP = { declare_war_on = { target = SAF type = annex_everything } }
+				JAP = { declare_war_on = { target = CAN type = annex_everything } }
+				JAP = { declare_war_on = { target = AST type = annex_everything } }
+				JAP = { declare_war_on = { target = NZL type = annex_everything } }
+				if = { limit = { BRA = { is_ai = no } } JAP = { declare_war_on = { target = BRA type = annex_everything } } }
+				if = { limit = { MEX = { is_ai = no } } JAP = { declare_war_on = { target = MEX type = annex_everything } } }
+			}
+		}
+	}		
 }
