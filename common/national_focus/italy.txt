@@ -10864,11 +10864,7 @@ focus_tree = {
 		relative_position_id = ITA_spanish_italian_alliance
 		cost = 5
 		available = {
-			is_in_faction = yes
-			country_exists = POR
-			NOT = {
-				has_war_with = POR
-			}
+			always = no
 		}
 
 		search_filters = {}
