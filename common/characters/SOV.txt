@@ -162,7 +162,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { media_personality armor_officer war_hero winter_specialist adaptable_allower }
+			traits = { media_personality armor_officer war_hero winter_specialist   }
 			skill = 5
 			attack_skill = 5
 			defense_skill = 2
@@ -206,7 +206,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger  organizer adaptable_allower}
+			traits = { cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger  organizer  adaptable_allower }
 			skill = 7
 			attack_skill = 5
 			defense_skill = 8
@@ -260,7 +260,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { armor_officer politically_connected adaptable_allower }
+			traits = { armor_officer politically_connected   }
 			skill = 4
 			attack_skill = 4
 			defense_skill = 4
@@ -326,7 +326,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { career_officer trait_cautious adaptable_allower }
+			traits = { career_officer trait_cautious   }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -346,7 +346,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless infantry_officer adaptable_allower }
+			traits = { trait_reckless infantry_officer   }
 			skill = 3
 			attack_skill = 1
 			defense_skill = 3
@@ -400,7 +400,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { harsh_leader armor_officer politically_connected adaptable_allower }
+			traits = { harsh_leader armor_officer politically_connected   }
 			skill = 5
 			attack_skill = 4
 			defense_skill = 5
@@ -452,7 +452,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { career_officer cavalry_officer politically_connected adaptable_allower }
+			traits = { career_officer cavalry_officer politically_connected   }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -505,7 +505,7 @@ characters = {
 		}
 
 		field_marshal = {
-			traits = { old_guard inflexible_strategist politically_connected adaptable_allower }
+			traits = { old_guard inflexible_strategist politically_connected   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -546,7 +546,7 @@ characters = {
 		}
 
 		field_marshal = {
-			traits = { brilliant_strategist career_officer trait_reckless infantry_officer offensive_doctrine adaptable_allower }
+			traits = { brilliant_strategist career_officer trait_reckless infantry_officer offensive_doctrine   }
 			skill = 4
 			attack_skill = 3
 			defense_skill = 4
@@ -566,7 +566,7 @@ characters = {
 			}
 		}
 		field_marshal = {
-			traits = { old_guard inflexible_strategist politically_connected adaptable_allower }
+			traits = { old_guard inflexible_strategist politically_connected   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -586,7 +586,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { armor_officer adaptable_allower }
+			traits = { armor_officer   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -606,7 +606,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { cavalry_officer adaptable_allower }
+			traits = { cavalry_officer   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -661,7 +661,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { old_guard inflexible_strategist career_officer politically_connected adaptable_allower }
+			traits = { old_guard inflexible_strategist career_officer politically_connected   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -681,7 +681,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless infantry_officer adaptable_allower }
+			traits = { trait_reckless infantry_officer   }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 2
@@ -701,7 +701,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { career_officer adaptable_allower }
+			traits = { career_officer   }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -721,7 +721,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless cavalry_officer adaptable_allower }
+			traits = { trait_reckless cavalry_officer   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -741,7 +741,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { career_officer adaptable_allower }
+			traits = { career_officer   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -761,7 +761,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { cavalry_officer adaptable_allower }
+			traits = { cavalry_officer   }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -781,7 +781,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { career_officer adaptable_allower }
+			traits = { career_officer   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -801,7 +801,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trickster adaptable_allower }
+			traits = { trickster   }
 			skill = 3
 			attack_skill = 1
 			defense_skill = 3
@@ -821,7 +821,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer commando adaptable_allower }
+			traits = { infantry_officer commando   }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -841,7 +841,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer winter_specialist adaptable_allower }
+			traits = { infantry_officer winter_specialist   }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -876,7 +876,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer adaptable_allower }
+			traits = { infantry_officer   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -896,7 +896,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { career_officer adaptable_allower }
+			traits = { career_officer   }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -916,7 +916,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer adaptable_allower }
+			traits = { infantry_officer   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -936,7 +936,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { brilliant_strategist infantry_officer winter_specialist adaptable_allower }
+			traits = { brilliant_strategist infantry_officer winter_specialist   }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
@@ -956,7 +956,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer adaptable_allower }
+			traits = { infantry_officer   }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -976,7 +976,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { career_officer cavalry_officer adaptable_allower }
+			traits = { career_officer cavalry_officer   }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -996,7 +996,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { adaptable_allower }
+			traits = {   }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 2
@@ -1016,7 +1016,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless armor_officer adaptable_allower }
+			traits = { trait_reckless armor_officer   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -1036,7 +1036,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { cavalry_officer adaptable_allower }
+			traits = { cavalry_officer   }
 			skill = 3
 			attack_skill = 1
 			defense_skill = 3
@@ -1056,7 +1056,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { old_guard career_officer trait_cautious politically_connected adaptable_allower }
+			traits = { old_guard career_officer trait_cautious politically_connected   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -1076,7 +1076,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { brilliant_strategist career_officer adaptable_allower }
+			traits = { brilliant_strategist career_officer   }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -1705,7 +1705,7 @@ characters = {
 		}
 
 		field_marshal = {
-			traits = { career_officer inflexible_strategist trait_reckless adaptable_allower }
+			traits = { career_officer inflexible_strategist trait_reckless   }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 2
@@ -1740,7 +1740,7 @@ characters = {
 		}
 
 		field_marshal = {
-			traits = { old_guard career_officer infantry_officer organizer adaptable_allower }
+			traits = { old_guard career_officer infantry_officer organizer   }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 1
@@ -1788,7 +1788,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { cavalry_officer trait_reckless war_hero cavalry_leader adaptable_allower }
+			traits = { cavalry_officer trait_reckless war_hero cavalry_leader   }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -1809,7 +1809,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { trait_cautious war_hero trickster adaptable_allower }
+			traits = { trait_cautious war_hero trickster   }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 1
@@ -1833,7 +1833,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { trait_reckless war_hero commando adaptable_allower }
+			traits = { trait_reckless war_hero commando   }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 2
@@ -1857,7 +1857,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { cavalry_officer trait_reckless cavalry_leader ranger adaptable_allower }
+			traits = { cavalry_officer trait_reckless cavalry_leader ranger   }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -1881,7 +1881,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { cavalry_officer armor_officer panzer_leader panzer_expert adaptable_allower }
+			traits = { cavalry_officer armor_officer panzer_leader panzer_expert   }
 			skill = 3
 			attack_skill = 4
 			defense_skill = 1

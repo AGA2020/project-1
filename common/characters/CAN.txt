@@ -318,15 +318,6 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
-		}
-		corps_commander={
-			traits={ panzer_leader trickster trait_engineer }
-			skill = 4
-			attack_skill = 5
-			defense_skill = 5
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id=-1
 		}		
 	}
 
