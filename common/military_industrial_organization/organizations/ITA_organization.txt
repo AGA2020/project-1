@@ -750,7 +750,6 @@ ITA_fiat_aviazione_organization = {
 	allowed = {	 
 		OR = {
 			tag = ITA
-			tag = GER
 			AND = {
 				tag = BRA
 				has_dlc = "Trial of Allegiance"

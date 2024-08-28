@@ -1618,15 +1618,15 @@ focus_tree = {
 	focus = {
 		id = ITA_libyan_refineries
 		icon = GFX_focus_generic_rubber
-		prerequisite = { focus = ITA_italian_highways_bba }
+		prerequisite = { focus = ITA_prospect_for_oil }
 
-		x = -3
+		x = 0
 		y = 1
-		relative_position_id = ITA_italian_highways_bba
+		relative_position_id = ITA_prospect_for_oil
 		cost = 5
 
 		available = {
-			451 = {
+			450 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
 				NOT = {
 					has_state_flag = benghazi_oil_developed
@@ -1641,14 +1641,9 @@ focus_tree = {
 			add_resource = {
 				type = oil
 				amount = 4
-				state = 451
+				state = 450
 			}
-			add_resource = {
-				type = rubber
-				amount = 28
-				state = 451
-			}
-			451 = {
+			450 = {
 				ITA_check_for_cooperatives_and_add_dm = yes #If appropriate, apply dm from Cooperatives for Intensive Exploitation 
 				set_state_flag = benghazi_oil_developed
 				add_extra_state_shared_building_slots = 2
