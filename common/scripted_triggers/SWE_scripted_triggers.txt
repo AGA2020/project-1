@@ -19,8 +19,16 @@ SWE_is_historical_ai = {
 		OR = {
 			AND = {
 				is_historical_focus_on = yes 
+				has_game_rule = {
+					rule = SWE_AI_BEHAVIOR
+					option = DEFAULT
+				}
 			}
 			has_country_flag = SWE_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = SWE_ai_behavior
+				option = HISTORICAL
+			}
 		}	
 }
 
@@ -85,6 +93,22 @@ is_eligible_for_train_the_sheltered = {
 				}
 			}
 		}
+	}
+}
+
+SWE_rapid_mob_manpower_law_trigger = {
+	if = {
+		limit = {
+			hidden_trigger = { 
+				original_tag = SWE
+				has_dlc = "Arms Against Tyranny"
+			}
+		}
+
+		has_completed_focus = SWE_rapid_mobilization
+	}
+	else = {
+		hidden_trigger = { always = no }  #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
 	}
 }
 

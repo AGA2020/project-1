@@ -195,6 +195,7 @@ NOR_char_cw_democratic = { # Any Dem
 
 NOR_char_cw_labor_only = { # They go democratic as long as it's Labor 
 	has_government = democratic
+	NOT = { has_completed_focus = NOR_vote_of_no_confidence }
 }
 
 NOR_char_cw_conservative = {

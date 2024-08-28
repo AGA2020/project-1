@@ -1137,6 +1137,90 @@ news_event = {
 	}
 }
 
+#Turkey Renews Claims to 1920 Borders
+news_event = {
+	id = bftb_news.208
+	title = bftb_news.208.t
+	desc = bftb_news.208.desc
+	picture = GFX_news_event_civil_war_turkey
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bftb_news.208.a #we cannot concern ourselves with whatever the Turks are plotting
+		trigger = {
+			NOT = { 
+				has_war_with = FROM 
+				tag = TUR
+			}
+		}
+	}
+	option = {
+		name = bftb_news.208.b #an embargo seems an adequate escalation
+		trigger = {
+			NOT = { 
+				has_war_with = FROM 
+				is_in_faction_with = TUR
+				tag = TUR
+			}
+		}
+		add_opinion_modifier = {
+			target = TUR
+			modifier = embargo
+		}
+		hidden_effect = {
+			TUR = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = embargo
+				}
+			}
+		}
+	}
+	option = {
+		name = bftb_news.208.c #the Turks are insidious schemers, this is already known
+		trigger = {
+			has_war_with = FROM
+		}
+		add_war_support = 0.05
+	}
+	option = {
+		name = bftb_news.208.d
+		trigger = {
+			tag = TUR
+		}
+	}
+}
+
+#Turan
+news_event = {
+	id = bftb_news.209
+	title = bftb_news.209.t
+	desc = bftb_news.209.desc
+	picture = GFX_news_event_turanist_ambition
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bftb_news.209.a
+		trigger = {
+			tag = TUR
+		}
+	}
+	option = {
+		name = bftb_news.209.b
+		trigger = {
+			NOT = {
+				tag = TUR
+			}
+		}
+	}
+}
+
 #The Greek Civil War
 news_event = {
 	id = bftb_news.301

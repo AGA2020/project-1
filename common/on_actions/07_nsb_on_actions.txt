@@ -660,6 +660,20 @@ on_actions = {
 					has_dlc = "No Step Back"
 				}
 				load_focus_tree = { tree = lithuania_tree keep_completed = yes }
+				if = { #Give Lithuania their focus tree back if the Iron Wolf win the civil war.
+					limit = { has_government = fascism }
+					if = {
+						limit = { has_completed_focus = LIT_exile_voldemares }
+						uncomplete_national_focus = { #Voldemares shouldn't exile himself
+							focus = LIT_exile_voldemares
+							uncomplete_children = yes
+						}
+					}
+					complete_national_focus = LIT_lithuanian_activist_front
+					complete_national_focus = LIT_organize_the_iron_wolf
+					complete_national_focus = LIT_lithuanian_youth
+					complete_national_focus = LIT_unify_the_military
+				}
 			}
 			if = {
 				limit = {
@@ -676,6 +690,35 @@ on_actions = {
 					has_dlc = "No Step Back"
 				}
 				load_focus_tree = { tree = latvia_tree keep_completed = yes }
+				if = { #Give Latvia their focus tree back if the Perkonkrust win the civil war.
+					limit = { has_government = fascism }
+					if = {
+						limit = { has_completed_focus = LAT_banish_clemens }
+						uncomplete_national_focus = {
+							focus = LAT_banish_clemens
+							uncomplete_children = yes
+						}
+					}
+					if = {
+						limit = { has_completed_focus = LAT_anti_german_propaganda }
+						uncomplete_national_focus = {
+							focus = LAT_anti_german_propaganda
+							uncomplete_children = yes
+						}
+					}
+					unlock_national_focus = LAT_latvia_for_latvians
+					unlock_national_focus = LAT_lift_ban_on_perkonkrusts
+					unlock_national_focus = LAT_fanatic_recruitment
+					complete_national_focus = LAT_the_old_ways
+					random_list = {
+						75 = {
+							complete_national_focus = LAT_alignment_with_germany
+						}
+						25 = {
+							complete_national_focus = LAT_the_thunder_strikes_alone
+						}
+					}
+				}
 			}
 		}
 	}

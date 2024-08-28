@@ -199,12 +199,64 @@ on_actions = {
 						OR = {
 							capital_scope = { is_on_continent = south_america }
 							capital_scope = { is_on_continent = north_america }
+							tag = CUB
+							tag = DOM
+							tag = HAI
 						}
 					}
 					add_ideas = USA_monroe_doctrine_idea
 				}
 			}
 		}
+	}
+	on_peaceconference_ended = {
+
+		# Make sure that Uruguay get's their cosmetic tag if it applies
+		effect = {
+			IF = {
+				limit = {
+					URG = {
+						NOT = {
+							has_cosmetic_tag = URG_german
+						}
+						is_subject = yes
+						is_subject_of = GER
+					}
+				}
+				URG = {
+					set_cosmetic_tag = URG_german
+				}
+			}
+		}	
+		# Make sure that Uruguay drops their cosmetic tag if it applies
+		effect = {
+			IF = {
+				limit = {
+					URG = {
+						has_cosmetic_tag = URG_german
+						is_subject = no
+					}
+				}
+				URG = {
+					drop_cosmetic_tag = yes
+				}
+			}
+		}	
+
+		# Make sure that Bolivia drops their araucanian cosmetic tag if it applies
+		effect = {
+			IF = {
+				limit = {
+					BOL = {
+						has_cosmetic_tag = BOL_orelia
+						is_subject = no
+					}
+				}
+				BOL = {
+					drop_cosmetic_tag = yes
+				}
+			}
+		}	
 	}
 
 	on_puppet = { #ROOT = nation being puppeted, FROM = overlord
@@ -628,5 +680,32 @@ on_actions = {
 			
 		}
 
+	}
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			IF = {
+				limit = {
+					has_dlc = "Trial of Allegiance"
+					ROOT = {
+						original_tag = GER
+						has_government = fascism
+						has_country_leader = {
+							character = GER_adolf_hitler
+							ruling_only = yes
+						}
+					}
+					ARG = {
+						has_government = fascism
+					}
+				} 
+				ARG = {
+					country_event = {
+						id = ARG_political_events.120
+						days = 14
+					}
+				}
+			}
+		}
 	}
 }

@@ -330,6 +330,7 @@ country_event = { #Vote of No Confidence
 			}
 		}
 		trigger = {
+			DEN_knud_bach = { is_country_leader = no }
 			check_variable = { DEN_neutrality_popularity > 19 }
 		}
 
@@ -1629,6 +1630,12 @@ country_event = { #Danish Declares Independence
 		ai_chance = {
 			base = 1
 			modifier = {
+				factor = 5
+				FROM = {
+					has_completed_focus = DEN_pledge_allegiance
+				}
+			}
+			modifier = {
 				factor = 10
 				has_government = FROM
 			}
@@ -1699,6 +1706,13 @@ country_event = { #Danish Liberation War
 					DEN_royal_ai = yes
 				}
 			}
+		}
+		
+		if = {
+			limit = {
+				has_completed_focus = DEN_form_the_danish_freedom_council
+			}
+			DEN_freedom_council_takes_over = yes
 		}
 
 		DEN_independence_war_effects = yes
@@ -3651,13 +3665,30 @@ country_event = { #Denmark: Choose new country leader
 				has_country_flag = DEN_banned_fascism_flag
 				has_country_flag = banned_fascism_flag
 				AND = {
+					DEN_cay_lembcke = {
+						has_character_flag = DEN_political_agitator_flag
+					}
 					DEN_frits_clausen = {
 						has_character_flag = DEN_political_agitator_flag
 					}
 				}
 			}
 		}
-		country_event = { id = denmark_overlord_events.13 days = 1 } 
+		if = {
+			limit = {
+				DEN_cay_lembcke = { is_country_leader = yes }
+			} 
+			promote_character = DEN_frits_clausen
+		}
+		else_if = {
+			limit = {
+				DEN_frits_clausen = { is_country_leader = yes }
+			}
+			promote_character = DEN_cay_lembcke
+		}
+		else = {
+			country_event = { id = denmark_overlord_events.13 days = 1 } 
+		}
 	}
 }
 country_event = { #Overlord: New Danish Leader
@@ -9795,6 +9826,16 @@ country_event = { #The King Dies
 				has_country_leader = {
 					character = DEN_christian_x
 					ruling_only = yes
+				}
+			}
+			DEN_frederik_ix = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {
+						ideology = despotism
+						expire = "1965.1.1.1"
+						traits = { DEN_the_king }
+					}
 				}
 			}
 		}

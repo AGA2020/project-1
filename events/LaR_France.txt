@@ -147,9 +147,17 @@ country_event = {
 		}
 		transfer_state = 461
 		transfer_state = 462
+		if = {
+			limit = { is_in_faction_with = POR }
+			POR = {
+				country_event = lar_congress_of_paris.6
+			}
+		}
+		else = {
 			hidden_effect = {
 				news_event = { id = lar_news.3 days = 3 random_days = 5 }
 			}
+		}
 	}
 
 	option = {
@@ -163,9 +171,17 @@ country_event = {
 				remove_from_faction = PREV
 			}
 		}
+		if = {
+			limit = { is_in_faction_with = POR }
+			POR = {
+				country_event = lar_congress_of_paris.6
+			}
+		}
+		else = {
 			hidden_effect = {
 				news_event = { id = lar_news.3 days = 3 random_days = 5 }
 			}
+		}
 	}
 }
 
@@ -2920,6 +2936,16 @@ country_event = {
 		}
 		VIC = { country_event = LaR_france_vichy_notification_events.6 }
 		if = {
+			limit = {
+				MAD = {
+					exists = yes
+					is_subject = yes
+					OVERLORD = { original_tag = FRA }
+				}
+			}
+			puppet = MAD
+		}
+		else_if = {
 			limit = {
 				543 = { CONTROLLER = { original_tag = FRA } }
 			}

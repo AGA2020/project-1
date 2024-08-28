@@ -3793,6 +3793,177 @@ ETH_italo-ethiopian_empire_decisions = {
 
 }
 
+ETH_consolidate_east_africa_category = {
+	ETH_core_east_african_states = {
+		cost = 20
+		fire_only_once = no   
+		icon = GFX_decision_generic_form_nation
+		allowed = { original_tag = ETH }
+
+		state_target = yes
+		on_map_mode = map_only
+
+		target_trigger = {
+			FROM = {
+				NOT = { is_core_of = ETH }
+				has_state_flag = ETH_consolidate_ea_flag
+				is_controlled_by = ETH
+			}
+		}
+
+		target_root_trigger = { 
+			original_tag = ETH
+		}
+		visible = {
+			
+		}
+		available = { always = yes }
+
+		days_remove = 30
+		remove_effect = {
+			FROM = {
+				add_core_of = ETH
+				clr_state_flag = ETH_consolidate_ea_flag
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	ETH_form_horn_of_africa = {
+		cost = 20
+		fire_only_once = yes  
+		icon = GFX_decision_generic_form_nation
+		allowed = { original_tag = ETH }
+		days_remove = 1
+		available = {
+			886 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			883 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			551 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			767 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			549 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			887 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			884 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			885 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			904 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			548 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			903 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			547 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			}
+			905 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			}
+			844 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			}
+			559 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			}
+			269 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			} 
+			268 = { 
+				AND = {
+					is_core_of = ETH  
+					is_controlled_by = ETH
+				}
+			} 
+			550 = { 
+				AND = {
+					is_core_of = ETH 
+					is_controlled_by = ETH
+				}
+			}
+		}
+		remove_effect = {
+			IF = {
+				limit = {is_or_will_be_gojjam = yes}
+				set_cosmetic_tag = greater_gojjam
+			}
+			ELSE_IF = {
+				limit = {is_or_will_be_jimma = yes}
+				set_cosmetic_tag = greater_jimma
+			}
+			ELSE = {
+				set_cosmetic_tag = greater_ethiopia
+			}	
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+}
 
 ETH_improve_the_horn_of_africa_category = {
 	ETH_build_infrastructure = {

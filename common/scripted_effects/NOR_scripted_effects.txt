@@ -1324,6 +1324,10 @@ NOR_character_flag_setup_for_cw = {
 		set_character_flag = NOR_anti_communist
 	}
 	
+	NOR_queen_mathilde_i = {
+		set_character_flag = NOR_anti_fascist
+	}
+	
 	NOR_king_haakon_vii = {
 		set_character_flag = NOR_anti_fascist
 	}
@@ -1412,6 +1416,11 @@ NOR_character_flag_setup_for_cw = {
 	# There's no proof either Wilhelm or Carl Gustav would join a communist Norway, but they're sorely lacking on leaders and them not joining the same side is an interesting wrinkle
 	NOR_jacob_ager_laurantzon = {
 		set_character_flag = NOR_anti_communist
+	}
+	
+	NOR_carsten_tank_nielsen = {
+		set_character_flag = NOR_anti_communist
+		set_character_flag = NOR_anti_fascist		
 	}
 	
 

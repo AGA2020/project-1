@@ -96,6 +96,31 @@ characters={
 				large="GFX_portrait_SPA_jose_antonio_primo_de_rivera"
 			}
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_SPA_jose_antonio_primo_de_rivera
+			name = SPA_jose_antonio_primo_de_rivera 
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+			visible = {
+				NOT = {
+					tag = SPD
+					tag = SPC
+				}
+			}
+			available = {
+				has_completed_focus = SPA_primo_de_rivera_prisoner_exchange
+				custom_trigger_tooltip = {
+					tooltip = SPA_not_republican_spain_tt
+					NOT = { tag = SPD }
+				}
+			}
+			traits = {
+				falangist_figurehead 
+			}
+		}
 
 		country_leader={
 			ideology=falangism

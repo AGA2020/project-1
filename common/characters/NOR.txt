@@ -209,6 +209,9 @@ characters={
 				NOR_AAT = yes
 			}
 			available = {				
+				NOT = {
+					has_completed_focus = NOR_get_rid_of_quisling 
+				}
 				is_country_leader = no
 			}
 			traits  = {
@@ -377,6 +380,19 @@ characters={
 			traits  = {
 				NOR_permanent_revolutionary
 			}
+		}
+		corps_commander={
+			visible = {
+				has_completed_focus = NOR_a_resurgent_labor_movement
+				has_country_flag = NOR_trotsky_embraced
+			}
+			traits={  }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
 		}
 	}
 	

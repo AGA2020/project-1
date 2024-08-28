@@ -949,6 +949,29 @@ ideas = {
 	tank_manufacturer = {
 		designer = yes
 
+
+		BRA_fiat_company = {
+			picture = fiat
+			
+			allowed = {
+				has_dlc = "Trial of Allegiance"
+				original_tag = BRA
+			}
+
+			available = {
+				has_completed_focus = BRA_italian_trucks
+			}
+			research_bonus = {
+				motorized_equipment = 0.15
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+
 	 	BRA_bernadini_manufacturer = {
 		 	picture =  BRA_bernardini
 		 	allowed = {	

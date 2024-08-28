@@ -2409,6 +2409,25 @@ characters = {
 		allowed_civil_war = {
 			has_government = communism
 		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_maksim_litvinov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_policy_of_collective_security 
+			}
+			traits = {
+				pc_for_foreign_affairs_litvinov 
+			}
+		}
 	}
 
 	SOV_lev_trotsky = {

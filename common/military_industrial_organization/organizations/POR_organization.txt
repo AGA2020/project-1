@@ -39,7 +39,17 @@ POR_arsenal_alfeite_organization = {
 
 ###########################
 
-
+POR_ogma_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_por_ogma
+	allowed = { 
+		has_dlc = "La Resistance"
+		tag = POR
+	}
+	available = { 
+		owner = { has_completed_focus = POR_ogma }
+	}
+}
 
 ################################### 
 

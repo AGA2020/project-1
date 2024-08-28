@@ -6340,6 +6340,18 @@ country_event = {
 						}
 					}
 				}
+				if = { #If Right Opposition is still under Stalin's rule, volunteers come back
+					limit = {
+						SOV = { has_completed_focus = SOV_covert_support_for_spanish_poum }
+						SPD = {
+							has_volunteers_amount_from = {
+								tag = SOV
+								count > 0
+							}
+						}
+					}
+					SOV = {	recall_volunteers_from = SPD }
+				}
 			}
 			else = { #REGULAR ANARCHIST UPRISING
 				if = {
@@ -7895,6 +7907,10 @@ country_event = {
 		name = lar_spain.22.a
 		ai_chance = {
 			base = 50
+			modifier = {
+				factor = 0
+				has_completed_focus = POR_strict_neutrality_in_the_spanish_civil_war
+			}
 		}
 		add_manpower = -20000
 		effect_tooltip = {
@@ -8974,6 +8990,10 @@ country_event = {
 		ai_chance = {
 			base = 95
 			modifier = {
+				factor = 0.1
+				has_completed_focus = POR_the_royal_iberian_alliance
+			}
+			modifier = {
 				factor = 0.8
 				NOT = { has_war_with = FROM }
 				has_war = yes
@@ -9156,6 +9176,9 @@ country_event = {
 			    ideology = neutrality
 			    popularity = 100
 			}
+		}
+		POR ={
+			set_rule = { can_join_factions = no	}
 		}
 	}
 }
