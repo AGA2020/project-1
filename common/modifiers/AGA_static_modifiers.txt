@@ -1,0 +1,25 @@
+# All global modifiers are here. They are applied from certain game-features.
+# Effects are fully scriptable here.
+# These names can NOT be removed or changes, as the code uses them....
+
+no_convoy_raid = { # on Region
+	air_accidents = 0.1
+		destroyer = {
+			convoy_raiding_efficiency_factor = -1
+		}
+		light_cruiser = {
+			convoy_raiding_efficiency_factor = -1
+		}
+		heavy_cruiser = {
+			convoy_raiding_efficiency_factor = -1
+		}
+		battleship = {
+			convoy_raiding_efficiency_factor = -1
+		}
+		battle_cruiser = {
+			convoy_raiding_efficiency_factor = -1
+		}
+		carrier = {
+			convoy_raiding_efficiency_factor = -1
+		}
+}
