@@ -34,7 +34,8 @@ on_actions = {
 					FROM = {
 						tag = ENG
 					}
-					ENG = { has_war = yes }	
+					ENG = { has_war = yes }
+					date>1941.1.1	
 				}
 				JAP = { declare_war_on = { target = USA type = annex_everything } }
 				JAP = { declare_war_on = { target = FRA type = annex_everything } }

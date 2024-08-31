@@ -2544,35 +2544,6 @@ characters = {
 				small = "GFX_idea_SOV_nikolay_bukharin"
 			}
 		}
-
-		allowed_civil_war = {
-
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_nikolay_bukharin
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				is_country_leader = no
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				economy_reformer 
-			}
-		}
 	}
 	
 	SOV_aleksey_rykov = {
@@ -2589,32 +2560,6 @@ characters = {
 
 		allowed_civil_war = {
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_aleksey_rykov
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				is_country_leader = no
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			
-			traits = {
-				peoples_commissar_for_posts_and_telegraphs 
-			}
-		}
 	}
 
 	SOV_mikhail_tomsky = {
@@ -2630,30 +2575,6 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_mikhail_tomsky
-			allowed = {
-				original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				right_trade_unionist 
 			}
 		}
 	}
@@ -2721,22 +2642,6 @@ characters = {
 			OR = {
 				has_government = neutrality 
 				has_government = fascism
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_patriarch_sergy
-			allowed = {
-				original_tag = SOV
-			}
-			available = {
-				OR = {
-					has_completed_focus = SOV_patriarch_of_all_russia
-				}
-			}
-			traits = {
-				patriarch_of_moscow_and_all_russia 
 			}
 		}
 	}
@@ -3031,45 +2936,5 @@ characters = {
 			id = -1
 		}
 		allowed_civil_war = { tag = SOV}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = SOV_aleksandr_kerensky
-			allowed = {
-					original_tag = SOV
-			}
-			visible = {
-				NOT = {
-					has_character_flag = SOV_character_purged_flag 
-				}
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-			}
-			traits = {
-				democratic_reformer 
-			}
-			do_effect = {
-				NOT = {
-					has_government = democratic 
-				}
-			}
-			ai_will_do = {
-				factor = 0.000
-			}
-		}
 	}
 }
