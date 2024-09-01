@@ -75,12 +75,6 @@ debug_decisions = { #TODO_Manu: Comment these out
 			#log = "WARNING: This takes a while"
 			every_state = {
 				limit = {
-					is_on_continent = asia
-				}
-				TIB = { transfer_state = PREV }
-			}
-			every_state = {
-				limit = {
 					is_on_continent = europe
 				}
 				LUX = { transfer_state = PREV }
