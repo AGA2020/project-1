@@ -888,10 +888,6 @@ country_event = {
 		name = DOD_hungary.32.c
 		ai_chance = {
 			factor = 45
-			modifier = {
-				ENG = { has_completed_focus = uk_balkan_strategy }
-				factor = 2
-			}
 		}
 		trigger = {
 			ENG = {
