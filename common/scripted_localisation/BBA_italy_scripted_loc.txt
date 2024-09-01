@@ -618,6 +618,12 @@ defined_text = { #Proclamation of Anarchist Confederation
 	}
 }
 
+defined_text = { #Litoranea Balbo name based on political path
+	name = GetAppropriateLitoraneaBalboName
+	text = {
+		localization_key = ITA_litoranea_balbo_default
+	}
+}
 
 defined_text = { #Moschettieri del Duce name based on political path
 	name = GetAppropriateMoschetieridelDuceName
@@ -626,6 +632,12 @@ defined_text = { #Moschettieri del Duce name based on political path
 	}
 }
 
+defined_text = { #Albanian Fascist Militia name based on political path
+	name = GetAppropriateAlbanianFascistMilitiaName
+	text = { # Default - Duce
+		localization_key = ITA_albanian_fascist_militia_default
+	}
+}
 
 # GFX FOR EVENTS
 
