@@ -3,4 +3,12 @@ spriteTypes = {
         name = "GFX_GER_Goerings_Four_Year_Plan"
         texturefile = "gfx/interface/goals/GER_Goerings_Four_Year_Plan.dds"
     }
+    spriteType={
+        name = "GFX_GER_Generalplan_Ost"
+        texturefile = "gfx/interface/goals/GER_Generalplan_Ost.dds"
+    }
+    spriteType={
+        name = "GFX_GER_Rhineland_Remilitarization"
+        texturefile = "gfx/interface/goals/GER_Rhineland_Remilitarization.dds"
+    }
 }

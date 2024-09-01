@@ -2438,7 +2438,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_rhineland
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_GER_Rhineland_Remilitarization
 		x = 25
 		y = 0
 		cost = 10
@@ -2596,7 +2596,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_ussr_war_goal
-		icon = GFX_goal_generic_war_with_comintern
+		icon = GFX_focus_attack_soviet
 		prerequisite = { focus = GER_rhineland }
 		will_lead_to_war_with = SOV
 		
