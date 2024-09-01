@@ -81,12 +81,6 @@ debug_decisions = { #TODO_Manu: Comment these out
 			}
 			every_state = {
 				limit = {
-					is_on_continent = middle_east
-				}
-				YEM = { transfer_state = PREV }
-			}
-			every_state = {
-				limit = {
 					is_on_continent = africa
 				}
 				ETH = { transfer_state = PREV }
