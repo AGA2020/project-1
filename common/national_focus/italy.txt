@@ -10495,19 +10495,7 @@ focus_tree = {
 		cost = 10
 		available = {
 
-			846 = {
-				is_owned_and_controlled_by = SWI
-			}
-			is_subject = no
-			159 = { 
-				is_controlled_by = ITA
-			}
-			158 = {
-				is_controlled_by = ITA
-			}
-			735 = {
-				is_controlled_by = ITA
-			}
+			has_war = yes
 		}
 
 		will_lead_to_war_with = SWI
@@ -10516,13 +10504,7 @@ focus_tree = {
 
 		completion_reward = { 
 
-			SWI = {
-				country_event = {
-				    id = BBA_italy_interaction_events.1
-				    days = 2
-				    random = 6
-				}
-			}
+			transfer_state = 846
 
 		}
 	}
