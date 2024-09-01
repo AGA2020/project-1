@@ -64,40 +64,6 @@ characters={
 				small="GFX_idea_harry_pollitt"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = harry_pollitt
-			allowed  = {
-				original_tag  = ENG
-			}
-			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_government  = communism 
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			traits  = {
-				communist_revolutionary 
-			}
-			do_effect  = {
-				NOT = {
-					has_government  = communism 
-				}
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}
 		
 		country_leader={
 			ideology=leninism
@@ -1559,40 +1525,6 @@ characters={
 				small="GFX_idea_john_beckett"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = john_beckett
-			allowed  = {
-				original_tag  = ENG
-			}
-			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					has_government  = fascism 
-				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			traits  = {
-				fascist_demagogue 
-			}
-			do_effect  = {
-				NOT = {
-					has_government  = fascism 
-				}
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}
 	}
 
 	ENG_philip_kerr={
@@ -1721,23 +1653,6 @@ characters={
 				small="GFX_idea_ENG_mary_sophia_allen"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_mary_sophia_allen
-			available  = {
-				has_government  = fascism 
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				princess_of_terror 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
 	}
 
 	ENG_george_orwell={
@@ -1745,31 +1660,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ENG_george_orwell"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_george_orwell
-			available  = {
-				has_government  = communism 
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
-			}
-			allowed  = {
-				original_tag  = ENG
-				has_dlc = "Man the Guns"
-			}
-			traits  = {
-				socialist_novelist 
-			}
-			ai_will_do  = {
-				factor  = 1.000
 			}
 		}
 	}
@@ -1782,47 +1672,6 @@ characters={
 			}
 		}
 		gender = female
-		advisor={
-			slot = political_advisor
-			idea_token = ENG_sylvia_pankhurst
-			available  = {
-				has_government  = communism 
-			}
-			allowed  = {
-				OR = {
-					AND = {
-						original_tag  = ENG
-						has_dlc = "Man the Guns"
-					}
-					AND = {
-						original_tag = ETH
-						has_dlc = "By Blood Alone"
-					}
-				}
-				
-			}
-			traits  = {
-				red_suffragette 
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-			on_add = {
-				owner = {
-					IF = {
-						limit = {
-							has_power_balance = {
-								id = ETH_centralization_balance
-							}
-						}
-						
-						hidden_effect = {
-							ETH_BOP_decentralization_large_effect = yes
-						}
-					}				
-				}
-			}
-		}
 	}
 
 	ENG_david_lloyd_george={
