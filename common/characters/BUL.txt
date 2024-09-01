@@ -1230,12 +1230,6 @@ characters = {
 				ai_will_do = {
 					factor = 1.000
 					modifier = {
-						factor = 0.000
-						or = {
-							BUL_is_communist_balkan_ai = yes
-						}
-					}
-					modifier = {
 						factor = 0.100
 						BUL_save_money_for_decisions = yes
 					}
