@@ -658,20 +658,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				664 = {
-					OWNER = {
-						has_war_with = ROOT
-					}
-				}
-				NOT = {
-					ROM = {
-						controls_state = 76
-						controls_state = 83
-						controls_state = 84
-					}
-				}
-			}
+			is_in_faction_with = ROM
 		}
 
 		cancel_if_invalid = yes
