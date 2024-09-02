@@ -2645,7 +2645,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_anschluss
-		icon = GFX_goal_anschluss
+		icon = GFX_goal_anchluss
 		prerequisite = { focus = GER_rhineland }
 		cancel = {}
 		cancel_if_invalid = no

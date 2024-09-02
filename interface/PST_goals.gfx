@@ -1,0 +1,8 @@
+spriteTypes = {	
+	
+	SpriteType = {
+	name = "GFX_goal_anchluss"
+	texturefile = "gfx/interface/goals/anchluss.dds"			
+	}
+
+}

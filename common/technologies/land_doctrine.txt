@@ -3397,10 +3397,6 @@ technologies = {
 		land_reinforce_rate = 0.15		
 		
 		path = {
-			leads_to_tech = guerilla_warfare
-			research_cost_coeff = 1
-		}
-		path = {
 			leads_to_tech = guerilla_warfare_disabled
 			research_cost_coeff = 1
 		}
@@ -3438,9 +3434,6 @@ technologies = {
 	guerilla_warfare_disabled = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		xor = {
-			guerilla_warfare
-		}
 
 		out_of_supply_factor = -0.30
 		category_army = {
