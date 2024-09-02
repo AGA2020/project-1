@@ -15,5 +15,5 @@ tags={
 	"Military"
 }
 name="Elwolf fix"
-supported_version="1.14.7"
+supported_version="1.14.*"
 remote_file_id="3307134042"
