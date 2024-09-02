@@ -1,7 +1,7 @@
 operations = {
     fighter2_engine3_allies_license = {
         # icon = generic_operation
-        fire_only_once = no
+        fire_only_once = yes
         cost = 0
         ai_will_do = {
             factor = 0
