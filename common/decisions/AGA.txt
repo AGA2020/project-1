@@ -1,4 +1,78 @@
 operations = {
+heavymg_allies = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                tag = ENG
+                tag = USA
+                tag = SOV
+                tag = FRA
+                tag = CAN
+                tag = RAJ
+                tag = SAF
+                tag = BRA
+                tag = MEX
+                tag = AST
+                tag = NZL
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        available = {
+            OR = {
+                ENG = { has_tech = aa_hmg }
+                USA = { has_tech = aa_hmg }
+                SOV = { has_tech = aa_hmg }      
+                FRA = { has_tech = aa_hmg }      
+                CAN = { has_tech = aa_hmg }  
+                RAJ = { has_tech = aa_hmg }
+                SAF = { has_tech = aa_hmg }
+                BRA = { has_tech = aa_hmg }      
+                MEX = { has_tech = aa_hmg }      
+                AST = { has_tech = aa_hmg }  
+                NZL = { has_tech = aa_hmg }                                                                                        
+            }
+        }
+        complete_effect = {
+            set_technology = { aa_hmg = 1 }
+        }
+    }
+   heavymg_axis = {
+        # icon = generic_operation
+        allowed = {
+            OR = {
+                tag = GER
+                tag = SPR
+                tag = ITA
+                tag = HUN
+                tag = FIN
+                tag = ROM
+                tag = DEN
+                tag = JAP
+                tag = MAN
+                tag = SIA
+            }
+        }
+        fire_only_once = yes
+        cost = 0
+        available = {
+            OR = {
+                GER = { has_tech = aa_hmg }
+                SPR = { has_tech = aa_hmg }
+                ITA = { has_tech = aa_hmg }      
+                HUN = { has_tech = aa_hmg }      
+                FIN = { has_tech = aa_hmg }  
+                ROM = { has_tech = aa_hmg }
+                DEN = { has_tech = aa_hmg }
+                JAP = { has_tech = aa_hmg }      
+                MAN = { has_tech = aa_hmg }      
+                SIA = { has_tech = aa_hmg }                                                                        
+            }
+        }
+        complete_effect = {
+            set_technology = { aa_hmg = 1 }
+        }
+    }
   advanced_small_airframe_axis = {
         # icon = generic_operation
         allowed = {
