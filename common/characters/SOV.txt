@@ -41,7 +41,7 @@ characters = {
 		}
 		country_leader = {
 			ideology = leninism
-			traits = { stalin_heart_of_steel }
+			traits = { humble_appeaser }
 			expire = "1965.1.1"
 			id = -1
 		}

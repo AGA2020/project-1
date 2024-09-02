@@ -1,6 +1,14 @@
 on_actions = {	
 	on_startup = {
 		effect = {
+			FIN = {
+				add_opinion_modifier = { target = YUG modifier = large_decrease }
+				add_opinion_modifier = { target = YUG modifier = hostile_status }
+				add_opinion_modifier = { target = ALB modifier = large_decrease }
+				add_opinion_modifier = { target = ALB modifier = hostile_status }
+				add_opinion_modifier = { target = GRE modifier = large_decrease }
+				add_opinion_modifier = { target = GRE modifier = hostile_status }
+				}
 			every_country = {
 				limit = {
 					is_playable_country = yes

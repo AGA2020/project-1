@@ -10104,12 +10104,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			NOT = { has_war_with = GER }
 			custom_trigger_tooltip = {
 				tooltip = ITA_germ_italy_same_tt
 				GER = { has_government = ROOT }
 			}
-			is_in_faction = no
 			GER = {
 				is_faction_leader = yes
 				is_subject = no

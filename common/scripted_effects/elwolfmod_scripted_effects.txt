@@ -521,6 +521,7 @@ elwolfmod_capitulations_on_actions = {
 					threat = 3.7 
 					name = elwolf_gre
 				}
+				ITA = { transfer_state = 182 }
 			}
 		}
 		ITA = {
