@@ -742,13 +742,6 @@ characters={
 				small="GFX_idea_generic_political_advisor_india_2"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_karam_singh_mann
-			allowed = {
-				original_tag = RAJ
-			}
-		}
 	}
 
 	RAJ_subhas_chanda_bose={
@@ -760,14 +753,7 @@ characters={
 			civilian ={
 				large = "GFX_RAJ_subhas_chandra_bose" #Can become country leader (Communism -> Stalinism) (Fascism -> Nazism)
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = RAJ_subhas_chanda_bose
-			allowed = {
-				original_tag = RAJ
-			}
-		}		
+		}	
 	}
 	
 	RAJ_john_edward_golightly={
