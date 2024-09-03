@@ -1671,6 +1671,31 @@ characters={
 		}
 	}
 
+	GER_carl_friedrich_goerdeler={
+		name=GER_carl_friedrich_goerdeler
+		portraits={
+			army={
+				small="GFX_idea_GER_carl_friedrich_goerdeler"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GER_carl_friedrich_goerdeler
+			allowed = {
+				original_tag = GER
+				has_dlc = "Waking the Tiger"
+			}
+			available = {
+			}
+			traits = {
+				economist 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}		
+	}
+
 	GER_wilhelm_canaris={
 		name=GER_wilhelm_canaris
 		portraits={
