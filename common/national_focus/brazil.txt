@@ -109,7 +109,6 @@ focus_tree = {
 			NOT = {
 				OR = {
 					has_completed_focus = BRA_estado_novo
-					has_completed_focus = BRA_estado_moderno
 				}
 			}
 		}
@@ -131,7 +130,6 @@ focus_tree = {
 		id = BRA_estado_novo
 		icon = GFX_focus_BRA_estado_novo
 		prerequisite = { focus = BRA_cohen_plan }
-		mutually_exclusive = { focus = BRA_estado_moderno }
 		x = 0
 		y = 2
 		relative_position_id = BRA_ensure_continued_military_support
