@@ -166,11 +166,12 @@ characters={
 			}
 		}
 		corps_commander={
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
+			traits = { infantry_officer infantry_leader trickster trait_engineer swamp_fox }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
 			legacy_id=-1
 		}
 	}
@@ -184,12 +185,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ armor_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
+			traits = { panzer_leader cavalry_leader trickster trait_engineer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
 			legacy_id=-1
 		}
 	}
@@ -203,12 +204,12 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ organizer infantry_leader hill_fighter trickster }
-			skill=4
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
+			traits = { offensive_doctrine panzer_leader cavalry_leader trickster trait_engineer}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
 			legacy_id=-1
 		}
 	}
