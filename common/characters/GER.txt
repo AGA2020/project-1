@@ -1686,7 +1686,7 @@ characters={
 				has_dlc = "Waking the Tiger"
 			}
 			available = {
-			always = no
+
 			}
 			traits = {
 				economist 
