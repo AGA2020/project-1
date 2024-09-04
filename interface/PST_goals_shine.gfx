@@ -2,7 +2,7 @@ spriteTypes = {
 
 
 	SpriteType = {
-		name = "GFX_goal_anschluss_shine"
+		name = "GFX_goal_anchluss_shine"
 		texturefile = "gfx/interface/goals/goal_anschluss.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
