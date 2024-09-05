@@ -2104,7 +2104,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_army_innovation
-		icon = GFX_goal_generic_axis_build_infantry
+		icon = GFX_GER_Wehrmacht
 		x = 19
 		y = 0
 		cost = 10

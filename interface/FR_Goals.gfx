@@ -11,4 +11,8 @@ spriteTypes = {
         name = "GFX_GER_Rhineland_Remilitarization"
         texturefile = "gfx/interface/goals/GER_Rhineland_Remilitarization.dds"
     }
+    spriteType={
+        name = "GFX_GER_Wehrmacht"
+        texturefile = "gfx/interface/goals/GER_Wehrmacht.dds"
+    }
 }
