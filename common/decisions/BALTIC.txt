@@ -1,5 +1,1 @@
 ####NO STEP BACK####
-
-infiltrate_belarus_decisions = {
-
-}
