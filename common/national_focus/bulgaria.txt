@@ -2872,7 +2872,6 @@ focus_tree = {
 						tag = GRE
 						tag = YUG
 						tag = ROM
-						tag = TUR
 					}
 					NOT = { is_subject_of = ROOT }
 					NOT = {	is_in_faction_with = ROOT }
@@ -2919,7 +2918,6 @@ focus_tree = {
 				country_exists = YUG
 				country_exists = GRE
 				country_exists = ROM
-				country_exists = TUR
 			}
 		}
 		
@@ -2953,7 +2951,6 @@ focus_tree = {
 							original_tag = YUG
 							original_tag = GRE
 							original_tag = ROM
-							original_tag = TUR
 						}
 					}
 					ROOT = {
@@ -2971,7 +2968,6 @@ focus_tree = {
 						original_tag = YUG
 						original_tag = GRE
 						original_tag = ROM
-						original_tag = TUR
 					}
 				}
 			}
@@ -4761,16 +4757,7 @@ focus_tree = {
 		id = BUL_the_third_bulgarian_empire
 
 		select_effect = {
-			if = {
-				limit = {
-					NOT = { is_in_faction_with = TUR }
-				}
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = TUR
-					value = 100
-				}
-			}
+
 		}
 
 		prerequisite = { focus = BUL_total_war focus = BUL_bulgarian_administration_of_the_balkans }
@@ -4930,29 +4917,12 @@ focus_tree = {
 				custom_effect_tooltip = BUL_the_third_bulgarian_empire_tt
 			}
 
-			if = {
-				limit = {
-					NOT = { has_wargoal_against = TUR }
-					NOT = { is_in_faction_with = TUR }
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = TUR
-				}
-			}
-
 			#Set ideology cosmetic tag to show the appropriate 3D models
 			set_country_flag = BUL_tbe_flag
 			BUL_set_appropriate_cosmetic_tag = yes
 
 			hidden_effect = {
 				news_event = { id = bftb_news.7 hours = 8 random_hours = 4 }
-			}
-
-			add_ai_strategy = {
-				type = declare_war
-				id = TUR
-				value = 100
 			}
 		}
 	}
