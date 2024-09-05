@@ -331,6 +331,12 @@
 				uses = 2
 				category = naval_doctrine	
 			}
+			IF = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				JAP_create_patrick_heenan_operative = yes
+			}
 			unlock_decision_tooltip = JAP_pressure_france
 		}
 	}
