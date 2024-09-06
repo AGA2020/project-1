@@ -1341,7 +1341,7 @@ equipment_modules = {
 			air_agility = -10
 			air_defence = -5
 		}
-		xp_cost = 5
+		xp_cost = 0
 		allow_mission_type = {
 			naval_kamikaze
 		}
