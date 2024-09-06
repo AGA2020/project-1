@@ -1324,10 +1324,6 @@ NOR_character_flag_setup_for_cw = {
 		set_character_flag = NOR_anti_communist
 	}
 	
-	NOR_queen_mathilde_i = {
-		set_character_flag = NOR_anti_fascist
-	}
-	
 	NOR_king_haakon_vii = {
 		set_character_flag = NOR_anti_fascist
 	}
