@@ -1307,7 +1307,7 @@ equipment_modules = {
 		add_stats = {	
 			build_cost_ic = 15
 		}
-		xp_cost = 5
+		xp_cost = 0
 		allow_mission_type = {
 			naval_bomber
 			port_strike
