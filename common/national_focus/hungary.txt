@@ -2857,7 +2857,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = HUN_mobile_corps_doctrine
 				cost_reduction = 0.25
-				uses = 1
+				uses = 2
 				category = cat_mobile_warfare
 			}
 		}
