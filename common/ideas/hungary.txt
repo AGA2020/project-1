@@ -1,7 +1,25 @@
 ideas = {
 
 	country = {
+	HUN_tank = {
+			picture = man_five_year_plan_tank
+			removal_cost = -1
 
+			allowed = {
+				original_tag = HUN
+			}
+
+			allowed_civil_war = {
+
+			}
+
+						equipment_bonus = {
+			armor = {
+				instant = yes
+				maximum_speed = 0.10
+			}
+		  }
+		}
 		HUN_treaty_of_triannon = {
 			allowed = {
 				original_tag = HUN

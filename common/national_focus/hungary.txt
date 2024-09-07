@@ -2614,10 +2614,42 @@ focus_tree = {
 	}
 
 	focus = {
+		id = Hun_blitz
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = { focus = HUN_mobile_focus }
+		x = -1
+		y = 2
+		relative_position_id = HUN_mobile_focus
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = HUN_tank
+		}
+	}
+
+	focus = {
 		id = HUN_motorized_logistics
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = HUN_the_botond }
-		x = -1
+		x = -2
 		y = 4
 		relative_position_id = HUN_mobile_focus
 
@@ -2765,7 +2797,7 @@ focus_tree = {
 		id = HUN_armored_warfare
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = HUN_the_botond }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = HUN_the_botond
 
@@ -2802,7 +2834,7 @@ focus_tree = {
 		id = HUN_mobile_corps_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = HUN_armored_warfare }
-		x = 0
+		x = -1
 		y = 2
 		relative_position_id = HUN_the_botond
 
