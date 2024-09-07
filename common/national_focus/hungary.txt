@@ -2621,11 +2621,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = HUN_mobile_focus
 
-		cost = 10
-
-		ai_will_do = {
-			factor = 60
-		}
+		cost = 5
 
 		available = {
 
