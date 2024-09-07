@@ -367,7 +367,6 @@ on_actions = {
 				every_other_country = {
 					limit = {
 						OR = {
-							original_tag = POR
 							original_tag = SPA
 						}
 						has_country_flag = SPA_iberian_pact
