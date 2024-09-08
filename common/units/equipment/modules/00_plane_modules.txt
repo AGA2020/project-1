@@ -1667,9 +1667,6 @@ equipment_modules = {
 			build_cost_ic = 2
 			weight = 1
 		}
-		build_cost_resources = {
-			rubber = 2
-		}
 		dismantle_cost_ic = 1.5
         xp_cost = 0
 	}
