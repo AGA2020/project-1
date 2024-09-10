@@ -1157,7 +1157,7 @@
 		}
 
 		available = {
-			MAN = { is_subject_of = ROOT }
+	
 		}
 
 		bypass = {
@@ -1174,6 +1174,51 @@
 				add_stability = 0.1
 				add_war_support = 0.1
 				add_political_power = 150
+			}
+			716 = {
+				add_dynamic_modifier = {
+					modifier = JAP_the_manchurian_project
+				}			
+			}
+			328 = {
+				add_dynamic_modifier = {
+					modifier = JAP_the_manchurian_project
+				}			
+			}
+			715 = {
+				add_dynamic_modifier = {
+					modifier = JAP_the_manchurian_project
+				}			
+			}
+			714 = {
+				add_dynamic_modifier = {
+					modifier = JAP_the_manchurian_project
+				}			
+			}
+			610 = {
+				add_dynamic_modifier = {
+					modifier = JAP_the_manchurian_project
+				}			
+			}
+			717 = {
+				add_dynamic_modifier = {
+					modifier = JAP_the_manchurian_project
+				}			
+			}
+			761 = {
+				add_dynamic_modifier = {
+					modifier = JAP_the_manchurian_project
+				}			
+			}
+			612 = {
+				add_dynamic_modifier = {
+					modifier = JAP_the_manchurian_project
+				}			
+			}
+			611 = {
+				add_dynamic_modifier = {
+					modifier = JAP_the_manchurian_project
+				}			
 			}
 		}
 	}
