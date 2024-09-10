@@ -4395,15 +4395,7 @@ focus = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			IF = {
-				limit = { AFA = { exists = yes } }
-				AFA = {
-					country_event = {
-						id = BBA_ethiopia_imperial_events.10
-						hours = 1
-					}
-				}
-			}
+
 		}
 	}
 	focus = {

@@ -18,7 +18,6 @@ is_playable_country = {
 		original_tag = NZL
 		original_tag = RAJ
 		original_tag = SIA
-		original_tag = IRE
 		original_tag = NOR
 		original_tag = SPR
 		original_tag = FIN
@@ -42,6 +41,7 @@ is_limited_country = {
 		original_tag = VEN
 		original_tag = WST
 		original_tag = IRQ
+		original_tag = IRE
 	}
 }
 
