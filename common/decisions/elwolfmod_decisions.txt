@@ -170,6 +170,9 @@ operations = {
 			}
 			hidden_effect = {
 				ITA_end_the_italo_ethiopian_war = yes
+				ITA_missiolinis_initialize_missiolinis_system = yes
+				ITA_missiolinis_system_available = yes
+				ITA_missiolinis_cd_ready = yes
 			}
 			every_state = {
 				limit = {
