@@ -5,5 +5,4 @@ JAP_the_manchurian_project = {
 
 		local_resources_factor = 0.1
 		local_building_slots = 5
-	}
 }

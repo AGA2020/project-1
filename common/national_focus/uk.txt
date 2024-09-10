@@ -675,7 +675,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = GER_four_year_plan
+				name = industrial_bonus
 				bonus = 1
 				uses = 2
 				technology = construction3
@@ -2969,28 +2969,7 @@ focus_tree = {
 			focus = uk_colonial_focus
 		}
 		available = {
-			OR = {
-				any_country = {
-					original_tag = NZL
-					is_in_faction_with = ROOT
-				}
-				any_country = {
-					original_tag = SAF
-					is_in_faction_with = ROOT
-				}
-				any_country = {
-					original_tag = RAJ
-					is_in_faction_with = ROOT
-				}
-				any_country = {
-					original_tag = AST
-					is_in_faction_with = ROOT
-				}
-				any_country = {
-					original_tag = NZL
-					is_in_faction_with = ROOT
-				}
-			}
+
 		}
 		bypass = {
 			CAN = {
@@ -3036,58 +3015,53 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = uk_colonial_focus
-		cost = 10
+		cost = 5
 		available_if_capitulated = yes
 		completion_reward = {
 			random_country = {
 				limit = {
 					original_tag = CAN
+					exists = yes
 					is_in_faction_with = ROOT
 				}
-				add_opinion_modifier = {
-					target = ENG
-					modifier = ENG_commonwealth_ties
-				}
+				add_political_power = 50
+				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
 			random_country = {
 				limit = {
 					original_tag = AST
+					exists = yes
 					is_in_faction_with = ROOT
 				}
-				add_opinion_modifier = {
-					target = ENG
-					modifier = ENG_commonwealth_ties
-				}
+				add_political_power = 50
+				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
 			random_country = {
 				limit = {
 					original_tag = RAJ
+					exists = yes
 					is_in_faction_with = ROOT
 				}
-				add_opinion_modifier = {
-					target = ENG
-					modifier = ENG_commonwealth_ties
-				}
+				add_political_power = 50
+				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
 			random_country = {
 				limit = {
 					original_tag = NZL
+					exists = yes
 					is_in_faction_with = ROOT
 				}
-				add_opinion_modifier = {
-					target = ENG
-					modifier = ENG_commonwealth_ties
-				}
+				add_political_power = 50
+				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
 			random_country = {
 				limit = {
 					original_tag = SAF
+					exists = yes
 					is_in_faction_with = ROOT
 				}
-				add_opinion_modifier = {
-					target = ENG
-					modifier = ENG_commonwealth_ties
-				}
+				add_political_power = 50
+				add_opinion_modifier = { target = ENG modifier = ENG_commonwealth_ties }
 			}
 		}
 	}
@@ -3161,7 +3135,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = uk_commonwealth_focus
-		cost = 5
+		cost = 10
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -3330,7 +3304,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = uk_commonwealth_focus
-		cost = 5
+		cost = 10
 		available_if_capitulated = yes
 		complete_tooltip = {
 			random_country = {
@@ -3507,7 +3481,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = uk_australia_focus
-		cost = 5
+		cost = 10
 		available_if_capitulated = yes
 		complete_tooltip = {
 			random_country = {
@@ -3684,7 +3658,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = uk_commonwealth_focus
-		cost = 5
+		cost = 10
 		available_if_capitulated = yes
 		complete_tooltip = {
 			random_country = {
@@ -3861,7 +3835,7 @@ focus_tree = {
 		x = 2
 		y = 3
 		relative_position_id = uk_commonwealth_focus
-		cost = 5
+		cost = 10
 		available_if_capitulated = yes
 		complete_tooltip = {
 			random_country = {
