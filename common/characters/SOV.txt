@@ -12,7 +12,6 @@ characters = {
   ####    ####    ####   #    #    #    #    #    #        ######  ######  #    #  #####   ######  #    #   ####  
                                                                                                                   
 
-
 	SOV_iosif_stalin = {
 		name = SOV_iosif_stalin
 		portraits = {
@@ -44,8 +43,7 @@ characters = {
 			traits = { humble_appeaser }
 			expire = "1965.1.1"
 			id = -1
-		}
-	}
+	}	
 
 	#TODO: This should be a country leader token added to Stalin in the appropriate event/focus/whatever
 	SOV_tsar_iosif_stalin = {
@@ -112,6 +110,28 @@ characters = {
 				defier_of_the_sun_god supreme_representative_of_god_on_earth
 			}
 		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_patriarch_meletius
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				has_completed_focus = SOV_beaten_but_not_defeated
+				NOT = {
+					has_completed_focus = SOV_the_third_rome
+				}
+			}
+			available = {
+				has_completed_focus = SOV_the_hands_do
+				NOT = {
+					has_completed_focus = SOV_the_third_rome
+				}
+			}
+			traits = {
+				the_masses_opium
+			}
+		}	
 	}
 
 	SOV_supreme_soviet = { #Country Leader role added via focus
@@ -162,7 +182,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { media_personality armor_officer war_hero winter_specialist   }
+			traits = { media_personality armor_officer war_hero winter_specialist }
 			skill = 5
 			attack_skill = 5
 			defense_skill = 2
@@ -260,7 +280,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { armor_officer politically_connected   }
+			traits = { armor_officer politically_connected }
 			skill = 4
 			attack_skill = 4
 			defense_skill = 4
@@ -326,7 +346,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { career_officer trait_cautious   }
+			traits = { career_officer trait_cautious }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -346,7 +366,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless infantry_officer   }
+			traits = { trait_reckless infantry_officer }
 			skill = 3
 			attack_skill = 1
 			defense_skill = 3
@@ -400,7 +420,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { harsh_leader armor_officer politically_connected   }
+			traits = { harsh_leader armor_officer politically_connected }
 			skill = 5
 			attack_skill = 4
 			defense_skill = 5
@@ -452,7 +472,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { career_officer cavalry_officer politically_connected   }
+			traits = { career_officer cavalry_officer politically_connected }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -505,7 +525,7 @@ characters = {
 		}
 
 		field_marshal = {
-			traits = { old_guard inflexible_strategist politically_connected   }
+			traits = { old_guard inflexible_strategist politically_connected }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -546,7 +566,7 @@ characters = {
 		}
 
 		field_marshal = {
-			traits = { brilliant_strategist career_officer trait_reckless infantry_officer offensive_doctrine   }
+			traits = { brilliant_strategist career_officer trait_reckless infantry_officer offensive_doctrine }
 			skill = 4
 			attack_skill = 3
 			defense_skill = 4
@@ -566,7 +586,7 @@ characters = {
 			}
 		}
 		field_marshal = {
-			traits = { old_guard inflexible_strategist politically_connected   }
+			traits = { old_guard inflexible_strategist politically_connected }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -586,7 +606,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { armor_officer   }
+			traits = { armor_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -606,7 +626,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { cavalry_officer   }
+			traits = { cavalry_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -661,7 +681,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { old_guard inflexible_strategist career_officer politically_connected   }
+			traits = { old_guard inflexible_strategist career_officer politically_connected }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -681,7 +701,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless infantry_officer   }
+			traits = { trait_reckless infantry_officer }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 2
@@ -701,7 +721,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { career_officer   }
+			traits = { career_officer }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -721,7 +741,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless cavalry_officer   }
+			traits = { trait_reckless cavalry_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -741,7 +761,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { career_officer   }
+			traits = { career_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -761,7 +781,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { cavalry_officer   }
+			traits = { cavalry_officer }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -781,7 +801,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { career_officer   }
+			traits = { career_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -801,7 +821,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trickster   }
+			traits = { trickster }
 			skill = 3
 			attack_skill = 1
 			defense_skill = 3
@@ -821,7 +841,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer commando   }
+			traits = { infantry_officer commando }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -841,7 +861,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer winter_specialist   }
+			traits = { infantry_officer winter_specialist }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -876,7 +896,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer   }
+			traits = { infantry_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -896,7 +916,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { career_officer   }
+			traits = { career_officer }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -916,7 +936,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer   }
+			traits = { infantry_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -936,7 +956,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { brilliant_strategist infantry_officer winter_specialist   }
+			traits = { brilliant_strategist infantry_officer winter_specialist }
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
@@ -956,7 +976,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { infantry_officer   }
+			traits = { infantry_officer }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -976,7 +996,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { career_officer cavalry_officer   }
+			traits = { career_officer cavalry_officer }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 3
@@ -996,7 +1016,6 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = {   }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 2
@@ -1016,7 +1035,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { trait_reckless armor_officer   }
+			traits = { trait_reckless armor_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -1036,7 +1055,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { cavalry_officer   }
+			traits = { cavalry_officer }
 			skill = 3
 			attack_skill = 1
 			defense_skill = 3
@@ -1056,7 +1075,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { old_guard career_officer trait_cautious politically_connected   }
+			traits = { old_guard career_officer trait_cautious politically_connected }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -1076,7 +1095,7 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { brilliant_strategist career_officer   }
+			traits = { brilliant_strategist career_officer }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -1705,7 +1724,7 @@ characters = {
 		}
 
 		field_marshal = {
-			traits = { career_officer inflexible_strategist trait_reckless   }
+			traits = { career_officer inflexible_strategist trait_reckless }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 2
@@ -1740,7 +1759,7 @@ characters = {
 		}
 
 		field_marshal = {
-			traits = { old_guard career_officer infantry_officer organizer   }
+			traits = { old_guard career_officer infantry_officer organizer }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 1
@@ -1788,7 +1807,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { cavalry_officer trait_reckless war_hero cavalry_leader   }
+			traits = { cavalry_officer trait_reckless war_hero cavalry_leader }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -1809,7 +1828,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { trait_cautious war_hero trickster   }
+			traits = { trait_cautious war_hero trickster }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 1
@@ -1833,7 +1852,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { trait_reckless war_hero commando   }
+			traits = { trait_reckless war_hero commando }
 			skill = 3
 			attack_skill = 2
 			defense_skill = 2
@@ -1857,7 +1876,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { cavalry_officer trait_reckless cavalry_leader ranger   }
+			traits = { cavalry_officer trait_reckless cavalry_leader ranger }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 2
@@ -1881,7 +1900,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { cavalry_officer armor_officer panzer_leader panzer_expert   }
+			traits = { cavalry_officer armor_officer panzer_leader panzer_expert }
 			skill = 3
 			attack_skill = 4
 			defense_skill = 1
@@ -1931,6 +1950,19 @@ characters = {
 				factor = 1.000
 			}
 		}
+		
+		field_marshal = {
+			traits = { old_guard inflexible_strategist }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+			}
+		}
 	}
 
 
@@ -1943,6 +1975,18 @@ characters = {
 				small = "GFX_idea_SOV_pyotr_krasnov"
 			}
 		}
+		field_marshal = {
+			traits = { cavalry_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+			}
+		}
 	}
 
 	SOV_konstantin_nechayev = {
@@ -1951,6 +1995,18 @@ characters = {
 			army = {
 				large = "GFX_portrait_SOV_konstantin_nechayev"
 				small = "GFX_idea_SOV_konstantin_nechayev"
+			}
+		}
+		field_marshal = {
+			traits = { infantry_officer war_hero }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
 		}
 	}
@@ -1963,6 +2019,18 @@ characters = {
 				small = "GFX_idea_SOV_vladimir_kosmin"
 			}
 		}
+		field_marshal = {
+			traits = { winter_expert trait_mountaineer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+			}
+		}
 	}
 
 	SOV_aleksandr_rodzyanko = {
@@ -1973,6 +2041,18 @@ characters = {
 				small = "GFX_idea_SOV_aleksandr_rodzyanko"
 			}
 		}
+		field_marshal = {
+			traits = { cavalry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+			}
+		}
 	}
 
 	SOV_andrey_shkuro = {
@@ -1981,6 +2061,18 @@ characters = {
 			army = {
 				large = "GFX_portrait_SOV_andrey_shkuro"
 				small = "GFX_idea_SOV_andrey_shkuro"
+			}
+		}
+		field_marshal = {
+			traits = { trait_reckless cavalry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
 		}
 	}
@@ -2002,6 +2094,8 @@ characters = {
 		}
 		allowed_civil_war = {
 			OR = {
+				SOV_advisor_is_aligned_left = yes 
+				SOV_advisor_is_aligned_right = yes 
 				SOV_advisor_is_aligned_centre = yes 
 			}
 			has_government = communism
@@ -2041,7 +2135,9 @@ characters = {
 			}
 		}
 		allowed_civil_war = {
-			OR = { 
+			OR = {
+				SOV_advisor_is_aligned_left = yes 
+				SOV_advisor_is_aligned_right = yes 
 				SOV_advisor_is_aligned_centre = yes 
 			}
 			has_government = communism
@@ -2154,12 +2250,14 @@ characters = {
 
 		allowed_civil_war = {
 			OR = {
+				has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
 				AND = { #If not aligned by Right oppo, then stays with Stalin
 					original_tag = SOV
 					NOT = { tag = SOV }
 					NOT = {
 						any_other_country = {
 							original_tag = SOV
+							has_completed_focus = SOV_the_plan_for_the_coup
 						}
 					}
 				}
@@ -2203,12 +2301,14 @@ characters = {
 
 		allowed_civil_war = {
 			OR = {
+				has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
 				AND = { #If not aligned by Right oppo, then stays with Stalin
 					original_tag = SOV
 					NOT = { tag = SOV }
 					NOT = {
 						any_other_country = {
 							original_tag = SOV
+							has_completed_focus = SOV_the_plan_for_the_coup
 						}
 					}
 				}
@@ -2355,6 +2455,8 @@ characters = {
 		}
 		allowed_civil_war = {
 			OR = {
+				SOV_advisor_is_aligned_left = yes 
+				SOV_advisor_is_aligned_right = yes 
 				SOV_advisor_is_aligned_centre = yes 
 			}
 			has_government = communism
@@ -2396,6 +2498,25 @@ characters = {
 		}
 		allowed_civil_war = {
 			has_government = communism
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_vyacheslav_molotov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_policy_of_individual_security
+			}
+			traits = {
+				pc_for_foreign_affairs_molotov 
+			}
 		}
 	}
 
@@ -2446,6 +2567,62 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism 
+				}
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_lev_trotsky
+			allowed = {
+				original_tag = SOV
+			}
+			on_add = {
+				set_global_flag = flag_trotsky_returning_to_ussr_from_mexico
+				MEX = { country_event = { id = mexico.22 } }		
+			}
+			
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+				NOT = {
+					has_global_flag = trotsky_dead
+				}
+			}
+			available = {
+				OR = {
+					has_global_flag = SOV_soviet_civil_war
+					has_global_flag = SOV_soviet_civil_war_over
+				}
+				OR = {
+					has_completed_focus = SOV_integrate_smirnovs_bloc
+					has_completed_focus = SOV_return_democracy_to_the_party
+				}
+				is_country_leader = no
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+				IF = {
+					limit = {
+						has_global_flag = flag_mexico_invited_trotsky_to_government
+						NOT = { has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico }
+						SOV_is_opposition = yes 
+					}
+					MEX = { 
+						NOT = { has_idea = MEX_leon_trotsky }
+						NOT = { has_country_leader = { character = MEX_leon_trotsky } } 
+					}
+				}
+			}
+			traits = {
+				pc_military_naval_affairs
 			}
 		}
 	}
@@ -2466,6 +2643,48 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism 
+				}
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_ivan_smirnov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_character_purged_flag }
+				
+			}
+			available = {
+				OR = {
+					has_global_flag = SOV_soviet_civil_war
+					has_global_flag = SOV_soviet_civil_war_over
+				}
+				OR = {
+					has_completed_focus = SOV_integrate_smirnovs_bloc
+					has_completed_focus = SOV_return_democracy_to_the_party
+				}
+				is_country_leader = no
+				if = {
+					limit = {
+						has_character_flag = SOV_imprisoned_flag
+					}
+					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				head_directorate_of_new_buildings 
 			}
 		}
 	}
@@ -2483,6 +2702,172 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism 
+				}
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_ivar_smilga
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = SOV_integrate_smirnovs_bloc
+					has_completed_focus = SOV_return_democracy_to_the_party
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_imprisoned_flag
+					}
+					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				soviet_economist
+			}
+		}
+	}
+
+
+	SOV_karl_radek = {
+		name = SOV_karl_radek
+
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_karl_radek"
+			}
+		}
+
+		allowed_civil_war = {
+			OR = {
+				AND = {
+					tag = SOV
+					SOV_is_left_opposition = yes 
+					has_completed_focus = SOV_bring_old_trotskyists_back
+				}
+				AND = {
+					tag = SOV
+					SOV_is_right_opposition = yes 
+					has_completed_focus = SOV_cooperation_against_stalin 
+				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism 
+				}
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_karl_radek
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				OR = {
+					AND = {
+						SOV_is_left_opposition = yes 
+						has_completed_focus = SOV_bring_old_trotskyists_back
+					}
+					AND = {
+						SOV_is_right_opposition = yes 
+						has_completed_focus = SOV_cooperation_against_stalin 
+					}
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				international_revolutionary 
+			}
+		}
+	}
+
+	SOV_yevgeny_preobrazhensky = {
+		name = SOV_yevgeny_preobrazhensky
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_yevgeny_preobrazhensky"
+			}
+		}
+
+		allowed_civil_war = {
+			OR = {
+				AND = {
+					tag = SOV
+					SOV_is_left_opposition = yes 
+					has_completed_focus = SOV_bring_old_trotskyists_back
+				}
+				AND = {
+					tag = SOV
+					SOV_is_right_opposition = yes 
+					has_completed_focus = SOV_cooperation_against_stalin 
+				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism 
+				}
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_yevgeny_preobrazhensky
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				OR = {
+					AND = {
+						tag = SOV
+						SOV_is_left_opposition = yes 
+						has_completed_focus = SOV_bring_old_trotskyists_back
+					}
+					AND = {
+						tag = SOV
+						SOV_is_right_opposition = yes 
+						has_completed_focus = SOV_cooperation_against_stalin 
+					}
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				ecomonist_publicist 
 			}
 		}
 	}
@@ -2500,6 +2885,10 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism 
+				}
 			}
 		}
 
@@ -2515,6 +2904,10 @@ characters = {
 				}
 			}
 			available = {
+				OR = {
+					SOV_is_left_opposition = yes
+					has_completed_focus = SOV_return_democracy_to_the_party
+				}
 				if = {
 					limit = {
 						has_character_flag = SOV_imprisoned_flag
@@ -2544,6 +2937,53 @@ characters = {
 				small = "GFX_idea_SOV_nikolay_bukharin"
 			}
 		}
+
+		allowed_civil_war = {
+			OR = {
+				SOV_is_right_opposition = yes 
+				AND = {
+					SOV_is_left_opposition = yes 
+					has_completed_focus = SOV_cooperation_against_stalin 
+				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism 
+				}
+			}
+
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_nikolay_bukharin
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				OR = {
+					SOV_is_right_opposition = yes 
+					AND = {
+						SOV_is_left_opposition = yes 
+						has_completed_focus = SOV_cooperation_against_stalin 
+					}
+				}
+				is_country_leader = no
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				economy_reformer 
+			}
+		}
 	}
 	
 	SOV_aleksey_rykov = {
@@ -2559,6 +2999,50 @@ characters = {
 		}
 
 		allowed_civil_war = {
+			OR = {
+				SOV_is_right_opposition = yes 
+				AND = {
+					SOV_is_left_opposition = yes 
+					has_completed_focus = SOV_cooperation_against_stalin 
+				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism 
+				}
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_aleksey_rykov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				OR = {
+					SOV_is_right_opposition = yes 
+					AND = {
+						SOV_is_left_opposition = yes 
+						has_completed_focus = SOV_cooperation_against_stalin 
+					}
+				}
+				is_country_leader = no
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			
+			traits = {
+				peoples_commissar_for_posts_and_telegraphs 
+			}
 		}
 	}
 
@@ -2575,6 +3059,38 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism 
+				}
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_mikhail_tomsky
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				OR = {
+					SOV_is_right_opposition = yes
+					has_completed_focus = SOV_return_democracy_to_the_party
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				right_trade_unionist 
 			}
 		}
 	}
@@ -2588,6 +3104,34 @@ characters = {
 		}
 		allowed_civil_war = {
 			has_government = communism
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_grigory_sokolnikov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				OR = {
+					has_completed_focus = SOV_the_need_for_policy_changes 
+					has_completed_focus = SOV_return_democracy_to_the_party
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				peoples_commissar_of_finance 
+			}
 		}
 	}
 
@@ -2607,6 +3151,49 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism 
+				}
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_grigory_zinovyev
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_align_the_zinovyevites
+				OR = {
+					has_global_flag = SOV_soviet_civil_war
+					has_global_flag = SOV_soviet_civil_war_over
+					AND = {
+						has_completed_focus = SOV_the_plan_for_the_coup
+						has_completed_focus = SOV_coup_detat
+					}
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_imprisoned_flag
+					}
+					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				communist_theorist
 			}
 		}		
 	}
@@ -2627,6 +3214,107 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism 
+				}
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_lev_kamenev
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_align_the_zinovyevites
+				OR = {
+					has_global_flag = SOV_soviet_civil_war
+					has_global_flag = SOV_soviet_civil_war_over
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_imprisoned_flag
+					}
+					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				appeasing_technocrat 
+			}
+		}
+	}
+
+	SOV_martemyan_ryutin = {
+		name = SOV_martemyan_ryutin
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_martemyan_ryutin_imprisoned"
+			}
+		}
+
+		allowed_civil_war = {
+			OR = {
+				AND = {
+					SOV_is_left_opposition = yes 
+					has_completed_focus = SOV_liberate_ryutin
+				}
+				AND = {
+					SOV_is_right_opposition = yes 
+					has_completed_focus = SOV_liberate_ryutin 
+				}
+				AND = {
+					SOV_is_exiles = yes 
+					has_government = communism
+				}
+			}
+		}
+
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_martemyan_ryutin
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_liberate_ryutin
+				OR = {
+					has_global_flag = SOV_soviet_civil_war
+					has_global_flag = SOV_soviet_civil_war_over
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_imprisoned_flag
+					}
+					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				anti_stalinist_propagandist 
 			}
 		}
 	}
@@ -2644,6 +3332,23 @@ characters = {
 				has_government = fascism
 			}
 		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_patriarch_sergy
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				OR = {
+					has_completed_focus = SOV_patriarch_of_all_russia
+					has_completed_focus = SOV_the_declaration
+				}
+			}
+			traits = {
+				patriarch_of_moscow_and_all_russia 
+			}
+		}
 	}
 	
 	SOV_metropolitan_anastasy = {
@@ -2658,7 +3363,23 @@ characters = {
 				has_government = neutrality 
 				has_government = fascism
 			}
-		}	
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_metropolitan_anastasy
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
+			available = {
+				has_completed_focus = SOV_return_of_the_rocor
+			}
+			traits = {
+				orthodox_rabblerouser
+			}
+		}		
 	}
 
 	SOV_metropolitan_nikolay = {
@@ -2672,6 +3393,23 @@ characters = {
 			OR = {
 				has_government = neutrality 
 				has_government = fascism
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_metropolitan_nikolay
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
+			available = {
+				has_completed_focus = SOV_the_declaration
+			}
+			traits = {
+				theocratic_diplomat
 			}
 		}
 	}
@@ -2689,6 +3427,23 @@ characters = {
 				has_government = fascism
 			}
 		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_metropolitan_aleksy
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = SOV_the_declaration
+			}
+			visible = {
+				has_completed_focus = SOV_beaten_but_not_defeated
+			}
+			traits = {
+				driver_of_the_faithful
+			}
+		}		
 	}
 
 	SOV_anastasy_vonsyatsky = {
@@ -2729,6 +3484,73 @@ characters = {
 			}
 		}		
 	}
+
+	SOV_grigory_semyonov = {
+		name = SOV_grigory_semyonov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_grigory_semyonov"
+				large = "GFX_portrait_SOV_grigory_semyonov"
+			}
+		}
+
+		corps_commander = {
+			traits = { cavalry_officer cavalry_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			legacy_id = 0
+			visible = {
+				OR = {
+					has_idea = SOV_grigory_semyonov
+					has_completed_focus = SOV_approach_semyonov
+				}
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_grigory_semyonov
+			allowed = {
+				OR = {
+					original_tag = SOV
+					original_tag = MAN # This is where he starts the game
+				}
+			}
+			available = {
+				if = { 
+					limit = { tag = MAN }
+					custom_trigger_tooltip = {
+					 	tooltip = SOV_grigory_semyonov_man_tt
+					 	SOV_soviet_civil_war_not_started = yes 
+					 	NOT = { SOV = { has_completed_focus = SOV_approach_semyonov } }
+					}
+				}
+				
+				if = {
+					limit = { tag = SOV }
+					has_completed_focus = SOV_approach_semyonov
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			traits = {
+				ataman_transbaikal_host
+			}
+		}		
+	}
+
 	SOV_nikolay_ustryalov = {
 		name = SOV_nikolay_ustryalov
 		portraits = {
@@ -2741,7 +3563,21 @@ characters = {
 				has_government = neutrality 
 				has_government = fascism
 			}
-		}	
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_nikolay_ustryalov
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = SOV_consolidate_power
+			}
+			traits = {
+				political_chameleon
+			}
+		}		
 	}
 
 	SOV_aleksandr_kazembek = {
@@ -2755,6 +3591,31 @@ characters = {
 			OR = {
 				has_government = neutrality 
 				has_government = fascism
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_aleksandr_kazembek
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_reconvene_the_zemsky_sobor
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				mladorossi_theorist
 			}
 		}
 	}
@@ -2782,6 +3643,29 @@ characters = {
 				has_government = fascism
 			}
 		}
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = SOV_aleksandr_prokofyev_seversky
+			ledger = air
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				SOV_is_exiles = yes
+				OR = {
+					has_global_flag = SOV_soviet_civil_war
+					has_global_flag = SOV_soviet_civil_war_over
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = { victory_through_airpower }
+		}
 	}
 
 	#CHIEF OF AIRFORCE
@@ -2798,6 +3682,29 @@ characters = {
 				has_government = neutrality 
 				has_government = fascism
 			}
+		}
+
+		advisor = {
+			cost = 100
+			slot = air_chief
+			idea_token = SOV_vyacheslav_tkachyov
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				SOV_is_exiles = yes
+				OR = {
+					has_global_flag = SOV_soviet_civil_war
+					has_global_flag = SOV_soviet_civil_war_over
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = { air_chief_reform_2 }
 		}
 	}
 
@@ -2816,6 +3723,29 @@ characters = {
 				has_government = fascism
 			}
 		}
+		
+		advisor = {
+			cost = 100
+			slot = air_chief
+			idea_token = SOV_yan_nagursky
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				SOV_is_exiles = yes
+				OR = {
+					has_global_flag = SOV_soviet_civil_war
+					has_global_flag = SOV_soviet_civil_war_over
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = { air_chief_all_weather_2 }
+		}
 	}
 
 	#MHC - Air
@@ -2832,6 +3762,30 @@ characters = {
 				has_government = neutrality 
 				has_government = fascism
 			}
+		}
+		
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = SOV_vasily_yanchenko
+			ledger = air
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				SOV_is_exiles = yes
+				OR = {
+					has_global_flag = SOV_soviet_civil_war
+					has_global_flag = SOV_soviet_civil_war_over
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = { air_air_superiority_2 }
 		}
 	}	
 
@@ -2936,5 +3890,45 @@ characters = {
 			id = -1
 		}
 		allowed_civil_war = { tag = SOV}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_aleksandr_kerensky
+			allowed = {
+					original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				democratic_reformer 
+			}
+			do_effect = {
+				NOT = {
+					has_government = democratic 
+				}
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
+		}
 	}
 }
