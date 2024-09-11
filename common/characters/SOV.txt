@@ -43,6 +43,7 @@ characters = {
 			traits = { humble_appeaser }
 			expire = "1965.1.1"
 			id = -1
+		}
 	}	
 
 	#TODO: This should be a country leader token added to Stalin in the appropriate event/focus/whatever
