@@ -113,6 +113,7 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_research_slot = 1
 			set_rule = { can_create_factions = yes }
 			create_faction = JAP_greater_east_asian_co_prosperity_sphere
 			IF = {

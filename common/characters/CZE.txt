@@ -393,8 +393,9 @@ characters={
 			idea_token = CZE_josef_frantisek
 			ledger = air
 			allowed = {
-				original_tag = CZE
+				original_tag = GER
 			}
+			available = { has_completed_focus = GER_end_of_czechoslovakia }
 			traits = {
 				air_air_superiority_2
 			}
