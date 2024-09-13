@@ -152,12 +152,6 @@ on_actions = {
 								has_war = yes
 								has_idea = peace_training
 							}
-							AND = {
-								tag = SPR
-								GER = {
-									has_war = yes
-								}
-							}
 						}
 					}
 				}
