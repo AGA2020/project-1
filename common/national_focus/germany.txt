@@ -22,7 +22,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_four_year_plan
-		icon = GFX_goal_generic_construction
+		icon = GFX_GER_A_Workers_Struggle
 		x = 6
 		y = 0
 		cost = 10
@@ -2468,6 +2468,109 @@ focus_tree = {
 				news_event = { hours = 6 id = news.25 }
 			}
 		}		
+	}
+
+	focus = {
+		id = GER_nationalist_spain_ally
+		icon = GFX_focus_generic_befriend_nationalist_spain_focus
+		prerequisite = { focus = GER_rhineland }
+		available = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				SPR = { has_civil_war = no }
+				any_other_country = {
+					original_tag = SPR
+					has_government = fascism
+					NOT = { has_war_with = GER }
+					NOT = { is_in_faction_with = GER }
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPA = {
+					exists = yes
+					has_civil_war = no
+					NOT = { has_war_with = GER }
+					NOT = { is_in_faction_with = GER }
+				}
+			}
+			FRA = {
+				OR = {
+					exists = no
+					has_capitulated = yes
+					has_government = fascism
+				}
+			}
+		}
+		
+		#bypass = {
+		#	any_other_country = {
+		#		original_tag = SPR
+		#		has_government = fascism
+		#		is_in_faction_with = GER
+		#	}
+		#}
+		x = -3
+		y = 2
+		relative_position_id = GER_rhineland
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					is_historical_focus_on = yes
+					date < 1942.01.01
+					surrender_progress > 0
+					AND = {
+						has_war_with = ENG
+						ENG = { surrender_progress < 0.2 }
+					}
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OR = { 
+						AND = {
+							NOT = { has_dlc = "La Resistance" }
+							NOT = { country_exists = SPR }
+							SPR = { NOT = { has_government = fascism } }
+						}
+						AND = {
+							has_dlc = "La Resistance"
+							NOT = { country_exists = SPA }
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				random_other_country = {
+					limit = {
+						original_tag = SPR
+						has_government = fascism
+					}
+					remove_ideas = SPA_recovering_from_civil_war
+					add_opinion_modifier = { target = GER modifier = ger_spa_alliance_focus }
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				SPA = {
+					remove_ideas = SPA_recovering_from_civil_war
+				}
+			}
+		}
 	}
 
 	focus = {
