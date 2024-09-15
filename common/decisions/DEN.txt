@@ -347,19 +347,6 @@ DEN_balance_of_power_category = {
 				}
 				ENG = { country_event = { id = denmark_events.100 days = 5 }}
 			}
-			else_if = {
-				limit = {
-					ICE = {
-						is_subject = no
-						has_civil_war = no
-						OR = {
-							NOT = { has_government = communism }
-							NOT = { has_government = fascism }
-						}
-					}
-				}
-				ICE = { country_event = { id = denmark_events.100 days = 5 }}
-			}
 		}
 	}
 
@@ -2670,64 +2657,10 @@ DEN_nordic_security_category = {
 
 #INTEGRATE PUPPET
 DEN_integration_puppets_category = { 
-	DEN_integrate_iceland = {
-		icon = GFX_decision_generic_nationalism
-		ai_will_do = {
-			base = 50
-		}
-		allowed = {
-			original_tag = DEN
-		}
-		
-		visible = {
-			ICE = {
-				is_subject_of = PREV
-			}
-			has_country_flag = DEN_can_integrate_iceland_flag
-		}
 
-		activation = {
-			always = no
-		}
-
-		is_good = yes
-
-		days_remove = DEN_short_reset_time
-
-		cost = DEN_decision_medium_cost
-
-		fire_only_once = yes
-
-		cancel_trigger = {  
-			OR = {
-				has_capitulated = yes 
-				ICE = {
-					NOT = { is_subject_of = PREV }
-				}
-			}
-		}
-
-		cancel_effect = {
-		}
-
-		complete_effect = {
-			ICE = { country_event = { id = denmark_expansion_event.100 days = 1 }}
-		}
-
-		remove_effect = {
-			annex_country = {
-				target = ICE
-				transfer_troops = yes
-			}
-		}	
-	}
 }
 
 DEN_demand_territory_category = {
-}
-
-DEN_pan_scandinavianism_decisions_category = {
-
 }
 
 DEN_danish_faction_category = {
