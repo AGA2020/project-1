@@ -2093,14 +2093,6 @@ characters = {
 				small = "GFX_idea_mikhail_kalinin"
 			}
 		}
-		allowed_civil_war = {
-			OR = {
-				SOV_advisor_is_aligned_left = yes 
-				SOV_advisor_is_aligned_right = yes 
-				SOV_advisor_is_aligned_centre = yes 
-			}
-			has_government = communism
-		}
 
 		advisor = {
 			slot = political_advisor
