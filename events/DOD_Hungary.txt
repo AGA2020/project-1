@@ -1488,16 +1488,6 @@ country_event = {
 			}
 			FRA = { country_event = { id = DOD_hungary.60 } } #France given option to intervene, if they don't have bigger problems
 		}
-		if = {
-			limit = { 
-				ENG = {
-					has_war = no
-					has_government = democratic
-					has_completed_focus = uk_balkan_strategy
-				}
-			}
-			ENG = { country_event = { id = DOD_hungary.60 } } #Britain given option to intervene, if they don't have bigger problems
-		}
 	}
 
 	option = {# Ask for mediation

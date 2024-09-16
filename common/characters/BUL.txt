@@ -1725,20 +1725,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 1.000
-				modifier = {
-					factor = 3.000
-					OR = {
-						BUL_is_communist_balkan_ai = yes 
-					}
-				}
-				modifier = {
-					factor = 0
-					NOT = {
-						OR = {
-							BUL_is_communist_balkan_ai = yes 
-						}
-					}
-				}
 			}
 		}
 		name = BUL_vasil_kolarov

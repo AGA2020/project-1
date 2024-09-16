@@ -2242,20 +2242,7 @@ characters = {
 		}
 
 		allowed_civil_war = {
-			OR = {
-				has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
-				AND = { #If not aligned by Right oppo, then stays with Stalin
-					original_tag = SOV
-					NOT = { tag = SOV }
-					NOT = {
-						any_other_country = {
-							original_tag = SOV
-							has_completed_focus = SOV_the_plan_for_the_coup
-						}
-					}
-				}
-			}
-			has_government = communism
+
 		}
 
 		advisor = {
