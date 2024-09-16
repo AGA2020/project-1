@@ -1184,7 +1184,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_hermann_goring_werke
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_GER_Goerings_Four_Year_Plan
 		dynamic = yes
 		prerequisite = { focus = GER_autarky }
 		x = 2
