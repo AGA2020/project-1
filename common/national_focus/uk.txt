@@ -3981,6 +3981,7 @@ focus_tree = {
 		}
 		available = {
 			RAJ = {
+				surrender_progress < 0.20
 				is_subject_of = ENG
 			}
 		}
