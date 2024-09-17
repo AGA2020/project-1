@@ -2547,10 +2547,6 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
 			}
 		}
 
