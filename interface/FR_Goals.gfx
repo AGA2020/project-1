@@ -19,4 +19,8 @@ spriteTypes = {
         name = "GFX_GER_A_Workers_Struggle"
         texturefile = "gfx/interface/goals/GER_A_Workers_Struggle.dds"
     }
+    spriteType={
+        name = "GFX_GER_KdF_Wagon"
+        texturefile = "gfx/interface/goals/GER_KdF_Wagon.dds"
+    }
 }

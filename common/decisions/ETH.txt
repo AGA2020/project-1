@@ -3313,44 +3313,6 @@ ETH_freedom_at_gunpoint_category = {
 			}
 		}
 	}
-	ETH_freedom_at_gunpoint_offer_peace = {
-		cost = 50
-		fire_only_once = no
-		icon = GFX_decision_generic_form_nation
-		allowed = {original_tag = ETH}
-		target_array = ETH_has_liberation_goal_array
-		target_root_trigger = { original_tag = ETH } 
-		target_non_existing = yes
-		visible = {			
-			FROM = {
-				capital_scope = {
-					OWNER = {
-						has_war_with = ROOT
-					}
-				}
-			}				
-		}
-		days_remove = 3
-		remove_effect = {
-			custom_effect_tooltip = ETH_freedom_at_gunpoint_offer_peace_tt
-			hidden_effect = {
-				set_variable = {
-					ETH_disputed_colony = FROM
-				}
-				FROM = {			
-					capital_scope = {
-						OWNER = {
-							country_event = {
-								id = BBA_ethiopia_communist_events.61
-								hours = 1
-							}
-						}
-					}
-
-				}
-			}
-		}
-	}
 }
 
 ETH_exploit_french_weakness_category = {
