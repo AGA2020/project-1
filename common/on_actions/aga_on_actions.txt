@@ -9,10 +9,6 @@ on_actions = {
 				add_opinion_modifier = { target = GRE modifier = large_decrease }
 				add_opinion_modifier = { target = GRE modifier = hostile_status }
 				add_opinion_modifier = { target = ITA modifier = huge_increase  }
-				add_opinion_modifier = { target = ITA modifier = huge_increase  }
-				add_opinion_modifier = { target = ITA modifier = huge_increase  }
-				add_opinion_modifier = { target = BUL modifier = huge_increase  }
-				add_opinion_modifier = { target = BUL modifier = huge_increase  }
 				add_opinion_modifier = { target = BUL modifier = huge_increase  }
 				}
 			every_country = {
