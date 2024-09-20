@@ -14,7 +14,8 @@ news_event = {
 				limit = {
 					is_playable_country = yes
 				}
-				air_experience = -10				
+				air_experience = -10
+				army_experience = -10				
 			}
 	}
 }
