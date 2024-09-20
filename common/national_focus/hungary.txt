@@ -732,7 +732,22 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			OR = {
+				YUG = {
+					exists = no
+				}
+				owns_state = 45
+				45 = {
+					OWNER = {
+						is_in_faction_with = ROOT
+					}
+				}
+				45 = {
+					OWNER = {
+						has_war_with = ROOT
+					}
+				}
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -742,13 +757,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-						every_state = {
-				limit = {
-					is_core_of = YUG
-					is_controlled_by = HUN
-				}
-				add_compliance = 100
-			}		
+		
 		}
 	}
 
