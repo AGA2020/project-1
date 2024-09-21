@@ -2099,14 +2099,6 @@ country_event = {
 	option = {
 		name = AAT_Sweden.12.a
 		kill_country_leader = yes
-		SWE_tage_erlander = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = socialism
-				}
-			}
-		}
 	}
 }
 
