@@ -792,6 +792,49 @@
 	}
 
 	focus = {
+		id = ROM_urbanize_the_small_cities
+		icon = GFX_ROM_urbanize_the_small_cities-313225
+		prerequisite = { focus = ROM_expand_ploiesti_oil_production }
+		x = 2
+		y = 1
+		relative_position_id = ROM_expand_ploiesti_oil_production
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = ROM_slots_IC
+				prioritize = { 46 77 81 82 83 76 84 79 }
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = ROM_slots1_IC	
+				prioritize = { 46 77 81 82 83 76 84 79 }
+			}
+			82 = { set_state_category = town }
+			81 = { set_state_category = town }
+		}
+	}
+
+	focus = {
 		id = ROM_expand_the_university_of_bucharest
 		icon = GFX_focus_research
 		prerequisite = { focus = ROM_expand_ploiesti_oil_production }
