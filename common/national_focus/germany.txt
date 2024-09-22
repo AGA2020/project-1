@@ -62,7 +62,7 @@ focus_tree = {
 		relative_position_id = GER_four_year_plan
 		cost = 10
 		ai_will_do = {
-			factor = 8
+			factor = 4
 		}
 			
 		completion_reward = {
