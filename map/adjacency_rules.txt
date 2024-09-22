@@ -443,3 +443,43 @@ adjacency_rule =
 	icon = 12299
 	offset = { -5 0 -7 }
 }
+#Sunda Strait (Java to Sumatra) - 26 km
+adjacency_rule =
+{
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+
+	required_provinces = { 1342 10279 }
+
+	icon = 2714
+	offset = { 19 0 26 }
+
+
+	name = "SUNDA_STRAIT"
+}
