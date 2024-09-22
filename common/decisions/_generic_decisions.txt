@@ -1879,7 +1879,6 @@ war_measures = {
 				OR = {
 					tag = ENG #has a focus
 					tag = USA #has a focus
-					tag = SOV #has a focus
 					tag = JAP #has a focus
 					tag = AST #has a focus
 				}
