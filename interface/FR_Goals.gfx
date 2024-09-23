@@ -23,4 +23,8 @@ spriteTypes = {
         name = "GFX_GER_KdF_Wagon"
         texturefile = "gfx/interface/goals/GER_KdF_Wagon.dds"
     }
+    spriteType={
+        name = "GFX_GER_Luftwaffe"
+        texturefile = "gfx/interface/goals/GER_Luftwaffe.dds"
+    }
 }
