@@ -2430,8 +2430,6 @@ characters = {
 		}
 		allowed_civil_war = {
 			OR = {
-				SOV_advisor_is_aligned_left = yes 
-				SOV_advisor_is_aligned_right = yes 
 				SOV_advisor_is_aligned_centre = yes 
 			}
 			has_government = communism
@@ -2614,10 +2612,6 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
 			}
 		}
 
@@ -2672,10 +2666,6 @@ characters = {
 				AND = {
 					tag = SOV 
 					has_government = communism
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
 				}
 			}
 		}
@@ -2770,10 +2760,6 @@ characters = {
 					SOV_is_left_opposition = yes 
 					has_completed_focus = SOV_bring_old_trotskyists_back
 				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
 			}
 		}
 
@@ -2815,10 +2801,6 @@ characters = {
 				AND = {
 					tag = SOV 
 					has_government = communism
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
 				}
 			}
 		}
@@ -2876,10 +2858,6 @@ characters = {
 					SOV_is_left_opposition = yes 
 					has_completed_focus = SOV_cooperation_against_stalin 
 				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
 			}
 
 		}
@@ -2936,10 +2914,6 @@ characters = {
 					SOV_is_left_opposition = yes 
 					has_completed_focus = SOV_cooperation_against_stalin 
 				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
 			}
 		}
 
@@ -2989,10 +2963,6 @@ characters = {
 				AND = {
 					tag = SOV 
 					has_government = communism
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
 				}
 			}
 		}
@@ -3082,10 +3052,6 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
 			}
 		}
 
@@ -3145,10 +3111,6 @@ characters = {
 					tag = SOV 
 					has_government = communism
 				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism 
-				}
 			}
 		}
 
@@ -3205,10 +3167,6 @@ characters = {
 				AND = {
 					SOV_is_right_opposition = yes 
 					has_completed_focus = SOV_liberate_ryutin 
-				}
-				AND = {
-					SOV_is_exiles = yes 
-					has_government = communism
 				}
 			}
 		}
@@ -3581,17 +3539,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = { victory_through_airpower }
 		}
@@ -3621,17 +3569,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = { air_chief_reform_2 }
 		}
@@ -3661,17 +3599,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = { air_chief_all_weather_2 }
 		}
@@ -3702,17 +3630,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				SOV_is_exiles = yes
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = { air_air_superiority_2 }
 		}
