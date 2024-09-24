@@ -186,7 +186,7 @@ SPR_the_inevitable_civil_war = {
 			add_political_power = 25
 			add_days_mission_timeout = {
 				mission = SPR_military_plot_republicans
-				days = 37
+				days = 25
 			}
 			clr_country_flag = SPR_inevitable_civil_war_in_progress_flag
 			set_country_flag = SPA_primo_de_rivera_imprisoned

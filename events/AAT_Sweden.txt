@@ -1717,16 +1717,6 @@ country_event = {
 		set_country_flag = SWE_1936_gosta_bagge_is_pm
 
 		effect_tooltip = {
-			SWE_gosta_bagge = {
-				add_trait = {
-					trait = minister_of_ecclesiastical_affairs
-				}
-
-				add_trait = {
-					trait = SWE_minor_opposition_party_in_power
-
-				}
-			}
 		}
 		custom_effect_tooltip = SWE_defense_act_tt
 	}

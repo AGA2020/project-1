@@ -139,7 +139,6 @@ on_actions = {
 							original_tag = URG
 							original_tag = BRA
 							original_tag = PAR
-							original_tag = ARG
 							original_tag = PRU
 							original_tag = VEN
 							original_tag = ECU
