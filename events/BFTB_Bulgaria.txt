@@ -8211,15 +8211,6 @@ country_event = {
 
 	option = {
 		name = bftb_bulgaria_balkan_federation.18.a
-
-		TUR = {
-			every_controlled_state = {
-				limit = {
-					BUL_is_balkan_state = yes
-				}
-				add_claim_by = ROOT
-			}
-		}
 		create_wargoal = {
 			type = annex_everything
 			target = FROM

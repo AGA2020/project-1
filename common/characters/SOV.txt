@@ -3159,16 +3159,7 @@ characters = {
 		}
 
 		allowed_civil_war = {
-			OR = {
-				AND = {
-					SOV_is_left_opposition = yes 
-					has_completed_focus = SOV_liberate_ryutin
-				}
-				AND = {
-					SOV_is_right_opposition = yes 
-					has_completed_focus = SOV_liberate_ryutin 
-				}
-			}
+			always = no
 		}
 
 
@@ -3184,23 +3175,7 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_liberate_ryutin
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = {
 				anti_stalinist_propagandist 
@@ -3231,7 +3206,6 @@ characters = {
 			available = {
 				OR = {
 					has_completed_focus = SOV_patriarch_of_all_russia
-					has_completed_focus = SOV_the_declaration
 				}
 			}
 			traits = {
@@ -3263,7 +3237,7 @@ characters = {
 				has_completed_focus = SOV_beaten_but_not_defeated
 			}
 			available = {
-				has_completed_focus = SOV_return_of_the_rocor
+				always = no
 			}
 			traits = {
 				orthodox_rabblerouser
@@ -3279,10 +3253,7 @@ characters = {
 			}
 		}
 		allowed_civil_war = {
-			OR = {
-				has_government = neutrality 
-				has_government = fascism
-			}
+			always = no
 		}
 
 		advisor = {
@@ -3292,10 +3263,10 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
+				always = no
 			}
 			available = {
-				has_completed_focus = SOV_the_declaration
+				always = no
 			}
 			traits = {
 				theocratic_diplomat
@@ -3493,13 +3464,7 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_reconvene_the_zemsky_sobor
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = {
 				mladorossi_theorist
