@@ -1865,46 +1865,6 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				NOT = {
-					has_country_leader = {
-						ruling_only = yes
-						character = SWE_gosta_bagge
-					}
-				}
-			}
-			retire_country_leader = yes
-			SWE_gosta_bagge = {
-				add_country_leader_role = {
-					country_leader = {
-						ideology = conservatism
-						expire="1965.1.1.1"
-						traits = { minister_of_ecclesiastical_affairs } 
-					}
-					promote_leader = yes
-				}
-			}
-			hidden_effect = {
-				set_politics = {
-					ruling_party = democratic
-					last_election = "1936.11.20"
-					election_frequency = 48
-					elections_allowed = yes
-				}
-
-				set_party_name = {
-					ideology = neutrality
-					name = SWE_neutrality_party
-					long_name = SWE_neutrality_party_long
-				}
-			}
-			set_party_name = {
-				ideology = democratic
-				name = SWE_aat_hogern
-				long_name = SWE_aat_hogern_long
-			}		
-		}
 	}
 
 	#Wigfors
