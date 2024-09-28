@@ -555,10 +555,10 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 500
+   				factor = 1000
 
    				modifier = {
-					factor = 300
+					factor = 1000
 
 					OR = {
 						tag = PER
