@@ -2012,12 +2012,8 @@ focus_tree = {
 	focus = {
 		id = uk_empire_focus
 		available = {
-			NOT = {
-				has_government = communism
-			}
-			num_subjects > 0
 		}
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_ENG_Reinforce_the_Commonwealth
 		x = 28
 		y = 0
 		offset = {
@@ -2039,7 +2035,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.1
-			custom_effect_tooltip = ENG_concessions_to_the_trade_unions_tt_2
 		}
 	}
 	focus = {

@@ -27,4 +27,8 @@ spriteTypes = {
         name = "GFX_GER_Luftwaffe"
         texturefile = "gfx/interface/goals/GER_Luftwaffe.dds"
     }
+    spriteType={
+        name = "GFX_ENG_Reinforce_the_Commonwealth"
+        texturefile = "gfx/interface/goals/ENG_Reinforce_the_Commonwealth.dds"
+    }
 }

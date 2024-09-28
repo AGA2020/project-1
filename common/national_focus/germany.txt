@@ -2830,6 +2830,7 @@ focus_tree = {
 			807 = { add_claim_by = GER }
 			86 = { add_claim_by = GER }
 			762 = { add_claim_by = GER }
+			GER = { add_state_core = 86 }
 			add_named_threat = { threat = 3 name = GER_demand_memel_threat }
 			if = {
 				limit = {
@@ -2841,7 +2842,6 @@ focus_tree = {
 				GER = {
 					transfer_state = 188
 					add_state_core = 188
-					add_state_core = 86
 				}
 				hidden_effect = {
 					country_event = { days = 1 id = news.19 }

@@ -24,6 +24,7 @@ if = {
 			aa_lmg = 1
 			early_bombs = 1
 			aircraft_construction = 1
+			air_torpedoe_1 = 1
 		}
 	else = {
 		set_air_oob = "USA_1936_air_legacy"
@@ -205,6 +206,7 @@ give_guarantee = URG
 				basic_large_airframe = 1
 				improved_small_airframe = 1
 				aa_hmg = 1
+				air_torpedoe_1 = 1
 			}
 		else = {
 			set_air_oob = "USA_1939_air_legacy"
