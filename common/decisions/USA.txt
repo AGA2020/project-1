@@ -742,27 +742,9 @@ operations = {
 				has_government = neutrality
 			}
 			101 = {
-				is_owned_and_controlled_by = DEN
+				is_owned_and_controlled_by = ENG
 			}
-			DEN = {
-				is_subject = yes
-			}
-			IF = {
-				limit = {	
-					DEN = {
-						is_subject = yes
-					}
-				}
-				DEN = {
-					overlord = {
-						NOT = {
-							has_government = democratic
-							has_war_with = USA #Unfair to just grab a piece of land from your enemy like this
-							is_in_faction_with = ROOT
-						}
-					}
-				}
-			}
+			has_war = yes
 		}
 
 		cost = 50
@@ -803,24 +785,13 @@ operations = {
 				has_government = neutrality
 			}
 			101 = {
-				is_owned_and_controlled_by = DEN
-			}
-			DEN = {
-				is_subject = yes
-				overlord = {
-					is_major = yes
-					NOT = {
-						has_government = democratic
-						has_war_with = USA #Unfair to just grab a piece of land from your enemy like this
-						is_in_faction_with = ROOT
-					}
-				}
+				is_owned_and_controlled_by = ENG
 			}
 			has_dlc = "Arms Against Tyranny"
 		}
 		
 		complete_effect = {
-			DEN = { country_event = { id = AAT_USA_events.01 days = 2 } }
+			ENG = { country_event = { id = AAT_USA_events.01 days = 2 } }
 			add_ideas = USA_greenland_patrol_idea
 			ROOT = {
 				transfer_state = 101
