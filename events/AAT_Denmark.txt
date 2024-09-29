@@ -3665,9 +3665,6 @@ country_event = { #Denmark: Choose new country leader
 				has_country_flag = DEN_banned_fascism_flag
 				has_country_flag = banned_fascism_flag
 				AND = {
-					DEN_cay_lembcke = {
-						has_character_flag = DEN_political_agitator_flag
-					}
 					DEN_frits_clausen = {
 						has_character_flag = DEN_political_agitator_flag
 					}
@@ -3675,12 +3672,6 @@ country_event = { #Denmark: Choose new country leader
 			}
 		}
 		if = {
-			limit = {
-				DEN_cay_lembcke = { is_country_leader = yes }
-			} 
-			promote_character = DEN_frits_clausen
-		}
-		else_if = {
 			limit = {
 				DEN_frits_clausen = { is_country_leader = yes }
 			}

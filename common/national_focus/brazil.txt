@@ -669,7 +669,7 @@ focus_tree = {
 	focus = {
 		id = BRA_secure_our_borders
 		icon = GFX_focus_BRA_secure_our_borders
-		prerequisite = { focus = BRA_reward_army_loyalty focus = BRA_restoration_of_honor }
+		prerequisite = { focus = BRA_reward_army_loyalty }
 		#mutually_exclusive = { focus = BRA_the_international_crisis }
 		x = 0
 		y = 3
@@ -1653,7 +1653,6 @@ focus_tree = {
 	focus = {
 		id = BRA_cooperation_in_the_americas
 		icon = GFX_focus_BRA_good_neighbor_policy
-		mutually_exclusive = { focus = BRA_domination_of_the_americas }
 		prerequisite = { 
 			focus = BRA_secure_our_borders 
 			focus = BRA_the_international_crisis
@@ -2260,7 +2259,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRA_potenji_river_conference
-		mutually_exclusive = { focus = BRA_south_american_research_cooperation }
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -2338,7 +2336,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_end_the_state_of_emergency
 		prerequisite = { focus = BRA_end_the_state_of_emergency }
-		mutually_exclusive = { focus = BRA_romanticize_the_old_empire }
 		cost = 5
 		ai_will_do = {
 			factor = 20

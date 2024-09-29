@@ -118,10 +118,7 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
-				NOT = {
-					has_completed_focus = SOV_the_third_rome
-				}
+				always = no
 			}
 			available = {
 				has_completed_focus = SOV_the_hands_do
@@ -2569,7 +2566,6 @@ characters = {
 				}
 				OR = {
 					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				is_country_leader = no
 				if = {
@@ -2632,7 +2628,6 @@ characters = {
 				}
 				OR = {
 					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				is_country_leader = no
 				if = {
@@ -2684,7 +2679,6 @@ characters = {
 			available = {
 				OR = {
 					has_completed_focus = SOV_integrate_smirnovs_bloc
-					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				if = {
 					limit = {
@@ -2819,7 +2813,6 @@ characters = {
 			available = {
 				OR = {
 					SOV_is_left_opposition = yes
-					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				if = {
 					limit = {
@@ -2981,7 +2974,6 @@ characters = {
 			available = {
 				OR = {
 					SOV_is_right_opposition = yes
-					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				if = {
 					limit = {
@@ -3021,7 +3013,6 @@ characters = {
 			available = {
 				OR = {
 					has_completed_focus = SOV_the_need_for_policy_changes 
-					has_completed_focus = SOV_return_democracy_to_the_party
 				}
 				if = {
 					limit = {
@@ -3067,27 +3058,7 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_align_the_zinovyevites
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-					AND = {
-						has_completed_focus = SOV_the_plan_for_the_coup
-						has_completed_focus = SOV_coup_detat
-					}
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = {
 				communist_theorist
@@ -3126,23 +3097,7 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_align_the_zinovyevites
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = {
 				appeasing_technocrat 
@@ -3295,10 +3250,10 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				has_completed_focus = SOV_the_declaration
+				always = no
 			}
 			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
+				always = no
 			}
 			traits = {
 				driver_of_the_faithful
