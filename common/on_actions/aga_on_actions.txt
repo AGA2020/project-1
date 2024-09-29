@@ -1,4 +1,16 @@
-on_actions = {	
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { ENG = { controls_state = 907 } }
+				}
+				build_railway = {
+					path = { 12725 2003 2046 }
+				}
+			}
+		}
+	}	
 	on_startup = {
 		effect = {
 			FIN = {
