@@ -221,8 +221,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 4135;10094;impassable;-1;-1;-1;-1;-1;;gibraltar
 4135;7153;impassable;-1;-1;-1;-1;-1;;gibraltar
 5838;5864;;-1;-1;-1;-1;-1;OTRANTO_STRAIT;
-5539;5960;;-1;-1;-1;-1;-1;MALACCA_STRAIT;Strait of Malacca
-2714;2737;;-1;-1;-1;-1;-1;SUNDA_STRAIT;Sunda strait
 9206;6186;impassable;-1;-1;-1;-1;-1;;fin-soviet border
 9206;6082;impassable;-1;-1;-1;-1;-1;;fin-soviet border
 11162;6082;impassable;-1;-1;-1;-1;-1;;fin-soviet border
