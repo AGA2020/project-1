@@ -122,7 +122,7 @@ ideas = {
 				mobilization_speed = 2
 				army_fuel_consumption_factor = -0.9
 				air_fuel_consumption_factor = -0.9
-				navy_fuel_consumption_factor = -0.9
+				navy_fuel_consumption_factor = -0.99
 			}
 		}
 		ai_limiter = {
