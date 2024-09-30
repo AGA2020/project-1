@@ -38,33 +38,4 @@ LAT_delay_perkonkrust_decisions = {
 	#Reduce fascist support for dem support
 	
 	#Solid reduction in fasc support
-	LAT_support_loyalists = {
-
-		allowed = {
-			original_tag = LAT
-		}
-		
-		days_remove = 70
-		
-		cost = 75
-
-		available = {
-			has_active_mission = LAT_perkonkrust_uprising
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			has_active_mission = LAT_perkonkrust_uprising
-		}
-		fire_only_once = yes
-		complete_effect = {
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.1
-			}
-		}
-	}
 }

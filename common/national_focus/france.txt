@@ -2587,6 +2587,22 @@
 				category = industry
 				uses = 3
 				bonus = 1.5
+				technology = construction3
+				technology = construction4
+				technology = construction5
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3
+				technology = dispersed_industry4
+				technology = dispersed_industry5
+				technology = advanced_machine_tools
+				technology = assembly_line_production
+				technology = flexible_line
+				technology = streamlined_line
+				technology = fuel_refining3
+				technology = fuel_refining4
+				technology = fuel_refining5
 			}
 			hidden_effect = { country_event = { id = lar_fra_inefficient_economy.1 days = 730 } }
 			custom_effect_tooltip = FRA_laissez_faire_tt

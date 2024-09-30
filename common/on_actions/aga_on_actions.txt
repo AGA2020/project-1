@@ -6,6 +6,7 @@ on_actions = {
 					NOT = { ENG = { controls_state = 907 } }
 				}
 				build_railway = {
+					level = 1
 					path = { 12725 2003 2046 }
 				}
 			}
