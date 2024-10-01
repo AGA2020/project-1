@@ -68,6 +68,8 @@ on_actions = {
 				JAP = { declare_war_on = { target = CAN type = annex_everything } }
 				JAP = { declare_war_on = { target = AST type = annex_everything } }
 				JAP = { declare_war_on = { target = NZL type = annex_everything } }
+				JAP = { declare_war_on = { target = HOL type = annex_everything } }
+				JAP = { declare_war_on = { target = BEL type = annex_everything } }
 				if = { limit = { BRA = { is_ai = no } } JAP = { declare_war_on = { target = BRA type = annex_everything } } }
 				if = { limit = { MEX = { is_ai = no } } JAP = { declare_war_on = { target = MEX type = annex_everything } } }
 			}

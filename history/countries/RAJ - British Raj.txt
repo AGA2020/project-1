@@ -74,6 +74,14 @@ recruit_character = RAJ_mahatma_mohandas_gandhi
 recruit_character = RAJ_sir_mohammed_iqbal
 recruit_character = RAJ_john_mathai
 
+
+create_equipment_variant = {
+	name = "Gun1 with mio"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:RAJ_ishapore_rifle_factory_organization
+}
+
 if = {
 	limit = {
 		has_dlc = "Together for Victory"
