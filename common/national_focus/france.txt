@@ -315,6 +315,7 @@
 						has_state_flag = FRA_colonial_industry_target
 					}
 				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -334,6 +335,7 @@
 						has_state_flag = FRA_colonial_industry_target
 					}
 				}
+				add_extra_state_shared_building_slots = 2 #States already got 2 building slots and 2 civs in previous focuses, so let's just add 2 more slots and mils here
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -760,8 +762,8 @@
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -771,6 +773,7 @@
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -782,6 +785,7 @@
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -805,6 +809,7 @@
 			factor = 1
 		}
 		completion_reward = {
+			add_command_power = 30
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = maxime_weygand
 		}
@@ -1127,8 +1132,16 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = FRA_hotchkiss
+			IF = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:FRA_renault_organization = {
+					add_mio_funds = 2000
+				}
+			}
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = FRA_hotchkiss
+			}
 		}
 	}
 	focus = {
@@ -1201,7 +1214,15 @@
 				category = tp_tech
 				category = marine_tech
 				uses = 2
-				bonus = 1
+				bonus = 0.5
+			}
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 2
+					category = special_forces_doctrine
+				}
 			}
 		}
 	}
@@ -1454,7 +1475,7 @@
 			focus = FRA_extend_the_maginot_line
 			focus = FRA_flying_artillery
 		}
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = FRA_light_medium_armor
 		cost = 10
@@ -1474,8 +1495,19 @@
 				uses = 2
 				category = land_doctrine
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = FRA_AMX
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:FRA_hotchkiss_organization = {
+					add_mio_funds = 1500
+					add_mio_research_bonus = 0.02
+				}
+			}
+			ELSE = {
+				custom_effect_tooltip = available_designer
+				show_ideas_tooltip = FRA_AMX
+			}
 		}
 	}	
 
@@ -1641,11 +1673,31 @@
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_reorganize_aviation_industry_north show_effect_tooltip = yes }
-			unlock_decision_tooltip = { decision = FRA_reorganize_aviation_industry_west show_effect_tooltip = yes }
-			unlock_decision_tooltip = { decision = FRA_reorganize_aviation_industry_center show_effect_tooltip = yes }
-			unlock_decision_tooltip = { decision = FRA_reorganize_aviation_industry_south_east show_effect_tooltip = yes }
-			unlock_decision_tooltip = { decision = FRA_reorganize_aviation_industry_south_west show_effect_tooltip = yes }
+
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}	
+				}
+				prioritize = { 16 24 15 20 31 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}	
+			}	
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			unlock_decision_tooltip = { decision = FRA_reorganize_aviation_industry_north show_effect_tooltip = no }
+			unlock_decision_tooltip = { decision = FRA_reorganize_aviation_industry_west show_effect_tooltip = no }
+			unlock_decision_tooltip = { decision = FRA_reorganize_aviation_industry_center show_effect_tooltip = no }
+			unlock_decision_tooltip = { decision = FRA_reorganize_aviation_industry_south_east show_effect_tooltip = no }
+			unlock_decision_tooltip = { decision = FRA_reorganize_aviation_industry_south_west show_effect_tooltip = no }
 		}
 	}
 	focus = {
@@ -2676,13 +2728,22 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			limit = {
-				not = { has_completed_focus = FRA_utilize_the_leagues }
+			if = {
+				limit = {
+					not = { has_completed_focus = FRA_utilize_the_leagues }
+				}
+				set_temp_variable = { FRA_fascism = party_popularity@fascism }
+				add_popularity = { ideology = democratic popularity = FRA_fascism } 
+				multiply_temp_variable = { FRA_fascism = -1 }
+				add_popularity = { ideology = fascism popularity = FRA_fascism }
 			}
-			set_temp_variable = { FRA_fascism = party_popularity@fascism }
-			add_popularity = { ideology = democratic popularity = FRA_fascism } 
-			multiply_temp_variable = { FRA_fascism = -1 }
-			add_popularity = { ideology = fascism popularity = FRA_fascism }
+			else = {
+				set_temp_variable = { FRA_democracy = party_popularity@democratic }
+				multiply_temp_variable = { FRA_democracy = 0.3 }
+				add_popularity = { ideology = fascism popularity = FRA_democracy } 
+				multiply_temp_variable = { FRA_democracy = -1 }
+				add_popularity = { ideology = democratic popularity = FRA_democracy }
+			}
 			FRA_communism_riot_effect = yes
 		}
 	}	
@@ -3350,27 +3411,47 @@
 
 		completion_reward = {
 			navy_experience = 25
-			21 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
+
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+				prioritize = { 21 } #Bouches du Rhone
+				add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = dockyard
 						level = 2
 						instant_build = yes
 					}
-					set_state_flag = FRA_naval_rearmament_2NB
-				}
+				set_state_flag = FRA_naval_rearmament_2NB
 			}
-			14 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
+
+				
+			
+
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					prioritize = { 14 } #Brittany
+	
+				add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = dockyard
 						level = 2
 						instant_build = yes
 					}
-					set_state_flag = FRA_naval_rearmament_2NB
-				}
+				set_state_flag = FRA_naval_rearmament_2NB
 			}
 		}
 	}
@@ -3453,6 +3534,7 @@
 			459 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = dockyard
 						level = 2
@@ -3464,6 +3546,7 @@
 			272 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = dockyard
 						level = 2
@@ -3475,6 +3558,7 @@
 			286 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
+					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
 						type = dockyard
 						level = 2
@@ -3505,6 +3589,7 @@
 					is_coastal = yes
 					is_controlled_by = ROOT
 				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
 					level = 3
@@ -3658,6 +3743,7 @@
 				limit = {
 					has_dlc = "Man the Guns"
 				}
+				set_technology = { basic_ship_hull_carrier = 1 }
 				custom_effect_tooltip = FRA_prioritize_the_joffre_tt
 				hidden_effect = {
 					create_equipment_variant = {
@@ -3671,7 +3757,7 @@
 							fixed_ship_anti_air_slot = ship_anti_air_1
 							fixed_ship_radar_slot = empty
 							fixed_ship_engine_slot = carrier_ship_engine_2
-							fixed_ship_secondaries_slot = dp_ship_secondaries
+							fixed_ship_secondaries_slot = dp_ship_secondaries_2
 							front_1_custom_slot = empty
 						}
 					}
