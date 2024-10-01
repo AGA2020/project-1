@@ -14,7 +14,6 @@ SWE_landsverk_organization = {
 	
 	allowed = { 
 		OR = {
-			tag = SWE 
 			AND = {
 				tag = ETH
 				has_dlc = "By Blood Alone"
@@ -80,7 +79,6 @@ SWE_kockums_organization = {
 	include = generic_raider_ship_organization
 	icon = GFX_idea_SWE_kockums
 	allowed = {
-		tag = SWE
 	}
 }
 
@@ -89,7 +87,6 @@ SWE_gotaverken_organization = {
 	icon = GFX_idea_SWE_gotaverken
 	allowed = {
 		OR = {
-			tag = SWE
 			AND = {
 				tag = BRA
 				has_dlc = "Trial of Allegiance"
@@ -144,7 +141,6 @@ SWE_saab_organization = {
 	icon = GFX_idea_SWE_saab
 	allowed = { 
 		OR = {
-			tag = SWE
 			AND = {
 				tag = BRA
 				has_dlc = "Trial of Allegiance"
@@ -209,7 +205,6 @@ SWE_husqvarna_organization = {
 		include = generic_infantry_equipment_organization
 		icon = GFX_idea_SWE_husqvarna
 		allowed = {
-			tag = SWE
 		}
 }
 
@@ -232,7 +227,6 @@ SWE_volvo_organization = {
 	
 	allowed = { 
 		OR = {
-			tag = SWE 
 			AND = {
 				tag = ETH
 				has_dlc = "By Blood Alone"
@@ -276,7 +270,6 @@ SWE_scania_vabis_organization = {
 	allowed = { 
 		has_dlc = "La Resistance"
 		OR = {
-			tag = SWE
 			AND = {
 				tag = BRA
 				has_dlc = "Trial of Allegiance"
@@ -310,7 +303,6 @@ SWE_bofors_organization = {
 	
 	allowed = { 
 		OR = {
-			tag = SWE 
 			AND = {
 				tag = ETH
 				has_dlc = "By Blood Alone"
