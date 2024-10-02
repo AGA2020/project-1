@@ -6838,16 +6838,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		SWE_birger_furugard = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = nazism
-					expire = "1965.1.1"
-					traits = { national_socialist_veterinarian }
-				}
-			}
-		}
 	}
 }
 

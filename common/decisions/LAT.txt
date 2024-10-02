@@ -5,35 +5,6 @@ LAT_perkonkrust_revolt_category = {
 LAT_delay_perkonkrust_decisions = {
 	
 	#Reduce the increase of fascist support
-	LAT_equality_campaigns = {
-
-		allowed = {
-			original_tag = LAT
-		}
-		
-		days_remove = 100
-		
-		cost = 50
-
-		available = {
-			has_active_mission = LAT_perkonkrust_uprising
-		}
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			has_active_mission = LAT_perkonkrust_uprising
-		}
-		
-		modifier = {
-			fascism_drift = -0.1
-		}
-		
-		complete_effect = {
-		}
-	}
 	
 	#Reduce fascist support for dem support
 	

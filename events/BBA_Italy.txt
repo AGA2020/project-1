@@ -6355,58 +6355,6 @@ country_event = {
 	#Su vieja
 	option = {
 		name = BBA_italy_democratic_events.03.a
-
-		if = { #SICILIA PRIO
-			limit = {
-				115 = {
-					controller = {
-						original_tag = ITA
-					}
-				}
-			}
-			115 = {
-				ITA_add_correct_mafia_rising_modifier_version = yes
-				set_variable = { ROOT.ITA_mafia_epicenter_state = THIS }
-			}
-		}
-		else_if = { #CAMPANIA next - Camorra Napolitana
-			limit = {
-				117 = {
-					controller = {
-						original_tag = ITA
-					}
-				}
-			}
-			117 = {
-				ITA_add_correct_mafia_rising_modifier_version = yes
-				set_variable = { ROOT.ITA_mafia_epicenter_state = THIS }
-			}
-		}
-		else_if = { #CALABRIA
-			limit = {
-				156 = {
-					controller = {
-						original_tag = ITA
-					}
-				}
-			}
-			156 = {
-				ITA_add_correct_mafia_rising_modifier_version = yes
-				set_variable = { ROOT.ITA_mafia_epicenter_state = THIS }
-			}
-		}
-		else = { #FALLBACK
-			random_state = {
-				limit = {
-					is_core_of = ITA
-					controller = {
-						original_tag = ITA
-					}
-				}
-				ITA_add_correct_mafia_rising_modifier_version = yes
-				set_variable = { ROOT.ITA_mafia_epicenter_state = THIS }
-			}
-		}
 	}
 }
 

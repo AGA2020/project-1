@@ -2304,46 +2304,6 @@ FIN_foreign_politics_decision_category = {
 
 FIN_coup_preparations = {
 
-	FIN_purchase_german_equipment = {
-		priority = 50
-
-		icon = GFX_decision_generic_industry
-
-		ai_will_do = {
-			base = 6
-		}
-
-		allowed = {
-			original_tag = FIN
-		}
-
-		available = {
-			country_exists = GER
-			GER = {
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
-			}
-			NOT = { has_war_with = GER }
-		}
-
-		visible = {
-		}
-
-		fire_only_once = yes
-
-		cost = 150
-
-		complete_effect = {
-			set_country_flag = FIN_cw_purchase_german_equipment_flag
-			custom_effect_tooltip = when_civil_war_starts_tt
-			effect_tooltip = {
-				FIN_purchase_german_equipment_for_cw = yes
-			}
-		}
-	}
-
 	FIN_appeal_to_the_middle_class = {
 		priority = 50
 

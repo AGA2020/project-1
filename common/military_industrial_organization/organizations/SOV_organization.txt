@@ -2188,13 +2188,7 @@ SOV_grabin_design_bureau_organization = {
 	icon = GFX_idea_grabin_design_bureau
 	
 	allowed = {	
-		OR = {
-			tag = SOV 
-			AND = {
-				tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
-		}
+		tag = SOV 
 	}
 	
 	available = {
@@ -2204,13 +2198,6 @@ SOV_grabin_design_bureau_organization = {
 				FROM = { NOT = { original_tag = SOV } }
 			}
 			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = { FROM = { original_tag = GRE } }
-			FROM = {
-				has_completed_focus = GRE_appeal_to_the_soviet_union 
-			}
 		}
 	}
 

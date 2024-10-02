@@ -226,9 +226,6 @@ DEN_burmeister_wain_organization = {
         relative_position_id = DEN_mio_trait_engine_optimization
 
         available = {
-            owner = {
-                has_completed_focus = DEN_refit_civilian_ships
-            }
         }
 
         production_bonus = {
@@ -699,9 +696,6 @@ DEN_haerens_tekniske_korps_organization = {
         }
         
         available = {
-            owner = {
-                has_completed_focus = DEN_expand_haerens_tekniske_korps
-            }
         }
 
         limit_to_equipment_type = { 
