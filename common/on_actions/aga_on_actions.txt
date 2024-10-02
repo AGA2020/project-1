@@ -1,4 +1,14 @@
 on_actions = {
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_country = { axis = yes has_tech = antitank2 }
+				}
+				axis = { scoped_play_song = "entertheeast" }			
+			}
+		}
+	}
 	on_state_control_changed = {
 		effect = {
 			if = {

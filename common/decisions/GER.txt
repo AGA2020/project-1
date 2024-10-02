@@ -1101,8 +1101,7 @@ foreign_politics = {
 		}
 
 		visible = {
-			has_country_flag = poland_traded_danzig
-			has_completed_focus = GER_tackle_the_communist_threat
+			always = no
 		}
 
 		complete_effect = {

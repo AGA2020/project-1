@@ -2303,44 +2303,6 @@ FIN_foreign_politics_decision_category = {
 
 
 FIN_coup_preparations = {
-	FIN_secure_the_military = {
-		priority = 50
-
-		icon = GFX_decision_generic_civil_support
-
-		ai_will_do = {
-			base = 5
-		}
-
-		allowed = {
-			original_tag = FIN
-		}
-
-		available = {
-			fascism > 0.3
-		}
-
-		visible = {
-		}
-
-		fire_only_once = yes
-
-		cost = 70
-
-		complete_effect = {
-			set_country_flag = FIN_cw_military_secured_flag
-			hidden_effect = {
-				FIN_carl_mannerheim = {
-					clr_character_flag = FIN_anti_fascist_character_flag
-				}
-				FIN_aksel_airo = {
-					clr_character_flag = FIN_anti_fascist_character_flag
-				}
-			}
-			custom_effect_tooltip = when_civil_war_starts_tt
-			custom_effect_tooltip = FIN_secure_the_military_dec_tt
-		}
-	}
 
 	FIN_purchase_german_equipment = {
 		priority = 50

@@ -1957,8 +1957,7 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				always = no
 			}
 		}
 	}
@@ -1981,8 +1980,7 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				always = no
 			}
 		}
 	}
@@ -2003,8 +2001,7 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 3
 			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				always = no
 			}
 		}
 	}
@@ -2025,8 +2022,7 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				always = no
 			}
 		}
 	}
@@ -2047,8 +2043,7 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 2
 			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				always = no
 			}
 		}
 	}
@@ -2069,8 +2064,7 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 1
 			visible = {
-				NOT = { has_character_flag = SOV_exiled_flag }
-				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+				always = no
 			}
 		}
 	}
@@ -2272,8 +2266,6 @@ characters = {
 		}
 
 		allowed_civil_war = {
-			OR = {
-				has_completed_focus = SOV_the_plan_for_the_coup #Goes to right oppo if aligned via Plan for the Coup
 				AND = { #If not aligned by Right oppo, then stays with Stalin
 					original_tag = SOV
 					NOT = { tag = SOV }
@@ -2284,7 +2276,6 @@ characters = {
 						}
 					}
 				}
-			}
 			has_government = communism
 		}
 
@@ -2748,13 +2739,7 @@ characters = {
 		}
 
 		allowed_civil_war = {
-			OR = {
-				AND = {
-					tag = SOV
-					SOV_is_left_opposition = yes 
-					has_completed_focus = SOV_bring_old_trotskyists_back
-				}
-			}
+			always = no
 		}
 
 		advisor = {
@@ -2811,21 +2796,7 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_left_opposition = yes
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = {
 				left_trade_unionist
@@ -2845,14 +2816,7 @@ characters = {
 		}
 
 		allowed_civil_war = {
-			OR = {
-				SOV_is_right_opposition = yes 
-				AND = {
-					SOV_is_left_opposition = yes 
-					has_completed_focus = SOV_cooperation_against_stalin 
-				}
-			}
-
+			always = no
 		}
 
 		advisor = {
@@ -2867,20 +2831,7 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes 
-					AND = {
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
-					}
-				}
-				is_country_leader = no
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = {
 				economy_reformer 
@@ -2901,13 +2852,7 @@ characters = {
 		}
 
 		allowed_civil_war = {
-			OR = {
-				SOV_is_right_opposition = yes 
-				AND = {
-					SOV_is_left_opposition = yes 
-					has_completed_focus = SOV_cooperation_against_stalin 
-				}
-			}
+			always = no
 		}
 
 		advisor = {
@@ -2922,20 +2867,7 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes 
-					AND = {
-						SOV_is_left_opposition = yes 
-						has_completed_focus = SOV_cooperation_against_stalin 
-					}
-				}
-				is_country_leader = no
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			
 			traits = {
@@ -2972,15 +2904,7 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					SOV_is_right_opposition = yes
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = {
 				right_trade_unionist 
