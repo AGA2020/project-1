@@ -21,6 +21,7 @@ ITA_missiolinis_system_available = {
 		character = ITA_benito_mussolini
 		ruling_only = yes
 	}
+	ITA = { has_completed_focus = ITA_triumph_in_africa_bba }
 }
 
 ITA_missiolinis_cd_ready = {
