@@ -4786,10 +4786,10 @@ SOV_diplomacy_middle_east_decision_category = {
 			SOV_basic_ultimatum_triggers = yes
 		}
 
-		target_root_trigger = {
-			has_completed_focus = SOV_preemptive_invasion_of_iran
-			is_Subject = no
-		}
+		#target_root_trigger = {
+		#	has_completed_focus = SOV_preemptive_invasion_of_iran
+		#	is_Subject = no
+		#}
 
 		allowed = {
 			original_tag = SOV
@@ -4803,6 +4803,7 @@ SOV_diplomacy_middle_east_decision_category = {
 		}
 
 		visible = {
+		always = no
 		}
 
 		days_remove = SOV_ultimatum_days

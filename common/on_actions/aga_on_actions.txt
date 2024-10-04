@@ -84,5 +84,13 @@ on_actions = {
 				if = { limit = { MEX = { is_ai = no } } JAP = { declare_war_on = { target = MEX type = annex_everything } } }
 			}
 		}
-	}		
+	}	
+	on_naval_invasion = { 
+		effect ={  
+			if = { 
+				limit = { OR = {  finland_coastline = yes   }  } 
+				 teleport_armies = {limit = { original_tag = SOV  } to_state = 637 }     every_country = {  delete_unit = { state = 637 disband = yes  } } PREV = { if = { limit = { FIN = { owns_state = 150 } }transfer_state_to = FIN}  else = { transfer_state_to = GER }  }
+			}
+		}
+	}	
 }
