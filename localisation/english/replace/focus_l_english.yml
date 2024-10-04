@@ -290,7 +290,7 @@
  GER_autarky_desc:0 "For Germany to be truly great, it must be self-sufficient. We must make better use of our resources, and become more efficient in our construction."
  GER_hermann_goring_werke:0 "[Root.GetHermannGoringWerkeName]"
  GER_hermann_goring_werke_desc:0 "We must rid ourselves of the fickle influence of private capitalists. Therefore, we will form an industrial conglomerate under our control to oversee growth in the mining and steel sectors, as this will form the backbone of our military industry."
- GER_HERMANN_GORING_WERKE_NAME_FASCIST:0 "Hermann Göring-Werke"
+ GER_HERMANN_GORING_WERKE_NAME_FASCIST:0 "Establish the Reichswerke"
  GER_HERMANN_GORING_WERKE_NAME_KAISER:0 "Kaiser-Werke"
  GER_HERMANN_GORING_WERKE_NAME_COMMIE:0 "VEB Vereinigte Maschinenwerke"
  GER_HERMANN_GORING_WERKE_NAME:0 "State-Controlled Industry"
