@@ -862,6 +862,12 @@ recruit_character = ITA_abba_jofir_doppleganger
 recruit_character = ITA_hailu_tekle_haymanot_doppleganger
 recruit_character = ITA_seyoum_mengesha_doppleganger
 
+create_equipment_variant = {
+	name = "Carcano Mod. 38"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:ITA_beretta_organization
+}
 
 ########################################
 ##### MISSIOLINIS - TRIGGER EVENTS #####

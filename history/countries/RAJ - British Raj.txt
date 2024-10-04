@@ -76,7 +76,7 @@ recruit_character = RAJ_john_mathai
 
 
 create_equipment_variant = {
-	name = "Gun1 with mio"
+	name = "No.4 MkI (Raj)"
 	type = infantry_equipment_1
 	parent_version = 0
 	design_team = mio:RAJ_ishapore_rifle_factory_organization

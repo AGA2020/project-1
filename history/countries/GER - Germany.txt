@@ -481,6 +481,27 @@ recruit_character = GER_alexander_von_falkenhausen #Not visible unless recalled 
 recruit_character = CZE_josef_frantisek
 
 
+create_equipment_variant = {
+	name = "Kar98k"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:GER_mauser_organization
+}
+create_equipment_variant = {
+	name = "10.5 cm LefH 18"
+	type = artillery_equipment_1
+	parent_version = 0
+	design_team = mio:GER_rheinmetall_organization
+}
+
+create_equipment_variant = {
+	name = "Opel 3-Tonner"
+	type = motorized_equipment_1
+	parent_version = 0
+	design_team = mio:GER_opel_organization
+}
+
+
 if = {
 	limit = {
 		has_dlc = "Waking the Tiger"
@@ -670,6 +691,7 @@ if = {
 		name = "Panzer II Ausf. a"
 		type = light_tank_chassis_2
 		parent_version = 0
+		design_team = mio:GER_daimler_benz_organization
 		modules = {
 			main_armament_slot = tank_auto_cannon
 			turret_type_slot = tank_light_two_man_tank_turret

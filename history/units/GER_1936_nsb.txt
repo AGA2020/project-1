@@ -184,6 +184,7 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
+			version_name = "Kar98k"
 			type = infantry_equipment_1
 			creator = "GER"
 		}
@@ -205,8 +206,9 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
+			version_name = "10.5 cm LefH 18"
 			type = artillery_equipment_1
-			creator = "GER" 
+			creator = "GER"
 		}
 		requested_factories = 1
 		progress = 0.3
@@ -223,13 +225,14 @@ instant_effect = {
 		requested_factories = 2
 		progress = 0.4
 		efficiency = 50
-		industrial_manufacturer = mio:GER_henschel_organization
+		industrial_manufacturer = mio:GER_daimler_benz_organization
 	}
 
 	add_equipment_production = {
 		equipment = {
 			type = motorized_equipment_1
 			creator = "GER" 
+			version_name = "Opel 3-Tonner"
 		}
 		requested_factories = 2
 		progress = 0.4

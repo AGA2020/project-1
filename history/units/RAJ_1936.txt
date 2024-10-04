@@ -128,7 +128,7 @@ units = {
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			version_name = "Gun1 with mio"
+			version_name = "No.4 MkI (Raj)"
 			type = infantry_equipment_1
 			creator = "RAJ"
 		}
