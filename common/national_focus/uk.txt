@@ -4123,7 +4123,7 @@ focus_tree = {
 			}
 		}
 		continue_if_invalid = no
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_eng_imperial_federation
 		x = 0
 		y = 2
 		relative_position_id = uk_new_zealand_focus

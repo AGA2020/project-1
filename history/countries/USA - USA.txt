@@ -40,6 +40,8 @@ if = {
 	}
 }
 
+set_occupation_law = autonomous_occupation
+
 set_research_slots = 4
 set_stability = 0.75
 set_war_support = 0
@@ -395,6 +397,12 @@ recruit_character = USA_victor_perlo
 recruit_character = USA_charles_coughlin
 recruit_character = USA_harry_white
 
+create_equipment_variant = {
+	name = "M1 Garand (USA)"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:USA_springfield_armory_organization
+}
 
 if = {
 	limit = { has_dlc = "La Resistance" }

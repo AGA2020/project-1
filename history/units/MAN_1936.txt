@@ -1,47 +1,38 @@
 ﻿division_template = {
-	name = "Infantry Division"
-	division_names_group = RAJ_INF_01
-
+	name = "Bubing Shi"				# Regular Infantry Division (brigade sized)
+	division_names_group = MAN_INF_01
+									# Militia-level training and equipment
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
 	}
 }
 division_template = {
-	name = "District Garrison"			# Represents precursors to Indian Infantry Divisions (district divisions)
-	division_names_group = RAJ_GAR_01
-										# Has older equipment, lower experience
+	name = "Qu Jun"					# "District Army" (garrison)
+	division_names_group = MAN_GAR_01
+									# Militia-level training and equipment
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-	}
-}
-
-division_template = {
-	name = "Armored-Division"
-	division_names_group = RAJ_ARM_01
-
-	regiments = {
-		light_armor = { x = 0 y = 0 }
-		light_armor = { x = 0 y = 1 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Qibing Shi"			# Cavalry Division
+	division_names_group = MAN_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
 	}
 }
+
 
 division_template = {
 	name = "MP"
@@ -116,25 +107,24 @@ division_template = {
 ##### OOB #####
 units = {
 	division= {
-		location = 2086	
+		location = 4572
 		division_template = "40W"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.01
 	}
 }
 
-
-##### Starting Production #####
+########## STARTING PRODUCTION ##########
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			version_name = "No.4 MkI (RAJ)"
-			type = infantry_equipment_1
-			creator = "RAJ"
+			version_name = "Type 38 (MAN)"
+			type = infantry_equipment_0
+			creator = "MAN"
 		}
-		requested_factories = 2
-		progress = 0.12
+		requested_factories = 1
+		progress = 0.52
 		efficiency = 100
-		industrial_manufacturer = mio:RAJ_ishapore_rifle_factory_organization
+		industrial_manufacturer = mio:CHI_mukden_arsenal_organization
 	}
 }

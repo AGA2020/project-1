@@ -1,39 +1,34 @@
 ﻿division_template = {
-	name = "Infantry Division"
-	division_names_group = RAJ_INF_01
+	name = "District Force"				# For 2-brigade Military Districts
+
+	division_names_group = SAF_GAR_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 		infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
 	}
 }
 division_template = {
-	name = "District Garrison"			# Represents precursors to Indian Infantry Divisions (district divisions)
-	division_names_group = RAJ_GAR_01
-										# Has older equipment, lower experience
+	name = "District Brigade"			# For 1-brigade Military Districts
+
+	division_names_group = SAF_GAR_01
+
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
 	}
 }
+
 
 division_template = {
 	name = "Armored-Division"
-	division_names_group = RAJ_ARM_01
+
+	division_names_group = SAF_ARM_01
 
 	regiments = {
 		light_armor = { x = 0 y = 0 }
@@ -42,7 +37,6 @@ division_template = {
 		infantry = { x = 1 y = 1 }
 	}
 }
-
 division_template = {
 	name = "MP"
 
@@ -116,7 +110,7 @@ division_template = {
 ##### OOB #####
 units = {
 	division= {
-		location = 2086	
+		location = 10400
 		division_template = "40W"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.01
@@ -128,13 +122,13 @@ units = {
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			version_name = "No.4 MkI (RAJ)"
+			version_name = "No.4 MkI (SAF)"
 			type = infantry_equipment_1
-			creator = "RAJ"
+			creator = "SAF"
 		}
-		requested_factories = 2
-		progress = 0.12
+		requested_factories = 1
+		progress = 0.20
 		efficiency = 100
-		industrial_manufacturer = mio:RAJ_ishapore_rifle_factory_organization
+		industrial_manufacturer = mio:SWE_husqvarna_organization
 	}
 }

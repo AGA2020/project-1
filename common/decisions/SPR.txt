@@ -579,7 +579,7 @@ SPR_the_inevitable_civil_war = {
 		remove_effect = {
 			add_days_mission_timeout = {
 				mission = SPR_military_plot_republicans
-				days = 37
+				days = 30
 			}
 			SPR_concessions_to_the_left_increase = yes
 			clr_country_flag = SPR_inevitable_civil_war_in_progress_flag

@@ -498,6 +498,12 @@ recruit_character = JAP_sanzo_nosaka
 recruit_character = JAP_hiroshi_oshima
 recruit_character = JAP_kijuro_shidehara
 
+create_equipment_variant = {
+	name = "Arisaka Type 99"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:JAP_tokyo_arsenal_organization
+}
 
 if = {
 	limit = {

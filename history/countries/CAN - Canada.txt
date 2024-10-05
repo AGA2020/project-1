@@ -81,6 +81,12 @@ recruit_character = CAN_r_b_bennett
 recruit_character = CAN_louis_st_laurent
 recruit_character = CAN_lindsay_gordon
 
+create_equipment_variant = {
+	name = "No.4 MkI (CAN)"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:CAN_small_arms_limited_organization
+}
 
 # Starting tech
 set_technology = {

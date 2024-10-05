@@ -27,6 +27,8 @@ if = {
 	}
 }
 
+set_occupation_law = autonomous_occupation
+
 if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "ENG_1936_air_bba"
@@ -560,7 +562,12 @@ recruit_character = ENG_stewart_menzies
 recruit_character = ENG_maxwell_aitken
 recruit_character = ENG_thomas_moore
 
-
+create_equipment_variant = {
+	name = "No.4 MkI (ENG)"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:ENG_rsaf_enfield_organization
+}
 
 if = {
 	limit = {
@@ -1278,6 +1285,17 @@ if = {
 				special_type_slot_1 = empty
 			}
 			obsolete = yes
+		}
+		create_equipment_variant = {
+			name = "Hawker Hurricane" 
+			type = small_plane_airframe_1
+			modules = {
+				fixed_main_weapon_slot = light_mg_4x
+				fixed_auxiliary_weapon_slot_1 = light_mg_4x
+				engine_type_slot = engine_2_1x
+				special_type_slot_1 = empty
+			}
+			icon = "GFX_ENG_fighter1_medium"
 		}
 
 		create_equipment_variant = {

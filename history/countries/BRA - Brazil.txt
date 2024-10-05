@@ -227,6 +227,14 @@ IF = {
 	recruit_character = BRA_lampiao
 
 }
+
+create_equipment_variant = {
+	name = "M1908 (BRA)"
+	type = infantry_equipment_0
+	parent_version = 0
+	design_team = mio:BRA_rossi_organization
+}
+
 IF = {
 	limit = {
 		NOT = {

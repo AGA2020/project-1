@@ -55,6 +55,8 @@ if = {
 	}
 }
 
+set_occupation_law = autonomous_occupation
+
 set_research_slots = 3
 set_stability = 0.5
 add_command_power = 20
@@ -410,6 +412,12 @@ recruit_character = FRA_maurice_gauche
 recruit_character = FRA_jacques_duclos
 recruit_character = FRA_marcel_bucard
 
+create_equipment_variant = {
+	name = "MAS-36 (FRA)"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:FRA_mas_organization
+}
 
 if = {
 	limit = { has_dlc = "La Resistance" }

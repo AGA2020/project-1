@@ -284,6 +284,12 @@ recruit_character = HUN_gyula_gombos_de_jakfa
 recruit_character = HUN_otto_von_habsburg
 recruit_character = HUN_franz_friedrich
 
+create_equipment_variant = {
+	name = "FEG 35M (HUN)"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:HUN_femaru_fegyver_es_gepgyar_organization
+}
 
 1939.1.1 = {
 	set_politics = {

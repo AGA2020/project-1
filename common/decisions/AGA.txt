@@ -251,6 +251,21 @@ operations = {
                         special_type_slot_3 = empty
                     }
                 }
+                create_equipment_variant = {
+                    name = "Large airframe 4x engine3"
+                    type = large_plane_airframe_1
+                    allow_without_tech = yes
+                    parent_version = 0
+                    modules = {
+                        fixed_main_weapon_slot = empty
+                        fixed_auxiliary_weapon_slot_1 = empty
+                        fixed_auxiliary_weapon_slot_2 = empty
+                        engine_type_slot = engine_3_4x
+                        special_type_slot_1 = empty
+                        special_type_slot_2 = empty
+                        special_type_slot_3 = empty
+                    }
+                }
             }
             else_if = {
                 limit = {
@@ -304,6 +319,21 @@ operations = {
                         fixed_auxiliary_weapon_slot_1 = empty
                         fixed_auxiliary_weapon_slot_2 = empty
                         engine_type_slot = engine_4_2x
+                        special_type_slot_1 = empty
+                        special_type_slot_2 = empty
+                        special_type_slot_3 = empty
+                    }
+                }
+                create_equipment_variant = {
+                    name = "Large airframe 4x engine4"
+                    type = large_plane_airframe_1
+                    allow_without_tech = yes
+                    parent_version = 0
+                    modules = {
+                        fixed_main_weapon_slot = empty
+                        fixed_auxiliary_weapon_slot_1 = empty
+                        fixed_auxiliary_weapon_slot_2 = empty
+                        engine_type_slot = engine_4_4x
                         special_type_slot_1 = empty
                         special_type_slot_2 = empty
                         special_type_slot_3 = empty
@@ -371,6 +401,21 @@ operations = {
                         special_type_slot_3 = empty
                     }
                 }
+                create_equipment_variant = {
+                    name = "Large airframe 4x engine3"
+                    type = large_plane_airframe_1
+                    allow_without_tech = yes
+                    parent_version = 0
+                    modules = {
+                        fixed_main_weapon_slot = empty
+                        fixed_auxiliary_weapon_slot_1 = empty
+                        fixed_auxiliary_weapon_slot_2 = empty
+                        engine_type_slot = engine_3_4x
+                        special_type_slot_1 = empty
+                        special_type_slot_2 = empty
+                        special_type_slot_3 = empty
+                    }
+                }
             }
           else_if = {
                 limit = {
@@ -428,6 +473,21 @@ operations = {
                         fixed_auxiliary_weapon_slot_1 = empty
                         fixed_auxiliary_weapon_slot_2 = empty
                         engine_type_slot = engine_4_2x
+                        special_type_slot_1 = empty
+                        special_type_slot_2 = empty
+                        special_type_slot_3 = empty
+                    }
+                }
+                create_equipment_variant = {
+                    name = "Large airframe 4x engine4"
+                    type = large_plane_airframe_1
+                    allow_without_tech = yes
+                    parent_version = 0
+                    modules = {
+                        fixed_main_weapon_slot = empty
+                        fixed_auxiliary_weapon_slot_1 = empty
+                        fixed_auxiliary_weapon_slot_2 = empty
+                        engine_type_slot = engine_4_4x
                         special_type_slot_1 = empty
                         special_type_slot_2 = empty
                         special_type_slot_3 = empty
@@ -497,6 +557,21 @@ operations = {
                         special_type_slot_3 = empty
                     }
                 }
+                create_equipment_variant = {
+                    name = "Large airframe 4x engine3"
+                    type = large_plane_airframe_1
+                    allow_without_tech = yes
+                    parent_version = 0
+                    modules = {
+                        fixed_main_weapon_slot = empty
+                        fixed_auxiliary_weapon_slot_1 = empty
+                        fixed_auxiliary_weapon_slot_2 = empty
+                        engine_type_slot = engine_3_4x
+                        special_type_slot_1 = empty
+                        special_type_slot_2 = empty
+                        special_type_slot_3 = empty
+                    }
+                }
             }
             else_if = {
                 limit = {
@@ -554,6 +629,21 @@ operations = {
                         fixed_auxiliary_weapon_slot_1 = empty
                         fixed_auxiliary_weapon_slot_2 = empty
                         engine_type_slot = engine_4_2x
+                        special_type_slot_1 = empty
+                        special_type_slot_2 = empty
+                        special_type_slot_3 = empty
+                    }
+                }
+                create_equipment_variant = {
+                    name = "Large airframe 4x engine4"
+                    type = large_plane_airframe_1
+                    allow_without_tech = yes
+                    parent_version = 0
+                    modules = {
+                        fixed_main_weapon_slot = empty
+                        fixed_auxiliary_weapon_slot_1 = empty
+                        fixed_auxiliary_weapon_slot_2 = empty
+                        engine_type_slot = engine_4_4x
                         special_type_slot_1 = empty
                         special_type_slot_2 = empty
                         special_type_slot_3 = empty

@@ -69,6 +69,13 @@ recruit_character = ROM_gheorghe_argeseanu
 recruit_character = ROM_king_michael
 recruit_character = ROM_octavian_goga
 
+create_equipment_variant = {
+	name = "ZB vz.24 (ROM)"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:ROM_cugir_organization
+}
+
 # Starting tech
 set_technology = {
 	tech_support = 1		

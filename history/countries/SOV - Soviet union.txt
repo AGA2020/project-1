@@ -155,6 +155,12 @@ if = {
 	recruit_character = SOV_anton_denikin
 }
 
+create_equipment_variant = {
+	name = "SVT-38/40 Mod."
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:SOV_tula_arms_plant_organization
+}
 
 #Initialize character flags Part I (aka who's safe)
 SOV_mikhail_kalinin = {

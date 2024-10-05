@@ -113,6 +113,13 @@ recruit_character = MEX_francisco_mugica
 recruit_character = MEX_jesus_degollado_guizar
 recruit_character = MEX_valentin_campa
 
+create_equipment_variant = {
+	name = "Mondragon M94 (MEX)"
+	type = infantry_equipment_0
+	parent_version = 0
+	design_team = mio:MEX_fabrica_nacional_armas_organization
+}
+
 set_country_flag = monroe_doctrine
 
 set_convoys = 45

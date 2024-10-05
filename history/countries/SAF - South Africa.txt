@@ -1,4 +1,4 @@
-﻿capital = 275
+capital = 275
 
 oob = "SAF_1936"
 if = {
@@ -214,6 +214,13 @@ recruit_character = SAF_e_g_jansen
 recruit_character = SAF_nicolaas_havenga
 recruit_character = SAF_sir_patrick_duncan
 recruit_character = SAF_abram_fischer
+
+create_equipment_variant = {
+	name = "No.4 MkI (SAF)"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:SWE_husqvarna_organization
+}
 
 1939.1.1 = {
 	set_politics = {

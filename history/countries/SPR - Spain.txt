@@ -16,6 +16,8 @@ if = {
 	}
 }
 
+set_occupation_law = autonomous_occupation
+
 if = {
 	limit = {
 		NOT = {
@@ -63,6 +65,13 @@ if = {
 		fascism = 46
 		communism = 7
 	}
+}
+
+create_equipment_variant = {
+	name = "Destroyer Carbine (SPR)"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:SPR_star_bonifacio_echeverria_organization
 }
 
 if = {
