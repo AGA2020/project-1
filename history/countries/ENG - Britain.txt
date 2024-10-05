@@ -1297,6 +1297,17 @@ if = {
 			}
 			icon = "GFX_ENG_fighter1_medium"
 		}
+		create_equipment_variant = {
+			name = "Vickers Wellesley"
+			type = large_plane_airframe_0
+			modules = {
+				fixed_main_weapon_slot = large_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = empty
+				engine_type_slot = engine_2_4x
+				special_type_slot_1 = empty
+			}
+			icon = "GFX_ENG_strategic_bomber1_medium"
+		}
 
 		create_equipment_variant = {
 			name = "Hawker Nimrod" 
@@ -1789,4 +1800,24 @@ if = {
 			}
 		}
 	}
+}
+
+create_production_license = {
+    target = CAN
+    equipment = {
+    	version_name = "Vickers Wellesley"
+        type = large_plane_airframe_0
+        version = 0
+    }
+    cost_factor = 0
+}
+
+create_production_license = {
+    target = AST
+    equipment = {
+    	version_name = "Hawker Hurricane"
+        type = small_plane_airframe_1
+        version = 0
+    }
+    cost_factor = 0
 }
