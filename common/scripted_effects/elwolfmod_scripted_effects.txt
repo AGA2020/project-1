@@ -540,6 +540,46 @@ elwolfmod_capitulations_on_actions = {
 			}
 		}
 	} 
+	if = {
+		limit = { 
+			original_tag = NOR 
+			GER = { has_war_with = NOR }
+		} 
+		
+		NOR = {
+			transfer_navy = { target = GER }
+		}
+		GER = {
+			annex_country = {
+				target = NOR
+				transfer_troops = no
+			}
+			add_named_threat = { 
+				threat = 3.7 
+				name = elwolf_nor
+			}
+		}
+	}
+	if = {
+		limit = { 
+			original_tag = NOR 
+			ENG = { has_war_with = NOR }
+		} 
+		
+		NOR = {
+			transfer_navy = { target = ENG }
+		}
+		ENG = {
+			annex_country = {
+				target = NOR
+				transfer_troops = no
+			}
+			add_named_threat = { 
+				threat = 3.7 
+				name = elwolf_nor
+			}
+		}
+	}  
 	# China
 	if = {
 		limit = { 
