@@ -504,18 +504,6 @@ DEN_remove_democratic_leader = {
 			ideology = liberalism
 		}
 	}
-	else_if = {
-		limit = {
-			has_country_leader = {
-				character = DEN_christmas_moller
-				ruling_only = yes
-			}
-		}
-		remove_country_leader_role = {
-			character = DEN_christmas_moller
-			ideology = conservatism
-		}
-	}
 }
 
 DEN_remove_neutral_leader = {
