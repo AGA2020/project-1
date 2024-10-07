@@ -181,7 +181,7 @@ add_ideas = {
 }
 	
 
-set_convoys = 800
+set_convoys = 1000
 
 # DIPLOMACY
 if = {
