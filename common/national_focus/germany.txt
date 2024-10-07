@@ -57,7 +57,7 @@ focus_tree = {
 		id = GER_west_wall
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = GER_four_year_plan }
-		x = -5
+		x = -6
 		y = 1
 		relative_position_id = GER_four_year_plan
 		cost = 10
@@ -1158,7 +1158,7 @@ focus_tree = {
 		id = GER_autarky
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = GER_four_year_plan }
-		x = 4
+		x = 5
 		y = 1
 		relative_position_id = GER_four_year_plan
 		cost = 10
@@ -1187,7 +1187,7 @@ focus_tree = {
 		icon = GFX_GER_Goerings_Four_Year_Plan
 		dynamic = yes
 		prerequisite = { focus = GER_autarky }
-		x = 2
+		x = -2
 		y = 1
 		relative_position_id = GER_autarky
 		cost = 10
@@ -1266,7 +1266,7 @@ focus_tree = {
 		icon = GFX_GER_KdF_Wagon
 		dynamic = yes
 		prerequisite = { focus = GER_hermann_goring_werke }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = GER_hermann_goring_werke
 		cost = 10
@@ -1344,7 +1344,7 @@ focus_tree = {
 		id = GER_coal_liquidization
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = GER_autarky }
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = GER_autarky
 		cost = 10
@@ -1380,10 +1380,34 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_institute_price_controls
+		icon = GFX_focus_ARG_anti_corruption_policies
+		prerequisite = { focus = GER_autarky }
+		x = 0
+		y = 1
+		relative_position_id = GER_autarky
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			has_full_control_of_state = 65
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GER_autarky_idea
+				add_idea = GER_autarky_idea_2
+			}
+		}
+	}
+
+	focus = {
 		id = GER_synthetic_rubber
 		icon = GFX_focus_generic_rubber
 		prerequisite = { focus = GER_coal_liquidization }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = GER_coal_liquidization
 		cost = 10
@@ -1405,7 +1429,7 @@ focus_tree = {
 		id = GER_extra_tech_slot
 		icon = GFX_focus_research
 		prerequisite = { focus = GER_kdf_wagen focus = GER_synthetic_rubber }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = GER_kdf_wagen
 		cost = 10
@@ -1431,7 +1455,7 @@ focus_tree = {
 		id = GER_autobahn
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = GER_autarky }
-		x = -2
+		x = -4
 		y = 1
 		relative_position_id = GER_autarky
 		cost = 10
@@ -1496,12 +1520,139 @@ focus_tree = {
 		}
 	}
 
+
+	focus = {
+		id = GER_autobahn_south
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = GER_autobahn }
+		x = -3
+		y = 2
+		relative_position_id = GER_autarky
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = GER_autobahn_tt_south
+			hidden_effect = {
+				42 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				50 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				52 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				53 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+			}		
+		}
+	}
+
+	focus = {
+		id = GER_autobahn_east
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = GER_autobahn }
+		x = -4
+		y = 3
+		relative_position_id = GER_autarky
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+
+		available = {
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = GER_autobahn_tt_east
+			hidden_effect = {
+				68 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				65 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				66 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				67 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+			}		
+		}
+	}
+
 	focus = {
 		id = GER_german_war_economy
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = GER_autobahn }
 		mutually_exclusive = { focus = GER_integrate_war_economies }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = GER_autobahn
 		cost = 10
@@ -1588,7 +1739,7 @@ focus_tree = {
 		id = GER_grosraumwirtschaft
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = GER_four_year_plan }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = GER_four_year_plan
 		cost = 10
@@ -1606,7 +1757,7 @@ focus_tree = {
 		id = GER_align_hungary
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = GER_grosraumwirtschaft }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = GER_grosraumwirtschaft
 		cost = 10
@@ -1671,7 +1822,7 @@ focus_tree = {
 		id = GER_align_romania
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = GER_grosraumwirtschaft }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = GER_grosraumwirtschaft
 		cost = 10
@@ -1737,7 +1888,7 @@ focus_tree = {
 		prerequisite = { focus = GER_align_hungary }
 		prerequisite = { focus = GER_align_romania }
 		mutually_exclusive = { focus = GER_german_war_economy }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = GER_align_hungary
 		cost = 10
@@ -2280,7 +2431,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_army_innovation_2
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_BRA_acquire_german_tanks
 		prerequisite = { focus = GER_soviet_treaty }
 		x = 0
 		y = 2

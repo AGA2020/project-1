@@ -1,4 +1,12 @@
 ﻿l_english:
+ GER_autobahn_tt_east:0 "Add maximum §YInfrastructure§! in §YOstmark§!, §YSachsen§!, §YNiederschlesien§! and §YOberschlesien§!"
+ GER_autobahn_east:0 "Expand the Reichsautobahn East"
+ GER_autobahn_tt_south:0 "Add maximum §YInfrastructure§! in §YMoselland§!, §YWürttemberg§!, §YOberbayern§! and §YNiederbayern§!"
+ GER_autobahn_south:0 "Expand the Reichsautobahn South"
+ GER_autobahn_south_desc:0 "As the Reich's influence expands, so must its infrastructure. Extending the Reichsautobahn to the southern states will ensure faster military mobilization, efficient resource transport, and stronger economic ties within the region. By fully developing the infrastructure in these key areas, we will secure vital supply lines and strengthen the backbone of our southern territories."
+ GER_institute_price_controls:0 "Institute Price Controls"
+ GER_institute_price_controls_desc:0 "To stabilize the economy and curb inflation, price controls will be introduced on essential goods. This will reduce the amount of resources sent to the international market, keeping more for domestic use and supporting the war effort."
+ GER_autarky_idea_2:0 "Autarky"
  GER_extra_tech_slot:0 "Develop Heraeus Research Facilities"
  GER_extra_tech_slot_desc:0 "Investing in advanced scientific research is essential for maintaining Germany's technological edge. By expanding the Heraeus Research Facilities, we will accelerate breakthroughs in crucial fields, granting our nation a greater capacity for innovation. This will ensure that we stay ahead in both military and industrial advancements."
  gods_will:0 "Emperor's Will"

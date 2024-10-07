@@ -609,33 +609,6 @@
 		}
 
 		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = JAP_sign_tripartite_pact_bypass_tt
-				OR = {
-					NOT = {
-						any_country = {
-							original_tag = GER
-							has_government = fascism
-						}
-					}
-					any_country = {
-						original_tag = GER
-						has_government = fascism
-						has_war_with = ROOT
-					}
-					NOT = {
-						any_country = {
-							original_tag = ITA
-							has_government = fascism
-						}
-					}
-					any_country = {
-						original_tag = ITA
-						has_government = fascism
-						has_war_with = ROOT
-					}	
-				}	
-			}
 		}
 
 		cancel_if_invalid = yes
@@ -644,13 +617,16 @@
 
 
 		completion_reward = {
-			random_country = {
-				limit = {
-					original_tag = GER
-					has_government = fascism
-				}
-				country_event = { id = wtt_japan.109 days = 1 }
-			}
+		JAP = { diplomatic_relation = { country = GER relation = guarantee active = yes } } 
+		JAP = { diplomatic_relation = { country = ITA relation = guarantee active = yes } } 
+		GER = { diplomatic_relation = { country = JAP relation = guarantee active = yes } } 
+		GER = { diplomatic_relation = { country = ITA relation = guarantee active = yes } } 
+		ITA = { diplomatic_relation = { country = JAP relation = guarantee active = yes } } 
+		ITA = { diplomatic_relation = { country = GER relation = guarantee active = yes } }
+		CHI = { add_opinion_modifier = { target = ITA modifier = large_decrease } }
+		CHI = { add_opinion_modifier = { target = ITA modifier = hostile_status } }
+		CHI = { add_opinion_modifier = { target = GER modifier = large_decrease } }
+		CHI = { add_opinion_modifier = { target = GER modifier = hostile_status } }
 		}
 	}
 

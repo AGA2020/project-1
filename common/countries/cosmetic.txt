@@ -3,6 +3,11 @@ FORM_AUST_democratic = {
 	color_ui = rgb { 198 169 248 }
 }
 
+HUN_GREATER = {
+	color = rgb { 138 163 117 }
+	color_ui = rgb { 138 163 117 }
+}
+
 MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }
