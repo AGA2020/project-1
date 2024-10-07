@@ -299,7 +299,7 @@
  GER_KDF_WAGEN_NAME:0 "KdF-Wagen Factories"
  GER_KAISER_WAGEN_NAME:0 "Wilhelm-Wagen"
  GER_VOLKS_WAGEN_NAME:0 "Volkswagen"
- GER_coal_liquidization:0 "Coal Liquidization"
+ GER_coal_liquidization:0 "Coal Liquefaction"
  GER_coal_liquidization_desc:0 "Germany is lacking in oil, and so we must redouble our efforts in the field of synthetic oil."
  GER_synthetic_rubber:0 "Establish Buna-Werke"
  GER_synthetic_rubber_desc:0 "To reduce reliance on imported rubber, Germany will establish the Buna-Werke factories, pioneering synthetic rubber production. This will secure vital resources for our industry and military, ensuring self-sufficiency and readiness for any future challenges."

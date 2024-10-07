@@ -1453,7 +1453,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_autobahn
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
 		prerequisite = { focus = GER_autarky }
 		x = -4
 		y = 1
