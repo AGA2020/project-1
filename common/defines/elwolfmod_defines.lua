@@ -1,12 +1,13 @@
 
 --Convoy Prio
 
-NDefines.NNavy.NAVAL_INVASION_PRIORITY = 1								-- Default convoy priority for naval invasions
-NDefines.NNavy.NAVAL_TRANSFER_PRIORITY = 1								-- Default convoy priority for naval transports
-NDefines.NNavy.SUPPLY_PRIORITY = 2								    	-- Default convoy priority for supplying units via sea
-NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 3								-- Default convoy priority for resources shipped internally
-NDefines.NNavy.RESOURCE_EXPORT_PRIORITY = 4								-- Default convoy priority for export trade
-NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 5                          -- Default convoy priority for export lend lease
+NDefines.NNavy.NAVAL_INVASION_PRIORITY = 3                                    -- Default convoy priority for naval invasions
+NDefines.NNavy.NAVAL_TRANSFER_PRIORITY = 2                                    -- Default convoy priority for naval transports
+NDefines.NNavy.SUPPLY_PRIORITY = 1                                            -- Default convoy priority for supplying units via sea
+NDefines.NNavy.RESOURCE_EXPORT_PRIORITY = 4                                    -- Default convoy priority for export trade
+NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 5                                    -- Default convoy priority for resources shipped internally
+NDefines.NNavy.RESOURCE_PURCHASE_PRIORITY = 6                                   -- Default convoy priority for export equipment purchase
+NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 7                                -- Default convoy priority for export lend lease
 
 -- QOL
 NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 0.1
@@ -84,9 +85,6 @@ NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
 --THANKS THRASHY
 NDefines.NAir.ACE_WING_SIZE_MAX_BONUS = 1                       -- biggest bonus we can get from having a small wing with an ace on
 NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially countries will allocate this ratio of dockyards for repairs
-NDefines.NNavy.RESOURCE_EXPORT_PRIORITY = 3 --swapped prio so imports go first
-NDefines.NNavy.RESOURCE_LENDLEASE_PRIORITY = 3
-NDefines.NNavy.RESOURCE_ORIGIN_PRIORITY = 3
 NDefines.NCountry.COUNTRY_SCORE_MULTIPLIER = 0				-- Weight of the country score.
 NDefines.NCountry.ARMY_SCORE_MULTIPLIER = 0					-- Based on number of armies.
 NDefines.NCountry.NAVY_SCORE_MULTIPLIER = 0					-- Based on number of navies.
