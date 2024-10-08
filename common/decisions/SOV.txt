@@ -6969,7 +6969,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 		available = {
 			num_of_civilian_factories_available_for_projects > 0
 		}
-
 		visible = {
 			has_completed_focus = SOV_national_academies_of_sciences
 			NOT = { has_country_flag = SOV_national_academy_of_sciences_built_BLR_flag }
@@ -6988,6 +6987,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			BLR = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_BLR_flag
+			ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7030,6 +7033,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			UKR = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_UKR_flag
+			ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7072,6 +7079,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			KAZ = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_KAZ_flag
+			ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7114,6 +7125,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			GEO = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_GEO_flag
+			ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7155,6 +7170,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			ARM = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_ARM_flag
+			ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7193,6 +7212,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 
 		remove_effect = {
 			set_country_flag = SOV_national_academy_of_sciences_built_AZR_flag
+			ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7234,6 +7257,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			UZB = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_UZB_flag
+			ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7275,6 +7302,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			TMS = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_TMS_flag
+			ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7313,6 +7344,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 
 		remove_effect = {
 			set_country_flag = SOV_national_academy_of_sciences_built_KYR_flag
+			ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7351,6 +7386,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 
 		remove_effect = {
 			set_country_flag = SOV_national_academy_of_sciences_built_TAJ_flag
+			ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7478,6 +7517,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			EST = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_EST_flag
+						ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7520,6 +7563,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			LAT = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_LAT_flag
+						ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7562,6 +7609,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			LIT = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_LIT_flag
+						ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7604,6 +7655,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			POL = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_POL_flag
+						ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7646,6 +7701,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			FIN = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_FIN_flag
+						ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7688,6 +7747,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			TAN = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier
 			set_country_flag = SOV_national_academy_of_sciences_built_TAN_flag
+						ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 
@@ -7730,6 +7793,10 @@ SOV_national_academy_of_sciences_dec_cat = {
 		remove_effect = {
 			MON = { SOV_build_national_academy_of_sciences_effect = yes } #Tooltip + increase research speed in dynamic modifier // Done in this scope for tooltip reasons
 			set_country_flag = SOV_national_academy_of_sciences_built_MON_flag
+						ROOT = {
+				custom_effect_tooltip = SOV_national_academy_of_sciences_research_tt
+				add_to_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_national_academy_of_sciences_research_increase }
+			}
 		}
 	}
 }

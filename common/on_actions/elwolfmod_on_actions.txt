@@ -190,10 +190,6 @@ on_actions = {
 					add_unit_leader_trait = no_grind
 				}
 			}
-			ENG = {
-				remove_resource_rights = 676
-				remove_resource_rights = 291
-			}
 			405 = {
 				add_resource = {
 					type = tungsten
