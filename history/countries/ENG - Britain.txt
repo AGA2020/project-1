@@ -17,17 +17,6 @@ if = {
 
 starting_train_buffer = 4
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_naval_oob = "ENG_1936_Naval"
-	else = {
-		set_naval_oob = "ENG_1936_Naval_Legacy"
-	}
-}
-
-set_occupation_law = autonomous_occupation
 
 if = {
 	limit = { has_dlc = "By Blood Alone" }
@@ -57,6 +46,18 @@ if = {
 		}
 	}
 }
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_naval_oob = "ENG_1936_Naval"
+	else = {
+		set_naval_oob = "ENG_1936_Naval_Legacy"
+	}
+}
+
+set_occupation_law = autonomous_occupation
 
 load_oob = "ENG_Motorized"
 

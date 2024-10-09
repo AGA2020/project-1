@@ -715,13 +715,6 @@ if = {
 	set_oob = "SOV_1936_nsb"
 }
 if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "SOV_1936_naval_mtg"
-	else = {
-		set_naval_oob = "SOV_1936_naval_legacy"
-	}
-}
-if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_air_oob = "SOV_1936_air_bba"
 		set_technology = {
@@ -747,6 +740,13 @@ if = {
 			strategic_bomber1 = 1
 			naval_bomber1 = 1
 		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "SOV_1936_naval_mtg"
+	else = {
+		set_naval_oob = "SOV_1936_naval_legacy"
 	}
 }
 

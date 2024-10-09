@@ -778,13 +778,7 @@ every_possible_country = {
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SPR_demand_ministerial_positions
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+				always = no
 			}
 			traits = { army_chief_defensive_2 }
 			cost = 100
@@ -814,11 +808,7 @@ every_possible_country = {
 				}
 			}
 			available = {
-				has_completed_focus = SPR_demand_ministerial_positions
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+				always = no
 			}
 			traits = { army_chief_offensive_2 }
 			cost = 100
@@ -1093,16 +1083,7 @@ every_possible_country = {
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SPR_demand_ministerial_positions
-				}
-				NOT = {
-					has_completed_focus = SPR_oppose_the_communists
-				}
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
+				always = no
 			}
 			traits = { army_infantry_2 }
 			cost = 100
