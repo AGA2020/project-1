@@ -519,7 +519,6 @@ DEN_balance_of_power_category = {
 						DEN_knud_bach = { is_country_leader = yes }
 						DEN_christian_x = { is_country_leader = yes }
 						DEN_frits_clausen = { is_country_leader = yes }
-						DEN_cay_lembcke = { is_country_leader = yes }
 					}
 				}
 				DEN_bop_low_decrease_effect = yes
@@ -1508,11 +1507,6 @@ DEN_occupation_category = {
 	}
 }
 
-#### DECISIONS ####
-#Resistance
-DEN_resistance_category = {
-
-}
 
 ##################
 ##################
@@ -2369,16 +2363,6 @@ DEN_trade_deal_category = {
 		}
 	}
 }
-
-#Fortification
-DEN_fortification_category = {	
-
-}
-
-#Development
-DEN_development_category = {	
-}
-
 DEN_military_category = {
 
 
@@ -2435,10 +2419,6 @@ DEN_danish_security_category = {
 
 }
 
-#INTEGRATE PUPPET
-DEN_integration_puppets_category = { 
-
-}
 
 DEN_demand_territory_category = {
 }

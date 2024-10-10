@@ -3317,8 +3317,6 @@ ETH_exploit_french_weakness_category = {
 	
 }
 
-ETH_reintegrate_former_territory_category = {
-}
 
 ETH_italo-ethiopian_empire_decisions = {
 	# Gojjam

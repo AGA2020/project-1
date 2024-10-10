@@ -2302,39 +2302,6 @@ FIN_foreign_politics_decision_category = {
 ##       ##     ##  ######   ######  ####  ######     ##        ######   #######   #######  ##        
 
 
-FIN_coup_preparations = {
-
-	FIN_appeal_to_the_middle_class = {
-		priority = 50
-
-		icon = GFX_decision_generic_civil_support
-
-		ai_will_do = {
-			base = 4
-		}
-
-		allowed = {
-			original_tag = FIN
-		}
-
-		available = {
-			fascism > 0.4
-		}
-
-		visible = {
-		}
-
-		fire_only_once = yes
-
-		cost = 50
-
-		complete_effect = {
-			set_country_flag = FIN_cw_support_from_middle_class_flag
-			custom_effect_tooltip = when_civil_war_starts_tt
-			custom_effect_tooltip = FIN_appeal_to_the_middle_class_dec_tt
-		}
-	}	
-}
 
 
 ######## ########  #### ########     ###    ##          ##      ##    ###    ########  

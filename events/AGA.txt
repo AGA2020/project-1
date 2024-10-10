@@ -25,27 +25,18 @@ news_event = {
 	desc = aga.2.desc
 	picture = GFX_news_event_german_reichstag_graffiti_ruins
 	
+	
 	trigger = {
 		GER = { surrender_progress > 0.95 }
 		NOT = { 64 = { is_controlled_by = GER } }
+		NOT = { has_global_flag = deathofhitlerlb }
 	}
-	fire_only_once = yes 
+	major = yes
 	immediate = {
+	set_global_flag = deathofhitlerlb
 		hidden_effect = { 
 			GER = { kill_country_leader = yes }
 			GER_karl_donitz = { promote_leader = yes }
-			GER_karl_donitz = {
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1954.8.24"
-						ideology = fascism_ideology
-						traits = {
-							desperate_resilience
-						}
-					}
-					promote_leader = yes
-				}
-			}
 		 }
 	}
 
@@ -64,6 +55,7 @@ news_event = {
 	option = {
 		name = aga.2.c
 		trigger = {
+			NOT = { tag = SOV }
 			is_allied_country = yes
 		}
 	}
@@ -72,7 +64,7 @@ news_event = {
 		trigger = {
 			AND = {
 				NOT = { tag = GER }
-				is_axis = yes
+				is_axis_country = yes
 			}	
 		}
 	}
