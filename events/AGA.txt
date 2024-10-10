@@ -19,6 +19,43 @@ news_event = {
 			}
 	}
 }
+country_event = {
+	id = aga.999
+	title = aga.999.t
+	desc = aga.999.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = WST
+		SOV = { surrender_progress > 0.95 }
+	}
+
+	fire_only_once = yes 
+
+	option = {
+		name = aga.999.a
+		news_event = { id = dfu_news.10 hours = 1 }
+	}
+}
+country_event = {
+	id = aga.998
+	title = aga.998.t
+	desc = aga.998.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = WST
+		GER = { surrender_progress > 0.1 }
+		NOT = { 64 = { is_controlled_by = GER } }
+	}
+
+	fire_only_once = yes 
+
+	option = {
+		name = aga.998.a
+		news_event = { id = aga.2 hours = 1 }
+	}
+}
 news_event = {
 	id = aga.2
 	title = wtt_germany.50.t
@@ -26,14 +63,10 @@ news_event = {
 	picture = GFX_news_event_german_reichstag_graffiti_ruins
 	
 	
-	trigger = {
-		GER = { surrender_progress > 0.95 }
-		NOT = { 64 = { is_controlled_by = GER } }
-		NOT = { has_global_flag = deathofhitlerlb }
-	}
+	is_triggered_only = yes
+
 	major = yes
 	immediate = {
-	set_global_flag = deathofhitlerlb
 		hidden_effect = { 
 			GER = { kill_country_leader = yes }
 			GER_karl_donitz = { promote_leader = yes }

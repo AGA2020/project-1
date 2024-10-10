@@ -531,15 +531,6 @@ country_event = {
 			}
 		}
 		add_ideas = ICE_knud_i
-		ICE_king_knud = {
-			add_naval_commander_role = {
-			    skill = 2
-			    attack_skill = 2
-			    defense_skill = 1
-			    planning_skill = 3
-			    logistics_skill = 2
-			}
-		}
 	}
 }
 
@@ -1348,9 +1339,6 @@ country_event = {
 		}
 		set_politics = {
 			ruling_party = neutrality
-		}
-		ICE_sveinn_bjornsson = {
-			promote_character = yes 
 		}
 		
 	}

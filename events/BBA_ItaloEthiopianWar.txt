@@ -1624,12 +1624,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		AFA = {
-			country_event = {
-				id = BBA_italo_ethiopian_war_events.401
-				days = 2
-			}
-		}
 	}
 	option = { 
 		name = BBA_italo_ethiopian_war_events.400.b

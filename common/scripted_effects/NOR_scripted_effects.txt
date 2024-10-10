@@ -1414,11 +1414,6 @@ NOR_character_flag_setup_for_cw = {
 		set_character_flag = NOR_anti_communist
 	}
 	
-	NOR_carsten_tank_nielsen = {
-		set_character_flag = NOR_anti_communist
-		set_character_flag = NOR_anti_fascist		
-	}
-	
 
 	NOR_skule_storheil = {
 		set_character_flag = NOR_anti_communist
