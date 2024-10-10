@@ -19,4 +19,63 @@ news_event = {
 			}
 	}
 }
+news_event = {
+	id = aga.2
+	title = wtt_germany.50.t
+	desc = aga.2.desc
+	picture = GFX_news_event_german_reichstag_graffiti_ruins
+	
+	trigger = {
+		GER = { surrender_progress > 0.95 }
+		NOT = { 64 = { is_controlled_by = GER } }
+	}
+	fire_only_once = yes 
+	immediate = {
+		hidden_effect = { 
+			GER = { kill_country_leader = yes }
+			GER_karl_donitz = { promote_leader = yes }
+			GER_karl_donitz = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1954.8.24"
+						ideology = fascism_ideology
+						traits = {
+							desperate_resilience
+						}
+					}
+					promote_leader = yes
+				}
+			}
+		 }
+	}
+
+	option = {
+		name = aga.2.a
+		trigger = {
+			TAG = GER
+		}
+	}
+	option = {
+		name = aga.2.b
+		trigger = {
+			TAG = SOV
+		}
+	}
+	option = {
+		name = aga.2.c
+		trigger = {
+			is_allied_country = yes
+		}
+	}
+	option = {
+		name = aga.2.d
+		trigger = {
+			AND = {
+				NOT = { tag = GER }
+				is_axis = yes
+			}	
+		}
+	}
+}
+
 

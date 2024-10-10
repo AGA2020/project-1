@@ -10865,7 +10865,6 @@ focus_tree = {
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		x = -6
 		y = 0
-		relative_position_id = ITA_ethiopian_war_logistics_bba
 		cost = 5
 		
 		allow_branch = {
@@ -11569,7 +11568,6 @@ focus_tree = {
 		icon = GFX_goal_support_fascism
 		x = -6
 		y = 0
-		relative_position_id = ITA_ethiopian_war_logistics_bba
 		cost = 5
 		
 		allow_branch = {

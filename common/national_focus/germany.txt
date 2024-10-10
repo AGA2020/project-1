@@ -1645,7 +1645,7 @@ focus_tree = {
 	focus = {
 		id = GER_autobahn  
 		icon = GFX_focus_generic_road_investment
-		prerequisite = { focus = GER_autarky }
+		prerequisite = { focus = GER_four_year_plan }
 		x = -4
 		y = 1
 		relative_position_id = GER_autarky

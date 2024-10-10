@@ -211,7 +211,6 @@ focus = {
 
 		available = {
 			congress_medium_support_trigger = yes
-			has_government = democratic
 		}
 		
 		bypass = {
@@ -230,7 +229,7 @@ focus = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			USA_great_depression_level_down = yes
-			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
+			set_country_flag = USA_great_depression_cooldown
 			USA_congress_medium_opposition = yes
 			custom_effect_tooltip = USA_great_depression_cooldown_tt
 			unlock_decision_tooltip = { decision = USA_pay_farm_subsidies show_effect_tooltip = yes }
@@ -251,8 +250,17 @@ focus = {
 
 		available = {
 			congress_medium_support_trigger = yes
-			has_government = democratic
-			not = { has_country_flag = USA_great_depression_cooldown }
+			has_country_flag = {
+				flag = USA_great_depression_cooldown
+				days > 230
+			}
+			custom_trigger_tooltip = {
+				tooltip = USA_great_depression_cooldown_days_tt
+				has_country_flag = {
+					flag = USA_great_depression_cooldown
+					days > 230
+				}
+			}
 		}
 		
 		bypass = {
@@ -271,7 +279,7 @@ focus = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			USA_great_depression_level_down = yes
-			set_country_flag = { flag = USA_great_depression_cooldown value = 1 days = 230 }
+			set_country_flag = USA_great_depression_cooldown_2
 			custom_effect_tooltip = USA_great_depression_cooldown_tt
 			USA_congress_medium_opposition = yes
 		}
@@ -291,8 +299,17 @@ focus = {
 
 		available = {
 			congress_medium_support_trigger = yes
-			has_government = democratic
-			not = { has_country_flag = USA_great_depression_cooldown }
+			has_country_flag = {
+				flag = USA_great_depression_cooldown_2
+				days > 230
+			}
+			custom_trigger_tooltip = {
+				tooltip = USA_great_depression_cooldown_2_days_tt
+				has_country_flag = {
+					flag = USA_great_depression_cooldown_2
+					days > 230
+				}
+			}
 		}
 		
 		bypass = {

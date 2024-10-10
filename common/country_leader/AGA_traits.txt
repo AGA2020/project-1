@@ -1,0 +1,22 @@
+leader_traits = {
+	desperate_resilience = {
+		random = no
+		army_org_factor = 0.10
+		army_morale_factor = 0.05
+		army_defence_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	gods_will = {
+		random = no
+		army_defence_factor = 0.1
+		army_attack_factor = 0.1
+		army_morale_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
