@@ -39,7 +39,7 @@ on_actions = {
 					is_playable_country = yes
 				}
 				air_experience = 10
-				army_experience = 10
+				army_experience = 9
 				VEN = {
 					country_event = {
 					id = AGA.1
