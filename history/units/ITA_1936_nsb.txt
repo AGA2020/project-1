@@ -384,6 +384,7 @@ instant_effect = {
 
 		add_equipment_production = { 
 			equipment = { 
+				version_name = "Support Equipment (ITA)"
 				type = support_equipment_1 
 				creator = "ITA" 
 			}

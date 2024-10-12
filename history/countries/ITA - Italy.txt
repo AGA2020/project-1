@@ -869,6 +869,13 @@ create_equipment_variant = {
 	design_team = mio:ITA_beretta_organization
 }
 
+create_equipment_variant = {
+	name = "Support Equipment (ITA)"
+	type = support_equipment_1
+	parent_version = 0
+	design_team = mio:ITA_brescia_arsenal_organization
+}
+
 ########################################
 ##### MISSIOLINIS - TRIGGER EVENTS #####
 ########################################
