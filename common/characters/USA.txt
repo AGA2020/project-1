@@ -1196,6 +1196,9 @@ characters={
 			army={
 				small=GFX_portrait_USA_charles_lindbergh_small
 			}
+			civilian={
+				large = GFX_portrait_USA_charles_lindbergh
+			}
 		}
 		advisor={
 			slot = high_command
