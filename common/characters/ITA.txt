@@ -2323,30 +2323,30 @@ characters = {
 			ITA_is_appropriate_cw_side_for_character_split = yes
 		}
 
-		advisor = {
-			slot = political_advisor
-			idea_token = ITA_guido_jung
-			allowed = {
-				ITA_is_italian_tag = yes
-			}
-			available = {
-				has_government = fascism
-				NOT = { has_completed_focus = ITA_pact_of_steel }
-			}
-			traits = {
-				financial_expert
-			}
-
-			ai_will_do = {
-				base = 0.300
-				modifier = {
-					factor = 0
-					OR = {
-						ITA_is_historical_ai = yes
-					}
-				}
-			}
-		}
+		#advisor = {
+		#	slot = political_advisor
+		#	idea_token = ITA_guido_jung
+		#	allowed = {
+		#		ITA_is_italian_tag = yes
+		#	}
+		#	available = {
+		#		has_government = fascism
+		#		NOT = { has_completed_focus = ITA_pact_of_steel }
+		#	}
+		#	traits = {
+		#		financial_expert
+		#	}
+		#
+		#	ai_will_do = {
+		#		base = 0.300
+		#		modifier = {
+		#			factor = 0
+		#			OR = {
+		#				ITA_is_historical_ai = yes
+		#			}
+		#		}
+		#	}
+		#}
 	}
 
 	ITA_adelchi_serena = {

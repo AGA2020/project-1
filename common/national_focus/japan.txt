@@ -1893,10 +1893,9 @@
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
-				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = JAP_aichi_organization
 				mio:JAP_aichi_organization = {
-					add_mio_funds = 1500
+					add_mio_size = 2
 				}
 			}
 			ELSE = {
@@ -1942,10 +1941,9 @@
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
-				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = JAP_mitsubishi_organization
 				mio:JAP_mitsubishi_organization = {
-					add_mio_funds = 1500
+					add_mio_size = 2
 				}
 			}
 			ELSE = {
