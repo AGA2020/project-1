@@ -84,6 +84,20 @@ on_actions = {
 				if = { limit = { MEX = { is_ai = no } } JAP = { declare_war_on = { target = MEX type = annex_everything } } }
 			}
 		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = SOV
+					}
+					date>1941.1.1	
+				}
+				ITA = { declare_war_on = { target = SOV type = annex_everything } }
+				if = { limit = { BUL = { is_ai = no } } BUL = { declare_war_on = { target = SOV type = annex_everything } } }
+				if = { limit = { ROM = { is_ai = no } } ROM = { declare_war_on = { target = SOV type = annex_everything } } }
+				if = { limit = { HUN = { is_ai = no } } HUN = { declare_war_on = { target = SOV type = annex_everything } } }
+			}
+		}
 	}	
 	on_naval_invasion = { 
 		effect ={  

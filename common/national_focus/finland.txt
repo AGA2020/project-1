@@ -1448,20 +1448,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
-			OR = {
-				NOT = { country_exists = EST }
-				is_in_faction_with = EST
-				has_subject = EST
-				any_state = {
-					is_core_of = EST
-					is_controlled_by = ROOT
-				}
-			}
-			OR = {
-				has_war = no
-				surrender_progress < 0.05
-			}
+			always = no
 		}
 
 		search_filters = {}
