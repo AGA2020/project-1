@@ -432,12 +432,12 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ trait_reckless commando   }
-			skill=4
-			attack_skill=4
-			defense_skill=2
-			planning_skill=4
-			logistics_skill=3
+			traits={ skilled_staffer cavalry_leader commando armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger organizer camouflage_expert}
+			skill=7
+			attack_skill=6
+			defense_skill=7
+			planning_skill=6
+			logistics_skill=6
 			legacy_id=16
 		}
 	}
