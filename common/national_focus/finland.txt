@@ -1642,44 +1642,13 @@ focus_tree = {
 		relative_position_id = FIN_national_unity
 		cost = 5
 		available = {
-			SOV = {
-				has_completed_focus = SOV_secure_leningrad
-			}
+
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			if = { #Just for tooltip purposes
-				limit = {
-					has_war = no
-					country_exists = SWE
-					NOT = {
-						has_war_with = SWE
-						any_enemy_country = {
-							is_in_faction_with = SWE
-						}
-					}
-					SWE = { is_subject = no }
-				}
-				effect_tooltip = {
-					country_event = AAT_finland_winter_war.01
-				}
-			}
-			else_if = {
-				limit = {
-					country_exists = SWE
-					NOT = {
-						has_war_with = SWE
-						any_enemy_country = {
-							is_in_faction_with = SWE
-						}
-					}
-					SWE = { is_subject = no }
-				}
-				country_event = AAT_finland_winter_war.01
-			}
-
+		SWE = {	send_equipment = { target = FIN type = infantry_equipment amount = 500 } send_equipment = { target = FIN type = artillery_equipment amount = 250 } }
 			add_timed_idea = {
 				idea = FIN_international_volunteers
 				days = 365

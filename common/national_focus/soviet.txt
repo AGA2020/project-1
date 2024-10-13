@@ -8794,7 +8794,7 @@ ai_will_do = {
 			army_experience = 50
 			transfer_state = 146
 			transfer_state = 147
-
+			FIN = {	add_timed_idea = { idea = FIN_international_volunteers days = 365 } }
 			
 			hidden_effect = {
 				SOV = {
