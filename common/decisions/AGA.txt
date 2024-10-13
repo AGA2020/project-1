@@ -662,139 +662,114 @@ operations = {
         }
         allowed = {
             OR = {
-
+                tag = ENG
+                tag = USA
+                tag = SOV
+                tag = FRA
+                tag = CAN
+                tag = RAJ
+                tag = SAF
+                tag = BRA
+                tag = MEX
+                tag = AST
+                tag = NZL
             }
         }
         available = {
             OR = { 
                 OR = {      
-                    ENG = { has_tech = engines_3 }
-                    USA = { has_tech = engines_3 }
-                    SOV = { has_tech = engines_3 }
-                    FRA = { has_tech = engines_3 }
-                    CAN = { has_tech = engines_3 }
-                    RAJ = { has_tech = engines_3 }
-                    SAF = { has_tech = engines_3 }
-                    BRA = { has_tech = engines_3 }
-                    FRA = { has_tech = engines_3 }
-                    CAN = { has_tech = engines_3 }
-                    RAJ = { has_tech = engines_3 }
-                    SAF = { has_tech = engines_3 } 
-                    BRA = { has_tech = engines_3 }
-                    MEX = { has_tech = engines_3 } 
-                    AST = { has_tech = engines_3 } 
-                    NZL = { has_tech = engines_3 }
+                    ENG = { has_tech = aa_hmg }
+                    USA = { has_tech = aa_hmg }
+                    SOV = { has_tech = aa_hmg }
+                    FRA = { has_tech = aa_hmg }
+                    CAN = { has_tech = aa_hmg }
+                    RAJ = { has_tech = aa_hmg }
+                    SAF = { has_tech = aa_hmg }
+                    BRA = { has_tech = aa_hmg }
+                    FRA = { has_tech = aa_hmg }
+                    CAN = { has_tech = aa_hmg }
+                    RAJ = { has_tech = aa_hmg }
+                    SAF = { has_tech = aa_hmg } 
+                    BRA = { has_tech = aa_hmg }
+                    MEX = { has_tech = aa_hmg } 
+                    AST = { has_tech = aa_hmg } 
+                    NZL = { has_tech = aa_hmg }
                 }
             }                     
         }
         complete_effect = {
-            If = {
-                limit = {
-                    NOT = {
-                        OR = {      
-                            ENG = { has_tech = advanced_small_airframe }
-                            USA = { has_tech = advanced_small_airframe }
-                            SOV = { has_tech = advanced_small_airframe }
-                            FRA = { has_tech = advanced_small_airframe }
-                            CAN = { has_tech = advanced_small_airframe }
-                            RAJ = { has_tech = advanced_small_airframe }
-                            SAF = { has_tech = advanced_small_airframe }
-                            BRA = { has_tech = advanced_small_airframe }
-                            FRA = { has_tech = advanced_small_airframe }
-                            CAN = { has_tech = advanced_small_airframe }
-                            RAJ = { has_tech = advanced_small_airframe }
-                            SAF = { has_tech = advanced_small_airframe } 
-                            BRA = { has_tech = advanced_small_airframe }
-                            MEX = { has_tech = advanced_small_airframe } 
-                            AST = { has_tech = advanced_small_airframe } 
-                            NZL = { has_tech = advanced_small_airframe }
-                        }
-                    }
-                }  
-                create_equipment_variant = {
-                    name = "Fighter2 engine3"
-                    type = small_plane_airframe_2
-                    allow_without_tech = yes
-                    parent_version = 0
-                    modules = {
-                        fixed_main_weapon_slot = empty
-                        fixed_auxiliary_weapon_slot_1 = empty
-                        fixed_auxiliary_weapon_slot_2 = empty
-                        engine_type_slot = engine_3_1x
-                        special_type_slot_1 = empty
-                        special_type_slot_2 = empty
-                        special_type_slot_3 = empty
-                    }
-                }
-                create_equipment_variant = {
-                    name = "Fighter2 2x engine3"
-                    type = small_plane_airframe_2
-                    allow_without_tech = yes
-                    parent_version = 0
-                    modules = {
-                        fixed_main_weapon_slot = empty
-                        fixed_auxiliary_weapon_slot_1 = empty
-                        fixed_auxiliary_weapon_slot_2 = empty
-                        engine_type_slot = engine_3_2x
-                        special_type_slot_1 = empty
-                        special_type_slot_2 = empty
-                        special_type_slot_3 = empty
-                    }
+            create_equipment_variant = {
+                name = "Fighter mg"
+                type = small_plane_airframe_1
+                allow_without_tech = yes
+                parent_version = 0
+                modules = {
+                    fixed_main_weapon_slot = heavy_mg_4x
+                    fixed_auxiliary_weapon_slot_1 = empty
+                    fixed_auxiliary_weapon_slot_2 = empty
+                    engine_type_slot = empty
+                    special_type_slot_1 = empty
+                    special_type_slot_2 = empty
+                    special_type_slot_3 = empty
                 }
             }
-            else_if = {
-                limit = {
-                    OR = {      
-                        ENG = { has_tech = advanced_small_airframe }
-                        USA = { has_tech = advanced_small_airframe }
-                        SOV = { has_tech = advanced_small_airframe }
-                        FRA = { has_tech = advanced_small_airframe }
-                        CAN = { has_tech = advanced_small_airframe }
-                        RAJ = { has_tech = advanced_small_airframe }
-                        SAF = { has_tech = advanced_small_airframe }
-                        BRA = { has_tech = advanced_small_airframe }
-                        FRA = { has_tech = advanced_small_airframe }
-                        CAN = { has_tech = advanced_small_airframe }
-                        RAJ = { has_tech = advanced_small_airframe }
-                        SAF = { has_tech = advanced_small_airframe } 
-                        BRA = { has_tech = advanced_small_airframe }
-                        MEX = { has_tech = advanced_small_airframe } 
-                        AST = { has_tech = advanced_small_airframe } 
-                        NZL = { has_tech = advanced_small_airframe }
-                    }
+        }
+    }
+  heavymg_axis_license = {
+        # icon = generic_operation
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        allowed = {
+            OR = {
+                tag = GER
+                tag = SPR
+                tag = ITA
+                tag = HUN
+                tag = FIN
+                tag = ROM
+                tag = DEN
+                tag = JAP
+                tag = MAN
+                tag = SIA
+                tag = BUL
+            }
+        }
+        available = {
+            OR = { 
+                OR = {      
+                    GER = { has_tech = aa_hmg }
+                    SPR = { has_tech = aa_hmg }
+                    ITA = { has_tech = aa_hmg }
+                    HUN = { has_tech = aa_hmg }
+                    FIN = { has_tech = aa_hmg }
+                    ROM = { has_tech = aa_hmg }
+                    DEN = { has_tech = aa_hmg }
+                    JAP = { has_tech = aa_hmg }
+                    MAN = { has_tech = aa_hmg }
+                    SIA = { has_tech = aa_hmg }
+                    BUL = { has_tech = aa_hmg }
                 }
-                create_equipment_variant = {
-                    name = "Fighter3 engine3"
-                    type = small_plane_airframe_3
-                    allow_without_tech = yes
-                    parent_version = 0
-                    modules = {
-                        fixed_main_weapon_slot = empty
-                        fixed_auxiliary_weapon_slot_1 = empty
-                        fixed_auxiliary_weapon_slot_2 = empty
-                        engine_type_slot = engine_3_1x
-                        special_type_slot_1 = empty
-                        special_type_slot_2 = empty
-                        special_type_slot_3 = empty
-                    }
-                }
-                create_equipment_variant = {
-                    name = "Fighter3 2xengine3"
-                    type = small_plane_airframe_3
-                    allow_without_tech = yes
-                    parent_version = 0
-                    modules = {
-                        fixed_main_weapon_slot = empty
-                        fixed_auxiliary_weapon_slot_1 = empty
-                        fixed_auxiliary_weapon_slot_2 = empty
-                        engine_type_slot = engine_3_1x
-                        special_type_slot_1 = empty
-                        special_type_slot_2 = empty
-                        special_type_slot_3 = empty
-                    }
+            }                     
+        }
+        complete_effect = {
+            create_equipment_variant = {
+                name = "Fighter mg"
+                type = small_plane_airframe_1
+                allow_without_tech = yes
+                parent_version = 0
+                modules = {
+                    fixed_main_weapon_slot = heavy_mg_4x
+                    fixed_auxiliary_weapon_slot_1 = empty
+                    fixed_auxiliary_weapon_slot_2 = empty
+                    engine_type_slot = empty
+                    special_type_slot_1 = empty
+                    special_type_slot_2 = empty
+                    special_type_slot_3 = empty
                 }
             }
-
         }
     }
     fighter2_axis_license = {

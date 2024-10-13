@@ -891,7 +891,7 @@ leader_traits = {
 			}
 			
 			attack_skill = 1
-			
+			allowed = { NOT = { has_trait = defensive_doctrine } } 
 			slot = army_chief
 			specialist_advisor_trait = army_chief_offensive_1
 			expert_advisor_trait = army_chief_offensive_2
@@ -912,6 +912,7 @@ leader_traits = {
 				always = no # not gainable
 			}
 			cost = 1000
+			allowed = { NOT = { has_trait = offensive_doctrine } } 
 			field_marshal_modifier = {
 				max_dig_in_factor = 0.30
 			}
@@ -1367,8 +1368,7 @@ leader_traits = {
 			}
 			ai_will_do = {
 				factor = 1
-			}
-			
+			}			
 			attack_skill_factor = 2
 			
 			gui_row = 1
@@ -1603,7 +1603,7 @@ leader_traits = {
 			ai_will_do = {
 				factor = 1
 			}
-			
+			allowed = { NOT = { has_trait = combined_arms_expert }	} 
 			trait_type = assignable_trait
 			any_parent = { panzer_leader }
 			
@@ -1623,7 +1623,7 @@ leader_traits = {
 				motorized_defence_factor = 0.15
 				mechanized_defence_factor = 0.15
 			}
-			
+			allowed = { NOT = { has_trait = panzer_expert }	} 		
 			custom_effect_tooltip = INCREASED_BLITZ_AND_ENCIRCLEMENT_CHANCE
 			
 			slot = high_command
@@ -1731,7 +1731,7 @@ leader_traits = {
 			modifier = {
 				army_infantry_attack_factor = 0.10
 			}
-			
+			allowed = { NOT = { has_trait = ambusher } } 
 			ai_will_do = {
 				factor = 1
 			}
@@ -1757,7 +1757,7 @@ leader_traits = {
 			ai_will_do = {
 				factor = 1
 			}
-			
+			allowed = { NOT = { has_trait = infantry_expert } } 
 			mutually_exclusive = infantry_expert
 	
 			trait_type = assignable_trait
