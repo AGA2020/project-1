@@ -1,5 +1,4 @@
-POR_arms_purchases = {
-}
+
 
 POR_naval_blockade = {
 	POR_evade_blockade_with_portuguese_convoys = {
@@ -18,13 +17,6 @@ POR_naval_blockade = {
 		
 		available = {
 			num_of_civilian_factories > 1
-			POR = {
-				has_navy_size = {
-				    size > 49
-				    type = convoy
-				}
-				has_opinion = { target = ROOT value > -10 }
-			}
 		}
 
 		cost = 25

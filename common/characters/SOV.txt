@@ -2551,31 +2551,7 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					has_global_flag = SOV_soviet_civil_war
-					has_global_flag = SOV_soviet_civil_war_over
-				}
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-				}
-				is_country_leader = no
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
-				IF = {
-					limit = {
-						has_global_flag = flag_mexico_invited_trotsky_to_government
-						NOT = { has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico }
-						SOV_is_opposition = yes 
-					}
-					MEX = { 
-						NOT = { has_idea = MEX_leon_trotsky }
-						NOT = { has_country_leader = { character = MEX_leon_trotsky } } 
-					}
-				}
+				always = no
 			}
 			traits = {
 				pc_military_naval_affairs

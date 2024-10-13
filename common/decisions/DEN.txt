@@ -516,8 +516,6 @@ DEN_balance_of_power_category = {
 			if = {
 				limit = {
 					OR = {
-						DEN_knud_bach = { is_country_leader = yes }
-						DEN_christian_x = { is_country_leader = yes }
 						DEN_frits_clausen = { is_country_leader = yes }
 					}
 				}
@@ -528,7 +526,6 @@ DEN_balance_of_power_category = {
 					OR = {
 						DEN_thorvald_stauning = { is_country_leader = yes }
 						DEN_aksel_larsen = { is_country_leader = yes }
-						DEN_vilhelm_buhl = { is_country_leader = yes }
 						DEN_knud_kristensen = { is_country_leader = yes }
 					}
 				}
@@ -2363,61 +2360,6 @@ DEN_trade_deal_category = {
 		}
 	}
 }
-DEN_military_category = {
-
-
-	DEN_recall_landstormen = {
-		priority = 99
-		icon = GFX_decision_eng_blackshirt_march 
-
-		ai_will_do = { 
-			base = 0
-			modifier = {
-				add = 50
-				has_war = no
-			}
-		}
-
-		allowed = { 
-			original_tag = DEN
-		}
-
-		#on_map_mode = map_and_decisions_view
-		
-		available = {
-		}
-	
-		visible = {
-			has_country_flag = DEN_landstormen_deployed
-		}
-
-		cost = 0
-		
-		fire_only_once = no
-
-		days_remove = 5
-
-		complete_effect = {
-			if = {
-				limit = { has_template = "Landstormen Militia" }
-				delete_units = {
-				    division_template = "Landstormen Militia"
-				    disband = no
-				}
-			}
-			set_country_flag = DEN_recall_landstormen
-		}
-
-		remove_effect = {
-			clr_country_flag = DEN_landstormen_deployed
-			clr_country_flag = DEN_recall_landstormen
-		}
-	}
-}
-
-DEN_danish_security_category = {
-
-}
 
 
 DEN_demand_territory_category = {
@@ -2667,10 +2609,6 @@ DEN_danish_faction_category = {
 			}
 		}
 	}
-}
-
-DEN_influence_countries_category = {
-
 }
 
 DEN_return_occupied_territory_category = {

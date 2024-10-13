@@ -1642,7 +1642,3 @@ GER_aid_hun_rom_democratic_civil_war = {
 	}
 
 }
-
-GER_austro_hungarian_empire = {
-
-}
