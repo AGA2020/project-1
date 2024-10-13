@@ -1583,7 +1583,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_full_control_of_state = 65
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -1958,7 +1957,7 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { has_war_with = HUN }
+
 		}
 
 		bypass = {
@@ -2023,7 +2022,7 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { has_war_with = ROM }
+
 		}
 
 		bypass = {
@@ -2735,13 +2734,6 @@ focus_tree = {
 		icon = GFX_goal_molotov_ribbentrop_pact
 		prerequisite = { focus = GER_soviet_treaty }
 		available = {
-			is_subject = no
-			has_government = fascism
-			SOV = {
-				NOT = { has_war_with = GER }
-				country_exists = SOV
-				has_civil_war = no
-			}
 			NOT = { has_global_flag = beck_ribbentrop_signed }
 		}
 		cancel = {
@@ -2784,13 +2776,6 @@ focus_tree = {
 		x = 25
 		y = 0
 		cost = 10
-		available = {
-			is_subject = no
-		}
-		bypass = {
-			42 = { is_demilitarized_zone = no }
-			51 = { is_demilitarized_zone = no }
-		}
 		ai_will_do = {
 			factor = 10
 		}
@@ -2816,45 +2801,10 @@ focus_tree = {
 		icon = GFX_focus_generic_befriend_nationalist_spain_focus
 		prerequisite = { focus = GER_rhineland }
 		available = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "La Resistance" }
-				}
-				SPR = { has_civil_war = no }
-				any_other_country = {
-					original_tag = SPR
-					has_government = fascism
-					NOT = { has_war_with = GER }
-					NOT = { is_in_faction_with = GER }
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				SPA = {
-					exists = yes
-					has_civil_war = no
-					NOT = { has_war_with = GER }
-					NOT = { is_in_faction_with = GER }
-				}
-			}
 			FRA = {
-				OR = {
-					exists = no
-					has_capitulated = yes
-					has_government = fascism
-				}
+				has_capitulated = yes
 			}
 		}
-		
-		#bypass = {
-		#	any_other_country = {
-		#		original_tag = SPR
-		#		has_government = fascism
-		#		is_in_faction_with = GER
-		#	}
-		#}
 		x = -3
 		y = 2
 		relative_position_id = GER_rhineland
@@ -2919,7 +2869,6 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = GER_rhineland }
 		available = {
-			is_subject = no
 			AND = {
 				country_exists = JAP
 				JAP = { is_subject = no }
@@ -2980,7 +2929,6 @@ focus_tree = {
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = GER_rhineland }
 		available = {
-			is_subject = no
 			AND = {
 				country_exists = SWE
 				SWE = { is_subject = no }
@@ -3047,7 +2995,6 @@ focus_tree = {
 		
 		available = {
 			date > 1941.6.21
-			is_subject = no
 		}
 		x = -4
 		y = 1
@@ -3152,11 +3099,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 10
-		bypass = {
-			188 = { is_owned_by = GER }
-			85 = { is_owned_by = GER }
-			86 = { is_owned_by = GER }
-		}
 		ai_will_do = {
 			factor = 10	
 			modifier = {
@@ -3395,11 +3337,6 @@ focus_tree = {
 		prerequisite = { focus = GER_danzig_or_war }
 		
 		available = {
-			OR = {
-				NOT = { HOL = { is_in_faction_with = GER } }
-				NOT = { BEL = { is_in_faction_with = GER } }
-				NOT = { LUX = { is_in_faction_with = GER } }
-			}
 		}
 
 		bypass = {
@@ -3512,11 +3449,6 @@ focus_tree = {
 		prerequisite = { focus = GER_anschluss }
 		will_lead_to_war_with = CZE
 		will_lead_to_war_with = FRA
-		available = {}
-		bypass = {}
-		cancel = {
-			is_puppet = yes
-		}
 		cancel_if_invalid = yes
 		x = -2
 		y = 1
@@ -3566,9 +3498,6 @@ focus_tree = {
 		id = GER_end_of_czechoslovakia
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = GER_demand_sudetenland }
-		available = {}
-
-		bypass = {}
 
 		x = 0
 		y = 1
@@ -3671,10 +3600,6 @@ focus_tree = {
 		id = GER_war_with_france
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = GER_around_maginot focus = GER_weserubung }
-		available = {
-			is_subject = no			
-			NOT = { is_in_faction_with = FRA }
-		}
 		x = 1
 		y = 1
 		relative_position_id = GER_around_maginot
@@ -3716,7 +3641,6 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = GER_war_with_france }
 		available = {
-			is_subject = no
 			has_full_control_of_state = 8
 			has_full_control_of_state = 28
 			OR = {
