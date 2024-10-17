@@ -1,0 +1,1232 @@
+ROMID_ig_leftover_effect = {
+	set_variable = {
+    		var = ROMID_iron_guard_popularity_leftover
+    		value = 100
+	}
+	subtract_from_variable = { 
+		var = ROMID_iron_guard_popularity_leftover 
+		value = ROMID_iron_guard_popularity 
+	}
+	clamp_variable = {
+		var = ROMID_iron_guard_popularity_leftover
+		min = 0
+		max = 100
+	}
+}
+
+#Faction System
+#----# Army #----#
+ROMID_army_low_loyalty_increase_effect = {
+	custom_effect_tooltip = ROMID_army_tt
+	custom_effect_tooltip = ROMID_low_loyalty_increase_tt
+	add_to_variable = { ROMID_army_loyalty = ROMID_low_increase }
+	clamp_variable = {
+		var = ROMID_army_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+ROMID_army_medium_loyalty_increase_effect = {
+	custom_effect_tooltip = ROMID_army_tt
+	custom_effect_tooltip = ROMID_medium_loyalty_increase_tt
+	add_to_variable = { ROMID_army_loyalty = ROMID_medium_increase }
+	clamp_variable = {
+		var = ROMID_army_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+ROMID_army_high_loyalty_increase_effect = {
+	custom_effect_tooltip = ROMID_army_tt
+	custom_effect_tooltip = ROMID_high_loyalty_increase_tt
+	add_to_variable = { ROMID_army_loyalty = ROMID_high_increase }
+	clamp_variable = {
+		var = ROMID_army_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+ROMID_army_change_regime_loyalty_increase_effect = {
+	custom_effect_tooltip = ROMID_army_tt
+	custom_effect_tooltip = ROMID_change_regime_increase_tt
+	add_to_variable = { ROMID_army_loyalty = 50 }
+	clamp_variable = {
+		var = ROMID_army_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+ROMID_army_low_loyalty_decrease_effect = {
+	custom_effect_tooltip = ROMID_army_tt
+	custom_effect_tooltip = ROMID_low_loyalty_decrease_tt
+	add_to_variable = { ROMID_army_loyalty = ROMID_low_decrease }
+	clamp_variable = {
+		var = ROMID_army_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+ROMID_army_medium_loyalty_decrease_effect = {
+	custom_effect_tooltip = ROMID_army_tt
+	custom_effect_tooltip = ROMID_medium_loyalty_decrease_tt
+	add_to_variable = { ROMID_army_loyalty = ROMID_medium_decrease }
+	clamp_variable = {
+		var = ROMID_army_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+ROMID_army_high_loyalty_decrease_effect = {
+	custom_effect_tooltip = ROMID_army_tt
+	custom_effect_tooltip = ROMID_high_loyalty_decrease_tt
+	add_to_variable = { ROMID_army_loyalty = ROMID_high_decrease }
+	clamp_variable = {
+		var = ROMID_army_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+#----# Royalists #----#
+
+ROMID_royalists_low_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_low_loyalty_increase_tt
+		add_to_variable = { ROMID_royalists_loyalty = ROMID_low_increase }
+		clamp_variable = {
+			var = ROMID_royalists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_royalists_medium_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_medium_loyalty_increase_tt
+		add_to_variable = { ROMID_royalists_loyalty = ROMID_medium_increase }
+		clamp_variable = {
+			var = ROMID_royalists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_royalists_high_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_high_loyalty_increase_tt
+		add_to_variable = { ROMID_royalists_loyalty = ROMID_high_increase }
+		clamp_variable = {
+			var = ROMID_royalists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_royalists_low_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_low_loyalty_decrease_tt
+		add_to_variable = { ROMID_royalists_loyalty = ROMID_low_decrease }
+		clamp_variable = {
+			var = ROMID_royalists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_royalists_medium_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_medium_loyalty_decrease_tt
+		add_to_variable = { ROMID_royalists_loyalty = ROMID_medium_decrease }
+		clamp_variable = {
+			var = ROMID_royalists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_royalists_high_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_high_loyalty_decrease_tt
+		add_to_variable = { ROMID_royalists_loyalty = ROMID_high_decrease }
+		clamp_variable = {
+			var = ROMID_royalists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+#----# Iron Guard #----#
+
+ROMID_iron_guard_low_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_low_loyalty_increase_tt
+		add_to_variable = { ROMID_iron_guard_loyalty = ROMID_low_increase }
+		clamp_variable = {
+			var = ROMID_iron_guard_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_iron_guard_medium_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_medium_loyalty_increase_tt
+		add_to_variable = { ROMID_iron_guard_loyalty = ROMID_medium_increase }
+		clamp_variable = {
+			var = ROMID_iron_guard_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_iron_guard_high_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_high_loyalty_increase_tt
+		add_to_variable = { ROMID_iron_guard_loyalty = ROMID_high_increase }
+		clamp_variable = {
+			var = ROMID_iron_guard_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_iron_guard_low_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_low_loyalty_decrease_tt
+		add_to_variable = { ROMID_iron_guard_loyalty = ROMID_low_decrease }
+		clamp_variable = {
+			var = ROMID_iron_guard_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_iron_guard_medium_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_medium_loyalty_decrease_tt
+		add_to_variable = { ROMID_iron_guard_loyalty = ROMID_medium_decrease }
+		clamp_variable = {
+			var = ROMID_iron_guard_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_iron_guard_high_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_high_loyalty_decrease_tt
+		add_to_variable = { ROMID_iron_guard_loyalty = ROMID_high_decrease }
+		clamp_variable = {
+			var = ROMID_iron_guard_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+#----# Lancieri #----#
+
+ROMID_lancieri_low_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_lancieri_crushed
+				has_country_flag = romid_lancieri_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_low_loyalty_increase_tt
+		add_to_variable = { ROMID_lancieri_loyalty = ROMID_low_increase }
+		clamp_variable = {
+			var = ROMID_lancieri_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_lancieri_medium_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_lancieri_crushed
+				has_country_flag = romid_lancieri_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_medium_loyalty_increase_tt
+		add_to_variable = { ROMID_lancieri_loyalty = ROMID_medium_increase }
+		clamp_variable = {
+			var = ROMID_lancieri_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_lancieri_high_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_lancieri_crushed
+				has_country_flag = romid_lancieri_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_high_loyalty_increase_tt
+		add_to_variable = { ROMID_lancieri_loyalty = ROMID_high_increase }
+		clamp_variable = {
+			var = ROMID_lancieri_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_lancieri_low_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_lancieri_crushed
+				has_country_flag = romid_lancieri_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_low_loyalty_decrease_tt
+		add_to_variable = { ROMID_lancieri_loyalty = ROMID_low_decrease }
+		clamp_variable = {
+			var = ROMID_lancieri_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_lancieri_medium_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_lancieri_crushed
+				has_country_flag = romid_lancieri_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_medium_loyalty_decrease_tt
+		add_to_variable = { ROMID_lancieri_loyalty = ROMID_medium_decrease }
+		clamp_variable = {
+			var = ROMID_lancieri_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_lancieri_high_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_high_loyalty_decrease_tt
+		add_to_variable = { ROMID_lancieri_loyalty = ROMID_high_decrease }
+		clamp_variable = {
+			var = ROMID_lancieri_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+#----# Lancieri #----#
+
+ROMID_socialists_low_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_low_loyalty_increase_tt
+		add_to_variable = { ROMID_socialists_loyalty = ROMID_low_increase }
+		clamp_variable = {
+			var = ROMID_socialists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_socialists_medium_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_medium_loyalty_increase_tt
+		add_to_variable = { ROMID_socialists_loyalty = ROMID_medium_increase }
+		clamp_variable = {
+			var = ROMID_socialists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_socialists_high_loyalty_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_high_loyalty_increase_tt
+		add_to_variable = { ROMID_socialists_loyalty = ROMID_high_increase }
+		clamp_variable = {
+			var = ROMID_socialists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_socialists_low_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_low_loyalty_decrease_tt
+		add_to_variable = { ROMID_socialists_loyalty = ROMID_low_decrease }
+		clamp_variable = {
+			var = ROMID_socialists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_socialists_medium_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_medium_loyalty_decrease_tt
+		add_to_variable = { ROMID_socialists_loyalty = ROMID_medium_decrease }
+		clamp_variable = {
+			var = ROMID_socialists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_socialists_high_loyalty_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_high_loyalty_decrease_tt
+		add_to_variable = { ROMID_socialists_loyalty = ROMID_high_decrease }
+		clamp_variable = {
+			var = ROMID_socialists_loyalty
+			min = 0
+			max = 100
+		}
+	}
+}
+
+####   
+#####
+##  ##
+##  ##
+#####
+####
+##
+## opularity
+
+#----# Royalists #----#
+
+ROMID_royalists_low_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_low_popularity_increase_tt
+		add_to_variable = { ROMID_royalists_popularity = ROMID_low_increase }
+		clamp_variable = {
+			var = ROMID_royalists_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_royalists_medium_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_medium_popularity_increase_tt
+		add_to_variable = { ROMID_royalists_popularity = ROMID_medium_increase }
+		clamp_variable = {
+			var = ROMID_royalists_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_royalists_high_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_high_popularity_increase_tt
+		add_to_variable = { ROMID_royalists_popularity = ROMID_high_increase }
+		clamp_variable = {
+			var = ROMID_royalists_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_royalists_low_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_low_popularity_decrease_tt
+		add_to_variable = { ROMID_royalists_popularity = ROMID_low_decrease }
+		clamp_variable = {
+			var = ROMID_royalists_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_royalists_medium_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_medium_popularity_decrease_tt
+		add_to_variable = { ROMID_royalists_popularity = ROMID_medium_decrease }
+		clamp_variable = {
+			var = ROMID_royalists_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_royalists_high_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_royalists_crushed
+				has_country_flag = romid_royalists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_royalists_tt
+		custom_effect_tooltip = ROMID_high_popularity_decrease_tt
+		add_to_variable = { ROMID_royalists_popularity = ROMID_high_decrease }
+		clamp_variable = {
+			var = ROMID_royalists_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+#----# Iron Guard #----#
+
+ROMID_iron_guard_low_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_low_popularity_increase_tt
+		add_to_variable = { ROMID_iron_guard_popularity = ROMID_low_increase }
+		clamp_variable = {
+			var = ROMID_iron_guard_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_iron_guard_medium_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_medium_popularity_increase_tt
+		add_to_variable = { ROMID_iron_guard_popularity = ROMID_medium_increase }
+		clamp_variable = {
+			var = ROMID_iron_guard_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_iron_guard_high_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_high_popularity_increase_tt
+		add_to_variable = { ROMID_iron_guard_popularity = ROMID_high_increase }
+		clamp_variable = {
+			var = ROMID_iron_guard_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_iron_guard_low_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_low_popularity_decrease_tt
+		add_to_variable = { ROMID_iron_guard_popularity = ROMID_low_decrease }
+		clamp_variable = {
+			var = ROMID_iron_guard_popularity
+			min = 0
+			max = 100
+		}	
+	}
+}
+
+ROMID_iron_guard_medium_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_medium_popularity_decrease_tt
+		add_to_variable = { ROMID_iron_guard_popularity = ROMID_medium_decrease }
+		clamp_variable = {
+			var = ROMID_iron_guard_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_iron_guard_high_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_iron_guard_crushed
+				has_country_flag = romid_iron_guard_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_iron_guard_tt
+		custom_effect_tooltip = ROMID_high_popularity_decrease_tt
+		add_to_variable = { ROMID_iron_guard_popularity = ROMID_high_decrease }
+		clamp_variable = {
+			var = ROMID_iron_guard_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+#----# Lancieri #----#
+
+ROMID_lancieri_low_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_lancieri_crushed
+				has_country_flag = romid_lancieri_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_low_popularity_increase_tt
+		add_to_variable = { ROMID_lancieri_popularity = ROMID_low_increase }
+		clamp_variable = {
+			var = ROMID_lancieri_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_lancieri_medium_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_lancieri_crushed
+				has_country_flag = romid_lancieri_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_medium_popularity_increase_tt
+		add_to_variable = { ROMID_lancieri_popularity = ROMID_medium_increase }
+		clamp_variable = {
+			var = ROMID_lancieri_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_lancieri_high_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_lancieri_crushed
+				has_country_flag = romid_lancieri_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_high_popularity_increase_tt
+		add_to_variable = { ROMID_lancieri_popularity = ROMID_high_increase }
+		clamp_variable = {
+			var = ROMID_lancieri_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_lancieri_low_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_lancieri_crushed
+				has_country_flag = romid_lancieri_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_low_popularity_decrease_tt
+		add_to_variable = { ROMID_lancieri_popularity = ROMID_low_decrease }
+		clamp_variable = {
+			var = ROMID_lancieri_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_lancieri_medium_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_lancieri_crushed
+				has_country_flag = romid_lancieri_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_medium_popularity_decrease_tt
+		add_to_variable = { ROMID_lancieri_popularity = ROMID_medium_decrease }
+		clamp_variable = {
+			var = ROMID_lancieri_popularity
+			min = 0
+			max = 100
+		}	
+	}
+}
+
+ROMID_lancieri_high_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_lancieri_crushed
+				has_country_flag = romid_lancieri_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_lancieri_tt
+		custom_effect_tooltip = ROMID_high_popularity_decrease_tt
+		add_to_variable = { ROMID_lancieri_popularity = ROMID_high_decrease }
+		clamp_variable = {
+			var = ROMID_lancieri_popularity
+			min = 0
+			max = 100
+		}
+	}
+}	
+
+#----# Socialists #----#
+
+ROMID_socialists_low_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_low_popularity_increase_tt
+		add_to_variable = { ROMID_socialists_popularity = ROMID_low_increase }
+		clamp_variable = {
+			var = ROMID_socialists_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_socialists_medium_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_medium_popularity_increase_tt
+		add_to_variable = { ROMID_socialists_popularity = ROMID_medium_increase }
+		clamp_variable = {
+			var = ROMID_socialists_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_socialists_high_popularity_increase_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_high_popularity_increase_tt
+		add_to_variable = { ROMID_socialists_popularity = ROMID_high_increase }
+		clamp_variable = {
+			var = ROMID_socialists_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_socialists_low_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_low_popularity_decrease_tt
+		add_to_variable = { ROMID_socialists_popularity = ROMID_low_decrease }
+		clamp_variable = {
+			var = ROMID_socialists_popularity
+			min = 0
+			max = 100
+		}
+	}
+}
+
+ROMID_socialists_medium_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_medium_popularity_decrease_tt
+		add_to_variable = { ROMID_socialists_popularity = ROMID_medium_decrease }
+		clamp_variable = {
+			var = ROMID_socialists_popularity
+			min = 0
+			max = 100
+		}	
+	}
+}
+
+ROMID_socialists_high_popularity_decrease_effect = {
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = romid_socialists_crushed
+				has_country_flag = romid_socialists_integrated
+			}
+		}
+		custom_effect_tooltip = ROMID_socialists_tt
+		custom_effect_tooltip = ROMID_high_popularity_decrease_tt
+		add_to_variable = { ROMID_socialists_popularity = ROMID_high_decrease }
+		clamp_variable = {
+			var = ROMID_socialists_popularity
+			min = 0
+			max = 100
+		}
+	}
+}	
+
+
+
+
+
+
+ROMID_supply_cap_revise = {
+	set_variable = { ROMID_supply_counter = ROMID_supply_cap }
+	subtract_from_variable = {
+    		var = ROMID_supply_counter
+    		value = ROMID_supply_used
+	}
+}
+
+ROMID_supply_cap_add = {
+	add_to_variable = { ROMID_supply_cap = 1 }
+	custom_effect_tooltip = ROMID_supply_cap_plus
+}
+
+ROMID_supply_cap_substract = {
+	add_to_variable = { ROMID_supply_cap = -1 }
+	custom_effect_tooltip = ROMID_supply_cap_minus
+}
+
+ROMID_supply_used_add = {
+	add_to_variable = { ROMID_supply_used = 1 }
+	custom_effect_tooltip = ROMID_supply_used_plus
+}
+
+ROMID_supply_used_substract = {
+	add_to_variable = { ROMID_supply_used = -1 }
+	custom_effect_tooltip = ROMID_supply_used_minus
+}
+
+ROMID_royalists_loyalty_monthly_change = {
+	add_to_variable = { ROMID_royalists_loyalty = modifier@monthly_royalists_loyalty_change }
+	clamp_variable = {
+		var = ROMID_royalists_loyalty
+		min = 0
+		max = 100
+	}
+}
+ROMID_royalists_popularity_monthly_change = {
+	add_to_variable = { ROMID_royalists_popularity = modifier@monthly_royalists_powerbase_change }
+	clamp_variable = {
+		var = ROMID_royalists_popularity
+		min = 0
+		max = 100
+	}
+}
+ROMID_iron_guard_loyalty_monthly_change = {
+	add_to_variable = { ROMID_iron_guard_loyalty = modifier@monthly_iron_guard_loyalty_change }
+	clamp_variable = {
+		var = ROMID_iron_guard_loyalty
+		min = 0
+		max = 100
+	}
+}
+ROMID_iron_guard_popularity_monthly_change = {
+	add_to_variable = { ROMID_iron_guard_popularity = modifier@monthly_iron_guard_powerbase_change }
+	clamp_variable = {
+		var = ROMID_iron_guard_popularity
+		min = 0
+		max = 100
+	}
+}
+ROMID_lancieri_loyalty_monthly_change = {
+	add_to_variable = { ROMID_lancieri_loyalty = modifier@monthly_lancieri_loyalty_change }
+	clamp_variable = {
+		var = ROMID_lancieri_loyalty
+		min = 0
+		max = 100
+	}
+}
+ROMID_lancieri_popularity_monthly_change = {
+	add_to_variable = { ROMID_lancieri_popularity = modifier@monthly_lancieri_powerbase_change }
+	clamp_variable = {
+		var = ROMID_lancieri_popularity
+		min = 0
+		max = 100
+	}
+}
+ROMID_socialists_loyalty_monthly_change = {
+	add_to_variable = { ROMID_socialists_loyalty = modifier@monthly_socialists_loyalty_change }
+	clamp_variable = {
+		var = ROMID_socialists_loyalty
+		min = 0
+		max = 100
+	}
+}
+ROMID_socialists_popularity_monthly_change = {
+	add_to_variable = { ROMID_socialists_popularity = modifier@monthly_socialists_powerbase_change }
+	clamp_variable = {
+		var = ROMID_socialists_popularity
+		min = 0
+		max = 100
+	}
+}
+
+ROMID_malaxa_add_power = {
+	custom_effect_tooltip = ROMID_malaxa_add_power_tt
+	add_to_variable = { ROMID_malaxa_power = 1 }
+	clamp_variable = {
+		var = ROMID_malaxa_power
+		min = 0
+		max = 3
+	}
+}
+
+ROMID_malaxa_remove_power = {
+	custom_effect_tooltip = ROMID_malaxa_remove_power_tt
+	add_to_variable = { ROMID_malaxa_power = -1 }
+	clamp_variable = {
+		var = ROMID_malaxa_power
+		min = 0
+		max = 3
+	}
+}
+
+ROMID_malaxa_add_influence = {
+	custom_effect_tooltip = ROMID_malaxa_add_influence_tt
+	add_to_variable = { ROMID_malaxa_influence = 25 }
+	clamp_variable = {
+		var = ROMID_malaxa_influence
+		min = 0
+		max = 100
+	}
+}
+
+ROMID_malaxa_remove_influence = {
+	custom_effect_tooltip = ROMID_malaxa_remove_influence_tt
+	add_to_variable = { ROMID_malaxa_influence = -25 }
+	clamp_variable = {
+		var = ROMID_malaxa_influence
+		min = 0
+		max = 100
+	}
+}
+
+ROMID_urbanize_state = {
+	if = {
+		limit = {
+			has_state_category = wasteland
+		}
+		set_state_category = pastoral
+	}
+	else_if = {
+		limit = {
+			has_state_category = enclave
+		}
+		set_state_category = pastoral
+	}
+	else_if = {
+		limit = {
+			has_state_category = tiny_island
+		}
+		set_state_category = small_island
+	}
+	else_if = {
+		limit = {
+			has_state_category = pastoral
+		}
+		set_state_category = rural
+	}
+	else_if = {
+		limit = {
+			has_state_category = rural
+		}
+		set_state_category = town
+	}
+	else_if = {
+		limit = {
+			has_state_category = town
+		}
+		set_state_category = large_town
+	}
+	else_if = {
+		limit = {
+			has_state_category = large_town
+		}
+		set_state_category = city
+	}
+	else_if = {
+		limit = {
+			has_state_category = city
+		}
+		set_state_category = large_city
+	}
+	else_if = {
+		limit = {
+			has_state_category = large_city
+		}
+		set_state_category = metropolis
+	}
+	else_if = {
+		limit = {
+			has_state_category = metropolis
+		}
+		set_state_category = megalopolis
+	}
+}

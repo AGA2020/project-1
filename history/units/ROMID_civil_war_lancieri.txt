@@ -1,0 +1,49 @@
+﻿division_template = {
+	name = "Brigada de Lăncieri"
+	is_locked = yes
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "Brigada I Lăncieri Satu Mare"
+		location = 746
+		division_template = "Brigada de Lăncieri"
+	}
+	division = {
+		name = "Brigada III Lăncieri Târgu Mures"
+		location = 9672
+		division_template = "Brigada de Lăncieri"
+	}
+	division = {
+		name = "Brigada V Lăncieri Baia Mare"
+		location = 11676
+		division_template = "Brigada de Lăncieri"
+	}
+	division = {
+		name = "Brigada I Lăncieri Iasi"
+		location = 9716
+		division_template = "Brigada de Lăncieri"
+	}
+	division = {
+		name = "Brigada I Lăncieri Cernăuti"
+		location = 577
+		division_template = "Brigada de Lăncieri"
+	}
+	division = {
+		name = "Brigada I Lăncieri Cetatea Albă"
+		location = 6727
+		division_template = "Brigada de Lăncieri"
+	}
+	division = {
+		name = "Brigada I Lăncieri Chisinau"
+		location = 3707
+		division_template = "Brigada de Lăncieri"
+	}
+}

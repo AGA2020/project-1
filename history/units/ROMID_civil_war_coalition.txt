@@ -1,0 +1,62 @@
+﻿division_template = {
+	name = "Brigada de Legionari"
+	is_locked = yes
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Brigada de Lăncieri"
+	is_locked = yes
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+
+units = {
+	division = {
+		name = "Brigada I Legionari Brasov"
+		location = 690
+		division_template = "Brigada de Legionari"
+	}
+	division = {
+		name = "Brigada IV Legionari Sibiu"
+		location = 6679
+		division_template = "Brigada de Legionari"
+	}
+	division = {
+		name = "Brigada II Legionari Cluj"
+		location = 6711
+		division_template = "Brigada de Legionari"
+	}
+	division = {
+		name = "Brigada V Legionari Timisoara"
+		location = 9606
+		division_template = "Brigada de Legionari"
+	}
+	division = {
+		name = "Brigada I Lăncieri Satu Mare"
+		location = 746
+		division_template = "Brigada de Lăncieri"
+	}
+	division = {
+		name = "Brigada III Lăncieri Târgu Mures"
+		location = 9672
+		division_template = "Brigada de Lăncieri"
+	}
+	division = {
+		name = "Brigada V Lăncieri Baia Mare"
+		location = 11676
+		division_template = "Brigada de Lăncieri"
+	}
+}

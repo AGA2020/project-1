@@ -1,0 +1,117 @@
+sub_units = {
+	greenshirt_death_squad = {
+		abbreviation = "GDS"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = no
+		affects_speed = no
+		can_be_parachuted = yes
+		special_forces = yes
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+	
+		combat_width = 0
+	
+		#Size Definitions
+		max_strength = 40 #Inf is 25
+		max_organisation = 20 #Inf is 60
+		default_morale = 0.4 #Inf is 30
+		manpower = 1000
+		training_time = 120 #Same as other support battalions
+
+		#Misc Abilities
+		suppression = 3.5
+		weight = 0.5 #Inf is 0.5
+		supply_consumption = 0.1
+		
+		# Important Ability
+		soft_attack = 0.15
+		breakthrough = 0.3 
+		defense = 0.2
+		experience_loss_factor = 0.1
+				
+		need = {
+			infantry_equipment = 200 #Same as Inf
+			support_equipment = 20 #Same as bicycles
+		}
+
+		
+		urban = {
+			attack = 0.15
+            		defence = 0.05
+        	}
+
+		fort = {
+			attack = 0.1
+			defence = 0.05
+		}
+	}
+
+	greenshirt_legionary = {
+		abbreviation = "GSL"
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 600
+		ai_priority = 200
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 2
+		
+		#Size Definitions
+		max_strength = 25
+		max_organisation = 60
+		default_morale = 0.3
+		manpower = 1000
+
+		#Misc Abilities
+		training_time = 90
+		suppression = 2.5
+		weight = 0.5
+		
+		supply_consumption = 0.04
+		soft_attack = -0.1
+		hard_attack = -0.1
+		breakthrough = 0.1
+		defense = 0.1
+		experience_loss_factor = 0.1
+	
+		need = {
+			infantry_equipment = 100
+		}
+
+		urban = {
+            		defence = 0.15
+        	}
+
+		fort = {
+			defence = 0.1
+		}
+	}
+}

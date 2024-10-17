@@ -1,0 +1,147 @@
+technologies = {
+	ROMID_mountain_gun = {
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+
+		experience_gain_artillery_combat_factor = 0.1
+        	special_forces_cap = 0.05
+		artillery_brigade = {
+			mountain = {
+				attack = 0.1
+				movement = 0.15
+			}
+		}
+
+		anti_tank_brigade = {
+			mountain = {
+				attack = 0.1
+				movement = 0.15
+			}
+		}
+	}
+	ROMID_mountain_brigades = {
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+
+		mountaineers = {
+			mountain = {
+				attack = 0.15
+				defence = 0.15
+				movement = 0.2
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+	}
+	ROMID_submachine_gun_upgrade = {
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		category_all_infantry = {
+			breakthrough = 0.05
+			soft_attack = 0.10
+    		}
+	}
+	ROMID_zb_vz_30_upgrade = {
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		category_all_infantry = {
+			defense = 0.10
+			soft_attack = 0.05
+    		}
+	}
+	ROMID_radio_upgrade = {
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		army_org_factor = 0.05
+		army_org_regain = 0.05
+	}
+	ROMID_grenades_upgrade = {
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		category_all_infantry = {
+			breakthrough = 0.10
+			defense = 0.05
+    		}
+	}
+	ROMID_handheld_at_upgrade = {
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		category_all_infantry = {
+			hard_attack = 0.1
+			ap_attack = 0.15
+		}
+	}
+
+	greenshirt_death_squad_tech = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			greenshirt_death_squad
+		}
+	}
+
+	greenshirt_legionary_tech = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 1936
+
+		enable_subunits = {
+			greenshirt_legionary
+		}
+	}
+}

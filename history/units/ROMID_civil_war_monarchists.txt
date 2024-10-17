@@ -1,0 +1,40 @@
+﻿division_template = {
+	name = "Straja Tării"
+	is_locked = yes
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+
+units = {
+	division = {
+		name = "Brigada I Strajieri"
+		location = 9617
+		division_template = "Straja Tării"
+	}
+	division = {
+		name = "Brigada IV Strajieri"
+		location = 6706
+		division_template = "Straja Tării"
+	}
+	division = {
+		name = "Brigada VI Strajieri"
+		location = 9716
+		division_template = "Straja Tării"
+	}
+	division = {
+		name = "Brigada III Strajieri"
+		location = 657
+		division_template = "Straja Tării"
+	}
+	division = {
+		name = "Brigada II Strajieri"
+		location = 9617
+		division_template = "Straja Tării"
+	}
+}

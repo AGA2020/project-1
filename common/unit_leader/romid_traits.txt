@@ -1,0 +1,19 @@
+leader_traits = {
+	legionary_loyalties = { 
+		type = all
+		trait_type = personality_trait
+
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	pnc_loyalties = { 
+		type = all
+		trait_type = personality_trait
+		
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+}
