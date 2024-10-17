@@ -254,6 +254,13 @@ give_guarantee = GRE
 give_guarantee = TUR
 give_guarantee = YUG
 
+create_equipment_variant = {
+	name = "ZB vz.24 (ROM)"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:ROM_cugir_organization
+}
+
 46 = {
 	add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
 	set_state_flag = iron_guard_supporters

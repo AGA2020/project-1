@@ -78,6 +78,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
+		allow_branch = { always = no }
 		available = {
 			if = {
 				limit = { NOT = { is_ai = yes } }
@@ -1783,6 +1784,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
+		allow_branch = { always = no }
 		cost = 5
 		available = {
 			78 = { is_fully_controlled_by = ROM }
@@ -2662,6 +2664,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
+		allow_branch = { always = no }
 		completion_reward = {
 			set_rule = {
     				can_create_factions = yes
@@ -2853,6 +2856,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		available = {
+			always = no
 			custom_trigger_tooltip = { 
 				tooltip = ROMID_michael_coup_ready_tt
 				has_country_flag = ROMID_michael_coup_ready
@@ -4398,6 +4402,7 @@ focus_tree = {
 		prerequisite = {
 		focus = ROM_merge_the_iron_guard_with_the_army
 		}
+		available = { always = no }
 		relative_position_id = ROM_merge_the_iron_guard_with_the_army
 		cost = 5
 		completion_reward = {
@@ -5408,6 +5413,7 @@ focus_tree = {
 
 		icon = GFX_One_faith
 		cost = 5
+		available = { always = no }
 		prerequisite = {
 			focus = Rom_tot_state
 		}
@@ -5667,7 +5673,7 @@ category = land_doctrine
 	focus = {
 		id = ROM_constanta_docks
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 77
+		x = 58
 		y = 0
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -5982,7 +5988,7 @@ category = land_doctrine
 	focus = {
 		id = ROM_cooperation_with_malaxa
 		icon = GFX_ROM_cooperation_with_malaxa-312433
-		x = 70
+		x = 50
 		y = 0
 		cost = 5
 		complete_tooltip = {
@@ -6577,6 +6583,7 @@ category = land_doctrine
 				remove_idea = ROMID_funding_malaxa_1
 			}
 			random_owned_controlled_state = {
+				prioritize = { 46 77 81 82 76 84 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV } 
 					free_building_slots = {
@@ -6639,6 +6646,7 @@ category = land_doctrine
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
 					free_building_slots = {	
@@ -7356,6 +7364,7 @@ category = land_doctrine
 				remove_idea = ROMID_funding_malaxa_3
 			}
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV } 
 					free_building_slots = {
@@ -7373,6 +7382,7 @@ category = land_doctrine
 				set_state_flag = ROM_ind31_IC	
 			}
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV } 
 					free_building_slots = {
@@ -7492,7 +7502,7 @@ category = land_doctrine
 	focus = {
 		id = ROM_the_ruined_army
 		icon = GFX_ROM_the_ruined_army-313132
-		x = 45
+		x = 27
 		y = 0
 		completion_reward = {
 			army_experience = 25
