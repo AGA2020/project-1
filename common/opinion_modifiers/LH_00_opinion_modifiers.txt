@@ -1,0 +1,253 @@
+opinion_modifiers = {
+	
+	HUN_ITA_diplomacy = {
+		value = 40
+	}
+	
+	HUN_GER_diplomacy = {
+		value = 40
+	}
+	
+	HUN_SOV_rescued_kun = {
+		value = -40
+	}
+	
+	HUN_invited_to_congress = {
+		value = 40
+	}
+	
+	HUN_ENG_friendship = {
+		value = 50
+	}
+	
+	HUN_not_paying_debts = {
+		value = -50
+		months = 24
+	}
+	
+	HUN_german_king = {
+		value = 50
+	}
+	
+	HUN_habsburg_king = {
+		value = -50
+	}
+	
+	HUN_SOV_tried_rescued_kun = {
+		value = -20
+	}
+	
+	HUN_AUS_refused_help = {
+		value = -50
+		months = 24
+	}
+	
+	HUN_SPA_helped_in_scw = {
+		value = 30
+	}
+	
+	HUN_AUS_helped_cw = {
+		value = 50
+		months = 36
+	}
+	
+	HUN_GER_no_pact = {
+		value = -50
+	}
+	
+	HUN_GER_volunteers = {
+		value = 50
+	}
+	
+	HUN_secret_trade = {
+		value = 30
+	}
+	
+	HUN_received_attache = {
+		value = 20
+	}
+	
+	HUN_GER_on_our_side = {
+		value = 40
+	}
+	
+	HUN_GER_disappointed = {
+		value = -40
+	}
+	
+	HUN_GER_broke_trade_agreement = {
+		value = -60
+		months = 36
+	}
+	
+	HUN_hungarian_diplomats = {
+		value = 45
+	}
+	
+	HUN_volksbund_relation = {
+		value = 30
+	}
+	
+	HUN_SOV_disciple = {
+		value = 50
+	}
+	
+	HUN_polish_refugees = {
+		value = -30
+		months = 20
+	}
+	
+	HUN_POL_helped_people = {
+		value = 50
+		months = 60
+	}
+	
+	HUN_ROM_antonescu_deal = {
+		value = 50
+	}
+	
+	HUN_ENG_refused_advances = {
+		value = -50
+		months = 20
+	}
+	
+	HUN_ENG_london_congress = {
+		value = 50
+		months = 20
+	}
+	
+	HUN_congress_reject = {
+		value = -50
+		months = 20
+	}
+	
+	HUN_congress = {
+		value = 50
+		months = 30
+	}
+	
+	HUN_POL_relations = {
+		value = 30
+	}
+	
+	HUN_wasted_time = { 
+		value = -25
+		months = 12
+	}
+	
+	HUN_GER_distanced_themselves = {
+		value = -10
+		months = 6
+	}
+	
+	HUN_GER_accused = {
+		value = -20
+	}
+	
+	HUN_economic_dependancy = { trade = yes value = 50 }
+	
+	HUN_economic_isolation = { trade = yes value = -80 }
+	
+	HUN_attempted_robbery = {
+		value = -40
+	}
+	
+	HUN_friendship_treaty = {
+		value = 50
+	}
+	
+	HUN_deported_germans = {
+		value = 40
+		months = 24
+	}
+	
+	HUN_deported_germans_ger = {
+		value = -50
+	}
+	
+	HUN_stolen_population = {
+		value = -35
+	}
+	
+	HUN_SOV_banned_communism = {
+		value = -30
+	}
+	
+	HUN_comunist_friends = {
+		value = 30
+	}
+	
+	HUN_GER_friendship = {
+		value = 10
+		months = 12
+	}
+	
+	HUN_GER_denied_us = {
+		value = -50
+	}
+	
+	HUN_burgas_project = {
+		value = 75
+	}
+	
+	HUN_greater_bul = {
+		value = 50
+	}
+	
+	HUN_arpad_line = {
+		value = -25
+	}
+	
+	HUN_renounced_dethronement_law = {
+		value = -30
+		months = 12
+		decay = 1
+	}
+	
+	HUN_political_cooperation = {
+		value = 50
+		months = 40
+		decay = 1
+	}
+	
+	
+	HUN_honored_albanian_claims = {
+		value = 50
+	}
+
+	
+	HUN_TUR_diplomacy_focus = {
+		value = 25
+	}
+	
+	HUN_marriage = {
+		value = 50
+	}
+	
+	HUN_marriage_refused = {
+		value = -50
+	}
+	
+	HUN_ROM_refused_releasing_transil = {
+		value = -60
+	}
+	
+	HUN_radicalised_society = {
+		value = -40
+	}
+	
+	HUN_destroyed_religious_symbol = {
+		value = 40
+	}
+	
+	HUN_refused_help = {
+		value = -40
+		months = 12
+	}
+	
+	HUN_refused_guarantee = {
+		value = -50
+		months = 30
+	}
+	
+}

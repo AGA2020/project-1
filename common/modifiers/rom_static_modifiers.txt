@@ -1,0 +1,60 @@
+ROMID_ger_rom_rom = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	license_purchase_cost = 0 #base cost reduction
+	ai_license_acceptance = 20 #more to AI acceptance value.
+	license_production_speed = 0.2 #speed  increase for being a license
+	license_tech_difference_speed = 0.2 #less cost increase for each tech level between the license and own tech level 
+}
+
+ROMID_ger_rom_rom_2 = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	license_purchase_cost = -0.15 #base cost reduction
+	ai_license_acceptance = 35 #more to AI acceptance value.
+	license_production_speed = 0.3 #speed  increase for being a license
+	license_tech_difference_speed = 0.3 #less cost increase for each tech level between the license and own tech level 
+}
+
+ROMID_ger_rom_rom_3 = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	license_purchase_cost = -0.30 #base cost reduction
+	ai_license_acceptance = 50 #more to AI acceptance value.
+	license_production_speed = 0.4 #speed  increase for being a license
+	license_tech_difference_speed = 0.4 #less cost increase for each tech level between the license and own tech level 
+}
+
+ROMID_ger_rom_ger = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	trade_opinion_factor = 0.5
+	extra_trade_to_target_factor = 0.2
+}
+
+ROMID_ger_rom_ger_2 = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+	trade_opinion_factor = 1
+	extra_trade_to_target_factor = 0.5
+}
+
+ROMID_ger_rom_ger_ban = {
+	trade_opinion_factor = -1
+	extra_trade_to_target_factor = -1
+}

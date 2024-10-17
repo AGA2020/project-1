@@ -1,0 +1,1875 @@
+
+on_actions = {
+	on_startup = {
+        	effect = {
+			ROM = { country_event = ROMEV_events.46 }
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			#lose territory
+			if = {
+				limit = {
+					ROOT = { 
+						NOT = { 
+							OR = { 
+								original_tag = ROM
+								tag = ROM
+							}
+						}
+					}
+					FROM = {
+						OR = { 
+							original_tag = ROM
+							tag = ROM
+						}
+						has_war = no
+					}
+				}
+				if = {
+					limit = { 
+						FROM.FROM = {
+							OR = {
+								state = 76
+								state = 74
+								state = 78
+							}
+						}
+					}
+					FROM = {
+						ROMID_army_high_loyalty_decrease_effect = yes
+					}
+				}
+				if = {
+					limit = { 
+						FROM.FROM = {
+							OR = {
+								state = 82
+								state = 83
+								state = 80
+								state = 883
+							}
+						}
+					}
+					FROM = {
+						ROMID_army_medium_loyalty_decrease_effect = yes
+					}
+				}
+				if = {
+					limit = { 
+						FROM.FROM = {
+							OR = {
+								state = 77
+								state = 766
+							}
+						}
+					}
+					FROM = {
+						ROMID_army_low_loyalty_decrease_effect = yes
+					}
+				}
+			}
+			#first war
+			if = {
+				limit = {
+					OR = {
+						original_tag = ROM
+						tag = ROM
+					}
+					has_global_flag = romid_first_civil_war
+				}
+				#to buff
+				if = {
+					limit = {
+						ROOT = { has_government = fascism }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = iron_guard_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+							remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						}
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = lancieri_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+							remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						}
+					}
+				}
+				#to debuff
+				if = {
+					limit = {
+						ROOT = { has_government = neutrality }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = iron_guard_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+							remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						}
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = lancieri_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+							remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						}
+					}
+				}
+			}
+			#second war iron guard
+			if = {
+				limit = {
+					OR = {
+						original_tag = ROM
+						tag = ROM
+					}
+					has_global_flag = romid_second_civil_war_iron_guard
+				}
+				#to guard
+				if = {
+					limit = {
+						ROOT = { has_country_flag = original_rom }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = iron_guard_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+							remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }	
+						}
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = lancieri_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+							remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						}
+					}
+				}
+				#to lancieri
+				if = {
+					limit = {
+						ROOT = { NOT = { has_country_flag = original_rom } }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = iron_guard_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+							remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						}
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = lancieri_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+							remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						}
+					}
+				}
+			}
+			#second war lancieri
+			if = {
+				limit = {
+					OR = {
+						original_tag = ROM
+						tag = ROM
+					}
+					has_global_flag = romid_second_civil_war_lancieri
+				}
+				#to guard
+				if = {
+					limit = {
+						ROOT = { NOT = { has_country_flag = original_rom } }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = iron_guard_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+							remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						}
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = lancieri_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+							remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						}
+					}
+				}
+				#to lancieri
+				if = {
+					limit = {
+						ROOT = { has_country_flag = original_rom }
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = iron_guard_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+							remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						}
+					}
+					if = {
+						limit = {
+							FROM.FROM = { has_state_flag = lancieri_supporters }
+						}
+						FROM.FROM = {
+							add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+							remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						}
+					}
+				}
+			}
+		}
+	}
+	on_monthly_ROM = { 
+		effect = {
+			if = {
+				limit =  { NOT = { is_ai = yes } }
+				ROMID_royalists_loyalty_monthly_change=yes
+				ROMID_royalists_popularity_monthly_change=yes
+				ROMID_iron_guard_loyalty_monthly_change=yes
+				ROMID_iron_guard_popularity_monthly_change=yes
+				ROMID_lancieri_loyalty_monthly_change=yes
+				ROMID_lancieri_popularity_monthly_change=yes
+				ROMID_socialists_loyalty_monthly_change=yes
+				ROMID_socialists_popularity_monthly_change=yes
+			}
+		} 
+	}
+	on_daily_ROM = {
+		effect = {
+			if = {
+				limit = {
+					date > 1937.12.20
+					NOT = { has_completed_focus = ROM_the_1937_election }
+					NOT = { ROM = { has_country_flag = ROMID_king_was_assassinated } }
+				}
+				complete_national_focus = ROM_the_1937_election
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROM = { has_country_flag = ROMID_king_was_assassinated }
+					NOT = { has_completed_focus = ROM_article83 }
+				}
+				complete_national_focus = ROM_article83
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					date > 1939.10.25
+					has_completed_focus = ROM_article83
+					NOT = { has_completed_focus = ROM_time_for_article_82 }
+				}
+				complete_national_focus = ROM_time_for_article_82
+			}
+		}
+		effect = {
+			ROMID_supply_cap_revise = yes
+			ROMID_ig_leftover_effect = yes
+		}
+		effect = {
+			set_variable = { ROMID_var_supply_grace = 3 }
+			set_variable = { ROMID_var_out_supply = -0.05 }
+			set_variable = { ROMID_var_supply_cons = -0.1 }
+			set_variable = { ROMID_supply_counter_calc = ROMID_supply_counter }
+			clamp_variable = {
+				var = ROMID_supply_counter_calc
+				max = 0
+			}
+    			multiply_variable = { ROMID_var_supply_grace = ROMID_supply_counter_calc }
+    			multiply_variable = { ROMID_var_out_supply = ROMID_supply_counter_calc }
+    			multiply_variable = { ROMID_var_supply_cons = ROMID_supply_counter_calc }
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = ROM
+					check_variable = {
+						var = ROMID_army_loyalty
+						value = 15
+ 						compare = less_than_or_equals
+					}
+					NOT = { has_idea = ROMID_army_disloyal }
+					NOT = { is_ai = yes }
+				}
+				add_ideas = ROMID_army_disloyal
+			}
+			if = {
+				limit = {
+					tag = ROM
+					check_variable = {
+						var = ROMID_army_loyalty
+						value = 16
+ 						compare = greater_than_or_equals
+					}
+					has_idea = ROMID_army_disloyal
+					NOT = { is_ai = yes }
+				}
+				remove_ideas = ROMID_army_disloyal
+			}
+
+			# IRON GUARD
+			if = {
+				limit = {
+					tag = ROM
+					NOT = {
+						OR = { 
+							has_country_flag = romid_iron_guard_integrated
+							has_country_flag = romid_iron_guard_crushed
+						}
+					}
+					NOT = { is_ai = yes }
+				}
+				#weak
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_iron_guard_popularity
+							value = 30
+ 							compare = less_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_iron_guard_weak_low_loyalty }
+						}
+						remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+						add_ideas = ROMID_the_iron_guard_weak_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_iron_guard_weak_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+						add_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_iron_guard_weak_high_loyalty }
+						}
+						remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+						add_ideas = ROMID_the_iron_guard_weak_high_loyalty
+					}
+				}
+				#medium
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_iron_guard_popularity
+							value = 31
+ 							compare = greater_than_or_equals
+						}
+						check_variable = {
+							var = ROMID_iron_guard_popularity
+							value = 65
+ 							compare = less_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_iron_guard_normal_low_loyalty }
+						}
+						remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+						add_ideas = ROMID_the_iron_guard_normal_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_iron_guard_normal_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+						add_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_iron_guard_normal_high_loyalty }
+						}
+						remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+						add_ideas = ROMID_the_iron_guard_normal_high_loyalty
+					}
+				}
+				#powerful
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_iron_guard_popularity
+							value = 66
+ 							compare = greater_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_iron_guard_powerful_low_loyalty }
+						}
+						remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+						add_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_iron_guard_powerful_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+						add_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_iron_guard_powerful_high_loyalty }
+						}
+						remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+						remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+						add_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+					}
+				}
+			}
+
+			
+			# ROYALISTS
+			if = {
+				limit = {
+					tag = ROM
+					NOT = {
+						OR = { 
+							has_country_flag = romid_royalists_integrated
+							has_country_flag = romid_royalists_crushed
+						}
+					}
+					NOT = { is_ai = yes }
+				}
+				#weak
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_royalists_popularity
+							value = 30
+ 							compare = less_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_royalists_weak_low_loyalty }
+						}
+						remove_ideas = ROMID_the_royalists_weak_low_loyalty
+						remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+						remove_ideas = ROMID_the_royalists_weak_high_loyalty
+						remove_ideas = ROMID_the_royalists_normal_low_loyalty
+						remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+						remove_ideas = ROMID_the_royalists_normal_high_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+						add_ideas = ROMID_the_royalists_weak_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_royalists_weak_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_royalists_weak_low_loyalty
+						remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+						remove_ideas = ROMID_the_royalists_weak_high_loyalty
+						remove_ideas = ROMID_the_royalists_normal_low_loyalty
+						remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+						remove_ideas = ROMID_the_royalists_normal_high_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+						add_ideas = ROMID_the_royalists_weak_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_royalists_weak_high_loyalty }
+						}
+						remove_ideas = ROMID_the_royalists_weak_low_loyalty
+						remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+						remove_ideas = ROMID_the_royalists_weak_high_loyalty
+						remove_ideas = ROMID_the_royalists_normal_low_loyalty
+						remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+						remove_ideas = ROMID_the_royalists_normal_high_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+						add_ideas = ROMID_the_royalists_weak_high_loyalty
+					}
+				}
+				#medium
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_royalists_popularity
+							value = 31
+ 							compare = greater_than_or_equals
+						}
+						check_variable = {
+							var = ROMID_royalists_popularity
+							value = 65
+ 							compare = less_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_royalists_normal_low_loyalty }
+						}
+						remove_ideas = ROMID_the_royalists_weak_low_loyalty
+						remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+						remove_ideas = ROMID_the_royalists_weak_high_loyalty
+						remove_ideas = ROMID_the_royalists_normal_low_loyalty
+						remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+						remove_ideas = ROMID_the_royalists_normal_high_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+						add_ideas = ROMID_the_royalists_normal_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_royalists_normal_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_royalists_weak_low_loyalty
+						remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+						remove_ideas = ROMID_the_royalists_weak_high_loyalty
+						remove_ideas = ROMID_the_royalists_normal_low_loyalty
+						remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+						remove_ideas = ROMID_the_royalists_normal_high_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+						add_ideas = ROMID_the_royalists_normal_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_royalists_normal_high_loyalty }
+						}
+						remove_ideas = ROMID_the_royalists_weak_low_loyalty
+						remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+						remove_ideas = ROMID_the_royalists_weak_high_loyalty
+						remove_ideas = ROMID_the_royalists_normal_low_loyalty
+						remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+						remove_ideas = ROMID_the_royalists_normal_high_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+						add_ideas = ROMID_the_royalists_normal_high_loyalty
+					}
+				}
+				#powerful
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_royalists_popularity
+							value = 66
+ 							compare = greater_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_royalists_powerful_low_loyalty }
+						}
+						remove_ideas = ROMID_the_royalists_weak_low_loyalty
+						remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+						remove_ideas = ROMID_the_royalists_weak_high_loyalty
+						remove_ideas = ROMID_the_royalists_normal_low_loyalty
+						remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+						remove_ideas = ROMID_the_royalists_normal_high_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+						add_ideas = ROMID_the_royalists_powerful_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_royalists_powerful_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_royalists_weak_low_loyalty
+						remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+						remove_ideas = ROMID_the_royalists_weak_high_loyalty
+						remove_ideas = ROMID_the_royalists_normal_low_loyalty
+						remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+						remove_ideas = ROMID_the_royalists_normal_high_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+						add_ideas = ROMID_the_royalists_powerful_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_royalists_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_royalists_powerful_high_loyalty }
+						}
+						remove_ideas = ROMID_the_royalists_weak_low_loyalty
+						remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+						remove_ideas = ROMID_the_royalists_weak_high_loyalty
+						remove_ideas = ROMID_the_royalists_normal_low_loyalty
+						remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+						remove_ideas = ROMID_the_royalists_normal_high_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+						add_ideas = ROMID_the_royalists_powerful_high_loyalty
+					}
+				}
+			}
+
+			
+			# LANCIERI
+			if = {
+				limit = {
+					tag = ROM
+					NOT = {
+						OR = { 
+							has_country_flag = romid_lancieri_integrated
+							has_country_flag = romid_lancieri_crushed
+						}
+					}
+					NOT = { is_ai = yes }
+				}
+				#weak
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_lancieri_popularity
+							value = 30
+ 							compare = less_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_lancieri_weak_low_loyalty }
+						}
+						remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+						add_ideas = ROMID_the_lancieri_weak_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_lancieri_weak_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+						add_ideas = ROMID_the_lancieri_weak_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_lancieri_weak_high_loyalty }
+						}
+						remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+						add_ideas = ROMID_the_lancieri_weak_high_loyalty
+					}
+				}
+				#medium
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_lancieri_popularity
+							value = 31
+ 							compare = greater_than_or_equals
+						}
+						check_variable = {
+							var = ROMID_lancieri_popularity
+							value = 65
+ 							compare = less_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_lancieri_normal_low_loyalty }
+						}
+						remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+						add_ideas = ROMID_the_lancieri_normal_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_lancieri_normal_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+						add_ideas = ROMID_the_lancieri_normal_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_lancieri_normal_high_loyalty }
+						}
+						remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+						add_ideas = ROMID_the_lancieri_normal_high_loyalty
+					}
+				}
+				#powerful
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_lancieri_popularity
+							value = 66
+ 							compare = greater_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_lancieri_powerful_low_loyalty }
+						}
+						remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+						add_ideas = ROMID_the_lancieri_powerful_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_lancieri_powerful_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+						add_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_lancieri_powerful_high_loyalty }
+						}
+						remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+						remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+						add_ideas = ROMID_the_lancieri_powerful_high_loyalty
+					}
+				}
+			}
+
+			# SOCIALISTS
+			if = {
+				limit = {
+					tag = ROM
+					NOT = {
+						OR = { 
+							has_country_flag = romid_socialists_integrated
+							has_country_flag = romid_socialists_crushed
+						}
+					}
+					NOT = { is_ai = yes }
+				}
+				#weak
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_socialists_popularity
+							value = 30
+ 							compare = less_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_socialists_weak_low_loyalty }
+						}
+						remove_ideas = ROMID_the_socialists_weak_low_loyalty
+						remove_ideas = ROMID_the_socialists_weak_medium_loyalty
+						remove_ideas = ROMID_the_socialists_weak_high_loyalty
+						remove_ideas = ROMID_the_socialists_normal_low_loyalty
+						remove_ideas = ROMID_the_socialists_normal_medium_loyalty
+						remove_ideas = ROMID_the_socialists_normal_high_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_low_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_high_loyalty
+						add_ideas = ROMID_the_socialists_weak_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_socialists_weak_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_socialists_weak_low_loyalty
+						remove_ideas = ROMID_the_socialists_weak_medium_loyalty
+						remove_ideas = ROMID_the_socialists_weak_high_loyalty
+						remove_ideas = ROMID_the_socialists_normal_low_loyalty
+						remove_ideas = ROMID_the_socialists_normal_medium_loyalty
+						remove_ideas = ROMID_the_socialists_normal_high_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_low_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_high_loyalty
+						add_ideas = ROMID_the_socialists_weak_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_socialists_weak_high_loyalty }
+						}
+						remove_ideas = ROMID_the_socialists_weak_low_loyalty
+						remove_ideas = ROMID_the_socialists_weak_medium_loyalty
+						remove_ideas = ROMID_the_socialists_weak_high_loyalty
+						remove_ideas = ROMID_the_socialists_normal_low_loyalty
+						remove_ideas = ROMID_the_socialists_normal_medium_loyalty
+						remove_ideas = ROMID_the_socialists_normal_high_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_low_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_high_loyalty
+						add_ideas = ROMID_the_socialists_weak_high_loyalty
+					}
+				}
+				#medium
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_socialists_popularity
+							value = 31
+ 							compare = greater_than_or_equals
+						}
+						check_variable = {
+							var = ROMID_socialists_popularity
+							value = 65
+ 							compare = less_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_socialists_normal_low_loyalty }
+						}
+						remove_ideas = ROMID_the_socialists_weak_low_loyalty
+						remove_ideas = ROMID_the_socialists_weak_medium_loyalty
+						remove_ideas = ROMID_the_socialists_weak_high_loyalty
+						remove_ideas = ROMID_the_socialists_normal_low_loyalty
+						remove_ideas = ROMID_the_socialists_normal_medium_loyalty
+						remove_ideas = ROMID_the_socialists_normal_high_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_low_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_high_loyalty
+						add_ideas = ROMID_the_socialists_normal_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_socialists_normal_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_socialists_weak_low_loyalty
+						remove_ideas = ROMID_the_socialists_weak_medium_loyalty
+						remove_ideas = ROMID_the_socialists_weak_high_loyalty
+						remove_ideas = ROMID_the_socialists_normal_low_loyalty
+						remove_ideas = ROMID_the_socialists_normal_medium_loyalty
+						remove_ideas = ROMID_the_socialists_normal_high_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_low_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_high_loyalty
+						add_ideas = ROMID_the_socialists_normal_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_socialists_normal_high_loyalty }
+						}
+						remove_ideas = ROMID_the_socialists_weak_low_loyalty
+						remove_ideas = ROMID_the_socialists_weak_medium_loyalty
+						remove_ideas = ROMID_the_socialists_weak_high_loyalty
+						remove_ideas = ROMID_the_socialists_normal_low_loyalty
+						remove_ideas = ROMID_the_socialists_normal_medium_loyalty
+						remove_ideas = ROMID_the_socialists_normal_high_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_low_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_high_loyalty
+						add_ideas = ROMID_the_socialists_normal_high_loyalty
+					}
+				}
+				#powerful
+				if = {
+					limit = {
+						check_variable = {
+							var = ROMID_socialists_popularity
+							value = 66
+ 							compare = greater_than_or_equals
+						}
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 30
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_socialists_powerful_low_loyalty }
+						}
+						remove_ideas = ROMID_the_socialists_weak_low_loyalty
+						remove_ideas = ROMID_the_socialists_weak_medium_loyalty
+						remove_ideas = ROMID_the_socialists_weak_high_loyalty
+						remove_ideas = ROMID_the_socialists_normal_low_loyalty
+						remove_ideas = ROMID_the_socialists_normal_medium_loyalty
+						remove_ideas = ROMID_the_socialists_normal_high_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_low_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_high_loyalty
+						add_ideas = ROMID_the_socialists_powerful_low_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 31
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 65
+ 								compare = less_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_socialists_powerful_medium_loyalty }
+						}
+						remove_ideas = ROMID_the_socialists_weak_low_loyalty
+						remove_ideas = ROMID_the_socialists_weak_medium_loyalty
+						remove_ideas = ROMID_the_socialists_weak_high_loyalty
+						remove_ideas = ROMID_the_socialists_normal_low_loyalty
+						remove_ideas = ROMID_the_socialists_normal_medium_loyalty
+						remove_ideas = ROMID_the_socialists_normal_high_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_low_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_high_loyalty
+						add_ideas = ROMID_the_socialists_powerful_medium_loyalty
+					}
+					if = {
+						limit = {
+							check_variable = {
+								var = ROMID_socialists_loyalty
+								value = 66
+ 								compare = greater_than_or_equals
+							}
+							NOT = { has_idea = ROMID_the_socialists_powerful_high_loyalty }
+						}
+						remove_ideas = ROMID_the_socialists_weak_low_loyalty
+						remove_ideas = ROMID_the_socialists_weak_medium_loyalty
+						remove_ideas = ROMID_the_socialists_weak_high_loyalty
+						remove_ideas = ROMID_the_socialists_normal_low_loyalty
+						remove_ideas = ROMID_the_socialists_normal_medium_loyalty
+						remove_ideas = ROMID_the_socialists_normal_high_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_low_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_medium_loyalty
+						remove_ideas = ROMID_the_socialists_powerful_high_loyalty
+						add_ideas = ROMID_the_socialists_powerful_high_loyalty
+					}
+				}
+			}
+
+			if = {
+				limit = { 
+					original_tag = ROM 
+					has_global_flag = romid_first_civil_war_disabled
+					ROM = { surrender_progress > 0.75 }
+				}
+				#Monarchist victory
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					clr_global_flag = romid_first_civil_war
+					random_other_country = {
+                    	limit = {
+                    		original_tag = ROM
+							has_government = neutrality
+						}
+						country_event = ROMEV_events.30
+					}
+					ROM = {
+                    				set_popularities = {
+                     					democratic = 54
+                       					fascism = 14
+                       					communism = 0
+                       					neutrality = 32
+                   				}
+						set_cosmetic_tag = ROM
+						remove_ideas = ROMID_fragile_deal
+						remove_ideas = ROMID_echipa_mortii
+						complete_national_focus = ROM_institute_royal_dictatorship
+					}
+					delete_unit_template_and_units = {
+						division_template = "Straja Tării"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Brigada de Legionari"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Brigada de Lăncieri"
+					}
+					81 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					83 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}	
+					84 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					82 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					46 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					76 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					80 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					79 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					78 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					766 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					news_event = {
+    						id = ROMEV_events.38
+    						random_days = 5
+					}
+				}
+			}
+			if = {
+				limit = { 
+					original_tag = ROM 
+					has_global_flag = romid_second_civil_war_iron_guard_disabled
+					ROM = { surrender_progress > 0.75 }
+				}
+				#Lăncieri victory
+				if = {
+					limit = {
+						has_government = fascism
+						NOT = { has_country_flag = original_rom }
+					}
+					clr_global_flag = romid_second_civil_war_iron_guard
+					random_other_country = {
+                    				limit = {
+                    					original_tag = ROM
+                   					has_government = fascism
+							NOT = { has_country_flag = original_rom }
+						}
+						country_event = ROMEV_events.30
+					}
+					ROM = {
+                    				set_popularities = {
+                        				democratic = 37
+                        				fascism = 49
+                        				communism = 0
+                        				neutrality = 14
+                    				}
+						set_cosmetic_tag = ROMGG
+						remove_ideas = ROMID_echipa_mortii
+						unlock_national_focus = ROM_request_german_help
+						unlock_national_focus = ROM_strike_the_iron_guard
+						create_country_leader = {
+							name = "Octavian Goga"
+							picture = GFX_Portrait_romania_octavian_goga	
+							expire = "1965.1.1"
+							ideology = gen_nazism
+							traits = {
+								ROMID_dislikes_communism
+								ROMID_poet
+							}
+							id = -1
+						}
+						set_politics = {
+							ruling_party = fascism
+							elections_allowed = no
+						}
+						set_party_name = {
+							ideology = fascism
+							long_name = ROM_fascism_party_long
+ 							name = ROM_fascism_party
+						}
+						set_country_flag = ROMID_goga_won
+
+					}
+					ROM = { set_capital = { state = 46 } }
+					delete_unit_template_and_units = {
+						division_template = "Brigada de Legionari"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Brigada de Lăncieri"
+					}
+					76 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					80 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					79 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					78 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					766 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					81 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					83 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						clr_state_flag = iron_guard_supporters
+					}	
+					84 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					82 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					46 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					news_event = {
+    						id = ROMEV_events.40
+    						random_days = 5
+					}
+				}
+			}
+			if = {
+				limit = { 
+					original_tag = ROM 
+					has_global_flag = romid_second_civil_war_lancieri_disabled
+					ROM = { surrender_progress > 0.75 }
+				}
+				#Iron Guard victory
+				if = {
+					limit = {
+						has_government = fascism
+						NOT = { has_country_flag = original_rom }
+					}
+					clr_global_flag = romid_second_civil_war_lancieri
+					random_other_country = {
+                    				limit = {
+                    					original_tag = ROM
+                   					has_government = fascism
+							NOT = { has_country_flag = original_rom }
+						}
+						country_event = ROMEV_events.30
+					}
+					ROM = {
+                    				set_popularities = {
+                        				democratic = 37
+                        				fascism = 49
+                        				communism = 0
+                        				neutrality = 14
+                    				}
+						add_ideas = ROMID_echipa_mortii
+						set_cosmetic_tag = ROMIGC
+						unlock_national_focus = ROM_stab_goga_in_the_back
+						create_country_leader = {
+							name = "Corneliu Zelea Codreanu"
+							picture = GFX_Portrait_romania_corneliu_zelea_codreanu
+							expire = "1965.1.1"
+							ideology = fascism_ideology
+							traits = {
+								ROMID_dislikes_communism
+								ROMID_headstrong
+							}
+							id = -1
+						}
+						set_politics = {
+							ruling_party = fascism
+							elections_allowed = no
+						}
+						set_party_name = {
+							ideology = fascism
+							long_name = ROM_fascism_party_long3
+ 							name = ROM_fascism_party3
+						}
+						set_country_flag = ROMID_codreanu_won
+					}
+					delete_unit_template_and_units = {
+						division_template = "Brigada de Legionari"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Brigada de Lăncieri"
+					}
+					76 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					80 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					79 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					78 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					766 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					81 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					83 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}	
+					84 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					82 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					46 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					news_event = {
+    						id = ROMEV_events.39
+    						random_days = 5
+					}
+				}
+			}
+		}
+	}
+	on_civil_war_end = {
+		effect = {
+			remove_ideas = ROMID_ai_must_win
+			#First Civil War
+			if = {
+				limit = { 
+					original_tag = ROM 
+					has_global_flag = romid_first_civil_war
+				}
+				#Coalition victory
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					clr_global_flag = romid_first_civil_war
+					delete_unit_template_and_units = {
+						division_template = "Brigada de Legionari"
+					}
+					delete_unit_template_and_units = {
+						division_template = "Brigada de Lăncieri"
+					}
+					ROM = { set_capital = { state = 46 } }
+					81 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					83 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}	
+					84 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					82 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					46 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					76 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					80 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					79 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					78 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					766 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					news_event = {
+    						id = ROMEV_events.37
+    						random_days = 5
+					}
+				}
+			}
+			#Second Civil War - Iron Guard
+			if = {
+				limit = { 
+					original_tag = ROM 
+					has_global_flag = romid_second_civil_war_iron_guard
+				}
+				#Iron Guard victory
+				if = {
+					limit = {
+						has_government = fascism
+						has_country_flag = original_rom
+					}
+					clr_global_flag = romid_second_civil_war_iron_guard
+					ROM = { set_country_flag = ROMID_codreanu_won }
+					delete_unit_template_and_units = {
+						division_template = "Brigada de Legionari"
+					}
+					81 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					83 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}	
+					84 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					82 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					46 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					}
+					76 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					80 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					79 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					78 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					766 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+					}
+					news_event = {
+    						id = ROMEV_events.39
+    						random_days = 5
+					}
+				}
+			}
+			#Second Civil War - Lăncieri
+			if = {
+				limit = { 
+					original_tag = ROM 
+					has_global_flag = romid_second_civil_war_lancieri
+				}
+				#Lăncieri victory
+				if = {
+					limit = {
+						has_government = fascism
+						has_country_flag = original_rom
+					}
+					clr_global_flag = romid_second_civil_war_lancieri
+					ROM = { set_country_flag = ROMID_goga_won }
+					delete_unit_template_and_units = {
+						division_template = "Brigada de Lăncieri"
+					}
+					ROM = { set_capital = { state = 46 } }
+					76 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					80 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					79 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					78 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					766 = {
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+						add_dynamic_modifier = { modifier = ROMID_lancieri_supporters_allied }
+					}
+					81 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					83 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}	
+					84 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					82 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					46 = {
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+						remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					}
+					news_event = {
+    						id = ROMEV_events.40
+    						random_days = 5
+					}
+				}
+			}
+		}
+	}
+}

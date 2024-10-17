@@ -962,7 +962,6 @@ ROMID_resita_tank_artillery_organization = {
 		icon = GFX_generic_mio_department_icon_tank_general_weapons
 
 		position = { x=0 y=0 }
-		relative_position_id = generic_mio_trait_mobile_limbers	
 
 		limit_to_equipment_type = { 
 			anti_tank_equipment

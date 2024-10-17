@@ -803,10 +803,6 @@ ENG_vauxhall_automotive_organization = {
 			tag = ENG
 			tag = POL # If Poland sets up a local one
 			AND = {
-				tag = ROM
-				has_dlc = "Death or Dishonor"
-			}
-			AND = {
 				tag = BUL
 				has_dlc = "Battle for the Bosporus"
 			}
@@ -866,10 +862,6 @@ ENG_vauxhall_automotive_organization = {
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
-		IF = {
-			limit = { FROM = { original_tag = ROM } }
-			FROM = { has_country_flag = ENG_mot_chosen }
-		}	
 	}
 	
 	initial_trait = {

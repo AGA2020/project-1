@@ -1,0 +1,47 @@
+monthly_royalists_loyalty_change = {
+	color_type = good
+	value_type = number
+	category = country
+}
+
+monthly_royalists_powerbase_change = {
+	color_type = good
+	value_type = number
+	category = country
+}
+
+monthly_iron_guard_loyalty_change = {
+	color_type = good
+	value_type = number
+	category = country
+}
+
+monthly_iron_guard_powerbase_change = {
+	color_type = good
+	value_type = number
+	category = country
+}
+
+monthly_lancieri_loyalty_change = {
+	color_type = good
+	value_type = number
+	category = country
+}
+
+monthly_lancieri_powerbase_change = {
+	color_type = good
+	value_type = number
+	category = country
+}
+
+monthly_socialists_loyalty_change = {
+	color_type = good
+	value_type = number
+	category = country
+}
+
+monthly_socialists_powerbase_change = {
+	color_type = good
+	value_type = number
+	category = country
+}

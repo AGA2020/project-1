@@ -8,29 +8,52 @@
 
  #################### 
 
-### POL_pzinz_organization -> see POL_organizations.txt
+### killed POL_pzinz_organization -> see POL_organizations.txt
 
-ROM_leonidas_works_organization = {
-	include = generic_infantry_tank_organization
+ROMID_atelierele_leonida_organization = {
+	include = ROMID_tank_refurbishment_plant_organization_leonida
 	icon = GFX_idea_ROM_leonidas_works
+
+	equipment_type = { mio_cat_eq_all_tank_destroyers }
+
 	allowed = { 
 		tag = ROM
-		has_dlc = "Death or Dishonor"
 	}
 	available = {
-		FROM = { has_completed_focus = ROM_mobile_tank_destroyers }
+		FROM = { has_completed_focus = ROM_ateliereleleonida }
 	}
-	initial_trait = {
-		name = ROM_mio_trait_mobile_tank_destroyers
-		
-		limit_to_equipment_type = { 
-			mio_cat_eq_all_tank_destroyers
+}
+
+ROMID_ucm_resita_organization = {
+	include = ROMID_resita_tank_artillery_organization
+	icon = GFX_idea_UobFIwgf-304981
+	
+	equipment_type = { mio_cat_eq_all_heavy_tank artillery_equipment anti_tank_equipment anti_air_equipment }
+	research_categories = { mio_cat_tech_heavy_armor_and_modules artillery cat_anti_tank cat_anti_air }
+
+	allowed = { 
+		tag = ROM
+	}
+	available = {
+		FROM = {
+			has_completed_focus = ROM_acontractwithresita
 		}
-		
-		equipment_bonus = {
-			reliability = 0.05
-			hard_attack = 0.05
-			ap_attack = 0.05
+	}
+}
+
+ROMID_malaxa_organization = {
+	include = ROMID_malaxa_tank_train_organization
+	icon = GFX_idea_YRrzQCOK-305170
+
+	equipment_type = { armor train_equipment railway_gun_equipment }
+	research_categories = { mio_cat_tech_all_armor_and_modules train_tech }
+
+	allowed = { 
+		tag = ROM
+	}
+	available = {
+		FROM = {
+			has_completed_focus = ROM_malaxa_concern
 		}
 	}
 }
@@ -45,46 +68,58 @@ ROM_leonidas_works_organization = {
  
 #####################
 
-ROM_constanta_shipyard_organization = {
-	include = generic_task_force_ship_organization
-	icon = GFX_idea_generic_naval_manufacturer_2
-	allowed = { 
-		tag = ROM
-	}
-}
-
-ROM_galati_shipyard_organization = {
-	include = generic_raider_ship_organization
-	icon = GFX_idea_generic_coastal_navy
-	allowed = { 
-		tag = ROM
-		has_dlc = "Death or Dishonor"
-	}
-	available = {
-		FROM = { has_completed_focus = ROM_coastal_defense_navy }
-	}
-	initial_trait = {
-		name = ROM_mio_trait_coastal_defense_production
-		limit_to_equipment_type = { mio_cat_eq_all_cruiser }
-		production_bonus = {
-			production_cost_factor = -0.05
-		}
-		equipment_bonus = {
-			lg_attack = 0.05
-			naval_range = -0.1
-		}
-	}
-}
-
-ROM_Braila_organization = {
+ROMID_sn_constanta_organization = {
 	include = generic_battle_line_ship_organization
-	icon = GFX_idea_generic_sea_focused_navy
+	icon = GFX_idea_xQoTnEID-1483
 	allowed = { 
 		tag = ROM
-		has_dlc = "Death or Dishonor"
 	}
 	available = {
 		FROM = { has_completed_focus = ROM_black_sea_dominance }
+	}
+}
+
+ROMID_sn_galati_organization = {
+	include = generic_raider_ship_organization
+	icon = GFX_idea_LVjuenkA-1481
+	allowed = { 
+		tag = ROM
+	}
+	available = {
+		FROM = { has_completed_focus = ROM_galatibrailashipyards }
+	}
+	initial_trait = {
+		name = generic_mio_initial_trait_raiding_fleet
+		limit_to_equipment_type = { mio_cat_eq_all_cruiser }
+		production_bonus = {
+			production_cost_factor = 0.03
+		}
+		equipment_bonus = {
+			lg_attack = 0.05
+			naval_speed = 0.1
+		}
+	}
+}
+
+ROMID_sn_braila_organization = {
+	include = generic_black_sea_fleet_organization
+	icon = GFX_idea_aARmQiXh-1482
+	allowed = { 
+		tag = ROM
+	}
+	available = {
+		FROM = { has_completed_focus = ROM_costalminingfleet }
+	}
+
+	initial_trait = {
+		name = ROM_mio_trait_coastal_defense_production
+		limit_to_equipment_type = { capital_ship screen_ship ship_hull_submarine }
+		equipment_bonus = {
+			anti_air_attack = 0.02
+			armor_value = 0.02
+			max_strength = 0.02
+			naval_range = -0.15
+		}
 	}
 }
 
@@ -98,19 +133,14 @@ ROM_Braila_organization = {
 
 ###########################
 
-ROM_iar_organization = {
+ROMID_iar_organization = {
 	include = generic_light_aircraft_organization
 	icon = GFX_idea_ROM_iar
 	allowed = { 
 		tag = ROM
 	}
 	available = {
-		if = {
-			limit = {
-				has_dlc = "Death or Dishonor"
-			}
-			FROM = { has_completed_focus = ROM_invest_in_the_iar }
-		}
+		FROM = { has_completed_focus = ROM_invest_in_iar }
 	}
 
 	add_trait = {
@@ -121,12 +151,8 @@ ROM_iar_organization = {
 		position = { x=2 y=0 }
 		relative_position_id = generic_mio_trait_advanced_aerodynamics
 
-		visible = {
-			has_dlc = "Death or Dishonor"
-		}
-
 		available = {
-			FROM = { has_completed_focus = ROM_invest_in_the_iar }
+			FROM = { has_completed_focus = ROM_invest_in_iar }
 		}
 
 		equipment_bonus = {
@@ -136,21 +162,36 @@ ROM_iar_organization = {
 	}
 }
 
-ROM_icar_organization = {
-	include = generic_general_aircraft_organization
+ROMID_icar_organization = {
+	include = generic_heavy_aircraft_organization
 	icon = GFX_idea_ROM_ICAR
 	allowed = { 
 		tag = ROM
-		has_dlc = "Death or Dishonor"
+	}
+	available = {
+		FROM = { has_completed_focus = ROM_subsidize_other_companies }
 	}
 }
 
-ROM_set_organization = {
+ROMID_set_organization = {
 	include = generic_naval_aircraft_organization
 	icon = GFX_idea_ROM_SET
 	allowed = { 
 		tag = ROM
-		has_dlc = "Death or Dishonor"
+	}
+	available = {
+		FROM = { has_completed_focus = ROM_subsidize_other_companies }
+	}
+}
+
+ROMID_stc_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_wgTSbAam-1380
+	allowed = { 
+		tag = ROM
+	}
+	available = {
+		FROM = { has_completed_focus = ROM_subsidize_other_companies }
 	}
 }
 
@@ -166,38 +207,59 @@ ROM_set_organization = {
 
 ###################################
 
-ROM_cugir_organization = {
-	include = generic_infantry_equipment_organization
-	icon = GFX_idea_ROM_cugir  #used with permission from Turning Point mod
+ROMID_ior_bucuresti_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_qeOzKXks-305742
 	allowed = { 
 		tag = ROM
 	}
-}
+	available = {
+		FROM = { has_completed_focus = ROM_found_ior }
+	}
 
-ROM_resita_works_organization = {
-	include = generic_artillery_organization
-	icon = GFX_idea_generic_artillery_manufacturer_1
-	allowed = { 
-		tag = ROM
-	}
-}
-
-ROM_malaxa_organization = {
-	include = generic_motorized_mechanized_organization
-	icon = GFX_idea_ROM_malaxa
-	allowed = { 
-		tag = ROM
-	}
-	initial_trait = {
-		organization_modifier = {
-			military_industrial_organization_research_bonus = -0.03
-			military_industrial_organization_funds_gain = -0.1
+	
+	add_trait = {
+		token = ROMID_mio_trait_ior_optics
+		name = ROMID_mio_trait_ior_optics
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		
+		position = { x=2 y=0 }
+		relative_position_id = generic_mio_trait_material_recycling
+		
+		limit_to_equipment_type = { infantry_equipment support_equipment }
+		
+		production_bonus = {
+			production_cost_factor = -0.04
 		}
 	}
 }
 
-### ENG_vauxhall_organization -> see ENG_organizations.txt
+ROMID_um_cugir_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_kOcPwmVv-1882
+	allowed = { 
+		tag = ROM
+	}
+	available = {
+		ROM = { 
+			OR = {
+				owns_state = 84 
+				has_completed_focus = ROM_cugir_factory
+			}
+		}
+	}
+}
 
-### USA_ford_organization -> see USA_organizations.txt
+ROMID_romloc_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_ShwFELNB-305300
+	allowed = { 
+		tag = ROM
+	}
+}
 
-### GER_opel_organization -> see GER_organizations.txt
+### killed ENG_vauxhall_organization -> see ENG_organizations.txt
+
+### killed USA_ford_organization -> see USA_organizations.txt
+
+### killed GER_opel_organization -> see GER_organizations.txt
