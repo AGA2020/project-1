@@ -1,0 +1,160 @@
+ROMID_internal_factions = {
+	priority = 15
+
+	icon = power_struggle
+
+	picture = GFX_decision_cat_picture_faction_management_bulgaria
+
+	visible = {
+		NOT = { is_ai = yes }
+	}
+
+	scripted_gui = romid_internal_factions_decision_ui
+	visible_when_empty = yes
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+ROMID_malaxa_intervention = {
+	priority = 14
+
+	icon = GFX_decision_category_generic_arms_trade
+	visible = {
+		has_completed_focus = ROM_cooperation_with_malaxa
+		NOT = { is_ai = yes }
+	}
+
+	visible_when_empty = yes
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+ROMID_army_supply = {
+	priority = 13
+
+	visible = {
+		has_completed_focus = ROM_crippling_logistics
+		NOT = { is_ai = yes }
+	}
+	visible_when_empty = yes
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+
+ROMID_line_motorization = {
+	priority = 12
+
+	visible = {
+		has_completed_focus = ROM_kickstart_automobile_industy
+		has_completed_focus = ROM_crippling_logistics
+		NOT = { has_global_flag = romid_finished_line_motorization }
+		NOT = { is_ai = yes }
+	}
+	visible_when_empty = yes
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+ROMID_officer_training = {
+	priority = 11
+
+	visible = {
+		has_completed_focus = ROM_officer_academy
+		NOT = { is_ai = yes }
+	}
+	visible_when_empty = yes
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+ROMID_army_training = {
+	priority = 10
+	visible = {
+		has_completed_focus = ROM_extended_army_training
+		NOT = { is_ai = yes }
+	}
+	visible_when_empty = yes
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+ROMID_army_affairs = {
+	priority = 9
+	
+	icon = GFX_decision_romid_army_faction
+	visible = {
+		NOT = { is_ai = yes }
+	}
+
+	allowed = {
+		original_tag = ROM
+	}
+}
+
+ROMID_royalists_affairs = {
+	priority = 8
+	
+	icon = GFX_decision_romid_royalists_faction
+	allowed = {
+		original_tag = ROM
+	}
+	visible = {
+		NOT = {
+			has_country_flag = romid_royalists_crushed
+			has_country_flag = romid_royalists_integrated
+		}
+		NOT = { is_ai = yes }
+	}
+}
+ROMID_iron_guard_affairs = {
+	priority = 7
+	
+	icon = GFX_decision_romid_iron_guard_faction
+	allowed = {
+		original_tag = ROM
+	}
+	visible = {
+		NOT = {
+			has_country_flag = romid_iron_guard_crushed
+			has_country_flag = romid_iron_guard_integrated
+		}
+		NOT = { is_ai = yes }
+	}
+}
+ROMID_lancieri_affairs = {
+	priority = 6
+	
+	icon = GFX_decision_romid_lancieri_faction
+	allowed = {
+		original_tag = ROM
+	}
+	visible = {
+		NOT = {
+			has_country_flag = romid_lancieri_crushed
+			has_country_flag = romid_lancieri_integrated
+		}
+		NOT = { is_ai = yes }
+	}
+}
+ROMID_socialists_affairs = {
+	priority = 5
+	
+	icon = GFX_decision_romid_socialists_faction
+	allowed = {
+		original_tag = ROM
+	}
+	visible = {
+		NOT = {
+			has_country_flag = romid_socialists_crushed
+			has_country_flag = romid_socialists_integrated
+		}
+		NOT = { is_ai = yes }
+	}
+}
