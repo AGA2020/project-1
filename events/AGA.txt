@@ -15,7 +15,9 @@ news_event = {
 					is_playable_country = yes
 				}
 				air_experience = -10
-				army_experience = -10				
+				army_experience = -10
+				navy_experience = -10
+				add_command_power = -5				
 			}
 	}
 }

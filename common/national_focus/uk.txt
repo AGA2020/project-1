@@ -1441,12 +1441,12 @@ focus_tree = {
 	focus = {
 		id = uk_jet_focus
 		prerequisite = {
-			focus = aircraft_production_focus
+			focus = fighter_command_focus
 		}
 		icon = GFX_goal_generic_build_airforce
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = aircraft_production_focus
+		relative_position_id = fighter_command_focus
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -3012,6 +3012,18 @@ focus_tree = {
 		cost = 5
 		available_if_capitulated = yes
 		completion_reward = {
+			if = { 
+				limit = { 
+					AND = { 
+						AST = { is_ai = yes } 
+						SAF = { is_ai = yes } 
+						CAN = { is_ai = yes } 
+						RAJ = { is_ai = yes } 
+						NZL = { is_ai = yes } 
+					}
+				}
+				ENG = { add_political_power = 250 }
+			}
 			random_country = {
 				limit = {
 					original_tag = CAN

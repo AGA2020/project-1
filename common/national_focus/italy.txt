@@ -10434,7 +10434,9 @@ focus_tree = {
 			NOT = { has_guaranteed = FRA }
 			NOT = { has_non_aggression_pact_with = FRA }
 		}
-
+		bypass = { 
+			ITA = { has_war_with = FRA } 
+		}
 		will_lead_to_war_with = FRA
 
 		search_filters = {}

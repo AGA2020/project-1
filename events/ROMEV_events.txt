@@ -1,0 +1,2335 @@
+add_namespace = ROMEV_events
+
+#Funerals of Mota and Marin
+news_event = {
+	id = ROMEV_events.1
+	title = ROMEV_events.1.t
+	desc = ROMEV_events.1.d
+
+	picture = ROMEV_funerals_of_mota_and_marin-308001
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.1.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_iron_guard_medium_popularity_increase_effect = yes
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The [GetYear] Constitution of Romania
+news_event = {
+	id = ROMEV_events.2
+	title = ROMEV_events.2.t
+	desc = ROMEV_events.2.d
+
+	picture = ROMEV_the_getyear_constitution_of_romania-317161
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = ROMEV_events.2.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#The Execution of Codreanu
+news_event = {
+	id = ROMEV_events.3
+	title = ROMEV_events.3.t
+	desc = ROMEV_events.3.d
+
+	picture = ROMEV_the_execution_of_codreanu-308003
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.3.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_iron_guard_low_popularity_decrease_effect = yes
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#Decemvirii
+news_event = {
+	id = ROMEV_events.4
+	title = ROMEV_events.4.t
+	desc = ROMEV_events.4.d
+
+	picture = ROMEV_decemvirii-320860
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.4.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			ROMID_iron_guard_low_popularity_decrease_effect = yes
+		}
+	}
+}
+
+#trigger
+country_event = {
+	id = ROMEV_events.5
+	
+	is_triggered_only = yes
+
+	hidden = yes
+
+	immediate = {
+		random_list = {
+			33 = {
+				modifier = {
+					factor = 0
+					OR = { 
+						has_country_flag = romid_iron_guard_integrated
+						has_country_flag = romid_iron_guard_crushed
+					}
+        			}
+				random_list = {
+					25 = { 
+						modifier = {
+							factor = 2
+          						check_variable = {
+								var = ROMID_iron_guard_popularity
+								value = 15
+ 								compare = less_than_or_equals
+							}
+        					}
+						modifier = {
+							factor = 1.5
+          						check_variable = {
+								var = ROMID_iron_guard_popularity
+								value = 35
+ 								compare = less_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_iron_guard_popularity
+								value = 15
+ 								compare = greater_than_or_equals
+							}
+        					}
+						country_event = {
+							id = ROMEV_events.6
+						}
+						#rally
+					}
+					25 = {
+						modifier = {
+							factor = 3
+          						check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 20
+ 								compare = less_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_iron_guard_popularity
+								value = 35
+ 								compare = greater_than_or_equals
+							}
+        					}
+						modifier = {
+							factor = 1.5
+          						check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 40
+ 								compare = less_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_iron_guard_loyalty
+								value = 20
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_iron_guard_popularity
+								value = 60
+ 								compare = greater_than_or_equals
+							}
+        					}
+						modifier = {
+							factor = 0
+							OR = {
+								has_completed_focus = ROM_stab_goga_in_the_back
+								AND = {
+									NOT = { has_completed_focus = ROM_request_german_help }
+									has_completed_focus = ROM_gogacodreanu_cooperation
+								}
+							}
+        					}
+						country_event = {
+							id = ROMEV_events.7
+						}
+						#protest
+					}
+					25 = {
+						modifier = {
+							factor = 0
+							OR = {
+								has_completed_focus = ROM_stab_goga_in_the_back
+								AND = {
+									NOT = { has_completed_focus = ROM_request_german_help }
+									has_completed_focus = ROM_gogacodreanu_cooperation
+								}
+							}
+        					}
+						country_event = {
+							id = ROMEV_events.8
+						}
+						#arrested
+					}
+					25 = {
+						country_event = {
+							id = ROMEV_events.9
+						}
+						#compliance
+					}
+				}
+			} 
+			33 = { 
+				modifier = {
+					factor = 0
+					OR = { 
+						has_country_flag = romid_lancieri_integrated
+						has_country_flag = romid_lancieri_crushed
+					}
+        			}
+				random_list = {
+					25 = { 
+						modifier = {
+							factor = 2
+          						check_variable = {
+								var = ROMID_lancieri_popularity
+								value = 15
+ 								compare = less_than_or_equals
+							}
+        					}
+						modifier = {
+							factor = 1.5
+          						check_variable = {
+								var = ROMID_lancieri_popularity
+								value = 35
+ 								compare = less_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_lancieri_popularity
+								value = 15
+ 								compare = greater_than_or_equals
+							}
+        					}
+						country_event = {
+							id = ROMEV_events.10
+						}
+						#rally
+					}
+					25 = {
+						modifier = {
+							factor = 3
+          						check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 20
+ 								compare = less_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_lancieri_popularity
+								value = 35
+ 								compare = greater_than_or_equals
+							}
+        					}
+						modifier = {
+							factor = 1.5
+          						check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 40
+ 								compare = less_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_lancieri_loyalty
+								value = 20
+ 								compare = greater_than_or_equals
+							}
+							check_variable = {
+								var = ROMID_lancieri_popularity
+								value = 60
+ 								compare = greater_than_or_equals
+							}
+        					}
+						modifier = {
+							factor = 0
+							OR = {
+								has_completed_focus = ROM_request_german_help
+								AND = {
+									NOT = { has_completed_focus = ROM_stab_goga_in_the_back }
+									has_completed_focus = ROM_gogacodreanu_cooperation
+								}
+							}
+        					}
+						country_event = {
+							id = ROMEV_events.11
+						}
+						#protest
+					}
+					25 = {
+						modifier = {
+							factor = 0
+							OR = {
+								has_completed_focus = ROM_request_german_help
+								AND = {
+									NOT = { has_completed_focus = ROM_stab_goga_in_the_back }
+									has_completed_focus = ROM_gogacodreanu_cooperation
+								}
+							}
+        					}
+						country_event = {
+							id = ROMEV_events.12
+						}
+						#arrested
+					}
+					25 = {
+						country_event = {
+							id = ROMEV_events.13
+						}
+						#compliance
+					}
+				}
+			} 
+			33 = {
+				modifier = {
+					factor = 0
+					OR = { 
+						has_country_flag = romid_royalists_integrated
+						has_country_flag = romid_royalists_crushed
+					}
+        			}
+				random_list = {
+					25 = {
+						#party
+						country_event = {
+							id = ROMEV_events.14
+						}
+					}
+					25 = {
+						#siphon taxes
+						country_event = {
+							id = ROMEV_events.15
+						}
+					}
+					25 = {
+						#royal duties
+						country_event = {
+							id = ROMEV_events.16
+						}
+					}
+					25 = {
+						#tax the rich
+						country_event = {
+							id = ROMEV_events.17
+						}
+					}
+				}
+			} 
+			33 = {
+				modifier = {
+					factor = 0
+					NOT = { has_country_flag = romid_iron_guard_integrated }
+        			}
+				random_list = {
+					25 = {
+						#recruitment
+						modifier = {
+							factor = 2
+          						has_war = yes
+        					}
+						modifier = {
+							factor = 2
+          						has_defensive_war = yes
+        					}
+						modifier = {
+							factor = 0.5
+          						 has_war_support < 0.35
+        					}
+						country_event = {
+							id = ROMEV_events.41
+						}
+					}
+					25 = {
+						#killings
+						country_event = {
+							id = ROMEV_events.42
+						}
+					}
+					25 = {
+						#speech
+						country_event = {
+							id = ROMEV_events.43
+						}
+					}
+					25 = {
+						#propaganda
+						country_event = {
+							id = ROMEV_events.45
+						}
+					}
+				}
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					NOT = { has_country_flag = romid_lancieri_integrated }
+        			}
+				random_list = {
+					25 = {
+						#recruitment
+						modifier = {
+							factor = 2
+          						has_war = yes
+        					}
+						modifier = {
+							factor = 2
+          						has_defensive_war = yes
+        					}
+						modifier = {
+							factor = 0.5
+          						 has_war_support < 0.35
+        					}
+						country_event = {
+							id = ROMEV_events.41
+						}
+					}
+					25 = {
+						#killings
+						country_event = {
+							id = ROMEV_events.42
+						}
+					}
+					25 = {
+						#speech
+						country_event = {
+							id = ROMEV_events.43
+						}
+					}
+					25 = {
+						#propaganda
+						country_event = {
+							id = ROMEV_events.45
+						}
+					}
+				}
+			}
+			33 = {
+				modifier = {
+					factor = 0
+					NOT = { has_country_flag = romid_royalists_integrated }
+        			}
+				random_list = {
+					25 = {
+						#recruitment
+						modifier = {
+							factor = 2
+          						has_war = yes
+        					}
+						modifier = {
+							factor = 2
+          						has_defensive_war = yes
+        					}
+						modifier = {
+							factor = 0.5
+          						 has_war_support < 0.35
+        					}
+						country_event = {
+							id = ROMEV_events.41
+						}
+					}
+					25 = {
+						#killings
+						country_event = {
+							id = ROMEV_events.42
+						}
+					}
+					25 = {
+						#speech
+						country_event = {
+							id = ROMEV_events.43
+						}
+					}
+					25 = {
+						#propaganda
+						country_event = {
+							id = ROMEV_events.44
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#rally guard
+country_event = {
+	id = ROMEV_events.6
+	title = ROMEV_events.6.t
+	desc = ROMEV_events.6.d
+	is_triggered_only = yes
+	picture = ROMEV_rally-791
+
+	option = {
+		name = ROMEV_events.6.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_iron_guard_low_popularity_increase_effect = yes
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#protest guard
+country_event = {
+	id = ROMEV_events.7
+	title = ROMEV_events.7.t
+	desc = ROMEV_events.7.d
+	is_triggered_only = yes
+	picture = ROMEV_protest-700
+
+	option = {
+		name = ROMEV_events.7.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		random_list = {
+			20 = { 
+				modifier = {
+					factor = 0
+          				82 = { NOT = { has_state_flag = iron_guard_supporters } }
+        			}
+				82 = { 
+					add_dynamic_modifier = { modifier = ROMID_iron_guard_protests_n_clashes  days = 55 } 
+				} 
+			}
+			20 = { 
+				modifier = {
+					factor = 0
+          				83 = { NOT = { has_state_flag = iron_guard_supporters } }
+        			}
+				83 = { 
+					add_dynamic_modifier = { modifier = ROMID_iron_guard_protests_n_clashes days = 55 } 
+				} 
+			}
+			20 = { 
+				modifier = {
+					factor = 0
+          				84 = { NOT = { has_state_flag = iron_guard_supporters } }
+        			}
+				84 = { 
+					add_dynamic_modifier = { modifier = ROMID_iron_guard_protests_n_clashes days = 55 } 
+				} 
+			}
+			20 = { 
+				modifier = {
+					factor = 0
+          				81 = { NOT = { has_state_flag = iron_guard_supporters } }
+        			}
+				81 = { 
+					add_dynamic_modifier = { modifier = ROMID_iron_guard_protests_n_clashes days = 55 } 
+				} 
+			}
+			20 = { 
+				modifier = {
+					factor = 0
+          				46 = { NOT = { has_state_flag = iron_guard_supporters } }
+        			}
+				46 = { 
+					add_dynamic_modifier = { modifier = ROMID_iron_guard_protests_n_clashes days = 55 } 
+				} 
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#arrested guard
+country_event = {
+	id = ROMEV_events.8
+	title = ROMEV_events.8.t
+	desc = ROMEV_events.8.d
+	is_triggered_only = yes
+	picture = ROMEV_arest-698
+
+	option = {
+		name = ROMEV_events.8.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_iron_guard_low_loyalty_decrease_effect = yes
+		ROMID_iron_guard_low_popularity_decrease_effect = yes
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#compliance guard
+country_event = {
+	id = ROMEV_events.9
+	title = ROMEV_events.9.t
+	desc = ROMEV_events.9.d
+	is_triggered_only = yes
+	picture = ROMEV_compliance-825
+
+	option = {
+		name = ROMEV_events.9.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_iron_guard_low_loyalty_increase_effect = yes
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#rally lancieri
+country_event = {
+	id = ROMEV_events.10
+	title = ROMEV_events.10.t
+	desc = ROMEV_events.10.d
+	is_triggered_only = yes
+	picture = ROMEV_rally-791
+
+	option = {
+		name = ROMEV_events.10.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_lancieri_low_popularity_increase_effect = yes
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#protest lancieri
+country_event = {
+	id = ROMEV_events.11
+	title = ROMEV_events.11.t
+	desc = ROMEV_events.11.d
+	is_triggered_only = yes
+	picture = ROMEV_protest-700
+
+	option = {
+		name = ROMEV_events.11.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		random_list = {
+			20 = { 
+				modifier = {
+					factor = 0
+          				78 = { NOT = { has_state_flag = lancieri_supporters } }
+        			}
+				78 = { 
+					add_dynamic_modifier = { modifier = ROMID_lancieri_protests_n_clashes days = 55 } 
+				} 
+			}
+			20 = { 
+				modifier = {
+					factor = 0
+          				80 = { NOT = { has_state_flag = lancieri_supporters } }
+        			}
+				80 = { 
+					add_dynamic_modifier = { modifier = ROMID_lancieri_protests_n_clashes days = 55 } 
+				} 
+			}
+			20 = { 
+				modifier = {
+					factor = 0
+          				79 = { NOT = { has_state_flag = lancieri_supporters } }
+        			}
+				79 = { 
+					add_dynamic_modifier = { modifier = ROMID_lancieri_protests_n_clashes days = 55 } 
+				} 
+			}
+			20 = { 
+				modifier = {
+					factor = 0
+          				76 = { NOT = { has_state_flag = lancieri_supporters } }
+        			}
+				76 = { 
+					add_dynamic_modifier = { modifier = ROMID_lancieri_protests_n_clashes days = 55 } 
+				} 
+			}
+			20 = { 
+				modifier = {
+					factor = 0
+          				766 = { NOT = { has_state_flag = lancieri_supporters } }
+        			}
+				766 = { 
+					add_dynamic_modifier = { modifier = ROMID_lancieri_protests_n_clashes days = 55 } 
+				} 
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#arrested lancieri
+country_event = {
+	id = ROMEV_events.12
+	title = ROMEV_events.12.t
+	desc = ROMEV_events.12.d
+	is_triggered_only = yes
+	picture = ROMEV_arest-698
+
+	option = {
+		name = ROMEV_events.12.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_lancieri_low_loyalty_decrease_effect = yes
+		ROMID_lancieri_low_popularity_decrease_effect = yes
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#compliance lancieri
+country_event = {
+	id = ROMEV_events.13
+	title = ROMEV_events.13.t
+	desc = ROMEV_events.13.d
+	is_triggered_only = yes
+	picture = ROMEV_compliance-825
+
+	option = {
+		name = ROMEV_events.13.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_lancieri_low_loyalty_increase_effect = yes
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#party
+country_event = {
+	id = ROMEV_events.14
+	title = ROMEV_events.14.t
+	desc = ROMEV_events.14.d
+	is_triggered_only = yes
+	picture = ROMEV_party-717
+
+	option = {
+		name = ROMEV_events.14.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_royalists_low_loyalty_increase_effect = yes
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#siphon
+country_event = {
+	id = ROMEV_events.15
+	title = ROMEV_events.15.t
+	desc = ROMEV_events.15.d
+	is_triggered_only = yes
+	picture = ROMEV_siphon-923
+
+	option = {
+		name = ROMEV_events.15.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_royalists_low_popularity_increase_effect = yes
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#royal duties
+country_event = {
+	id = ROMEV_events.16
+	title = ROMEV_events.16.t
+	desc = ROMEV_events.16.d
+	is_triggered_only = yes
+	picture = ROMEV_duties-924
+
+	option = {
+		name = ROMEV_events.16.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_royalists_low_loyalty_decrease_effect = yes
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+
+#tax the rich
+country_event = {
+	id = ROMEV_events.17
+	title = ROMEV_events.17.t
+	desc = ROMEV_events.17.d
+	is_triggered_only = yes
+	picture = ROMEV_tax-716
+
+	option = {
+		name = ROMEV_events.17.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		ROMID_royalists_low_popularity_decrease_effect = yes
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#pol-rom treaty
+news_event = {
+	id = ROMEV_events.18
+	title = ROMEV_events.18.t
+	desc = ROMEV_events.18.d
+
+	picture = ROMEV_pol_alliance-627
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.18.a
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				has_government = democratic
+				add = 1
+			}
+			modifier = {
+				has_government = neutrality
+				add = 1
+			}
+			modifier = {
+				ROM = { has_same_ideology = yes }
+				add = 1
+			}
+		}
+		ROM = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+		}
+		add_opinion_modifier = {
+    			target = ROM
+    			modifier = ROMID_treaty_with_poland
+		}	
+		diplomatic_relation = {
+			country = ROM
+			relation = non_aggression_pact
+ 			active = yes
+		}
+		ROM = {
+			add_opinion_modifier = {
+    				target = POL
+    				modifier = ROMID_treaty_with_poland
+			}
+			diplomatic_relation = {
+				country = POL
+				relation = non_aggression_pact
+ 				active = yes
+			}
+			news_event = {
+				id = ROMEV_events.22
+ 				random_days = 3
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = ROMEV_events.18.b
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = communism
+				add = 1
+			}
+		}
+		ROM = {
+			news_event = {
+				id = ROMEV_events.23
+				random_days = 3
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#tur-rom treaty
+news_event = {
+	id = ROMEV_events.19
+	title = ROMEV_events.19.t
+	desc = ROMEV_events.19.d
+
+	picture = ROMEV_tur_alliance-1010
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.19.a
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				has_government = democratic
+				add = 1
+			}
+			modifier = {
+				has_government = neutrality
+				add = 1
+			}
+			modifier = {
+				ROM = { has_same_ideology = yes }
+				add = 1
+			}
+			modifier = {
+				ROM = { TUR = {has_opinion_modifier = BFTB_balkan_pact_ally } }
+				add = 1
+			}
+		}
+		ROM = {
+			add_opinion_modifier = {
+    				target = TUR
+    				modifier = ROMID_treaty_with_turkey
+			}
+			news_event = {
+				id = ROMEV_events.25
+ 				random_days = 3
+			}
+		}
+		add_opinion_modifier = {
+    			target = ROM
+    			modifier = ROMID_treaty_with_turkey
+		}
+		diplomatic_relation = {
+			country = ROM
+			relation = guarantee
+ 			active = yes
+		}
+		diplomatic_relation = {
+			country = ROM
+			relation = docking_rights
+ 			active = yes
+		}
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = ROMEV_events.19.b
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = communism
+				add = 1
+			}
+			modifier = {
+				has_government = fascism
+				add = 1
+			}
+		}
+		ROM = {
+			news_event = {
+				id = ROMEV_events.26
+ 				random_days = 3
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#join axis
+news_event = {
+	id = ROMEV_events.20
+	title = ROMEV_events.20.t
+	desc = ROMEV_events.20.d
+
+	picture = ROMEV_ger_alliance-825
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.20.a
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				has_government = fascism
+				add = 1
+			}
+			modifier = {
+				ROM = { has_same_ideology = yes }
+				add = 2
+			}
+			modifier = {
+				GER = { ROM = {has_opinion_modifier = ROMID_treaty_with_germany } }
+				add = 3
+			}
+		}
+		add_to_faction = ROM
+		ROM = {
+			news_event = {
+				id = ROMEV_events.28
+ 				random_days = 3
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = ROMEV_events.20.b
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = communism
+				add = 1
+			}
+		}
+		ROM = {
+			news_event = {
+				id = ROMEV_events.29
+ 				random_days = 3
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#send pol-rom
+country_event = {
+	id = ROMEV_events.21
+	title = ROMEV_events.21.t
+	desc = ROMEV_events.21.d
+
+	picture = ROMEV_sending-1002
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.21.a
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = democratic
+				add = 1
+			}
+			modifier = {
+				has_government = neutrality
+				add = 1
+			}
+			modifier = {
+				POL = { has_government = democratic }
+				add = 1
+			}
+			modifier = {
+				POL = { has_government = neutrality }
+				add = 1
+			}
+			modifier = {
+				POL = { has_same_ideology = yes }
+				add = 2
+			}
+		}
+		effect_tooltip = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_opinion_modifier = {
+    				target = POL
+    				modifier = ROMID_treaty_with_poland
+			}	
+			diplomatic_relation = {
+				country = POL
+				relation = non_aggression_pact
+ 				active = yes
+			}
+			POL = {
+				add_opinion_modifier = {
+    					target = ROM
+    					modifier = ROMID_treaty_with_poland
+				}
+				diplomatic_relation = {
+					country = ROM
+					relation = non_aggression_pact
+ 					active = yes
+				}
+			}
+		}
+		POL = {
+			news_event = {
+				id = ROMEV_events.18
+ 				random_days = 5
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = ROMEV_events.21.b
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#accepted pol-rom
+news_event = {
+	id = ROMEV_events.22
+	title = ROMEV_events.22.t
+	desc = ROMEV_events.22.d
+
+	picture = ROMEV_pol_alliance-627
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.22.a
+		trigger = {
+			
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#refused pol-rom
+news_event = {
+	id = ROMEV_events.23
+	title = ROMEV_events.23.t
+	desc = ROMEV_events.23.d
+
+	picture = ROMEV_pol_alliance-627
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.23.a
+		trigger = {
+			
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#send tur-rom
+country_event = {
+	id = ROMEV_events.24
+	title = ROMEV_events.24.t
+	desc = ROMEV_events.24.d
+
+	picture = ROMEV_sending-1002
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.24.a
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = democratic
+				add = 1
+			}
+			modifier = {
+				has_government = neutrality
+				add = 1
+			}
+			modifier = {
+				TUR = { has_government = democratic }
+				add = 1
+			}
+			modifier = {
+				TUR = { has_government = neutrality }
+				add = 1
+			}
+			modifier = {
+				TUR = { has_same_ideology = yes }
+				add = 2
+			}
+		}
+		effect_tooltip = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.03
+			}
+			add_opinion_modifier = {
+    				target = TUR
+    				modifier = ROMID_treaty_with_turkey
+			}
+			TUR = {
+				add_opinion_modifier = {
+    					target = ROM
+    					modifier = ROMID_treaty_with_turkey
+				}
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+ 					active = yes
+				}
+				diplomatic_relation = {
+					country = ROM
+					relation = docking_rights
+ 					active = yes
+				}
+			}
+		}
+		TUR = {
+			news_event = {
+				id = ROMEV_events.19
+ 				random_days = 5
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = ROMEV_events.24.b
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#accepted tur-rom
+news_event = {
+	id = ROMEV_events.25
+	title = ROMEV_events.25.t
+	desc = ROMEV_events.25.d
+
+	picture = ROMEV_tur_alliance-1010
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.25.a
+		trigger = {
+			
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#refused tur-rom
+news_event = {
+	id = ROMEV_events.26
+	title = ROMEV_events.26.t
+	desc = ROMEV_events.26.d
+
+	picture = ROMEV_tur_alliance-1010
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.26.a
+		trigger = {
+			
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#send ger-rom
+country_event = {
+	id = ROMEV_events.27
+	title = ROMEV_events.27.t
+	desc = ROMEV_events.27.d
+
+	picture = ROMEV_sending-1002
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.27.a
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = fascism
+				add = 2
+			}
+			modifier = {
+				GER = { has_government = fascism }
+				add = 1
+			}
+			modifier = {
+				GER = { has_same_ideology = yes }
+				add = 4
+			}
+		}
+		effect_tooltip = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+			add_to_faction = ROM
+		}
+		GER = {
+			news_event = {
+				id = ROMEV_events.20
+ 				random_days = 5
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = ROMEV_events.27.b
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#accepted ger-rom
+news_event = {
+	id = ROMEV_events.28
+	title = ROMEV_events.28.t
+	desc = ROMEV_events.28.d
+
+	picture = ROMEV_ger_alliance-825
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.28.a
+		trigger = {
+			
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#refused ger-rom
+news_event = {
+	id = ROMEV_events.29
+	title = ROMEV_events.29.t
+	desc = ROMEV_events.29.d
+
+	picture = ROMEV_ger_alliance-825
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.29.a
+		trigger = {
+			
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.03
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#trigger
+country_event = {
+	id = ROMEV_events.30
+	
+	is_triggered_only = yes
+
+	hidden = yes
+
+	immediate = {
+		ROM = {
+			annex_country = {
+    				target = FROM
+    				transfer_troops = yes
+			}
+		}
+	}
+}
+
+#antonescu
+news_event = {
+	id = ROMEV_events.31
+	title = ROMEV_events.31.t
+	desc = ROMEV_events.31.d
+	is_triggered_only = yes
+	picture = ROMEV_antonescu_to_power
+	major = yes
+	option = {
+		name = ROMEV_events.31.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+
+#statul legionar
+news_event = {
+	id = ROMEV_events.32
+	title = ROMEV_events.32.t
+	desc = ROMEV_events.32.d
+	is_triggered_only = yes
+	picture = ROMEV_statul_legionar
+	major = yes
+
+	option = {
+		name = ROMEV_events.32.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#reclaim basarabia
+news_event = {
+	id = ROMEV_events.33
+	title = ROMEV_events.33.t
+	desc = ROMEV_events.33.d
+	is_triggered_only = yes
+	picture = ROMEV_reclaim_basarabia
+	major = yes
+
+	option = {
+		name = ROMEV_events.33.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#mihai coup
+news_event = {
+	id = ROMEV_events.34
+	title = ROMEV_events.34.t
+	desc = ROMEV_events.34.d
+	is_triggered_only = yes
+	picture = ROMEV_mihai_coup
+	major = yes
+
+	option = {
+		name = ROMEV_events.34.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#civil war 1
+news_event = {
+	id = ROMEV_events.35
+	title = ROMEV_events.35.t
+	desc = ROMEV_events.35.d
+	is_triggered_only = yes
+	picture = ROMEV_civil_war_1-572
+	major = yes
+
+	option = {
+		name = ROMEV_events.35.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+
+#civil war 2
+news_event = {
+	id = ROMEV_events.36
+	title = ROMEV_events.36.t
+	desc = ROMEV_events.36.d
+	is_triggered_only = yes
+	picture = ROMEV_civil_war_2-529
+	major = yes
+
+	option = {
+		name = ROMEV_events.36.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#coalition win
+news_event = {
+	id = ROMEV_events.37
+	title = ROMEV_events.37.t
+	desc = ROMEV_events.37.d
+	is_triggered_only = yes
+	picture = ROMEV_coalition_win
+	major = yes
+
+	option = {
+		name = ROMEV_events.37.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#monarchists win
+news_event = {
+	id = ROMEV_events.38
+	title = ROMEV_events.38.t
+	desc = ROMEV_events.38.d
+	is_triggered_only = yes
+	picture = ROMEV_monarchists_win
+	major = yes
+
+	option = {
+		name = ROMEV_events.38.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#legionary win 
+news_event = {
+	id = ROMEV_events.39
+	title = ROMEV_events.39.t
+	desc = ROMEV_events.39.d
+	is_triggered_only = yes
+	picture = ROMEV_legionary_win
+	major = yes
+
+	option = {
+		name = ROMEV_events.39.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#goga win 
+news_event = {
+	id = ROMEV_events.40
+	title = ROMEV_events.40.t
+	desc = ROMEV_events.40.d
+	is_triggered_only = yes
+	picture = ROMEV_goga_win
+	major = yes
+
+	option = {
+		name = ROMEV_events.40.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#recruitment
+country_event = {
+	id = ROMEV_events.41
+	title = ROMEV_events.41.t
+	desc = ROMEV_events.41.d
+	is_triggered_only = yes
+	picture = ROMEV_protest-700
+
+	option = {
+		name = ROMEV_events.41.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_manpower = 1500
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#killings
+country_event = {
+	id = ROMEV_events.42
+	title = ROMEV_events.42.t
+	desc = ROMEV_events.42.d
+	is_triggered_only = yes
+	picture = ROMEV_decemvirii-320860
+
+	option = {
+		name = ROMEV_events.42.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_manpower = -200
+		add_stability = -0.02
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#speech
+country_event = {
+	id = ROMEV_events.43
+	title = ROMEV_events.43.t
+	desc = ROMEV_events.43.d
+	is_triggered_only = yes
+	picture = ROMEV_rally-791
+
+	option = {
+		name = ROMEV_events.43.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_political_power = 0.1
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+
+#propaganda regala
+country_event = {
+	id = ROMEV_events.44
+	title = ROMEV_events.44.t
+	desc = ROMEV_events.44.d
+	is_triggered_only = yes
+	picture = ROMEV_tax-716
+
+	option = {
+		name = ROMEV_events.44.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		
+		add_stability = 0.01
+		add_popularity = {
+    			ideology = neutrality
+    			popularity = 0.03
+		}
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+
+#propaganda fascism
+country_event = {
+	id = ROMEV_events.45
+	title = ROMEV_events.45.t
+	desc = ROMEV_events.45.d
+	is_triggered_only = yes
+	picture = ROMEV_duties-924
+
+	option = {
+		name = ROMEV_events.45.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		add_stability = 0.01
+		add_popularity = {
+    			ideology = fascism
+    			popularity = 0.03
+		}
+		hidden_effect = {
+			country_event = {
+				id = ROMEV_events.5
+				days = 60
+				random_days = 10
+			}
+		}
+	}
+}
+
+#Entry
+country_event = {
+	id = ROMEV_events.46
+	title = ROMEV_events.46.t
+	desc = ROMEV_events.46.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = ROMEV_duties-924
+	option = {
+		name = ROMEV_events.46.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+#malaxa help guard
+country_event = {
+	id = ROMEV_events.47
+	title = ROMEV_events.47.t
+	desc = ROMEV_events.47.d
+	is_triggered_only = yes
+	picture = ROMEV_compliance-825
+
+	option = {
+		name = ROMEV_events.47.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 1
+ 					compare = equals
+				}
+			}
+			ROMID_iron_guard_low_popularity_increase_effect = yes
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 2
+ 					compare = equals
+				}
+			}
+			ROMID_iron_guard_medium_popularity_increase_effect = yes
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 3
+ 					compare = equals
+				}
+			}
+			ROMID_iron_guard_high_popularity_increase_effect = yes
+		}
+		random_list = {
+			85 = {}
+			15 = {
+				custom_effect_tooltip = ROMID_malaxa_gains_support_tt
+				ROMID_malaxa_add_power = yes
+			}
+		}
+	}
+}
+
+#malaxa help lancieri
+country_event = {
+	id = ROMEV_events.48
+	title = ROMEV_events.48.t
+	desc = ROMEV_events.48.d
+	is_triggered_only = yes
+	picture = ROMEV_compliance-825
+
+	option = {
+		name = ROMEV_events.48.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 1
+ 					compare = equals
+				}
+			}
+			ROMID_lancieri_low_popularity_increase_effect = yes
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 2
+ 					compare = equals
+				}
+			}
+			ROMID_lancieri_medium_popularity_increase_effect = yes
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 3
+ 					compare = equals
+				}
+			}
+			ROMID_lancieri_high_popularity_increase_effect = yes
+		}
+		random_list = {
+			80 = {}
+			20 = {
+				custom_effect_tooltip = ROMID_malaxa_gains_support_tt
+				ROMID_malaxa_add_power = yes
+			}
+		}
+	}
+}
+
+#malaxa help royalists
+country_event = {
+	id = ROMEV_events.49
+	title = ROMEV_events.49.t
+	desc = ROMEV_events.49.d
+	is_triggered_only = yes
+	picture = ROMEV_compliance-825
+
+	option = {
+		name = ROMEV_events.49.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 1
+ 					compare = equals
+				}
+			}
+			ROMID_royalists_low_popularity_increase_effect = yes
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 2
+ 					compare = equals
+				}
+			}
+			ROMID_royalists_medium_popularity_increase_effect = yes
+		}
+		if = {
+			limit = {
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 3
+ 					compare = equals
+				}
+			}
+			ROMID_royalists_high_popularity_increase_effect = yes
+		}
+		random_list = {
+			75 = {}
+			25 = {
+				custom_effect_tooltip = ROMID_malaxa_gains_support_tt
+				hidden_effect = { ROMID_malaxa_add_power = yes }
+			}
+		}
+	}
+}
+
+#King was assassinated
+news_event = {
+	id = ROMEV_events.50
+	title = ROMEV_events.50.t
+	desc = ROMEV_events.50.d
+
+	picture = news_event_generic_funeral
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.50.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#King was almost assassinated
+news_event = {
+	id = ROMEV_events.51
+	title = ROMEV_events.51.t
+	desc = ROMEV_events.51.d
+
+	picture = news_event_generic_strike
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.51.a
+		trigger = {
+			
+		}
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#join allies
+news_event = {
+	id = ROMEV_events.52
+	title = ROMEV_events.52.t
+	desc = ROMEV_events.52.d
+
+	picture = news_event_the_mediterranean_alliance
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.52.a
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				has_government = democratic
+				add = 1
+			}
+			modifier = {
+				has_government = neutrality
+				add = 1
+			}
+			modifier = {
+				ROM = { has_same_ideology = yes }
+				add = 2
+			}
+		}
+		add_to_faction = ROM
+		ROM = {
+			news_event = {
+				id = ROMEV_events.53
+ 				random_days = 3
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = ROMEV_events.52.b
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = communism
+				add = 1
+			}
+		}
+		ROM = {
+			news_event = {
+				id = ROMEV_events.54
+ 				random_days = 3
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#accepted eng-rom
+news_event = {
+	id = ROMEV_events.53
+	title = ROMEV_events.53.t
+	desc = ROMEV_events.53.d
+
+	picture = news_event_the_mediterranean_alliance
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.53.a
+		trigger = {
+			
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#refused eng-rom
+news_event = {
+	id = ROMEV_events.54
+	title = ROMEV_events.54.t
+	desc = ROMEV_events.54.d
+
+	picture = news_event_the_mediterranean_alliance
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.54.a
+		trigger = {
+			
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#join comintern
+news_event = {
+	id = ROMEV_events.55
+	title = ROMEV_events.55.t
+	desc = ROMEV_events.55.d
+
+	picture = news_event_the_mediterranean_alliance
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.55.a
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				has_government = communism
+				add = 1
+			}
+			modifier = {
+				ROM = { has_same_ideology = yes }
+				add = 2
+			}
+		}
+		add_to_faction = ROM
+		ROM = {
+			news_event = {
+				id = ROMEV_events.56
+ 				random_days = 3
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = ROMEV_events.55.b
+		trigger = {
+			
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_government = fascism
+				add = 1
+			}
+		}
+		ROM = {
+			news_event = {
+				id = ROMEV_events.57
+ 				random_days = 3
+			}
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#accepted sov-rom
+news_event = {
+	id = ROMEV_events.56
+	title = ROMEV_events.56.t
+	desc = ROMEV_events.56.d
+
+	picture = news_event_the_mediterranean_alliance
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.56.a
+		trigger = {
+			
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}
+
+#refused sov-rom
+news_event = {
+	id = ROMEV_events.57
+	title = ROMEV_events.57.t
+	desc = ROMEV_events.57.d
+
+	picture = news_event_the_mediterranean_alliance
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = ROMEV_events.57.a
+		trigger = {
+			
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.03
+		}
+		ai_chance = {
+			base = 1
+		}
+		hidden_effect = {
+			
+		}
+	}
+}

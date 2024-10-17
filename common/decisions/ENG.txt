@@ -476,29 +476,22 @@ political_actions = {
 			has_war = yes
 			has_government = democratic
 			is_faction_leader = yes
+			USA = { has_war = yes }
+			BRA = { is_in_faction = no }
 		}
 
 		cost = 100
 		
 		visible = {
-			has_war = yes
 
 		}
 		
 		complete_effect = {
-
+			ENG = { add_to_faction = BRA }
 		}
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					any_enemy_country = {
-						original_tag = SPR
-					}
-				}
-			}
 		}
 	}
 

@@ -1,0 +1,3980 @@
+ROMID_army_supply = {
+	ROMID_orita_keep_up = {
+
+		allowed = { original_tag = ROM }
+		priority = 99
+		icon = GFX_decision_generic_industry
+		
+		days_remove = 0
+		days_mission_timeout = 30
+		is_good = no
+
+		cancel_trigger = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_orita_tt
+				NOT = { has_global_flag = romid_issued_orita }
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_orita_tt
+				NOT = { has_global_flag = romid_issued_orita }
+			}
+		}
+		
+		activation = {
+			has_global_flag = romid_issued_orita
+		}
+
+		visible = {
+			tag = ROM
+			has_global_flag = romid_issued_orita
+		}
+		
+		cancel_effect = {
+		
+		}
+		
+		timeout_effect = {
+			add_equipment_to_stockpile = {
+    				type = infantry_equipment
+   				amount = -100
+			}
+			activate_mission = ROMID_orita_keep_up
+		}
+		
+		remove_effect = {
+
+		}
+		
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	ROMID_issue_orita  = { 
+
+		priority = 90
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_orita
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_orita_tt
+				NOT = { has_global_flag = romid_issued_orita }
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+
+		custom_cost_trigger = {
+			has_political_power > 24
+			has_equipment = { infantry_equipment > 99 }
+		}
+		custom_cost_text = ROMID_decision_cost_pp_25_ie_100
+		fire_only_once = no
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_issued_orita_start
+			set_global_flag = romid_issued_orita
+			hidden_effect = {
+				set_technology = {
+    					ROMID_submachine_gun_upgrade = 1
+					popup = no
+				}
+			}
+		}
+
+		complete_effect = {
+			ROMID_supply_used_add = yes
+		}
+
+		modifier = {
+			command_power_gain = -0.1
+		}
+	}
+	
+	ROMID_decommission_orita  = { 
+
+		priority = 89
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_orita
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_orita_tt_n
+				has_global_flag = romid_issued_orita
+			}
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+		cost = 10
+		fire_only_once = no
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = ROMID_issued_orita_cancel
+			clr_global_flag = romid_issued_orita
+			hidden_effect = {
+				set_technology = {
+    					ROMID_submachine_gun_upgrade = 0
+					popup = no
+				}
+			}
+			ROMID_supply_used_substract = yes
+		}
+
+		modifier = {
+
+		}
+	}
+
+	ROMID_zb_vz_30_keep_up = {
+
+		allowed = { original_tag = ROM }
+		priority = 98
+		icon = GFX_decision_generic_industry
+		
+		days_remove = 0
+		days_mission_timeout = 30
+		is_good = no
+
+		cancel_trigger = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_zb_vz_30_tt
+				NOT = { has_global_flag = romid_issued_zb_vz_30 }
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_zb_vz_30_tt
+				NOT = { has_global_flag = romid_issued_zb_vz_30 }
+			}
+		}
+		
+		activation = {
+			has_global_flag = romid_issued_zb_vz_30
+		}
+
+		visible = {
+			tag = ROM
+			has_global_flag = romid_issued_zb_vz_30
+		}
+		
+		cancel_effect = {
+		
+		}
+		
+		timeout_effect = {
+			add_equipment_to_stockpile = {
+    				type = infantry_equipment
+   				amount = -100
+			}
+			activate_mission = ROMID_zb_vz_30_keep_up
+		}
+		
+		remove_effect = {
+
+		}
+		
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	ROMID_issue_zb_vz_30  = { 
+
+		priority = 80
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_cugir_factory
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_zb_vz_30_tt
+				NOT = { has_global_flag = romid_issued_zb_vz_30 }
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+
+		custom_cost_trigger = {
+			has_political_power > 24
+			has_equipment = { infantry_equipment > 99 }
+		}
+		custom_cost_text = ROMID_decision_cost_pp_25_ie_100
+		fire_only_once = no
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_issued_zb_vz_30_start
+			set_global_flag = romid_issued_zb_vz_30
+			hidden_effect = {
+				set_technology = {
+    					ROMID_zb_vz_30_upgrade = 1
+					popup = no
+				}
+			}
+		}
+
+		complete_effect = {
+			ROMID_supply_used_add = yes
+		}
+
+		modifier = {
+			command_power_gain = -0.1
+		}
+	}
+	
+	ROMID_decommission_zb_vz_30  = { 
+
+		priority = 79
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_cugir_factory
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_zb_vz_30_tt_n
+				has_global_flag = romid_issued_zb_vz_30
+			}
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+		cost = 10
+		fire_only_once = no
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = ROMID_issued_zb_vz_30_cancel
+			clr_global_flag = romid_issued_zb_vz_30
+			hidden_effect = {
+				set_technology = {
+    					ROMID_zb_vz_30_upgrade = 0
+					popup = no
+				}
+			}
+			ROMID_supply_used_substract = yes
+		}
+
+		modifier = {
+
+		}
+	}
+
+	ROMID_radio_keep_up = {
+
+		allowed = { original_tag = ROM }
+		priority = 97
+		icon = GFX_decision_generic_industry
+		
+		days_remove = 0
+		days_mission_timeout = 30
+		is_good = no
+
+		cancel_trigger = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_radio_tt
+				NOT = { has_global_flag = romid_issued_radio }
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_radio_tt
+				NOT = { has_global_flag = romid_issued_radio }
+			}
+		}
+		
+		activation = {
+			has_global_flag = romid_issued_radio
+		}
+
+		visible = {
+			tag = ROM
+			has_global_flag = romid_issued_radio
+		}
+		
+		cancel_effect = {
+		
+		}
+		
+		timeout_effect = {
+			add_equipment_to_stockpile = {
+    				type = infantry_equipment
+   				amount = -100
+			}
+			activate_mission = ROMID_radio_keep_up
+		}
+		
+		remove_effect = {
+
+		}
+		
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	ROMID_issue_radio  = { 
+
+		priority = 70
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_improved_division_command
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_radio_tt
+				NOT = { has_global_flag = romid_issued_radio }
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+
+		custom_cost_trigger = {
+			has_political_power > 24
+			has_equipment = { infantry_equipment > 99 }
+		}
+		custom_cost_text = ROMID_decision_cost_pp_25_ie_100
+		fire_only_once = no
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_issued_radio_start
+			set_global_flag = romid_issued_radio
+			hidden_effect = {
+				set_technology = {
+    					ROMID_radio_upgrade = 1
+					popup = no
+				}
+			}
+		}
+
+		complete_effect = {
+			ROMID_supply_used_add = yes
+		}
+
+		modifier = {
+			command_power_gain = -0.1
+		}
+	}
+	
+	ROMID_decommission_radio  = { 
+
+		priority = 69
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_improved_division_command
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_radio_tt_n
+				has_global_flag = romid_issued_radio
+			}
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+		cost = 10
+		fire_only_once = no
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = ROMID_issued_radio_cancel
+			clr_global_flag = romid_issued_radio
+			hidden_effect = {
+				set_technology = {
+    					ROMID_radio_upgrade = 0
+					popup = no
+				}
+			}
+			ROMID_supply_used_substract = yes
+		}
+
+		modifier = {
+
+		}
+	}
+
+	ROMID_grenades_keep_up = {
+
+		allowed = { original_tag = ROM }
+		priority = 96
+		icon = GFX_decision_generic_industry
+		
+		days_remove = 0
+		days_mission_timeout = 30
+		is_good = no
+
+		cancel_trigger = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_grenades_tt
+				NOT = { has_global_flag = romid_issued_grenades }
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_grenades_tt
+				NOT = { has_global_flag = romid_issued_grenades }
+			}
+		}
+		
+		activation = {
+			has_global_flag = romid_issued_grenades
+		}
+
+		visible = {
+			tag = ROM
+			has_global_flag = romid_issued_grenades
+		}
+		
+		cancel_effect = {
+		
+		}
+		
+		timeout_effect = {
+			add_equipment_to_stockpile = {
+    				type = infantry_equipment
+   				amount = -100
+			}
+			activate_mission = ROMID_grenades_keep_up
+		}
+		
+		remove_effect = {
+
+		}
+		
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	ROMID_issue_grenades  = { 
+
+		priority = 60
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_grenades_problem
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_grenades_tt
+				NOT = { has_global_flag = romid_issued_grenades }
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+
+		custom_cost_trigger = {
+			has_political_power > 24
+			has_equipment = { infantry_equipment > 99 }
+		}
+		custom_cost_text = ROMID_decision_cost_pp_25_ie_100
+		fire_only_once = no
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_issued_grenades_start
+			set_global_flag = romid_issued_grenades
+			hidden_effect = {
+				set_technology = {
+    					ROMID_grenades_upgrade = 1
+					popup = no
+				}
+			}
+		}
+
+		complete_effect = {
+			ROMID_supply_used_add = yes
+		}
+
+		modifier = {
+			command_power_gain = -0.1
+		}
+	}
+	
+	ROMID_decommission_grenades  = { 
+
+		priority = 59
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_grenades_problem
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_grenades_tt_n
+				has_global_flag = romid_issued_grenades
+			}
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+		cost = 10
+		fire_only_once = no
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = ROMID_issued_grenades_cancel
+			clr_global_flag = romid_issued_grenades
+			hidden_effect = {
+				set_technology = {
+    					ROMID_grenades_upgrade = 0
+					popup = no
+				}
+			}
+			ROMID_supply_used_substract = yes
+		}
+
+		modifier = {
+
+		}
+	}
+
+	ROMID_handheld_at_keep_up = {
+
+		allowed = { original_tag = ROM }
+		priority = 95
+		icon = GFX_decision_generic_industry
+		
+		days_remove = 0
+		days_mission_timeout = 30
+		is_good = no
+
+		cancel_trigger = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_handheld_at_tt
+				NOT = { has_global_flag = romid_issued_handheld_at }
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_handheld_at_tt
+				NOT = { has_global_flag = romid_issued_handheld_at }
+			}
+		}
+		
+		activation = {
+			has_global_flag = romid_issued_handheld_at
+		}
+
+		visible = {
+			tag = ROM
+			has_global_flag = romid_issued_handheld_at
+		}
+		
+		cancel_effect = {
+		
+		}
+		
+		timeout_effect = {
+			add_equipment_to_stockpile = {
+    				type = infantry_equipment
+   				amount = -100
+			}
+			activate_mission = ROMID_handheld_at_keep_up
+		}
+		
+		remove_effect = {
+
+		}
+		
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	ROMID_issue_handheld_at  = { 
+
+		priority = 50
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_foreign_handheld_antitank
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_handheld_at_tt
+				NOT = { has_global_flag = romid_issued_handheld_at }
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+
+		custom_cost_trigger = {
+			has_political_power > 24
+			has_equipment = { infantry_equipment > 99 }
+		}
+		custom_cost_text = ROMID_decision_cost_pp_25_ie_100
+		fire_only_once = no
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_issued_handheld_at_start
+			set_global_flag = romid_issued_handheld_at
+			hidden_effect = {
+				set_technology = {
+    					ROMID_handheld_at_upgrade = 1
+					popup = no
+				}
+			}
+		}
+
+		complete_effect = {
+			ROMID_supply_used_add = yes
+		}
+
+		modifier = {
+			command_power_gain = -0.1
+		}
+	}
+	
+	ROMID_decommission_handheld_at  = { 
+
+		priority = 49
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_foreign_handheld_antitank
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_issued_handheld_at_tt_n
+				has_global_flag = romid_issued_handheld_at
+			}
+		}
+
+		days_remove = 0
+		days_re_enable = 0
+		cost = 10
+		fire_only_once = no
+
+		remove_effect = {
+
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = ROMID_issued_handheld_at_cancel
+			clr_global_flag = romid_issued_handheld_at
+			hidden_effect = {
+				set_technology = {
+    					ROMID_handheld_at_upgrade = 0
+					popup = no
+				}
+			}
+			ROMID_supply_used_substract = yes
+		}
+
+		modifier = {
+
+		}
+	}
+
+	ROMID_improve_supply_depots  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_merge_plant_materiel
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_crippling_logistics
+		}
+
+		available = {
+			
+		}
+
+		days_remove = 60
+		days_re_enable = 0
+		cost = 20
+		fire_only_once = yes
+
+		remove_effect = {
+			ROMID_supply_cap_add = yes
+		}
+
+		complete_effect = {
+
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.03
+			supply_factor = -0.25
+			supply_node_range = -0.25
+			no_supply_grace = -6
+			out_of_supply_factor = 0.1
+		}
+	}
+}
+
+ROMID_malaxa_intervention = {
+	ROMID_random_intervention = {
+
+		allowed = { original_tag = ROM }
+		priority = 11
+		icon = GFX_decision_eng_propaganda_campaigns
+		
+		days_remove = 0
+		days_mission_timeout = 180
+		is_good = no
+
+		cancel_trigger = {
+			check_variable = {
+				var = ROMID_malaxa_power
+				value = 0
+ 				compare = equals
+			}
+		}
+		
+		available = {
+			check_variable = {
+				var = ROMID_malaxa_power
+				value = 0
+ 				compare = equals
+			}
+		}
+		
+		activation = {
+			has_completed_focus = ROM_cooperation_with_malaxa
+			check_variable = {
+				var = ROMID_malaxa_power
+				value = 0
+ 				compare = greater_than
+			}
+		}
+
+		visible = {
+			tag = ROM
+			check_variable = {
+				var = ROMID_malaxa_power
+				value = 0
+ 				compare = greater_than
+			}
+		}
+		
+		cancel_effect = {
+		
+		}
+		
+		timeout_effect = {
+			random_list = {
+				33 = {
+					modifier = {
+						factor = 0
+						OR = { 
+							has_country_flag = romid_iron_guard_integrated
+							has_country_flag = romid_iron_guard_crushed
+						}
+        				}
+					modifier = {
+						factor = 2
+						check_variable = {
+							var = ROMID_iron_guard_popularity
+							value = 31
+ 							compare = greater_than_or_equals
+						}
+						check_variable = {
+							var = ROMID_iron_guard_popularity
+							value = 65
+ 							compare = less_than_or_equals
+						}
+        				}
+					modifier = {
+						factor = 3
+						check_variable = {
+							var = ROMID_iron_guard_popularity
+							value = 30
+ 							compare = less_than_or_equals
+						}
+        				}
+					country_event = { id = ROMEV_events.47 }
+				}
+				33 = { 
+					modifier = {
+						factor = 0
+						OR = { 
+							has_country_flag = romid_lancieri_integrated
+							has_country_flag = romid_lancieri_crushed
+						}
+        				}
+					modifier = {
+						factor = 2
+						check_variable = {
+							var = ROMID_lancieri_popularity
+							value = 31
+ 							compare = greater_than_or_equals
+						}
+						check_variable = {
+							var = ROMID_lancieri_popularity
+							value = 65
+ 							compare = less_than_or_equals
+						}
+        				}
+					modifier = {
+						factor = 3
+						check_variable = {
+							var = ROMID_lancieri_popularity
+							value = 30
+ 							compare = less_than_or_equals
+						}
+        				}
+					country_event = { id = ROMEV_events.48 }
+				}
+				33 = { 
+					modifier = {
+						factor = 0
+						OR = { 
+							has_country_flag = romid_royalists_integrated
+							has_country_flag = romid_royalists_crushed
+						}
+        				}
+					modifier = {
+						factor = 2
+						check_variable = {
+							var = ROMID_royalists_popularity
+							value = 31
+ 							compare = greater_than_or_equals
+						}
+						check_variable = {
+							var = ROMID_royalists_popularity
+							value = 65
+ 							compare = less_than_or_equals
+						}
+        				}
+					modifier = {
+						factor = 3
+						check_variable = {
+							var = ROMID_royalists_popularity
+							value = 30
+ 							compare = less_than_or_equals
+						}
+        				}
+					country_event = { id = ROMEV_events.49 }
+					
+				}
+			}
+			activate_mission = ROMID_random_intervention
+		}
+		
+		remove_effect = {
+
+		}
+		
+		complete_effect = {
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	ROMID_help_iron_guard  = { 
+
+		priority = 10
+
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_malaxa_over_influence
+				check_variable = {
+					var = ROMID_malaxa_influence
+					value = 50
+ 					compare = greater_than_or_equals
+				}
+			}
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_malaxa_has_power
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 0
+ 					compare = greater_than
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ROM_malaxa_concern
+			NOT = {	
+				OR = { 
+					has_country_flag = romid_iron_guard_integrated
+					has_country_flag = romid_iron_guard_crushed
+				}
+			}
+		}
+		days_remove = 60
+
+		days_re_enable = 30
+
+		cost = 10
+
+		remove_effect = {
+			
+		}
+		
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = ROMID_malaxa_power
+						value = 1
+ 						compare = equals
+					}
+				}
+				ROMID_iron_guard_low_popularity_increase_effect = yes
+			}
+			if = {
+				limit = {
+				check_variable = {
+						var = ROMID_malaxa_power
+						value = 2
+ 						compare = equals
+					}
+				}
+				ROMID_iron_guard_medium_popularity_increase_effect = yes
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = ROMID_malaxa_power
+						value = 3
+ 						compare = equals
+					}
+				}
+				ROMID_iron_guard_high_popularity_increase_effect = yes
+			}
+			ROMID_malaxa_remove_power = yes
+			ROMID_malaxa_remove_influence = yes
+		}
+		
+		modifier = {
+			
+		}
+	}
+
+	ROMID_help_lancieri  = { 
+
+		priority = 9
+
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_malaxa_over_influence
+				check_variable = {
+					var = ROMID_malaxa_influence
+					value = 50
+ 					compare = greater_than_or_equals
+				}
+			}
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_malaxa_has_power
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 0
+ 					compare = greater_than
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ROM_malaxa_concern
+			NOT = {	
+				OR = { 
+					has_country_flag = romid_lancieri_integrated
+					has_country_flag = romid_lancieri_crushed
+				}
+			}
+		}
+		days_remove = 60
+
+		days_re_enable = 30
+
+		cost = 10
+
+		remove_effect = {
+			
+		}
+		
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = ROMID_malaxa_power
+						value = 1
+ 						compare = equals
+					}
+				}
+				ROMID_lancieri_low_popularity_increase_effect = yes
+			}
+			if = {
+				limit = {
+				check_variable = {
+						var = ROMID_malaxa_power
+						value = 2
+ 						compare = equals
+					}
+				}
+				ROMID_lancieri_medium_popularity_increase_effect = yes
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = ROMID_malaxa_power
+						value = 3
+ 						compare = equals
+					}
+				}
+				ROMID_lancieri_high_popularity_increase_effect = yes
+			}
+			ROMID_malaxa_remove_power = yes
+			ROMID_malaxa_remove_influence = yes
+		}
+		
+		modifier = {
+			
+		}
+	}
+
+	ROMID_help_royalists  = { 
+
+		priority = 8
+
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_malaxa_over_influence
+				check_variable = {
+					var = ROMID_malaxa_influence
+					value = 50
+ 					compare = greater_than_or_equals
+				}
+			}
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_malaxa_has_power
+				check_variable = {
+					var = ROMID_malaxa_power
+					value = 0
+ 					compare = greater_than
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ROM_malaxa_concern
+			NOT = {	
+				OR = { 
+					has_country_flag = romid_royalists_integrated
+					has_country_flag = romid_royalists_crushed
+				}
+			}
+		}
+		days_remove = 60
+
+		days_re_enable = 30
+
+		cost = 10
+
+		remove_effect = {
+			
+		}
+		
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = ROMID_malaxa_power
+						value = 1
+ 						compare = equals
+					}
+				}
+				ROMID_royalists_low_popularity_increase_effect = yes
+			}
+			if = {
+				limit = {
+				check_variable = {
+						var = ROMID_malaxa_power
+						value = 2
+ 						compare = equals
+					}
+				}
+				ROMID_royalists_medium_popularity_increase_effect = yes
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = ROMID_malaxa_power
+						value = 3
+ 						compare = equals
+					}
+				}
+				ROMID_royalists_high_popularity_increase_effect = yes
+			}
+			ROMID_malaxa_remove_power = yes
+			ROMID_malaxa_remove_influence = yes
+		}
+		
+		modifier = {
+			
+		}
+	}
+
+	ROMID_influence_malaxa  = { 
+
+		priority = 7
+
+		icon = GFX_decision_eng_trade_unions_demand
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_malaxa_max_influence
+				check_variable = {
+					var = ROMID_malaxa_influence
+					value = 75
+ 					compare = less_than
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ROM_malaxa_concern
+		}
+		days_remove = 30
+
+		days_re_enable = 180
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_malaxa_add_influence = yes
+		}
+		
+		complete_effect = {
+			
+		}
+		
+		modifier = {
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = 0.05
+			production_speed_buildings_factor = 0.05
+			production_speed_industrial_complex_factor = 0.1
+		}
+	}
+}
+
+ROMID_line_motorization = {	
+	ROMID_start_motorization  = { 
+
+		priority = 11
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_kickstart_automobile_industy
+		}
+
+		available = {
+			has_idea = ROMID_crippled_logistics_motorization
+		}
+
+		days_remove = 40
+		fire_only_once = yes
+		cost = 10
+
+		remove_effect = {
+			swap_ideas = {
+                		remove_idea = ROMID_crippled_logistics_motorization
+                		add_idea = ROMID_crippled_logistics_motorization_semi
+            		}
+		}
+
+		complete_effect = {
+			
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.02
+			industrial_capacity_factory = -0.05
+		}
+	}
+
+	ROMID_normal_motorization  = { 
+
+		priority = 10
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_kickstart_automobile_industy
+			NOT = { has_decision = ROMID_elite_motorization }
+			NOT = { has_idea = ROMID_crippled_logistics_motorization_full }
+		}
+
+		available = {
+			has_idea = ROMID_crippled_logistics_motorization_semi
+		}
+
+		days_remove = 25
+		fire_only_once = yes
+		cost = 10
+
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = ROMID_crippled_logistics_motorization_semi
+				add_idea = ROMID_crippled_logistics_motorization_compromise
+			}
+		}
+
+		complete_effect = {
+			
+		}
+
+		modifier = {
+			supply_factor = -0.05
+			consumer_goods_factor = 0.03
+		}
+	}
+
+	ROMID_elite_motorization  = { 
+
+		priority = 9
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_kickstart_automobile_industy
+			NOT = { has_decision = ROMID_normal_motorization }
+			NOT = { has_idea = ROMID_crippled_logistics_motorization_compromise }
+		}
+
+		available = {
+			has_idea= ROMID_military_vehicles
+			has_idea = ROMID_crippled_logistics_motorization_semi
+		}
+
+		days_remove = 40
+		fire_only_once = yes
+		cost = 10
+
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = ROMID_crippled_logistics_motorization_semi
+				add_idea = ROMID_crippled_logistics_motorization_full
+			}
+		}
+
+		complete_effect = {
+			
+		}
+
+		modifier = {
+			supply_factor = -0.1
+			consumer_goods_factor = 0.06
+			industrial_capacity_factory = -0.1
+		}
+	}
+
+	ROMID_finish_motorization  = { 
+
+		priority = 8
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_kickstart_automobile_industy
+		}
+
+		available = {
+			OR = {
+				has_idea = ROMID_crippled_logistics_motorization_compromise
+				has_idea = ROMID_crippled_logistics_motorization_full
+			}
+		}
+
+		days_remove = 0
+		fire_only_once = yes
+		cost = 10
+
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = ROMID_crippled_logistics_motorization_compromise
+					}
+					remove_ideas = ROMID_crippled_logistics_motorization_compromise
+				}
+				if = {
+					limit = {
+						has_idea = ROMID_crippled_logistics_motorization_full
+					}
+					remove_ideas = ROMID_military_vehicles
+					swap_ideas = {
+						remove_idea = ROMID_crippled_logistics_motorization_full
+						add_idea = ROMID_military_vehicles_2
+					}
+				}
+				set_global_flag = romid_finished_line_motorization
+			}
+			custom_effect_tooltip = ROMID_finish_moto_tt
+		}
+
+		complete_effect = {
+			
+		}
+
+		modifier = {
+		}
+	}
+}
+
+ROMID_officer_training = {
+	ROMID_officer_political_training  = { 
+
+		priority = 55
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			has_idea=ROMID_officer_training_basic
+			NOT={
+				has_idea = ROMID_officer_training_change
+			}
+			has_completed_focus = ROM_russia_of_the_balkans
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+		cost = 50
+
+		remove_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					ROMID_officer_training_political
+					ROMID_officer_training_basic
+					ROMID_officer_training_normal
+					ROMID_officer_training_advanced
+					ROMID_officer_training_elite
+				}
+			}
+			add_ideas = ROMID_officer_training_political
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ROMID_officer_training_change
+				days = 90
+			}
+		}
+
+		modifier = {
+		}
+	}
+
+	ROMID_officer_basic_training  = { 
+
+		priority = 55
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			OR={
+				has_idea=ROMID_officer_training_political
+				has_idea=ROMID_officer_training_normal
+			}
+			NOT={
+				has_idea = ROMID_officer_training_change
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+		cost = 50
+
+		remove_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					ROMID_officer_training_political
+					ROMID_officer_training_basic
+					ROMID_officer_training_normal
+					ROMID_officer_training_advanced
+					ROMID_officer_training_elite
+				}
+			}
+			add_ideas = ROMID_officer_training_basic
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ROMID_officer_training_change
+				days = 90
+			}
+		}
+
+		modifier = {
+		}
+	}
+
+	ROMID_officer_normal_training  = { 
+
+		priority = 55
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			OR={
+				has_idea=ROMID_officer_training_basic
+				has_idea=ROMID_officer_training_advanced
+			}
+			NOT={
+				has_idea = ROMID_officer_training_change
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+		cost = 50
+
+		remove_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					ROMID_officer_training_political
+					ROMID_officer_training_basic
+					ROMID_officer_training_normal
+					ROMID_officer_training_advanced
+					ROMID_officer_training_elite
+				}
+			}
+			add_ideas = ROMID_officer_training_normal
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ROMID_officer_training_change
+				days = 90
+			}
+		}
+
+		modifier = {
+		}
+	}
+
+	ROMID_officer_advanced_training  = { 
+
+		priority = 55
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			OR={
+				has_idea=ROMID_officer_training_normal
+				has_idea=ROMID_officer_training_elite
+			}
+			NOT={
+				has_idea = ROMID_officer_training_change
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+		cost = 50
+
+		remove_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					ROMID_officer_training_political
+					ROMID_officer_training_basic
+					ROMID_officer_training_normal
+					ROMID_officer_training_advanced
+					ROMID_officer_training_elite
+				}
+			}
+			add_ideas = ROMID_officer_training_advanced
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ROMID_officer_training_change
+				days = 90
+			}
+		}
+
+		modifier = {
+		}
+	}
+
+	ROMID_officer_elite_training  = { 
+
+		priority = 55
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			has_idea=ROMID_officer_training_advanced
+			NOT={
+				has_idea = ROMID_officer_training_change
+			}
+			has_completed_focus = ROM_averescuslegacy
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+		cost = 50
+
+		remove_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					ROMID_officer_training_political
+					ROMID_officer_training_basic
+					ROMID_officer_training_normal
+					ROMID_officer_training_advanced
+					ROMID_officer_training_elite
+				}
+			}
+			add_ideas = ROMID_officer_training_elite
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ROMID_officer_training_change
+				days = 90
+			}
+		}
+
+		modifier = {
+		}
+	}
+}
+
+
+
+
+
+
+ROMID_army_training = {
+	ROMID_army_human_wave_training  = { 
+
+		priority = 55
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			has_idea=ROMID_army_training_basic
+			NOT={
+				has_idea = ROMID_army_training_change
+			}
+			has_completed_focus = ROM_improved_general_headquarters
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+		cost = 50
+
+		remove_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					ROMID_army_training_human_waves
+					ROMID_army_training_basic
+					ROMID_army_training_normal
+					ROMID_army_training_advanced
+					ROMID_army_training_elite
+				}
+			}
+			add_ideas = ROMID_army_training_human_waves
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ROMID_army_training_change
+				days = 90
+			}
+		}
+
+		modifier = {
+		}
+	}
+
+	ROMID_army_basic_training  = { 
+
+		priority = 55
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			OR={
+				has_idea=ROMID_army_training_human_waves
+				has_idea=ROMID_army_training_normal
+			}
+			NOT={
+				has_idea = ROMID_army_training_change
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+		cost = 50
+
+		remove_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					ROMID_army_training_human_waves
+					ROMID_army_training_basic
+					ROMID_army_training_normal
+					ROMID_army_training_advanced
+					ROMID_army_training_elite
+				}
+			}
+			add_ideas = ROMID_army_training_basic
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ROMID_army_training_change
+				days = 90
+			}
+		}
+
+		modifier = {
+		}
+	}
+
+	ROMID_army_normal_training  = { 
+
+		priority = 55
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			OR={
+				has_idea=ROMID_army_training_basic
+				has_idea=ROMID_army_training_advanced
+			}
+			NOT={
+				has_idea = ROMID_army_training_change
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+		cost = 50
+
+		remove_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					ROMID_army_training_human_waves
+					ROMID_army_training_basic
+					ROMID_army_training_normal
+					ROMID_army_training_advanced
+					ROMID_army_training_elite
+				}
+			}
+			add_ideas = ROMID_army_training_normal
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ROMID_army_training_change
+				days = 90
+			}
+		}
+
+		modifier = {
+		}
+	}
+
+	ROMID_army_advanced_training  = { 
+
+		priority = 55
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			OR={
+				has_idea=ROMID_army_training_normal
+				has_idea=ROMID_army_training_elite
+			}
+			NOT={
+				has_idea = ROMID_army_training_change
+			}
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+		cost = 50
+
+		remove_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					ROMID_army_training_human_waves
+					ROMID_army_training_basic
+					ROMID_army_training_normal
+					ROMID_army_training_advanced
+					ROMID_army_training_elite
+				}
+			}
+			add_ideas = ROMID_army_training_advanced
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ROMID_army_training_change
+				days = 90
+			}
+		}
+
+		modifier = {
+		}
+	}
+
+	ROMID_army_elite_training  = { 
+
+		priority = 55
+
+		icon = GFX_decision_generic_military
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			has_idea=ROMID_army_training_advanced
+			NOT={
+				has_idea = ROMID_army_training_change
+			}
+			has_completed_focus = ROM_improved_division_command
+		}
+
+		days_remove = 30
+		days_re_enable = 0
+		cost = 50
+
+		remove_effect = {
+			hidden_effect = {
+				remove_ideas = {
+					ROMID_army_training_human_waves
+					ROMID_army_training_basic
+					ROMID_army_training_normal
+					ROMID_army_training_advanced
+					ROMID_army_training_elite
+				}
+			}
+			add_ideas = ROMID_army_training_elite
+		}
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = ROMID_army_training_change
+				days = 90
+			}
+		}
+
+		modifier = {
+		}
+	}
+}
+
+
+
+
+
+
+#INTERNAL FACTIONS
+
+ROMID_internal_factions = {
+
+	ROMID_army_parade  = { 
+
+		priority = 55
+
+		icon = GFX_decision_generic_tank
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_army_medium_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_army_loyalty
+					value = 45
+ 					compare = greater_than_or_equals
+				}
+			}
+			
+		}
+
+		days_remove = 7
+		days_re_enable = 365
+		cost = 0
+
+		complete_effect = {
+			ROMID_army_low_loyalty_decrease_effect = yes
+		}
+
+		remove_effect = {
+			add_political_power = 20
+		}
+
+		modifier = {
+			command_power_gain = -0.5
+			political_power_factor = 0.1
+		}
+	}
+
+	ROMID_integrate_the_royalists  = { 
+
+		priority = 5
+
+		icon = GFX_decision_generic_decision
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = ROM_end_the_parties
+				has_completed_focus = ROM_straja_tarii_dem
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_royalists_full_loyalty_check_tt
+				check_variable = {
+					var = ROMID_royalists_loyalty
+					value = 100
+ 					compare = equals
+				}
+			}
+		}
+
+		days_remove = 0
+		fire_only_once = yes
+		cost = 0
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_integrate_the_royalists_tt
+			set_country_flag = romid_royalists_integrated
+			hidden_effect = {
+				remove_ideas = ROMID_the_royalists_weak_low_loyalty
+				remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+				remove_ideas = ROMID_the_royalists_weak_high_loyalty
+				remove_ideas = ROMID_the_royalists_normal_low_loyalty
+				remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+				remove_ideas = ROMID_the_royalists_normal_high_loyalty
+				remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+				remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+				remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+				add_ideas = ROMID_the_royalists_integrated
+			}
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_integrate_the_iron_guard  = { 
+
+		priority = 5
+
+		icon = GFX_decision_generic_decision
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = ROM_support_the_coup
+				AND = {
+					has_completed_focus = ROM_institute_statul_nationallegionar
+					has_completed_focus = ROM_getridofthelancieri
+				}
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_iron_guard_full_loyalty_check_tt
+				check_variable = {
+					var = ROMID_iron_guard_loyalty
+					value = 100
+ 					compare = equals
+				}
+			}
+		}
+
+		days_remove = 0
+		fire_only_once = yes
+		cost = 0
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_integrate_the_iron_guard_tt
+			set_country_flag = romid_iron_guard_integrated
+			hidden_effect = {
+				remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+				remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+				remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+				remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+				remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+				remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+				remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+				remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+				remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+				add_ideas = ROMID_the_iron_guard_integrated
+			}
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_integrate_the_lancieri  = { 
+
+		priority = 5
+
+		icon = GFX_decision_generic_decision
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_replacetheironguardwiththelancieri
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_lancieri_full_loyalty_check_tt
+				check_variable = {
+					var = ROMID_lancieri_loyalty
+					value = 100
+ 					compare = equals
+				}
+			}
+		}
+
+		days_remove = 0
+		fire_only_once = yes
+		cost = 0
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_integrate_the_lancieri_tt
+			set_country_flag = romid_lancieri_integrated
+			hidden_effect = {
+				remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+				remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+				remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+				remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+				remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+				remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+				remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+				remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+				remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+				add_ideas = ROMID_the_lancieri_integrated
+			}
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_integrate_the_socialists  = { 
+
+		priority = 5
+
+		icon = GFX_decision_generic_decision
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_act_on_the_Constitution
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_socialists_full_loyalty_check_tt
+				check_variable = {
+					var = ROMID_socialists_loyalty
+					value = 100
+ 					compare = equals
+				}
+			}
+		}
+
+		days_remove = 0
+		fire_only_once = yes
+		cost = 0
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_integrate_the_socialists_tt
+			set_country_flag = romid_socialists_integrated
+			hidden_effect = {
+				remove_ideas = ROMID_the_socialists_weak_low_loyalty
+				remove_ideas = ROMID_the_socialists_weak_medium_loyalty
+				remove_ideas = ROMID_the_socialists_weak_high_loyalty
+				remove_ideas = ROMID_the_socialists_normal_low_loyalty
+				remove_ideas = ROMID_the_socialists_normal_medium_loyalty
+				remove_ideas = ROMID_the_socialists_normal_high_loyalty
+				remove_ideas = ROMID_the_socialists_powerful_low_loyalty
+				remove_ideas = ROMID_the_socialists_powerful_medium_loyalty
+				remove_ideas = ROMID_the_socialists_powerful_high_loyalty
+				add_ideas = ROMID_the_socialists_integrated
+			}
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_crush_the_royalists  = { 
+
+		priority = 5
+
+		icon = GFX_decision_oppression
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			OR = { 
+				has_completed_focus = ROM_purge_the_old_elite
+				has_completed_focus = ROM_remove_the_puppet_king
+				has_completed_focus = ROM_crush_any_royalist_resistance
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_royalists_zero_popularity_check_tt
+				check_variable = {
+					var = ROMID_royalists_popularity
+					value = 0
+ 					compare = equals
+				}
+			}
+		}
+
+		days_remove = 0
+		fire_only_once = yes
+		cost = 0
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_crush_the_royalists_tt
+			set_country_flag = romid_royalists_crushed
+			hidden_effect = {
+				remove_ideas = ROMID_the_royalists_weak_low_loyalty
+				remove_ideas = ROMID_the_royalists_weak_medium_loyalty
+				remove_ideas = ROMID_the_royalists_weak_high_loyalty
+				remove_ideas = ROMID_the_royalists_normal_low_loyalty
+				remove_ideas = ROMID_the_royalists_normal_medium_loyalty
+				remove_ideas = ROMID_the_royalists_normal_high_loyalty
+				remove_ideas = ROMID_the_royalists_powerful_low_loyalty
+				remove_ideas = ROMID_the_royalists_powerful_medium_loyalty
+				remove_ideas = ROMID_the_royalists_powerful_high_loyalty
+			}
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_crush_the_iron_guard  = { 
+
+		priority = 5
+
+		icon = GFX_decision_oppression
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			OR = { 
+				has_completed_focus = ROM_get_rid_of_the_iron_guard
+				has_completed_focus = ROM_replacetheironguardwiththelancieri
+				has_completed_focus = ROM_purge_the_iron_guard
+				has_completed_focus = ROM_target_legionnary_propaganda
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_iron_guard_zero_popularity_check_tt
+				check_variable = {
+					var = ROMID_iron_guard_popularity
+					value = 0
+ 					compare = equals
+				}
+			}
+		}
+
+		days_remove = 0
+		fire_only_once = yes
+		cost = 0
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_crush_the_iron_guard_tt
+			set_country_flag = romid_iron_guard_crushed
+			hidden_effect = {
+				remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+				remove_ideas = ROMID_the_iron_guard_weak_medium_loyalty
+				remove_ideas = ROMID_the_iron_guard_weak_high_loyalty
+				remove_ideas = ROMID_the_iron_guard_normal_low_loyalty
+				remove_ideas = ROMID_the_iron_guard_normal_medium_loyalty
+				remove_ideas = ROMID_the_iron_guard_normal_high_loyalty
+				remove_ideas = ROMID_the_iron_guard_powerful_low_loyalty
+				remove_ideas = ROMID_the_iron_guard_powerful_medium_loyalty
+				remove_ideas = ROMID_the_iron_guard_powerful_high_loyalty
+			}
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_crush_the_lancieri  = { 
+
+		priority = 5
+
+		icon = GFX_decision_oppression
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			OR = { 
+				has_completed_focus = ROM_getridofthelancieri
+				has_completed_focus = ROM_ban_other_parties
+				has_completed_focus = ROM_use_the_army_to_purge_fascists
+				has_completed_focus = ROM_undermine_fascist_influence
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_lancieri_zero_popularity_check_tt
+				check_variable = {
+					var = ROMID_lancieri_popularity
+					value = 0
+ 					compare = equals
+				}
+			}
+		}
+
+		days_remove = 0
+		fire_only_once = yes
+		cost = 0
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_crush_the_lancieri_tt
+			set_country_flag = romid_lancieri_crushed
+			hidden_effect = {
+				remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+				remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+				remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+				remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+				remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+				remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+				remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+				remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+				remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
+			}
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_crush_the_socialists  = { 
+
+		priority = 4
+
+		icon = GFX_decision_oppression
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			OR = { 
+				has_completed_focus = ROM_ban_trade_unions
+				has_completed_focus = ROM_crush_the_communists
+				has_completed_focus = ROM_expand_the_forced_labour_camps
+				has_completed_focus = ROM_violent_prison_camp_system
+				has_completed_focus = ROM_dismiss_pawn_ministers
+			}
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_socialists_zero_popularity_check_tt
+				check_variable = {
+					var = ROMID_socialists_popularity
+					value = 0
+ 					compare = equals
+				}
+			}
+		}
+
+		days_remove = 0
+		fire_only_once = yes
+		cost = 0
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_crush_the_socialists_tt
+			set_country_flag = romid_socialists_crushed
+			hidden_effect = {
+				remove_ideas = ROMID_the_socialists_weak_low_loyalty
+				remove_ideas = ROMID_the_socialists_weak_medium_loyalty
+				remove_ideas = ROMID_the_socialists_weak_high_loyalty
+				remove_ideas = ROMID_the_socialists_normal_low_loyalty
+				remove_ideas = ROMID_the_socialists_normal_medium_loyalty
+				remove_ideas = ROMID_the_socialists_normal_high_loyalty
+				remove_ideas = ROMID_the_socialists_powerful_low_loyalty
+				remove_ideas = ROMID_the_socialists_powerful_medium_loyalty
+				remove_ideas = ROMID_the_socialists_powerful_high_loyalty
+			}
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_king_assassination_attempt  = { 
+
+		priority = 50
+
+		icon = GFX_decision_generic_assassination
+
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_assasinate_the_king
+			NOT = { has_country_flag = ROMID_king_was_assassinated }
+			NOT = { has_country_flag = ROMID_king_will_be_assassinated }
+		}
+
+		available = {
+			OR = {
+				has_decision = ROMID_visit_france
+				has_decision = ROMID_visit_romanian_city
+			}
+			NOT = { has_idea = ROMID_recent_assassination_attempt }
+		}
+
+		days_remove = 0
+		fire_only_once = no
+		cost = 50
+		
+		complete_effect = {
+			custom_effect_tooltip = ROMID_king_ig_tt
+			random_list = {
+				var:ROMID_iron_guard_popularity = {
+					custom_effect_tooltip = ROMID_assassination_successful_tt
+					ROM = { set_country_flag = ROMID_king_will_be_assassinated }
+				}
+				var:ROMID_iron_guard_popularity_leftover = { 
+					custom_effect_tooltip = ROMID_assassination_failed_tt
+					ROM = { set_country_flag = ROMID_king_wont_be_assassinated }
+				}
+			}
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_antonescu_coup  = { 
+
+		priority = 50
+
+		icon = GFX_decision_generic_speech
+
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_invite_german_advisors
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_army_disloyal_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_army_loyalty
+					value = 15
+ 					compare = less_than_or_equals
+				}
+			}
+		}
+
+		days_remove = 0
+		fire_only_once = yes
+		cost = 0
+		
+		complete_effect = {
+			create_country_leader = {
+				name = "Ion Antonescu"
+				picture = GFX_Portrait_romania_ion_antonescu	
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					ROMID_anticommunist_crusader
+					ROMID_indecisive
+					ROMID_maresal
+				}
+				id = -1
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = ROM_fascism_party_long3
+ 				name = ROM_fascism_party3
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			ROMID_iron_guard_medium_loyalty_increase_effect = yes
+			ROMID_iron_guard_low_popularity_increase_effect = yes
+			ROMID_lancieri_low_loyalty_decrease_effect = yes
+			hidden_effect = {
+				ROMID_army_change_regime_loyalty_increase_effect = yes
+				ROM = { set_country_flag = ROMID_antonescu_took_power }
+			}
+			news_event = { id = ROMEV_events.31 }
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_prepare_michaels_coup  = { 
+
+		priority = 50
+
+		icon = GFX_decision_generic_civil_support
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_mobilize_more_men_to_the_front
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_army_disloyal_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_army_loyalty
+					value = 15
+ 					compare = less_than_or_equals
+				}
+			}
+		}
+
+		days_remove = 7
+		fire_only_once = yes
+		cost = 0
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_michael_coup_is_ready_tt
+			hidden_effect = {
+				set_country_flag = ROMID_michael_coup_ready
+			}
+		}
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+	}
+
+	ROMID_arm_the_iron_guard  = {
+
+		priority = 5
+
+		icon = GFX_decision_generic_industry
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_arm_the_paramilitaries
+			NOT = { has_global_flag = romid_first_civil_war_started }
+		}
+
+		days_remove = 14
+		fire_only_once = yes
+		cost = 20
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_arm_iron_guard_tt
+			set_country_flag = romid_armed_iron_guard
+			ROMID_iron_guard_low_loyalty_increase_effect = yes
+			ROMID_iron_guard_medium_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+	}
+
+	ROMID_arm_the_lancieri  = { 
+
+		priority = 4
+
+		icon = GFX_decision_generic_industry
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_arm_the_paramilitaries
+			NOT = { has_global_flag = romid_first_civil_war_started }
+		}
+
+		days_remove = 14
+		fire_only_once = yes
+		cost = 20
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_arm_lancieri_tt
+			set_country_flag = romid_armed_lancieri
+			ROMID_lancieri_low_loyalty_increase_effect = yes
+			ROMID_lancieri_medium_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+	}
+
+	ROMID_secure_caches = { 
+
+		priority = 3
+
+		icon = GFX_decision_ger_military_buildup
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_arm_the_paramilitaries
+			NOT = { has_global_flag = romid_first_civil_war_started }
+		}
+
+		days_remove = 14
+		fire_only_once = yes
+		cost = 20
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_secure_cache_tt
+			set_country_flag = romid_caches_secured
+			ROMID_iron_guard_low_popularity_increase_effect = yes
+			ROMID_lancieri_low_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+	}
+
+	ROMID_secure_airfields = { 
+
+		priority = 2
+
+		icon = GFX_decision_generic_air
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_arm_the_paramilitaries
+			NOT = { has_global_flag = romid_first_civil_war_started }
+		}
+
+		days_remove = 14
+		fire_only_once = yes
+		cost = 20
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_secure_airfields_tt
+			set_country_flag = romid_airfields_secured
+			ROMID_iron_guard_low_popularity_increase_effect = yes
+			ROMID_lancieri_low_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+	}
+
+	ROMID_request_german_attache  = { 
+
+		priority = 2
+
+		icon = GFX_decision_generic_army_support
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_request_german_help
+			NOT = { has_global_flag = romid_second_civil_war_started }
+		}
+
+		days_remove = 14
+		fire_only_once = yes
+		cost = 20
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_german_military_attache_tt
+			set_country_flag = romid_german_attache_ready
+			ROMID_lancieri_low_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+	}
+
+	ROMID_request_german_rifles  = { 
+
+		priority = 1
+
+		icon = GFX_decision_generic_industry
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_request_german_help
+			NOT = { has_global_flag = romid_second_civil_war_started }
+		}
+
+		days_remove = 14
+		fire_only_once = yes
+		cost = 20
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_german_rifles_tt
+			set_country_flag = romid_german_rifles_ready
+			ROMID_lancieri_low_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+	}
+
+	ROMID_request_german_armaments  = { 
+
+		priority = 0
+
+		icon = GFX_decision_ger_military_buildup
+		allowed = { 
+			original_tag = ROM
+		}
+
+		visible = {
+			has_completed_focus = ROM_request_german_help
+			NOT = { has_global_flag = romid_second_civil_war_started }
+		}
+
+		days_remove = 14
+		fire_only_once = yes
+		cost = 20
+
+		remove_effect = {
+			custom_effect_tooltip = ROMID_german_armaments_tt
+			set_country_flag = romid_german_armament_ready
+			ROMID_lancieri_low_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			political_power_cost = 0.1
+		}
+	}
+}	
+
+ROMID_army_affairs = {
+	ROMID_increase_army_payment  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_military
+
+		allowed = { 
+			original_tag = ROM
+		}
+		
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_relax_training_program_army }
+				NOT = { has_decision = ROMID_bonus_supply }
+				NOT = { has_decision = ROMID_use_army_for_construction }
+				NOT = { has_decision = ROMID_cut_army_salary }
+				NOT = { has_decision = ROMID_cut_army_financing }
+			}
+		}
+
+		days_remove = 30
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_army_low_loyalty_increase_effect = yes
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.02
+		}
+	}
+
+	ROMID_relax_training_program_army  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_military
+
+		allowed = { 
+			original_tag = ROM
+		}
+
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_increase_army_payment }
+				NOT = { has_decision = ROMID_bonus_supply }
+				NOT = { has_decision = ROMID_use_army_for_construction }
+				NOT = { has_decision = ROMID_cut_army_salary }
+				NOT = { has_decision = ROMID_cut_army_financing }
+			}
+		}
+
+		days_remove = 30
+
+		days_re_enable = 180
+
+		cost = 15
+
+		remove_effect = {
+			ROMID_army_medium_loyalty_increase_effect = yes
+		}
+
+		modifier = {
+			army_org_factor = -0.05
+			army_morale_factor = -0.05
+			army_attack_factor = -0.1
+			minimum_training_level = -0.05
+			training_time_army_factor = -0.2
+		}
+	}
+
+	ROMID_bonus_supply  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_military
+
+		allowed = { 
+			original_tag = ROM
+		}
+
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_increase_army_payment }
+				NOT = { has_decision = ROMID_relax_training_program_army }
+				NOT = { has_decision = ROMID_use_army_for_construction }
+				NOT = { has_decision = ROMID_cut_army_salary }
+				NOT = { has_decision = ROMID_cut_army_financing }
+			}
+		}
+
+		days_remove = 30
+
+		days_re_enable = 365
+
+		cost = 20
+
+		remove_effect = {
+			ROMID_army_high_loyalty_increase_effect = yes
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			supply_consumption_factor = 0.15
+			army_attack_factor = 0.1
+			army_defence_factor = 0.05
+			army_morale_factor = 0.05
+		}
+	}
+
+	ROMID_use_army_for_construction = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_military
+
+		allowed = { 
+			original_tag = ROM
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_army_low_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_army_loyalty
+					value = 15
+ 					compare = greater_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_increase_army_payment }
+				NOT = { has_decision = ROMID_relax_training_program_army }
+				NOT = { has_decision = ROMID_bonus_supply  }
+				NOT = { has_decision = ROMID_cut_army_salary }
+				NOT = { has_decision = ROMID_cut_army_financing }
+			}
+		}
+
+		days_remove = 30
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_army_low_loyalty_decrease_effect = yes
+		}
+
+		modifier = {
+			production_speed_buildings_factor = 0.15
+		}
+	}
+
+	ROMID_cut_army_salary = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_military
+
+		allowed = { 
+			original_tag = ROM
+		}
+		
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_army_low_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_army_loyalty
+					value = 15
+ 					compare = greater_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_increase_army_payment }
+				NOT = { has_decision = ROMID_relax_training_program_army }
+				NOT = { has_decision = ROMID_bonus_supply  }
+				NOT = { has_decision = ROMID_use_army_for_construction }
+				NOT = { has_decision = ROMID_cut_army_financing }
+			}
+		}		
+
+		days_remove = 30
+
+		days_re_enable = 180
+
+		cost = 15
+
+		remove_effect = {
+			ROMID_army_medium_loyalty_decrease_effect = yes
+		}
+
+		remove_effect = {
+			add_political_power = 40
+		}
+	}
+
+	ROMID_cut_army_financing = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_military
+
+		allowed = { 
+			original_tag = ROM
+		}
+
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_army_medium_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_army_loyalty
+					value = 45
+ 					compare = greater_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_increase_army_payment }
+				NOT = { has_decision = ROMID_relax_training_program_army }
+				NOT = { has_decision = ROMID_bonus_supply  }
+				NOT = { has_decision = ROMID_use_army_for_construction }
+				NOT = { has_decision = ROMID_cut_army_salary }
+			}
+		}
+
+		days_remove = 30
+
+		days_re_enable = 365
+
+		cost = 20
+
+		remove_effect = {
+			ROMID_army_high_loyalty_decrease_effect = yes
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.1
+			supply_consumption_factor = -0.15
+			army_attack_factor = -0.2
+			army_defence_factor = -0.2
+			army_org_factor = -0.2
+			army_morale_factor = -0.2
+		}
+	}
+}
+
+ROMID_royalists_affairs = {
+	ROMID_visit_france  = { 
+
+		priority = 0
+
+		icon = GFX_decision_hol_attract_foreign_investors
+
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_royal_speech }
+				NOT = { has_decision = ROMID_visit_romanian_city}
+				NOT = { has_decision = ROMID_royal_decree  }
+				NOT = { has_decision = ROMID_tax_the_rich }
+				NOT = { has_decision = ROMID_reduce_corruption }
+			}
+		}
+
+		days_remove = 7
+
+		days_re_enable = 180
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_royalists_low_loyalty_increase_effect = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						ROM = { has_country_flag = ROMID_king_will_be_assassinated }
+					}
+					add_ideas = ROMID_political_turmoil_1
+					retire_ideology_leader = neutrality
+					ROM = { clr_country_flag = ROMID_king_will_be_assassinated }
+					ROM = { set_country_flag = ROMID_king_was_assassinated }
+					news_event = {
+						id = ROMEV_events.50
+					}
+				}
+
+				if = {
+					limit = {
+						ROM = { has_country_flag = ROMID_king_wont_be_assassinated }
+					}
+					ROM = { clr_country_flag = ROMID_king_wont_be_assassinated }
+					ROMID_iron_guard_low_popularity_decrease_effect = yes
+					add_timed_idea = {
+    						idea = ROMID_recent_assassination_attempt
+    						days = 30
+					}
+					news_event = {
+						id = ROMEV_events.51
+					}
+				}
+			}
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_royal_speech  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = { 
+			original_tag = ROM
+		}
+
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_visit_france }
+				NOT = { has_decision = ROMID_visit_romanian_city}
+				NOT = { has_decision = ROMID_royal_decree  }
+				NOT = { has_decision = ROMID_tax_the_rich }
+				NOT = { has_decision = ROMID_reduce_corruption }
+			}
+		}
+
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_royalists_low_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_visit_romanian_city  = { 
+
+		priority = 0
+
+		icon = GFX_decision_hol_attract_foreign_investors
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_royalists_low_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_royalists_loyalty
+					value = 15
+ 					compare = greater_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_visit_france }
+				NOT = { has_decision = ROMID_royal_speech }
+				NOT = { has_decision = ROMID_royal_decree  }
+				NOT = { has_decision = ROMID_tax_the_rich}
+				NOT = { has_decision = ROMID_reduce_corruption }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 180
+
+		cost = 20
+
+		remove_effect = {
+			ROMID_royalists_low_loyalty_increase_effect = yes
+			ROMID_royalists_low_popularity_increase_effect = yes
+	
+			hidden_effect = {
+				if = {
+					limit = {
+						ROM = { has_country_flag = ROMID_king_will_be_assassinated }
+					}
+					add_ideas = ROMID_political_turmoil_1
+					retire_ideology_leader = neutrality
+					ROM = { clr_country_flag = ROMID_king_will_be_assassinated }
+					ROM = { set_country_flag = ROMID_king_was_assassinated }
+					news_event = {
+						id = ROMEV_events.50
+					}
+				}
+
+				if = {
+					limit = {
+						ROM = { has_country_flag = ROMID_king_wont_be_assassinated }
+					}
+					ROM = { clr_country_flag = ROMID_king_wont_be_assassinated }
+					ROMID_iron_guard_low_popularity_decrease_effect = yes
+					add_timed_idea = {
+    						idea = ROMID_recent_assassination_attempt
+    						days = 30
+					}
+					news_event = {
+						id = ROMEV_events.51
+					}
+				}
+			}
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_royal_decree  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_decision
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_royalists_medium_popularity_check_tt 
+				check_variable = {
+					var = ROMID_royalists_popularity
+					value = 45
+ 					compare = greater_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_visit_france }
+				NOT = { has_decision = ROMID_royal_speech }
+				NOT = { has_decision = ROMID_visit_romanian_city }
+				NOT = { has_decision = ROMID_tax_the_rich }
+				NOT = { has_decision = ROMID_reduce_corruption }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 365
+
+		cost = 30
+
+		remove_effect = {
+			ROMID_royalists_medium_loyalty_increase_effect = yes
+			ROMID_royalists_low_popularity_increase_effect = yes
+			ROMID_iron_guard_low_loyalty_decrease_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_tax_the_rich  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_decision
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_royalists_medium_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_royalists_loyalty
+					value = 45
+ 					compare = greater_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_visit_france }
+				NOT = { has_decision = ROMID_royal_speech }
+				NOT = { has_decision = ROMID_visit_romanian_city}
+				NOT = { has_decision = ROMID_royal_decree  }
+				NOT = { has_decision = ROMID_reduce_corruption }
+			}
+		}
+		days_remove = 30
+
+		days_re_enable = 180
+
+		cost = 20
+
+		remove_effect = {
+			ROMID_royalists_medium_loyalty_decrease_effect = yes
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.05
+			political_power_gain = 0.1
+		}
+	}
+
+	ROMID_reduce_corruption  = { 
+
+		priority = 0
+
+		icon = GFX_decision_hol_attract_foreign_investors
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_visit_france }
+				NOT = { has_decision = ROMID_royal_speech }
+				NOT = { has_decision = ROMID_visit_romanian_city}
+				NOT = { has_decision = ROMID_royal_decree  }
+				NOT = { has_decision = ROMID_tax_the_rich }
+			}
+		}
+
+		days_remove = 30
+
+		days_re_enable = 180
+
+		cost = 20
+
+		remove_effect = {
+			ROMID_royalists_low_loyalty_decrease_effect = yes
+			ROMID_royalists_medium_popularity_decrease_effect = yes
+			add_political_power = 80
+		}
+
+		modifier = {
+			
+		}
+	}
+}
+
+ROMID_iron_guard_affairs = {
+	ROMID_allow_public_meetings  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_rally_supporters }
+				NOT = { has_decision = ROMID_ban_public_meetings }
+				NOT = { has_decision = ROMID_assassinate_small_leaders }
+				NOT = { has_decision = ROMID_arrest_supporters }
+				NOT = { has_decision = ROMID_support_iron_guard_raids }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_iron_guard_low_loyalty_increase_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_rally_supporters  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings }
+				NOT = { has_decision = ROMID_ban_public_meetings }
+				NOT = { has_decision = ROMID_assassinate_small_leaders }
+				NOT = { has_decision = ROMID_arrest_supporters }
+				NOT = { has_decision = ROMID_support_iron_guard_raids }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_iron_guard_low_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_support_iron_guard_raids  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_prepare_civil_war
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_iron_guard_medium_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_iron_guard_loyalty
+					value = 45
+ 					compare = greater_than_or_equals
+				}
+			}
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_iron_guard_medium_popularity_check_tt 
+				check_variable = {
+					var = ROMID_iron_guard_popularity
+					value = 45
+ 					compare = greater_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings }
+				NOT = { has_decision = ROMID_rally_supporters }
+				NOT = { has_decision = ROMID_ban_public_meetings }
+				NOT = { has_decision = ROMID_assassinate_small_leaders }
+				NOT = { has_decision = ROMID_arrest_supporters }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 365
+
+		cost = 30
+
+		remove_effect = {
+			ROMID_iron_guard_medium_loyalty_increase_effect = yes
+			ROMID_iron_guard_low_popularity_increase_effect = yes
+			ROMID_army_low_loyalty_decrease_effect = yes
+			ROMID_royalists_low_loyalty_decrease_effect = yes
+			ROMID_lancieri_low_loyalty_decrease_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_ban_public_meetings  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings }
+				NOT = { has_decision = ROMID_rally_supporters }
+				NOT = { has_decision = ROMID_assassinate_small_leaders }
+				NOT = { has_decision = ROMID_arrest_supporters }
+				NOT = { has_decision = ROMID_support_iron_guard_raids }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_iron_guard_low_loyalty_decrease_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_assassinate_small_leaders  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_assassination
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings }
+				NOT = { has_decision = ROMID_rally_supporters }
+				NOT = { has_decision = ROMID_ban_public_meetings }
+				NOT = { has_decision = ROMID_arrest_supporters }
+				NOT = { has_decision = ROMID_support_iron_guard_raids }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_iron_guard_low_popularity_decrease_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_arrest_supporters  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_arrest
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_iron_guard_medium_lower_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_iron_guard_loyalty
+					value = 45
+ 					compare = less_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings }
+				NOT = { has_decision = ROMID_rally_supporters }
+				NOT = { has_decision = ROMID_ban_public_meetings }
+				NOT = { has_decision = ROMID_assassinate_small_leaders }
+				NOT = { has_decision = ROMID_support_iron_guard_raids }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 180
+
+		cost = 20
+
+		remove_effect = {
+			ROMID_iron_guard_medium_loyalty_decrease_effect = yes
+			ROMID_iron_guard_low_popularity_decrease_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+}
+
+ROMID_lancieri_affairs = {
+	ROMID_allow_public_meetings_l  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_rally_supporters_l }
+				NOT = { has_decision = ROMID_pass_antisemitic_laws }
+				NOT = { has_decision = ROMID_ban_public_meetings_l }
+				NOT = { has_decision = ROMID_ban_public_rallies }
+				NOT = { has_decision = ROMID_call_the_police_on_them }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_lancieri_low_loyalty_increase_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_rally_supporters_l  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings_l }
+				NOT = { has_decision = ROMID_pass_antisemitic_laws }
+				NOT = { has_decision = ROMID_ban_public_meetings_l }
+				NOT = { has_decision = ROMID_ban_public_rallies }
+				NOT = { has_decision = ROMID_call_the_police_on_them }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_lancieri_low_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_pass_antisemitic_laws  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_decision
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_lancieri_low_popularity_check_tt 
+				check_variable = {
+					var = ROMID_lancieri_popularity
+					value = 15
+ 					compare = greater_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings_l }
+				NOT = { has_decision = ROMID_rally_supporters_l }
+				NOT = { has_decision = ROMID_ban_public_meetings_l }
+				NOT = { has_decision = ROMID_ban_public_rallies }
+				NOT = { has_decision = ROMID_call_the_police_on_them }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 180
+
+		cost = 25
+
+		remove_effect = {
+			ROMID_lancieri_medium_loyalty_increase_effect = yes
+			ROMID_iron_guard_low_loyalty_increase_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_ban_public_meetings_l  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings_l }
+				NOT = { has_decision = ROMID_rally_supporters_l }
+				NOT = { has_decision = ROMID_pass_antisemitic_laws }
+				NOT = { has_decision = ROMID_ban_public_rallies }
+				NOT = { has_decision = ROMID_call_the_police_on_them }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_lancieri_low_loyalty_decrease_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_ban_public_rallies  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings_l }
+				NOT = { has_decision = ROMID_rally_supporters_l }
+				NOT = { has_decision = ROMID_pass_antisemitic_laws }
+				NOT = { has_decision = ROMID_ban_public_meetings_l }
+				NOT = { has_decision = ROMID_call_the_police_on_them }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_lancieri_low_popularity_decrease_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_call_the_police_on_them  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_police_action
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_lancieri_medium_lower_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_lancieri_loyalty
+					value = 45
+ 					compare = less_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings_l }
+				NOT = { has_decision = ROMID_rally_supporters_l }
+				NOT = { has_decision = ROMID_pass_antisemitic_laws }
+				NOT = { has_decision = ROMID_ban_public_meetings_l }
+				NOT = { has_decision = ROMID_ban_public_rallies }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 180
+
+		cost = 20
+
+		remove_effect = {
+			ROMID_lancieri_medium_loyalty_decrease_effect = yes
+			ROMID_lancieri_low_popularity_decrease_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+}
+
+ROMID_socialists_affairs = {
+	ROMID_allow_public_meetings_s  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_rally_supporters_s }
+				NOT = { has_decision = ROMID_pass_worker_laws }
+				NOT = { has_decision = ROMID_ban_public_meetings_s }
+				NOT = { has_decision = ROMID_ban_trade_unions }
+				NOT = { has_decision = ROMID_call_the_police_on_them_s }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_socialists_low_loyalty_increase_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_rally_supporters_s  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings_s }
+				NOT = { has_decision = ROMID_pass_worker_laws }
+				NOT = { has_decision = ROMID_ban_public_meetings_s }
+				NOT = { has_decision = ROMID_ban_trade_unions }
+				NOT = { has_decision = ROMID_call_the_police_on_them_s }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_socialists_low_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_pass_worker_laws  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_decision
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_socialists_low_popularity_check_tt 
+				check_variable = {
+					var = ROMID_socialists_popularity
+					value = 15
+ 					compare = greater_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings_s }
+				NOT = { has_decision = ROMID_rally_supporters_s }
+				NOT = { has_decision = ROMID_ban_public_meetings_s }
+				NOT = { has_decision = ROMID_ban_trade_unions }
+				NOT = { has_decision = ROMID_call_the_police_on_them_s }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 180
+
+		cost = 25
+
+		remove_effect = {
+			ROMID_socialists_medium_loyalty_increase_effect = yes
+			ROMID_socialists_low_popularity_increase_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_ban_public_meetings_s  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings_s }
+				NOT = { has_decision = ROMID_rally_supporters_s }
+				NOT = { has_decision = ROMID_pass_worker_laws }
+				NOT = { has_decision = ROMID_ban_trade_unions }
+				NOT = { has_decision = ROMID_call_the_police_on_them_s }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_socialists_low_loyalty_decrease_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_ban_trade_unions  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_political_discourse
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings_s }
+				NOT = { has_decision = ROMID_rally_supporters_s }
+				NOT = { has_decision = ROMID_pass_worker_laws }
+				NOT = { has_decision = ROMID_ban_public_meetings_s }
+				NOT = { has_decision = ROMID_call_the_police_on_them_s }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 90
+
+		cost = 10
+
+		remove_effect = {
+			ROMID_socialists_low_popularity_decrease_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+
+	ROMID_call_the_police_on_them_s  = { 
+
+		priority = 0
+
+		icon = GFX_decision_generic_police_action
+		allowed = { 
+			original_tag = ROM
+		}
+		available = {
+			custom_trigger_tooltip = { 
+				tooltip = ROMID_socialists_medium_lower_loyalty_check_tt 
+				check_variable = {
+					var = ROMID_socialists_loyalty
+					value = 45
+ 					compare = less_than_or_equals
+				}
+			}
+			hidden_trigger = {
+				NOT = { has_decision = ROMID_allow_public_meetings_s }
+				NOT = { has_decision = ROMID_rally_supporters_s }
+				NOT = { has_decision = ROMID_pass_worker_laws }
+				NOT = { has_decision = ROMID_ban_public_meetings_s }
+				NOT = { has_decision = ROMID_ban_trade_unions }
+			}
+		}
+		days_remove = 7
+
+		days_re_enable = 180
+
+		cost = 20
+
+		remove_effect = {
+			ROMID_socialists_medium_loyalty_decrease_effect = yes
+			ROMID_socialists_low_popularity_decrease_effect = yes
+		}
+
+		modifier = {
+			
+		}
+	}
+}

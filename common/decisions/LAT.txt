@@ -1,12 +1,1 @@
 ####NO STEP BACK####
-LAT_perkonkrust_revolt_category = {
-}
-
-LAT_delay_perkonkrust_decisions = {
-	
-	#Reduce the increase of fascist support
-	
-	#Reduce fascist support for dem support
-	
-	#Solid reduction in fasc support
-}

@@ -1,0 +1,175 @@
+leader_traits = {
+	ROMID_dislikes_communism = {
+		random = no
+
+		communism_acceptance = -80
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_incompetent_leader = {
+		random = no
+
+		stability_factor = -0.05
+		political_power_factor = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_placed_by_carol = {
+		random = no
+
+		political_power_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_poet = {
+		random = no
+
+		political_power_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_emergency_powers = {
+		random = no
+
+		political_power_factor = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_hedonist = {
+		random = no
+
+		stability_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_anticommunist_crusader = {
+		random = no
+
+		stability_factor = 0.05
+		communism_drift = -0.1
+		communism_acceptance = -80
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_indecisive = {
+		random = no
+
+		stability_factor = 0.05
+		political_power_factor = -0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_maresal = {
+		random = no
+
+		political_power_factor = 0.05
+		war_support_factor = 0.1
+		mobilization_speed = 0.1
+		army_core_attack_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_conducator = {
+		random = no
+
+		political_power_factor = 0.1
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_defender_of_romania = {
+		random = no
+
+		political_power_factor = 0.1
+		stability_factor = 0.1
+		war_support_factor = 0.1
+		army_core_attack_factor = 0.15
+		army_core_defence_factor = 0.15
+		offensive_war_stability_factor = 0.15
+		defensive_war_stability_factor = 0.4
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_popular = {
+		random = no
+
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_headstrong = {
+		random = no
+
+		political_power_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_propaganda_writer = {
+		random = no
+
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		drift_defence_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_fascist_paramilitarist = {
+		random = no
+
+		mobilization_laws_cost_factor = -0.1
+		army_core_attack_factor = 0.05
+		conscription_factor = 0.1
+		fascism_drift = 0.03
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ROMID_camarilla_leader = {
+		random = no
+
+		political_advisor_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
+		mobilization_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		high_command_cost_factor = -0.25
+		air_chief_cost_factor = -0.25
+		army_chief_cost_factor = -0.25
+		navy_chief_cost_factor = -0.25
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

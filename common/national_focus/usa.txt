@@ -102,7 +102,7 @@ focus_tree = {
 focus = {
 		id = USA_suspend_the_presecution
 		icon = GFX_focus_generic_diplomatic_treaty
-		x = -7
+		x = -5
 		y = 1
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
@@ -137,7 +137,7 @@ focus = {
 		id = USA_reach_out_to_the_ware_group
 		icon = GFX_goal_generic_propaganda
 		x = 0
-		y = 3
+		y = 2
 		prerequisite = { focus = USA_suspend_the_presecution }
 		prerequisite = { focus = USA_agricultural_adjustment_act }
 		relative_position_id = USA_suspend_the_presecution
@@ -183,7 +183,7 @@ focus = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
-		x = -4
+		x = -3
 		y = 1
 		cost = 10
 		#ai_will_do = {
@@ -462,7 +462,7 @@ focus = {
 		id = USA_scientist_haven
 		icon = GFX_focus_research
 		prerequisite = { focus = USA_arsenal_of_democracy }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 10
@@ -484,7 +484,7 @@ focus = {
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = USA_scientist_haven }
 		
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = USA_scientist_haven
 		cost = 10
@@ -513,7 +513,7 @@ focus = {
 	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
-		x = 1
+		x = 2
 		y = 1
 		prerequisite = { focus = USA_continue_the_new_deal }
 		mutually_exclusive = { focus = USA_limited_intervention }
@@ -558,7 +558,7 @@ focus = {
 	focus = {
 		id = USA_lend_lease_act
 		icon = GFX_focus_generic_treaty
-		x = -1
+		x = 2
 		y = 1
 		prerequisite = { focus = USA_neutrality_act }
 		relative_position_id = USA_neutrality_act
@@ -667,7 +667,7 @@ focus = {
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = USA_neutrality_act }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = USA_neutrality_act
 		cost = 10
 		ai_will_do = {
@@ -844,7 +844,7 @@ focus = {
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = USA_the_giant_wakes }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = USA_the_giant_wakes
 		cost = 10
 		ai_will_do = {
@@ -1105,8 +1105,8 @@ focus = {
 
 		continue_if_invalid = yes
 		
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 		relative_position_id = USA_military_construction
 		cost = 10
 		#ai_will_do = {
@@ -1218,7 +1218,7 @@ focus = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 14
+		x = 12
 		y = 0
 		offset = {
 			x = -26
@@ -1255,7 +1255,7 @@ focus = {
 	focus = {
 		id = USA_intervention_in_the_americas
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = -4
+		x = -2
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
@@ -1424,7 +1424,7 @@ focus = {
 	focus = {
 		id = USA_intervention_in_asia
 		icon = GFX_goal_generic_major_war
-		x = 6
+		x = 2
 		y = 1
 		prerequisite = { focus = USA_war_plans_division }
 		relative_position_id = USA_war_plans_division
@@ -1584,7 +1584,7 @@ focus = {
 	focus = {
 		id = USA_war_department
 		icon = GFX_goal_generic_army_doctrines
-		x = 30
+		x = 24
 		y = 0
 		offset = {
 			x = -26

@@ -102,13 +102,7 @@ ideas = {
 				always = no
 			}
 			cancel = {
-				OR = {
-					has_war = yes
-					AND = {
-						tag = SPR
-						GER = { has_war = yes }
-					}
-				}
+				has_war = yes
 			}
 			removal_cost = -1
 			picture = generic_infantry_bonus

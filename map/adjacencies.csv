@@ -258,4 +258,9 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 142;6012;impassable;-1;-1;-1;-1;-1;;fin-soviet border
 142;9140;impassable;-1;-1;-1;-1;-1;;fin-soviet border
 6117;9140;impassable;-1;-1;-1;-1;-1;;fin-soviet border
+10821;5087;impassable;-1;-1;-1;-1;-1;;RAJ Border
+10821;1970;impassable;-1;-1;-1;-1;-1;;RAJ Border
+5042;1970;impassable;-1;-1;-1;-1;-1;;RAJ Border
+5042;4973;impassable;-1;-1;-1;-1;-1;;RAJ Border
+5042;8112;impassable;-1;-1;-1;-1;-1;;RAJ Border
 -1;-1;;-1;-1;-1;-1;-1;-1 

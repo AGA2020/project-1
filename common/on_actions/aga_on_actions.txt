@@ -24,6 +24,9 @@ on_actions = {
 	}	
 	on_startup = {
 		effect = {
+			USA = { add_offsite_building = { type = industrial_complex level = 22 } activate_decision = usa_vanillaic1}
+			ENG = { add_offsite_building = { type = industrial_complex level = 6 } activate_decision = eng_vanillaic1}
+			RAJ = { add_offsite_building = { type = industrial_complex level = 6 } activate_decision = raj_vanillaic1}
 			FIN = {
 				add_opinion_modifier = { target = YUG modifier = large_decrease }
 				add_opinion_modifier = { target = YUG modifier = hostile_status }
@@ -40,6 +43,8 @@ on_actions = {
 				}
 				air_experience = 10
 				army_experience = 9
+				navy_experience = 10
+				add_command_power = 5
 				VEN = {
 					country_event = {
 					id = AGA.1
