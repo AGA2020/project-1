@@ -2027,10 +2027,6 @@ focus_tree = {
 					is_in_faction_with = ROOT
 					is_free_or_subject_of_root = yes
 				}
-				ROM = {
-					is_in_faction_with = ROOT
-					is_free_or_subject_of_root = yes
-				}
 			}
 		}
 
@@ -2080,7 +2076,6 @@ focus_tree = {
 	    			}	
 	    		}
 	    		set_autonomy = { target = HUN autonomy_state = autonomy_satellite }
-	    		set_autonomy = { target = ROM autonomy_state = autonomy_satellite }	
 	    	}
 			else_if = {	
 	    		limit = {
@@ -2098,7 +2093,6 @@ focus_tree = {
 	    			}	
 	    		}
 	    		set_autonomy = { target = HUN autonomy_state = autonomy_satellite }
-	    		set_autonomy = { target = ROM autonomy_state = autonomy_satellite }	
 	    	}
 			else_if = {	
 	    		limit = {
@@ -2116,7 +2110,6 @@ focus_tree = {
 	    			}	
 	    		}
 	    		set_autonomy = { target = HUN autonomy_state = autonomy_satellite }
-	    		set_autonomy = { target = ROM autonomy_state = autonomy_satellite }	
 	    	}
 		}
 	}

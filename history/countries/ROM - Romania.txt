@@ -258,7 +258,7 @@ create_equipment_variant = {
 	name = "ZB vz.24 (ROM)"
 	type = infantry_equipment_1
 	parent_version = 0
-	design_team = mio:ROM_cugir_organization
+	design_team = mio:ROMID_um_cugir_organization
 }
 
 46 = {
