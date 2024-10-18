@@ -1326,7 +1326,6 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPA_spanish_austerity }
-		mutually_exclusive = { focus = SPA_capitalist_economic_aid }
 		
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		x = 0
@@ -2562,7 +2561,6 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPR_disband_the_army }
-		mutually_exclusive = { focus = SPR_regional_defense_council_of_aragon focus = SPR_the_anti_fascist_workers_revolution }
 		
 		icon = GFX_focus_spr_maintain_the_republic
 		x = 0

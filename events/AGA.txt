@@ -10,6 +10,7 @@ news_event = {
 
 	option = {
 		name = aga.1.a
+		GER = { create_equipment_variant = { name = "Opel 3-Tonner" type = motorized_equipment_0 parent_version = 0 allow_without_tech = yes obsolete = yes design_team = mio:GER_opel_organization } }
 			every_country = {
 				limit = {
 					is_playable_country = yes
@@ -19,6 +20,19 @@ news_event = {
 				navy_experience = -10
 				add_command_power = -5				
 			}
+	}
+}
+news_event = {
+	id = aga.555
+	title = aga.555.t
+	desc = aga.555.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = aga.555.a
+		GER = { set_technology = { tech_trucks = 0 popup = no } }
 	}
 }
 country_event = {

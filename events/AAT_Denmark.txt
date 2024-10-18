@@ -299,61 +299,6 @@ country_event = { #Vote of No Confidence
 			}
 		}
 	}
-
-	option = { #Bondepartiet
-		name = denmark_political_events.2.E
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 5
-				neutrality > 0.2
-			}
-			modifier = {
-				factor = 5
-				neutrality > 0.35
-			}
-			modifier = {
-				factor = 2
-				neutrality > 0.5
-			}
-			modifier = {
-				factor = 10
-				OR = {
-					DEN_rearming_ai = yes
-					DEN_royal_ai = yes
-					DEN_fascist_ai = yes
-				}
-			}
-			modifier = {
-				factor = 2
-				is_historical_focus_on = no
-			}
-		}
-		trigger = {
-			DEN_knud_bach = { is_country_leader = no }
-			check_variable = { DEN_neutrality_popularity > 19 }
-		}
-
-		custom_effect_tooltip = DEN_prime_minister_resigns_tt
-
-		DEN_ruling_party_loses_popularity = yes
-
-		DEN_dove_is_removed_from_power = yes
-
-		DEN_bondepartiet_takes_over = yes
-
-		if = {
-			limit = {
-				NOT = {
-					has_government = neutrality
-				}
-			}
-			add_popularity = {
-			    ideology = neutrality
-			    popularity = 0.05
-			}
-		}
-	}
 }
 
 country_event = { #Election Campaigns
