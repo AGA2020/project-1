@@ -6427,8 +6427,8 @@ category = land_doctrine
 	focus = {
 		id = ROM_malaxa_trains
 		icon = GFX_focus_generic_railroad
-		x = -5
-		y = 1
+		x = -4
+		y = 2
 		relative_position_id = ROM_cooperation_with_malaxa
 		cost = 5
 		complete_tooltip = {
@@ -6482,14 +6482,14 @@ category = land_doctrine
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
-		prerequisite = { focus = ROM_cooperation_with_malaxa  }
+		prerequisite = { focus = ROM_cooperation_with_malaxa  } prerequisite = { focus = ROM_found_ior  }
 	}
 
 	#Malaxa Concern
 	focus = {
 		id = ROM_malaxa_concern
 		icon = GFX_focus_generic_tankette
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = ROM_malaxa_trains
 		cost = 5
@@ -6560,7 +6560,7 @@ category = land_doctrine
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
-		prerequisite = { focus = ROM_malaxa_trains  } prerequisite = { focus = ROM_found_ior  }
+		prerequisite = { focus = ROM_malaxa_trains  }
 	}
 
 	#Encourage Capitalist Investment
