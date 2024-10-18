@@ -206,7 +206,6 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
-			version_name = "10.5 cm LefH 18"
 			type = artillery_equipment_1
 			creator = "GER"
 		}
@@ -232,7 +231,6 @@ instant_effect = {
 		equipment = {
 			type = motorized_equipment_1
 			creator = "GER" 
-			version_name = "Opel 3-Tonner"
 		}
 		requested_factories = 2
 		progress = 0.4

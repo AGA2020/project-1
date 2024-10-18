@@ -487,19 +487,6 @@ create_equipment_variant = {
 	parent_version = 0
 	design_team = mio:GER_mauser_organization
 }
-create_equipment_variant = {
-	name = "10.5 cm LefH 18"
-	type = artillery_equipment_1
-	parent_version = 0
-	design_team = mio:GER_rheinmetall_organization
-}
-
-create_equipment_variant = {
-	name = "Opel 3-Tonner"
-	type = motorized_equipment_1
-	parent_version = 0
-	design_team = mio:GER_opel_organization
-}
 
 
 if = {
@@ -538,7 +525,7 @@ if = {
 		traits = { operative_infiltrator }
 		bypass_recruitment = no
 		available_to_spy_master = yes
-		nationalities = { GER TUR }
+		nationalities = { GER }
 		gender = male
 	}
 	create_operative_leader = {
@@ -567,7 +554,7 @@ if = {
 		traits = { operative_natural_orator operative_linguist }
 		bypass_recruitment = no
 		available_to_spy_master = yes
-		nationalities = { GER AUS ARG BRA }
+		nationalities = { GER AUS BRA }
 		gender = male
 	}
 
@@ -587,7 +574,7 @@ if = {
 		traits = { operative_natural_orator operative_tough }
 		bypass_recruitment = no
 		available_to_spy_master = yes
-		nationalities = { ENG SCO }
+		nationalities = { ENG }
 		gender = male
 	}
 }
