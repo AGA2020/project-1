@@ -2217,6 +2217,33 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			hidden_effect = {
+				46 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					clr_state_flag = iron_guard_supporters
+				}
+				81 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					clr_state_flag = iron_guard_supporters
+				}
+				82 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					clr_state_flag = iron_guard_supporters
+				}
+				84 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					clr_state_flag = iron_guard_supporters
+				}
+				83 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+					add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+					clr_state_flag = iron_guard_supporters
+				}
+			}
 			add_political_power = 25
 			add_stability = 0.05
 			if = {
@@ -7845,7 +7872,7 @@ category = land_doctrine
 			add_tech_bonus = {
  			    bonus = 1.5
  			    uses = 1
-			    category = infantry_weapons
+			    technology = advanced_infantry_weapons
 			}
 		}
 		prerequisite = { focus = ROM_domestic_arms_production  }
@@ -7926,6 +7953,7 @@ category = land_doctrine
  			    bonus = 0.25
  			    uses = 3
 			    category = infantry_tech
+			    category = infantry_weapons
 			}
 		}
 		prerequisite = { focus = ROM_import_zb_vz_24 focus = ROM_foreign_handheld_antitank }
