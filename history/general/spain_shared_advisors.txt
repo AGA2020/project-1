@@ -2023,9 +2023,7 @@ every_possible_country = {
 				}
 			}
 			available = {
-				NOT = {
-					has_completed_focus = SPA_the_phalanx_ascendant
-				}
+
 			}
 			traits = {
 				war_industrialist 
@@ -2103,11 +2101,7 @@ every_possible_country = {
 				}
 			}
 			available = {
-				has_completed_focus = SPA_primo_de_rivera_prisoner_exchange
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
+				always = no
 			}
 			traits = {
 				falangist_figurehead 

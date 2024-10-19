@@ -395,9 +395,7 @@ DEN_flyvemaskinevaerksted_organization = {
         mutually_exclusive = { DEN_mio_trait_naval_detection }
 
         available = {
-            owner = {
-                has_completed_focus = DEN_flyveskolen
-            }
+
         }
 
         equipment_bonus = {
@@ -423,9 +421,7 @@ DEN_flyvemaskinevaerksted_organization = {
         mutually_exclusive = { DEN_mio_trait_sub_detection }
 
         available = {
-            owner = {
-                has_completed_focus = DEN_flyveskolen
-            }
+
         }
 
         equipment_bonus = {
@@ -495,9 +491,7 @@ DEN_DISA_organization = {
         }
         
         available = {
-            owner = {
-                has_completed_focus = DEN_expand_dansk_industri_syndikat
-            }
+
         }
 
         equipment_bonus = {
@@ -521,9 +515,7 @@ DEN_DISA_organization = {
        }
        
        available = {
-           owner = {
-               has_completed_focus = DEN_expand_dansk_industri_syndikat
-           }
+
        }
 
        equipment_bonus = {
@@ -660,9 +652,7 @@ DEN_haerens_tekniske_korps_organization = {
         }
         
         available = {
-            owner = {
-                has_completed_focus = DEN_expand_dansk_industri_syndikat
-            }
+
         }
 
         limit_to_equipment_type = { 
@@ -723,9 +713,7 @@ DEN_haerens_tekniske_korps_organization = {
         }
         
         available = {
-            owner = {
-                has_completed_focus = DEN_new_artillery_tactics
-            }
+
         }
 
         limit_to_equipment_type = { 
@@ -827,9 +815,7 @@ DEN_triangel_organization = {
         position = { x=9 y=0 }
         
         available = {
-            owner = {
-                has_completed_focus = DEN_convert_automobile_production
-            }
+
         }
 
         limit_to_equipment_type = {

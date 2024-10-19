@@ -197,10 +197,6 @@ DEN_replaced_designers_with_improved_version = {
 		limit = {
 			has_idea = DEN_aalborg_portland
 		}
-		swap_ideas = {
-			remove_idea = DEN_aalborg_portland
-			add_idea = DEN_aalborg_portland_improved
-		}
 	}
 }
 
@@ -522,14 +518,7 @@ DEN_remove_neutral_leader = {
 }
 
 DEN_warhawk_is_removed_from_power = {
-	if = {
-		limit = {
-			OR = {
-				DEN_christmas_moller = { is_country_leader = yes }
-			}
-		}
-		DEN_bop_low_decrease_effect = yes
-	}
+
 }
 
 DEN_dove_is_removed_from_power = {
