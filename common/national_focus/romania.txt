@@ -5311,11 +5311,16 @@ focus_tree = {
 			FOCUS_FILTER_FRA_OCCUPATION_COST
 		}
 		available = {
-			ROM = {	
-				has_full_control_of_state = 192
-			}
+				OR = {
+					ROM = { has_full_control_of_state = 192 }
+					any_other_country = {
+						is_in_faction_with = ROM
+						has_full_control_of_state = 192
+					}
+				}
 		}
 		completion_reward = {
+		ROM = { set_state_controller = 192 }
 			#custom_effect_tooltip = ROMID_odessa_refurbished_tt
 			#hidden_effect = {
 				192 = {
@@ -5430,13 +5435,32 @@ focus_tree = {
 			FOCUS_FILTER_FRA_OCCUPATION_COST
 		}
 		available = {
-			ROM = {	
-				has_full_control_of_state = 192
-				has_full_control_of_state = 198
-				has_full_control_of_state = 834
-			}
+				OR = {
+					ROM = { has_full_control_of_state = 192 }
+					any_other_country = {
+						is_in_faction_with = ROM
+						has_full_control_of_state = 192
+					}
+				}
+				OR = {
+					ROM = { has_full_control_of_state = 198 }
+					any_other_country = {
+						is_in_faction_with = ROM
+						has_full_control_of_state = 198
+					}
+				}
+				OR = {
+					ROM = { has_full_control_of_state = 834 }
+					any_other_country = {
+						is_in_faction_with = ROM
+						has_full_control_of_state = 834
+					}
+				}
 		}
 		completion_reward = {
+				ROM = { set_state_controller = 192 }
+				ROM = { set_state_controller = 198 }
+				ROM = { set_state_controller = 834 }
 			#custom_effect_tooltip = ROMID_transnistria_establishment_tt
 			#hidden_effect = {
 				192 = {
@@ -7835,50 +7859,6 @@ category = land_doctrine
 		}
 		cost = 6
 		available = {
-			AND = {
-				OR = {
-					AND = {
-						CZE = {
-							exists = yes
-							is_puppet = no
-						}
-					}
-					AND = {
-						CZE = {
-							exists = yes
-							is_puppet = yes
-						}
-						is_in_faction_with = CZE.overlord
-					}
-					AND = {
-						CZE = { exists = no }
-						is_in_faction_with = 9.controller
-					}
-					AND = {
-						CZE = { exists = no }
-						9 = { is_controlled_by = ROM }
-					}
-				}
-				NOT = {
-					OR = {
-						AND = {
-							CZE = { exists = yes }
-							has_war_with = CZE
-						}
-						AND = {
-							CZE = {
-								exists = yes
-								is_puppet = yes
-							}
-							has_war_with = CZE.overlord
-						}
-						AND = {
-							CZE = { exists = no }
-							has_war_with = 9.controller
-						}
-					}
-				}
-			}		
 		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
