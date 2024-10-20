@@ -2076,7 +2076,6 @@ focus_tree = {
 						 }
 	    			}	
 	    		}
-	    		set_autonomy = { target = HUN autonomy_state = autonomy_satellite }
 	    	}
 			else_if = {	
 	    		limit = {
@@ -2093,7 +2092,6 @@ focus_tree = {
 						 }
 	    			}	
 	    		}
-	    		set_autonomy = { target = HUN autonomy_state = autonomy_satellite }
 	    	}
 			else_if = {	
 	    		limit = {
@@ -2110,7 +2108,6 @@ focus_tree = {
 						 }
 	    			}	
 	    		}
-	    		set_autonomy = { target = HUN autonomy_state = autonomy_satellite }
 	    	}
 		}
 	}
