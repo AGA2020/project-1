@@ -3,8 +3,6 @@ ROMID_internal_factions = {
 
 	icon = power_struggle
 
-	picture = GFX_decision_cat_picture_faction_management_bulgaria
-
 	visible = {
 		NOT = { is_ai = yes }
 	}
