@@ -88,8 +88,3 @@ POR_naval_blockade = {
 	}
 
 }
-
-
-POR_the_spanish_civil_war = {
-
-}
