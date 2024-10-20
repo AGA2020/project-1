@@ -61,7 +61,7 @@ country_event = {
 	
 	trigger = {
 		tag = WST
-		GER = { surrender_progress > 0.1 }
+		GER = { surrender_progress > 0.2 }
 		NOT = { 64 = { is_controlled_by = GER } }
 	}
 
@@ -76,7 +76,7 @@ news_event = {
 	id = aga.2
 	title = wtt_germany.50.t
 	desc = aga.2.desc
-	picture = GFX_news_event_german_reichstag_graffiti_ruins
+	picture = GFX_news_event_hitlerdead
 	
 	
 	is_triggered_only = yes

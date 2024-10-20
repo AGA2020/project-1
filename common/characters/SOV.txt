@@ -121,10 +121,6 @@ characters = {
 				always = no
 			}
 			available = {
-				has_completed_focus = SOV_the_hands_do
-				NOT = {
-					has_completed_focus = SOV_the_third_rome
-				}
 			}
 			traits = {
 				the_masses_opium
@@ -2272,7 +2268,6 @@ characters = {
 					NOT = {
 						any_other_country = {
 							original_tag = SOV
-							has_completed_focus = SOV_the_plan_for_the_coup
 						}
 					}
 				}
