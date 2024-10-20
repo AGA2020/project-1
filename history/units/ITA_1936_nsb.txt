@@ -1,4 +1,4 @@
-﻿####### Division Templates #######
+####### Division Templates #######
 division_template = { 
 	name = "Divisione di Fanteria" 
 	division_names_group = ITA_INF_01 
@@ -414,7 +414,7 @@ instant_effect = {
 				creator = "ITA" 
 			}
 
-			requested_factories = 2 
+			requested_factories = 1 
 			progress = 0.4 
 			efficiency = 50 
 			industrial_manufacturer = mio:ITA_lancia_organization
@@ -428,6 +428,16 @@ instant_effect = {
 			requested_factories = 1 
 			progress = 0
 			efficiency = 5 
+		}
+		add_equipment_production = { 
+			equipment = { 
+				type = anti_air_equipment_1 
+				creator = "ITA" 
+			}
+			requested_factories = 1 
+			progress = 0
+			efficiency = 5 
+			industrial_manufacturer = mio:ITA_breda_organization
 		}
 	}
 }

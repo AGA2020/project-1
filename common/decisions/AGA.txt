@@ -1,4 +1,52 @@
 operations = {
+        annex_Mexiko = {
+            # icon = generic_operation
+            allowed = {
+                tag = BRA
+            }
+            fire_only_once = yes
+            cost = 0
+            ai_will_do = {
+                factor = 0
+            }
+            available = {
+                MEX = {
+                    is_ai = yes
+                }
+            }
+            targets = {
+                MEX
+            }
+            complete_effect = {
+                MEX = {
+                    transfer_units_fraction = {
+                        target = BRA
+                        size = 1
+                        stockpile_ratio = 1
+                        army_ratio = 1
+                        navy_ratio = 1
+                        air_ratio = 1
+                        keep_unit_leaders_trigger = {
+                            always = no
+                        }
+                    }
+                }
+                BRA = {
+                    annex_country = {
+                        target = MEX
+                        transfer_troops = yes
+                    }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = MEX
+                        is_controlled_by = BRA
+                    }
+                    add_core_of = BRA
+                }
+            }
+
+        }
     usa_vanillaic1 = {
             # icon = generic_operation
             allowed = {
@@ -945,6 +993,21 @@ operations = {
                         special_type_slot_3 = empty
                     }
                 }
+                create_equipment_variant = {
+                    name = "Carrier fighter"
+                    type = cv_small_plane_airframe_2
+                    allow_without_tech = yes
+                    parent_version = 0
+                    modules = {
+                        fixed_main_weapon_slot = empty
+                        fixed_auxiliary_weapon_slot_1 = empty
+                        fixed_auxiliary_weapon_slot_2 = empty
+                        engine_type_slot = empty
+                        special_type_slot_1 = empty
+                        special_type_slot_2 = empty
+                        special_type_slot_3 = empty
+                    }
+                }
             }
            else_if = {
                 limit = {
@@ -1696,6 +1759,21 @@ operations = {
                 create_equipment_variant = {
                     name = "Fighter 2-2"
                     type = small_plane_airframe_2
+                    allow_without_tech = yes
+                    parent_version = 0
+                    modules = {
+                        fixed_main_weapon_slot = empty
+                        fixed_auxiliary_weapon_slot_1 = empty
+                        fixed_auxiliary_weapon_slot_2 = empty
+                        engine_type_slot = empty
+                        special_type_slot_1 = empty
+                        special_type_slot_2 = empty
+                        special_type_slot_3 = empty
+                    }
+                }
+                create_equipment_variant = {
+                    name = "Carrier fighter"
+                    type = cv_small_plane_airframe_2
                     allow_without_tech = yes
                     parent_version = 0
                     modules = {

@@ -328,14 +328,14 @@ ITA_cantieri_navali_tosi_organization = {
 	icon = GFX_idea_ITA_cantieri_navali_tosi
 	
 	allowed = {	
-		tag = ITA 
+		OR = {
+			tag = ITA
+			tag = GER  
+		}
 	}
 	
 	available = {
-		FROM = {
-			controls_state = 849 # PUGLIA (Taranto)
-			
-		}
+
 		ITA_is_southern_designer = yes
 	}
 

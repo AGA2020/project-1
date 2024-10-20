@@ -171,6 +171,9 @@ set_technology = {
 	interwar_antiair = 1
 	fuel_silos = 1
 	basic_train = 1
+	mass_assault = 1
+	base_strike = 1
+	formation_flying = 1
 }
 if = {
 	limit = { has_dlc = "By Blood Alone" }
@@ -249,10 +252,6 @@ add_timed_idea = {
 	idea = ROMID_stable_politics
   	days = 547
 }
-give_guarantee = CZE
-give_guarantee = GRE
-give_guarantee = TUR
-give_guarantee = YUG
 
 create_equipment_variant = {
 	name = "ZB vz.24 (ROM)"

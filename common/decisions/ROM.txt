@@ -2330,12 +2330,7 @@ ROMID_internal_factions = {
 		}
 
 		visible = {
-			OR = { 
-				has_completed_focus = ROM_getridofthelancieri
-				has_completed_focus = ROM_ban_other_parties
-				has_completed_focus = ROM_use_the_army_to_purge_fascists
-				has_completed_focus = ROM_undermine_fascist_influence
-			}
+		always = no
 		}
 
 		available = {
@@ -2487,7 +2482,7 @@ ROMID_internal_factions = {
 		}
 
 		visible = {
-			has_completed_focus = ROM_invite_german_advisors
+			always = no
 		}
 
 		available = {

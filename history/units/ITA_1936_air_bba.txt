@@ -129,9 +129,10 @@ instant_effect = {
 				version_name = "Ba.65"
 			} 
 
-			requested_factories = 1 
+			requested_factories = 5 
 			progress = 0.2 
 			efficiency = 50 
+			industrial_manufacturer = mio:ITA_fiat_aviazione_organization
 		} 
 	}
 } 

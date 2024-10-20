@@ -24,6 +24,50 @@ on_actions = {
 	}	
 	on_startup = {
 		effect = {
+			ETH = {
+				transfer_units_fraction = {
+					target = ITA
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 0
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ITA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 7100
+				}
+				annex_country = {
+					target = ETH
+					transfer_troops = no
+				}
+			}
+			hidden_effect = {
+				ITA_end_the_italo_ethiopian_war = yes
+				ITA_missiolinis_initialize_missiolinis_system = yes
+				ITA_missiolinis_system_available = yes
+				ITA_missiolinis_cd_ready = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = ETH
+					is_controlled_by = ITA
+				}
+				add_compliance = 100
+			}
+			delete_unit_template_and_units = {
+				division_template = "Chitet Sefari"
+				disband = yes				# if yes, equipment will be returned to country equipment. default is no
+			}
+			delete_unit_template_and_units = {
+				division_template = "Kebur Zabagna"
+				disband = yes				# if yes, equipment will be returned to country equipment. default is no
+			}
 			USA = { add_offsite_building = { type = industrial_complex level = 22 } activate_decision = usa_vanillaic1}
 			ENG = { add_offsite_building = { type = industrial_complex level = 6 } activate_decision = eng_vanillaic1}
 			RAJ = { add_offsite_building = { type = industrial_complex level = 6 } activate_decision = raj_vanillaic1}

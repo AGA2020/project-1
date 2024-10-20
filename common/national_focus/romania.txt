@@ -2142,7 +2142,39 @@ focus_tree = {
 		}
 		cost = 5
 		completion_reward = {
-			add_political_power = 50
+			create_country_leader = {
+				name = "Ion Antonescu"
+				picture = GFX_Portrait_romania_ion_antonescu	
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					ROMID_anticommunist_crusader
+					ROMID_indecisive
+					ROMID_maresal
+				}
+				id = -1
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = ROM_fascism_party_long3
+ 				name = ROM_fascism_party3
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			ROMID_iron_guard_medium_loyalty_increase_effect = yes
+			ROMID_iron_guard_low_popularity_increase_effect = yes
+			ROMID_lancieri_low_loyalty_decrease_effect = yes
+			hidden_effect = {
+				ROMID_army_change_regime_loyalty_increase_effect = yes
+				ROM = { set_country_flag = ROMID_antonescu_took_power }
+			}
+			news_event = { id = ROMEV_events.31 }
 			custom_effect_tooltip = ROMID_unlock_antonescu_coup
 			custom_effect_tooltip = ROMID_modify_german_license_tt
 			hidden_effect = { 
@@ -2368,6 +2400,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
+				set_country_flag = romid_lancieri_crushed
 				76 = {
 					remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
 					clr_state_flag = lancieri_supporters
@@ -2397,18 +2430,15 @@ focus_tree = {
 			ROMID_lancieri_low_loyalty_decrease_effect = yes
 			ROMID_lancieri_low_popularity_decrease_effect = yes
 			hidden_effect = {
-				if = {
-					limit = { is_ai = yes }
-					remove_ideas = ROMID_the_lancieri_weak_low_loyalty
-					remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
-					remove_ideas = ROMID_the_lancieri_weak_high_loyalty
-					remove_ideas = ROMID_the_lancieri_normal_low_loyalty
-					remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
-					remove_ideas = ROMID_the_lancieri_normal_high_loyalty
-					remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
-					remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
-					remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
-				}
+				remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+				remove_ideas = ROMID_the_lancieri_weak_medium_loyalty
+				remove_ideas = ROMID_the_lancieri_weak_high_loyalty
+				remove_ideas = ROMID_the_lancieri_normal_low_loyalty
+				remove_ideas = ROMID_the_lancieri_normal_medium_loyalty
+				remove_ideas = ROMID_the_lancieri_normal_high_loyalty
+				remove_ideas = ROMID_the_lancieri_powerful_low_loyalty
+				remove_ideas = ROMID_the_lancieri_powerful_medium_loyalty
+				remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
 			}
 		}
 		prerequisite = { focus = ROM_institute_statul_nationallegionar  }  prerequisite = { focus = ROM_forcecarolsabdication }
@@ -2454,6 +2484,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
+		available = { always = no }  
 		completion_reward = {
 			add_stability = -0.05
 			custom_effect_tooltip = ROMID_integrate_the_iron_guard_decision_tt
@@ -2507,17 +2538,20 @@ focus_tree = {
 			add_stability = 0.05
 			custom_effect_tooltip = ROMID_crush_the_coup_tt
 			hidden_effect = {
+				46 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+				}
+				81 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
+				}
 				82 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
 				}
 				84 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
 				}
-				46 = {
-					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-					clr_state_flag = iron_guard_supporters
+				83 = {
+					remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters_allied }
 				}
 			}
 			ROMID_army_low_loyalty_increase_effect = yes
@@ -2713,6 +2747,7 @@ focus_tree = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
 		available = {
+		always = no
 			if = {
 				limit = { NOT = { is_ai = yes } }
 				custom_trigger_tooltip = { 
@@ -6191,7 +6226,7 @@ category = land_doctrine
 		}
 		cost = 5
 		available = { 
-			has_tech = synth_oil_experiments
+
 		}
 		complete_tooltip = {
 			add_resource = {

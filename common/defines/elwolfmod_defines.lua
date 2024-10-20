@@ -81,6 +81,8 @@ NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 0
 NDefines.NAI.DIPLOMACY_ACCEPT_ATTACHE_OPINION_PENALTY = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROL_DIFF = 0
+NDefines.NDiplomacy.LICENSE_ACCEPTANCE_TECH_DIFFERENCE = 20 		-- Acceptance modifier for each year of technology difference.
+NDefines.NDiplomacy.LICENSE_ACCEPTANCE_TECH_DIFFERENCE_BASE = 100    -- Acceptance base for tech difference
 
 --THANKS THRASHY
 NDefines.NAir.ACE_WING_SIZE_MAX_BONUS = 1                       -- biggest bonus we can get from having a small wing with an ace on

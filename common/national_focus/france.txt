@@ -2640,7 +2640,6 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = FRA_laissez_faire
-				category = industry
 				uses = 3
 				bonus = 1.5
 				technology = construction3

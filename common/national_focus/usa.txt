@@ -1407,7 +1407,11 @@ focus = {
 				custom_effect_tooltip = needs_approval
 				country_event = { id = usa.4 days = 1 }
 			}
-			
+			give_resource_rights = {
+			    receiver = ENG
+			    state = 371
+			    resources = { oil }
+			}
 			effect_tooltip = {
 				custom_effect_tooltip = USA_destroyers_for_bases_tt
 				transfer_state = 696

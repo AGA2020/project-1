@@ -2027,6 +2027,7 @@ focus_tree = {
 					is_in_faction_with = ROOT
 					is_free_or_subject_of_root = yes
 				}
+				ROM = { country_exists = yes }
 			}
 		}
 

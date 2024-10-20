@@ -520,31 +520,6 @@ characters = {
 			logistics_skill = 1
 			legacy_id = -1
 		}
-		advisor = {
-			slot = army_chief
-			ledger = army
-			idea_token = ETH_mulugeta_yeggazu_of_illubabor
-			traits = {
-				army_chief_morale_2
-			}
-			available = {
-				has_country_leader = {
-					ruling_only = yes
-					character = ETH_haile_selassie
-				}
-			}
-			cost = 50
-			on_add = {
-				owner = {
-					ETH_BOP_decentralization_large_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					ETH_BOP_centralization_large_effect = yes
-				}
-			}
-		}
 	}
 
 	ETH_ras_kassa = {

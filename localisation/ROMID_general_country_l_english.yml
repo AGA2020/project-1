@@ -335,7 +335,7 @@ ROMID_integrate_the_socialists_tt:0 "We will integrate the [GetSocialistsName] i
 
 ROMID_crush_the_royalists_decision_tt:0 "§gUnlocks§! the §Ydecision§! to crush the [GetRoyalistsName] forever."
 ROMID_crush_the_iron_guard_decision_tt:0 "§gUnlocks§! the §Ydecision§! to crush the [GetIronGuardName] forever."
-ROMID_crush_the_lancieri_decision_tt:0 "§gUnlocks§! the §Ydecision§! to crush the [GetLancieriName] forever."
+ROMID_crush_the_lancieri_decision_tt:0 "Crush the [GetLancieriName] forever."
 ROMID_crush_the_socialists_decision_tt:0 "§gUnlocks§! the §Ydecision§! to crush the [GetSocialistsName] forever."
 ROMID_integrate_the_royalists_decision_tt:0 "§gUnlocks§! the §Ydecision§! to integrate the [GetRoyalistsName] into the government."
 ROMID_integrate_the_iron_guard_decision_tt:0 "§gUnlocks§! the §Ydecision§! to integrate the [GetIronGuardName] into the government."
