@@ -349,7 +349,6 @@ operations = {
 			factor = 0
 		}
 		available = {
-		NOT = { has_global_flag = eng_annexed_minor }
 			CAN = {
 				is_ai = yes
 			}
@@ -384,7 +383,6 @@ operations = {
 				}
 				add_compliance = 50
 			}
-			set_global_flag = eng_annexed_minor
 		}
 	}
 	annex_south_africa = {
@@ -435,56 +433,56 @@ operations = {
 		}
 
 	}
-#	annex_british_raj = {
-#		# icon = generic_operation
-#		allowed = {
-#			tag = ENG
-#		}
-#		fire_only_once = yes
-#		cost = 0
-#		ai_will_do = {
-#			factor = 0
-#		}
-#		available = {
-#			RAJ = {
-#				is_ai = yes
-#			}
-#
-#		}
-#		targets = {
-#			RAJ
-#		}
-#		complete_effect = {
-#               hidden_effect = { set_global_flag = { flag = annex value = 0 } }
-#			RAJ = {
-#				transfer_units_fraction = {
-#					target = ENG
-#					size = 1
-#					stockpile_ratio = 1
-#					army_ratio = 1
-#					navy_ratio = 1
-#					air_ratio = 1
-#					keep_unit_leaders_trigger = {
-#						always = no
-#					}
-#				}
-#			}
-#			ENG = {
-#				annex_country = {
-#					target = RAJ
-#					transfer_troops = yes
-#				}
-#			}
-#			every_state = {
-#				limit = {
-#					is_core_of = RAJ
-#					is_controlled_by = ENG
-#				}
-#				add_compliance = 50
-#			}
-#
-#		}
-#	}
+	annex_british_raj = {
+		# icon = generic_operation
+		allowed = {
+			tag = ENG
+		}
+		fire_only_once = yes
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			RAJ = {
+				is_ai = yes
+			}
+
+		}
+		targets = {
+			RAJ
+		}
+		complete_effect = {
+               hidden_effect = { set_global_flag = { flag = annex value = 0 } }
+			RAJ = {
+				transfer_units_fraction = {
+					target = ENG
+					size = 1
+					stockpile_ratio = 1
+					army_ratio = 1
+					navy_ratio = 1
+					air_ratio = 1
+					keep_unit_leaders_trigger = {
+						always = no
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+					target = RAJ
+					transfer_troops = yes
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = RAJ
+					is_controlled_by = ENG
+				}
+				add_compliance = 50
+			}
+
+		}
+	}
 	annex_australia = {
 		# icon = generic_operation
 		allowed = {
@@ -496,7 +494,6 @@ operations = {
 			factor = 0
 		}
 		available = {
-		NOT = { has_global_flag = eng_annexed_minor }
 			AST = {
 				is_ai = yes
 			}

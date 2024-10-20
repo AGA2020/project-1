@@ -2250,14 +2250,6 @@ operations = {
                 factor = 0
             }
             available = {
-                NOT = { has_global_flag = ger_annexed_minor }
-                OR = {
-                    date>1937.1.1
-                    ENG = { controls_state = 439 }
-                    ENG = { controls_state = 275 }
-                    ENG = { controls_state = 276 }
-                    ENG = { controls_state = 285 }
-                }
                 HUN = {
                     is_ai = yes
                 }
@@ -2439,14 +2431,6 @@ operations = {
                 factor = 0
             }
             available = {
-            NOT = { has_global_flag = ger_annexed_minor }
-            OR = {
-            date>1937.1.1
-            ENG = { controls_state = 439 }
-            ENG = { controls_state = 275 }
-            ENG = { controls_state = 276 }
-            ENG = { controls_state = 285 }
-            }
                 BUL = {
                     is_ai = yes
                 }

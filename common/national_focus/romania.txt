@@ -2142,6 +2142,7 @@ focus_tree = {
 		}
 		cost = 5
 		completion_reward = {
+		add_political_power = 50
 			create_country_leader = {
 				name = "Ion Antonescu"
 				picture = GFX_Portrait_romania_ion_antonescu	
