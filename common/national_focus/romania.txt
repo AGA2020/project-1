@@ -6308,8 +6308,7 @@ category = land_doctrine
 			FOCUS_FILTER_INDUSTRY
 		}
 		available = { 
-			has_tech = fuel_silos 
-			has_tech = synth_oil_experiments
+			has_tech = fuel_silos
 		}
 		cost = 5
 		complete_tooltip = {

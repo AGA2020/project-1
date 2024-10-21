@@ -6,3 +6,11 @@ JAP_the_manchurian_project = {
 		local_resources_factor = 0.1
 		local_building_slots = 5
 }
+raid_banned = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_construction
+
+		convoy_raiding_efficiency_factor = -9
+
+}
