@@ -1,4 +1,7 @@
 ﻿l_english:
+  Balkan_trade_agreements:0 "Balkan Trade Agreements"
+ Balkan_trade_agreements_desc:0 "BitThrough strategic trade negotiations, Germany has secured favorable agreements with Hungary and Romania. These nations now offer preferential rates on essential resources, reducing the costs of trade and strengthening economic ties in preparation for future campaigns."
+use_industry_bonus:0 "Activate 1x Industry bonus"
 annex_new_zealand_2:0 "Annex New Zealand"
 annex_Mexiko:0 "Annex Mexico"
  SOV_propaganda_anti_fascism_tt_effix:0 "Gains '§Y$SOV_anti_fascist_campaign_generic$§!' against the §Ymost industrialized fascist country in the world§!, which grants (Attack bonus against country: §G+5.0%§!, Defense bonus against country: §G+5.0%§!) for §Y[?SOV_default_propaganda_campaign_duration]§! days."
