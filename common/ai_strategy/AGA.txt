@@ -1,0 +1,18 @@
+
+
+
+be_useful_ai_please = {
+	allowed = {
+		original_tag = AST
+	}
+	enable = {
+		date < 1937.9.15
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = 10
+	}
+}
