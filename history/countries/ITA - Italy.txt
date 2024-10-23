@@ -16,11 +16,6 @@ if = {
 }
 
 starting_train_buffer = 1.5
-create_import = {
-	resource = rubber
-	factories = 2
-	exporter = SIA
-}
 set_research_slots = 4
 set_stability = 0.6
 set_war_support = 0.7

@@ -4593,6 +4593,15 @@ focus_tree = {
 				}
 				ITA_add_citta_dell_aria_templates = yes
 			}
+			GER = { set_technology = { photo_reconnaisance = 1 popup = no } }
+			ITA = { set_technology = { photo_reconnaisance = 1 popup = no } }
+			HUN = { set_technology = { photo_reconnaisance = 1 popup = no } }
+			JAP = { set_technology = { photo_reconnaisance = 1 popup = no } }
+			ROM = { set_technology = { photo_reconnaisance = 1 popup = no } }
+			SIA = { set_technology = { photo_reconnaisance = 1 popup = no } }
+			FIN = { set_technology = { photo_reconnaisance = 1 popup = no } }
+			SPR = { set_technology = { photo_reconnaisance = 1 popup = no } }
+			MAN = { set_technology = { photo_reconnaisance = 1 popup = no } }
 		}
 	}
 
