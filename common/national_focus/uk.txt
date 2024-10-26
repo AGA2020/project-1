@@ -3948,8 +3948,8 @@ focus_tree = {
 			has_dlc = "Man the Guns"
 		}
 		available = {
+		NOT = { ENG = { has_war_with = JAP } }
 			RAJ = {
-				surrender_progress < 0.20
 				is_subject_of = ENG
 			}
 		}
