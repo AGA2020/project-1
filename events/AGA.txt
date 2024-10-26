@@ -61,7 +61,7 @@ country_event = {
 	
 	trigger = {
 		tag = WST
-		GER = { surrender_progress > 0.2 }
+		GER = { surrender_progress > 0.4 }
 		NOT = { 64 = { is_controlled_by = GER } }
 	}
 
