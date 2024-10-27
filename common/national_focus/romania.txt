@@ -2375,11 +2375,6 @@ focus_tree = {
    				active = no
 			}
 			diplomatic_relation = {
-				country = TUR
-				relation = guarantee
-   				active = no
-			}
-			diplomatic_relation = {
 				country = YUG
 				relation = guarantee
    				active = no
@@ -2654,10 +2649,6 @@ focus_tree = {
 		available = { if = { limit = { ROM = { is_ai = yes } } GER = { has_war_with = SOV } } }
 		cost = 5
 		completion_reward = {
-			declare_war_on = {
-				target = SOV
-  				type = annex_everything
-			}
 			add_timed_idea = {
 				idea = ROMID_operation_munchen
 				days = 90
@@ -2976,7 +2967,7 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 		available = {
-
+		always = no
 		}
 		cost = 5
 		completion_reward = {

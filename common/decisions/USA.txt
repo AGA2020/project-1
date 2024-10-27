@@ -27,9 +27,6 @@ war_measures = {
 
 		visible = {
 			has_defensive_war = yes
-			CSA = {
-				exists = no
-			}
 		}
 
 		complete_effect = {

@@ -67,7 +67,7 @@ set_technology = {
 	improved_infantry_weapons = 1
 	improved_infantry_weapons_2 = 1
 	advanced_heavy_tank_chassis = 1
-	amphibious_mechanized_equipment_1 = 1
+	amphibious_mechanized_infantry = 1
 
 
 }

@@ -8444,15 +8444,15 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
-			SAU = {
-				add_ideas = SOV_ambassador_karim_khakimov #adds +35 communism acceptance and -50 for other ideologies
-				add_opinion_modifier = { target = SOV modifier = SOV_cordial_relations_developed_by_soviet_diplomat } 
-				hidden_effect = {
-					country_event = { id = NSB_soviet_foreign_politics_events.211 hours = 8 random_hours = 4 }
-				}
-			}
-			activate_targeted_decision = { target = SAU decision = SOV_pressure_country_government_middle_east }
-			activate_targeted_decision = { target = SAU decision = SOV_promote_ideology_rallies_middle_east }
+			#SAU = {
+			#	add_ideas = SOV_ambassador_karim_khakimov #adds +35 communism acceptance and -50 for other ideologies
+			#	add_opinion_modifier = { target = SOV modifier = SOV_cordial_relations_developed_by_soviet_diplomat } 
+			#	hidden_effect = {
+			#		country_event = { id = NSB_soviet_foreign_politics_events.211 hours = 8 random_hours = 4 }
+			#	}
+			#}
+			#activate_targeted_decision = { target = SAU decision = SOV_pressure_country_government_middle_east }
+			#activate_targeted_decision = { target = SAU decision = SOV_promote_ideology_rallies_middle_east }
 		}
 	}
 

@@ -2369,7 +2369,7 @@ operations = {
             available = {
             OR = {
             date>1939.1.1
-            has_global_flag = has_global_flag = scw_over 
+            has_global_flag = scw_over 
             }
                 SPR = {
                     is_ai = yes

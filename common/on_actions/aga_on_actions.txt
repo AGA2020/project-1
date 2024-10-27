@@ -118,8 +118,8 @@ on_actions = {
 					FROM = {
 						tag = ENG
 					}
-					ENG = { has_war = yes }
-					date>1941.1.1	
+
+
 				}
 				JAP = { add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 } }
 				JAP = { declare_war_on = { target = USA type = annex_everything } }
@@ -132,6 +132,8 @@ on_actions = {
 				JAP = { declare_war_on = { target = BEL type = annex_everything } }
 				if = { limit = { BRA = { is_ai = no } } JAP = { declare_war_on = { target = BRA type = annex_everything } } }
 				if = { limit = { MEX = { is_ai = no } } JAP = { declare_war_on = { target = MEX type = annex_everything } } }
+				if = { limit = { not = { has_global_flag = eng_annexed_ast } } HOL = { transfer_navy = { target = AST } } AST = { annex_country = { target = HOL transfer_troops = yes } } 672 = { add_compliance = 100 } 335 = { add_compliance = 100 } 334 = { add_compliance = 100 } 673 = { add_compliance = 100 } 668 = { add_compliance = 100 } 669 = { add_compliance = 100 } 667 = { add_compliance = 100 } 738 = { add_compliance = 100 } }
+				else = { HOL = { transfer_navy = { target = ENG } } ENG = { annex_country = { target = HOL transfer_troops = yes } } 672 = { add_compliance = 100 } 335 = { add_compliance = 100 } 334 = { add_compliance = 100 } 673 = { add_compliance = 100 } 668 = { add_compliance = 100 } 669 = { add_compliance = 100 } 667 = { add_compliance = 100 } 738 = { add_compliance = 100 } }
 			}
 		}
 		effect = {

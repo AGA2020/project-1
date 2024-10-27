@@ -481,7 +481,7 @@ operations = {
 			AST
 		}
 		complete_effect = {
-			set_global_flag = eng_annexed_minor
+			set_global_flag = eng_annexed_ast
 			AST = {
 				transfer_units_fraction = {
 					target = ENG
