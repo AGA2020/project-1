@@ -14,3 +14,12 @@ raid_banned = {
 		convoy_raiding_efficiency_factor = -9
 
 }
+spain_nowar_aga = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_construction
+
+		state_production_speed_air_base_factor = -2
+		state_production_speed_naval_base_factor = -2
+
+}

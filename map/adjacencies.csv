@@ -260,4 +260,20 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 5042;1970;impassable;-1;-1;-1;-1;-1;;RAJ Border
 5042;4973;impassable;-1;-1;-1;-1;-1;;RAJ Border
 5042;8112;impassable;-1;-1;-1;-1;-1;;RAJ Border
+6756;743;impassable;-1;-1;-1;-1;-1;;spain-france Border
+3737;743;impassable;-1;-1;-1;-1;-1;;spain-france Border
+3931;743;impassable;-1;-1;-1;-1;-1;;spain-france Border
+3931;11697;impassable;-1;-1;-1;-1;-1;;spain-france Border
+11838;11697;impassable;-1;-1;-1;-1;-1;;spain-france Border
+11838;9884;impassable;-1;-1;-1;-1;-1;;spain-france Border
+915;9884;impassable;-1;-1;-1;-1;-1;;spain-france Border
+915;9882;impassable;-1;-1;-1;-1;-1;;spain-france Border
+899;9882;impassable;-1;-1;-1;-1;-1;;spain-france Border
+3899;9882;impassable;-1;-1;-1;-1;-1;;spain-france Border
+3899;3915;impassable;-1;-1;-1;-1;-1;;spain-france Border
+3898;6931;impassable;-1;-1;-1;-1;-1;;spain-france Border
+3898;6915;impassable;-1;-1;-1;-1;-1;;spain-france Border
+11779;6915;impassable;-1;-1;-1;-1;-1;;spain-france Border
+11779;9853;impassable;-1;-1;-1;-1;-1;;spain-france Border
+9824;9853;impassable;-1;-1;-1;-1;-1;;spain-france Border
 -1;-1;;-1;-1;-1;-1;-1;-1

@@ -68,7 +68,7 @@ focus_tree = {
 		x = 8
 		y = 0
 		cost = 5
-		available = {
+		available = {	
 			OR = {
 				controls_state = 2
 				controls_state = 117
@@ -80,6 +80,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+				if = { limit = { ITA = { NOT = { has_completed_focus = ITA_demand_balearic_islands_bba } } } transfer_state = 1 }    
 			2 = { #ROME
 				if = {
 					limit = { is_controlled_by = ROOT }
