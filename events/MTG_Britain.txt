@@ -3050,10 +3050,6 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					SOV = {
-						focus_progress = { focus = SOV_the_southern_thrust progress > 0 }
-						has_completed_focus = SOV_the_southern_thrust
-					}
 					has_war_with = SOV
 				}
 			}

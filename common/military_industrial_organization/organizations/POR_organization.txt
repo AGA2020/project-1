@@ -47,7 +47,7 @@ POR_ogma_organization = {
 		tag = POR
 	}
 	available = { 
-		owner = { has_completed_focus = POR_ogma }
+
 	}
 }
 

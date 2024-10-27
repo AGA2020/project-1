@@ -993,16 +993,8 @@ news_event = {
 				ROM = { has_same_ideology = yes }
 				add = 1
 			}
-			modifier = {
-				ROM = { TUR = {has_opinion_modifier = BFTB_balkan_pact_ally } }
-				add = 1
-			}
 		}
 		ROM = {
-			add_opinion_modifier = {
-    				target = TUR
-    				modifier = ROMID_treaty_with_turkey
-			}
 			news_event = {
 				id = ROMEV_events.25
  				random_days = 3
@@ -1283,49 +1275,11 @@ country_event = {
 				has_government = neutrality
 				add = 1
 			}
-			modifier = {
-				TUR = { has_government = democratic }
-				add = 1
-			}
-			modifier = {
-				TUR = { has_government = neutrality }
-				add = 1
-			}
-			modifier = {
-				TUR = { has_same_ideology = yes }
-				add = 2
-			}
 		}
 		effect_tooltip = {
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.03
-			}
-			add_opinion_modifier = {
-    				target = TUR
-    				modifier = ROMID_treaty_with_turkey
-			}
-			TUR = {
-				add_opinion_modifier = {
-    					target = ROM
-    					modifier = ROMID_treaty_with_turkey
-				}
-				diplomatic_relation = {
-					country = ROM
-					relation = guarantee
- 					active = yes
-				}
-				diplomatic_relation = {
-					country = ROM
-					relation = docking_rights
- 					active = yes
-				}
-			}
-		}
-		TUR = {
-			news_event = {
-				id = ROMEV_events.19
- 				random_days = 5
 			}
 		}
 		hidden_effect = {

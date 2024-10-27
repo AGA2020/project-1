@@ -118,8 +118,8 @@ on_actions = {
 					FROM = {
 						tag = ENG
 					}
-
-
+					ENG = { has_war = yes }
+					date>1941.1.1
 				}
 				JAP = { add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 } }
 				JAP = { declare_war_on = { target = USA type = annex_everything } }

@@ -357,7 +357,7 @@ SWE_bofors_organization = {
 
 		all_parents = { generic_mio_trait_improved_hydraulic_recoil_system }
 		available = {
-			SWE = { has_completed_focus = SWE_bofors_fly_swatter }
+	
 		}
 
 		limit_to_equipment_type = {
