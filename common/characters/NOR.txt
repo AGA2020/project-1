@@ -383,8 +383,7 @@ characters={
 		}
 		corps_commander={
 			visible = {
-				has_completed_focus = NOR_a_resurgent_labor_movement
-				has_country_flag = NOR_trotsky_embraced
+				always = no
 			}
 			traits={  }
 			skill=3

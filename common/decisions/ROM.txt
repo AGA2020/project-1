@@ -2173,7 +2173,7 @@ ROMID_internal_factions = {
 		}
 
 		visible = {
-			has_completed_focus = ROM_act_on_the_constitution
+			has_completed_focus = ROM_act_on_the_Constitution
 		}
 
 		available = {

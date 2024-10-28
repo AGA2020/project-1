@@ -3365,10 +3365,6 @@
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				NOT = { AST = { has_completed_focus = AST_the_singapore_strategy } } #ENG can defend its own stuff!
-				factor = 0.2
-			}
 		}
 
 		available = {
