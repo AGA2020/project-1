@@ -2468,7 +2468,7 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_policy_of_individual_security
+				always = no
 			}
 			traits = {
 				pc_for_foreign_affairs_molotov 
@@ -2588,9 +2588,6 @@ characters = {
 					has_global_flag = SOV_soviet_civil_war
 					has_global_flag = SOV_soviet_civil_war_over
 				}
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-				}
 				is_country_leader = no
 				if = {
 					limit = {
@@ -2639,21 +2636,7 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SOV_integrate_smirnovs_bloc
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_imprisoned_flag
-					}
-					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = {
 				soviet_economist
@@ -2906,15 +2889,7 @@ characters = {
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SOV_the_need_for_policy_changes 
-				}
-				if = {
-					limit = {
-						has_character_flag = SOV_exiled_flag
-					}
-					NOT = { has_character_flag = SOV_exiled_flag }
-				}
+				always = no
 			}
 			traits = {
 				peoples_commissar_of_finance 
@@ -3084,7 +3059,7 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
-				has_completed_focus = SOV_beaten_but_not_defeated
+				always = no
 			}
 			available = {
 				always = no
@@ -3280,7 +3255,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				has_completed_focus = SOV_consolidate_power
+				always = no
 			}
 			traits = {
 				political_chameleon
