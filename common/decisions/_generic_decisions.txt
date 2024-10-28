@@ -1881,7 +1881,8 @@ war_measures = {
 					tag = USA #has a focus
 					tag = JAP #has a focus
 					tag = AST #has a focus
-					tag = FRA #has a focus 
+					tag = FRA #has a focus
+					tag = BRA #has a focus 
 				}
 			} 
 		}

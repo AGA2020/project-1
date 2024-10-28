@@ -79,8 +79,7 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
-		completion_reward = {
-				if = { limit = { ITA = { NOT = { has_completed_focus = ITA_demand_balearic_islands_bba } } } transfer_state = 1 }    
+		completion_reward = {   
 			2 = { #ROME
 				if = {
 					limit = { is_controlled_by = ROOT }
