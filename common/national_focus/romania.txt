@@ -6814,10 +6814,12 @@ category = land_doctrine
 		completion_reward = {
 			add_ideas = ROMID_agrarian_reform
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
 				add_extra_state_shared_building_slots = 1
 				set_state_flag = ROM_slots_IC	
 			}
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
 				add_extra_state_shared_building_slots = 1
 				set_state_flag = ROM_slots1_IC	
 			}
@@ -6871,6 +6873,7 @@ category = land_doctrine
 				remove_idea = ROMID_funding_malaxa_2
 			}
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV } 
 					free_building_slots = {
@@ -6888,6 +6891,7 @@ category = land_doctrine
 				set_state_flag = ROM_ind21_IC	
 			}
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV } 
 					free_building_slots = {
@@ -6948,6 +6952,7 @@ category = land_doctrine
 				days = 60
 			}
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV } 
 					free_building_slots = {
@@ -7524,17 +7529,19 @@ category = land_doctrine
  				days = 180
 			}
 			random_owned_controlled_state = {
+				prioritize = { 46 77 81 82 76 84 79 }
 				add_extra_state_shared_building_slots = 1
 				set_state_flag = ROM_slots_IC	
 			}
 			random_owned_controlled_state = {
+				prioritize = { 46 77 81 82 76 84 79 }
 				add_extra_state_shared_building_slots = 1
 				set_state_flag = ROM_slots1_IC	
 			}
 			custom_effect_tooltip = ROMID_urbanization_change_2_tt
 			hidden_effect = {
-				random_owned_controlled_state = { ROMID_urbanize_state = yes }
-				random_owned_controlled_state = { ROMID_urbanize_state = yes }
+				81 = { ROMID_urbanize_state = yes }
+				79 = { ROMID_urbanize_state = yes }
 			}
 		}
 		prerequisite = { focus = ROM_finance_cfr  } prerequisite = { focus = ROM_state_backed_industrial_projects  } prerequisite = { focus = ROM_kickstart_automobile_industy }
@@ -7571,7 +7578,7 @@ category = land_doctrine
 			ROMID_malaxa_add_power = yes
 			custom_effect_tooltip = ROMID_urbanization_change_1_tt
 			hidden_effect = {
-				random_owned_controlled_state = { ROMID_urbanize_state = yes }
+				46 = { ROMID_urbanize_state = yes }
 			}	
 		}
 		prerequisite = { focus = ROM_urbanize_the_small_cities  }
@@ -7708,6 +7715,7 @@ category = land_doctrine
 			    add_idea = ROMID_balanced_industry
 			}
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
 					free_building_slots = {	
@@ -8001,6 +8009,7 @@ category = land_doctrine
 			custom_effect_tooltip = ROMID_allow_zb_vz_30
 			custom_effect_tooltip = ROMID_cugir_establishment_tt
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
 					free_building_slots = {	
@@ -8503,7 +8512,7 @@ category = land_doctrine
 				}				
 			}			
 			random_owned_controlled_state = {
-				prioritize = { 82 78 76 }
+				prioritize = { 46 77 81 82 76 84 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
 					free_building_slots = {
