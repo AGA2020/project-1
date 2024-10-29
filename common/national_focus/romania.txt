@@ -7358,6 +7358,7 @@ category = land_doctrine
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
 				limit = {
 					ROOT = { has_full_control_of_state = PREV } 
 					free_building_slots = {
@@ -7390,6 +7391,7 @@ category = land_doctrine
 				}
 			}
 			random_owned_controlled_state = {
+			prioritize = { 46 77 81 82 76 84 79 }
               			limit = {
                				ROOT = { has_full_control_of_state = PREV }
                 			free_building_slots = {

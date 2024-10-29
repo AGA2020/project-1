@@ -1761,7 +1761,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				conscription = 0.025
+				conscription = 0.01
 				stability_factor = -0.05
 				war_support_factor = -0.1
 				mobilization_speed = 0.2
