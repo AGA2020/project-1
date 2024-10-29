@@ -14,7 +14,7 @@ focus_tree = {
 	focus = {
 		id = ROM_the_1937_election
 		icon = GFX_focus_generic_self_management
-		x = 11
+		x = 13
 		y = 0
 		search_filters = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
@@ -1412,7 +1412,7 @@ focus_tree = {
 	focus = {
 		id = ROM_institute_royal_dictatorship
 		icon = GFX_ROM_institute_royal_dictatorship-306928
-		x = -5
+		x = 0
 		y = 1
 		relative_position_id = ROM_the_1937_election
 		search_filters = {
@@ -1738,7 +1738,7 @@ focus_tree = {
 	focus = {
 		id = ROM_partidulnatiuniipn
 		icon = GFX_goal_generic_attack_allies
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = ROM_turkeyssupportforromania
 		search_filters = {
@@ -2241,7 +2241,7 @@ focus_tree = {
 	focus = {
 		id = ROM_institute_statul_nationallegionar
 		icon = GFX_ROM_institute_statul_nationallegionar-306303
-		x = 4
+		x = 0
 		y = 1
 		relative_position_id = ROM_forcecarolsabdication
 		cost = 5
@@ -2335,7 +2335,7 @@ focus_tree = {
 	focus = {
 		id = ROM_leave_the_balkan_pact
 		icon = GFX_focus_BUL_free_balkan_states
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = ROM_institute_statul_nationallegionar
 		cost = 4
@@ -2387,9 +2387,9 @@ focus_tree = {
 	focus = {
 		id = ROM_ban_other_parties
 		icon = GFX_ROM_ban_other_parties-306300
-		x = -2
-		y = 1
-		relative_position_id = ROM_institute_statul_nationallegionar
+		x = 1
+		y = 2
+		relative_position_id = ROM_forcecarolsabdication
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
@@ -2437,16 +2437,16 @@ focus_tree = {
 				remove_ideas = ROMID_the_lancieri_powerful_high_loyalty
 			}
 		}
-		prerequisite = { focus = ROM_institute_statul_nationallegionar  }  prerequisite = { focus = ROM_forcecarolsabdication }
+		prerequisite = { focus = ROM_institute_statul_nationallegionar  } 
 	}
 
 	#Jilava Massacre
 	focus = {
 		id = ROM_jilava_massacre
 		icon = GFX_ROM_jilava_massacre-306368
-		x = -1
-		y = 1
-		relative_position_id = ROM_ban_other_parties
+		x = -2
+		y = 3
+		relative_position_id = ROM_forcecarolsabdication
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
@@ -2466,7 +2466,7 @@ focus_tree = {
 				}
 			}
 		}
-		prerequisite = { focus = ROM_ban_other_parties  } prerequisite = { focus = ROM_forcecarolsabdication  } prerequisite = { focus = ROM_leave_the_balkan_pact  }
+		prerequisite = { focus = ROM_ban_other_parties  } prerequisite = { focus = ROM_forcecarolsabdication  } prerequisite = { focus = ROM_leave_the_balkan_pact  } prerequisite = { focus = ROM_institute_statul_nationallegionar  }
 	}
 
 	#Support the Coup
@@ -2480,6 +2480,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
+		allow_branch = { always = no }
 		available = { always = no }  
 		completion_reward = {
 			add_stability = -0.05
@@ -2523,9 +2524,9 @@ focus_tree = {
 	focus = {
 		id = ROM_crush_the_coup
 		icon = GFX_focus_generic_anti_fascist_diplomacy
-		x = 5
-		y = 1
-		relative_position_id = ROM_jilava_massacre
+		x = 0
+		y = 4
+		relative_position_id = ROM_forcecarolsabdication
 		cost = 5
 		search_filters = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
@@ -2571,7 +2572,7 @@ focus_tree = {
 	focus = {
 		id = ROM_abolishstatulnationallegionar
 		icon = GFX_ROM_abolishstatulnationallegionar-262024
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = ROM_crush_the_coup
 		search_filters = {
@@ -2682,9 +2683,9 @@ focus_tree = {
 	focus = {
 		id = ROM_sign_the_tripartite_pact
 		icon = GFX_ROM_sign_the_tripartite_pact-306987
-		x = 1
-		y = 2
-		relative_position_id = ROM_institute_statul_nationallegionar
+		x = 2
+		y = 3
+		relative_position_id = ROM_forcecarolsabdication
 		cost = 3
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -2703,7 +2704,7 @@ focus_tree = {
 			ROMID_iron_guard_low_loyalty_increase_effect = yes
 		}
 		mutually_exclusive = { focus = ROM_the_christian_league }
-		prerequisite = { focus = ROM_institute_statul_nationallegionar  }
+		prerequisite = { focus = ROM_institute_statul_nationallegionar  } prerequisite = { focus = ROM_forcecarolsabdication  } prerequisite = { focus = ROM_ban_other_parties  }
 	}
 
 	#The Christian League
@@ -2738,6 +2739,7 @@ focus_tree = {
 		search_filters = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
+		allow_branch = { always = no }
 		available = {
 		always = no
 			if = {
@@ -2984,7 +2986,7 @@ focus_tree = {
 	focus = {
 		id = ROM_german_military_adivsors
 		icon = GFX_ROM_german_military_adivsors-262050
-		x = 1
+		x = 5
 		y = 1
 		relative_position_id = ROM_ostasivaordontrecetiprutul
 		search_filters = {
@@ -3127,7 +3129,7 @@ focus_tree = {
 	focus = {
 		id = ROM_muncatineretuluiroman
 		icon = GFX_focus_generic_little_entente
-		x = 1
+		x = 3
 		y = 1
 		relative_position_id = ROM_abolishstatulnationallegionar
 		search_filters = {
@@ -5191,7 +5193,7 @@ focus_tree = {
 	focus = {
 		id = ROM_romanian_claims_between_dniester_and_southern_bug
 		icon = GFX_goal_generic_more_territorial_claims
-		x = 3
+		x = 1
 		y = 1
 		relative_position_id = ROM_abolishstatulnationallegionar
 		cost = 4
@@ -5274,7 +5276,7 @@ focus_tree = {
 	focus = {
 		id = ROM_romanian_occupation_of_ukraine
 		icon = GFX_ROM_romanian_occupation_of_ukraine-312260
-		x = 4
+		x = 2
 		y = 1
 		relative_position_id = ROM_ostasivaordontrecetiprutul
 		cost = 5
@@ -5751,7 +5753,7 @@ category = land_doctrine
 	focus = {
 		id = ROM_constanta_docks
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 58
+		x = 52
 		y = 0
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -6066,7 +6068,7 @@ category = land_doctrine
 	focus = {
 		id = ROM_cooperation_with_malaxa
 		icon = GFX_ROM_cooperation_with_malaxa-312433
-		x = 50
+		x = 44
 		y = 0
 		cost = 5
 		complete_tooltip = {
@@ -7598,7 +7600,7 @@ category = land_doctrine
 	focus = {
 		id = ROM_the_ruined_army
 		icon = GFX_ROM_the_ruined_army-313132
-		x = 27
+		x = 21
 		y = 0
 		completion_reward = {
 			army_experience = 25
