@@ -2384,6 +2384,7 @@ operations = {
                 SPR
             }
             complete_effect = {
+            if = { limit = { NOT = { has_global_flag = scw_over } } SPR = { annex_country = { target = D01 transfer_troops = yes } } SPR = { annex_country = { target = D02 transfer_troops = yes } } SPR = { annex_country = { target = D03 transfer_troops = yes } } }
                 169 = {
                     set_building_level = {
                         type = air_base
@@ -2553,6 +2554,7 @@ operations = {
                         modifier = spain_nowar_aga
                     }
                 }
+                set_global_flag = scw_over
                 WST = { transfer_state = 178 transfer_state = 699 transfer_state = 783 transfer_state = 290 transfer_state = 297 }
                 if = { limit = { NOT = { ITA = { has_completed_focus ITA_demand_balearic_islands_bba } } } }    
                 WST = { if = { limit = { ITA = { NOT = { has_completed_focus = ITA_demand_balearic_islands_bba } } } transfer_state = 177 } }                
@@ -2561,7 +2563,7 @@ operations = {
                         target = ITA
                         size = 1
                         stockpile_ratio = 1
-                        army_ratio = 1
+                        army_ratio = 0
                         navy_ratio = 1
                         air_ratio = 1
                         keep_unit_leaders_trigger = {
@@ -2572,7 +2574,7 @@ operations = {
                 ITA = {
                     annex_country = {
                         target = SPR
-                        transfer_troops = yes
+                        transfer_troops = no
                     }
                 }
                 171 = { add_compliance = 100 }
