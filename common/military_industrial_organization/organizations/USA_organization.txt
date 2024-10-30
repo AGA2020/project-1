@@ -643,7 +643,7 @@ USA_douglas_aircraft_company_organization = {
 		any_parent = {generic_mio_trait_heavily_armed_aircraft }
 			
 		equipment_bonus = {
-			air_ground_attack = 0.075
+			air_ground_attack = 0.1
 		}
 	}
 
