@@ -115,33 +115,34 @@ scripted_gui = {
 					}
 					clear_variable = ROOT.taker
 				}
-					annex_country_click = {
-	
-					owner={
-						set_variable = { ROOT.taker = this}}
-					var:ROOT.marked_states^0={owner={set_variable={ROOT.target=this}}}
-					if={
-						limit={check_variable={ROOT.target=ROOT.taker}}
-					}
-					else={
-						var:ROOT.target={var:ROOT.taker={
-							GER = {
-								news_event={id=horsttool.3}
+				annex_country_click = {
+					owner = { set_variable = { ROOT.taker = this } }
+					var:ROOT.marked_states^0 = { owner = { set_variable = { ROOT.target = this } } }
+					if = { limit = { check_variable = { ROOT.target = ROOT.taker } } }
+					else = {
+						var:ROOT.target = {
+							var:ROOT.taker = {
+								annex_country = { target = PREV transfer_troops = yes }
+								every_state = { 
+									limit = { 
+										is_owned_by = var:ROOT.taker 
+										is_core_of = var:ROOT.target
+									}
+									add_compliance = 100
+								}
 							}
-								annex_country={
-									target=PREV
-									transfer_troops=yes
-									}}}}
-	
-					ROOT = {
-						for_each_scope_loop={
-							array=marked_states
-							clear_variable=mark_status
 						}
-						clear_array=marked_states
-						clear_variable=target
-						clear_variable=taker
-						clear_variable=first_marked_state
+					}
+					
+					ROOT = {
+						for_each_scope_loop = {
+							array = marked_states
+							clear_variable = mark_status
+						}
+						clear_array = marked_states
+						clear_variable = target
+						clear_variable = taker
+						clear_variable = first_marked_state
 					}
 				}		
 				toogle_mark_click = {
