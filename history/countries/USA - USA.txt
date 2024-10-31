@@ -316,6 +316,12 @@ add_ideas = {
 	home_of_the_free
 }
 
+diplomatic_relation = {
+	country = SOV
+	relation = military_access
+	active = yes
+}
+
 
 # DIPLOMACY
 set_autonomy = {
