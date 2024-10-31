@@ -262,6 +262,7 @@ country_event = {
 						the_lion_of_the_rif
 					}
 				}
+				set_occupation_law = foreign_civilian_oversight
 				# Add Nationalist and Republican Garrison division templates
 				division_template = {
 					name = "Guarnición Nacionalista"
@@ -7780,7 +7781,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 4
+		days = 14
 	}
 
 	fire_only_once = yes
