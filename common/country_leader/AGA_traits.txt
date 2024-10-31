@@ -19,4 +19,12 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	tank_lover = {
+		random = no
+		land_reinforce_rate = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

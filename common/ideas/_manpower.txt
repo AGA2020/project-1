@@ -206,7 +206,6 @@ ideas = {
 				OR = {
 					has_government = fascism
 					has_government = communism
-					SWE_rapid_mob_manpower_law_trigger = yes 
 					if = {
 						limit = {
 							original_tag = DEN
