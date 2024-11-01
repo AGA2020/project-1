@@ -3231,7 +3231,6 @@ technologies = {
 		xor = {
 			large_front_operations
 		}
-		on_research_complete = { if  = { limit  = { tag = SOV } remove_trait = { character = SOV_iosif_stalin ideology = stalinism trait = tank_lover } } }
 		xp_research_type = army
 		xp_unlock_cost = 100
 
