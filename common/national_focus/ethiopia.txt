@@ -532,46 +532,6 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			custom_effect_tooltip = ETH_mounted_levies_tt
-			division_template = {
-				name = "Irregular Cavalry Division"		
-				division_names_group = ETH_CAV_01
-				is_locked = yes
-				force_allow_recruiting = yes
-				regiments = {
-					cavalry = { x = 0 y = 0 }
-					cavalry = { x = 0 y = 1 }
-					cavalry = { x = 1 y = 0 }
-					cavalry = { x = 1 y = 1 }
-				}
-			} 
-			division_template = {
-				name = "Irregular Camelry Division"		
-				division_names_group = ETH_CAV_01
-				is_locked = yes
-				force_allow_recruiting = yes
-				regiments = {
-					camelry = { x = 0 y = 0 }
-					camelry = { x = 0 y = 1 }
-					camelry = { x = 1 y = 0 }
-				}
-			} 
-			hidden_effect = {
-				set_division_template_cap = { division_template = "Irregular Cavalry Division" division_cap = 6 }
-				set_division_template_cap = { division_template = "Irregular Camelry Division" division_cap = 3 }
-				random_owned_controlled_state = {
-					create_unit = {
-						division = "division_template = \"Irregular Cavalry Division\" start_experience_factor = 0.05 start_equipment_factor = 1"
-						owner = ETH
-						count = 2
-					}
-					create_unit = {
-						division = "division_template = \"Irregular Camelry Division\" start_experience_factor = 0.05 start_equipment_factor = 1"
-						owner = ETH
-						count = 1
-					}
-				}
-			}
 		}
 	}
 	focus = {

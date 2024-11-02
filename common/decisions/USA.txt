@@ -573,8 +573,6 @@ foreign_support = {
 		}
 	}
 }
-USA_foreign_support = {
-}
 economy_decisions = {
 }
 
