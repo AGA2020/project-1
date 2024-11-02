@@ -1672,16 +1672,7 @@ country_event = {
 		custom_effect_tooltip = AAT_Sweden.1.b_tt
 		set_country_flag = SWE_1936_per_albin_is_pm
 		effect_tooltip = {
-			SWE_fallen_riksdag = {
-				add_country_leader_role = {
-					country_leader = {
-						ideology = liberalism
-						expire="1965.1.1.1"
-						traits = { SWE_fallen_riksdag_trait } 
-					}
-					promote_leader = yes
-				}
-			}
+
 		}
 		custom_effect_tooltip = SWE_defense_act_tt
 	}
@@ -2003,33 +1994,6 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = AAT_Sweden.9 months = 26 random_days = 70 }
 		}
-	}
-}
-#Sods off to make booze
-country_event = { 
-	id = AAT_Sweden.10
-	title = AAT_Sweden.10.t
-	desc = AAT_Sweden.10.desc
-	picture = GFX_report_event_german_troops_paris
-	fire_only_once = yes
-	trigger = {
-		date > 1944.01.02
-		original_tag = SWE
-		SWE = { SWE_herman_eriksson = { has_character_flag = is_hired} }
-		
-	}
-	mean_time_to_happen = { days = 14 }
-		#He needs to stay
-	option = {
-		name = AAT_Sweden.10.a
-		add_political_power = -60
-	}
-
-	#let him go
-	option = {
-		name = AAT_Sweden.10.b
-		retire_character = SWE_herman_eriksson
-		add_ideas = SWE_vin_och_sprit_ab
 	}
 }
 

@@ -82,67 +82,6 @@ add_namespace = AAT_nordic_cooperation
 #     }
 #}
 
-country_event = { #Invite to Nordic Alliance
-	id = AAT_nordic_shared.1
-	title = AAT_nordic_shared.1.t
-	picture = GFX_report_event_generic_sign_treaty2
-	desc = { 
-		text = AAT_nordic_shared.1.desc_faction_member
-		trigger = {
-			has_country_flag = NORDIC_already_member_flag
-		}
-	}
-	desc = { 
-		text = AAT_nordic_shared.1.desc_non_faction_member
-		trigger = {
-			NOT = { has_country_flag = NORDIC_already_member_flag }
-		}
-	}
-
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-			set_variable = { ROOT.neg_opinion = ROOT.opinion@FROM }
-			multiply_variable = { ROOT.neg_opinion = -1 }
-		}
-	}
-
-	option = {
-		name = AAT_nordic_shared.1.a
-		ai_chance = {
-			base = 100
-			modifier = {
-				add = ROOT.opinion@FROM 
-				always = yes 
-			}
-		}
-		trigger = {
-		}
-		NORDIC_add_to_nordic_alliance = yes 
-		clr_country_flag = NORDIC_already_member_flag
-	}
-	option = {
-		name = AAT_nordic_shared.1.b
-		ai_chance = {
-			base = 100
-			modifier = {
-				add = ROOT.neg_opinion
-				always = yes 
-			}
-			
-			modifier = {
-				factor = 0
-				has_country_flag = NORDIC_already_member_flag
-			}
-			
-		}
-		trigger = {
-		}
-		clr_country_flag = NORDIC_already_member_flag
-     }
-}
-
 country_event = { # Ask for Mutual Guarantees 
 	id = AAT_nordic_shared.2
 	title = AAT_nordic_shared.2.t

@@ -296,9 +296,7 @@ bookmarks = {
 				VIC_aircraft_parts
 			}
 			focuses = {
-				VIC_down_with_marianne
-				VIC_concessions_to_the_germans
-				VIC_end_the_occupation
+
 			}
 		}
 		FIN={
