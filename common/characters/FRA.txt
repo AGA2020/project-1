@@ -1195,13 +1195,10 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				has_completed_focus  = FRA_integralism 
-				or  = {
-					has_government  = fascism 
-					has_government  = neutrality 
-				}
+				always = no
 			}
 			visible  = {
+			always = no
 				has_dlc = "La Resistance"
 			}
 			cost  = 75.000

@@ -448,22 +448,6 @@ on_actions = {
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation = {
 		effect = {
-			if = {
-				limit = {
-					tag = CSA
-					FROM = {
-						OR = {
-							tag = USA
-							is_in_faction_with = USA
-						}
-					}
-				}
-				USA = {
-					annex_country = { target = CSA } #cleaner than hoping that the peace conference AI will sort it out
-				}
-			}
-		}
-		effect = {
 			if = { # Reducing the Crisisjaren idea to level 1 when capitulated (in case player didn't manage to finish the mainland industrial focuses), but still needs Liberation to remove it fully
 				limit = {
 					original_tag = HOL
