@@ -70,24 +70,6 @@ SWE_mines = {
 	}	
 }
 
-SWE_ebba_palmstierna_cat = {
-	allowed = {
-		tag = SWE
-		has_dlc = "Arms Against Tyranny"
-	}
-	visible = {
-		SWE_ebba_palmstierna = { 
-			has_character_flag = is_hired 
-			NOT = {
-				has_trait = SWE_ebba_add_production
-				has_trait = SWE_ebba_political_clout
-				has_trait = SWE_ebba_add_research
-			}
-		}
-
-	}
-}
-
 #SWE_per_albin_bus = {
 #	allowed = {
 #		tag = SWE
