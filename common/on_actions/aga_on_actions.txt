@@ -24,6 +24,11 @@ on_actions = {
 	}	
 	on_startup = {
 		effect = {
+			WST = {
+				country_event = {
+					id = aga.123
+					days = 720
+				}
 			ETH = {
 				transfer_units_fraction = {
 					target = ITA

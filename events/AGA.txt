@@ -23,6 +23,19 @@ news_event = {
 	}
 }
 news_event = {
+	id = aga.123
+	title = aga.1.t
+	desc = aga.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	immediate = {
+		name = aga.1.a
+		ROM = { complete_national_focus = ROM_the_1937_election }  
+	}
+}
+news_event = {
 	id = aga.555
 	title = aga.555.t
 	desc = aga.555.d
@@ -30,9 +43,9 @@ news_event = {
 	
 	is_triggered_only = yes
 
-	option = {
+	immediate = {
 		name = aga.555.a
-		GER = { set_technology = { tech_trucks = 0 popup = no } }
+		ROM = { 48 = { add_compliance = 100 } 801 = { add_compliance = 100 } 211 = { add_compliance = 100 } 212 = { add_compliance = 100 } } 
 	}
 }
 country_event = {
