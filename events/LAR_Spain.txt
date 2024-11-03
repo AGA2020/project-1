@@ -7790,7 +7790,6 @@ country_event = {
 		name = lar_spain.18.a
 		custom_effect_tooltip = lar_spain.18.a_tt
 		hidden_effect = { country_event = { id = lar_spain.2 } }
-		add_ideas = SPA_awaiting_the_rebellion
 	}
 }
 

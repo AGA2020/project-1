@@ -85,8 +85,28 @@ country_event = {
 
 	fire_only_once = yes 
     immediate = {
-				if = { limit = { not = { has_global_flag = eng_annexed_ast } } HOL = { transfer_navy = { target = AST } } AST = { annex_country = { target = HOL transfer_troops = yes } } 672 = { add_compliance = 100 } 335 = { add_compliance = 100 } 334 = { add_compliance = 100 } 673 = { add_compliance = 100 } 668 = { add_compliance = 100 } 669 = { add_compliance = 100 } 667 = { add_compliance = 100 } 738 = { add_compliance = 100 } }
-				else = { HOL = { transfer_navy = { target = ENG } } ENG = { annex_country = { target = HOL transfer_troops = yes } } 672 = { add_compliance = 100 } 335 = { add_compliance = 100 } 334 = { add_compliance = 100 } 673 = { add_compliance = 100 } 668 = { add_compliance = 100 } 669 = { add_compliance = 100 } 667 = { add_compliance = 100 } 738 = { add_compliance = 100 } }
+				if = { limit = { not = { has_global_flag = eng_annexed_ast } } HOL = { transfer_navy = { target = AST } } AST = { annex_country = { target = HOL transfer_troops = yes } } 672 = { add_compliance = 100 } 335 = { add_compliance = 100 } 334 = { add_compliance = 100 } 673 = { add_compliance = 100 } 668 = { add_compliance = 100 } 669 = { add_compliance = 100 } 667 = { add_compliance = 100 } 738 = { add_compliance = 100 } 309 = { add_compliance = 100 } }
+				else = { HOL = { transfer_navy = { target = ENG } } ENG = { annex_country = { target = HOL transfer_troops = yes } } 672 = { add_compliance = 100 } 335 = { add_compliance = 100 } 334 = { add_compliance = 100 } 673 = { add_compliance = 100 } 668 = { add_compliance = 100 } 669 = { add_compliance = 100 } 667 = { add_compliance = 100 } 738 = { add_compliance = 100 } 309 = { add_compliance = 100 } }
+    }
+	option = {
+		name = aga.998.a
+
+	}
+}
+country_event = {
+	id = aga.242
+	title = aga.998.t
+	desc = aga.998.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = WST
+		GER = { has_collaboration = { target = SOV value > 0.5 } } 
+	}
+
+	fire_only_once = yes 
+    immediate = {
+				SOV = { add_ideas = Germany_broke_collab_rule }
     }
 	option = {
 		name = aga.998.a
