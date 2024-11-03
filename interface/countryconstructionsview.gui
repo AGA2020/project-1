@@ -446,7 +446,7 @@ guiTypes = {
 		buttonType = {
 			name = "start_construction_button"
 			position = { x = 0 y = 0 }
-			spriteType = "GFX_buildings_strip_bg" #수정
+			spriteType = "GFX_buildings_strip_bg"
 			clicksound = click_default
 		}
 
@@ -501,7 +501,7 @@ guiTypes = {
 		iconType = {
 			name = "picture"
 			position = { x = 172 y = 5 }
-			spriteType = "GFX_buildings_strip_bg" #수정
+			spriteType = "GFX_buildings_strip_bg"
 		}
 		iconType = {
 			name = "overlay"

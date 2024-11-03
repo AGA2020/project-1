@@ -29,6 +29,7 @@ on_actions = {
 					id = aga.123
 					days = 720
 				}
+			}
 			ETH = {
 				transfer_units_fraction = {
 					target = ITA
