@@ -101,7 +101,11 @@ country_event = {
 	
 	trigger = {
 		tag = WST
+		OR = {
 		GER = { has_collaboration = { target = SOV value > 0.5 } } 
+		ROM = { has_collaboration = { target = SOV value > 0.5 } } 
+		ITA = { has_collaboration = { target = SOV value > 0.5 } } 
+		}
 	}
 
 	fire_only_once = yes 
