@@ -1320,25 +1320,12 @@ every_possible_country = {
 				}
 			}
 			available = {
-				OR = {
-					AND = {
-						custom_trigger_tooltip = {
-							tooltip = SPR_not_nationalist_spain_tt
-							NOT = {
-								tag = SPA 
-								tag = SPB 
-							}
-						}
-					}
-					
-					AND = {
-						CHL_hub_of_the_revolution_trigger = yes
-						SPR = {
-							has_country_flag = scw_over
-							OR = { #Nat Spain WON
-								tag = SPA 
-								tag = SPB 
-							}
+				AND = {
+					custom_trigger_tooltip = {
+						tooltip = SPR_not_nationalist_spain_tt
+						NOT = {
+							tag = SPA 
+							tag = SPB 
 						}
 					}
 				}
