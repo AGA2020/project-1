@@ -1658,19 +1658,7 @@ every_possible_country = {
 				}
 			}
 			available = {
-				OR = {
-					AND = {
-						CHL_hub_of_the_revolution_trigger = yes
-						SPR = {
-							has_country_flag = scw_over
-							OR = { #Nat Spain WON
-								tag = SPA 
-								tag = SPB 
-							}
-						}
-					}
-				}
-				
+				always = no	
 			}
 			traits = {
 				collectivization_specialist 
