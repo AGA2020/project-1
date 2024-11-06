@@ -2889,11 +2889,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_in_faction_with = JAP
-				factor = 0 #GER-sempai has already noticed you!
-			}
+			factor = 0
 		}	
 		completion_reward = {
 			JAP = {
