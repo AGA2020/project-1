@@ -5200,6 +5200,7 @@ focus_tree = {
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 1
 		y = 1
+		available = { GER = { has_war_with = SOV } }
 		relative_position_id = ROM_abolishstatulnationallegionar
 		cost = 4
 		search_filters = {

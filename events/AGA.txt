@@ -98,8 +98,7 @@ country_event = {
 
 	fire_only_once = yes 
     immediate = {
-				if = { limit = { not = { has_global_flag = eng_annexed_ast } } HOL = { transfer_navy = { target = AST } } AST = { annex_country = { target = HOL transfer_troops = yes } } 672 = { add_compliance = 100 } 335 = { add_compliance = 100 } 334 = { add_compliance = 100 } 673 = { add_compliance = 100 } 668 = { add_compliance = 100 } 669 = { add_compliance = 100 } 667 = { add_compliance = 100 } 738 = { add_compliance = 100 } 309 = { add_compliance = 100 } }
-				else = { HOL = { transfer_navy = { target = ENG } } ENG = { annex_country = { target = HOL transfer_troops = yes } } 672 = { add_compliance = 100 } 335 = { add_compliance = 100 } 334 = { add_compliance = 100 } 673 = { add_compliance = 100 } 668 = { add_compliance = 100 } 669 = { add_compliance = 100 } 667 = { add_compliance = 100 } 738 = { add_compliance = 100 } 309 = { add_compliance = 100 } }
+				 HOL = { transfer_navy = { target = USA } } USA = { annex_country = { target = HOL transfer_troops = yes } } 672 = { add_compliance = 100 } 335 = { add_compliance = 100 } 334 = { add_compliance = 100 } 673 = { add_compliance = 100 } 668 = { add_compliance = 100 } 669 = { add_compliance = 100 } 667 = { add_compliance = 100 } 738 = { add_compliance = 100 } 309 = { add_compliance = 100 }
     }
 	option = {
 		name = aga.998.a
@@ -114,11 +113,7 @@ country_event = {
 	
 	trigger = {
 		tag = WST
-		OR = {
-		GER = { has_collaboration = { target = SOV value > 0.5 } } 
-		ROM = { has_collaboration = { target = SOV value > 0.5 } } 
-		ITA = { has_collaboration = { target = SOV value > 0.5 } } 
-		}
+		GER = { has_collaboration = { target = SOV value > 0.9 } } 
 	}
 
 	fire_only_once = yes 
