@@ -654,30 +654,13 @@ characters={
 				original_tag = HUN
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				always = no
 			}
 			traits = {
 				communist_revolutionary 
 			}
 			ai_will_do = {
 				base = 0
-				modifier = {
-					add = 100
-					OR = {
-						has_country_flag = HUN_AI_RANDOM_COMMUNIST
-						has_game_rule = {
-							rule = HUN_ai_behavior
-							option = COMMUNIST
-						}
-					}
-				}
 			}
 		}
 	}
@@ -696,14 +679,7 @@ characters={
 				original_tag = HUN
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				always = no
 			}
 			traits = {
 				democratic_reformer 

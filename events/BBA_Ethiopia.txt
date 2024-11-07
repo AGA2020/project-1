@@ -6061,7 +6061,6 @@ country_event = {
 			division_template = {
 				name = "Armored-Car Division"
 				is_locked = no
-				division_names_group = ETH_MOT_01
 				priority = 1
 				template_counter = 0
 				regiments = {

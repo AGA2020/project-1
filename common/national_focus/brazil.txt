@@ -51,17 +51,6 @@ focus_tree = {
 		}
 		available = {
 		}
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = BRA_end_the_state_of_emergency }
-			}
-		}
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {

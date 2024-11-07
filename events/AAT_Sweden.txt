@@ -1713,43 +1713,6 @@ country_event = {
 	}
 }
 
-#Vote of no confidence
-country_event = { 
-	id = AAT_Sweden.2
-	title = AAT_Sweden.2.t
-	desc = AAT_Sweden.2.desc
-	picture = GFX_report_event_german_troops_paris
-	is_triggered_only = yes
-
-	option = {
-		name = AAT_Sweden.2.a	
-		retire_country_leader = yes
-		SWE_fallen_riksdag = {
-			add_country_leader_role = {
-				country_leader = {
-					ideology = liberalism
-					expire="1965.1.1.1"
-					traits = { SWE_fallen_riksdag_trait } 
-				}
-				promote_leader = yes
-			}
-		}
-		clr_country_flag = SWE_1936_per_albin_is_pm
-		set_country_flag = SWE_1936_fallen_riksdag
-		hidden_effect = {
-			random_list = {
-				seed = random #optional. if specified, it will use this seed instead of scope seed for picking a random 
-				1 = {  
-					country_event = { id = AAT_Sweden.4 days = 12 random_days = 6 }
-				}
-				99 = {
-					#set_country_flag = SWE_normal_events
-				}
-			}
-		}
-	}
-}
-
 #1936 election
 country_event = { 
 	id = AAT_Sweden.3
