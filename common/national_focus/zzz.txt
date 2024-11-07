@@ -62,6 +62,10 @@ focus_tree = {
 			add = 100
 			tag = IRQ
 		}
+		modifier = {
+			add = 100
+			tag = POL
+		}
 	}
 
 	default = no
