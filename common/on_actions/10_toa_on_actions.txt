@@ -261,25 +261,6 @@ on_actions = {
 		effect = {
 			IF = {
 				limit = {
-					has_dlc = "Trial of Allegiance"
-					ROOT = {
-						tag = BRA
-					}
-					FROM = { tag = URG }
-				}
-
-				ARG = {
-					country_event = {
-						id = ARG_political_events.110
-						hours = 5
-					}
-				}
-			}
-		}
-
-		effect = {
-			IF = {
-				limit = {
 					ROOT = {
 						NOT = { has_idea = SMB_organization_of_american_states_member }
 					}

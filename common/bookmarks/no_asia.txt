@@ -60,7 +60,6 @@ bookmarks = {
 				ITA_re_fake_ns
 			}	
 			focuses = {
-				ITA_il_sol_dell_avvenire
 				ITA_a_colonial_empire
 			}
 		}

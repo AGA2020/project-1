@@ -4,6 +4,9 @@ thx_beethoven = {
 			is_playable_country=yes
 		}
 	}
+	abort = {
+		always = no
+	}
 	ai_strategy = {
 		type = equipment_production_factor
 		id = fighter
