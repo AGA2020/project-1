@@ -245,60 +245,6 @@ country_event = { #Vote of No Confidence
 			}
 		}
 	}
-
-	option = { #Conservative
-		name = denmark_political_events.2.d
-		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 5
-				democratic > 0.2
-			}
-			modifier = {
-				factor = 5
-				democratic > 0.35
-			}
-			modifier = {
-				factor = 2
-				democratic > 0.5
-			}
-			modifier = {
-				factor = 20
-				OR = {
-					DEN_rearming_ai = yes
-					DEN_royal_ai = yes
-					DEN_fascist_ai = yes
-				}
-			}
-			modifier = {
-				factor = 2
-				is_historical_focus_on = no
-			}
-		}
-		trigger = {
-			DEN_christmas_moller = { is_country_leader = no }
-			check_variable = { DEN_democratic_popularity > 29 }
-			NOT = { has_country_flag = banned_democratic_flag }
-		}
-
-		custom_effect_tooltip = DEN_prime_minister_resigns_tt
-
-		DEN_ruling_party_loses_popularity = yes
-
-		DEN_dove_is_removed_from_power = yes
-
-		if = {
-			limit = {
-				NOT = {
-					has_government = democratic
-				}
-			}
-			add_popularity = {
-			    ideology = democratic
-			    popularity = 0.05
-			}
-		}
-	}
 }
 
 country_event = { #Election Campaigns
@@ -8746,16 +8692,6 @@ country_event = { #The King Dies
 				has_country_leader = {
 					character = DEN_christian_x
 					ruling_only = yes
-				}
-			}
-			DEN_frederik_ix = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = despotism
-						expire = "1965.1.1.1"
-						traits = { DEN_the_king }
-					}
 				}
 			}
 		}

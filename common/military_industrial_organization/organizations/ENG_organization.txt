@@ -580,29 +580,10 @@ ENG_de_havilland_organization = {
 	icon = GFX_idea_de_havilland
 	allowed = {	
 		has_dlc = "Arms Against Tyranny"
-		OR = {
-			tag = ENG
-			tag = NOR 		
-		}
+		tag = ENG	
 	}
 
 	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = ENG } }
-			}
-			FROM = { NOT = { has_war_with = ENG } }
-		}
-
-		if = {
-			limit = {
-				FROM = { tag = NOR }
-			}
-			FROM = {
-				has_completed_focus = NOR_invite_transnational_manufacturers
-			}
-		}
 	}
 }
 
@@ -616,10 +597,6 @@ ENG_fairey_aviation_organization = {
 			AND = {
 				tag = BUL
 				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				tag = ETH
-				has_dlc = "By Blood Alone"
 			}
 		}
 	}
@@ -655,17 +632,6 @@ ENG_fairey_aviation_organization = {
 				}
 				#is_in_faction_with = ENG
 				NOT = { has_completed_focus = BUL_nationalization }
-			}
-		}
-		ELSE_IF = {
-			limit = {
-				FROM = { original_tag = ETH }
-			}
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_country_flag = has_invited_fairey_aviation_mio_flag
-				}
 			}
 		}
 	}
