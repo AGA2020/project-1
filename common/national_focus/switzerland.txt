@@ -6,7 +6,6 @@
 		modifier = {
 			add = 10
 			tag = SWI
-			has_dlc = "By Blood Alone"
 		}
 	}
 	default = no
