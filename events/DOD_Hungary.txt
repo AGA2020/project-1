@@ -4917,25 +4917,6 @@ country_event = {
 		}
 		ITA = { country_event = DOD_hungary.146 }
 	}
-	option = {# appeal to Britain
-		name = DOD_hungary.145.e
-		ai_chance = {
-			factor = 35
-			modifier = {
-				is_in_faction_with = ENG
-				factor = 10
-			}
-		}
-		trigger = {
-			ENG = {
-				has_completed_focus = uk_balkan_strategy
-			}
-			NOT = {
-				has_war_with = ENG
-			}
-		}
-		ENG = { country_event = DOD_hungary.146 }
-	}
 
 }
 
