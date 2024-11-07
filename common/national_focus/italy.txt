@@ -7925,14 +7925,6 @@ focus_tree = {
 					}
 				}
 			}
-
-			if = {
-				limit = {
-					has_completed_focus = ITA_solid_progress
-				}
-				unlock_decision_tooltip = ITA_bop_slander_the_duce
-				unlock_decision_tooltip = ITA_bop_criticize_the_war
-			}
 		}
 	}
 

@@ -209,9 +209,6 @@ characters={
 				NOR_AAT = yes
 			}
 			available = {				
-				NOT = {
-					has_completed_focus = NOR_get_rid_of_quisling 
-				}
 				is_country_leader = no
 			}
 			traits  = {
