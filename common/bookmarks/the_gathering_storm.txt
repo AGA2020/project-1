@@ -200,13 +200,10 @@ bookmarks = {
 			history = "ROM_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				ROM_king_carol_ii_hedonist
 				neutrality_idea
 			}
 			focuses = {
-				ROM_appoint_german_friendly_government
 				ROM_institute_royal_dictatorship
-				ROM_preserve_greater_romania
 			}
 		}
 

@@ -136,14 +136,8 @@ on_actions = {
 				every_country = {	
 					limit = {
 						OR = {
-							original_tag = URG
 							original_tag = BRA
-							original_tag = PAR
-							original_tag = PRU
 							original_tag = VEN
-							original_tag = ECU
-							original_tag = COL
-							
 						}
 					}
 
@@ -197,128 +191,12 @@ on_actions = {
 						OR = {
 							capital_scope = { is_on_continent = south_america }
 							capital_scope = { is_on_continent = north_america }
-							tag = CUB
-							tag = DOM
-							tag = HAI
 						}
 					}
 					add_ideas = USA_monroe_doctrine_idea
 				}
 			}
 		}
-	}
-	on_peaceconference_ended = {
-
-		# Make sure that Uruguay get's their cosmetic tag if it applies
-		effect = {
-			IF = {
-				limit = {
-					URG = {
-						NOT = {
-							has_cosmetic_tag = URG_german
-						}
-						is_subject = yes
-						is_subject_of = GER
-					}
-				}
-				URG = {
-					set_cosmetic_tag = URG_german
-				}
-			}
-		}	
-		# Make sure that Uruguay drops their cosmetic tag if it applies
-		effect = {
-			IF = {
-				limit = {
-					URG = {
-						has_cosmetic_tag = URG_german
-						is_subject = no
-					}
-				}
-				URG = {
-					drop_cosmetic_tag = yes
-				}
-			}
-		}	
-
-		# Make sure that Bolivia drops their araucanian cosmetic tag if it applies
-		effect = {
-			IF = {
-				limit = {
-					BOL = {
-						has_cosmetic_tag = BOL_orelia
-						is_subject = no
-					}
-				}
-				BOL = {
-					drop_cosmetic_tag = yes
-				}
-			}
-		}	
-	}
-
-	on_puppet = { #ROOT = nation being puppeted, FROM = overlord
-		effect = {
-
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = URG
-					}
-					FROM = {
-						original_tag = GER
-					}
-				}
-				ROOT = {
-					set_cosmetic_tag = URG_german
-				}
-			}
-
-		}
-
-
-	}
-
-	on_release_as_puppet = { # ROOT is the nation being released, FROM is the overlord.
-
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = URG
-					}
-					FROM = {
-						original_tag = GER
-					}
-				}
-				ROOT = {
-					set_cosmetic_tag = URG_german
-				}
-			}
-		}
-	}
-
-	#ROOT is subject FROM is previous overlord
-	on_subject_free = {
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = URG
-					}
-					FROM = {
-						original_tag = GER
-					}
-				}
-				ROOT = {
-					drop_cosmetic_tag = yes
-				}
-			}
-		}
-		effect = {
-			USA_add_monroe_doctrine_to_target = yes
-		}
-
 	}
 
 	# called when a country send volunteers to another
