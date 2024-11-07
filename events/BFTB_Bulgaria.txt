@@ -7404,54 +7404,6 @@ country_event = {
 	}
 }
 
-#Unification of the Balkans - Country Requests Industrial Aid before annexation - Event for BUL
-country_event = {
-	id = bftb_bulgaria_balkan_federation.7
-	title = bftb_bulgaria_balkan_federation.7.t
-	desc = bftb_bulgaria_balkan_federation.7.desc
-	picture = GFX_report_event_generic_factory
-
-	is_triggered_only = yes
-
-	option = {
-		name = bftb_bulgaria_balkan_federation.7.a
-
-		activate_targeted_decision = { target = FROM decision = BUL_balkan_federation_industrial_aid }
-	}
-}
-
-#Unification of the Balkans - Country Requests Economic Aid before annexation - Event for BUL
-country_event = {
-	id = bftb_bulgaria_balkan_federation.8
-	title = bftb_bulgaria_balkan_federation.8.t
-	desc = bftb_bulgaria_balkan_federation.8.desc
-	picture = GFX_report_event_hitler_handshake
-
-	is_triggered_only = yes
-
-	option = {
-		name = bftb_bulgaria_balkan_federation.8.a
-
-		activate_targeted_decision = { target = FROM decision = BUL_balkan_federation_economic_aid }
-	}
-}
-
-#Unification of the Balkans - Country Requests Military Aid before annexation - Event for BUL
-country_event = {
-	id = bftb_bulgaria_balkan_federation.9
-	title = bftb_bulgaria_balkan_federation.9.t
-	desc = bftb_bulgaria_balkan_federation.9.desc
-	picture = GFX_report_event_bul_ff_troops_yugoslavia
-
-	is_triggered_only = yes
-
-	option = {
-		name = bftb_bulgaria_balkan_federation.9.a
-
-		activate_targeted_decision = { target = FROM decision = BUL_balkan_federation_military_aid }
-	}
-}
-
 #Unification of the Balkans - Country requests limited freedom (aka puppet) - Event for BUL
 country_event = {
 	id = bftb_bulgaria_balkan_federation.10
