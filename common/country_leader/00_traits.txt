@@ -5713,7 +5713,6 @@ leader_traits = {
 			factor = 1
 			modifier = {
 				tag = USA
-				NOT = { has_completed_focus = USA_america_first }
 				factor = 0
 			}
 		}
