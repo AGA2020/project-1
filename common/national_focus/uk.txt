@@ -4158,20 +4158,7 @@ focus_tree = {
 	### DEMOCRATIC BRANCH - STEADY AS SHE GOES ###
 	focus = {
 		id = ENG_steady_as_she_goes
-		mutually_exclusive = {
-			focus = ENG_a_change_in_course
-		}
 		available = {
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = ENG_abdication_crisis_changed_mind
-					}
-				}
-				NOT = {
-					has_country_flag = edward_viii_refused_to_abdicate_flag
-				}
-			}
 		}
 		cancel_if_invalid = yes
 		icon = GFX_goal_support_democracy
@@ -4181,13 +4168,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = ENG_abdication_crisis_normal_marriage
-					has_country_flag = ENG_abdication_crisis_morganatic_marriage
-				}
-			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL

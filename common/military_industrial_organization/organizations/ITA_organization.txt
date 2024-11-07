@@ -730,13 +730,7 @@ ITA_fiat_aviazione_organization = {
 
 	
 	allowed = {	 
-		OR = {
-			tag = ITA
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-		} 
+		tag = ITA
 	}
 	
 	available = {
@@ -751,14 +745,7 @@ ITA_fiat_aviazione_organization = {
 				controls_state = 158 #PIEDMONT (Torino)
 			}
 			ITA_is_northern_designer = yes
-		}
-
-		IF = {
-			limit = { FROM = { original_tag = BRA } }
-			FROM = { 
-				has_completed_focus = BRA_italian_aircraft
-			} 
-		}		
+		}	
 	}
 	
 	initial_trait = {
