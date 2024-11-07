@@ -2920,38 +2920,6 @@ country_event = {
 	}
 }
 
-# Event for Britain notifying that USA objects to them forcing through communism in Canada
-country_event = {
-	id = mtg_britain.69
-	title = mtg_britain.69.t
-	desc = mtg_britain.69.d
-	picture = GFX_report_event_generic_sign_treaty3
-
-	is_triggered_only = yes
-	
-	# Bring it
-	option = {
-		name = mtg_britain.69.a
-		ai_chance = {
-			factor = 34
-		}
-		FROM = { country_event = { id = mtg_britain.70 hours = 6 } }
-	}
-
-	# Back down
-	option = {
-		name = mtg_britain.69.b
-		ai_chance = {
-			factor = 66
-		}
-		custom_effect_tooltip = mtg_britain.68_tt
-		FROM = { country_event = { id = mtg_britain.71 hours = 6 } }
-		remove_decision = ENG_propaganda_campaigns_in_canada
-		set_country_flag = ENG_secure_the_dominions_backed_down_against_USA
-		CAN = { remove_ideas = ENG_dominion_communist_propaganda }
-	}
-}
-
 # Event for USA notifying that Britain isn't backing down
 country_event = {
 	id = mtg_britain.70
