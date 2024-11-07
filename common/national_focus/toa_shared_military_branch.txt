@@ -7,18 +7,6 @@ shared_focus = {
 
 	icon = {
 		trigger = {
-			original_tag = CHL
-		}
-		value = GFX_focus_CHL_ejercito_de_chile
-	}
-	icon = {
-		trigger = {
-			original_tag = ARG
-		}
-		value = GFX_focus_ARG_army
-	}
-	icon = {
-		trigger = {
 			original_tag = BRA
 		}
 		value = GFX_focus_BRA_army
@@ -27,8 +15,6 @@ shared_focus = {
 		trigger = {
 			NOT = {
 				OR = {
-					original_tag = CHL
-					original_tag = ARG
 					original_tag = BRA
 				}
 			}
@@ -44,49 +30,6 @@ shared_focus = {
 		trigger = {
 			tag = BRA
 		}
-	}
-	offset = {
-		x = 48
-		y = 0
-		trigger = {
-			tag = ARG 
-		}
-	}
-
-	offset = {
-		x = 74
-		y = 0
-		trigger = {
-			tag = CHL
-		}
-	}
-
-	offset = {
-		x = 56
-		y = 0
-		trigger = {
-			tag = PAR
-		}
-	}
-
-	offset = {
-		x = 51
-		y = 0
-		trigger = {
-			tag = URG
-		}
-	}
-
-	offset = {
-		x = -33
-		y = 0
-		trigger = {
-			has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
-			}
-			has_completed_focus = BRA_prepare_for_second_intentona
-		}	
 	}
 
 	offset = {

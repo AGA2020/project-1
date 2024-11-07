@@ -12607,7 +12607,6 @@ political_actions = {
 
 		visible = {
 			tag = SPD
-			NOT = { has_completed_focus = SPR_crush_the_revolution }
 		}
 
 		timeout_effect = {

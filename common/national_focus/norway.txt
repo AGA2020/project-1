@@ -170,35 +170,7 @@ focus_tree = {
 				}
 			}
 			add_war_support = 0.1
-			if = {
-				limit = {
-					has_country_flag = NOR_going_dem_allied 
-				}
-				custom_effect_tooltip = NOR_unlocking_prep_deploy_allied_dem_TT
-				unlock_decision_tooltip = {
-					decision = NOR_alt_dem_expedite_training
-					show_effect_tooltip = yes 
-					show_modifiers = yes 
-				}
-				unlock_decision_tooltip = {
-					decision = NOR_alt_dem_prioritize_production
-					show_effect_tooltip = yes 
-					show_modifiers = yes 
-				}
-				unlock_decision_tooltip = {
-					decision = NOR_alt_dem_offensive_push
-					show_effect_tooltip = yes 
-					show_modifiers = yes 
-				}
-				unlock_decision_tooltip = {
-					decision = NOR_alt_dem_focus_on_defense
-					show_effect_tooltip = yes 
-					show_modifiers = yes 
-				}
-			}
-			else = {
-				custom_effect_tooltip = NOR_unlocking_prep_deploy_dem_his_TT
-			}
+			custom_effect_tooltip = NOR_unlocking_prep_deploy_dem_his_TT
 		}
 	}
 

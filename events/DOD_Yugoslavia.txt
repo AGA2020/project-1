@@ -4828,27 +4828,6 @@ country_event = {
 			hidden_effect = { save_global_event_target_as = yugoslavia_wedding_partner }
 		}
 	}
-	option = { #Spanish Princess
-		name = DOD_yugoslavia.50.e
-		trigger = {
-			any_other_country = {
-				original_tag = SPR
-				NOT = { has_war_with = ROOT }
-				has_completed_focus = SPA_settle_the_succession_question
-			}
-		}
-		random_country = {
-			limit = {
-				original_tag = SPR
-				has_completed_focus = SPA_settle_the_succession_question
-			}
-			country_event = {
-				id = DOD_yugoslavia.501
-				days = 10
-			}
-			hidden_effect = { save_global_event_target_as = yugoslavia_wedding_partner }
-		}
-	}
 }
 
 #Wedding partner can accept or decline
