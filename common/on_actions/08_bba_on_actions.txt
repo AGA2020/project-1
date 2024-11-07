@@ -963,20 +963,6 @@ on_actions = {
 		#Italian Confederation -> Add NS to new subjects
 	}
 
-	on_ruling_party_change = { 
-		#ITALY CHANGES IDEOLOGY -> Make sure it gets the appropriate name for Army NSs
-		effect = {
-			if = {
-				limit = {
-					original_tag = ITA
-				}
-				#log = "Updating NS names"
-				mark_focus_tree_layout_dirty = yes
-				ITA_replace_stuff_based_on_ideology_effect = yes
-			}
-		}
-	}
-
 	on_government_change = {
 		effect = {
 			#Change BoP when changing gov

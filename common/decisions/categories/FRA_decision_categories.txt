@@ -26,18 +26,6 @@ FRA_vichy_france = {
 	}
 }
 
-VIC_concessions_to_the_germans = {
-	allowed = {
-		original_tag = VIC 
-	}
-	visible = {
-		OR = {
-			has_completed_focus = VIC_concessions_to_the_germans
-			controls_state = 16
-		}
-	}
-}
-
 FRA_intervention_in_overseas_territories = {
 	allowed = {
 		original_tag = FRA

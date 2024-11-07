@@ -7797,12 +7797,7 @@ focus_tree = {
 				NOT = { has_dlc = "By Blood Alone" }
 			}
 		}
-		relative_position_id = ITA_the_abyssinian_fiasco
 		cost = 1
-
-		bypass = {
-			ITA_has_peaced_out_eth_on_startup = yes
-		}
 
 		available = {
 			

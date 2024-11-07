@@ -12,12 +12,10 @@ state = {
 	history = {
 
         owner = WST
-		add_core_of = PRU
 
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
-			industrial_complex = 6
 			air_base = 3
 			12997 = {
 				naval_base = 5
@@ -26,12 +24,6 @@ state = {
 				naval_base = 1
 			}
 		}
-		
-
-
-
-
-
 
 
 

@@ -3463,11 +3463,6 @@ focus_tree = {
 					relation = guarantee
 					active = no
 				}
-				diplomatic_relation = {
-					country = TUR
-					relation = guarantee
-					active = no
-				}
 			}
 			hidden_effect = {
 				if = {
