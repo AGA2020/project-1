@@ -207,7 +207,6 @@ if = {
 	create_equipment_variant = {
 		name = "Rota Class"								# represents Rota and Daphne classes
 		type = ship_hull_submarine_1
-		name_group = DEN_DD_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
@@ -219,7 +218,6 @@ if = {
 	create_equipment_variant = {
 		name = "Herluf Trolle Class"				
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = DEN_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_medium_battery_1
@@ -238,7 +236,6 @@ if = {
 	create_equipment_variant = {
 		name = "Niels Iuel Class"				
 		type = ship_hull_cruiser_coastal_defense_ship
-		name_group = DEN_CA_HISTORICAL
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
@@ -257,23 +254,5 @@ if = {
 
 # 1939 Start #
 1939.1.1 = {
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		# Ship variants #
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		# Submarines #
-		create_equipment_variant = {
-			name = "Havmanden Class"				
-			type = ship_hull_submarine_1
-			name_group = DEN_DD_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_torpedo_slot = ship_torpedo_sub_1
-				fixed_ship_engine_slot = sub_ship_engine_2
-				rear_1_custom_slot = empty
-			}
-		}
-	}
+
 }
