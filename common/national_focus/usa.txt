@@ -73,8 +73,6 @@ focus_tree = {
 				not = { has_dlc = "Man the Guns" }
 			}
 		}
-
-		mutually_exclusive = { focus = USA_reestablish_the_gold_standard }
 		cost = 10
 
 		ai_will_do = {

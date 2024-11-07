@@ -1467,60 +1467,6 @@ NOR_historical_deploy_prep_decisions_category = {
 	######    ALT-DEM   ######  
 	######              ###### 
 
-
-NOR_allied_democratic_preparation_decisions_category = {
-
-	NOR_alt_dem_naval_expansion = {
-		
-		visible = {
-			has_completed_focus = NOR_patrol_our_coast
-			NOT = { has_country_flag = NOR_preps_system_has_been_reset }
-			has_war = no
-		}
-
-		available = {
-			NOT = {
-				ROOT = {
-					has_country_flag = NOR_ongoing_countrywide_program
-				}
-			}
-		}
-
-		custom_cost_trigger = {
-			check_variable = { NOR_country_preparedness > 0 }
-		}
-
-		custom_cost_text = decision_cost_alt_dem_preparedness
-
-		days_remove = 90
-
-		complete_effect = {
-			hidden_effect = {
-				subtract_from_variable = { NOR_country_preparedness = 1	}
-				set_country_flag = NOR_ongoing_countrywide_program
-			}
-		}
-
-		modifier = {
-			production_speed_dockyard_factor = 0.15
-			production_speed_naval_base_factor = 0.2
-		}
-
-		remove_effect = {
-			hidden_effect = {
-				clr_country_flag = NOR_ongoing_countrywide_program
-			} 
-		}
-
-		cancel_effect = {
-			hidden_effect = {
-				clr_country_flag = NOR_ongoing_countrywide_program
-			} 
-		}
-	}
-
-}
-
 economy_decisions = {
 	refit_to_destroyer_nor = {
 		icon = GFX_decision_generic_merge_plant_ship

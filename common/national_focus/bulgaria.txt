@@ -2692,7 +2692,7 @@ focus_tree = {
 	focus = {
 		id = BUL_liberalization_of_trade_policies
 
-		prerequisite = { focus = BUL_illusions_of_a_non_partisan_system focus = BUL_petorka }
+		prerequisite = { focus = BUL_illusions_of_a_non_partisan_system }
 
 		icon = GFX_goal_generic_trade
 		relative_position_id = BUL_illusions_of_a_non_partisan_system
@@ -4249,7 +4249,7 @@ focus_tree = {
 		x = 0
 		y = 4
 		cost = 5
-		mutually_exclusive = { focus = BUL_the_fate_of_the_balkans focus = BUL_join_the_allies }
+		mutually_exclusive = { focus = BUL_the_fate_of_the_balkans }
 
 		bypass = {
 			OR = {

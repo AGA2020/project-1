@@ -2354,10 +2354,6 @@ focus_tree = {
 				modifier = BFTB_balkan_pact_ally
 			}
 			remove_opinion_modifier = { 
-				target = TUR
-				modifier = BFTB_balkan_pact_ally
-			}
-			remove_opinion_modifier = { 
 				target = YUG
 				modifier = BFTB_balkan_pact_ally
 			}
@@ -3389,18 +3385,6 @@ focus_tree = {
 					}
 					diplomatic_relation = {
 						country = GRE
-						relation = guarantee
-						active = yes
-					}				
-				}
-				if = {
-					limit = {
-						ROM = {
-							has_guaranteed = TUR
-						}
-					}
-					diplomatic_relation = {
-						country = TUR
 						relation = guarantee
 						active = yes
 					}				
