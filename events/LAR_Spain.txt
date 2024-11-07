@@ -6341,18 +6341,6 @@ country_event = {
 						}
 					}
 				}
-				if = { #If Right Opposition is still under Stalin's rule, volunteers come back
-					limit = {
-						SOV = { has_completed_focus = SOV_covert_support_for_spanish_poum }
-						SPD = {
-							has_volunteers_amount_from = {
-								tag = SOV
-								count > 0
-							}
-						}
-					}
-					SOV = {	recall_volunteers_from = SPD }
-				}
 			}
 			else = { #REGULAR ANARCHIST UPRISING
 				if = {

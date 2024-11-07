@@ -1521,12 +1521,6 @@ country_event = { #Danish Declares Independence
 		ai_chance = {
 			base = 1
 			modifier = {
-				factor = 5
-				FROM = {
-					has_completed_focus = DEN_pledge_allegiance
-				}
-			}
-			modifier = {
 				factor = 10
 				has_government = FROM
 			}

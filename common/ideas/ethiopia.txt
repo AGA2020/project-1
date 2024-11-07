@@ -1555,7 +1555,7 @@ ideas = {
 			}
 
 			visible = {
-				has_completed_focus = ETH_mytishchi-ababa_plant
+				always = no
 			}
 
 			research_bonus = {
