@@ -153,14 +153,6 @@ country_event = {
 			set_party_name = { ideology = neutrality long_name = YUG_royal_party name = YUG_royal_party }
 		}
 	}
-	option = { #resistance to the coup, call on Germans for support
-		name = DOD_yugoslavia.1.b
-		ai_chance = {
-			factor = 30
-		}	
-		GER = { country_event = DOD_yugoslavia.3 }
-		YUG_start_peters_coup = yes
-	}
 }
 
 #Yugoslavian coup event - Yugoslavian government resists the coup, Germany comes to the rescue...or not
@@ -5253,23 +5245,6 @@ country_event = {
 			}
 		}
 		complete_national_focus = YUG_end_the_regency #switches to the Peter branch so Yugoslavia is not stuck
-	}
-
-	option = {
-		name = DOD_yugoslavia.701.b #resist Britain's response
-		trigger = {
-			FROM = {
-				has_government = democratic
-			}
-		}
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		YUG_start_peters_coup = yes
 	}
 }
 #England can demand Paul to step down

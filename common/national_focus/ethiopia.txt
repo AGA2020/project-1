@@ -6030,7 +6030,6 @@ focus = {
 				division_template = {
 					name = "Arab Mercenaries"
 					is_locked = yes
-					division_names_group = ETH_ARAB_MERCS
 					priority = 1
 					template_counter = 21
 					regiments = {

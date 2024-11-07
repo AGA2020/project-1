@@ -1205,8 +1205,6 @@ focus_tree = {
 		x = 20 
 		y = 0
 
-		relative_position_id = NOR_the_stumbling_storting
-
 		offset = {
 			x = -20
 			y = 0
