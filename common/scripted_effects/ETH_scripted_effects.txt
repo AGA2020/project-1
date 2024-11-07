@@ -590,7 +590,6 @@ ETH_arbegnoch_uprising = {
 	division_template = {
 		name = "Arbegnoch Fighters"
 		is_locked = yes
-		division_names_group = ETH_ARB
 		priority = 0
 		template_counter = 0
 		regiments = {
