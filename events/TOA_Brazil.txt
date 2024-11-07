@@ -2786,10 +2786,6 @@ country_event = {
 				has_government = communism
 			}
 		}
-		add_timed_idea = {
-		    idea = POR_monarchists_on_the_rise
-		    days = 730
-		}
 		set_party_name = { 
 		    ideology = neutrality
 		    long_name = BRA_monarchy_party_long
