@@ -29,6 +29,9 @@ state={
 			}
 
 		}
+        add_dynamic_modifier = {
+            modifier = spain_nowar_aga
+        }
 		add_core_of = SPR
 
 	}

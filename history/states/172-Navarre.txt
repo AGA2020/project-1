@@ -12,7 +12,9 @@ state={
 			infrastructure = 3 #was: 6
 		}
 		add_core_of = SPR
-
+        add_dynamic_modifier = {
+            modifier = spain_nowar_aga
+        }
 	}
 
 	provinces={

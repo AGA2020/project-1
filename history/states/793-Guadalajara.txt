@@ -13,7 +13,9 @@ state={
 
 		}
 		add_core_of = SPR
-
+        add_dynamic_modifier = {
+            modifier = spain_nowar_aga
+        }
 	}
 
 	provinces={

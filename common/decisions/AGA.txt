@@ -2387,40 +2387,30 @@ operations = {
             if = { limit = { NOT = { has_global_flag = scw_over } } SPR = { annex_country = { target = D01 transfer_troops = yes } } SPR = { annex_country = { target = D02 transfer_troops = yes } } SPR = { annex_country = { target = D03 transfer_troops = yes } } }
                 169 = {
                     set_building_level = {
-                        type = air_base
-                        level = 0
-                    }
-                    set_building_level = {
                         type = naval_base
                         level = 0
                         province = {
-                            all_provinces = yes
+                            id = 1048
                         }
-                    }
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
                     }
                 } 
                 173 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
                     set_building_level = {
-                        type = air_base
+                        type = naval_base
                         level = 0
+                        province = {
+                            id = 9979
+                        }
                     }
                     set_building_level = {
                         type = naval_base
                         level = 0
                         province = {
-                            all_provinces = yes
+                            id = 12038
                         }
                     }
                 }
                 168 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
                     set_building_level = {
                         type = naval_base
                         level = 0
@@ -2428,28 +2418,8 @@ operations = {
                             id = 10024
                         }
                     }
-                    set_building_level = {
-                        type = air_base
-                        level = 0
-                        province = {
-                            id = 9903
-                        }
-                    }
                 } 
-                175 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                }
-                170 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                }
                 171 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
                     set_building_level = {
                         type = naval_base
                         level = 0
@@ -2457,101 +2427,23 @@ operations = {
                             id = 758
                         }
                     }
-                    set_building_level = {
-                        type = air_base
-                        level = 0
-                    }
                 }
                 165 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
                     set_building_level = {
                         type = naval_base
                         level = 0
                         province = {
-                            all_provinces = yes
+                            id = 9764
                         }
-                    }
-                    set_building_level = {
-                        type = air_base
-                        level = 0
-                    }
-                } 
-                794 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                } 
-                789 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                }
-                41 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                } 
-                791 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                } 
-                174 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                } 
-                793 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
                     }
                 } 
                 167 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
                     set_building_level = {
                         type = naval_base
                         level = 0
                         province = {
-                            all_provinces = yes
+                            id = 6906
                         }
-                    }
-                    set_building_level = {
-                        type = air_base
-                        level = 0
-                    }
-                }
-                166 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                }
-                172 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                }  
-                176 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                }
-                790 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                }   
-                792 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
-                    }
-                }
-                788 = {
-                    add_dynamic_modifier = {
-                        modifier = spain_nowar_aga
                     }
                 }
                 set_global_flag = scw_over
