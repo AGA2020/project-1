@@ -10482,8 +10482,6 @@ focus_tree = {
 			has_war = yes
 		}
 
-		will_lead_to_war_with = SWI
-
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
 		completion_reward = { 
