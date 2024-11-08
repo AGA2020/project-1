@@ -2448,7 +2448,7 @@ operations = {
                 }
                 set_global_flag = scw_over
                 WST = { transfer_state = 178 transfer_state = 699 transfer_state = 783 transfer_state = 290 transfer_state = 297 }
-                if = { limit = { NOT = { ITA = { has_completed_focus ITA_demand_balearic_islands_bba } } } }    
+                if = { limit = { NOT = { ITA = { has_completed_focus = ITA_demand_balearic_islands_bba } } } }    
                 WST = { if = { limit = { ITA = { NOT = { has_completed_focus = ITA_demand_balearic_islands_bba } } } transfer_state = 177 } }                
                 SPR = {
                     transfer_units_fraction = {
