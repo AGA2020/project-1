@@ -365,6 +365,9 @@ elwolfmod_capitulations_on_actions = {
 			NOT = {
 				361 = { is_owned_and_controlled_by = WST }
 			}
+			NOT = {
+				SAF = { has_completed_focus = SAF_secure_interests_in_africa }
+			}
 		}
 		BEL = {
 			transfer_state = 889
