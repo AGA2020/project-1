@@ -7385,17 +7385,6 @@ category = land_doctrine
 			swap_ideas = {
 				add_idea = ROMID_funding_malaxa_4
 				remove_idea = ROMID_funding_malaxa_3
-			}
-			random_state = {
-				limit = {
-					has_state_flag = ROM_ind31_IC	
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}			
 			}	
 			random_state = {
 				limit = {
@@ -7414,24 +7403,6 @@ category = land_doctrine
 			swap_ideas = {
 				add_idea = ROMID_funding_malaxa_4
 				remove_idea = ROMID_funding_malaxa_3
-			}
-			random_owned_controlled_state = {
-			prioritize = { 46 77 81 82 76 84 79 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV } 
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = ROM_ind31_IC	
 			}
 			random_owned_controlled_state = {
 			prioritize = { 46 77 81 82 76 84 79 }
