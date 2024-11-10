@@ -2255,7 +2255,7 @@ focus_tree = {
 	focus = {
 		id = BUL_restrained_paramilitary_organizations
 
-		prerequisite = { focus = BUL_the_tsars_regime focus = BUL_democratic_principles }
+		prerequisite = { focus = BUL_the_tsars_regime }
 		icon = GFX_goal_demand_sudetenland
 		relative_position_id = BUL_the_tsars_regime
 		x = -1
@@ -2291,7 +2291,7 @@ focus_tree = {
 	focus = {
 		id = BUL_ban_far_right_organizations
 
-		prerequisite = { focus = BUL_the_tsars_regime focus = BUL_democratic_principles }
+		prerequisite = { focus = BUL_the_tsars_regime }
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		relative_position_id = BUL_restrained_paramilitary_organizations
 		x = -2

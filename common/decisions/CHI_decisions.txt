@@ -48,7 +48,7 @@ economy_decisions = {
 ### #  # #   ### ### #  #  # #  #  #  ###  ##  #  #
 
 #Category allowed for all potential nationalist china
-#Visible when another country had completed focus PRC_infiltration
+#Visible when another country had completed focus 
 @REMOVE_INFILTRATION_PP_COST = 10
 
 

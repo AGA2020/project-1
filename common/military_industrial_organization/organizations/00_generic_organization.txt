@@ -2120,7 +2120,7 @@ generic_escort_ship_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
+				OR = { tag = CHI tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
 				has_dlc = "Waking the Tiger"
 			}
 		}
@@ -3606,12 +3606,6 @@ generic_general_aircraft_organization = {
 			AND = {
 				OR = { tag = AST tag = RAJ }
 				has_dlc = "Together for Victory"
-			}
-		}
-		NOT = {
-			AND = {
-				OR = { tag = PRC tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
-				has_dlc = "Waking the Tiger"
 			}
 		}
 		NOT = {
@@ -7393,7 +7387,7 @@ generic_motorized_mechanized_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
+				OR = { tag = CHI tag = MAN }
 				has_dlc = "Waking the Tiger"
 			}
 		}
