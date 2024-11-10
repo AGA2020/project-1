@@ -1233,21 +1233,6 @@ on_actions = {
 					remove_dynamic_modifier = { modifier = semi_autonomous_state }
 				}
 			}
-			if = {
-				limit = {
-					FROM.FROM = {
-						OR = {
-							state = 165
-							state = 171
-							state = 792
-						}
-					}
-				}
-				FROM.FROM = {
-					remove_dynamic_modifier = { modifier = autonomous_state }
-					add_dynamic_modifier = { modifier = semi_autonomous_state }
-				}
-			}
 			if = { # AI Spanish factions surrender if they do not control any state in the Iberian Peninsula, but own other territories outside of it (preventing forcing the player to execute naval invasions to win the SCW)
 				limit = {
 					SPR_scw_in_progress = yes
