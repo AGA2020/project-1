@@ -218,13 +218,7 @@ on_actions = {
 				limit = {
 					ROOT = {
 						is_ai = no
-						OR = {
-							tag = BOL
-							tag = PRU
-							tag = ECU
-							tag = VEN
-							tag = COL
-						}
+						tag = VEN
 					}
 					FROM = {
 						tag = GER

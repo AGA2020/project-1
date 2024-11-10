@@ -4,53 +4,6 @@
 
 add_namespace = france
 
-# Japan demands Indochina
-country_event = {
-	id = france.1
-	title = france.1.t
-	desc = france.1.d
-	picture = GFX_report_event_japan_army_mountainside
-	
-	is_triggered_only = yes
-	
-	option = { # Accept demands
-		name = france.1.a
-		ai_chance = {
-			factor = 25 
-			modifier = {
-				factor = 50
-				has_war = yes
-				any_enemy_country = {
-					strength_ratio = { 
-						tag = ROOT 
-						ratio < 0.4
-					}
-				}
-			}
-			modifier = {
-				factor = 75
-				16 = { NOT = { is_controlled_by = FRA } } #Paris	
-			}
-		} 
-		JAP = {
-			country_event = { days = 5 id = japan.6 }
-		}
-	}
-	option = { # Refuse
-		name = france.1.b
-		ai_chance = { 
-			factor = 25 
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
-		}
-		JAP = {
-			country_event = { days = 5 id = japan.7 }
-		}
-	}
-}
-
 # Maginot Line Extension
 country_event = {
 	id = france.2
