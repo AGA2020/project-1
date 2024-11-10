@@ -10,7 +10,6 @@ news_event = {
 
 	option = {
 		name = aga.1.a
-		GER = { create_equipment_variant = { name = "Opel 3-Tonner" type = motorized_equipment_0 parent_version = 0 allow_without_tech = yes obsolete = yes design_team = mio:GER_opel_organization } }
 			every_country = {
 				limit = {
 					is_playable_country = yes
@@ -31,7 +30,7 @@ news_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		name = aga.1.a
+		name = aga.123.a
 		ROM = { complete_national_focus = ROM_the_1937_election }  
 	}
 }
@@ -87,8 +86,8 @@ country_event = {
 }
 country_event = {
 	id = aga.244
-	title = aga.998.t
-	desc = aga.998.d
+	title = aga.244.t
+	desc = aga.244.d
 	picture = GFX_report_event_generic_read_write
 	
 	trigger = {
@@ -101,14 +100,14 @@ country_event = {
 				 HOL = { transfer_navy = { target = USA } } USA = { annex_country = { target = HOL transfer_troops = yes } } 672 = { add_compliance = 100 } 335 = { add_compliance = 100 } 334 = { add_compliance = 100 } 673 = { add_compliance = 100 } 668 = { add_compliance = 100 } 669 = { add_compliance = 100 } 667 = { add_compliance = 100 } 738 = { add_compliance = 100 } 309 = { add_compliance = 100 } GER = { transfer_state = 36 transfer_state = 35 transfer_state = 7 }
     }
 	option = {
-		name = aga.998.a
+		name = aga.244.a
 
 	}
 }
 country_event = {
 	id = aga.242
-	title = aga.998.t
-	desc = aga.998.d
+	title = aga.242.t
+	desc = aga.242.d
 	picture = GFX_report_event_generic_read_write
 	
 	trigger = {
@@ -121,7 +120,7 @@ country_event = {
 				SOV = { add_ideas = Germany_broke_collab_rule }
     }
 	option = {
-		name = aga.998.a
+		name = aga.242.a
 
 	}
 }
