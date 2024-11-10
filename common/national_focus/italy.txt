@@ -8185,6 +8185,8 @@ focus_tree = {
 				add_country_leader_trait = emperor_of_ethiopia
 			}
 
+			unlock_decision_tooltip = ITA_discredit_haile_selassie
+
 			if = {
 				limit = {
 					country_exists = ETH
@@ -8199,7 +8201,7 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 					is_core_of = ETH
 				}
-				add_compliance = 10
+				add_compliance = 5
 			}
 		}
 	}
