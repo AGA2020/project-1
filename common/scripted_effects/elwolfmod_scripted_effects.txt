@@ -346,7 +346,6 @@ elwolfmod_capitulations_on_actions = {
 		}
 		HOL = {
 			add_stability = 1.0
-			set_convoys = 300
 			transfer_state = 672
 			transfer_state = 334
 			transfer_state = 335
