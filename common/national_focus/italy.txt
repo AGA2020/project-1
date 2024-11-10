@@ -8211,8 +8211,6 @@ focus_tree = {
 		icon = GFX_focus_ITA_culto_del_duce
 		prerequisite = { focus = ITA_triumph_in_africa_bba }
 
-		mutually_exclusive = { focus = ITA_convene_the_grand_council }
-
 		x = 0
 		y = 2
 		relative_position_id = ITA_triumph_in_africa_bba
@@ -8555,7 +8553,7 @@ focus_tree = {
 	focus = {
 		id = ITA_ministero_della_cultura_popolare #Alt name would be Ministry of Popular Culture (1937-1943)
 		icon = GFX_focus_generic_italy_propaganda
-		prerequisite = { focus = ITA_culto_del_duce focus = ITA_convene_the_grand_council }
+		prerequisite = { focus = ITA_culto_del_duce }
 
 		x = 3
 		y = 1
@@ -10663,7 +10661,6 @@ focus_tree = {
 		id = ITA_spanish_italian_alliance
 		icon = GFX_focus_intervention_spain_nationalists
 		prerequisite = { focus = ITA_corpo_di_truppe_volontarie }
-		prerequisite = { focus = ITA_italy_first }
 		mutually_exclusive = { focus = ITA_demand_balearic_islands_bba }
 		x = -1
 		y = 2
