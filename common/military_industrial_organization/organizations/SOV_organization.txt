@@ -525,10 +525,6 @@ SOV_mytishchy_machine_building_plant_organization = {
 	}
 
 	visible = {
-		IF = { 
-			limit = { FROM = { original_tag = ETH } } 
-			FROM = { has_completed_focus = ETH_mytishchi-ababa_plant }
-		}
 	}
 
 	available = {

@@ -360,19 +360,12 @@ focus_tree = {
 
 		}
 
-		bypass = {
-			OR = {
-				has_non_aggression_pact_with = SOV
-				has_war_with = SOV
-			}
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			SOV = { country_event = { id = wtt_japan.11 } }
+			SOV = { diplomatic_relation = { country = JAP relation = non_aggression_pact active = yes } }
 		}
 	}
 
