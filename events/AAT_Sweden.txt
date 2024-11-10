@@ -458,10 +458,6 @@ country_event = {
 				factor = 0
 				has_war_with = SOV
 			}
-			modifier = {
-				factor = 10
-				SWE_is_historical_ai = yes
-			}
 		}
 		SOV = {
 			country_event = { 
@@ -493,10 +489,6 @@ country_event = {
 		name = AAT_Sweden_flashpoints.11.a
 		ai_chance = {
 			base = 1
-			modifier = {
-				factor = 10
-				FROM = { SWE_is_historical_ai = yes }
-			}
 		}
 		FROM = {	
 			country_event = { 
@@ -512,11 +504,7 @@ country_event = {
 	option = {
 		name = AAT_Sweden_flashpoints.11.b
 		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0
-				FROM = { SWE_is_historical_ai = yes }
-			}
+			base = 0
 		}
 		FROM = {
 			country_event = {
@@ -984,21 +972,7 @@ country_event = {
 	option = { 
 		name = AAT_Sweden_flashpoints.30.a
 		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0
-				has_war_with = SWE
-			}
-			modifier = {
-				factor = 0
-				SWE = {
-					is_in_faction = yes
-				}
-			}
-			modifier = {
-				factor = 0
-				SWE = { SWE_is_historical_ai = yes }
-			}
+			base = 0
 		}
 		SWE = {
 			set_country_flag = GER_want_transit
@@ -1012,21 +986,7 @@ country_event = {
 	option = { 
 		name = AAT_Sweden_flashpoints.30.b
 		ai_chance = {
-			base = 0
-			modifier = {
-				add = 10
-				has_war_with = SWE
-			}
-			modifier = {
-				add = 10
-				SWE = {
-					is_in_faction = yes
-				}
-			}
-			modifier = {
-				factor = 10
-				SWE = { SWE_is_historical_ai = yes }
-			}
+			base = 10
 		}
 	}
 
@@ -4511,10 +4471,6 @@ country_event = {
 		}
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 10
-				SWE_is_historical_ai = yes
-			}
 		}
 		IF = {
 			limit = {
@@ -4563,9 +4519,6 @@ country_event = {
 		}
 		IF = {
 			limit = {
-				NOT = {
-					SWE_is_historical_ai = yes
-				}
 				has_civil_war = no
 			}
 
@@ -5101,10 +5054,6 @@ country_event = {
 				factor = 0.5
 				has_war_with_major = yes
 			}
-			modifier = {
-				factor = 0
-				SWE = { SWE_is_historical_ai = yes }
-			}
 		}
 
 		SWE = {
@@ -5123,14 +5072,10 @@ country_event = {
 	option = {
 		name = AAT_Sweden_flashpoints.60.b
 		ai_chance = {
-			base = 5
+			base = 10
 			modifier = {
 				factor = 0
 				has_war_with = SWE
-			}
-			modifier = {
-				factor = 10
-				SWE = { SWE_is_historical_ai = yes }
 			}
 		}
 	}
@@ -5465,7 +5410,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			base = 0
+			base = 10
 			modifier = {
 				add = 20 
 				has_opinion = {
@@ -5480,10 +5425,6 @@ country_event = {
 			modifier = {
 				factor = 0
 				is_in_faction_with = SWE
-			}
-			modifier = {
-				factor = 10
-				SWE = { SWE_is_historical_ai = yes }
 			}
 		}
 		SWE = {
@@ -5506,11 +5447,7 @@ country_event = {
 		}
 		name = AAT_Sweden_flashpoints.71.b
 		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0
-				SWE = { SWE_is_historical_ai = yes }
-			}
+			base = 0
 		}
 		SWE = {
 			country_event = {
@@ -5538,7 +5475,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			base = 0
+			base = 10
 			modifier = {
 				add = 10
 				has_opinion = {
@@ -5549,10 +5486,6 @@ country_event = {
 			modifier = {
 				add = 10
 				is_in_faction = yes
-			}
-			modifier = {
-				factor = 10
-				SWE_is_historical_ai = yes
 			}
 		}
 		FROM = {
@@ -5566,11 +5499,7 @@ country_event = {
 	option = {
 		name = AAT_Sweden_flashpoints.72.b
 		ai_chance = {
-			base = 1
-			modifier = {
-				factor = 0
-				SWE_is_historical_ai = yes
-			}
+			base = 0
 		}
 		FROM = {
 			country_event = {
@@ -5610,10 +5539,6 @@ country_event = {
 					value > 20
 				}
 			}
-			modifier = {
-				factor = 10
-				FROM = { SWE_is_historical_ai = yes }
-			}
 		}
 		FROM = {
 			country_event = {
@@ -5637,10 +5562,6 @@ country_event = {
 					target = FROM 
 					value < 0
 				}
-			}
-			modifier = {
-				factor = 0
-				FROM = { SWE_is_historical_ai = yes }
 			}
 		}
 		FROM = {
