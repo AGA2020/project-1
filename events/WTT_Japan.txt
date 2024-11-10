@@ -1429,21 +1429,6 @@ country_event = {
 		name = wtt_japan.127.a
 		if = {
 			limit = {
-				NOT = {
-					MAN = {
-						controls_state = 525
-						controls_state = 527
-					}
-				}
-			}
-			release = KOR
-			KOR = {
-				transfer_state = 525
-				transfer_state = 527
-			}
-		}
-		if = {
-			limit = {
 				524 = { #Taiwan
 					is_controlled_by = JAP
 				}

@@ -1,6 +1,5 @@
 ﻿division_template = {
 	name = "Infantry Division"			# Represents both Philippines divisions and U.S. Division as expeditionary force
-	division_names_group = PHI_INF_01
 
 	regiments = {
 		infantry = { x = 0 y = 0 }

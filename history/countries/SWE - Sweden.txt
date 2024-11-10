@@ -39,7 +39,7 @@ send_embargo = AST
 send_embargo = SOV
 send_embargo = NZL
 
-set_research_slots = 3
+set_research_slots = 0
 
 add_ideas = {
 	en_svensk_tiger

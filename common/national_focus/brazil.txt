@@ -68,16 +68,6 @@ focus_tree = {
 				tooltip = stability_factor_tt
 			}
 			add_political_power = 120
-
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				mark_focus_tree_layout_dirty = yes
-			}
 		}
 	}
 
@@ -720,18 +710,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 15
-		}
-
-		offset = {
-			x = -15
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = BRA_end_the_state_of_emergency 
-			}
 		}
 		available = {
 		}
@@ -2289,31 +2267,11 @@ focus_tree = {
 		}
 		available = {
 		}
-		allow_branch = {
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = BRA_tribunal_de_seguranca_nacional }
-			}
-		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
 			remove_dynamic_modifier = {
 				modifier = BRA_aftermath_of_the_coup
-			}
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -2913,18 +2871,6 @@ focus_tree = {
 	focus = {
 		id = BRA_invite_foreign_companies
 		icon = GFX_focus_generic_american_investments
-		allow_branch = {
-			has_dlc = "Arms Against Tyranny"
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = { has_completed_focus = BRA_tribunal_de_seguranca_nacional }
-			}
-		}
 		x = 1
 		y = 1
 		relative_position_id = BRA_address_labor_disputes
@@ -2934,24 +2880,6 @@ focus_tree = {
 			factor = 5
 		}
 		available = {
-			OR = {
-				USA = {
-					exists = yes
-					has_government = democratic
-				}
-				ENG = {
-					exists = yes
-					has_government = democratic
-				}
-				FRA = {
-					exists = yes
-					has_government = democratic
-				}
-				SWE = {
-					exists = yes
-					has_government = democratic
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }

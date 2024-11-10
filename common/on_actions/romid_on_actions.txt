@@ -1,8 +1,57 @@
 
 on_actions = {
 	on_startup = {
-        	effect = {
+        effect = {
 			ROM = { country_event = ROMEV_events.46 }
+			ROM = {
+				if = {
+					limit =  { NOT = { is_ai = yes } }
+						46 = {
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						set_state_flag = iron_guard_supporters
+						}
+						81 = {
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						set_state_flag = iron_guard_supporters
+						}
+						82 = {
+						add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+						add_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
+						set_state_flag = iron_guard_supporters
+						}
+						84 = {
+							add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+							add_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
+							set_state_flag = iron_guard_supporters
+						}
+						76 = {
+							add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+							add_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
+							set_state_flag = lancieri_supporters
+						}
+						79 = {
+							add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+							set_state_flag = lancieri_supporters
+						}
+						80 = {
+							add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+							set_state_flag = lancieri_supporters
+						}
+						83 = {
+							add_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+							add_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
+							set_state_flag = iron_guard_supporters
+						}
+						78 = {
+							add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+							set_state_flag = lancieri_supporters
+						}
+						766 = {
+							add_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+							set_state_flag = lancieri_supporters
+						}
+				}
+			}
 		}
 	}
 	on_state_control_changed = {
@@ -260,7 +309,7 @@ on_actions = {
 			}
 		} 
 	}
-	on_daily_ROM = {
+	on_weekly_ROM = {
 		effect = {
 			ROMID_supply_cap_revise = yes
 			ROMID_ig_leftover_effect = yes

@@ -1632,10 +1632,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_game_rule = {
-				rule = germany_research_slot
-				option = on
-			}
+
 		}
 
 		available_if_capitulated = yes
@@ -2751,10 +2748,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				NOT = { has_completed_focus = GER_anti_comitern_pact }
-			}
 			modifier ={
 				factor = 2
 				has_idea = SOV_soviet_german_trade_agreement
