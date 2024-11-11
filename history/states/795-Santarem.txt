@@ -7,17 +7,10 @@ state={
 	history={
         owner = WST
 
-
-
-
-
-
 		buildings = {
 			infrastructure = 3 #was: 6
-			industrial_complex = 2
 
 		}
-		add_core_of = POR
 
 	}
 

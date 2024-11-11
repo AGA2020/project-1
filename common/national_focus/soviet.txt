@@ -2084,7 +2084,6 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			has_completed_focus = SOV_the_path_of_marxism_leninism
 		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
@@ -7820,33 +7819,9 @@ focus_tree = {
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
 		x = -2
 		y = 1
-		
-		offset = {
-			x = -26
-			y = 0
-			trigger = {
-				has_dlc = "No Step Back"
-				has_completed_focus = SOV_the_centre
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-			}
-		}
 
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-			}
-		}
 
 		available = {
 

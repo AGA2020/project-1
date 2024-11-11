@@ -12,12 +12,9 @@ state = {
 	history = {
 
         owner = WST
-		add_core_of = CHL
-		add_claim_by = BOL
 
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 2
 			dockyard = 1
 			air_base = 1
 			12994 = {
