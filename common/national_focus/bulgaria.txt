@@ -1505,9 +1505,6 @@ focus_tree = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				unlock_decision_tooltip = invite_SOV_nevskoye_design_bureau_organization
-				unlock_decision_tooltip = invite_ENG_yarrow_shipbuilders_organization
-				unlock_decision_tooltip = invite_ENG_john_brown_organization
 				unlock_decision_tooltip = invite_ITA_crda_organization
 			}
 			else = {

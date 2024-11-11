@@ -319,67 +319,6 @@ country_event = {
 	} 
 }
 
-#country_event = {
-#	id = BBA_ethiopia_balance_of_power_events.20
-#	title = BBA_ethiopia_balance_of_power_events.20.t
-#	desc = BBA_ethiopia_balance_of_power_events.20.desc
-#	is_triggered_only = yes
-#	picture = GFX_report_event_generic_sign_treaty2
-#	option = {
-#		name = BBA_ethiopia_balance_of_power_events.20.a
-#		ai_chance = {
-#			base = 10
-#		}
-#		add_ideas = ETH_leadership_cult_education
-#		ETH_BOP_centralization_small_effect = yes
-#	}
-#	option = {
-#		name = BBA_ethiopia_balance_of_power_events.20.b
-#		ai_chance = {
-#			base = 10
-#		}
-#		add_ideas = ETH_secular_education
-#		ETH_BOP_decentralization_small_effect = yes
-#	}
-#}
-
-#country_event = {
-#	id = BBA_ethiopia_balance_of_power_events.21
-#	title = BBA_ethiopia_balance_of_power_events.21.t
-#	desc = BBA_ethiopia_balance_of_power_events.21.desc
-#	is_triggered_only = yes
-#	picture = GFX_report_event_china_ledo_road
-#	option = {
-#		name = BBA_ethiopia_balance_of_power_events.21.a
-#		ai_chance = {
-#			base = 10
-#		}
-#		ETH_BOP_decentralization_large_effect = yes
-#		every_owned_state = {
-#			add_building_construction = {
-#				type = infrastructure
-#				level = 1
-#				instant_build = yes
-#			}
-#		}
-#	}
-#	option = {
-#		name = BBA_ethiopia_balance_of_power_events.21.b
-#		ai_chance = {
-#			base = 10
-#		}
-#		ETH_BOP_centralization_large_effect = yes
-#		every_owned_state = {
-#			limit = {is_capital = yes}
-#			add_building_construction = {
-#				type = infrastructure
-#				level = 3
-#				instant_build = yes
-#			}
-#		}
-#	}
-#}
-
 country_event = {
 	id = BBA_ethiopia_balance_of_power_events.22
 	title = BBA_ethiopia_balance_of_power_events.22.t
@@ -549,7 +488,6 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						ETH_bop_is_mekwanint_influence_or_higher = yes 
 						has_government = communism
 						has_government = democratic
 					}
@@ -570,7 +508,6 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						ETH_bop_is_mekwanint_influence_or_higher = yes 
 						has_government = communism
 						has_government = democratic
 					}
@@ -591,7 +528,6 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						ETH_bop_is_mekwanint_influence_or_higher = yes 
 						has_government = communism
 						has_government = democratic
 					}
@@ -627,7 +563,6 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						ETH_bop_is_mekwanint_influence_or_higher = yes 
 						has_government = communism
 						has_government = democratic
 					}
@@ -714,8 +649,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		
-		ETH_BOP_decentralization_small_effect = yes 
 		# in selected state: 
 		var:ROOT.ETH_bop_state = {
 			create_unit = {
@@ -732,7 +665,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ETH_BOP_centralization_small_effect = yes 
 		add_political_power = 25
 		add_command_power = 15
 	}
@@ -782,7 +714,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ETH_BOP_decentralization_small_effect = yes 
 		add_stability = -0.05	
 		var:ROOT.ETH_bop_state = {
 			add_building_construction = {
@@ -799,7 +730,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ETH_BOP_centralization_small_effect = yes 
 		add_political_power = 50
 		add_popularity = {
 			ideology = ROOT
@@ -852,7 +782,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ETH_BOP_decentralization_small_effect = yes 
 		add_stability = -0.05	
 		var:ROOT.ETH_bop_state = {
 			add_building_construction = {
@@ -869,7 +798,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ETH_BOP_centralization_small_effect = yes 
 		add_command_power = 50
 		add_stability = 0.05
 		add_war_support = -0.02
@@ -909,7 +837,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ETH_BOP_centralization_small_effect = yes 
 		add_political_power = -150
 		var:ROOT.ETH_bop_state = {
 			custom_effect_tooltip = ETH_investments_in_state_tt
@@ -924,7 +851,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ETH_BOP_decentralization_small_effect = yes 
 		add_stability = -0.05
 		add_war_support = -0.05
 		add_popularity = {
@@ -944,7 +870,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ETH_BOP_decentralization_large_effect = yes 
 	}
 }
 
@@ -981,7 +906,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ETH_BOP_centralization_small_effect = yes 
 		add_political_power = 50
 		add_stability = -0.02
 	}
@@ -991,7 +915,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ETH_BOP_decentralization_small_effect = yes 
 		add_stability = 0.02
 		add_political_power = -50
 		var:ROOT.ETH_bop_state = {
@@ -1033,7 +956,6 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ETH_BOP_centralization_small_effect = yes 
 		add_political_power = 50
 		add_stability = 0.02
 	}
@@ -2687,10 +2609,6 @@ country_event = {
 		effect_tooltip = {
 			ETH = { transfer_state = 268 }
 		}
-		add_timed_idea = {
-			idea = ETH_djibouti_sale_idea
-			days = 730
-		}
 		FROM = {
 			country_event = {
 				id = BBA_ethiopia_imperial_events.2
@@ -2741,10 +2659,6 @@ country_event = {
 		name = BBA_ethiopia_imperial_events.2.a
 		ai_chance = {
 			base = 10
-		}
-		add_timed_idea = {
-			idea = ETH_djibouti_purchase_idea
-			days = 730
 		}
 		IF = {
 			limit = {
@@ -4010,55 +3924,6 @@ country_event = {
 					ruling_party = fascism
 				}
 			}
-			IF = {
-				limit = {
-					has_completed_focus = ETH_expand_the_bodyguard
-				}
-				division_template = {
-					name = "Guards"
-					is_locked = yes
-					priority = 2
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-					}
-					
-				}
-				IF = {
-					limit = {
-						has_cosmetic_tag = jimma
-					}
-					random_owned_controlled_state = {
-						create_unit = {
-							division = "name = \"Jimma Guards Division\" division_template = \"Guards\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
-							owner = ROOT
-						}
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						has_cosmetic_tag = gojjam
-					}
-					random_owned_controlled_state = {
-						create_unit = {
-							division = "name = \"Gojjam Guards Division\" division_template = \"Guards\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
-							owner = ROOT
-						}
-					}
-				}
-				ElSE = {
-					random_owned_controlled_state = {
-						create_unit = {
-							division = "name = \"Imperial Guards Division\" division_template = \"Guards\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
-							owner = ROOT
-						}
-					}
-				}
-			}
 		}
 	}
 }
@@ -5103,137 +4968,6 @@ country_event = {
 
 ##########################################################################
 
-#ETH requests Soviet Aid
-country_event = {
-	id = BBA_ethiopia_communist_events.01
-	title = BBA_ethiopia_communist_events.01.t
-	desc = BBA_ethiopia_communist_events.01.desc
-	picture = GFX_report_event_SOV_tank_column
-	is_triggered_only = yes
-	fire_only_once = yes
-
-	# We should support the communists in ETH
-	option = {
-		name = BBA_ethiopia_communist_events.01.a
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0
-				OR = {
-					NOT = { has_government = communism }
-					has_civil_war = yes
-				}				
-			}
-		}
-
-		SOV = {
-			add_timed_idea = { idea = ETH_aid_ethiopian_communists days = 730 }
-			add_ai_strategy = {
-				type = send_volunteers_desire
-				id = ETH
-				value = 200
-			}
-		}
-
-		ETH = {
-			country_event = {
-				days = 2
-				id = BBA_ethiopia_communist_events.04
-			}
-		}
-
-		ITA = {
-			country_event = {
-				days = 30
-				id = BBA_ethiopia_communist_events.03
-			}
-		}
-	}
-
-	# We have no interest in ETH 
-	option = {
-		name = BBA_ethiopia_communist_events.01.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				factor = 10
-				OR = {
-					NOT = { has_government = communism }
-					has_civil_war = yes
-				}				
-			}
-		}
-		ETH = {
-			country_event = {
-				days = 2
-				id = BBA_ethiopia_communist_events.02
-			}
-		}
-	}
-}
-
-# Event for ETH if SOV rejects call for aid
-country_event = {
-	id = BBA_ethiopia_communist_events.02
-	title = BBA_ethiopia_communist_events.02.t
-	desc = BBA_ethiopia_communist_events.02.desc
-	is_triggered_only = yes
-	picture = GFX_report_event_spr_anarchists2
-	# So much for class solidarity
-	option = {
-		name = BBA_ethiopia_communist_events.02.a
-		ai_chance = {
-			base = 10
-		}
-		
-		uncomplete_national_focus = {
-				focus = ETH_soviet_aid
-				uncomplete_children = yes
-		}
-		complete_national_focus = ETH_callout_to_the_world
-	}
-}
-
-# Event for ITA if SOV sends aid to ETH
-country_event = {
-	id = BBA_ethiopia_communist_events.03
-	title = BBA_ethiopia_communist_events.03.t
-	desc = BBA_ethiopia_communist_events.03.desc
-	is_triggered_only = yes
-	picture = GFX_report_event_soviet_soldiers_tank
-	# They will pay for this
-	option = {
-		name = BBA_ethiopia_communist_events.03.a
-		ai_chance = {
-			base = 10
-		}
-		ITA = {
-			add_opinion_modifier = {
-				target = SOV 
-				modifier = SOV_helping_ETH
-			}
-		}
-		
-	}
-}
-
-# Event for ETH if SOV agrees to send aid
-country_event = {
-	id = BBA_ethiopia_communist_events.04
-	title = BBA_ethiopia_communist_events.04.t
-	desc = BBA_ethiopia_communist_events.04.desc
-	is_triggered_only = yes
-	picture = GFX_report_event_SOV_tank_column
-	# Workers of the world unite!
-	option = {
-		name = BBA_ethiopia_communist_events.04.a
-		ai_chance = {
-			base = 10
-		}
-		
-	}
-}
-
 #Black Lions and Military coup against HS - form prov gov
 country_event = {
 	id = BBA_ethiopia_communist_events.05
@@ -5251,7 +4985,6 @@ country_event = {
 			ideology = communism
 			popularity = 0.05
 		}
-		ETH_provisional_government_effect = yes
 	}
 	# Imprison HS
 	option = {
@@ -5271,7 +5004,6 @@ country_event = {
 		ETH_haile_selassie = {
 			set_character_flag = ETH_imprisoned_flag
 		}
-		ETH_provisional_government_effect = yes
 	}
 }
 

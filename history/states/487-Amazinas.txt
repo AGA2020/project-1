@@ -9,11 +9,9 @@ state = {
 	history = {
 
         owner = WST
-		add_core_of = BOL
 
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 1
 		}
 
 
