@@ -9,27 +9,13 @@ foreign_mio_decisions_category = {
 
 		fire_only_once = yes 
 		allowed = {
-			OR = {
-				tag = BUL 
-				tag = ETH 
-			}
+			tag = BUL 
 		}
 
 		visible = {
-			GER = {
-				mio_original_country_exists_and_not_at_war_with_ROOT = yes
-			}
 			IF = {
 				limit = { original_tag = BUL }
 				has_completed_focus = BUL_contract_foreign_companies
-			}
-			ELSE_IF = {
-				limit = { original_tag = ETH }
-				has_completed_focus = ETH_invite_foreign_industrialists
-				GER = {
-					NOT = { has_war_with = ROOT }
-					has_capitulated = no
-				}
 			}
 			ELSE = {
 				always = no 
