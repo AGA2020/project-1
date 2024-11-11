@@ -6305,7 +6305,7 @@ focus_tree = {
 		relative_position_id = SOV_military_reorganization
 		cost = 10
 
-		mutually_exclusive = { focus = SOV_keep_commissars_organization focus = SOV_adjoined_battle_priests }
+		mutually_exclusive = { focus = SOV_keep_commissars_organization }
 
 		available = {
 

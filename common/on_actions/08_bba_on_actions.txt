@@ -723,40 +723,6 @@ on_actions = {
 			}
 		}
 	}
-
-	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
-	#ROOT = nation being released, FROM = overlord
-	on_release_as_puppet = {
-		#Italian Confederation -> Add NS to new subjects
-	}
-
-	on_government_change = {
-		effect = {
-			#Change BoP when changing gov
-			IF = {
-				limit = {
-					original_tag = ETH
-					has_government = communism
-				}
-				set_power_balance = {
-					id = ETH_centralization_balance
-					left_side = ETH_decentralization_anarchist
-					right_side = ETH_communist_side
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = ETH
-					NOT = { has_government = communism }
-				}
-				set_power_balance = {
-					id = ETH_centralization_balance
-					left_side = ETH_mesafint_side
-					right_side = ETH_mekwanint_side
-				}
-			}
-		}	
-	}
 	#FROM is country getting invited. ROOT is the faction leader
 	on_offer_join_faction = {
 		effect = {

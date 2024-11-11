@@ -388,42 +388,7 @@ characters = {
 			visible = {
 				OR = {
 					has_government = neutrality
-					has_completed_focus = ETH_amedeos_feast_of_maskal
 					ROOT = { original_tag = ITA }
-				}
-			}
-		}
-		advisor = {
-			slot = high_command
-			ledger = army
-			idea_token = ETH_seyoum_mengesha
-			allowed = {
-				original_tag = ETH
-				has_dlc = "By Blood Alone"
-			}
-			available = {
-				IF = {
-					limit = {
-						has_character_flag = ETH_imprisoned_flag
-					}
-					NOT = { has_character_flag = ETH_imprisoned_flag}
-				}
-			}
-			traits = {
-				army_regrouping_1
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-			on_add = {
-				owner = {
-					ETH_BOP_decentralization_large_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					ETH_BOP_centralization_large_effect = yes
 				}
 			}
 		}
@@ -445,42 +410,6 @@ characters = {
 					small = GFX_portrait_ETH_desta_damtew_small
 				}
 			}
-			corps_commander = {
-				traits = { trait_reckless }
-				skill = 2
-				attack_skill = 3
-				defense_skill = 1
-				planning_skill = 2
-				logistics_skill = 2
-				legacy_id = -1
-				visible = { }
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-			name = ETH_desta_damtew
-			portraits={
-				army={
-					small="GFX_idea_generic_army_arab_2"
-				}
-			}
-	        advisor = { 
-				slot = army_chief
-				ledger = army
-				idea_token = ETH_desta_damtew
-				allowed = {
-					original_tag = ETH
-				}
-				traits = {
-					army_chief_organizational_2
-	            }
-	            cost = 100
-	            ai_will_do = {
-					factor = 1.000
-				}
-	        }
 		}
 	}
 
@@ -521,124 +450,6 @@ characters = {
 					small = GFX_portrait_ETH_kassa_haile_darge_small
 				}
 			}
-			
-			advisor = {
-				slot = political_advisor
-				idea_token = ETH_ras_kassa
-				allowed  = {
-					original_tag  = ETH
-				}
-				available = {
-					has_government = neutrality
-					NOT = { has_idea = ETH_ras_kassa_army_chief }
-					NOT = { has_idea = ETH_ras_kassa_high_command }		
-					IF = {
-						limit = {
-							has_character_flag = ETH_imprisoned_flag
-						}
-						NOT = { has_character_flag = ETH_imprisoned_flag}
-					}	
-				}
-				traits = {
-					staunch_loyalist
-				}
-				on_add = {
-					owner = {
-						ETH_BOP_decentralization_large_effect = yes
-					}
-				}
-				on_remove = {
-					owner = {
-						ETH_BOP_centralization_large_effect = yes
-					}
-				}
-			}
-			advisor = {
-				slot = army_chief
-				ledger = army
-				idea_token = ETH_ras_kassa_army_chief
-				allowed = {
-					original_tag = ETH
-				}
-				available = {
-					NOT = { has_idea = ETH_ras_kassa_high_command }
-					NOT = { has_idea = ETH_ras_kassa }
-					IF = {
-						limit = {
-							has_character_flag = ETH_imprisoned_flag
-						}
-						NOT = { has_character_flag = ETH_imprisoned_flag}
-					}
-				}
-				traits = {
-					army_chief_defensive_1
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-			advisor = {
-				slot = high_command
-				ledger = army
-				idea_token = ETH_ras_kassa_high_command
-				allowed = {
-					original_tag = ETH
-				}
-				available = {
-					NOT = { has_idea = ETH_ras_kassa_army_chief }
-					NOT = { has_idea = ETH_ras_kassa }
-					IF = {
-						limit = {
-							has_character_flag = ETH_imprisoned_flag
-						}
-						NOT = { has_character_flag = ETH_imprisoned_flag}
-					}
-				}
-				traits = {
-					army_entrenchment_1
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-			corps_commander = {
-				traits = { trait_cautious}
-				skill = 2
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 2
-				legacy_id = -1
-				visible = { NOT = { has_character_flag = ETH_imprisoned_flag} }
-			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-			name = ETH_ras_kassa
-			portraits = {
-				army = {
-					small="GFX_idea_generic_army_arab_1"
-				}
-			}
-			advisor = {
-				slot = army_chief
-				ledger = army
-				idea_token = ETH_ras_kassa
-				allowed = {
-					original_tag = ETH
-				}
-				traits = {
-					army_chief_defensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
 		}
 		
 	}
@@ -654,40 +465,6 @@ characters = {
 				small=GFX_portrait_ETH_abebe_aregai_small
 			}
 		}
-		advisor = {
-			slot = political_advisor
-			idea_token = ETH_abebe_aregai
-			allowed  = {
-				original_tag  = ETH
-			}
-			available = {
-				NOT = { has_government = fascism }
-				NOT = { has_idea_with_trait = minister_of_the_interior_abate }
-			}
-			traits = {
-				minister_of_the_interior_aregai
-			}
-			on_add = {
-				owner = {
-					ETH_BOP_decentralization_small_effect = yes
-				}
-			}
-			on_remove = {
-				owner = {
-					ETH_BOP_centralization_small_effect = yes
-				}
-			}
-		}
-		corps_commander = {
-			traits = { trickster}
-			skill = 1
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = -1
-		}
-
 	}
 
 	ETH_ayalew_birru = {
@@ -699,19 +476,6 @@ characters = {
 			army = {
 				large=GFX_portrait_ETH_ayalew_birru
 				small=GFX_portrait_ETH_ayalew_birru_small
-			}
-		}
-		
-		corps_commander = {
-			traits = { trait_mountaineer }
-			skill = 1
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 1
-			legacy_id = -1
-			visible = {
-				NOT = { has_character_flag = ETH_imprisoned_flag}
 			}
 		}
 

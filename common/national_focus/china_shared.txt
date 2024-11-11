@@ -536,26 +536,19 @@ shared_focus = {
 shared_focus = {
 	id = CHI_combined_arms_warfare
 	icon = GFX_goal_generic_army_doctrines
-	prerequisite = { focus = CHI_experimental_mechanised_unit }
+	prerequisite = { focus = CHI_purchase_tanks }
 	x = 0
-	y = 4
+	y = 1
 	relative_position_id = CHI_purchase_tanks
 
 	cost = 10
 
 	ai_will_do = {
 		factor = 1
-		modifier = {
-			factor = 4
-			tag = PRC
-		}
 	}
 
 	available = {
-		OR = {
-			GER_will_support = yes
-			SOV_will_support = yes
-		}
+		GER_will_support = yes
 	}
 
 	bypass = {
