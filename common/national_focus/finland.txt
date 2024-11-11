@@ -1631,7 +1631,7 @@ focus_tree = {
 	focus = {
 		id = FIN_greater_finland
 		icon = GFX_focus_FIN_greater_finland
-		prerequisite = { focus = FIN_finnish_march_of_conquest focus = FIN_militarized_society focus = FIN_keepers_of_the_north }
+		prerequisite = { focus = FIN_finnish_march_of_conquest focus = FIN_militarized_society }
 
 		x = 0
 		y = 1
