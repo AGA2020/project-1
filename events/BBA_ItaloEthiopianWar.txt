@@ -37,15 +37,7 @@ unit_leader_event = { # THIS IS ACTUALLY THE FIRST MISSIOLINI!
 		name = BBA_italo_ethiopian_war_events.01.a
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 0.5
-				NOT = { has_government = fascism }
-			}
 		}
-
-		# Set Mission Timers 
-		set_variable = { ETH.ETH_hold_the_north_time = 120 } # Timer for Holding/Conquering northern Ethiopia
-		set_variable = { ETH.ETH_hold_the_south_time = 120 } # Timer for Holding/Conquering southern Ethiopia and Harar
 
 		if = { # Effects to Ethiopia and LoN stuff only for BBA
 			limit = {
@@ -72,25 +64,6 @@ unit_leader_event = { # THIS IS ACTUALLY THE FIRST MISSIOLINI!
 	
 		#START MISSIOLINIS SYSTEM
 		set_country_flag = ITA_missiolinis_active_flag #This will unlock Missiolini's decision cat with the two first missions 
-		hidden_effect = {
-			ITA = {
-				activate_mission = ITA_conquer_the_north_mission
-				activate_mission = ITA_conquer_the_south_mission
-				add_ideas = ITA_aggressive_policy_in_ethiopia
-			}
-		}
-
-		# other effects for ITA 
-		add_timed_idea = {
-			idea = ITA_offensive_in_ethiopia
-			days = 180
-		}
-		ETH =  {
-			add_timed_idea = {
-				idea = ETH_italian_offensive_idea
-				days = 180
-			}
-		}
 
 		# Other effects for ETH
 		ETH = {

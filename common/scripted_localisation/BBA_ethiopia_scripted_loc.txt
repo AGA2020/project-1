@@ -8,288 +8,11 @@
 # localization_key -> points to the localization key
 # that'll be used if trigger passes
 
-defined_text = {
-	name = GET_WAR_ESCALATION_LEVEL_1_COLOR
-	text = {
-		trigger = {
-			tag = ITA
-			check_variable = { ETH.ETH_war_escalation_level > 0 }
-		}
-		localization_key = "GFX_war_escalation_level_red"
-	}
-	text = {
-		trigger = {
-			tag = ETH
-			check_variable = { ETH.ETH_war_escalation_level > 0 }
-		}
-		localization_key = "GFX_war_escalation_level_green"
-	}
-	text = {
-		localization_key = "GFX_war_escalation_level_white"
-	}
-	
-}
-defined_text = {
-	name = GET_WAR_ESCALATION_LEVEL_2_COLOR
-	text = {
-		trigger = {
-			tag = ITA
-			check_variable = { ETH.ETH_war_escalation_level > 1 }
-		}
-		localization_key = "GFX_war_escalation_level_red"
-	}
-	text = {
-		trigger = {
-			tag = ETH
-			check_variable = { ETH.ETH_war_escalation_level > 1 }
-		}
-		localization_key = "GFX_war_escalation_level_green"
-	}
-	text = {
-		localization_key = "GFX_war_escalation_level_white"
-	}
-	
-}
-defined_text = {
-	name = GET_WAR_ESCALATION_LEVEL_3_COLOR
-	text = {
-		trigger = {
-			tag = ITA
-			check_variable = { ETH.ETH_war_escalation_level > 2 }
-		}
-		localization_key = "GFX_war_escalation_level_red"
-	}
-	text = {
-		trigger = {
-			tag = ETH
-			check_variable = { ETH.ETH_war_escalation_level > 2 }
-		}
-		localization_key = "GFX_war_escalation_level_green"
-	}
-	text = {
-		localization_key = "GFX_war_escalation_level_white"
-	}
-}
 
-defined_text = {
-	name = GET_WAR_ESCALATION_LEVEL_4_COLOR
-	text = {
-		trigger = {
-			tag = ITA
-			check_variable = { ETH.ETH_war_escalation_level > 3 }
-		}
-		localization_key = "GFX_war_escalation_level_red"
-	}
-	text = {
-		trigger = {
-			tag = ETH
-			check_variable = { ETH.ETH_war_escalation_level > 3 }
-		}
-		localization_key = "GFX_war_escalation_level_green"
-	}
-	text = {
-		localization_key = "GFX_war_escalation_level_white"
-	}
-}
-
-defined_text = {
-	name = GET_WAR_ESCALATION_LEVEL_5_COLOR
-	text = {
-		trigger = {
-			tag = ITA
-			check_variable = { ETH.ETH_war_escalation_level > 4 }
-		}
-		localization_key = "GFX_war_escalation_level_red"
-	}
-	text = {
-		trigger = {
-			tag = ETH
-			check_variable = { ETH.ETH_war_escalation_level > 4 }
-		}
-		localization_key = "GFX_war_escalation_level_green"
-	}
-	text = {
-		localization_key = "GFX_war_escalation_level_white"
-	}
-}
-defined_text = {
-	name = GET_WAR_ESCALATION_LEVEL_6_COLOR
-	text = {
-		trigger = {
-			tag = ITA
-			check_variable = { ETH.ETH_war_escalation_level > 5 }
-		}
-		localization_key = "GFX_war_escalation_level_red"
-	}
-	text = {
-		trigger = {
-			tag = ETH
-			check_variable = { ETH.ETH_war_escalation_level > 5 }
-		}
-		localization_key = "GFX_war_escalation_level_green"
-	}
-	text = {
-		localization_key = "GFX_war_escalation_level_white"
-	}
-}
-defined_text = {
-	name = GET_WAR_ESCALATION_LEVEL_7_COLOR
-	text = {
-		trigger = {
-			tag = ITA
-			check_variable = { ETH.ETH_war_escalation_level > 6 }
-		}
-		localization_key = "GFX_war_escalation_level_red"
-	}
-	text = {
-		trigger = {
-			tag = ETH
-			check_variable = { ETH.ETH_war_escalation_level > 6 }
-		}
-		localization_key = "GFX_war_escalation_level_green"
-	}
-	text = {
-		localization_key = "GFX_war_escalation_level_white"
-	}
-}
-defined_text = {
-	name = GET_WAR_ESCALATION_LEVEL_8_COLOR
-	text = {
-		trigger = {
-			tag = ITA
-			check_variable = { ETH.ETH_war_escalation_level > 7 }
-		}
-		localization_key = "GFX_war_escalation_level_red"
-	}
-	text = {
-		trigger = {
-			tag = ETH
-			check_variable = { ETH.ETH_war_escalation_level > 7 }
-		}
-		localization_key = "GFX_war_escalation_level_green"
-	}
-	text = {
-		localization_key = "GFX_war_escalation_level_white"
-	}
-}
-defined_text = {
-	name = GET_WAR_ESCALATION_LEVEL_9_COLOR
-	text = {
-		trigger = {
-			tag = ITA
-			check_variable = { ETH.ETH_war_escalation_level > 8 }
-		}
-		localization_key = "GFX_war_escalation_level_red"
-	}
-	text = {
-		trigger = {
-			tag = ETH
-			check_variable = { ETH.ETH_war_escalation_level > 8 }
-		}
-		localization_key = "GFX_war_escalation_level_green"
-	}
-	text = {
-		localization_key = "GFX_war_escalation_level_white"
-	}
-}
-defined_text = {
-	name = GET_WAR_ESCALATION_LEVEL_10_COLOR
-	text = {
-		trigger = {
-			tag = ITA
-			check_variable = { ETH.ETH_war_escalation_level > 9 }
-		}
-		localization_key = "GFX_war_escalation_level_red"
-	}
-	text = {
-		trigger = {
-			tag = ETH
-			check_variable = { ETH.ETH_war_escalation_level > 9 }
-		}
-		localization_key = "GFX_war_escalation_level_green"
-	}
-	text = {
-		localization_key = "GFX_war_escalation_level_white"
-	}
-}
-defined_text = {
-	name = GetEthiopianMilitaryAcademyName
-	text = {
-		trigger = {
-			ETH = { has_government = neutrality }
-		}
-		localization_key = ecole_militaire_haile_selassie_1er
-	}
-	text = {
-		localization_key = holeta_military_academy
-	}
-}
-
-defined_text = {
-	name = GetEthiopianArmySpiritName
-	text = {
-		trigger = {
-			ETH = { has_dynamic_modifier = { modifier = ETH_army_3_dynamic_modifier } }
-		}
-		localization_key = ETH_army_3_dynamic_modifier
-	}
-	text = {
-		trigger = {
-			ETH = { has_dynamic_modifier = { modifier = ETH_army_2_dynamic_modifier } }
-		}
-		localization_key = ETH_army_2_dynamic_modifier
-	}
-	text = {
-		localization_key = ETH_army_1_dynamic_modifier
-	}
-}
-
-defined_text = {
-	name = GetEthiopianNavySpiritName
-	text = {
-		trigger = {
-			ETH = { has_dynamic_modifier = { modifier = ETH_navy_3_dynamic_modifier } }
-		}
-		localization_key = ETH_navy_3_dynamic_modifier
-	}
-	text = {
-		trigger = {
-			ETH = { has_dynamic_modifier = { modifier = ETH_navy_2_dynamic_modifier } }
-		}
-		localization_key = ETH_navy_2_dynamic_modifier
-	}
-	text = {
-		localization_key = ETH_navy_1_dynamic_modifier
-	}
-}
-defined_text = {
-	name = GetEthiopianAirforceSpiritName
-	text = {
-		trigger = {
-			ETH = { has_dynamic_modifier = { modifier = ETH_airforce_3_dynamic_modifier } }
-		}
-		localization_key = ETH_airforce_3_dynamic_modifier
-	}
-	text = {
-		trigger = {
-			ETH = { has_dynamic_modifier = { modifier = ETH_airforce_2_dynamic_modifier } }
-		}
-		localization_key = ETH_airforce_2_dynamic_modifier
-	}
-	text = {
-		localization_key = ETH_airforce_1_dynamic_modifier
-	}
-}
 
 # Scripted description for 2nd Italo-Ethiopian War
 defined_text = {
 	name = Get2ndItaloEthiopianWarDesc
-	text = {
-		trigger = {
-			tag = ETH
-		}
-		localization_key = ETH_2ndItaloEthiopianWar
-	}
 	text = {
 		trigger = {
 			tag = ITA
@@ -545,29 +268,11 @@ defined_text = {
 defined_text = {
 	name = Get_ETH_assertiveness_name
 	text = {
-		trigger = { 
-			is_or_will_be_gojjam = yes 
-		}
-		localization_key = ETH_assertiveness_gojjam
-	}
-	text = {
-		trigger = { 
-			is_or_will_be_jimma = yes 
-		}
-		localization_key = ETH_assertiveness_jimma
-	}
-	text = {
 		localization_key = ETH_assertiveness_ethiopia
 	}
 }
 defined_text = {
 	name = Get_ETH_replace_the_abuna_name
-	text = {
-		trigger = { 
-			is_or_will_be_jimma = yes 
-		}
-		localization_key = ETH_change_state_religion
-	}
 	text = {
 		localization_key = ETH_replace_the_abuna_original
 	}
@@ -575,35 +280,11 @@ defined_text = {
 defined_text = {
 	name = Get_ETH_replace_the_abuna_desc
 	text = {
-		trigger = { 
-			is_or_will_be_jimma = yes 
-		}
-		localization_key = ETH_replace_the_abuna_desc_jimma
-	}
-	text = {
-		trigger = { 
-			is_or_will_be_gojjam = yes 
-		}
-		localization_key = ETH_replace_the_abuna_desc_gojjam
-	}
-	text = {
 		localization_key = ETH_replace_the_abuna_desc_ethiopia
 	}
 }
 defined_text = {
 	name = Get_ETH_cooperation_name
-	text = {
-		trigger = { 
-			is_or_will_be_gojjam = yes 
-		}
-		localization_key = ETH_cooperation_gojjam
-	}
-	text = {
-		trigger = { 
-			is_or_will_be_jimma = yes 
-		}
-		localization_key = ETH_cooperation_jimma
-	}
 
 	text = {
 		localization_key = ETH_cooperation_gugsa
@@ -611,18 +292,6 @@ defined_text = {
 }
 defined_text = {
 	name = Get_ETH_reinforce_dynamic_identity_name
-	text = {
-		trigger = { 
-			is_or_will_be_gojjam = yes 
-		}
-		localization_key = ETH_reinforce_gojjam_identity
-	}
-	text = {
-		trigger = { 
-			is_or_will_be_jimma = yes 
-		}
-		localization_key = ETH_reinforce_jimman_identity
-	}
 
 	text = {
 		localization_key = ETH_reinforce_ethiopian_identity
@@ -631,18 +300,6 @@ defined_text = {
 
 defined_text = {
 	name = Get_ETH_the_liberator_of_country_short_name
-	text = {
-		trigger = { 
-			is_or_will_be_gojjam = yes 
-		}
-		localization_key = ETH_the_liberator_of_gojjam
-	}
-	text = {
-		trigger = { 
-			is_or_will_be_jimma = yes 
-		}
-		localization_key = ETH_the_liberator_of_jimma
-	}
 
 	text = {
 		localization_key = ETH_the_liberator_of_ethiopia
@@ -724,18 +381,6 @@ defined_text = {
 
 defined_text = {
 	name = GetEthiopianCollaboratorName
-	text = {
-		trigger = {
-			is_or_will_be_jimma = yes 
-		}
-		localization_key = ETH_abba_jofir
-	}
-	text = {
-		trigger = {
-			is_or_will_be_gojjam = yes 
-		}
-		localization_key = ETH_hailu_tekle_haymanot
-	}
 
 	text = {
 		localization_key = ETH_haile_selassie_gugsa
