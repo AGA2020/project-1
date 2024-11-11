@@ -8,7 +8,6 @@ ROMID_internal_factions = {
 	}
 
 	scripted_gui = romid_internal_factions_decision_ui
-	visible_when_empty = yes
 	allowed = {
 		original_tag = ROM
 	}
@@ -22,8 +21,6 @@ ROMID_malaxa_intervention = {
 		has_completed_focus = ROM_cooperation_with_malaxa
 		NOT = { is_ai = yes }
 	}
-
-	visible_when_empty = yes
 	allowed = {
 		original_tag = ROM
 	}
@@ -36,7 +33,6 @@ ROMID_army_supply = {
 		has_completed_focus = ROM_crippling_logistics
 		NOT = { is_ai = yes }
 	}
-	visible_when_empty = yes
 	allowed = {
 		original_tag = ROM
 	}
@@ -52,7 +48,6 @@ ROMID_line_motorization = {
 		NOT = { has_global_flag = romid_finished_line_motorization }
 		NOT = { is_ai = yes }
 	}
-	visible_when_empty = yes
 	allowed = {
 		original_tag = ROM
 	}
@@ -65,7 +60,6 @@ ROMID_officer_training = {
 		has_completed_focus = ROM_officer_academy
 		NOT = { is_ai = yes }
 	}
-	visible_when_empty = yes
 	allowed = {
 		original_tag = ROM
 	}
@@ -77,7 +71,6 @@ ROMID_army_training = {
 		has_completed_focus = ROM_extended_army_training
 		NOT = { is_ai = yes }
 	}
-	visible_when_empty = yes
 	allowed = {
 		original_tag = ROM
 	}
