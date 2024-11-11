@@ -8,8 +8,6 @@ state = {
 history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = XSM
-		add_core_of = XSM
 
 		buildings = {
 			infrastructure = 2
