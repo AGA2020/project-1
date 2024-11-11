@@ -2120,7 +2120,7 @@ generic_escort_ship_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = CHI tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK }
+				OR = { tag = CHI tag = MAN }
 				has_dlc = "Waking the Tiger"
 			}
 		}
