@@ -787,6 +787,37 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SPA_banish_the_party_leaders
+		available = {
+		}
+		bypass = {
+			has_global_flag = SPR_carlist_uprising_flag
+		}
+		prerequisite = { focus = SPA_extol_the_martyrs_of_the_war }
+		prerequisite = { focus = SPA_foment_a_carlist_split }
+		
+		icon = GFX_focus_generic_support_the_left_right
+		x = 1
+		y = 1
+		relative_position_id = SPA_extol_the_martyrs_of_the_war
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CARLIST_UPRISING}
+		completion_reward = {
+			add_political_power = 200
+			custom_effect_tooltip = remove_political_advisor
+			show_ideas_tooltip = SPA_manuel_hedilla
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = SPA_raimundo_fernandez_cuesta
+			add_days_mission_timeout = {
+				mission = SPA_carlist_uprising_mission
+				days = 140
+			}
+		}
+	}
+
+	focus = {
 		id = SPA_fuse_the_parties
 		available = {
 		}
@@ -1860,37 +1891,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = SPA_banish_the_party_leaders
-		available = {
-		}
-		bypass = {
-			has_global_flag = SPR_carlist_uprising_flag
-		}
-		prerequisite = { focus = SPA_extol_the_martyrs_of_the_war }
-		prerequisite = { focus = SPA_foment_a_carlist_split }
-		
-		icon = GFX_focus_generic_support_the_left_right
-		x = 1
-		y = 1
-		relative_position_id = SPA_extol_the_martyrs_of_the_war
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SPA_CARLIST_UPRISING}
-		completion_reward = {
-			add_political_power = 200
-			custom_effect_tooltip = remove_political_advisor
-			show_ideas_tooltip = SPA_manuel_hedilla
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = SPA_raimundo_fernandez_cuesta
-			add_days_mission_timeout = {
-				mission = SPA_carlist_uprising_mission
-				days = 140
-			}
 		}
 	}
 
