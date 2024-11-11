@@ -30,8 +30,11 @@ news_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		name = aga.123.a
 		ROM = { complete_national_focus = ROM_the_1937_election }  
+	}
+	option = {
+		name = aga.123.a
+		news_event = { id = dfu_news.10 hours = 1 }
 	}
 }
 news_event = {
@@ -43,8 +46,11 @@ news_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		name = aga.555.a
 		ROM = { 48 = { add_compliance = 100 } 801 = { add_compliance = 100 } 211 = { add_compliance = 100 } 212 = { add_compliance = 100 } } 
+	}
+	option = {
+		name = aga.555.a
+		news_event = { id = dfu_news.10 hours = 1 }
 	}
 }
 country_event = {
