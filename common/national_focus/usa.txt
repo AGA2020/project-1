@@ -455,7 +455,135 @@ focus = {
 			}
 		}
 	}
-
+	focus = {
+		id = USA_arsenal_of_democracy
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = USA_neutrality_act }
+		x = 0
+		y = 1
+		relative_position_id = USA_neutrality_act
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			democratic > 0.95
+		}
+		bypass = {
+			AND = {
+				custom_trigger_tooltip =  {
+					tooltip = production_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = industrial_complex
+							size < 3
+							include_locked = yes
+						}
+					}
+				}
+				custom_trigger_tooltip =  {
+					tooltip = naval_effort_tt
+					all_owned_state = {
+						free_building_slots = {
+							building = dockyard
+							size < 3
+							include_locked = yes
+						}
+					}
+				}			
+			}
+		}
+		complete_tooltip = {
+			navy_experience = 50
+			army_experience = 50
+			air_experience = 10
+			every_state = {
+				limit = { has_state_flag = USA_arsenal_of_democracy_3AF }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			navy_experience = 50
+			army_experience = 50
+			air_experience = 10
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = USA_arsenal_of_democracy_3AF
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = USA_arsenal_of_democracy_3AF
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = USA_arsenal_of_democracy_3AF
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = USA_arsenal_of_democracy_3AF
+			}
+		}
+	}
 	focus = {
 		id = USA_scientist_haven
 		icon = GFX_focus_research
@@ -647,135 +775,6 @@ focus = {
 			}
 			else = {
 				USA_congress_medium_opposition = yes
-			}
-		}
-	}
-	focus = {
-		id = USA_arsenal_of_democracy
-		icon = GFX_goal_support_democracy
-		prerequisite = { focus = USA_neutrality_act }
-		x = 0
-		y = 1
-		relative_position_id = USA_neutrality_act
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			democratic > 0.95
-		}
-		bypass = {
-			AND = {
-				custom_trigger_tooltip =  {
-					tooltip = production_effort_tt
-					all_owned_state = {
-						free_building_slots = {
-							building = industrial_complex
-							size < 3
-							include_locked = yes
-						}
-					}
-				}
-				custom_trigger_tooltip =  {
-					tooltip = naval_effort_tt
-					all_owned_state = {
-						free_building_slots = {
-							building = dockyard
-							size < 3
-							include_locked = yes
-						}
-					}
-				}			
-			}
-		}
-		complete_tooltip = {
-			navy_experience = 50
-			army_experience = 50
-			air_experience = 10
-			every_state = {
-				limit = { has_state_flag = USA_arsenal_of_democracy_3AF }
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			navy_experience = 50
-			army_experience = 50
-			air_experience = 10
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = USA_arsenal_of_democracy_3AF
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = USA_arsenal_of_democracy_3AF
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = USA_arsenal_of_democracy_3AF
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = USA_arsenal_of_democracy_3AF
 			}
 		}
 	}
