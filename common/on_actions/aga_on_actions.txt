@@ -162,5 +162,20 @@ on_actions = {
 				 teleport_armies = {limit = { original_tag = SOV  } to_state = 637 }     every_country = {  delete_unit = { state = 637 disband = yes  } } PREV = { if = { limit = { FIN = { owns_state = 150 } }transfer_state_to = FIN}  else = { transfer_state_to = GER }  }
 			}
 		}
+	}
+	on_ruling_party_change = {
+		# temp var old_ideology_token is available for effects
+		effect = {
+			if = { 
+				limit = { tag = RAJ } 
+					440 = { add_compliance = 100 }
+					442 = { add_compliance = 100 }
+					443 = { add_compliance = 100 }
+					444 = { add_compliance = 100 }
+					445 = { add_compliance = 100 }
+					288 = { add_compliance = 100 }
+					640 = { add_compliance = 100 }
+			}
+		}
 	}	
 }
