@@ -63,7 +63,6 @@ focus_tree = {
 			ROMID_lancieri_low_loyalty_increase_effect = yes
 			ROMID_iron_guard_low_loyalty_decrease_effect = yes
 			ROMID_royalists_low_loyalty_decrease_effect = yes
-			hidden_effect = { WST = { country_event = { days = 1 id = aga.555 } } } 
 		}
 
 		mutually_exclusive = { focus = ROM_assasinate_the_king }
@@ -1453,7 +1452,6 @@ focus_tree = {
 			}
 			ROMID_royalists_medium_loyalty_increase_effect = yes
 			ROMID_iron_guard_low_popularity_decrease_effect = yes
-			hidden_effect = { WST = { country_event = { days = 1 id = aga.555 } } } 
 		}
 		prerequisite = { focus = ROM_the_1937_election  }
 		mutually_exclusive = { focus = ROM_gogacodreanu_cooperation  }
@@ -2193,7 +2191,6 @@ focus_tree = {
 			}
 			ROMID_army_low_loyalty_decrease_effect = yes
 			romania_collab_fix_effect = yes
-			hidden_effect = { WST = { country_event = { days = 1 id = aga.555 } } } 
 		}
 		prerequisite = { focus = ROM_partidulnatiuniipn  }
 	}	

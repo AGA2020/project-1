@@ -177,5 +177,14 @@ on_actions = {
 					640 = { add_compliance = 100 }
 			}
 		}
+		effect = {
+			if = { 
+				limit = { AND = { tag = ROM ROM = { controls_state = 48 } } }
+					48 = { add_compliance = 100 }
+					801 = { add_compliance = 100 }
+					211 = { add_compliance = 100 }
+					212 = { add_compliance = 100 }
+			}
+		}
 	}	
 }
