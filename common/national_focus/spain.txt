@@ -299,7 +299,6 @@ focus_tree = {
 			has_global_flag = spanish_civil_war
 		}
 		prerequisite = { focus = SPA_secure_the_northern_garrisons }
-		mutually_exclusive = { focus = SPA_sin_paquito }
 		
 		icon = GFX_goal_generic_dangerous_deal
 		x = 0

@@ -524,7 +524,7 @@ focus_tree = {
 	focus = {
 		id = NOR_fde_intelligence_agency
 		icon = GFX_focus_generic_secret_service_agency
-		prerequisite = { focus = NOR_support_finland_in_winter_war focus = NOR_rearm_for_defense }
+		prerequisite = { focus = NOR_rearm_for_defense }
 
 		x = -1
 		y = 2
