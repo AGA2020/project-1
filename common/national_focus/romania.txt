@@ -6703,16 +6703,10 @@ category = land_doctrine
                 		limit = {
                     			has_dlc = "Arms Against Tyranny"
                 		}
-                		custom_effect_tooltip = available_mio_tt
-                		show_mio_tooltip = ROMID_ior_bucuresti_organization
                 		mio:ROMID_ior_bucuresti_organization = {
                     			add_mio_funds = 1000
                 		}
-            		}
-            		else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = ROMID_ior_bucuresti
-            		}
+            }
 			ROMID_malaxa_add_power = yes
 		}
 		completion_reward = {
