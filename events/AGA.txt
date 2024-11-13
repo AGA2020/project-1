@@ -36,21 +36,6 @@ news_event = {
 		name = aga.123.a
 	}
 }
-news_event = {
-	id = aga.555
-	title = aga.555.t
-	desc = aga.555.d
-	picture = GFX_report_event_generic_read_write
-	
-	is_triggered_only = yes
-
-	immediate = {
-		ROM = { 48 = { add_compliance = 100 } 801 = { add_compliance = 100 } 211 = { add_compliance = 100 } 212 = { add_compliance = 100 } } 
-	}
-	option = {
-		name = aga.555.a
-	}
-}
 country_event = {
 	id = aga.999
 	title = aga.999.t
