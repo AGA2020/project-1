@@ -214,7 +214,6 @@ ROMID_ior_bucuresti_organization = {
 		tag = ROM
 	}
 	available = {
-		FROM = { has_completed_focus = ROM_found_ior }
 	}
 
 	
