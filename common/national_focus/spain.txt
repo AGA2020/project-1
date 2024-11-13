@@ -787,6 +787,28 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SPA_extol_the_martyrs_of_the_war
+		available = {
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPA_martyrdom_for_primo_de_rivera }
+		prerequisite = { focus = SPA_caudillo_of_spain }
+		
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = SPA_martyrdom_for_primo_de_rivera
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_SPA_CARLIST_UPRISING}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
 		id = SPA_banish_the_party_leaders
 		available = {
 		}
@@ -1582,28 +1604,6 @@ focus_tree = {
 				}
 				promote_leader = yes
 			}
-		}
-	}
-
-	focus = {
-		id = SPA_extol_the_martyrs_of_the_war
-		available = {
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPA_martyrdom_for_primo_de_rivera }
-		prerequisite = { focus = SPA_caudillo_of_spain }
-		
-		icon = GFX_goal_generic_propaganda
-		x = 1
-		y = 1
-		relative_position_id = SPA_martyrdom_for_primo_de_rivera
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_SPA_CARLIST_UPRISING}
-		completion_reward = {
-			add_war_support = 0.1
 		}
 	}
 

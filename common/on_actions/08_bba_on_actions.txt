@@ -41,9 +41,7 @@ on_actions = {
 					limit = {
 						OR = {
 							### Original Members
-							tag = ARG 
 							tag = BEL
-							tag = BOL
 							tag = ENG
 							tag = AST
 							tag = CAN
@@ -51,33 +49,24 @@ on_actions = {
 							tag = NZL
 							tag = SAF
 							tag = CHI
-							tag = COL
-							tag = CUB
 							tag = CZE
 							tag = DEN
 							tag = FRA
 							tag = GRE
-							tag = HAI
 							tag = ITA
-							tag = LIB
 							tag = HOL
 							tag = NOR
-							tag = PAN
 							tag = PER
-							tag = PRU
 							tag = POL
-							tag = POR
 							tag = ROM
 							tag = SIA
 							tag = SPR
 							tag = SWE
-							tag = URU
 							tag = VEN
 							tag = YUG
 							### 1920
 							tag = AUS
 							tag = BUL
-							tag = COS
 							tag = FIN
 							tag = LUX
 							tag = ALB
@@ -89,9 +78,7 @@ on_actions = {
 							tag = HUN
 							### 1923
 							tag = IRE
-							tag = ETH
 							### 1924
-							tag = DOM
 							### 1931
 							tag = MEX
 							### 1932
@@ -99,8 +86,6 @@ on_actions = {
 							tag = IRQ 
 							### 1934
 							tag = SOV
-							tag = AFG
-							tag = ECU 
 						}
 					}
 					add_ideas = league_of_nations_member_idea
@@ -307,19 +292,6 @@ on_actions = {
 					set_country_flag = ETH_survival_flag
 					country_event = {
 						id = BBA_italo_ethiopian_war_events.203
-						hours = 6 
-						random_hours = 8 
-					}
-				}
-				# The People's War 
-				IF = {
-					limit = { 
-						NOT = { has_country_flag = ETH_peoples_war_flag }
-						check_variable = { ETH.ETH_war_escalation_level > 9 }
-					}
-					set_country_flag = ETH_peoples_war_flag
-					country_event = {
-						id = BBA_italo_ethiopian_war_events.204
 						hours = 6 
 						random_hours = 8 
 					}

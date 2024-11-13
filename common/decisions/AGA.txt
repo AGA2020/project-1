@@ -2285,6 +2285,7 @@ operations = {
                 155 = { add_compliance = 100 }
                 154 = { add_compliance = 100 }
                 43 = { add_compliance = 100 }
+                971 = { add_compliance = 100 }
                 SOV = {             
                     823= {
                         add_extra_state_shared_building_slots = 5 
