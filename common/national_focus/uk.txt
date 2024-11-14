@@ -1771,6 +1771,7 @@ focus_tree = {
 				uses = 2
 				category = cl_tech
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_secure_the_imperial_shipping_routes
 		}
 	}
@@ -1881,6 +1882,7 @@ focus_tree = {
 				uses = 2
 				category = convoy_defense_tree
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_anti_submarine_training_school
 		}
 	}
@@ -2052,6 +2054,7 @@ focus_tree = {
 				}
 				set_state_flag = ENG_expand_the_repair_yards_2dockyard
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_expand_the_repair_yards
 		}
 	}
@@ -2200,6 +2203,7 @@ focus_tree = {
 			army_experience = 5
 			navy_experience = 25
 			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_service_overseas_idea
 		}
 	}
@@ -2243,38 +2247,73 @@ focus_tree = {
 					}
 				}
 				add_ideas = ENG_fortify_the_empire_1
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			447 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 3
-					province = 4076
-					instant_build = yes
+				IF = {
+					limit = {
+						447 = {
+							free_building_slots = {
+								building = coastal_bunker
+								size > 2
+								province = 4076
+							}
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 4076
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					province = 4076
-					instant_build = yes
+
+				IF = {
+					limit = {
+						447 = {
+							free_building_slots = {
+								building = naval_base
+								size > 1
+								province = 4076
+							}
+						}
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 4076
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
+
+				IF = {
+					limit = {
+						447 = {
+							free_building_slots = {
+								building = air_base
+								size > 3
+							}
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
 				}
+				
+				
+				
 			}
 		}
 	}
 	focus = {
-		id = uk_rock_focus
-		prerequisite = {
-			focus = uk_mediterranean_focus
-		}
+		id = uk_rock_focus 
+		prerequisite = { focus = uk_mediterranean_focus }
+		mutually_exclusive = { focus = uk_spain_focus }
 		available = {
-			118 = {
-				is_owned_and_controlled_by = ENG
-			}
-		}
+			118 = { is_owned_and_controlled_by = ENG }
+		} 
 		icon = GFX_goal_generic_construct_military
 		x = -1
 		y = 1
@@ -2282,36 +2321,82 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			118 = {
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 4135
-					instant_build = yes
+				IF = {
+					limit = {
+						118 = {
+							free_building_slots = {
+								building = bunker
+								size > 3
+								province = 4135
+							}
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 4135
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = coastal_bunker
-					level = 1
-					province = 4135
-					instant_build = yes
+				
+				IF = {
+					limit = {
+						118 = {
+							free_building_slots = {
+								building = coastal_bunker
+								size > 0
+								province = 4135
+							}
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						province = 4135
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
+				
+				IF = {
+					limit = {
+						118 = {
+							free_building_slots = {
+								building = air_base
+								size > 2
+								
+							}
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
+				
+				IF = {
+					limit = {
+						118 = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 2
+							}
+						}
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
 				}
+				
+				
 			}
 		}
 	}
 	focus = {
 		id = uk_protect_suez
-		prerequisite = {
-			focus = uk_mediterranean_focus
-		}
+		prerequisite = { focus = uk_mediterranean_focus }
 		icon = GFX_goal_generic_defence
 		x = 0
 		y = 2
@@ -2320,6 +2405,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		available = {
 			447 = {
 				CONTROLLER = {
@@ -2330,84 +2416,132 @@ focus_tree = {
 				}
 			}
 		}
+
 		available_if_capitulated = yes
-		# Needs province based trigger to work properly
-		#bypass = {
-		#	447 = {
-		#		free_building_slots = {
-		#			building = coastal_bunker
-		#			size < 1
-		#		}
-		#		free_building_slots = {
-		#			building = naval_base
-		#			size < 1
-		#		}
-		#		free_building_slots = {
-		#			building = air_base
-		#			size < 1
-		#		}
-		#		free_building_slots = {
-		#			building = bunker
-		#			size < 1
-		#		}
-		#	}
-		#}
+
+		 
+		bypass = {
+			447 = {
+				free_building_slots = {
+					building = coastal_bunker
+					size < 2
+					province = 4076
+				}
+				free_building_slots = {
+					building = anti_air_building
+					size < 2
+				}
+				free_building_slots = {
+					building = air_base
+					size < 3
+				}
+				free_building_slots = {
+					building = bunker
+					size < 2
+					province = 1071
+				}
+			}
+		}
+
 		completion_reward = {
 			447 = {
-				add_building_construction = {
-					type = coastal_bunker
-					level = 2
-					province = 4076
-					instant_build = yes
+				IF = {
+					limit = {
+						447 = {
+							free_building_slots = {
+								building = coastal_bunker
+								size > 1
+								province = 4076
+							}
+						}
+					}
+
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 4076
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
+
+				IF = {
+					limit = {
+						447 = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 2
+							}
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = bunker
-					level = 2
-					province = 1071
-					instant_build = yes
+
+				IF = {
+					limit = {
+						free_building_slots = {
+							building = bunker
+							size > 1 
+							province = 1071
+						}
+					}
+					
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 1071
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
+				
+				IF = {
+					limit = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 1 
+						}
+					}
+
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
 		}
 	}
 	focus = {
-		id = uk_malta_focus
-		prerequisite = {
-			focus = uk_mediterranean_focus
-		}
+		id = uk_malta_focus 
+		prerequisite = { focus = uk_mediterranean_focus }
 		available = {
-			116 = {
-				is_owned_and_controlled_by = ENG
-			}
-		}
-		icon = GFX_goal_generic_construct_military
+			116 = { is_owned_and_controlled_by = ENG }
+		}		
+		icon = GFX_focus_generic_coastal_fort
 		x = 1
 		y = 1
 		relative_position_id = uk_mediterranean_focus
 		cost = 10
+
 		available_if_capitulated = yes
-		# Needs province based trigger to work properly
-		#bypass = {
-		#	116 = {
-		#		free_building_slots = {
-		#			building = coastal_bunker
-		#			size < 2
-		#		}
-		#		free_building_slots = {
-		#			building = air_base
-		#			size < 1
-		#		}
-		#	}
-		#}
+
+		bypass = {
+			116 = {
+				free_building_slots = {
+					building = coastal_bunker
+					size < 2
+					province = 12003
+				}
+				free_building_slots = {
+					building = air_base
+					size < 1
+				}
+			}
+		}
+
 		completion_reward = {
 			116 = {
 				add_extra_state_shared_building_slots = 1
@@ -2571,27 +2705,19 @@ focus_tree = {
 	}
 	focus = {
 		id = uk_burma_focus
-		prerequisite = {
-			focus = uk_asia_focus
-		}
+		prerequisite = { focus = uk_asia_focus } 
 		available = {
-			CHI = {
-				has_war_with = JAP
-				NOT = {
-					has_war_with = ENG
-				}
+			CHI = { 
+				has_war_with = JAP 
+				NOT = { has_war_with = ENG }
 			}
-			JAP = {
-				NOT = {
-					is_in_faction_with = ENG
-				}
-			}
+			JAP = { NOT = { is_in_faction_with = ENG } }
 		}
+
 		bypass = {
-			CHI = {
-				exists = no
-			}
+			CHI = { exists = no }
 		}
+
 		icon = GFX_goal_generic_construct_infrastructure
 		x = -2
 		y = 1
@@ -2600,7 +2726,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
+
 		bypass = {
 			640 = {
 				free_building_slots = {
@@ -2630,22 +2758,17 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-			FOCUS_FILTER_WAR_SUPPORT
-		}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT}
 		completion_reward = {
 			640 = {
 				if = {
-					limit = {
-						OR = {
-							ENG = {
-								controls_state = 640
-							}
+					limit = { 
+						OR = { 
+							ENG = { controls_state = 640 }
 							any_other_country = {
 								is_in_faction_with = ENG
 								controls_state = 640
-							}
+							} 
 						}
 					}
 					add_building_construction = {
@@ -2662,15 +2785,13 @@ focus_tree = {
 			}
 			325 = {
 				if = {
-					limit = {
-						OR = {
-							CHI = {
-								controls_state = 325
-							}
+					limit = { 
+					OR = { 
+							CHI = { controls_state = 325 }
 							any_other_country = {
 								is_in_faction_with = CHI
 								controls_state = 640
-							}
+							} 
 						}
 					}
 					add_building_construction = {
@@ -2687,17 +2808,14 @@ focus_tree = {
 			}
 			601 = {
 				if = {
-					limit = {
-						OR = {
-							CHI = {
-								controls_state = 601
-							}
+					limit = { 
+						OR = { 
+							CHI = { controls_state = 601 }
 							any_other_country = {
 								is_in_faction_with = CHI
 								controls_state = 601
-							}
-						}
-					}
+							} 
+						} }
 					add_building_construction = {
 						type = infrastructure
 						level = 2
@@ -2716,7 +2834,9 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_war_support = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					has_dlc = "Waking the Tiger"
@@ -2724,18 +2844,16 @@ focus_tree = {
 				unlock_decision_tooltip = CHI_expand_the_burma_road
 			}
 			CHI = {
-				add_opinion_modifier = {
-					target = ENG
-					modifier = burma_road_good
-				}
+				add_opinion_modifier = { target = ENG modifier = burma_road_good } 
 				country_event = britain.4
 			}
-			JAP = {
-				add_opinion_modifier = {
-					target = ENG
-					modifier = burma_road_bad
-				}
+			YUN = {
+				add_opinion_modifier = { target = ENG modifier = burma_road_good } 
+				country_event = britain.5
 			}
+			JAP = {
+				add_opinion_modifier = { target = ENG modifier = burma_road_bad } 
+			} 
 		}
 	}
 	focus = {
@@ -2776,14 +2894,13 @@ focus_tree = {
 	}
 	focus = {
 		id = singapore_focus
-		prerequisite = {
-			focus = uk_asia_focus
-		}
+		prerequisite = { focus = uk_asia_focus }
 		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 1
 		relative_position_id = uk_asia_focus
 		cost = 10
+
 		available = {
 			336 = {
 				CONTROLLER = {
@@ -2794,26 +2911,40 @@ focus_tree = {
 				}
 			}
 		}
+
 		ai_will_do = {
 			factor = 1
 		}
+
 		available_if_capitulated = yes
-		completion_reward = {
+
+		completion_reward = { 
 			navy_experience = 25
 			336 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = coastal_bunker
-					level = 3
-					province = 12299
-					instant_build = yes
+
+				IF = {
+					limit = {
+						336 = {
+							free_building_slots = {
+								building = coastal_bunker
+								size > 2
+								province = 12299
+							}
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 12299
+						instant_build = yes
+					}
 				}
+				
 				if = {
 					limit = {
 						CONTROLLER = {
-							NOT = {
-								tag = ENG
-							}
+							NOT = { tag = ENG }
 						}
 					}
 					CONTROLLER = {
@@ -2828,9 +2959,7 @@ focus_tree = {
 	}
 	focus = {
 		id = sp_landward_forts_focus
-		prerequisite = {
-			focus = singapore_focus
-		}
+		prerequisite = { focus = singapore_focus }
 		icon = GFX_goal_generic_construct_military
 		x = 0
 		y = 1
@@ -2838,7 +2967,7 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
-		}
+		}	
 		available = {
 			336 = {
 				CONTROLLER = {
@@ -2849,35 +2978,69 @@ focus_tree = {
 				}
 			}
 		}
+
+
 		available_if_capitulated = yes
+
 		bypass = {
 			336 = {
 				free_building_slots = {
 					building = anti_air_building
 					size < 2
 				}
+
+				free_building_slots = {
+					building = bunker
+					size < 4
+					province = 12299
+				}
 			}
 		}
+
 		completion_reward = {
 			336 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 12299
-					instant_build = yes
+
+				IF = {
+					limit = {
+						336 = {
+							free_building_slots = {
+								building = bunker
+								size > 3
+								province = 12299
+							}
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 12299
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
+
+				IF = {
+					limit = {
+						336 = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 1
+							}
+						}
+					}
+
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
 				}
+				
+				
 				if = {
 					limit = {
 						CONTROLLER = {
-							NOT = {
-								tag = ENG
-							}
+							NOT = { tag = ENG }
 						}
 					}
 					CONTROLLER = {
@@ -2959,9 +3122,7 @@ focus_tree = {
 	}
 	focus = {
 		id = hongkong_focus
-		prerequisite = {
-			focus = uk_asia_focus
-		}
+		prerequisite = { focus = uk_asia_focus }
 		icon = GFX_goal_generic_fortify_city
 		x = 2
 		y = 1
@@ -2970,7 +3131,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0.25
 		}
-		available = {
+		available = { 
 			326 = {
 				CONTROLLER = {
 					OR = {
@@ -2980,25 +3141,38 @@ focus_tree = {
 				}
 			}
 		}
+
 		available_if_capitulated = yes
+
 		completion_reward = {
 			navy_experience = 25
 			326 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = coastal_bunker
-					level = 3
-					province = 10062
-					instant_build = yes
+
+				IF = {
+					limit = {
+						326 = {
+							free_building_slots = {
+								building = coastal_bunker
+								size > 2
+								province = 10062
+							}
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 10062
+						instant_build = yes
+					}
 				}
+				
 			}
 		}
 	}
 	focus = {
 		id = hk_landward_forts_focus
-		prerequisite = {
-			focus = hongkong_focus
-		}
+		prerequisite = { focus = hongkong_focus }
 		icon = GFX_goal_generic_construct_military
 		x = 0
 		y = 1
@@ -3006,7 +3180,7 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
-		}
+		}	
 		available = {
 			326 = {
 				CONTROLLER = {
@@ -3017,37 +3191,71 @@ focus_tree = {
 				}
 			}
 		}
+
 		available_if_capitulated = yes
+
 		bypass = {
-			326 = {
+			326 = { 
 				free_building_slots = {
 					building = anti_air_building
 					size < 2
 				}
+
+				free_building_slots = {
+					building = bunker
+					size < 4
+					province = 10062
+				}
 			}
 		}
-		completion_reward = {
+
+		completion_reward = { 
 			326 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = bunker
-					level = 4
-					province = 10062
-					instant_build = yes
+
+				IF = {
+					limit = {
+						326 = {
+							free_building_slots = {
+								building = bunker
+								size > 3
+								province = 10062
+							}
+						}
+					}
+
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 10062
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
+
+				IF = {
+					limit = {
+						326 = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 1
+							}
+						}
+					}
+
+					add_building_construction = {
+						type = anti_air_building
+						level = 2				
+						instant_build = yes
+					}
 				}
+				
+				
 			}
 		}
 	}
 	focus = {
 		id = hk_air_focus
-		prerequisite = {
-			focus = hk_landward_forts_focus
-		}
+		prerequisite = { focus = hk_landward_forts_focus }
 		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 1
@@ -3055,7 +3263,7 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
-		}
+		}	
 		available = {
 			326 = {
 				CONTROLLER = {
@@ -3066,13 +3274,15 @@ focus_tree = {
 				}
 			}
 		}
+
 		available_if_capitulated = yes
+
 		bypass = {
-			326 = {
+			326 = { 
 				free_building_slots = {
 					building = anti_air_building
 					size < 2
-				}
+				} 
 				free_building_slots = {
 					building = air_base
 					size < 2
@@ -3081,15 +3291,39 @@ focus_tree = {
 		}
 		completion_reward = {
 			326 = {
-				add_building_construction = {
-					type = anti_air_building
-					level = 2
-					instant_build = yes
+
+				IF = {
+					limit = {
+						326 = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 1 
+							}
+						}
+					}
+
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
 				}
-				add_building_construction = {
-					type = air_base
-					level = 4
-					instant_build = yes
+
+				IF = {
+					limit = {
+						326 = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+
+					add_building_construction = {
+						type = air_base
+						level = 4
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -3183,29 +3417,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 3
 		}
-		available = {
-			OR = {
-				CAN = {
-					is_in_faction_with = ENG
-				}
-				SAF = {
-					is_in_faction_with = ENG
-				}
-				RAJ = {
-					is_in_faction_with = ENG
-				}
-				AST = {
-					is_in_faction_with = ENG
-				}
-				NZL = {
-					is_in_faction_with = ENG
-				}
-			}
-		}
-		bypass = {
-		}
 		completion_reward = {
 			add_ideas = ENG_british_commonwealth_air_training_plan
+			custom_effect_tooltip = generic_skip_one_line_tt
 			every_country = {
 				limit = {
 					is_subject_of = ROOT
@@ -4092,7 +4306,7 @@ focus_tree = {
 			}
 		}
 		continue_if_invalid = no
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_RAJ_british_investors
 		x = 1
 		y = 1
 		relative_position_id = uk_india_focus
@@ -4131,109 +4345,6 @@ focus_tree = {
 		allow_branch = {
 			has_dlc = "Man the Guns"
 		}
-		available = {
-			OR = {
-				CAN = {
-					OR = {
-						AND = {
-							is_subject_of = ENG
-							has_government = ROOT
-						}
-						exists = no
-					}
-				}
-				SAF = {
-					OR = {
-						AND = {
-							is_subject_of = ENG
-							has_government = ROOT
-						}
-						exists = no
-					}
-				}
-				AST = {
-					OR = {
-						AND = {
-							is_subject_of = ENG
-							has_government = ROOT
-						}
-						exists = no
-					}
-				}
-				NZL = {
-					OR = {
-						AND = {
-							is_subject_of = ENG
-							has_government = ROOT
-						}
-						exists = no
-					}
-				}
-				NOT = {
-					any_state = {
-						OR = {
-							is_core_of = ENG
-							is_core_of = CAN
-							is_core_of = SAF
-							is_core_of = AST
-							is_core_of = NZL
-						}
-						NOT = {
-							state = 331
-						}
-						OWNER = {
-							NOT = {
-								OR = {
-									tag = ENG
-									tag = CAN
-									tag = SAF
-									tag = AST
-									tag = NZL
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		bypass = {
-			CAN = {
-				exists = no
-			}
-			SAF = {
-				exists = no
-			}
-			RAJ = {
-				OR = {
-					exists = no
-					NOT = {
-						is_subject_of = ENG
-					}
-				}
-			}
-			AST = {
-				exists = no
-			}
-			NZL = {
-				exists = no
-			}
-			NOT = {
-				any_state = {
-					OR = {
-						is_core_of = ENG
-						is_core_of = CAN
-						is_core_of = SAF
-						is_core_of = AST
-						is_core_of = NZL
-					}
-					OWNER = {
-						NOT = {
-							tag = ENG
-						}
-					}
-				}
-			}
-		}
 		continue_if_invalid = no
 		icon = GFX_focus_eng_imperial_federation
 		x = 0
@@ -4251,6 +4362,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_political_power = 120
+            custom_effect_tooltip = generic_skip_one_line_tt
 			every_country = {
 				limit = {
 					OR = {
@@ -4324,9 +4436,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ENG_steady_as_she_goes
 		}
-		mutually_exclusive = {
-			focus = ENG_global_defense
-		}
 		icon = GFX_focus_generic_home_defense
 		x = 0
 		y = 1
@@ -4348,14 +4457,18 @@ focus_tree = {
 			FOCUS_FILTER_WAR_SUPPORT
 		}
 		completion_reward = {
+
 			add_war_support = 0.05
-			# Ipswich
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			# East Anglia
 			125 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
+					limit = { 
+						is_controlled_by = ROOT 
 					}
-					#Plymouth
+					#Ipswich
 					add_building_construction = {
 						type = coastal_bunker
 						level = 2
@@ -4368,7 +4481,7 @@ focus_tree = {
 			126 = {
 				if = {
 					limit = {
-						is_controlled_by = ROOT
+						is_controlled_by = ROOT 
 					}
 					#London
 					add_building_construction = {
@@ -4382,30 +4495,57 @@ focus_tree = {
 			# Sussex
 			127 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
+					limit = { 
+						is_controlled_by = ROOT 
 					}
-					#Dover
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 3501
-						instant_build = yes
+
+					IF = {
+						limit = {
+							free_building_slots = {
+								building = coastal_bunker
+								size > 1
+								province = 3501
+							}
+						}
+						#Dover
+						add_building_construction = {
+							type = coastal_bunker
+							level = 2
+							province = 3501
+							instant_build = yes
+						}
 					}
-					#Portsmouth
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						province = 9458
-						instant_build = yes
+					
+
+					IF = {
+						limit = {
+							free_building_slots = {
+								building = coastal_bunker
+								size > 1
+								province = 9458
+							}
+						}
+						#Portsmouth
+						add_building_construction = {
+							type = coastal_bunker
+							level = 2
+							province = 9458
+							instant_build = yes
+						}
 					}
-				}
+					
+				}								
 			}
 			# Cornwall
 			123 = {
 				if = {
-					limit = {
-						is_controlled_by = ROOT
+					limit = { 
+						is_controlled_by = ROOT 
+						free_building_slots = {
+							building = coastal_bunker
+							size > 1
+							province = 540
+						}
 					}
 					#Plymouth
 					add_building_construction = {
@@ -4416,6 +4556,23 @@ focus_tree = {
 					}
 				}
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = ENG_home_defence_tt
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+
 		}
 	}
 	# END IRAQ/IRAN/USSR INTERVENTION #
@@ -4427,6 +4584,8 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+        cancel_if_invalid = no
+        continue_if_invalid = yes
 		available_if_capitulated = yes
 		prerequisite = {
 			focus = ENG_home_defence
@@ -4465,6 +4624,8 @@ focus_tree = {
 				has_war = yes
 			}
 		}
+        cancel_if_invalid = no
+        continue_if_invalid = yes
 		available_if_capitulated = yes
 		prerequisite = {
 			focus = ENG_issue_gasmasks
@@ -4548,7 +4709,20 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 		completion_reward = {
-			add_ideas = ENG_prepare_for_the_inevitable_idea
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = wartime_industry_focus
+					}
+				}
+				add_ideas = ENG_prepare_for_the_inevitable_idea
+			}
+			ELSE = {
+				swap_ideas = {
+					remove_idea = wartime_industry_focus
+					add_idea = ENG_prepare_for_the_inevitable_and_wartime_industry_idea
+				}	
+			}
 		}
 	}
 	focus = {
@@ -4679,7 +4853,7 @@ focus_tree = {
 		}	
 		will_lead_to_war_with = NOR
 		prerequisite = { focus = uk_scandinavian_focus }
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_focus_generic_attack_norway
 		x = 0
 		y = 1
 		relative_position_id = uk_scandinavian_focus
