@@ -18,7 +18,11 @@ state=
 		}
 		
 		victory_points = {
-			7197 10
+			7197 8
+		}
+
+		victory_points = {
+			4179 10 # Matsuyama
 		}
 	}
 	provinces={

@@ -13,15 +13,17 @@ state={
 			industrial_complex = 2
 		}
 		victory_points = {
-			11544 10 
+			11544 10 # Nuremberg
+		}
+
+		victory_points = {
+			6421 2 # Coburg
+		}
+
+		victory_points = {
+			9557 2 # Würtzburg
 		}
 		add_core_of = GER
-
-		1939.1.1 = {
-			buildings = {
-				air_base = 3
-			}
-		}
 	}
 
 	provinces={

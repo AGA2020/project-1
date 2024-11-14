@@ -12,21 +12,24 @@ state={
 			infrastructure = 4
 			arms_factory = 1
 			industrial_complex = 2
+			11533 = { dam = 1 }
 		}
 		victory_points = {
-			6488 20.0 
+			6488 20 # Frankfurt
 		}
+
 		victory_points = {
-			564 3
+			564 3 # Kassel
+		}
+
+		victory_points = {
+			6444 2 # Wiesbaden
+		}
+
+		victory_points = {
+			11560 2 # Mainz
 		}
 		add_core_of = GER
-
-		1939.1.1 = {
-			buildings = {
-				air_base = 3
-				arms_factory = 4
-			}
-		}
 	}
 
 	provinces={
