@@ -294,10 +294,7 @@ ITA_cantieri_navali_tosi_organization = {
 	icon = GFX_idea_ITA_cantieri_navali_tosi
 	
 	allowed = {	
-		OR = {
 			tag = ITA
-			tag = GER  
-		}
 	}
 	
 	available = {

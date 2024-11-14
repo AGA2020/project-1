@@ -122,7 +122,41 @@ focus_tree = {
 		}
 		completion_reward = {
 			USA = {
-				country_event = britain.1
+				country_event = {
+					id = britain.1
+					hours = 12
+				}	
+			}
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				add_breakthrough_progress = {
+					specialization = specialization_air
+					value = 0.75
+				}
+				add_tech_bonus = {
+					name = tizard_mission_focus
+					bonus = 0.5 # was 1
+					category = light_fighter
+				}
+				add_tech_bonus = {
+					name = tizard_mission_focus
+					bonus = 0.5 # was 1
+					uses = 1 # was 2
+					category = radar_tech
+				}
+				custom_effect_tooltip =  generic_skip_one_line_tt
+				USA = {
+					add_breakthrough_progress = {
+						specialization = specialization_air
+						value = 0.75
+					}
+					add_tech_bonus = {
+						name = tizard_mission_focus
+						uses = 1
+						bonus = 1
+						category = light_fighter
+					}
+				}
 			}
 		}
 	}
@@ -147,9 +181,13 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
+            add_breakthrough_progress = {
+                    specialization = specialization_nuclear
+                    value = 0.75
+            }
 			add_tech_bonus = {
 				name = maud_focus
-				bonus = 1
+				bonus = 0.75
 				uses = 1
 				category = nuclear
 			}
@@ -287,6 +325,44 @@ focus_tree = {
 				uses = 1
 				category = armor
 			}
+		}
+	}
+	focus = {
+		id = ENG_expand_the_secret_intelligence_service_focus 
+
+		prerequisite = { focus = limited_rearmament_focus }
+
+		dynamic = yes
+
+		available = {
+		} 
+
+		allow_branch = {
+			has_dlc = "La Resistance"
+		}
+
+		icon = GFX_focus_generic_secret_service_agency
+
+		x = 2
+		y = 1
+		relative_position_id = limited_rearmament_focus
+
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			IF = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = yes
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+
+			add_ideas = ENG_mi6_ns
+
 		}
 	}
 	focus = {
@@ -594,10 +670,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			air_experience = 25
+            add_breakthrough_progress = {
+                    specialization = specialization_air
+                    value = 0.75
+            }
 			add_tech_bonus = {
 				name = radar_focus
 				bonus = 1
-				uses = 3
+				uses = 1
 				category = radar_tech
 			}
 		}
@@ -608,33 +688,10 @@ focus_tree = {
 			focus = limited_rearmament_focus
 		}
 		available = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				OR = {
-					GER = { has_completed_focus = GER_rhineland }
-					threat > 0.05
-					has_war = yes
-					has_idea = ENG_no_further_appeasement_idea
-					NOT = {
-						has_government = democratic
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "Man the Guns"
-					}
-				}
-				OR = {
-					threat > 0.05
-					has_war = yes
-					NOT = {
-						has_government = democratic
-					}
-				}
+			OR = {
+				GER = { has_completed_focus = GER_remilitarize_the_rhineland }
+				threat > 0.05
+				has_idea = ENG_no_further_appeasement_idea
 			}
 		}
 		continue_if_invalid = yes
@@ -652,7 +709,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = shadow_scheme_focus_tt
-			add_ideas = wartime_industry_focus
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = ENG_prepare_for_the_inevitable_idea
+					}
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				add_ideas = wartime_industry_focus
+			}
+			ELSE = {
+				custom_effect_tooltip = generic_skip_one_line_tt
+				swap_ideas = {
+					remove_idea = ENG_prepare_for_the_inevitable_idea
+					add_idea = ENG_prepare_for_the_inevitable_and_wartime_industry_idea
+				}	
+			}
 		}
 	}
 	focus = {
@@ -695,6 +767,69 @@ focus_tree = {
 				technology = fuel_refining4
 				technology = fuel_refining5
 			}
+		}
+	}
+	focus = {
+		id = ENG_vickers_experimental_facility_focus 
+
+		prerequisite = { focus = uk_industrial_focus }
+
+		dynamic = yes
+
+		available = {
+			126 = {
+				is_fully_controlled_by = ROOT
+			}
+		} 
+
+		icon = GFX_focus_generic_aircraft_production
+
+		x = 1
+		y = 2
+		
+		relative_position_id = uk_industrial_focus
+
+		cost = 5
+
+		available_if_capitulated = no
+
+		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			custom_effect_tooltip = ENG_vickers_experimental_facility_focus_tt
+			hidden_effect = {
+				IF = {
+					limit = { 
+						126 = {
+							is_fully_controlled_by = ROOT
+							air_facility < 1
+							land_facility < 1
+							naval_facility < 1
+							nuclear_facility < 1
+						}
+					}
+
+					126 = {
+						add_building_construction = {
+							type = air_facility
+							level = 1
+							instant_build = yes
+							province = 11333 # South London
+						}
+					}
+				}
+			}
+
 		}
 	}
 	focus = {
@@ -785,6 +920,7 @@ focus_tree = {
 		}	
 		completion_reward = {
 			add_ideas = ENG_special_air_service_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ENG_david_stirling
 		}
@@ -829,7 +965,7 @@ focus_tree = {
 						num_of_factories > 30
 					}
 					GER = {
-						has_completed_focus = GER_rhineland
+						has_completed_focus = GER_remilitarize_the_rhineland
 					}
 					threat > 0.2
 					has_idea = ENG_no_further_appeasement_idea
@@ -850,7 +986,7 @@ focus_tree = {
 						num_of_factories > 30
 					}
 					GER = {
-						has_completed_focus = GER_rhineland
+						has_completed_focus = GER_remilitarize_the_rhineland
 					}
 					threat > 0.2
 					NOT = {
@@ -999,21 +1135,16 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
+		add_ideas = generic_secret_weapons_ns
 			add_tech_bonus = {
 				name = UK_secret_focus
-				bonus = 1
-				uses = 2
-				category = electronics
-			}
-			add_tech_bonus = {
-				name = UK_secret_focus
-				bonus = 1
-				uses = 2
+				bonus = 0.5 # was 1
+				uses = 1 # was 2
 				category = rocketry
 			}
 			add_tech_bonus = {
 				name = UK_secret_focus
-				bonus = 1
+				bonus = 0.5 # was 1
 				uses = 1
 				category = nuclear
 			}
@@ -1250,6 +1381,7 @@ focus_tree = {
 			army_experience = 10
 			navy_experience = 10
 			air_experience = 10
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_chiefs_of_staff_committee_idea
 		}
 	}
@@ -1456,10 +1588,15 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 1
+			}
 			add_tech_bonus = {
 				name = uk_jet_focus
-				bonus = 1
-				uses = 4
+				bonus = 1.0
+				uses = 2 # was 4 
 				category = jet_technology
 			}
 		}

@@ -137,9 +137,6 @@ bookmarks = {
 				HUN_treaty_of_triannon
 			}
 			focuses = {
-				HUN_proclaim_greater_hungary
-				HUN_secret_rearmament
-				HUN_renounce_the_treaty_of_trianon
 			}
 		}
 

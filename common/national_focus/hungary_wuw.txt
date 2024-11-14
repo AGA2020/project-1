@@ -37,7 +37,7 @@ focus_tree = {
 		icon = GFX_focus_hun_elect_a_king
 		#prerequisite = { focus = }
 		mutually_exclusive = { focus = wuw_HUN_continue_the_regency focus = wuw_HUN_end_the_white_terror }
-		x = 17
+		x = 12
 		y = 0
 		#relative_position_id =
 
@@ -152,7 +152,7 @@ focus_tree = {
 		icon = GFX_focus_rom_handle_king
 		#prerequisite = { focus = }
 		mutually_exclusive = { focus = wuw_HUN_end_the_regency focus = wuw_HUN_end_the_white_terror }
-		x = 16
+		x = 7
 		y = 0
 		relative_position_id = wuw_HUN_end_the_regency
 
@@ -261,7 +261,7 @@ focus_tree = {
 		x = 31
 		y = 0
 		relative_position_id = wuw_HUN_end_the_regency
-
+		allow_branch = { always = no }
 		cost = 5
 
 		ai_will_do = {
@@ -504,7 +504,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = wuw_HUN_reach_out_to_candidates
-
+		allow_branch = { always = no }
 		cost = 10
 
 		ai_will_do = {
@@ -642,7 +642,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = wuw_HUN_reach_out_to_candidates }
 		mutually_exclusive = { focus = wuw_HUN_reinstate_the_pragmatic_sanction }
-		x = 6
+		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_reach_out_to_candidates
 
@@ -796,7 +796,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = wuw_HUN_reinstate_the_pragmatic_sanction
-
+		allow_branch = { always = no }
 		cost = 5
 
 		allow_branch = {
@@ -914,7 +914,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = wuw_HUN_reinstate_the_pragmatic_sanction
-
+		allow_branch = { always = no }
 		cost = 5
 
 		ai_will_do = {
@@ -1007,7 +1007,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = wuw_HUN_reinstate_the_pragmatic_sanction
-
+		allow_branch = { always = no }
 		cost = 5
 
 		ai_will_do = {
@@ -5481,7 +5481,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = wuw_HUN_abide_by_the_little_ententes_stipulations
-
+		allow_branch = { always = no }
 		cost = 5
 
 		ai_will_do = {
@@ -5573,7 +5573,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_abide_by_the_little_ententes_stipulations
-
+		allow_branch = { always = no }
 		cost = 5
 
 		ai_will_do = {
@@ -5793,7 +5793,7 @@ focus_tree = {
 		icon = GFX_focus_HUN_elect_a_fascist_king
 		prerequisite = { focus = wuw_HUN_abide_by_the_little_ententes_stipulations }
 		mutually_exclusive = { focus = wuw_HUN_establishing_a_new_dynasty focus = wuw_HUN_elect_a_democratic_king }
-		x = 4
+		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_abide_by_the_little_ententes_stipulations
 
@@ -12115,7 +12115,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_elections_in_the_revolutionary_council
-
+		allow_branch = { always = no }
 		cost = 5
 
 		ai_will_do = {
@@ -12229,7 +12229,7 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = wuw_HUN_elections_in_the_revolutionary_council
-
+		allow_branch = { always = no }
 		cost = 5
 
 		ai_will_do = {
@@ -12334,7 +12334,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = wuw_HUN_elections_in_the_revolutionary_council
-
+		allow_branch = { always = no }
 		cost = 5
 
 		ai_will_do = {
@@ -14865,7 +14865,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		#prerequisite = { focus = wuw_HUN_a_revolutionary_greater_hungary }
 		mutually_exclusive = { focus = wuw_HUN_economic_intervention }
-		x = 45
+		x = 20
 		y = 0
 		relative_position_id = wuw_HUN_end_the_regency
 
@@ -15078,7 +15078,7 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		#prerequisite = { focus = wuw_HUN_a_revolutionary_greater_hungary }
 		mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = 47
+		x = 22
 		y = 0
 		relative_position_id = wuw_HUN_end_the_regency
 
@@ -15278,7 +15278,7 @@ focus_tree = {
 		icon = GFX_focus_secret_rearmament
 		#prerequisite = { focus = wuw_HUN_a_revolutionary_greater_hungary }
 		#mutually_exclusive = { focus = wuw_HUN_avoid_interventionalist_destablilization }
-		x = 55
+		x = 30
 		y = 0
 		relative_position_id = wuw_HUN_end_the_regency
 
