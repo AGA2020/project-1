@@ -8218,7 +8218,7 @@ focus_tree = {
 		cost = 5
 		available = {
 		}
-
+		allow_branch = { always = no }
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
@@ -11283,7 +11283,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = GER_reassert_eastern_claims
-		cost = 10
+		cost = 1
 
 		will_lead_to_war_with = POL
 
@@ -12150,7 +12150,7 @@ focus_tree = {
 		will_lead_to_war_with = SWI
 		
 		cancel_if_invalid = yes
-
+		allow_branch = { always = no }
 		available = {
 			is_subject = no
 			NOT = { has_guaranteed = SWI }
@@ -12227,7 +12227,7 @@ focus_tree = {
 		icon = GFX_focus_GER_the_swiss_gold
 		prerequisite = { focus = GER_war_with_france }
 		mutually_exclusive = { focus = GER_operation_tannenbaum }
-		x = 3
+		x = 2
 		y = 1
 		relative_position_id = GER_war_with_france
 		cost = 5
@@ -14867,7 +14867,7 @@ focus_tree = {
 		cost = 5
 
 		available_if_capitulated = yes
-		
+		allow_branch = { always = no }
 		available = {
 			is_subject = no
 			AND = {
@@ -20771,7 +20771,7 @@ focus_tree = {
 		icon = GFX_focus_ger_oppose_hitler
 
 		mutually_exclusive = { focus = GER_remilitarize_the_rhineland }
-
+		allow_branch = { always = no }
 		x = 72
 		y = 0
 		relative_position_id = GER_prioritize_economic_growth
@@ -21088,7 +21088,7 @@ focus_tree = {
 		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		prerequisite = { focus = GER_tend_to_the_future_of_germany }
 		mutually_exclusive = { focus = GER_monarchist_sentiment }
-
+		allow_branch = { always = no }
 		x = -11
 		y = 1
 		relative_position_id = GER_tend_to_the_future_of_germany
@@ -24845,7 +24845,7 @@ focus_tree = {
 		relative_position_id = GER_tend_to_the_future_of_germany
 		
 		cost = 2
-
+		allow_branch = { always = no }
 		available = {
 		}
 
@@ -24968,7 +24968,7 @@ focus_tree = {
 		id = GER_re_establish_free_elections_ww
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = GER_the_monarchy_compromise_ww }
-
+		allow_branch = { always = no }
 		x = -4
 		y = 1
 		relative_position_id = GER_the_monarchy_compromise_ww

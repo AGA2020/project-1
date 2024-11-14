@@ -303,6 +303,17 @@ country_event = {
 											}
 										}
 									}
+									934 = { #NORTHERN EPIRUS
+										OR = {
+											is_fully_controlled_by = ROOT
+											controller = {
+												is_subject_of = ROOT
+												hidden_trigger = { #To prevent unnecessary overcrowding
+													has_full_control_of_state = PREV
+												}
+											}
+										}
+									}
 								}
 							}
 						}
@@ -1460,7 +1471,7 @@ unit_leader_event = {
 			set_variable = { ITA_missiolinis_fighters_goal = num_equipment@small_plane_airframe }
 			#log = "Fighters deployed = [?ROOT.num_deployed_planes_with_type@small_plane_airframe]"
 			add_to_variable = { ITA_missiolinis_fighters_goal = num_deployed_planes_with_type@small_plane_airframe }
-			#log = "Total figthers in country = [?ROOT.ITA_missiolinis_fighters_goal]"
+			#log = "Total fighters in country = [?ROOT.ITA_missiolinis_fighters_goal]"
 			
 			#Add to goal - CV Figthers
 			#log = "CV Fighters in stockpile = [?ROOT.num_equipment@cv_small_plane_airframe]"
@@ -1469,7 +1480,7 @@ unit_leader_event = {
 			#add_to_variable = { ITA_missiolinis_fighters_goal = num_deployed_planes_with_type@cv_small_plane_airframe }
 			
 			add_to_variable = { ITA_missiolinis_fighters_goal = ITA_missiolinis_fighters_to_produce }
-			#log = "Total figthers to produce = [?ROOT.ITA_missiolinis_fighters_goal]"
+			#log = "Total fighters to produce = [?ROOT.ITA_missiolinis_fighters_goal]"
 
 
 
@@ -4980,7 +4991,7 @@ country_event = {
 	option = { 
 		name = BBA_italy_bop.1.a
 
-		ITA_bop_high_decrease_effect = yes
+		ITA_bop_medium_decrease_effect = yes
 		ITA_bop_increase_lost_core_modifier = yes
 		custom_effect_tooltip = ITA_losing_cores_tt
 	}
@@ -4999,7 +5010,9 @@ country_event = {
 	option = { 
 		name = BBA_italy_bop.2.a
 
-		ITA_bop_very_low_decrease_effect = yes
+		effect_tooltip = {
+			ITA_bop_very_low_decrease_effect = yes
+		}
 		custom_effect_tooltip = ITA_losing_colonies_tt
 	}
 }
@@ -5018,7 +5031,8 @@ country_event = {
 	option = { 
 		name = BBA_italy_bop.3.a
 
-		ITA_bop_high_increase_effect = yes	
+        ITA_bop_medium_increase_effect = yes        
+        ITA_bop_decrease_lost_core_modifier = yes
 		custom_effect_tooltip = ITA_reclaiming_cores_tt	
 	}
 }
@@ -9233,31 +9247,11 @@ country_event = {
 		ai_chance = { 
 			base = 90
 		}
-
-		GER = {
-			declare_war_on = {
-			    target = AUS
-			    type = annex_everything
-			}
-		}
-		848 = {
-			add_claim_by = GER 
-		}
-		153 = {
-			add_claim_by = GER
-		}
-		152 = {
-			add_claim_by = GER
-		}
-		4 = {
-			add_claim_by = GER
-		}
 	}
 
 	# Sadly we must back down...
 	option = { 
 		name = BBA_italy_interaction_events.25.b 
-
 		ai_chance = { 
 			base = 10
 		}
@@ -9267,12 +9261,6 @@ country_event = {
 		add_popularity = {
 		    ideology = fascism
 		    popularity = -0.3
-		}
-
-		hidden_effect = {
-			every_country = {
-				news_event = { hours = 6 id = BBA_italy_interaction_events_news.1 }
-			}
 		}
 	}
 }
