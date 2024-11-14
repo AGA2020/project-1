@@ -7,6 +7,9 @@ state={
 
 	history={
         owner = WST
+		victory_points = {
+			13014 1 # Praia
+		}
 		buildings = {
 			infrastructure = 2
 			13014 ={

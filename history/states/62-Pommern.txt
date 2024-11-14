@@ -11,18 +11,15 @@ state={
 		victory_points = {
 			9388 1
 		}
+		victory_points = {
+			3258 1 # Neustrelitz 
+		}
 		owner = GER
 		buildings = {
 			infrastructure = 3
 			fuel_silo = 1
 		}
 		add_core_of = GER
-
-		1939.1.1 = {
-			buildings = {
-				air_base = 8
-			}
-		}
 	}
 
 	provinces={
