@@ -8,7 +8,13 @@ state={
 
 	history={
 		owner = ENG
-		victory_points = { 271 5 }
+		victory_points = { 
+			271 2 # Ipswich
+		}
+
+		victory_points = { 
+			322 3 # Norwich
+		}
 		buildings = {
 			infrastructure = 4 #was: 7
 			arms_factory = 1

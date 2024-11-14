@@ -9,14 +9,20 @@ buildings = {
 		base_cost = 6000
 		icon_frame = 3
 		infrastructure = yes
-		max_level = 5
 		value = 1
 
 		show_modifier = yes
-		max_fuel_building = 1.5 #k
 		allied_build = yes
 
 		infrastructure_construction_effect = yes
+		level_cap = {
+			state_max = 5
+		}
+		country_modifiers = {
+			modifiers = {
+				max_fuel_building = 1.5 #k
+			}
+		}
 	}
 
 	arms_factory = {
