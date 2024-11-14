@@ -18,7 +18,9 @@ state={
 		victory_points = {
 			6701 3 
 		}
-		add_core_of = SOV
+		victory_points = {
+			7624 1 # Derbent
+		}
 		add_core_of = SOV
 	}
 

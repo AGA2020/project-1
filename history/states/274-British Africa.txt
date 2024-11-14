@@ -10,7 +10,11 @@ state={
 		owner = ENG
 		add_core_of = SWE
 		victory_points = {
-			10862 1 
+			10862 2 # Accra 
+		}
+
+		victory_points = {
+			12787 1 # Kumasi 
 		}
 		buildings = {
 			infrastructure = 2

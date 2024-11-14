@@ -24,6 +24,7 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 				coastal_bunker = 1
 
 			}
+			4864 = { dam = 1 }
 
 		}
 		victory_points = {
