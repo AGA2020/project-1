@@ -2295,10 +2295,6 @@ ideas = {
 				always = yes
 			}
 
-			cancel = {
-				PRC = { has_war = no }
-			}
-
 			modifier = {
 				send_volunteer_divisions_required = -0.15
 				experience_gain_army_factor = 0.15

@@ -1480,7 +1480,6 @@ characters={
 	}
 
 	# Illusive Gentleman auto-generated
-	}
 
 	# Illusive Gentleman auto-generated
 

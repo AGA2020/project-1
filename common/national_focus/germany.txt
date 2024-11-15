@@ -7996,23 +7996,6 @@ focus_tree = {
 
 		mutually_exclusive = { focus = GER_oppose_hitler_ww focus = GER_oppose_hitler }
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = GER_oppose_hitler_ww
-						has_completed_focus = GER_oppose_hitler
-					}
-				}
-			}
-		}
-
 		x = 33
 		y = 0
 		relative_position_id = GER_prioritize_economic_growth
@@ -8059,64 +8042,6 @@ focus_tree = {
 		id = GER_legion_condor
 		icon = GFX_focus_intervention_spain_nationalists
 		prerequisite = { focus = GER_remilitarize_the_rhineland focus = GER_oppose_hitler_ww focus = GER_oppose_hitler }
-
-		offset = {
-			x = -25
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_oppose_hitler_ww
-			}
-		}
-		offset = {
-			x = -28
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_oppose_hitler
-			}
-		}
-		offset = {
-			x = -5
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_monarchist_sentiment
-			}
-		}
-
-		offset = {
-			x = -10
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_start_the_proletarian_revolution
-			}
-		}
-
-		offset = {
-			x = -7
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_reestablish_free_elections
-			}
-		}
 
 		x = 17
 		y = 1
@@ -8335,24 +8260,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_war_preparations
 		cost = 10
-
-		allow_branch = {
-			has_dlc = "La Resistance"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = GER_oppose_hitler
-						has_completed_focus = GER_oppose_hitler_ww
-					}
-				}
-			}
-		}
 
 		available = {
 		}
@@ -20734,55 +20641,6 @@ focus_tree = {
 			has_government = fascism
 		}
 
-		allow_branch = {
-			has_dlc = "Gotterdammerung" 
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = GER_remilitarize_the_rhineland
-				}
-			}
-		}
-
-		offset = {
-			x = -43
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_oppose_hitler_ww
-			}
-		}
-		offset = {
-			x = -5
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_monarchist_sentiment
-			}
-		}
-		offset = {
-			x = -10
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_start_the_proletarian_revolution
-			}
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER }
 
 		select_effect = {
@@ -20829,18 +20687,6 @@ focus_tree = {
 
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_hans_oster
-
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 
 		}
 	}
@@ -21047,38 +20893,6 @@ focus_tree = {
 		available = {
 		}
 
-		bypass = {
-			has_government = communism
-		}
-
-		allow_branch = {
-			has_dlc = "Gotterdammerung"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = GER_monarchist_sentiment
-					has_completed_focus = GER_remilitarize_the_rhineland
-				}
-			}
-		}
-
-		offset = {
-			x = 11
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_start_the_proletarian_revolution
-			}
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
@@ -21216,16 +21030,6 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_walter_ulbricht
 			show_ideas_tooltip = GER_bernhard_bastlein
-
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				mark_focus_tree_layout_dirty = yes
-			}
 
 			every_core_state = {
 				limit = {
@@ -24421,15 +24225,7 @@ focus_tree = {
 		relative_position_id = GER_legacy_of_the_spartacus_league
 		cost = 5
 		available = {
-			NOT = { has_idea = GER_legion_condor_ns }
-			PRC = { 
-				exists = yes
-				is_subject = no
-				has_volunteers_amount_from = {
-					tag = ROOT
-					count > 1
-				}
-			}
+			always = no
 		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP }
@@ -24800,34 +24596,6 @@ focus_tree = {
 		available = {
 		}
 
-		allow_branch = {
-			has_dlc = "Gotterdammerung"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = GER_start_the_proletarian_revolution
-					has_completed_focus = GER_remilitarize_the_rhineland
-				}
-			}
-		}
-
-		offset = {
-			x = -11
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_monarchist_sentiment
-			}
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
@@ -24858,17 +24626,6 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_andreas_hermes
 			show_ideas_tooltip = GER_wilhelm_von_gayl
-
-
-			IF = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				mark_focus_tree_layout_dirty = yes
-			}
 
 		}
 	}
@@ -24925,58 +24682,6 @@ focus_tree = {
 		relative_position_id = GER_the_monarchy_compromise_ww
 
 		cost = 5
-
-		allow_branch = {
-			has_dlc = "Gotterdammerung"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = GER_revive_the_kaiserreich_ww
-						has_completed_focus = GER_remilitarize_the_rhineland
-						has_completed_focus = GER_start_the_proletarian_revolution
-					}
-				}
-			}
-		}
-
-		offset = {
-			x = 12
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_start_the_proletarian_revolution
-			}
-		}
-
-		#offset = {
-		#	x = -7
-		#	y = 0
-		#	trigger = {
-		#		has_game_rule = {
-		#			rule = obsolete_focus_branches_visibility
-		#			option = HIDE
-		#		}
-		#		has_completed_focus = GER_re_establish_free_elections_ww
-		#	}
-		#}
-
-		available = {
-			NOT = {
-				OR = {
-					has_government = communism
-					has_government = fascism
-				}
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
@@ -25840,18 +25545,6 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_carl_friedrich_goerdeler
 			show_ideas_tooltip = GER_alfred_hugenberg
-
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 
 		}
 	}
@@ -28206,36 +27899,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_conquer_italy
 
-		allow_branch = {
-			has_dlc = "Gotterdammerung"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = GER_remilitarize_the_rhineland
-				}
-			}
-			OR = {
-				has_country_leader = { 
-					ruling_only = yes 
-					character = GER_victoria 
-				}
-				has_completed_focus = GER_conquer_italy
-			}
-		}
-
 		cost = 10
-
-		available = {
-			is_subject = no
-			64 = {
-				is_fully_controlled_by = ROOT
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
@@ -33693,18 +33357,6 @@ focus_tree = {
 
 			NOT = { has_dlc = "Gotterdammerung" } 
 
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = GER_remilitarize_the_rhineland
-				}
-			}
-
 		}
 
 		available = {
@@ -33716,41 +33368,6 @@ focus_tree = {
 		y = 0
 
 		relative_position_id = GER_remilitarize_the_rhineland
-
-		offset = {
-			x = -42
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_oppose_hitler
-			}
-		}
-		offset = {
-			x = -8
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_reestablish_free_elections
-			}
-		}
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_revive_the_kaiserreich
-			}
-		}
 
 		mutually_exclusive = { focus = GER_remilitarize_the_rhineland }
 
@@ -33795,18 +33412,6 @@ focus_tree = {
 			add_named_threat = { threat = 5 name = GER_oppose_hitler }
 
 			country_event = { id = wtt_germany.1 }
-
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 
 		}
 	}
@@ -33853,36 +33458,6 @@ focus_tree = {
 			NOT = { has_government = democratic }
 		}
 
-		allow_branch = {
-			NOT = { has_dlc = "Gotterdammerung" } 
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = GER_remilitarize_the_rhineland
-						has_completed_focus = GER_reestablish_free_elections
-					}
-				}
-			}
-		}
-
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_revive_the_kaiserreich
-			}
-		}
-
 		available = {
 			is_subject = no
 		}
@@ -33901,17 +33476,6 @@ focus_tree = {
 			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
 			set_rule = { can_send_volunteers = yes }
 			add_named_threat = { threat = 5 name = GER_revive_the_kaiserreich }
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 		}
 	}
 
@@ -33919,21 +33483,6 @@ focus_tree = {
 		id = GER_rebuild_the_nation
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = GER_revive_the_kaiserreich focus = GER_reestablish_free_elections }
-
-		allow_branch = {
-			NOT = { has_dlc = "Gotterdammerung" }
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = GER_remilitarize_the_rhineland
-				}
-			}
-		}
 
 		available = {
 		}
@@ -35599,40 +35148,6 @@ focus_tree = {
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = GER_secure_the_new_state }
 		mutually_exclusive = { focus = GER_revive_the_kaiserreich }
-	
-		allow_branch = {
-			NOT = { has_dlc = "Gotterdammerung" } 
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = GER_remilitarize_the_rhineland
-						has_completed_focus = GER_revive_the_kaiserreich
-					}
-				}
-			}
-		}
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_reestablish_free_elections
-			}
-		}
-	
-		available = {
-			is_subject = no
-		}
 		cancel_if_invalid = yes
 		x = 1
 		y = 1
@@ -35648,17 +35163,6 @@ focus_tree = {
 				days = 720
 			}
 			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 		}
 	}
 
