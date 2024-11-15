@@ -8041,7 +8041,7 @@ focus_tree = {
 	focus = {
 		id = GER_legion_condor
 		icon = GFX_focus_intervention_spain_nationalists
-		prerequisite = { focus = GER_remilitarize_the_rhineland focus = GER_oppose_hitler_ww focus = GER_oppose_hitler }
+		prerequisite = { focus = GER_remilitarize_the_rhineland }
 
 		x = 17
 		y = 1
@@ -8761,48 +8761,27 @@ focus_tree = {
 						}
 					}
 				}
-				if = {
-					limit = {
-						NOT = { has_dlc = "Gotterdammerung" }
-						ITA = {
-							has_completed_focus = ITA_guarantee_austrian_independence
-							has_guaranteed = AUS
-						}
+				AUS = {
+					country_event = {
+						id = germany.28
+						days = 1
 					}
-			
-					ITA = {
-						country_event = {
-							id = BBA_italy_interaction_events.24
-							days = 1
-						}
-					}
-				}
-				else = { #ITA has not Guaranteed Austrian Independence
-					AUS = {
-						country_event = {
-							id = germany.28
-							days = 1
-						}
-					}		
-					effect_tooltip = {
-						custom_effect_tooltip = if_they_accept_tt
-						add_political_power = 75
-						add_war_support = 0.1
-						add_stability = 0.05
-						army_experience = 10
-
-						custom_effect_tooltip = generic_skip_one_line_tt
-
-						annex_country = { target = AUS transfer_troops = yes }
-												
-						GER_anschluss_modify_mefo_bills_or_economy_of_conquest = yes
-
-						custom_effect_tooltip = if_they_refuse_tt
-						create_wargoal = {
-							type = take_state_focus
-							target = AUS
-							generator = { 4 152 153 848 975 976 }
-						}
+				}		
+				effect_tooltip = {
+					custom_effect_tooltip = if_they_accept_tt
+					add_political_power = 75
+					add_war_support = 0.1
+					add_stability = 0.05
+					army_experience = 10
+					custom_effect_tooltip = generic_skip_one_line_tt
+					annex_country = { target = AUS transfer_troops = yes }
+											
+					GER_anschluss_modify_mefo_bills_or_economy_of_conquest = yes
+					custom_effect_tooltip = if_they_refuse_tt
+					create_wargoal = {
+						type = take_state_focus
+						target = AUS
+						generator = { 4 152 153 848 975 976 }
 					}
 				}
 			}
@@ -10313,7 +10292,7 @@ focus_tree = {
 		mutually_exclusive = { focus = GER_influence_the_baltics }
 
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = GER_reassert_eastern_claims
 
 		cost = 10
@@ -10523,11 +10502,11 @@ focus_tree = {
 		icon = GFX_focus_befriend_italy
 		alternate_icon = GFX_focus_GER_befriend_italy
 
-		prerequisite = { focus = GER_fate_of_czechoslovakia focus = GER_integrate_czechoslovakia }
+		prerequisite = { focus = GER_fate_of_czechoslovakia }
 		mutually_exclusive = { focus = GER_invade_italy }
-		x = 2
-		y = 4
-		relative_position_id = GER_integrate_czechoslovakia
+		x = 0
+		y = 1
+		relative_position_id = GER_fate_of_czechoslovakia
 		cost = 5
 
 		bypass = {
@@ -10654,9 +10633,9 @@ focus_tree = {
 	focus = {
 		id = GER_alliance_with_spain
 		icon = GFX_focus_intervention_spain_nationalists
-		prerequisite = { focus = GER_form_rome_berlin_axis focus = GER_invade_italy }
+		prerequisite = { focus = GER_form_rome_berlin_axis }
 		mutually_exclusive = { focus = GER_operation_felix }
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = GER_form_rome_berlin_axis
 		cost = 5
@@ -10888,16 +10867,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_alliance_with_spain
 		cost = 5
-
+		allow_branch = { always = no }
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 		
 		available_if_capitulated = yes
@@ -11014,7 +10986,7 @@ focus_tree = {
 		prerequisite = { focus = GER_reassert_eastern_claims }
 		mutually_exclusive = { focus = GER_danzig_for_slovakia }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = GER_reassert_eastern_claims
 		cost = 1
 
@@ -11241,9 +11213,9 @@ focus_tree = {
 	focus = {
 		id = GER_subjugate_romanian_economy
 		icon = GFX_focus_GER_subjugate_romanian_economy
-		prerequisite = { focus = GER_danzig_for_slovakia focus = GER_danzig_or_war }
+		prerequisite = { focus = GER_danzig_or_war }
 
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = GER_danzig_or_war
 		cost = 5
@@ -11328,7 +11300,7 @@ focus_tree = {
 		icon = GFX_focus_GER_around_maginot
 		alternate_icon = GFX_focus_GER_around_maginot_historical
 
-		prerequisite = { focus = GER_danzig_for_slovakia focus = GER_danzig_or_war }
+		prerequisite = { focus = GER_danzig_or_war }
 		mutually_exclusive = { focus = GER_influence_the_benelux }
 		x = -1
 		y = 2
@@ -13334,15 +13306,6 @@ focus_tree = {
 								is_in_faction_with = GER
 								is_in_faction = no
 							}
-							NOT = { #oh no, Italy is cozying up to Greece - give them nothing!
-								OR = {
-									has_completed_focus = ITA_befriend_greece
-									focus_progress = {
-										focus = ITA_befriend_greece
-										progress > 0
-									}
-								}
-							}
 						}
 						BUL = {
 							is_friend_or_potential_friend_of_GER = yes
@@ -13385,15 +13348,6 @@ focus_tree = {
 							OR = {
 								is_in_faction_with = GER
 								is_in_faction = no
-							}
-							NOT = { #oh no, Italy is cozying up to Greece - give them nothing!
-								OR = {
-									has_completed_focus = ITA_befriend_greece
-									focus_progress = {
-										focus = ITA_befriend_greece
-										progress > 0
-									}
-								}
 							}
 						}
 					}
@@ -13965,24 +13919,9 @@ focus_tree = {
 				}
 			}
 
-			IF = {
-				limit = {
-					KUB = {
-						exists = no
-					}
-					DON = {
-						exists = no
-					}
-					SOV = {
-						NOT = {
-							has_completed_focus = SOV_beaten_but_not_defeated
-						}
-					}
-				}
-				country_event = {
-					id = wuw_GER_legions.8
-				}	
-			}
+			country_event = {
+				id = wuw_GER_legions.8
+			}	
 		}
 	}
 
@@ -13991,8 +13930,8 @@ focus_tree = {
 
 		icon = GFX_goal_molotov_ribbentrop_pact
 		alternate_icon = GFX_focus_GER_molotov_ribbentrop_pact
+		prerequisite = { focus = GER_reorganize_the_wehrmacht focus = GER_heed_von_neuraths_concerns }
 
-		prerequisite = { focus = GER_reorganize_the_wehrmacht }
 		mutually_exclusive = { focus = GER_anti_soviet_pact }
 		x = -1
 		y = 1
@@ -14589,7 +14528,7 @@ focus_tree = {
 
 		prerequisite = { focus = GER_anti_comintern_pact }
 		mutually_exclusive = { focus = GER_befriend_china }
-		x = 4
+		x = 2
 		y = 0
 		relative_position_id = GER_befriend_china
 		cost = 5
@@ -14728,11 +14667,11 @@ focus_tree = {
 	focus = {
 		id = GER_reclaim_former_african_colonies
 		icon = GFX_focus_GER_reclaim_former_african_colonies
-		prerequisite = { focus = GER_befriend_china focus = GER_befriend_japan }
+		prerequisite = { focus = GER_befriend_japan }
 
-		x = 2
+		x = -2
 		y = 1
-		relative_position_id = GER_befriend_china
+		relative_position_id = GER_befriend_japan
 
 		cost = 5
 
@@ -16760,11 +16699,11 @@ focus_tree = {
 	focus = {
 		id = GER_create_asian_reichskommissariat
 		icon = GFX_focus_GER_create_asian_reichskommissariat
-		prerequisite = { focus = GER_ally_chiang_kai_shek focus = GER_negotiate_old_colonies_in_the_east }
+		prerequisite = { focus = GER_negotiate_old_colonies_in_the_east }
 
-		x = 2
+		x = -2
 		y = 1
-		relative_position_id = GER_ally_chiang_kai_shek
+		relative_position_id = GER_negotiate_old_colonies_in_the_east
 		cost = 10
 		available = {
 			is_subject = no

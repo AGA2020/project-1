@@ -10462,7 +10462,6 @@ country_event = {
 					HUN = {
 						OR = {
 							NOT = {
-								has_completed_focus = HUN_elect_a_fascist_king
 								has_completed_focus = wuw_HUN_elect_a_fascist_king
 							}
 							exists = no
@@ -10501,7 +10500,6 @@ country_event = {
 					HUN = {
 						OR = {
 							NOT = {
-								has_completed_focus = HUN_elect_a_fascist_king
 								has_completed_focus = wuw_HUN_elect_a_fascist_king
 							}
 							exists = no
@@ -10605,7 +10603,6 @@ country_event = {
 					HUN = {
 						OR = {
 							NOT = {
-								has_completed_focus = HUN_elect_a_fascist_king
 								has_completed_focus = wuw_HUN_elect_a_fascist_king
 							}
 							exists = no

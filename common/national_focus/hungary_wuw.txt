@@ -2348,7 +2348,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_protect_czechoslovakia
 
 		will_lead_to_war_with = ROM
-		will_lead_to_war_with = TRA
 
 		cost = 10
 
@@ -2592,7 +2591,6 @@ focus_tree = {
 
 		will_lead_to_war_with = GER
 		will_lead_to_war_with = POL
-		will_lead_to_war_with = SIL
 
 		cost = 10
 
@@ -2847,7 +2845,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_protect_czechoslovakia
 
 		will_lead_to_war_with = YUG
-		will_lead_to_war_with = CRO
 
 		cost = 10
 
@@ -6142,7 +6139,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_a_declaration_of_intentions
 
 		will_lead_to_war_with = ROM
-		will_lead_to_war_with = TRA
 
 		cost = 10
 
@@ -6212,18 +6208,9 @@ focus_tree = {
 		will_lead_to_war_with = POL
 		will_lead_to_war_with = SOV
 		will_lead_to_war_with = UKR
-		will_lead_to_war_with = MOL
-		will_lead_to_war_with = CRO
-		will_lead_to_war_with = SER
-		will_lead_to_war_with = ISR
-		will_lead_to_war_with = PAL
-		will_lead_to_war_with = EGY
 		will_lead_to_war_with = ENG
-		will_lead_to_war_with = TUR
 		will_lead_to_war_with = FRA
 		will_lead_to_war_with = GRE
-		will_lead_to_war_with = JOR
-		will_lead_to_war_with = SUD
 
 		cost = 10
 
@@ -8706,7 +8693,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_wherever_the_cross_points
 
 		will_lead_to_war_with = YUG
-		will_lead_to_war_with = CRO
 
 		cost = 10
 
@@ -8909,7 +8895,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_reaffirm_territorial_claims
 
 		will_lead_to_war_with = CZE
-		will_lead_to_war_with = UKR
 
 		available = {
 
@@ -8986,7 +8971,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_reaffirm_territorial_claims
 
 		will_lead_to_war_with = ROM
-		will_lead_to_war_with = TRA
 
 		cost = 5
 
@@ -13122,7 +13106,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_promote_revanchist_sentiment
 
-		will_lead_to_war_with = TRA
 		will_lead_to_war_with = ROM
 
 		cost = 10
@@ -13218,8 +13201,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_the_second_northern_campaign
 
 		will_lead_to_war_with = YUG
-		will_lead_to_war_with = TRA
-		will_lead_to_war_with = SER
 
 		cost = 10
 
