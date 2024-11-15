@@ -128,6 +128,18 @@ recruit_character = SOV_vasily_korzh
 recruit_character = SOV_sidor_kovpak
 recruit_character = SOV_lev_dovator
 recruit_character = SOV_pavel_rybalko
+recruit_character = SOV_abram_ioffe
+recruit_character = SOV_boris_stechkin
+recruit_character = SOV_arkady_nazarov
+recruit_character = SOV_vladimir_kotelnikov
+
+# Lokot Autonomy Characters
+recruit_character = SOV_konstantin_voskoboinik
+recruit_character = SOV_bronislav_kaminski
+
+# Even without NSB so Germany can access them on historical
+recruit_character = SOV_pyotr_krasnov
+recruit_character = SOV_konstantin_nechayev
 
 if = {
 	limit = {
@@ -146,9 +158,6 @@ if = {
 	recruit_character = SOV_yan_nagursky
 	recruit_character = SOV_vasily_yanchenko
 	recruit_character = SOV_tsar_vladimir_kirillovich
-
-	recruit_character = SOV_pyotr_krasnov
-	recruit_character = SOV_konstantin_nechayev
 	recruit_character = SOV_aleksandr_rodzyanko
 	recruit_character = SOV_vladimir_kosmin
 	recruit_character = SOV_andrey_shkuro
@@ -506,7 +515,7 @@ set_variable = { SOV_fyp_factory_requirement_tier_5 = 200 }
 #THIRD FIVE YEAR PLAN NATIONAL SPIRIT VARS
 set_variable = { SOV_fyp_production_factory_efficiency_gain_factor = -0.15 }
 set_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.05 }
-set_variable = { SOV_fyp_consumer_goods_factor = 0.05 }
+set_variable = { SOV_fyp_consumer_goods_factor = 0.10 }
 set_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0.05 }
 
 set_variable = { SOV_fyp_industrial_concern_cost_factor = -0.15 } #-> Third Five Year Plan
@@ -589,7 +598,7 @@ set_variable = { SOV_the_red_army_heat_attrition_factor = 0 } # -> An Adaptable 
 set_variable = { SOV_the_red_army_winter_attrition_factor = 0 } # -> An Adaptable Army
 set_variable = { SOV_the_red_army_acclimatization_cold_climate_gain_factor = 0 } # -> An Adaptable Army
 set_variable = { SOV_the_red_army_acclimatization_hot_climate_gain_factor = 0 } # -> An Adaptable Army
-set_variable = { SOV_the_red_army_terrain_penalty_reduction = 0 } # -> An Adaptable Army
+set_variable = { SOV_the_red_army_terrain_trait_xp_gain_factor = 0 } # -> An Adaptable Army
 set_variable = { SOV_the_red_army_unit_infantry_design_cost_factor = 0 } # -> Military Reorganization
 set_variable = { SOV_the_red_army_unit_artillery_brigade_design_cost_factor = 0 } # -> Military Reorganization
 set_variable = { SOV_the_red_army_army_org_regain = 0 } # -> Barrier Troops
@@ -753,6 +762,19 @@ if = {
 set_research_slots = 3
 set_stability = 0.5
 set_war_support = 0.3
+	
+add_breakthrough_progress = {
+        specialization = specialization_land
+        value = 0.2
+}
+add_breakthrough_progress = {
+        specialization = specialization_naval
+        value = 0.2
+}
+add_breakthrough_progress = {
+        specialization = specialization_air
+        value = 0.3
+}
 # Starting tech
 set_technology = { #WARNING: Do not just remove techs from here -> It can impact a lot of stuff. Before removing, double check that content does not count on these techs being researched
 	infantry_weapons = 1
@@ -876,15 +898,14 @@ set_popularities = {
 
 create_faction = Comintern
 add_to_faction = SOV
-add_to_faction = MON
-add_to_faction = TAN
 
 if = {
 	limit = {
 		has_dlc = "La Resistance"
 	}
+
 	create_operative_leader = {
-		name = "Alexander Radó"
+		name = SOV_alexander_rado
 		GFX = GFX_portrait_alexander_rado
 		traits = { operative_natural_orator }
 		bypass_recruitment = no
@@ -893,21 +914,32 @@ if = {
 	}
 
 	create_operative_leader = {
-		name = "Kim Philby"
+		name = SOV_kim_philby
 		GFX = GFX_portrait_kim_philby
 		traits = { operative_double_agent operative_infiltrator }
 		bypass_recruitment = no
 		available_to_spy_master = yes
 		nationalities = { SOV ENG }
 	}
+
 	create_operative_leader = {
-		name = "Richard Sorge"
+		name = SOV_richard_sorge
 		GFX = GFX_portrait_richard_sorge
 		traits = { operative_well_groomed }
 		bypass_recruitment = no
 		available_to_spy_master = yes
 		nationalities = { SOV GER }
 	}
+
+	create_operative_leader = {
+		name = SOV_yan_chernyak
+		GFX = GFX_portrait_SOV_yan_chernyak
+		traits = { operative_linguist operative_infiltrator }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { SOV GER HUN ROM CZE SLO }
+	}
+
 }
 
 
