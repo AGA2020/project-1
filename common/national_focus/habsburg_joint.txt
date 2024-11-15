@@ -66,10 +66,6 @@
 		offset = { 
 			x = 3
 			y = -2
-			trigger = {
-				has_completed_focus = AUS_hold_elections
-				has_completed_focus = AUS_the_danubian_federation
-			}
 		}
 
 		offset = { 
@@ -77,7 +73,6 @@
 			y = -2
 			trigger = {
 				has_completed_focus = AUS_reinstate_the_imperial_council
-				has_completed_focus = AUS_the_danubian_federation
 			}
 		}
 
