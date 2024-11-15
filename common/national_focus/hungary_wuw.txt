@@ -7281,28 +7281,6 @@ focus_tree = {
 				}
 			}
 
-			IF = {
-				limit = {
-					FRA = {
-						exists = yes
-						is_subject = no
-						has_completed_focus = FRA_strengthen_the_little_entente
-					}
-				}
-				FRA = { country_event = { id = DOD_hungary.30 } }
-			}
-			IF = {
-				limit = {
-					country_exists = ROM
-					OR = {
-						FRA = { NOT = { has_completed_focus = FRA_strengthen_the_little_entente } }
-						FRA = { exists = no }
-						FRA = { is_subject = yes }
-					}
-				}
-				ROM = { country_event = { id = DOD_hungary.30 } }
-			}
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_political_advisor

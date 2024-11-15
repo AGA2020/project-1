@@ -8738,6 +8738,33 @@ focus_tree = {
 			}
 		}
 
+		bypass = {
+			OR = {
+				AUS = {
+					OR = {
+						is_subject = yes
+						exists = no 
+						AND = {
+							is_in_faction = yes
+							NOT = { is_in_faction_with = GER }
+							any_other_country = {
+								is_in_faction_with = AUS
+								is_subject = no
+							}
+						}
+					}
+				}
+				GER = {
+					owns_state = 4
+					owns_state = 152
+					owns_state = 153
+					owns_state = 848
+					owns_state = 975
+					owns_state = 976
+				}
+			}
+		}
+
 		continue_if_invalid = yes
 		
 		available_if_capitulated = no
@@ -8765,6 +8792,16 @@ focus_tree = {
 				 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 50 }
 				}
 			}
+			
+			NOT = { has_idea = rhineland_challenge_met }
+			if = {
+				limit = {
+					SWI = { has_completed_focus = SWI_gotthard_union }
+				}
+				NOT = { 
+					AUS = { has_idea = SWI_swiss_democratic_propaganda }
+				}
+			}
 
 		}
 
@@ -8789,47 +8826,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-						add_named_threat = { threat = 12 name = germany.4.t }
-						add_political_power = 75
-						add_war_support = 0.1
-						add_stability = 0.05
-						army_experience = 10
-			GER = {
-				annex_country = {
-					target = AUS
-					transfer_troops = yes
-				}
-				add_state_core = 4
-				add_state_core = 152
-				add_state_core = 153
-				add_state_core = 848
-				add_state_core = 975
-				add_state_core = 976
-				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 15161 }
-				add_equipment_to_stockpile = { type = support_equipment_1 amount = 549 }
-				}
-			AUS = {
-				AUS_franz_bohme = {
-					demote_leader = yes
-					set_nationality = GER
-				}
-				AUS_eugen_beyer = {
-					demote_leader = yes
-					set_nationality = GER
-				}
-				AUS_lothar_rendulic = {
-					set_nationality = GER
-				}
-				AUS_karl_eglseer = {
-					set_nationality = GER
-				}
-			}
-			GER_anschluss_modify_mefo_bills_or_economy_of_conquest = yes
-			GER_seize_gold_reserves_in_europe_peacefully = yes
-			add_to_variable = { var = GER_mefo_bill_counter value = -10 }
-			USA = {
-				set_country_flag = { flag = USA_anschluss_window days = 60 value = 1 }
-			}
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
@@ -8842,7 +8838,209 @@ focus_tree = {
 				GER_create_operative_otto_skorzeny = yes
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			set_country_flag = AUS_annexed
+
+			if = {
+				limit = {
+					country_exists = AUS
+					AUS = {
+						has_civil_war = no
+						OR = {
+							owns_state = 4
+							owns_state = 152
+							owns_state = 153
+							owns_state = 848
+							owns_state = 975
+							owns_state = 976
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_dlc = "Gotterdammerung" }
+						ITA = {
+							has_completed_focus = ITA_guarantee_austrian_independence
+							has_guaranteed = AUS
+						}
+					}
+			
+					ITA = {
+						country_event = {
+							id = BBA_italy_interaction_events.24
+							days = 1
+						}
+					}
+				}
+				else = { #ITA has not Guaranteed Austrian Independence
+					AUS = {
+						country_event = {
+							id = germany.28
+							days = 1
+						}
+					}		
+					effect_tooltip = {
+						custom_effect_tooltip = if_they_accept_tt
+						add_political_power = 75
+						add_war_support = 0.1
+						add_stability = 0.05
+						army_experience = 10
+
+						custom_effect_tooltip = generic_skip_one_line_tt
+
+						annex_country = { target = AUS transfer_troops = yes }
+												
+						GER_anschluss_modify_mefo_bills_or_economy_of_conquest = yes
+
+						custom_effect_tooltip = if_they_refuse_tt
+						create_wargoal = {
+							type = take_state_focus
+							target = AUS
+							generator = { 4 152 153 848 975 976 }
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_other_country = {
+						original_tag = AUS
+						has_civil_war = yes
+						OR = {
+							owns_state = 4
+							owns_state = 152
+							owns_state = 153
+							owns_state = 848
+							owns_state = 975
+							owns_state = 976
+						}
+						
+					}
+					ITA = {
+						NOT = {
+							has_completed_focus = ITA_guarantee_austrian_independence
+						}
+					}
+				}
+				custom_effect_tooltip = germany.126.warning
+				random_other_country = {
+					limit = {
+						original_tag = AUS
+						OR = {
+							has_government = fascism
+							AND = {
+								has_government = neutrality
+								NOT = {
+									any_other_country = {
+										original_tag = AUS
+										has_government = fascism
+									}
+								}
+							}
+							NOT = {
+								any_other_country = {
+									original_tag = AUS
+									OR = {
+										has_government = fascism
+										has_government = neutrality
+									}
+								}
+							}							
+						}
+						
+					}
+					country_event = { id = germany.126 days = 1 }
+				}
+			}
+
+			if = {
+				limit = {
+					4 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 4
+			}
+			if = {
+				limit = {
+					152 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 152
+			}
+			if = {
+				limit = {
+					153 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 153
+			}
+			if = {
+				limit = {
+					848 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 848
+			}
+			IF = {
+				limit = {
+					975 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 975
+			}
+			IF = {
+				limit = {
+					976 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 976
+			}
 		}
 	}
 
@@ -10150,18 +10348,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_anschluss
 		cost = 5
-		
-		bypass = {
-			188 = { is_owned_by = GER }
-			85 = { is_owned_by = GER }
-			86 = { is_owned_by = GER }
-		}
-		
-		available = { 
-			is_subject = no 
-		}
-
-		will_lead_to_war_with = LIT
 
 		ai_will_do = {
 			factor = 10	
@@ -10187,6 +10373,11 @@ focus_tree = {
 			807 = { add_claim_by = GER }
 			86 = { add_claim_by = GER }
 			762 = { add_claim_by = GER }
+			192 = { add_claim_by = GER }
+			834 = { add_claim_by = GER }
+			198 = { add_claim_by = GER }
+			89 = { add_claim_by = GER }
+
 
 			add_named_threat = { threat = 3 name = GER_demand_memel_threat }
 

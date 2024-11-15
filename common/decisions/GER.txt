@@ -4131,12 +4131,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			RKU = {
-				exists = yes
-			}
-			RKC = {
-				exists = no
-			}
 			has_country_flag = GER_handed_over_greater_romania_to_rku
 			NOT = {
 				has_country_flag = GER_handed_over_normal_romania_to_rku
@@ -4145,9 +4139,6 @@ GER_reichskommissariats = {
 
 		available = {
 			is_subject = no
-			RKC = {
-				exists = no
-			}
 			OR = {
 				has_completed_focus = GER_heed_von_neuraths_concerns
 				has_completed_focus = GER_reorganize_the_wehrmacht
@@ -4197,7 +4188,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKU
 					add_compliance = 20
 				}
 				every_state = {	
@@ -4213,9 +4203,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKU
-					set_state_controller_to = RKU
-					add_claim_by = RKU
 					add_compliance = 20
 				}
 			}	
@@ -4343,17 +4330,10 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = RKK
-				set_state_flag = GER_RK_capital_state_trasferred_RKK_flag
 				add_compliance = 25
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_kaukasien_effect_tt
-			
-			set_autonomy = { 
-				target = RKK 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
@@ -4367,7 +4347,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKK
 					add_compliance = 25
 				}
 				every_state = {	
@@ -4386,27 +4365,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKK
-					set_state_controller_to = RKK
-					add_claim_by = RKK
 					add_compliance = 25
-				}
-
-				RKK = {
-					add_manpower = 50000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 5000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 500
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 3 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -4596,7 +4555,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKT
 					add_compliance = 25
 				}
 				every_state = {	
@@ -4615,27 +4573,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKT
-					set_state_controller_to = RKT
-					add_claim_by = RKT
 					add_compliance = 25
-				}
-
-				RKT = {
-					add_manpower = 80000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 10000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 1000
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 3 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -4865,17 +4803,10 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = RKM
-				set_state_flag = GER_RK_capital_state_trasferred_RKM_flag
 				add_compliance = 25
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_muscovy_effect_tt
-			
-			set_autonomy = { 
-				target = RKM 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
@@ -4908,27 +4839,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKM
-					set_state_controller_to = RKM
-					add_claim_by = RKM
 					add_compliance = 25
-				}
-
-				RKM = {
-					add_manpower = 80000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 10000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 1000
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 3 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -4954,7 +4865,6 @@ GER_reichskommissariats = {
 		visible = {
 			OR = {
 				829 = { is_controlled_by_ROOT_or_subject = yes }
-				country_exists = RKM
 				has_war_with = 829.controller
 			}
 			NOT = { has_country_flag = GER_decided_on_volga_germanys_status }
@@ -5022,185 +4932,10 @@ GER_reichskommissariats = {
 		}
 
 		available = {
-			OR = {
-				RKM = {
-					exists = yes
-				}
-				RKO = {
-					exists = yes
-				}
-				RKU = {
-					exists = yes
-				}
-				RKT = {
-					exists = yes
-				}
-				RKK = {
-					exists = yes
-				}
-				RKL = {
-					exists = yes
-				}
-			}
 			has_manpower > 15000
 		}
-
-		visible = {
-			OR = {
-				RKM = {
-					exists = yes
-				}
-				RKO = {
-					exists = yes
-				}
-				RKU = {
-					exists = yes
-				}
-				RKT = {
-					exists = yes
-				}
-				RKK = {
-					exists = yes
-				}
-				RKL = {
-					exists = yes
-				}
-			}
-		}
-
 		complete_effect = {
 
-			IF = {
-				limit = {
-					RKM = {
-						exists = yes
-					}
-				}
-				add_manpower = -2500
-				RKM = {
-					add_manpower = 2500
-					army_experience = 15
-				}
-				every_state = {
-					limit = {
-						is_controlled_by = RKM
-						NOT = {
-							is_core_of = RKM
-						}
-					}
-					add_resistance = -3
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			IF = {
-				limit = {
-					RKO = {
-						exists = yes
-					}
-				}
-				add_manpower = -2500
-				RKO = {
-					add_manpower = 2500
-					army_experience = 15
-				}
-				every_state = {
-					limit = {
-						is_controlled_by = RKO
-						NOT = {
-							is_core_of = RKO
-						}
-					}
-					add_resistance = -3
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			IF = {
-				limit = {
-					RKU = {
-						exists = yes
-					}
-				}
-				add_manpower = -2500
-				RKU = {
-					add_manpower = 2500
-					army_experience = 15
-				}
-				every_state = {
-					limit = {
-						is_controlled_by = RKU
-						NOT = {
-							is_core_of = RKU
-						}
-					}
-					add_resistance = -3
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			IF = {
-				limit = {
-					RKT = {
-						exists = yes
-					}
-				}
-				add_manpower = -2500
-				RKT = {
-					add_manpower = 2500
-					army_experience = 15
-				}
-				every_state = {
-					limit = {
-						is_controlled_by = RKT
-						NOT = {
-							is_core_of = RKT
-						}
-					}
-					add_resistance = -3
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			IF = {
-				limit = {
-					RKK = {
-						exists = yes
-					}
-				}
-				add_manpower = -2500
-				RKK = {
-					add_manpower = 2500
-					army_experience = 15
-				}
-				every_state = {
-					limit = {
-						is_controlled_by = RKK
-						NOT = {
-							is_core_of = RKK
-						}
-					}
-					add_resistance = -3
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			IF = {
-				limit = {
-					RKL = {
-						exists = yes
-					}
-				}
-				add_manpower = -2500
-				RKL = {
-					add_manpower = 2500
-					army_experience = 15
-				}
-				every_state = {
-					limit = {
-						is_controlled_by = RKL
-						NOT = {
-							is_core_of = RKL
-						}
-					}
-					add_resistance = -3
-				}
-			}
 			
 		}
 
@@ -5219,9 +4954,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			RKL = {
-				exists = no
-			}
 			NOT = {
 				has_country_flag = GER_decided_on_south_urals_status
 			}
@@ -5287,10 +5019,6 @@ GER_reichskommissariats = {
 				add = 1
 				SOV = { has_capitulated = yes }
 			}
-			modifier = {
-				add = 15
-				RKM = { exists = yes }
-			}
 		}
 
 		complete_effect = {
@@ -5317,9 +5045,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			RKM = {
-				exists = yes
-			}
 			NOT = {
 				has_country_flag = GER_decided_on_north_urals_status
 			}
@@ -5377,10 +5102,6 @@ GER_reichskommissariats = {
 				add = 1
 				SOV = { has_capitulated = yes }
 			}
-			modifier = {
-				add = 25
-				RKM = { exists = yes }
-			}
 		}
 
 		complete_effect = {
@@ -5396,7 +5117,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKM
 					add_compliance = 20
 				}
 				every_state = {	
@@ -5412,9 +5132,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKM
-					set_state_controller_to = RKM
-					add_claim_by = RKM
 					add_compliance = 20
 				}
 			}	
@@ -5436,9 +5153,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			RKM = {
-				exists = yes
-			}
 			has_country_flag = GER_decided_on_north_urals_status
 			NOT = {
 				has_country_flag = GER_decided_on_west_yenisei_status
@@ -5513,10 +5227,6 @@ GER_reichskommissariats = {
 				add = 1
 				SOV = { has_capitulated = yes }
 			}
-			modifier = {
-				add = 25
-				RKM = { exists = yes }
-			}
 		}
 
 		complete_effect = {
@@ -5532,7 +5242,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKM
 					add_compliance = 20
 				}
 				every_state = {	
@@ -5548,9 +5257,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKM
-					set_state_controller_to = RKM
-					add_claim_by = RKM
 					add_compliance = 20
 				}
 			}	
@@ -5573,9 +5279,6 @@ GER_reichskommissariats = {
 
 		visible = {
 			OR = {
-				RKM = {
-					exists = yes
-				}
 				FIN = {
 					exists = yes
 					OR = {
@@ -5602,7 +5305,6 @@ GER_reichskommissariats = {
 		}
 
 		available = {
-			is_subject = no
 			OR = {
 				has_completed_focus = GER_the_triumphant_will
 				SOV = {
@@ -5638,10 +5340,6 @@ GER_reichskommissariats = {
 			modifier = {
 				add = 5
 				SOV = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 25
-				RKM = { exists = yes }
 			}
 		}
 
@@ -6511,15 +6209,6 @@ GER_reichskommissariats = {
 					limit = {
 						GER_is_RKC_state = yes
 						NOT = {
-							AND = {
-								is_controlled_by = RKU
-								OR = {
-									state = 766
-									state = 78
-								}
-							}
-						}
-						NOT = {
 							state = 109
 						}
 						OR = {
@@ -6527,21 +6216,11 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKC
 					add_compliance = 25
 				}
 				every_state = {	
 					limit = {
 						GER_is_RKC_state = yes
-						NOT = {
-							AND = {
-								is_controlled_by = RKU
-								OR = {
-									state = 766
-									state = 78
-								}
-							}
-						}
 						NOT = {
 							state = 109
 						}
@@ -6555,27 +6234,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKC
-					set_state_controller_to = RKC
-					add_claim_by = RKC
 					add_compliance = 25
-				}
-
-				RKC = {
-					add_manpower = 60000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 5000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 500
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 3 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -6986,7 +6645,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKC
 					add_compliance = 15
 				}
 				every_state = {	
@@ -7002,9 +6660,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKC
-					set_state_controller_to = RKC
-					add_claim_by = RKC
 					add_compliance = 15
 				}
 			}	
@@ -7026,9 +6681,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			RKC = {
-				exists = yes
-			}
 			NOT = {
 				has_country_flag = GER_decided_on_hungarian_status
 			}
@@ -7121,7 +6773,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKC
 					add_compliance = 20
 				}
 				every_state = {	
@@ -7137,9 +6788,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKC
-					set_state_controller_to = RKC
-					add_claim_by = RKC
 					add_compliance = 20
 				}
 			}	
@@ -7162,12 +6810,7 @@ GER_reichskommissariats = {
 
 		visible = {
 			OR = {
-				AND = {
-					has_country_flag = GER_decided_on_hungarian_status
-					RKC = {
-						exists = yes
-					}
-				}
+				has_country_flag = GER_decided_on_hungarian_status
 				HUN = {
 					OR = {
 						is_in_faction_with = ROOT
@@ -7188,14 +6831,6 @@ GER_reichskommissariats = {
 						is_owned_and_controlled_by = ROOT
 					}
 				}
-				AND = {
-					RKH = {
-						exists = yes
-					}
-					SLO = {
-						exists = no
-					}
-				}
 			}
 			NOT = {
 				has_country_flag = GER_decided_on_slovakian_status
@@ -7205,16 +6840,8 @@ GER_reichskommissariats = {
 		available = {
 			is_subject = no
 			OR = {
-				RKC = {
-					exists = yes
-				}
 				has_completed_focus = GER_the_triumphant_will
-				AND = {
-					has_completed_focus = GER_reintegrate_luxemburg_and_alsace_lorraine
-					SLO = {
-						exists = no
-					}
-				}
+				has_completed_focus = GER_reintegrate_luxemburg_and_alsace_lorraine
 			}
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
@@ -7246,14 +6873,6 @@ GER_reichskommissariats = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				add = 5
-				SLO = { exists = no }
-			}
-			modifier = {
-				add = 15
-				RKC = { exists = yes }
-			}
 		}
 
 		complete_effect = {
@@ -7280,9 +6899,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			RGB = {
-				exists = yes
-			}
 			NOT = {
 				has_country_flag = GER_decided_on_irish_status
 			}
@@ -7359,7 +6975,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RGB
 					add_compliance = 15
 				}
 				every_state = {	
@@ -7375,9 +6990,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RGB
-					set_state_controller_to = RGB
-					add_claim_by = RGB
 					add_compliance = 15
 				}
 			}	
@@ -8207,15 +7819,11 @@ GER_reichskommissariats = {
 
 		visible = {
 			has_completed_focus = GER_establish_protectorates_in_america
-			RKV = {
-				exists = no
-			}
 		}
 
 		priority = 60
 
 		available = {
-			is_subject = no
 			OR = {
 				has_completed_focus = GER_heed_von_neuraths_concerns
 				has_completed_focus = GER_reorganize_the_wehrmacht
@@ -8441,17 +8049,10 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = RKV
-				set_state_flag = GER_RK_capital_state_trasferred_RKV_flag
 				add_compliance = 25
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_klein_venedig_effect_tt
-
-			set_autonomy = { 
-				target = RKV 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
@@ -8465,7 +8066,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKV
 					add_compliance = 25
 				}
 				every_state = {	
@@ -8484,26 +8084,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKV
-					set_state_controller_to = RKV
-					add_claim_by = RKV
 					add_compliance = 25
-				}
-				RKV = {
-					add_manpower = 60000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 7000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 600
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 3 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -8525,15 +8106,11 @@ GER_reichskommissariats = {
 
 		visible = {
 			has_completed_focus = GER_establish_protectorates_in_america
-			RAN = {
-				exists = no
-			}
 		}
 
 		priority = 59
 
 		available = {
-			is_subject = no
 			OR = {
 				has_completed_focus = GER_heed_von_neuraths_concerns
 				has_completed_focus = GER_reorganize_the_wehrmacht
@@ -8676,22 +8253,6 @@ GER_reichskommissariats = {
 				add = 10
 				USA = { has_capitulated = yes }
 			}
-			modifier = {
-				add = 10
-				CHL = { exists = no }
-			}
-			modifier = {
-				add = 10
-				CHL = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 10
-				PRU = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 10
-				PRU = { exists = no }
-			}
 		}
 
 		complete_effect = {
@@ -8714,8 +8275,6 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = RAN
-				set_state_flag = GER_RK_capital_state_trasferred_RAN_flag
 				add_compliance = 25
 			}
 
@@ -8738,7 +8297,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RAN
 					add_compliance = 25
 				}
 				every_state = {	
@@ -8757,26 +8315,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RAN
-					set_state_controller_to = RAN
-					add_claim_by = RAN
 					add_compliance = 25
-				}
-				RAN = {
-					add_manpower = 60000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 6000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 600
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 3 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -8798,9 +8337,6 @@ GER_reichskommissariats = {
 
 		visible = {
 			has_completed_focus = GER_establish_protectorates_in_america
-			RCO = {
-				exists = no
-			}
 		}
 
 		priority = 58
@@ -9009,14 +8545,6 @@ GER_reichskommissariats = {
 				add = 10
 				MEX = { has_capitulated = yes }
 			}
-			modifier = {
-				add = 10
-				CUB = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 10
-				CUB = { exists = no }
-			}
 		}
 
 		complete_effect = {
@@ -9039,17 +8567,10 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = RCO
-				set_state_flag = GER_RK_capital_state_trasferred_RCO_flag
 				add_compliance = 25
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_kolumbus_effect_tt
-
-			set_autonomy = { 
-				target = RCO 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
@@ -9063,7 +8584,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RCO
 					add_compliance = 25
 				}
 				every_state = {	
@@ -9082,26 +8602,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RCO
-					set_state_controller_to = RCO
-					add_claim_by = RCO
 					add_compliance = 25
-				}
-				RCO = {
-					add_manpower = 60000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 6000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 600
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 3 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -9123,15 +8624,11 @@ GER_reichskommissariats = {
 
 		visible = {
 			has_completed_focus = GER_establish_protectorates_in_america
-			RUS = {
-				exists = no
-			}
 		}
 
 		priority = 57
 
 		available = {
-			is_subject = no
 			OR = {
 				has_completed_focus = GER_heed_von_neuraths_concerns
 				has_completed_focus = GER_reorganize_the_wehrmacht
@@ -9372,17 +8869,10 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = RUS
-				set_state_flag = GER_RK_capital_state_trasferred_RUS_flag
 				add_compliance = 25
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_nordamerika_effect_tt
-
-			set_autonomy = { 
-				target = RUS 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
@@ -9396,7 +8886,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RUS
 					add_compliance = 25
 				}
 				every_state = {	
@@ -9415,26 +8904,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RUS
-					set_state_controller_to = RUS
-					add_claim_by = RUS
 					add_compliance = 25
-				}
-				RUS = {
-					add_manpower = 80000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 7000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 700
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 3 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -9458,9 +8928,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			RUS = {
-				exists = yes
-			}
 			NOT = {
 				has_country_flag = GER_decided_on_nfl_status
 			}
@@ -9521,7 +8988,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RUS
 					add_compliance = 20
 				}
 				every_state = {	
@@ -9541,9 +9007,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RUS
-					set_state_controller_to = RUS
-					add_claim_by = RUS
 					add_compliance = 20
 				}
 			}	
@@ -9567,12 +9030,6 @@ GER_reichskommissariats = {
 		visible = {
 			has_completed_focus = GER_establish_protectorates_in_america
 			OR = {
-				RUS = {
-					exists = yes
-				}
-				RCO = {
-					exists = yes
-				}
 				JAP = {
 					exists = yes
 					has_government = ROOT
@@ -9665,14 +9122,6 @@ GER_reichskommissariats = {
 			modifier = {
 				add = 15
 				USA = { exists = no }
-			}
-			modifier = {
-				add = 25
-				RUS = { exists = yes }
-			}
-			modifier = {
-				add = 5
-				RCO = { exists = yes }
 			}
 		}
 
@@ -9819,10 +9268,6 @@ GER_reichskommissariats = {
 				add = 10
 				SOV = { exists = no }
 			}
-			modifier = {
-				add = 15
-				RKM = { exists = yes }
-			}
 		}
 
 		complete_effect = {
@@ -9838,7 +9283,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKM
 					add_compliance = 20
 				}
 				every_state = {	
@@ -9854,9 +9298,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKM
-					set_state_controller_to = RKM
-					add_claim_by = RKM
 					add_compliance = 20
 				}
 			}	
@@ -9944,10 +9385,6 @@ GER_reichskommissariats = {
 				add = 10
 				SIK = { exists = no }
 			}
-			modifier = {
-				add = 15
-				RKT = { exists = yes }
-			}
 		}
 
 		complete_effect = {
@@ -9963,7 +9400,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKT
 					add_compliance = 20
 				}
 				every_state = {	
@@ -9979,9 +9415,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKT
-					set_state_controller_to = RKT
-					add_claim_by = RKT
 					add_compliance = 20
 				}
 			}	
@@ -9999,9 +9432,6 @@ GER_reichskommissariats = {
 
 		visible = {
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RAR = {
-				exists = no
-			}
 		}
 
 		priority = 52
@@ -10138,14 +9568,6 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				SAU = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 10
-				SAU = { exists = no }
-			}
-			modifier = {
-				add = 10
 				IRQ = { exists = no }
 			}
 		}
@@ -10170,17 +9592,10 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = RAR
-				set_state_flag = GER_RK_capital_state_trasferred_RAR_flag
 				add_compliance = 25
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_arabien_effect_tt
-
-			set_autonomy = { 
-				target = RAR 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
@@ -10194,7 +9609,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RAR
 					add_compliance = 25
 				}
 				every_state = {	
@@ -10213,26 +9627,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RAR
-					set_state_controller_to = RAR
-					add_claim_by = RAR
 					add_compliance = 25
-				}
-				RAR = {
-					add_manpower = 60000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 7000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 8500
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 3 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -10257,9 +9652,6 @@ GER_reichskommissariats = {
 
 		visible = {
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RAR = {
-				exists = yes
-			}
 			NOT = {
 				has_country_flag = GER_decided_on_turkish_status
 			}
@@ -10362,10 +9754,6 @@ GER_reichskommissariats = {
 				add = 10
 				TUR = { exists = no }
 			}
-			modifier = {
-				add = 15
-				RAR = { exists = yes }
-			}
 		}
 
 		complete_effect = {
@@ -10381,7 +9769,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RAR
 					add_compliance = 15
 				}
 				every_state = {	
@@ -10397,9 +9784,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RAR
-					set_state_controller_to = RAR
-					add_claim_by = RAR
 					add_compliance = 15
 				}
 			}	
@@ -10422,9 +9806,6 @@ GER_reichskommissariats = {
 
 		visible = {
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RAR = {
-				exists = yes
-			}
 			NOT = {
 				has_country_flag = GER_decided_on_iranian_status
 			}
@@ -10522,7 +9903,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RAR
 					add_compliance = 15
 				}
 				every_state = {	
@@ -10538,9 +9918,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RAR
-					set_state_controller_to = RAR
-					add_claim_by = RAR
 					add_compliance = 15
 				}
 			}	
@@ -10745,14 +10122,6 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				TIB = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 10
-				TIB = { exists = no }
-			}
-			modifier = {
-				add = 10
 				RAJ = { exists = no }
 			}
 		}
@@ -10777,17 +10146,10 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = RHD
-				set_state_flag = GER_RK_capital_state_trasferred_RHD_flag
 				add_compliance = 25
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_hindustan_effect_tt
-
-			set_autonomy = { 
-				target = RHD 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
@@ -10820,26 +10182,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RHD
-					set_state_controller_to = RHD
-					add_claim_by = RHD
 					add_compliance = 25
-				}
-				RHD = {
-					add_manpower = 90000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 9000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 900
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 3 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -10861,9 +10204,6 @@ GER_reichskommissariats = {
 
 		visible = {
 			has_completed_focus = GER_create_asian_reichskommissariat
-			ROA = {
-				exists = no
-			}
 		}
 
 		priority = 47
@@ -11296,14 +10636,6 @@ GER_reichskommissariats = {
 				add = 10
 				CHI = { exists = no }
 			}
-			modifier = {
-				add = 10
-				MON = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 10
-				MON = { exists = no }
-			}
 		}
 
 		complete_effect = {
@@ -11326,17 +10658,10 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = ROA
-				set_state_flag = GER_RK_capital_state_trasferred_ROA_flag
 				add_compliance = 25
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_ostasien_effect_tt
-
-			set_autonomy = { 
-				target = ROA 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
@@ -11350,7 +10675,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = ROA
 					add_compliance = 25
 				}
 				every_state = {	
@@ -11369,26 +10693,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = ROA
-					set_state_controller_to = ROA
-					add_claim_by = ROA
 					add_compliance = 25
-				}
-				ROA = {
-					add_manpower = 90000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 9000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 900
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 6 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -11411,9 +10716,6 @@ GER_reichskommissariats = {
 
 		visible = {
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RAA = {
-				exists = no
-			}
 		}
 
 		priority = 47
@@ -11614,14 +10916,6 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 10
-				INS = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 10
-				INS = { exists = no }
-			}
-			modifier = {
-				add = 10
 				AST = { exists = no }
 			}
 			modifier = {
@@ -11654,17 +10948,10 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = RAA
-				set_state_flag = GER_RK_capital_state_trasferred_RAA_flag
 				add_compliance = 25
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_australasien_effect_tt
-
-			set_autonomy = { 
-				target = RAA 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
@@ -11678,7 +10965,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RAA
 					add_compliance = 25
 				}
 				every_state = {	
@@ -11697,26 +10983,7 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RAA
-					set_state_controller_to = RAA
-					add_claim_by = RAA
 					add_compliance = 25
-				}
-				RAA = {
-					add_manpower = 70000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 7000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 700
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 3 }
-					load_oob = "RK_OOB"
 				}
 			}
 
@@ -14334,7 +13601,7 @@ GER_influence_countries_cat = {
 			}
 		}
 
-		targets = { SLV CRO MAC MNT BOS HRZ SER ALB YUG GRE ROM MLD BUL KOS TRA }
+		targets = { CRO MAC MNT BOS HRZ SER ALB YUG GRE ROM MLD BUL KOS TRA }
 
 		target_trigger = {
 			FROM = {
@@ -14417,7 +13684,7 @@ GER_influence_countries_cat = {
 			}
 		}
 
-		targets = { SLV CRO MAC MNT BOS HRZ SER ALB YUG GRE ROM MLD BUL KOS TRA }
+		targets = { CRO MAC MNT BOS HRZ SER ALB YUG GRE ROM MLD BUL KOS TRA }
 
 		target_trigger = {
 			FROM = {
@@ -14502,7 +13769,7 @@ GER_influence_countries_cat = {
 			}
 		}
 
-		targets = { SLV CRO MAC MNT BOS HRZ SER ALB YUG GRE ROM MLD BUL KOS TRA }
+		targets = { CRO MAC MNT BOS HRZ SER ALB YUG GRE ROM MLD BUL KOS TRA }
 
 		target_trigger = {
 			FROM = {
@@ -14591,7 +13858,7 @@ GER_invite_to_faction_cat = {
 			}
 		}
 
-		targets = { SWE NOR FIN DEN EST LAT LIT SMI ICE KAR PER IRQ SYR SAU EGY JOR LEB OMA YEM PAL KUW QAT UAE KUR SLV CRO MAC MNT BOS HRZ SER ALB YUG GRE ROM MLD BUL KOS TRA }
+		targets = { SWE NOR FIN DEN EST LAT LIT SMI ICE KAR PER IRQ SYR SAU EGY JOR LEB OMA YEM PAL KUW QAT UAE KUR CRO MAC MNT BOS HRZ SER ALB YUG GRE ROM MLD BUL KOS TRA }
 
 		target_trigger = {
 			if = {
@@ -14672,7 +13939,6 @@ GER_invite_to_faction_cat = {
 				limit = {
 					FROM = {
 						OR = {
-							original_tag = SLV
 							original_tag = CRO
 							original_tag = MAC
 							original_tag = MNT
@@ -20526,7 +19792,7 @@ GER_spreading_the_red_flame_cat = {
 
 		fire_only_once = yes
 
-		targets = { ARG BOL BRA CHL COL COS CUB DOM ECU ELS GUA HAI HON MEX NIC PAN PAR PRU URG VEN }
+		targets = { ARG BOL BRA CHL COL COS CUB DOM ECU ELS GUA HAI HON MEX NIC PAN PAR URG VEN }
 
 		target_trigger = {
 			NOT = {
@@ -21765,38 +21031,18 @@ GER_the_fading_eagle_category = {
 				original_tag_to_check = ITA
 				is_subject_of = ROOT
 			}
-			SLV = {
-				is_in_faction_with = ROOT
-				is_subject = no
-			}
 			NOT = { has_country_flag = GER_demanded_slovene_subjugation_flag }
 		} 
 	
 		available = {
 			has_government = fascism
-			SLV = {
-				is_in_faction_with = ROOT
-				is_subject = no
-				all_owned_state = {
-					is_controlled_by = SLV
-				}
-			}
 		}
 	
 		cost = 50
 
 		complete_effect = {
 
-			SLV = {
-				country_event = {
-					id = GOT_GER_fading_eagle.01
-					hours = 6
-				}		
-			}
 			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				puppet = SLV
-			}
 
 			hidden_effect = {
 				set_country_flag = GER_demanded_slovene_subjugation_flag 
