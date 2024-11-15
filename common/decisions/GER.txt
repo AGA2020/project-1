@@ -3998,9 +3998,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			RKU = {
-				exists = yes
-			}
 			NOT = {
 				has_country_flag = GER_handed_over_greater_romania_to_rku
 			}
@@ -4041,10 +4038,6 @@ GER_reichskommissariats = {
 				add = 1
 				SOV = { has_capitulated = yes }
 			}
-			modifier = {
-				add = 9
-				RKU = { exists = yes }
-			}
 		}
 
 		complete_effect = {
@@ -4060,7 +4053,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKU
 					add_compliance = 20
 				}
 				every_state = {	
@@ -4076,9 +4068,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKU
-					set_state_controller_to = RKU
-					add_claim_by = RKU
 					add_compliance = 20
 				}
 			}	
@@ -4137,10 +4126,6 @@ GER_reichskommissariats = {
 			modifier = {
 				add = 1
 				SOV = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 9
-				RKU = { exists = yes }
 			}
 		}
 
@@ -5311,9 +5296,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			GEN = {
-				exists = no
-			}
 		}
 
 		available = {
@@ -5361,93 +5343,13 @@ GER_reichskommissariats = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			88 = {
-				IF = {
-					limit = {
-						OWNER = {
-							NOT = {
-								original_tag = GER
-							}
-						}
-					}
-					OWNER = {
-						set_country_flag = GER_RK_capital_state_trasferred_GEN_victim_flag
-						set_country_flag = GER_reichskommissariats_puppet_flag
-					}
-				}
-				transfer_state_to = GEN
-				set_state_flag = GER_RK_capital_state_trasferred_GEN_flag
-				add_compliance = 25
-			}
+			10 = { add_compliance = 55 }
 
-			custom_effect_tooltip = GER_generalgouvernement_effect_tt
+			90 = { add_compliance = 55 }
 
-			set_autonomy = { 
-				target = GEN
-				autonomy_state = autonomy_integrated_puppet 
-			}
-			
-			hidden_effect = {
-				every_state = {
-					limit = {
-						GER_is_GEN_state = yes
-						NOT = {
-							state = 88
-						}
-						OR = {
-							is_owned_by = ROOT
-							owner = { is_subject_of = ROOT }
-						}
-					}
-					transfer_state_to = GEN
-					add_compliance = 25
-				}
-				every_state = {	
-					limit = {
-						GER_is_GEN_state = yes
-						NOT = {
-							state = 88
-						}
-						NOT = {
-							OR = {
-								is_owned_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
-							}
-						}
-					}
-					add_contested_owner = GEN
-					set_state_controller_to = GEN
-					add_claim_by = GEN
-					add_compliance = 25
-				}
+			92 = { add_compliance = 55 }
 
-				GEN = {
-					add_manpower = 50000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 5000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 500
-						producer = GER
-					}	
-					inherit_technology = GER
-					add_offsite_building = { type = arms_factory level = 2 }
-					load_oob = "RK_OOB"
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			country_event = {
-				id = wuw_GER_reichskommissariats.12
-				hours = 0
-			}	
+			88 = { add_compliance = 55 }
 			
 		}
 	}
@@ -9657,10 +9559,6 @@ GER_reichskommissariats = {
 				add = 10
 				PER = { exists = no }
 			}
-			modifier = {
-				add = 15
-				RAR = { exists = yes }
-			}
 		}
 
 		complete_effect = {
@@ -9710,9 +9608,6 @@ GER_reichskommissariats = {
 
 		visible = {
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RHD = {
-				exists = no
-			}
 		}
 
 		priority = 47
@@ -9936,7 +9831,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RHD
 					add_compliance = 25
 				}
 				every_state = {	
@@ -14892,9 +14786,6 @@ GER_a_fourth_silesian_uprising_cat = {
 		cancel_trigger = {
 			OR = {
 				has_completed_focus = GER_tend_to_the_future_of_germany
-				SIL = {
-					exists = yes
-				}
 			}
 		}
 
@@ -14937,11 +14828,6 @@ GER_a_fourth_silesian_uprising_cat = {
 		}
 
 		available = {
-			SIL = {
-				any_core_state = {
-					is_controlled_by = ROOT
-				}
-			}
 		}
 
 		days_remove = 14
@@ -14988,11 +14874,6 @@ GER_a_fourth_silesian_uprising_cat = {
 		}
 
 		available = {
-			SIL = {
-				any_core_state = {
-					is_controlled_by = ROOT
-				}
-			}
 		}
 
 		cost = 15
@@ -17316,9 +17197,6 @@ GER_realpolitik_cat = {
 
 		visible = {
 			has_completed_focus = GER_establish_eastern_grand_duchies
-			UBD = {
-				exists = no
-			}
 		}
 
 		fire_only_once = yes
@@ -17399,65 +17277,6 @@ GER_realpolitik_cat = {
 
 			custom_effect_tooltip = GER_ubd_state_transfer_effect_tt
 
-			IF = {
-				limit = {
-					has_government = neutrality
-				}
-				set_autonomy = { 
-					target = UBD 
-					autonomy_state = autonomy_personal_union
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					has_government = democratic
-				}
-				set_autonomy = { 
-					target = UBD 
-					autonomy_state = autonomy_colony
-				}
-			}
-			ELSE = {
-				set_autonomy = { 
-					target = UBD 
-					autonomy_state = autonomy_puppet 
-				}
-			}
-
-			hidden_effect = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 810
-							state = 12
-							state = 808
-							state = 809
-							state = 190
-							state = 13
-							state = 191
-							state = 813
-							state = 812
-							state = 811
-						}
-					}
-					add_core_of = UBD
-					transfer_state_to = UBD
-				}
-
-				UBD = {
-					add_manpower = 25000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 1000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 250
-						producer = GER
-					}	
-				}
-			}
 		}
 	}
 
@@ -20198,38 +20017,16 @@ GER_the_fading_eagle_category = {
 				original_tag_to_check = ITA
 				is_subject_of = ROOT
 			}
-			MNT = {
-				is_in_faction_with = ROOT
-				is_subject = no
-			}
 			NOT = { has_country_flag = GER_demanded_montenegrin_subjugation_flag }
 		} 
 	
 		available = {
 			has_government = fascism
-			MNT = {
-				is_in_faction_with = ROOT
-				is_subject = no
-				all_owned_state = {
-					is_controlled_by = MNT
-				}
-			}
 		}
 	
 		cost = 50
 
 		complete_effect = {
-
-			MNT = {
-				country_event = {
-					id = GOT_GER_fading_eagle.01
-					hours = 6
-				}		
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				puppet = MNT
-			}
 
 			hidden_effect = {
 				set_country_flag = GER_demanded_montenegrin_subjugation_flag 

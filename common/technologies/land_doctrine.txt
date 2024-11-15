@@ -170,34 +170,10 @@ technologies = {
 		xor={
 			armored_spearhead
 		}
-		motorized = {
+		category_mobile_and_mobile_combat_sup = {
 			maximum_speed = 0.1
 			default_morale = 0.2
-		}
-		armored_car = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		mot_artillery_brigade = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		mot_anti_tank_brigade = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		mot_anti_air_brigade = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		mechanized = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
-		amphibious_mechanized = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
+		}	
 		
 		
 		path = {
@@ -304,14 +280,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 
-		motorized = {
-			max_organisation = 15
-			
-		}
-		mechanized = {
-			max_organisation = 15
-		}
-		amphibious_mechanized = {
+		category_vehicle_infantry = {
 			max_organisation = 15
 		}
 		
@@ -510,18 +479,11 @@ technologies = {
 			max_organisation = 7
 		}
 
-		enable_tactic = tactic_breakthrough
-		
-		motorized = {
+		category_vehicle_infantry = {
 			max_organisation = 5
 		}
-		mechanized = {
-			max_organisation = 5
-		}
-		amphibious_mechanized = {
-			max_organisation = 5
-		}		
 
+		enable_tactic = tactic_breakthrough	
 		
 		path = {
 			leads_to_tech = kampfgruppe 
@@ -2005,16 +1967,10 @@ technologies = {
 			infantry_offensive
 		}
 	
-		motorized = {
+		category_vehicle_infantry = {
 			max_organisation = 5
 		}
 		armored_car = {
-			max_organisation = 5
-		}
-		mechanized = {
-			max_organisation = 5
-		}
-		amphibious_mechanized = {
 			max_organisation = 5
 		}
 		
@@ -2349,6 +2305,10 @@ technologies = {
 			breakthrough = 0.1
 		}
 
+		category_cavalry = {
+			breakthrough = 0.05
+		}
+
 		additional_brigade_column_size = 1
 		
 		enable_tactic = tactic_infantry_charge
@@ -2467,6 +2427,10 @@ technologies = {
 		recon = {
 			battalion_mult = {
 				category = category_light_infantry
+				soft_attack = 0.05
+			}
+			battalion_mult = {
+				category = category_cavalry
 				soft_attack = 0.05
 			}
 		}
@@ -3111,18 +3075,10 @@ technologies = {
 			default_morale = 0.1
 		}	
 
-		mechanized = {
+		category_vehicle_infantry = {
 			max_organisation = 10
 			default_morale = 0.1
 		}
-		motorized = {
-			max_organisation = 10
-			default_morale = 0.1
-		}	
-		amphibious_mechanized = {
-			max_organisation = 10
-			default_morale = 0.1
-		}	
 		
 		armored_car_recon = {
 			battalion_mult = {
