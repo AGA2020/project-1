@@ -485,7 +485,7 @@ focus = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			add_political_power = 200
-			add_ideas = USA_neutrality_act 
+			add_ideas = USA_neutrality_act_aat 
 			add_war_support = -0.05
 			if = {
 				limit = {
@@ -666,17 +666,31 @@ focus = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-				name = USA_manhattan_project
-				bonus = 1.0
-				uses = 1
-				category = nuclear
+
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = USA_manhattan_project
+					bonus = 0.5
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+				add_ideas = USA_manhattan_project_ns
 			}
-			add_tech_bonus = {
-				name = USA_manhattan_project
-				bonus = 1.0
-				uses = 1
-				category = nuclear
+			ELSE = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 1
+				}
+				add_ideas = USA_manhattan_project_ns
 			}
 		}
 	}
@@ -843,6 +857,7 @@ focus = {
 		}
 		completion_reward = {
 			add_ideas = wartime_industry_focus
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = USA_general_motors
 		}
@@ -883,15 +898,17 @@ focus = {
 				}
 			}
 			every_state = {
-				limit = { has_state_flag = USA_military_construction_3Inf }
+				limit = { has_state_flag = USA_military_construction_2Inf }
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
 		}
-		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
 		completion_reward = {
 			army_experience = 10
 			random_owned_controlled_state = {
@@ -907,6 +924,13 @@ focus = {
 						region = 118
 						region = 119
 						region = 120
+						region = 199
+						region = 219
+						region = 218
+						region = 211
+						region = 214
+						region = 198
+						region = 197
 					}
 				}
 				add_extra_state_shared_building_slots = 5
@@ -919,163 +943,209 @@ focus = {
 			}
 			if = {
 				limit = {
-					371 = {
-						OR = {
-							NOT = { is_owned_and_controlled_by = USA }
-							AND = {
-								is_owned_and_controlled_by = USA
-								free_building_slots = {
-									building = infrastructure
-									size < 3
-								}
+					any_owned_state = {
+						AND = {
+							is_controlled_by = USA
+							is_core_of = USA
+							free_building_slots = {
+								building = infrastructure
+								size > 1
 							}
 						}
 					}
 				}
 				random_owned_controlled_state = {
 					limit = { 
+						is_core_of = USA
 						free_building_slots = {
 							building = infrastructure
-							size > 2
-						}
-						OR = {
-							region = 117
-							region = 118
-							region = 119
-							region = 120
+							size > 1
 						}
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 3
+						level = 2
 						instant_build = yes
 					}
-					set_state_flag = USA_military_construction_3Inf
-				}
-			}
-			371 = {
-				if = {
-					limit = { 
-						is_owned_and_controlled_by = USA
-						free_building_slots = {
-							building = infrastructure
-							size > 2
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					set_state_flag = USA_military_construction_3Inf
+					set_state_flag = USA_military_construction_2Inf
 				}
 			}
 			if = {
 				limit = {
-					375 = {
-						OR = {
-							NOT = { is_owned_and_controlled_by = USA }
-							AND = {
-								is_owned_and_controlled_by = USA
-								free_building_slots = {
-									building = infrastructure
-									size < 3
-								}
-							}
+			 		any_owned_state = { 
+						is_controlled_by = USA
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
 						}
 					}
 				}
 				random_owned_controlled_state = {
+					prioritize = { 371 }
 					limit = { 
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
 						free_building_slots = {
 							building = infrastructure
-							size > 2
-						}
-						OR = {
-							region = 117
-							region = 118
-							region = 119
-							region = 120
+							size > 1
 						}
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 3
+						level = 2
 						instant_build = yes
 					}
-					set_state_flag = USA_military_construction_3Inf
+					set_state_flag = USA_military_construction_2Inf
 				}
 			}
-			375 = {
-				if = {
-					limit = { 
-						is_owned_and_controlled_by = USA
-						free_building_slots = {
-							building = infrastructure
-							size > 2
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					set_state_flag = USA_military_construction_3Inf
-				}
-			}			
+			
 			if = {
 				limit = {
-					378 = {
-						OR = {
-							NOT = { is_owned_and_controlled_by = USA }
-							AND = {
-								is_owned_and_controlled_by = USA
-								free_building_slots = {
-									building = infrastructure
-									size < 3
-								}
+					any_owned_state = { #doing this in sequence so that one single state having open infra slots doesn't cascade through everything. There is probably a smarter way of doing this but it is late and my brain no worky
+						AND = {
+							is_controlled_by = USA
+							is_core_of = USA
+							NOT = {
+								has_state_flag = USA_military_construction_2Inf
+							}
+							free_building_slots = {
+								building = infrastructure
+								size > 1
 							}
 						}
 					}
 				}
 				random_owned_controlled_state = {
 					limit = { 
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
 						free_building_slots = {
 							building = infrastructure
-							size > 2
-						}
-						OR = {
-							region = 117
-							region = 118
-							region = 119
-							region = 120
+							size > 1
 						}
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 3
+						level = 2
 						instant_build = yes
 					}
-					set_state_flag = USA_military_construction_3Inf
+					set_state_flag = USA_military_construction_2Inf
 				}
 			}
-			378 = {
-				if = {
-					limit = { 
-						is_owned_and_controlled_by = USA
+			if = {
+				limit = { 
+					any_owned_state = {
+						is_controlled_by = USA
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
 						free_building_slots = {
 							building = infrastructure
-							size > 2
+							size > 1
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 375 }
+					limit = { 
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
 						}
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 3
+						level = 2
 						instant_build = yes
 					}
-					set_state_flag = USA_military_construction_3Inf
+					set_state_flag = USA_military_construction_2Inf
 				}
-			}			
+			}
+						
+			if = {
+				limit = {
+					any_owned_state = {
+						AND = {
+							is_controlled_by = USA
+							is_core_of = USA
+							NOT = {
+								has_state_flag = USA_military_construction_2Inf
+							}
+							free_building_slots = {
+								building = infrastructure
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { 
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = USA_military_construction_2Inf
+				}
+			}
+			
+			if = {
+				limit = { 
+					any_owned_state = {
+						is_controlled_by = USA
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					prioritize = { 378 }
+					limit = { 
+						is_core_of = USA
+						NOT = {
+							has_state_flag = USA_military_construction_2Inf
+						}
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = USA_military_construction_2Inf
+				}
+			}
+						
 		}
 	}
 
@@ -1149,7 +1219,6 @@ focus = {
 					free_building_slots = {
 						building = infrastructure
 						size > 2
-						include_locked = yes
 					}
 					OR = {
 						region = 117
@@ -1171,7 +1240,6 @@ focus = {
 					free_building_slots = {
 						building = infrastructure
 						size > 2
-						include_locked = yes
 					}
 					OR = {
 						region = 117
@@ -1188,6 +1256,7 @@ focus = {
 				}
 				set_state_flag = USA_USACE_projects_3Inf
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			air_experience = 50
 			navy_experience = 50
 			army_experience = 10			
@@ -1325,6 +1394,12 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			IF = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				USA_create_joe_savoldi_operative = yes
+			}
 			unlock_decision_tooltip = { decision = USA_execute_war_plan_silver show_effect_tooltip = yes show_modifiers = yes }
 		}
 	}
@@ -1348,6 +1423,12 @@ focus = {
 		completion_reward = {
 			GER = {
 				add_opinion_modifier = { target = USA modifier = war_plan_black }
+			}
+			IF = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				USA_create_william_sebold_operative = yes
 			}
 			unlock_decision_tooltip = { decision = USA_execute_war_plan_black show_effect_tooltip = yes show_modifiers = yes }
 		}
@@ -1885,6 +1966,10 @@ focus = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+            add_breakthrough_progress = {
+                    specialization = specialization_land
+                    value = 0.5
+            }
 			add_tech_bonus = {
 				name = USA_tank_experiments
 				uses = 1
@@ -1901,7 +1986,7 @@ focus = {
 		prerequisite = { focus = USA_tank_experiments }
 		mutually_exclusive = { focus = USA_main_battle_tanks }
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1945,7 +2030,7 @@ focus = {
 		prerequisite = { focus = USA_tank_experiments }
 		mutually_exclusive = { focus = USA_tank_destroyer_doctrine }
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2538,6 +2623,10 @@ focus = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+            add_breakthrough_progress = {
+                    specialization = specialization_naval
+                    value = 0.25
+            }
 			add_tech_bonus = {
 				name = USA_battleship_primacy
 				bonus = 1.0
@@ -2643,6 +2732,10 @@ focus = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+            add_breakthrough_progress = {
+                    specialization = specialization_naval
+                    value = 0.25
+            }
 			add_tech_bonus = {
 				name = USA_carrier_primacy
 				bonus = 1.0
@@ -2704,9 +2797,17 @@ focus = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
+            add_breakthrough_progress = {
+                    specialization = specialization_naval
+                    value = 0.25
+            }
+            add_breakthrough_progress = {
+                    specialization = specialization_air
+                    value = 0.5
+            }
 			add_tech_bonus = {
 				name = USA_naval_radar
-				uses = 2
+				uses = 1
 				bonus = 1.0
 				category = radar_tech
 			}
@@ -2773,11 +2874,7 @@ focus = {
 		}
 
 		available = {
-
-		}
-		
-		bypass = {
-
+		is_special_project_completed = sp:sp_naval_cruiser_submarine
 		}
 
 		cancel_if_invalid = yes
@@ -2792,12 +2889,12 @@ focus = {
 				uses = 2
 				category = ss_tech
 			}
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				set_technology = { cruiser_submarines = 1 }
+
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
 			}
+			add_ideas = fleet_submarine_specialization_mtg
 		}
 	}
 
@@ -2872,13 +2969,12 @@ focus = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-				name = USA_expand_the_USMC
-				bonus = 1.0
-				uses = 1
-				technology = marines2
-				technology = marines3
-			}
+				add_doctrine_cost_reduction = {
+					name = USA_expand_the_USMC
+					cost_reduction = 0.25
+					uses = 2
+					category = special_forces_doctrine
+				}
 		}
 	}
 

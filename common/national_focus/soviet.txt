@@ -100,6 +100,13 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			40 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 
 		}
 	}
@@ -315,7 +322,7 @@ focus_tree = {
 				}
 				set_state_flag = SOV_finish_five_year_plan_2IC
 			}
-
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SOV_lazar_kaganovich
 		}
@@ -382,6 +389,7 @@ focus_tree = {
 				}
 			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = SOV_soviet_railways
 		}
@@ -410,7 +418,7 @@ focus_tree = {
 		completion_reward = {
 			hidden_effect = {
 				add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.05 }
-				add_to_variable = { SOV_fyp_consumer_goods_factor = 0.05 }
+				add_to_variable = { SOV_fyp_consumer_goods_factor = 0.10 }
 			}
 			if = {
 				limit = {
@@ -472,7 +480,7 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				add_to_variable = { SOV_fyp_consumer_goods_factor = -0.03 }
+				add_to_variable = { SOV_fyp_consumer_goods_factor = -0.05 }
 			}
 			custom_effect_tooltip = SOV_reorganize_the_pc_of_heavy_industry_ns_tt
 			if = {
@@ -682,8 +690,8 @@ focus_tree = {
 			else = {
 				hidden_effect = {
 					#Swap dynamic modifier to change icon
-					remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
-					add_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier }
+					remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier_alt }
+					add_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier_alt }
 				}
 			}
 			custom_effect_tooltip = SOV_shift_to_armaments_production_ns_tt
@@ -1040,7 +1048,7 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				add_to_variable = { SOV_fyp_consumer_goods_factor = -0.03 } #Bonus to CG
+				add_to_variable = { SOV_fyp_consumer_goods_factor = -0.05 } #Bonus to CG
 				add_to_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.05 } #Bonus to max efficicency
 				if = {
 					limit = {
@@ -1232,13 +1240,40 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+
+
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.75
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = SOV_no_time_for_peace
+					bonus = 0.5
+					uses = 1 # was 2
+					category = nuclear
+				}
+			}
 			add_tech_bonus = {
 				name = SOV_no_time_for_peace
-				bonus = 0.75
-				uses = 2
-				category = nuclear
+				bonus = 0.5
+				uses = 1 # was 2
 				category = rocketry
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_ideas = SOV_no_time_for_peace_idea
 		}
@@ -1729,6 +1764,7 @@ focus_tree = {
 					}
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = { #ALT IDEOLOGY
 				limit = {
 					NOT = { has_government = communism }
@@ -1779,10 +1815,6 @@ focus_tree = {
 		relative_position_id = SOV_no_time_for_peace
 		cost = 10
 
-		allow_branch = {
-			has_government = communism
-		}
-
 		available = {
 
 		}
@@ -1790,7 +1822,99 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_country_leader = {
+							ruling_only = yes
+							character = SOV_iosif_stalin
+						}	
+					}
+					set_province_name = {
+						id = 3555
+						name = SOV_stalingrad_hydro_station
+					}
+				}
+				ELSE = {
+					set_province_name = {
+						id = 3555
+						name = SOV_volgograd_hydro_station
+					}
+				}
+				set_province_name = {
+					id = 6275
+					name = SOV_kuybyshev_hydro_station
+				}
+				set_province_name = {
+					id = 737
+					name = SOV_kakhovka_dam
+				}
+				set_province_name = {
+					id = 3478
+					name = SOV_tsimlyanskoye_hydroelectric_station
+				}
+			}
+
 			add_ideas = SOV_transformation_of_nature
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			217 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3555
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+			196 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 737
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+			245 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3478
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
+			251 = {	
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 6275
+					}
+				}
+				custom_effect_tooltip = {
+					localization_key = building_state_modifier|dam
+					INDENT = "    "
+				}
+			}
 		}
 	}
 
@@ -1945,6 +2069,30 @@ focus_tree = {
 			add_to_variable = { SOV_soviet_airforce_air_range_factor = 0.05 }
 			add_to_variable = { SOV_soviet_airforce_air_agility_factor = 0.05 }
 			custom_effect_tooltip = SOV_modernize_aircraft_facilities_ns_tt
+			
+			custom_effect_tooltip = SOV_modernize_aircraft_facilities_tt
+			hidden_effect = {
+				IF = {
+					limit = { 
+						260 = {
+							is_fully_controlled_by = ROOT
+							air_facility < 1
+							land_facility < 1
+							naval_facility < 1
+							nuclear_facility < 1
+						}
+					}
+
+					260 = {
+						add_building_construction = {
+							type = air_facility
+							level = 1
+							instant_build = yes
+							province = 9448 # East of Voronezh
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -1965,7 +2113,14 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_merge_aircraft_plants_tt
+			every_military_industrial_organization = {
+				limit = {
+					has_mio_trait = SOV_mio_trait_merge_plant_no_28 #All Aircraft MIOs have this trait
+				}
+				unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_28
+				unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_150
+				unlock_mio_trait_tooltip = SOV_mio_trait_merge_vef_plant
+			}
 		}
 	}
 
@@ -1987,9 +2142,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
+			}
 			add_tech_bonus = {
 				name = SOV_found_the_jet_institute
-				bonus = 1.0
+				bonus = 0.5
 				uses = 2
 				category = jet_technology
 			}
@@ -2021,18 +2180,10 @@ focus_tree = {
 				add_to_variable = { SOV_soviet_airforce_air_accidents_factor = 0.05 }
 			}
 
-			if = { #DEFAULT COMMIE
-				limit = {
-					has_government = communism
-				}
+			hidden_effect = {
 				#Swap dynamic modifiers to show the bonus equipment custom tooltip
 				remove_dynamic_modifier = { modifier = SOV_soviet_airforce_dynamic_modifier }
 				add_dynamic_modifier = { modifier = SOV_soviet_airforce_aircraft_production_focus_dynamic_modifier }
-			}
-			else = { #ALT IDEOLOGY
-				#Swap dynamic modifiers to show the bonus equipment custom tooltip
-				remove_dynamic_modifier = { modifier = SOV_soviet_airforce_dynamic_modifier_alt }
-				add_dynamic_modifier = { modifier = SOV_soviet_airforce_aircraft_production_focus_dynamic_modifier_alt }
 			}
 
 			custom_effect_tooltip = SOV_increase_aircraft_production_ns_tt
@@ -2332,6 +2483,11 @@ focus_tree = {
 			custom_effect_tooltip = SOV_the_modern_war_in_the_skies_ns_tt
 
 			air_experience = 50
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
 		}
 	}
 
@@ -2440,7 +2596,7 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						ROOT = { has_tech = radio_detection }
+						ROOT = { is_special_project_completed = sp:sp_air_radar }
 						radar_station < 1
 					}
 					add_building_construction = {
@@ -2454,6 +2610,8 @@ focus_tree = {
 				}
 				set_state_flag = SOV_naval_bases_reinforced_flag
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 			
 			custom_effect_tooltip = SOV_reinforce_western_naval_bases_other_states_tt
 
@@ -2584,6 +2742,7 @@ focus_tree = {
 					}
 					set_state_flag = SOV_naval_bases_reinforced_flag
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			if = { #ARKHANGELSK - Improved naval base + Severodvinsk Naval Base + AA + coastal fort
 				limit = {
@@ -2679,6 +2838,7 @@ focus_tree = {
 					}
 					set_state_flag = SOV_naval_bases_reinforced_flag
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			if = { #SEVASTOPOL (CRIMEA) - Extra AA + coastal fort
 				limit = {
@@ -2698,6 +2858,7 @@ focus_tree = {
 					}
 					set_state_flag = SOV_naval_bases_reinforced_flag
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			if = { #ROSTOV - Improved naval base + AA + coastal fort
 				limit = {
@@ -2723,6 +2884,7 @@ focus_tree = {
 					}
 					set_state_flag = SOV_naval_bases_reinforced_flag
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			if = { #KRASNODAR - Improved naval base + AA + coastal fort
 				limit = {
@@ -2805,6 +2967,7 @@ focus_tree = {
 					}
 					set_state_flag = SOV_naval_bases_reinforced_flag
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			if = { #VLADIVOSTOK - Improved naval base + AA + coastal fort
 				limit = {
@@ -2913,7 +3076,27 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_merge_naval_plants_tt
+					mio:SOV_nevskoye_design_bureau_organization = {
+						unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_370
+						unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_5
+					}
+
+					mio:SOV_rubin_design_bureau_organization = {
+						unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_370
+						unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_363
+						unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_190
+					}
+
+					mio:SOV_black_sea_shipyard_organization = {
+						unlock_mio_trait_tooltip = SOV_mio_trait_merge_mariupol_plant
+						unlock_mio_trait_tooltip = SOV_mio_trait_merge_leninskaya_kuznitsa_plant
+						unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_340
+					}
+
+					mio:SOV_sevastopol_marine_plant_organization = {
+						unlock_mio_trait_tooltip = SOV_mio_trait_merge_mariupol_plant
+						unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_200
+					}
 		}
 	}
 
@@ -3124,64 +3307,47 @@ focus_tree = {
 				category = ca_tech
 				category = cl_tech
 			}
-
-			#Kronshtadt Class Battlecruiser
-			if = {
-				limit = {
-					NOT = { has_dlc = "Man the Guns" }
-				}
-				add_tech_bonus = {
-					name = SOV_offensive_maritime_strategy
-					bonus = 3.0
-					uses = 1
-					category = bc_tech	
+			create_equipment_variant = {
+				name = "Kronshtadt Class"		
+				type = ship_hull_heavy_2
+				name_group = SOV_BC_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_bc_2
+					front_1_custom_slot = ship_heavy_battery_1
+					mid_1_custom_slot = ship_secondaries_1
+					mid_2_custom_slot = ship_anti_air_1
+					rear_1_custom_slot = ship_airplane_launcher_1
 				}
 			}
-			else = {
-				create_equipment_variant = {
-					name = "Kronshtadt Class"		
+			#Line Production
+			add_equipment_production = {
+				equipment = {
 					type = ship_hull_heavy_2
-					name_group = SOV_BC_HISTORICAL
-					parent_version = 0
-					allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-					modules = {
-						fixed_ship_battery_slot = ship_heavy_battery_1
-						fixed_ship_anti_air_slot = ship_anti_air_1
-						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-						fixed_ship_radar_slot = empty
-						fixed_ship_engine_slot = heavy_ship_engine_2
-						fixed_ship_secondaries_slot = ship_secondaries_1
-						fixed_ship_armor_slot = ship_armor_bc_2
-						front_1_custom_slot = ship_heavy_battery_1
-						mid_1_custom_slot = ship_secondaries_1
-						mid_2_custom_slot = ship_anti_air_1
-						rear_1_custom_slot = ship_airplane_launcher_1
-					}
+					creator = "SOV"
+					version_name = "Kronshtadt Class"
 				}
-
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_heavy_2
-						creator = "SOV"
-						version_name = "Kronshtadt Class"
-					}
-					requested_factories = 1
-					progress = 0.50
-					amount = 1 #Tooltip purposes
+				requested_factories = 1
+				progress = 0.50
+				amount = 1 #Tooltip purposes
+			}
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_2
+					creator = "SOV"
+					version_name = "Kronshtadt Class"
 				}
-
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_heavy_2
-						creator = "SOV"
-						version_name = "Kronshtadt Class"
-					}
-					requested_factories = 1
-					progress = 0.35
-					amount = 1
-				}
+				requested_factories = 1
+				progress = 0.35
+				amount = 1
 			}
 			
 		}
@@ -3218,85 +3384,83 @@ focus_tree = {
 				category = bb_tech
 			}
 
-			#Sovietsky Soyuz Super-Heavy Battleship
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			if = {
 				limit = {
-					NOT = { has_dlc = "Man the Guns" }
+					NOT = { is_special_project_completed = sp:sp_naval_super_heavy_battleship }
 				}
-				add_tech_bonus = {
-					name = SOV_an_oceangoing_navy
-					bonus = 3.0
-					uses = 1
-					category = shbb_tech	
+				add_breakthrough_progress = {
+					specialization = specialization_naval
+					value = 0.5
+				}					
+			}
+
+			#Grant SHBB Tech and required battery modules (not fire control)
+			if = {
+				limit = {
+					NOT = { has_tech = ship_hull_super_heavy }
+				}
+				hidden_effect = {
+					set_technology = {
+						ship_hull_super_heavy = 1
+					}
+				}
+				custom_effect_tooltip = SOV_an_oceangoing_navy_shbb_tt
+			}
+			create_equipment_variant = { #TODO_Manu: Engine should be 3 (but also should Yamato's)
+				name = "Sovetsky Soyuz Class"
+				type = ship_hull_super_heavy_1
+				name_group = SOV_STATES
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_battery_slot = ship_super_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_shbb
+					front_1_custom_slot = ship_anti_air_2
+					front_2_custom_slot = empty
+					mid_1_custom_slot = empty
+					mid_2_custom_slot = ship_secondaries_2
+					mid_3_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = ship_super_heavy_battery_1
+					rear_2_custom_slot = ship_airplane_launcher_1
 				}
 			}
-			else = {
-				#Grant SHBB Tech and required battery modules (not fire control)
-				if = {
-					limit = {
-						NOT = { has_tech = ship_hull_super_heavy }
-					}
-					hidden_effect = {
-						set_technology = {
-							ship_hull_super_heavy = 1
-						}
-					}
-					custom_effect_tooltip = SOV_an_oceangoing_navy_shbb_tt
-				}
-				create_equipment_variant = { #TODO_Manu: Engine should be 3 (but also should Yamato's)
-					name = "Sovetsky Soyuz Class"
+			#Line Production
+			add_equipment_production = {
+				equipment = {
 					type = ship_hull_super_heavy_1
-					name_group = SOV_STATES
-					parent_version = 0
-					allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-					modules = {
-						fixed_ship_battery_slot = ship_super_heavy_battery_1
-						fixed_ship_anti_air_slot = ship_anti_air_2
-						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-						fixed_ship_radar_slot = empty
-						fixed_ship_engine_slot = heavy_ship_engine_2
-						fixed_ship_secondaries_slot = ship_secondaries_2
-						fixed_ship_armor_slot = ship_armor_shbb
-						front_1_custom_slot = ship_anti_air_2
-						front_2_custom_slot = empty
-						mid_1_custom_slot = empty
-						mid_2_custom_slot = ship_secondaries_2
-						mid_3_custom_slot = ship_secondaries_2
-						rear_1_custom_slot = ship_super_heavy_battery_1
-						rear_2_custom_slot = ship_airplane_launcher_1
-					}
+					creator = "SOV"
+					version_name = "Sovetsky Soyuz Class"
 				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_super_heavy_1
-						creator = "SOV"
-						version_name = "Sovetsky Soyuz Class"
-					}
-					requested_factories = 1
-					progress = 0.50
-					amount = 1
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "SOV"
+					version_name = "Sovetsky Soyuz Class"
 				}
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_super_heavy_1
-						creator = "SOV"
-						version_name = "Sovetsky Soyuz Class"
-					}
-					requested_factories = 1
-					progress = 0.25
-					amount = 1
+				requested_factories = 1
+				progress = 0.25
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "SOV"
+					version_name = "Sovetsky Soyuz Class"
 				}
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_super_heavy_1
-						creator = "SOV"
-						version_name = "Sovetsky Soyuz Class"
-					}
-					requested_factories = 1
-					progress = 0.25
-					amount = 1
-				}
+				requested_factories = 1
+				progress = 0.25
+				amount = 1
 			}
 		}
 	}
@@ -3319,7 +3483,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = SOV_mine_warfare_ns
-
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SOV_mine_warfare
 				bonus = 1.0
@@ -3377,127 +3541,14 @@ focus_tree = {
 				uses = 1
 				category = ss_tech
 			}
-			set_technology = { cruiser_submarines = 1 }
-
-			###########
-			### MTG ###
-			###########
-			if = {
+			IF = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
-				create_equipment_variant = {
-					name = "K Class"
-					type = ship_hull_cruiser_submarine
-					name_group = SOV_SS_HISTORICAL
-					parent_version = 0
-					allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-					modules = {
-						fixed_ship_torpedo_slot = ship_torpedo_sub_2
-						fixed_ship_engine_slot = sub_ship_engine_2
-						front_1_custom_slot = ship_mine_layer_sub
-						mid_1_custom_slot = empty
-						rear_1_custom_slot = ship_torpedo_sub_2
-					}
-				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_cruiser_submarine
-						creator = "SOV"
-						version_name = "K Class"
-					}
-					name = "K-1"
-					requested_factories = 1
-					progress = 0.35
-					amount = 1
-				}
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_cruiser_submarine
-						creator = "SOV"
-						version_name = "K Class"
-					}
-					name = "K-2"
-					requested_factories = 1
-					progress = 0.35
-					amount = 1
-				}
+				add_ideas = cruiser_submarine_specialization_mtg
 			}
-
-			##############
-			### NO MTG ###
-			##############
-			else = {
-				if = { #Submarine 3 if available
-					limit = {
-						has_tech = improved_submarine
-					}
-					create_equipment_variant = {
-						name = "K Class"
-						type = submarine_3
-						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-						upgrades = {
-							ship_reliability_upgrade = 3
-							sub_engine_upgrade = 3
-							sub_stealth_upgrade = 2
-							sub_torpedo_upgrade = 3
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = submarine_3
-							creator = "SOV"
-							version_name = "K Class"
-						}
-						requested_factories = 1
-						progress = 0.35
-						amount = 1
-					}
-					add_equipment_production = {
-						equipment = {
-							type = submarine_3
-							creator = "SOV"
-							version_name = "K Class"
-						}
-						requested_factories = 1
-						progress = 0.35
-						amount = 1
-					}
-				}
-				else = { #Submarine 2 as default
-					create_equipment_variant = {
-						name = "K Class"
-						type = submarine_2
-						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-						upgrades = {
-							ship_reliability_upgrade = 2
-							sub_engine_upgrade = 2
-							sub_stealth_upgrade = 2
-							sub_torpedo_upgrade = 2
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = submarine_2
-							creator = "SOV"
-							version_name = "K Class"
-						}
-						requested_factories = 1
-						progress = 0.35
-						amount = 1
-					}
-					add_equipment_production = {
-						equipment = {
-							type = submarine_2
-							creator = "SOV"
-							version_name = "K Class"
-						}
-						requested_factories = 1
-						progress = 0.35
-						amount = 1
-					}
-				}
+			ELSE = {
+				add_ideas = cruiser_submarine_specialization
 			}
 		}
 	}
@@ -3549,6 +3600,7 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 25
 			air_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SOV_expand_the_morskaya_aviatsiya
 				bonus = 1
@@ -4019,7 +4071,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 10
 						tank_nsb_armor_upgrade = 7
 					}
-					icon = "gfx/interface/technologies/SOV_imp_main_tank.dds"
+					icon = "GFX_SOV_improved_medium_tank_medium"
 				}
 			}
 			else_if = {
@@ -4045,7 +4097,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 10
 						tank_nsb_armor_upgrade = 7
 					}
-					icon = "gfx/interface/technologies/SOV_imp_main_tank.dds"
+					icon = "GFX_SOV_improved_medium_tank_medium"
 				}
 			}
 			else_if = { #Why? You ruined your T-34
@@ -4068,7 +4120,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 10
 						tank_nsb_armor_upgrade = 7
 					}
-					icon = "gfx/interface/technologies/SOV_imp_main_tank.dds"
+					icon = "GFX_SOV_improved_medium_tank_medium"
 				}
 			}
 			else = { #Don't do this to yourself dude
@@ -4088,7 +4140,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 10
 						tank_nsb_armor_upgrade = 7
 					}
-					icon = "gfx/interface/technologies/SOV_imp_main_tank.dds"
+					icon = "GFX_SOV_improved_medium_tank_medium"
 				}
 			}
 		}
@@ -4102,7 +4154,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -4139,28 +4191,14 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_government = communism
-				}
-				add_tech_bonus = {
-					name = SOV_soviet_artillery_tech_bonus_name_default
-					bonus = 0.75
-					uses = 2
-					ahead_reduction = 2
-					category = artillery
-				}
+			add_tech_bonus = {
+				name = SOV_soviet_artillery_tech_bonus_name_default
+				bonus = 0.75
+				uses = 2
+				ahead_reduction = 2
+				category = artillery
 			}
-			else  ={
-				add_tech_bonus = {
-					name = SOV_soviet_artillery_tech_bonus_name_alt
-					bonus = 0.75
-					uses = 2
-					ahead_reduction = 2
-					category = artillery
-				}
-			}
-			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = { # 2 Mils in Chelyabinsk
 				limit = {
 					has_full_control_of_state = 572
@@ -4201,7 +4239,11 @@ focus_tree = {
 				}
 			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			add_ideas = SOV_defense_industry_artillery_bonus
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			#SU-85/100 tank template (AT)
 			if = {
@@ -4224,7 +4266,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 10
 						tank_nsb_armor_upgrade = 8
 					}
-					icon = "gfx/interface/technologies/SOV_advanced_medium_tank_destroyer.dds"
+					icon = "GFX_SOV_advanced_medium_td_medium"
 				}
 			}
 			else_if = {
@@ -4247,7 +4289,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 10
 						tank_nsb_armor_upgrade = 8
 					}
-					icon = "gfx/interface/technologies/SOV_advanced_medium_tank_destroyer.dds"
+					icon = "GFX_SOV_advanced_medium_td_medium"
 				}
 			}
 			else_if = { #You really should invest some time in research AT...
@@ -4270,7 +4312,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 10
 						tank_nsb_armor_upgrade = 8
 					}
-					icon = "gfx/interface/technologies/SOV_improved_medium_tank_destroyer.dds"
+					icon = "GFX_SOV_improved_medium_td_medium"
 				}
 			}
 			else = { #This is just blasphemy
@@ -4290,7 +4332,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 10
 						tank_nsb_armor_upgrade = 8
 					}
-					icon = "gfx/interface/technologies/SOV_improved_medium_tank_destroyer.dds"
+					icon = "GFX_SOV_improved_medium_td_medium"
 				}
 			}
 
@@ -4315,7 +4357,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 10
 						tank_nsb_armor_upgrade = 8
 					}
-					icon = "gfx/interface/technologies/SOV_improved_medium_tank_artillery.dds"
+					icon = "GFX_SOV_improved_medium_art_medium"
 				}
 			}
 			else_if = {
@@ -4338,7 +4380,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 10
 						tank_nsb_armor_upgrade = 8
 					}
-					icon = "gfx/interface/technologies/SOV_improved_medium_tank_artillery.dds"
+					icon = "GFX_SOV_improved_medium_art_medium"
 				}
 			}
 			else = { #You really need some arty research
@@ -4358,7 +4400,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 10
 						tank_nsb_armor_upgrade = 8
 					}
-					icon = "gfx/interface/technologies/SOV_improved_medium_tank_artillery.dds"
+					icon = "GFX_SOV_improved_medium_art_medium"
 				}
 			}
 		}
@@ -4497,7 +4539,7 @@ focus_tree = {
 						}
 						set_state_flag = SOV_development_of_tankograd_flag
 						add_to_temp_variable = { SOV.temp_targets_index = 1 }
-						log = "Round [?SOV.temp_targets_index]"
+						#log = "Round [?SOV.temp_targets_index]"
 					}
 				}
 			}
@@ -4522,7 +4564,34 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_merge_tank_and_materiel_plants_tt
+				every_military_industrial_organization = {
+					limit = {
+						has_mio_trait = SOV_mio_trait_merge_plant_no_174 #All Tank MIOs have this trait
+					}
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_174
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_112
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_ural_heavy_machine_building_plant
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				#MATERIEL
+				every_military_industrial_organization = {
+					limit = {
+						has_mio_trait = SOV_mio_trait_merge_nkmz_plant #All Materiel MIOs have this trait
+					}
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_nkmz_plant
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_magnitogorsk_metallurgical_plant
+				}
+				mio:SOV_grabin_design_bureau_organization = {
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_172
+				}
+				mio:SOV_tula_arms_plant_organization = {
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_plant_no_622
+				}
+				mio:SOV_gaz_organization = {
+					unlock_mio_trait_tooltip = SOV_mio_trait_merge_automobile_tool_plant
+				}
 		}
 	}
 
@@ -4608,37 +4677,83 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = SOV_national_academies_of_sciences_available_tt
-				check_variable = { SOV_academy_of_sciences_research_speed_factor = SOV_academies_required_for_atomic_bomb_project compare = greater_than_or_equals }
+				set_temp_variable = { SOV_current_academies = SOV_academy_of_sciences_research_speed_factor } #This is a factor (0.X value)
+				multiply_temp_variable = { SOV_current_academies = 100 } #Now it is possible to track the current number of civs
+				check_variable = { SOV_current_academies = SOV_academies_required_for_atomic_bomb_project compare = greater_than_or_equals }
 			}
-			is_subject = no
 		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = SOV_soviet_atomic_bomb_project_tech_bonus_name
-				bonus = 1
-				uses = 1
-				ahead_reduction = 1
-				category = nuclear
+
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = SOV_soviet_atomic_bomb_project_tech_bonus_name
+					bonus = 1
+					uses = 1
+					ahead_reduction = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+			}
+			ELSE = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.8
+				}
 			}
 
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = SOV_soviet_atomic_bomb_project_tt
+			hidden_effect = {
+				IF = {
+					limit = { 
+						588 = {
+							is_fully_controlled_by = ROOT
+							air_facility < 1
+							land_facility < 1
+							naval_facility < 1
+							nuclear_facility < 1
+						}
+					}
+
+					588 = {
+						add_building_construction = {
+							type = nuclear_facility
+							level = 1
+							instant_build = yes
+							province = 7350 # Kurchatov
+						}
+						add_victory_points = {
+							province = 7350
+							value = 1
+						}	
+					}
 				}
-				create_operative_leader = {
-					name = "Ursula Kuczynski"
-					GFX = GFX_Portrait_ursula_kuczynski
-					female = yes
-					traits = { operative_safe_cracker operative_infiltrator }
-					bypass_recruitment = no
-					available_to_spy_master = yes
-					nationalities = { SOV GER }
-				}
-				add_ideas = SOV_soviet_atomic_bomb_project_ns
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			create_operative_leader = {
+				name = SOV_ursula_kuczynski
+				GFX = GFX_Portrait_ursula_kuczynski
+				female = yes
+				traits = { operative_safe_cracker operative_infiltrator }
+				bypass_recruitment = no
+				available_to_spy_master = yes
+				nationalities = { SOV GER }
+			}
+			add_ideas = SOV_soviet_atomic_bomb_project_ns
 			custom_effect_tooltip = SOV_soviet_atomic_bomb_project_unlock_operation_tt
 		}
 	}
@@ -5173,7 +5288,7 @@ focus_tree = {
 		completion_reward = {
 			209 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 6
@@ -5184,7 +5299,7 @@ focus_tree = {
 			}
 			210 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 4
@@ -5195,7 +5310,7 @@ focus_tree = {
 			}
 			207 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 4
@@ -5218,7 +5333,7 @@ focus_tree = {
 			}
 			206 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 4
@@ -5229,7 +5344,7 @@ focus_tree = {
 			}
 			202 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 7
@@ -5247,7 +5362,7 @@ focus_tree = {
 			}
 			203 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 7
@@ -5258,7 +5373,7 @@ focus_tree = {
 			}
 			834 ={
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 5
@@ -5275,7 +5390,7 @@ focus_tree = {
 			}
 			192 = {
 				if = {
-					limit = { is_controlled_by = ROOT }
+					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
 						type = bunker
 						level = 5
@@ -5995,7 +6110,7 @@ focus_tree = {
 			add_to_variable = { SOV_the_red_army_winter_attrition_factor = -0.1 }
 			add_to_variable = { SOV_the_red_army_acclimatization_cold_climate_gain_factor = 0.15 }
 			add_to_variable = { SOV_the_red_army_acclimatization_hot_climate_gain_factor = 0.15 }
-			add_to_variable = { SOV_the_red_army_terrain_penalty_reduction = 0.05 }
+			add_to_variable = { SOV_the_red_army_terrain_trait_xp_gain_factor = 0.15 }
 			custom_effect_tooltip = SOV_an_adaptable_army_ns_tt
 		}
 	}
@@ -6063,7 +6178,7 @@ focus_tree = {
 			#Spawn Penal divisions
 			custom_effect_tooltip = SOV_penal_battalions_spawn_tt
 			hidden_effect = {
-				set_technology = { penal_infantry = 1 popup = no }
+				#set_technology = { penal_infantry = 1 popup = no }
 
 				division_template = {
 					name = "Shtrafnaya Chast"
@@ -6114,54 +6229,32 @@ focus_tree = {
 			add_to_variable = { SOV_the_red_army_operative_slot  = 1 }
 			custom_effect_tooltip = SOV_organization_of_the_partisans_ns_tt
 
-			if = {
-				limit = {
-					has_government = communism
-				}
-				show_unit_leaders_tooltip = SOV_vasily_korzh
-				show_unit_leaders_tooltip = SOV_sidor_kovpak
-			}
-
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				if = {
-					limit = {
-						has_government = communism
-					}
-					create_operative_leader = {
-						name = "Dmitry Medvedev"
-						GFX = GFX_Portrait_dmitry_medvedev
-						female = yes
-						traits = { operative_demolition_expert operative_commando }
-						bypass_recruitment = no
-						available_to_spy_master = yes
-						nationalities = { SOV }
-					}
-				}
-
-				add_timed_idea = {
-					idea = SOV_central_headquarters_of_the_partisan_movement
-					days = 720
-				}
-			}
-			else = {
-				add_timed_idea = {
-					idea = SOV_central_headquarters_of_the_partisan_movement_no_lar
-					days = 720
-				}
-			}
+			show_unit_leaders_tooltip = SOV_vasily_korzh
+			show_unit_leaders_tooltip = SOV_sidor_kovpak
 
 			if = {
 				limit = {
 					has_government = communism
 				}
-				custom_effect_tooltip = unlock_propaganda_campaign_tt
-				unlock_decision_tooltip = SOV_propaganda_glory_to_partisans
-				unlock_decision_tooltip = SOV_propaganda_death_to_invaders
-				custom_effect_tooltip = propaganda_campaign_requirement_tt
+				create_operative_leader = {
+					name = "Dmitry Medvedev"
+					GFX = GFX_Portrait_dmitry_medvedev
+					female = yes
+					traits = { operative_demolition_expert operative_commando }
+					bypass_recruitment = no
+					available_to_spy_master = yes
+					nationalities = { SOV }
+				}
 			}
+			add_timed_idea = {
+				idea = SOV_central_headquarters_of_the_partisan_movement
+				days = 720
+			}
+
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = SOV_propaganda_glory_to_partisans
+			unlock_decision_tooltip = SOV_propaganda_death_to_invaders
+			custom_effect_tooltip = propaganda_campaign_requirement_tt
 		}
 	}
 
@@ -6351,13 +6444,6 @@ focus_tree = {
 		relative_position_id = SOV_keep_commissars_organization
 		cost = 10
 
-		allow_branch = {
-			NOT = {
-				has_government = fascism
-				has_government = neutrality
-			}
-		}
-
 		available = {
 			any_enemy_country = {
 				SOV_is_major_not_original_sov = yes
@@ -6374,11 +6460,18 @@ focus_tree = {
 
 			army_experience = 75
 
+			show_unit_leaders_tooltip = SOV_pavel_rybalko
+
 			#New
 			hidden_effect = {
 				set_technology = { masterful_blitz = 1 popup = no }
 			}
 			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.25
+			}
 		}
 	}
 
@@ -7259,10 +7352,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_military_conspiracy
 		cost = 5
-
-		available = {
-			has_government = communism
-		}
 		
 		search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
@@ -7348,10 +7437,16 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 1
+			}
+
 			add_tech_bonus = {
 				name = SOV_they_will_know_fear
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = armor
 			}
 
@@ -7381,7 +7476,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 8
 						tank_nsb_armor_upgrade = 6
 					}
-					icon = "gfx/interface/technologies/SOV_adv_heavy_tank.dds"
+					icon = "GFX_SOV_advanced_heavy_tank_medium"
 				}
 			}
 			else_if = {
@@ -7409,7 +7504,7 @@ focus_tree = {
 						tank_nsb_engine_upgrade = 8
 						tank_nsb_armor_upgrade = 6
 					}
-					icon = "gfx/interface/technologies/SOV_adv_heavy_tank.dds"
+					icon = "GFX_SOV_advanced_heavy_tank_medium"
 				}
 			}
 		}
