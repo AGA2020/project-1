@@ -3733,10 +3733,6 @@ GER_reichskommissariats = {
 				SOV = { exists = no }
 			}
 			modifier = {
-				add = 10
-				BLR = { has_capitulated = yes }
-			}
-			modifier = {
 				add = 5
 				LIT = { exists = no }
 			}
@@ -4196,9 +4192,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			RKK = {
-				exists = no
-			}
 		}
 
 		available = {
@@ -4360,12 +4353,6 @@ GER_reichskommissariats = {
 
 		fire_only_once = yes
 
-		visible = {
-			RKT = {
-				exists = no
-			}
-		}
-
 		available = {
 			is_subject = no
 			OR = {
@@ -4504,17 +4491,10 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = RKT
-				set_state_flag = GER_RK_capital_state_trasferred_RKT_flag
 				add_compliance = 25
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_turkestan_effect_tt
-			
-			set_autonomy = { 
-				target = RKT 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
@@ -5915,12 +5895,6 @@ GER_reichskommissariats = {
 
 		fire_only_once = yes
 
-		visible = {
-			RKC = {
-				exists = no
-			}
-		}
-
 		available = {
 			is_subject = no
 			OR = {
@@ -6091,17 +6065,11 @@ GER_reichskommissariats = {
 						set_country_flag = GER_reichskommissariats_puppet_flag
 					}
 				}
-				transfer_state_to = RKC
 				set_state_flag = GER_RK_capital_state_trasferred_RKC_flag
 				add_compliance = 25
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_balkan_effect_tt
-				
-			set_autonomy = { 
-				target = RKC 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
@@ -6157,9 +6125,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			RKC = {
-				exists = yes
-			}
 			NOT = {
 				has_country_flag = GER_handed_over_zadar_to_rkc
 			}
@@ -6195,7 +6160,6 @@ GER_reichskommissariats = {
 			}
 			modifier = {
 				add = 9
-				RKC = { exists = yes }
 			}
 		}
 
@@ -6212,7 +6176,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = RKC
 					add_compliance = 20
 				}
 				every_state = {	
@@ -6228,9 +6191,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = RKC
-					set_state_controller_to = RKC
-					add_claim_by = RKC
 					add_compliance = 20
 				}
 			}	
@@ -6465,9 +6425,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			RKC = {
-				exists = yes
-			}
 			NOT = {
 				has_country_flag = GER_decided_on_greek_status
 			}
@@ -9147,9 +9104,6 @@ GER_reichskommissariats = {
 
 		visible = {
 			has_completed_focus = GER_create_asian_reichskommissariat
-			RKT = {
-				exists = yes
-			}
 			NOT = {
 				has_country_flag = GER_decided_on_east_turkestan_status
 			}
@@ -9573,14 +9527,6 @@ GER_reichskommissariats = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				add = 1
-				TUR = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 10
-				TUR = { exists = no }
-			}
 		}
 
 		complete_effect = {
@@ -11305,21 +11251,6 @@ GER_military_buildup = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_STALINIST
-					}
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_SPARTACUS
-					}
-				}
-			}
 		}
 
 		visible = {
@@ -17939,16 +17870,10 @@ GER_realpolitik_cat = {
 	
 		visible = { 
 			has_completed_focus = GER_establish_eastern_grand_duchies
-			BLR = {
-				exists = no
-			}
 		} 
 	
 		available = {
 			has_completed_focus = GER_establish_eastern_grand_duchies
-			BLR = {
-				exists = no
-			}
 			is_subject = no
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
@@ -17978,62 +17903,6 @@ GER_realpolitik_cat = {
 		complete_effect = {
 
 			custom_effect_tooltip = GER_blr_state_transfer_effect_tt
-
-			IF = {
-				limit = {
-					has_government = neutrality
-				}
-				set_autonomy = { 
-					target = BLR 
-					autonomy_state = autonomy_personal_union
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					has_government = democratic
-				}
-				set_autonomy = { 
-					target = BLR 
-					autonomy_state = autonomy_colony
-				}
-			}
-			ELSE = {
-				set_autonomy = { 
-					target = BLR 
-					autonomy_state = autonomy_puppet 
-				}
-			}
-
-			hidden_effect = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 194 # Mozyr
-							state = 204 # Bobryusk
-							state = 206 # Minsk
-							state = 207 # Vitebsk
-							state = 241 # Gomel
-							state = 96 # Wiljeka
-						}
-					}
-					add_core_of = BLR
-					transfer_state_to = BLR
-				}
-
-				BLR = {
-					add_manpower = 25000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 1000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 250
-						producer = GER
-					}	
-				}
-			}
 		}
 	
 	}
@@ -18192,12 +18061,6 @@ GER_realpolitik_cat = {
 
 		visible = {
 			has_completed_focus = GER_establish_western_grand_duchies
-			BRI = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
 		}
 
 		fire_only_once = yes
@@ -18229,12 +18092,6 @@ GER_realpolitik_cat = {
 			base = 50
 			modifier = {
 				add = 150
-				BRI = { 
-					OR = {
-						has_capitulated = yes 
-						exists = no
-					}
-				}
 			}
 			modifier = {
 				add = 25
@@ -18245,78 +18102,7 @@ GER_realpolitik_cat = {
 		complete_effect = {
 
 			custom_effect_tooltip = GER_bri_state_transfer_effect_tt
-
-			IF = {
-				limit = {
-					has_government = neutrality
-					BRI = {
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				set_autonomy = { 
-					target = BRI 
-					autonomy_state = autonomy_personal_union
-				}
 				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			ELSE_IF = {
-				limit = {
-					has_government = democratic
-					BRI = {
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				set_autonomy = { 
-					target = BRI 
-					autonomy_state = autonomy_colony
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			ELSE_IF = {
-				limit = {
-					BRI = {
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				set_autonomy = { 
-					target = BRI 
-					autonomy_state = autonomy_puppet 
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
-			hidden_effect = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 14
-							state = 30
-						}
-					}
-					add_core_of = BRI
-					transfer_state_to = BRI
-				}
-
-				BRI = {
-					add_manpower = 25000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 1000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 250
-						producer = GER
-					}	
-				}
-			}
 		}
 	}
 
