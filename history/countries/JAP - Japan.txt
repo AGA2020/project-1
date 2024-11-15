@@ -1,23 +1,42 @@
-﻿capital = 282
+﻿capital = 282 # Tokyo/Kanto
 
-
-
+# Starting Stats
 set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
 set_war_support = 0.8
 
 set_research_slots = 4
 set_fuel_ratio = 1.0
+
+# Starting Ideas
 add_ideas = {
-	state_shintoism
+
+	# Laws
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
 
+	# National Spirits
+	state_shintoism
 	JAP_zaibatsus
 	JAP_duplicate_research_efforts
 	JAP_militarism
+
 }
 
+IF = {
+	limit = { has_dlc = "Waking the Tiger" }
+	add_ideas = {
+		JAP_interservice_rivalry_balanced		
+	}
+}
+IF = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	add_ideas = MTG_naval_treaty_adherent
+}
+
+# Setup Reisstance and Compliance
 609 = {
 	start_resistance = yes
 	set_compliance = 5
@@ -74,21 +93,6 @@ add_ideas = {
 	set_garrison_strength = 1.0
 }
 
-if = {
-	limit = { has_dlc = "Waking the Tiger" }
-	add_ideas = {
-		JAP_interservice_rivalry_balanced		
-	}
-}
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	add_ideas = MTG_naval_treaty_adherent
-}
-
-
-
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -105,6 +109,25 @@ set_technology = {
 	fuel_silos = 1
 	synth_oil_experiments = 1
 	fuel_refining = 1
+}
+
+complete_special_project = {
+	project = sp:sp_naval_cruiser_submarine
+	scientist = JAP_keiji_fukuda
+	state = 529
+}
+
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 0.8
+}
+add_breakthrough_progress = {
+	specialization = specialization_air
+	value = 0.3
+}
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 0.1
 }
 
 if = {
@@ -127,33 +150,7 @@ if = {
 	}
 	set_oob = "JAP_1936_nsb"
 }
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "JAP_1936_air_bba"
-		set_technology = {
-			aa_lmg = 1
-			engines_1 = 1
-			engines_2 = 1
-			early_bombs = 1
-			aircraft_construction = 1
-			iw_small_airframe = 1
-			iw_medium_airframe = 1
-			basic_small_airframe = 1
-			air_torpedoe_1 = 1
-		}
-	else = {
-		set_air_oob = "JAP_1936_air_legacy"
-		set_technology = {
-			cv_early_fighter = 1
-			cv_CAS1 = 1
-			cv_naval_bomber1 = 1
-			early_fighter = 1
-			naval_bomber1 = 1
-			early_bomber = 1
-			CAS1 = 1
-		}
-	}
-}
+
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -180,7 +177,6 @@ if = {
 		coastal_defense_ships = 1
 		basic_depth_charges = 1
 		basic_cruiser_armor_scheme = 1
-		cruiser_submarines = 1
 		basic_dp_light_battery = 1
 	}
 	set_naval_oob = "JAP_1936_naval"
@@ -204,219 +200,73 @@ if = {
 	}
 	set_naval_oob = "JAP_1936_naval_legacy"
 }
-if = {
+IF = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "JAP_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_small_airframe = 1
+			air_torpedoe_1 = 1
+			bba_early_transport_plane = 1
+		}
+	ELSE = {
+		set_air_oob = "JAP_1936_air_legacy"
+		set_technology = {
+			cv_early_fighter = 1
+			cv_CAS1 = 1
+			cv_naval_bomber1 = 1
+			early_fighter = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+			CAS1 = 1
+			early_transport_plane = 1
+		}
+	}
+}
+IF = {
 	limit = {
 		has_dlc = "La Resistance"
 	}
+
 	set_technology = {
 		armored_car1 = 1
 	}
+
 	JAP_create_john_farnsworth_operative = yes
+
+	create_operative_leader = {
+		name = JAP_yoshiko_kawashima
+		GFX = GFX_portrait_yoshiko_kawashima
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { MAN JAP CHI }
+	}
+
+	create_operative_leader = {
+		name = JAP_takeo_yoshikawa
+		GFX = GFX_portrait_takeo_yoshikawa
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { JAP }
+	}
 }
-
 1939.1.1 = {
-
-	add_political_power = 1198
-	add_command_power = 100
-	
-
-	#adding ministers
-	add_ideas = {
-		JAP_mitsumasa_yonai
-		minoru_genda
-		hajime_sugiyama
-		soemu_toyoda
-		fushimi_hiroyasu
-		kawasaki
-
-		#laws
-		tot_economic_mobilisation
-		service_by_requirement
-		closed_economy
-	}
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		remove_ideas = MTG_naval_treaty_adherent
-	}
-	complete_national_focus = JAP_purge_the_kodoha_faction
-	complete_national_focus = JAP_army_expansion_law
-	complete_national_focus = JAP_guide_the_zaibatsus
-	complete_national_focus = JAP_new_naval_estimates
-	complete_national_focus = JAP_army_expansion
-	complete_national_focus = JAP_liaison_conference
-	complete_national_focus = JAP_greater_east_asian_co_prosperity_sphere
-	unlock_national_focus = JAP_intervene_in_china
-	complete_national_focus = JAP_fighter_modernization
-	complete_national_focus = JAP_carrier_warfare_experiments
-	complete_national_focus = JAP_supremacy_of_technology
-	complete_national_focus = JAP_national_mobilization_law
-	complete_national_focus = JAP_national_research_policy
-	complete_national_focus = JAP_nationalize_war_industry
-	complete_national_focus = JAP_cruiser_modernization
-	complete_national_focus = JAP_long_lance_torpedoes
-	complete_national_focus = JAP_bicycle_battalions
-	complete_national_focus = JAP_small_arms_modernization
-
-	declare_war_on = {
-		target = CHI
-		type = puppet_wargoal_focus
-	}
-	#declare_war_on = {
-	#	target = GXC
-	#	type = puppet_focus
-	#}
-	#declare_war_on = {
-	#	target = YUN
-	#	type = puppet_focus
-	#}
-	#declare_war_on = {
-	#	target = PRC
-	#	type = annex_everything
-	#}
-	set_technology = {
-
-		#PLACEHOLDERS for vehicles
-		
-	
-		#doctrines
-		#air
-		force_rotation = 1
-		fighter_baiting = 1
-		low_echelon_support = 1
-		dispersed_fighting = 1
-
-		grand_battle_plan = 1
-		prepared_defense = 1
-		grand_assault = 1
-		carrier_primacy = 1
-		carrier_task_forces = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-		basic_encryption = 1
-		basic_decryption = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		oil_processing = 1
-		fuel_refining2 = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		concentrated_industry = 1
-		concentrated_industry2 = 1
-		concentrated_industry3 = 1
-	}
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		set_technology = {
-			improved_ship_hull_submarine = 1
-			basic_ship_hull_light = 1
-			improved_ship_hull_light = 1
-			improved_ship_hull_cruiser = 1
-			improved_ship_hull_carrier = 1
-			ship_hull_super_heavy = 1
-		}
-		set_naval_oob = "JAP_1939_naval"
-	}
-	if = {
-		limit = {
-			not = { has_dlc = "Man the Guns" }
-		}
-		set_technology = {
-			improved_submarine = 1
-			basic_destroyer = 1
-			improved_destroyer = 1
-			improved_heavy_cruiser = 1
-			improved_carrier = 1
-			heavy_battleship = 1
-		}
-		set_naval_oob = "JAP_1939_naval_legacy"
-	}
-	if = {
-		limit = {
-			has_dlc = "No Step Back"
-		}
-		set_technology = {
-			basic_medium_tank_chassis = 1
-		}
-		set_oob = "JAP_1939_nsb"
-		else = {
-			set_oob = "JAP_1939"
-		}
-	}
-	if = {
-		limit = { has_dlc = "By Blood Alone" }
-			set_air_oob = "JAP_1939_air_bba"
-			set_technology = {
-				basic_medium_airframe = 1
-				range_improvements = 1
-			}
-		else = {
-			set_air_oob = "JAP_1939_air_legacy"
-			set_technology = {
-				cv_fighter1 = 1
-				fighter1 = 1
-				tactical_bomber1 = 1
-			}
-		}
-	}
 }
 
 set_convoys = 400
 
-if = {
-	limit = {
-		has_dlc = "Together for Victory"
-		not = { has_dlc = "Waking the Tiger" }
-	}
-	set_autonomy = {
-		target = MEN
-		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
-		target = MAN
-		autonomous_state = autonomy_integrated_puppet
-	}
-}
-if = {
-	limit = { 
-		not = {
-			has_dlc = "Waking the Tiger"
-			has_dlc = "Together for Victory"
-		}
-	}
-	set_autonomy = {
-		target = MEN
-		autonomous_state = autonomy_puppet
-	}
-	set_autonomy = {
-		target = MAN
-		autonomous_state = autonomy_puppet
-	}
-}
-if = {
-	limit = { 
-		has_dlc = "Waking the Tiger"
-	}
-	set_autonomy = {
-		target = MEN
-		autonomous_state = autonomy_wtt_imperial_protectorate
-	}
-	set_autonomy = {
-		target = MAN
-		autonomous_state = autonomy_wtt_imperial_protectorate
-	}
+set_autonomy = {
+	target = MAN
+	autonomous_state = autonomy_wtt_imperial_protectorate
 }
 
 set_politics = {
@@ -497,6 +347,11 @@ recruit_character = JAP_kingoro_hashimoto
 recruit_character = JAP_sanzo_nosaka
 recruit_character = JAP_hiroshi_oshima
 recruit_character = JAP_kijuro_shidehara
+recruit_character = JAP_kijiro_nambu
+recruit_character = JAP_keiji_fukuda
+recruit_character = JAP_jiro_horikoshi
+recruit_character = JAP_hideki_yukawa
+recruit_character = JAP_yoji_ito
 
 create_equipment_variant = {
 	name = "Arisaka Type 99"
@@ -505,29 +360,7 @@ create_equipment_variant = {
 	design_team = mio:JAP_tokyo_arsenal_organization
 }
 
-if = {
-	limit = {
-		has_dlc = "La Resistance"
-	}
-	create_operative_leader = {
-		name = "Yoshiko Kawashima"
-		GFX = GFX_portrait_yoshiko_kawashima
-		traits = { }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		female = yes
-		nationalities = { MAN JAP CHI }
-	}
 
-	create_operative_leader = {
-		name = "Takeo Yoshikawa"
-		GFX = GFX_portrait_takeo_yoshikawa
-		traits = { }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { JAP }
-	}
-}
 if = {
 	limit = {
 		has_dlc = "No Step Back"
