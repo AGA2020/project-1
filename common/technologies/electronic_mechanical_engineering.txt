@@ -234,11 +234,6 @@ technologies = {
 		
 		research_cost = 1.75
 		
-		folder = {
-			name = electronics_folder
-			position = { x = -2 y = 4 }
-		}
-		
 		ai_will_do = {
 			factor = 0
 		}
@@ -487,7 +482,7 @@ centimetric_radar = {
 		
 		folder = {
 			name = electronics_folder
-			position = { x = 2 y = 2 }
+			position = { x = 3 y = 2 }
 		}
 		
 		ai_will_do = {

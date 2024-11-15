@@ -9718,7 +9718,6 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
 								exists = yes
 							}
 						}
@@ -9827,7 +9826,6 @@ country_event = {
 				POL = {
 					NOT = {
 						AND = {
-							has_completed_focus = POL_restore_bermontians
 							exists = yes
 						}
 					}
@@ -9931,7 +9929,6 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
 								exists = yes
 							}
 						}
@@ -10012,7 +10009,6 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
 								exists = yes
 							}
 						}
@@ -12755,7 +12751,6 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
 								exists = yes
 							}
 						}
@@ -12813,7 +12808,6 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
 								exists = yes
 							}
 						}
@@ -12918,7 +12912,6 @@ country_event = {
 					POL = {
 						NOT = {
 							AND = {
-								has_completed_focus = POL_restore_bermontians
 								exists = yes
 							}
 						}

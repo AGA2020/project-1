@@ -3457,13 +3457,6 @@ country_event = {
 			modifier = { #minors banding together to resist German Annexation should likely resist German annexation
 				factor = 0.5
 				OR = {
-					POL = { #Germany's neighbors are banding together and feeling mighty strong
-						has_completed_focus = POL_coerce_czechoslovakia
-							OR = {
-								is_in_faction_with = CZE
-								has_guaranteed = CZE
-							}
-					}
 					AND = {
 						is_in_faction_with = AUS
 						AUS = {
@@ -3572,13 +3565,6 @@ country_event = {
 			modifier = {
 				add = 150 #Germany's neighbors are banding together and feeling mighty strong. This will increase the chance for players to have an impact on the outcome
 				OR = {
-					POL = { 
-						has_completed_focus = POL_coerce_czechoslovakia
-						OR = {
-							is_in_faction_with = CZE
-							has_guaranteed = CZE
-						}
-					}
 					AND = {
 						AUS = {
 							has_completed_focus = AUS_the_danubian_federation
@@ -9216,19 +9202,6 @@ country_event = {
 			modifier = {
 				factor = 0
 				FRA = { has_completed_focus = FRA_strengthen_the_little_entente }
-			}
-			modifier = {
-				factor = 0
-				POL = {
-					OR = {
-						has_completed_focus = POL_protect_czechozlovakia
-						has_completed_focus = POL_coerce_czechoslovakia
-					}
-				}
-				OR = {
-					is_guaranteed_by = POL
-					is_in_faction_with = POL
-				}
 			}
 			modifier = {
 				factor = 0
