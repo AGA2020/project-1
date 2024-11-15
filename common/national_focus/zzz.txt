@@ -22,6 +22,10 @@ focus_tree = {
 			add = 10
 			tag = IRQ
 		}
+		modifier = {
+			add = 10
+			tag = AUS
+		}
 	}
 
 	default = no

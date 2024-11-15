@@ -59,7 +59,6 @@ bookmarks = {
 			focuses = {
 				GER_anschluss
 				GER_danzig_or_war
-				GER_ussr_war_goal
 			}
 		}
 		"ITA"={
@@ -188,9 +187,6 @@ bookmarks = {
 				HUN_treaty_of_triannon
 			}
 			focuses = {
-				HUN_proclaim_greater_hungary
-				HUN_secret_rearmament
-				HUN_renounce_the_treaty_of_trianon
 			}
 		}
 

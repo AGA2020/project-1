@@ -732,6 +732,83 @@ ideas = {
 			}
 		}
 
+		GER_safeguard_the_baltic_ww = {
+			name = GER_safeguard_the_baltic
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { 
+					OR = {
+						has_government = communism 
+						has_government = fascism 
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = anti_soviet_pact
+
+			modifier = {
+				communism_drift = -0.1
+				fascism_drift = -0.05
+			}
+		}
+
+		GER_safeguard_poland_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { 
+					OR = {
+						has_government = communism 
+						has_government = fascism 
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = anti_soviet_pact
+
+			modifier = {
+				communism_drift = -0.1
+				drift_defence_factor = 0.15
+				political_power_factor = 0.1
+			}
+		}
+
+		GER_joint_military_drills_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { 
+					OR = {
+						has_government = communism 
+						has_government = fascism 
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			picture = tur_coordinated_balkan_armed_forces
+
+			modifier = {
+				experience_gain_army = 0.2
+				experience_gain_navy = 0.1
+				experience_gain_air = 0.2
+				training_time_factor = -0.15
+				weekly_manpower = 250
+			}
+		}
+
 		GER_wilhelm_iii = {
 			allowed = {
 				always = no
