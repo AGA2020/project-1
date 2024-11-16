@@ -54,7 +54,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
 			add_political_power = 50
 
 			add_popularity = {
@@ -3934,24 +3933,6 @@ focus_tree = {
 
 				IF = {
 					limit = {
-						CRO = {
-							has_country_leader = {
-								ruling_only = yes
-								character = CRO_joseph_francis
-							}
-						}
-					}
-					CRO = {
-						add_trait = {
-						    character = CRO_joseph_francis
-						    ideology = despotism
-						    trait = blessed_monarch_trait
-						}
-					}
-				}
-
-				IF = {
-					limit = {
 						SPR = {
 							has_country_leader = {
 								ruling_only = yes
@@ -4006,24 +3987,6 @@ focus_tree = {
 
 				IF = {
 					limit = {
-						UKR = {
-							has_country_leader = {
-								ruling_only = yes
-								character = HUN_vasyl_vyshyvanyi
-							}
-						}
-					}
-					UKR = {
-						add_trait = {
-						    character = HUN_vasyl_vyshyvanyi
-						    ideology = despotism
-						    trait = blessed_monarch_trait
-						}
-					}
-				}
-
-				IF = {
-					limit = {
 						MEX = {
 							has_country_leader = {
 								ruling_only = yes
@@ -4034,78 +3997,6 @@ focus_tree = {
 					MEX = {
 						add_trait = {
 						    character = MEX_maria_de_iturbide
-						    ideology = despotism
-						    trait = blessed_monarch_trait
-						}
-					}
-				}
-
-				IF = {
-					limit = {
-						LBV = {
-							has_country_leader = {
-								ruling_only = yes
-								character = LBV_robert_von_habsburg
-							}
-						}
-					}
-					LBV = {
-						add_trait = {
-						    character = LBV_robert_von_habsburg
-						    ideology = despotism
-						    trait = blessed_monarch_trait
-						}
-					}
-				}
-
-				IF = {
-					limit = {
-						GEO = {
-							has_country_leader = {
-								ruling_only = yes
-								character = GEO_george_bagration
-							}
-						}
-					}
-					GEO = {
-						add_trait = {
-						    character = GEO_george_bagration
-						    ideology = despotism
-						    trait = blessed_monarch_trait
-						}
-					}
-				}
-
-				IF = {
-					limit = {
-						TTS = {
-							has_country_leader = {
-								ruling_only = yes
-								character = TTS_ferdinand_pius
-							}
-						}
-					}
-					TTS = {
-						add_trait = {
-						    character = TTS_ferdinand_pius
-						    ideology = despotism
-						    trait = blessed_monarch_trait
-						}
-					}
-				}
-
-				IF = {
-					limit = {
-						TOS = {
-							has_country_leader = {
-								ruling_only = yes
-								character = TOS_joseph_ferdinand_von_habsburg
-							}
-						}
-					}
-					TOS = {
-						add_trait = {
-						    character = TOS_joseph_ferdinand_von_habsburg
 						    ideology = despotism
 						    trait = blessed_monarch_trait
 						}

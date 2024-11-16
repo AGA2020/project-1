@@ -805,3 +805,12 @@ SOV_ROME = {
 	color = rgb { 128 0 128 }
 	color_ui = rgb { 128 0 128 }
 }
+
+BRA_united_states_of_south_america_cos_tag = {
+        color = rgb { 37 55 129 }
+        color_ui = rgb { 37 55 129 }
+}
+greater_italy = {
+ color = rgb { 0 102 0 }
+ color_ui = rgb { 0 51 0 }
+}
