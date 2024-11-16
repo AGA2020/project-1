@@ -4195,17 +4195,6 @@ BUL_macedonian_revolutionary_organizations = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				BUL_is_historical_ai = yes
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					has_government = communism
-					has_government = democratic
-				}
-			}
 		}
 
 		allowed = { 
@@ -4215,21 +4204,8 @@ BUL_macedonian_revolutionary_organizations = {
 		available = {
 			NOT = { has_country_flag = BUL_macedonian_affairs_ongoing_flag }
 			has_war = no
-			divisions_in_border_state = { #SOFIA - Macedonia
-				size > 1
-				state = 48
-				border_state = 106
-			}
-			divisions_in_border_state = { #PLOVDIV - Central Macedonia
-				size > 3
-				state = 212
-				border_state = 731
-			}
-			divisions_in_border_state = { #PLOVDIV - Thrace
-				size > 3
-				state = 212
-				border_state = 184
-			}		
+			has_equipment = { support_equipment > 199 }
+			has_equipment = { infantry_equipment > 799 }	
 		}
 
 		days_remove = 60

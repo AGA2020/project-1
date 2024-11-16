@@ -9554,12 +9554,6 @@ focus_tree = {
 				}
 			}
 		}
-
-		available = {
-			is_subject = no
-			has_army_manpower = { size > 724999 } #80 div
-		}
-		
 		cancel = {
 			is_subject = yes
 		}
@@ -9854,31 +9848,6 @@ focus_tree = {
 					has_government = communism
 				}
 			}
-		}
-
-		will_lead_to_war_with = CZE
-
-		bypass = {
-			OR = {
-				has_war_with = CZE
-				CZE = { 
-					is_in_faction_with = ROOT
-					NOT = { is_subject_of = ROOT }
-				}
-				NOT = {
-					country_exists = CZE
-					9 = { is_controlled_by = ROOT }
-					75 = { is_controlled_by = ROOT }
-				}
-				any_allied_country = {
-					has_subject = CZE
-				}
-			}
-		}
-		
-		available = { 
-			is_subject = no
-			has_army_manpower = { size > 749999 }
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
@@ -13939,23 +13908,7 @@ focus_tree = {
 		cost = 5
 		
 		available = {
-			is_subject = no
-			has_government = fascism
-			has_army_manpower = { size > 849999 } #ca 90 div
-			SOV = {
-				NOT = { has_war_with = GER }
-				country_exists = SOV
-				has_civil_war = no
-			}
 			NOT = { has_global_flag = beck_ribbentrop_signed }
-		}
-
-		cancel = {
-			OR = {
-				has_war_with = SOV
-				NOT = { country_exists = SOV }
-				has_global_flag = beck_ribbentrop_signed
-			}
 		}
 
 		continue_if_invalid = yes

@@ -433,7 +433,7 @@ on_actions = {
 			#Mexican oil concessions
 			if = {
 				limit = {
-					has_dlc = "Man the Guns"
+					MEX = { is_ai = yes }
 				}
 				MEX = {
 					give_resource_rights = { receiver = ENG state = 476 }
