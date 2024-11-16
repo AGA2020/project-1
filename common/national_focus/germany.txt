@@ -8394,18 +8394,6 @@ focus_tree = {
 				}
 			}
 			modifier = {
-				factor = 4
-				CZE = {
-					has_completed_focus = CZE_german_leanings
-				}
-			}
-			modifier = {
-				factor = 4
-				CZE = {
-					has_completed_focus = CZE_deliver_sudetenland
-				}
-			}
-			modifier = {
 				factor = 2
 				CZE = {
 					has_completed_focus = CZE_go_right
@@ -9640,11 +9628,6 @@ focus_tree = {
 						NOT = { has_war_with = HOL }
 						NOT = { has_war_with = FRA }
 						OR = {
-							HUN = {
-								NOT = {
-									has_completed_focus = HUN_protect_czechoslovakia #DOD only
-								}
-							}
 							CZE = {
 								has_country_flag = HUN_AH_CZE_refused
 							}
@@ -9674,11 +9657,6 @@ focus_tree = {
 							}
 						}
 						OR = {
-							HUN = {
-								NOT = {
-									has_completed_focus = HUN_protect_czechoslovakia #DOD only
-								}
-							}
 							CZE = {
 								has_country_flag = HUN_AH_CZE_refused
 							}
@@ -11369,27 +11347,13 @@ focus_tree = {
 			if =  {
 				limit = {
 					country_exists = HOL
-					NOT = { HOL = { is_in_faction_with = GER } }
 					NOT = { has_war_with = HOL }
-					NOT = { HOL = { has_completed_focus = HOL_cave_to_the_germans } }
 				}
 				create_wargoal = {
 					type = take_state_focus
 					target = HOL
 					expire = 0
 					generator = { 7 }
-				}
-			}
-			if =  {
-				limit = {
-					country_exists = HOL
-					NOT = { HOL = { is_in_faction_with = GER } }
-					NOT = { has_war_with = HOL }
-					HOL = { has_completed_focus = HOL_cave_to_the_germans } 
-					NOT = { HOL = { has_completed_focus = HOL_the_netherlands_first } }
-				}
-				HOL = {
-					country_event = { id = mtg_germany.1 hours = 6 }
 				}
 			}
 			if = {
@@ -33465,14 +33429,8 @@ focus_tree = {
 		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
 		prerequisite = { focus = GER_prepare_for_the_next_blockade }
 		available = {
-			is_subject = no
-			NOT = { is_in_faction_with = ENG }
-			NOT = { is_in_faction_with = FRA }
-			NOT = { ENG = { has_completed_focus = ENG_decolonization } }
 		}
 		cancel_if_invalid = yes
-		will_lead_to_war_with = ENG
-		will_lead_to_war_with = FRA
 		x = 0
 		y = 1
 		relative_position_id = GER_prepare_for_the_next_blockade
@@ -33482,126 +33440,6 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = ENG
-				expire = 0
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = FRA
-				expire = 0
-			}
-			if = {
-				limit = {
-					BEL = {
-						OR = {
-							owns_state = 768
-							owns_state = 769
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = BEL
-					expire = 0
-					generator = { 768 769 }
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						SAF = {
-							is_subject_of = ENG
-						}
-					}
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = SAF
-					expire = 0
-					generator = { 541 }
-				}
-			}
-			if = {
-				limit = {
-					country_exists = NMB
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = NMB
-					expire = 0
-					generator = { 541 }
-				}
-			}
-			if = {
-				limit = {
-					country_exists = CMR
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = CMR
-					expire = 0
-					generator = { 773 }
-				}
-			}
-			if = {
-				limit = {
-					country_exists = TOG
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = TOG
-					expire = 0
-					generator = { 777 }
-				}
-			}
-			if = {
-				limit = {
-					country_exists = TZN
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = TZN
-					expire = 0
-					generator = { 549 }
-				}
-			}
-			if = {
-				limit = {
-					country_exists = RWA
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = RWA
-					expire = 0
-					generator = { 768 }
-				}
-			}
-			if = {
-				limit = {
-					country_exists = BRD
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = BRD
-					expire = 0
-					generator = { 769 }
-				}
-			}
-			add_state_claim = 523
-			add_state_claim = 773
-			add_state_claim = 541
-			add_state_claim = 546
-			add_state_claim = 737
-			add_state_claim = 684
-			add_state_claim = 633
-			add_state_claim = 646
-			add_state_claim = 647
-			add_state_claim = 726
-			add_state_claim = 777
-			add_state_claim = 768
-			add_state_claim = 769
 		}
 	}
 
@@ -34865,7 +34703,6 @@ focus_tree = {
 						limit = {
 							original_tag = SPR
 							has_government = communism
-							NOT = { has_completed_focus = SPR_hinder_nkvd_interference }
 						}
 						add_ai_strategy = {
 							type = befriend

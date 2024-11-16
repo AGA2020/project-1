@@ -1510,7 +1510,7 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 
 		keep_all_characters = yes
 
-		size = 0
+		size = 0.20
 		#army_ratio = var:ITA_cw_army_size
 		#navy_ratio = var:ITA_cw_navyy_size
 		#air_ratio = var:ITA_cw_air_size
