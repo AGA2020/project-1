@@ -3435,18 +3435,6 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
-			any_state = {
-				is_core_of = ITA
-				is_controlled_by_ROOT_or_subject = yes
-			}
-			ITA = {
-				OR = {
-					exists = no
-					has_capitulated = yes
-					is_subject_of = ROOT
-				}
-			}
 		}
 
 		bypass = {
@@ -3578,68 +3566,6 @@ focus_tree = {
 						transfer_state = 846
 						add_state_core = 846
 					}
-				}
-
-				IF = { #set up Tuscany puppet
-					limit = {
-						162 = {
-							is_owned_or_subject_trigger = yes
-						}
-						TOS = {
-							exists = no
-						}
-					}
-					TOS = {
-						transfer_state = 162
-						add_offsite_building = {
-							type = industrial_complex
-							level = 2
-						}
-						add_offsite_building = {
-							type = arms_factory
-							level = 1
-						}
-						add_political_power = 75
-						delete_unit_template_and_units = {
-							division_template = "Battaglione delle Guardie Reali"
-							disband = yes #if yes, will refund equipment/manpower.
-						}
-
-						division_template = {
-							name = "Battaglione delle Guardie Reali"
-							division_names_group = ITA_INF_01
-							role = infantry
-							is_locked = no
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-								infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-								infantry = { x = 2 y = 0 }
-								infantry = { x = 2 y = 1 }
-								infantry = { x = 2 y = 2 }
-							}
-							support = {
-								engineer = { x = 0 y = 0 }
-								artillery = { x = 0 y = 1 }
-							}
-						}
-
-						random_state = {
-							limit = {
-								is_fully_controlled_by = PREV
-								is_owned_by = PREV
-								is_core_of = PREV
-							}
-							create_unit = {
-							    division = "name = \"Primo Battaglione delle Guardie Reali'\" division_template = \"Battaglione delle Guardie Reali\" start_experience_factor = 0.4 start_equipment_factor = 0.9"
-							    owner = PREV
-							}
-						}
-					}
-					puppet = TOS
 				}
 
 				IF = { #set up Papal puppet

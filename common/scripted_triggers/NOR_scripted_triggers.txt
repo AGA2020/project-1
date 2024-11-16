@@ -199,7 +199,6 @@ NOR_char_cw_labor_only = { # They go democratic as long as it's Labor
 
 NOR_char_cw_conservative = {
 	has_government = democratic 
-	NOT = { has_completed_focus = NOR_continue_nygaardsvold_government }
 }
 NOR_char_cw_stalinist = { # Communist but only if it's Stalin
 	has_government = communism

@@ -322,6 +322,19 @@ intelligence_agency = {
 }
 
 intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_HUN_IH
+	names = { "VKF 2" } # Információs Hivatal
+	
+	default = { 
+		tag = HUN 
+	} 
+	available = { 
+		original_tag = HUN 
+	}
+}
+
+intelligence_agency = {
 	
 	picture = GFX_intelligence_agency_logo_BRA_communist
 	names = { "EICI" }
