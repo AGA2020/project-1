@@ -712,47 +712,10 @@ GER_daimler_benz_organization = {
 	icon = GFX_idea_GER_daimler_benz
 	
 	allowed = {	
-		OR = {
-			original_tag = GER 
-			AND = {
-				original_tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-			AND = {
-				original_tag = BEL
-				has_dlc = "Gotterdammerung"
-			}
-		}
+		original_tag = GER 
 	}
 
 	available = {
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = GER } }
-			}
-			FROM = { NOT = { has_war_with = GER } }
-		}
-		IF = {
-			limit = {
-				FROM = {
-					original_tag = BRA
-				}
-			}
-			FROM = {
-				has_completed_focus = BRA_german_tanks
-			}
-		}
-
-		IF = {
-			limit = {
-				FROM = {
-					original_tag = BEL
-				}
-			}
-			FROM = {
-				has_completed_focus = BEL_invite_german_tank_organization
-			}
-		}
 	}
 
 	tree_header_text = {

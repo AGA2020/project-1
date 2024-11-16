@@ -5364,9 +5364,6 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
-			GEN = {
-				exists = yes
-			}
 			NOT = {
 				has_country_flag = GER_handed_over_austrian_galicia_to_gen
 			}
@@ -5404,10 +5401,6 @@ GER_reichskommissariats = {
 				add = 1
 				SOV = { has_capitulated = yes }
 			}
-			modifier = {
-				add = 9
-				GEN = { exists = yes }
-			}
 		}
 
 		complete_effect = {
@@ -5423,7 +5416,6 @@ GER_reichskommissariats = {
 							owner = { is_subject_of = ROOT }
 						}
 					}
-					transfer_state_to = GEN
 					add_compliance = 20
 				}
 				every_state = {	
@@ -5439,9 +5431,6 @@ GER_reichskommissariats = {
 							}
 						}
 					}
-					add_contested_owner = GEN
-					set_state_controller_to = GEN
-					add_claim_by = GEN
 					add_compliance = 20
 				}
 			}	
