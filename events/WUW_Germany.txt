@@ -326,14 +326,6 @@ country_event = {
 				has_country_flag = GER_trading_proposal_flag
 			}
 			effect_tooltip = {
-				COG = {
-					add_ideas = GER_german_trade_ns
-
-					add_opinion_modifier = {
-						target = FROM
-						modifier = GER_trading_partners
-					}
-				}
 			}
 		}
 		custom_effect_tooltip = war_will_cancel_deal_tt
@@ -410,13 +402,6 @@ country_event = { #FROM accepts our trade deal
 				FROM = {
 					original_tag = BEL
 					has_country_flag = GER_trading_proposal_flag
-				}
-			}
-			COG = {
-				add_ideas = GER_german_trade_ns
-				add_opinion_modifier = {
-					target = GER
-					modifier = GER_trading_partners
 				}
 			}
 		}
@@ -6960,7 +6945,6 @@ country_event = {
 					OWNER = {
 						NOT = {
 							OR = {
-								original_tag = COG
 								original_tag = BEL
 							}
 						}
@@ -6970,7 +6954,6 @@ country_event = {
 					OWNER = {
 						NOT = {
 							OR = {
-								original_tag = COG
 								original_tag = BEL
 							}
 						}
@@ -6980,7 +6963,6 @@ country_event = {
 					OWNER = {
 						NOT = {
 							OR = {
-								original_tag = COG
 								original_tag = BEL
 							}
 						}
@@ -6990,7 +6972,6 @@ country_event = {
 					OWNER = {
 						NOT = {
 							OR = {
-								original_tag = COG
 								original_tag = BEL
 							}
 						}
@@ -7000,7 +6981,6 @@ country_event = {
 					OWNER = {
 						NOT = {
 							OR = {
-								original_tag = COG
 								original_tag = BEL
 							}
 						}
@@ -7083,13 +7063,6 @@ country_event = {
 					295 = {
 						is_owned_and_controlled_by = BEL
 					}
-					COG = {
-						exists = yes
-						OR = {
-							is_subject_of = BEL
-							is_in_faction_with = BEL
-						}
-					}
 				}
 			}
 			BEL = {
@@ -7166,82 +7139,31 @@ country_event = {
 				days = 1
 			}
 		}
-		IF = {
-			limit = {
-				COG = {
-					exists = no
-				}
-			}
-			effect_tooltip = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 888
-							state = 889
-						}
-						is_owned_by = ROOT
+		effect_tooltip = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 888
+						state = 889
 					}
-					transfer_state_to = ENG
+					is_owned_by = ROOT
 				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				every_state = {
-					limit = {
-						OR = {
-							state = 295
-							state = 538
-							state = 718
-							state = 890
-							state = 768
-							state = 769
-						}
-						is_owned_by = ROOT
-					}
-					transfer_state_to = GER
-				}
+				transfer_state_to = ENG
 			}
-			
-		}
-
-		IF = {
-			limit = {
-				COG = {
-					exists = yes
-				}
-			}
-			COG = {
-				# Belgium decides to split us
-				country_event = { 
-					id = wuw_GER_weltpolitik.7
-					days = 2
-				}
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				every_state = {
-					limit = {
-						OR = {
-							state = 888
-							state = 889
-						}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_state = {
+				limit = {
+					OR = {
+						state = 295
+						state = 538
+						state = 718
+						state = 890
+						state = 768
+						state = 769
 					}
-					transfer_state_to = ENG
+					is_owned_by = ROOT
 				}
-				
-				every_state = {
-					limit = {
-						OR = {
-							state = 295
-							state = 538
-							state = 718
-							state = 890
-							state = 768
-							state = 769
-						}
-					}
-					transfer_state_to = GER
-				}
+				transfer_state_to = GER
 			}
 		}
 		
@@ -7293,27 +7215,7 @@ country_event = {
 				}
 				add_claim_by = GER
 			}
-			
-			
-			IF = {
-				limit = {
-					COG = {
-						exists = yes
-					}
-				}
-				every_country = {
-					limit = {
-						OR = {
-							original_tag = ENG
-							original_tag = GER
-						}
-					}
-					create_wargoal = {
-						type = take_claimed_state
-						target = COG
-					}
-				}	
-			}
+
 			IF = {
 				limit = {
 					any_state = {
@@ -7364,31 +7266,8 @@ country_event = {
 		}	
 
 		add_threat = 3
-		
-		every_state = {
-			limit = {
-				OR = {
-					is_core_of = COG
-					is_core_of = RWA
-					is_core_of = BRD
-				}
-			}
-			add_claim_by = ROOT
-		}
 
 		IF = {
-			limit = {
-				COG = {
-					exists = yes
-					owns_state = 295
-				}
-			}
-			create_wargoal = {
-				type = take_claimed_state
-				target = COG
-			}	
-		}
-		ELSE_IF = {
 			limit = {
 				BEL = {
 					owns_state = 295
@@ -7604,18 +7483,7 @@ country_event = {
 				add_claim_by = ROOT
 			}
 		}
-		
-		IF = {
-			limit = {
-				COG = {
-					exists = yes
-				}
-			}
-			create_wargoal = {
-				type = take_claimed_state
-				target = COG
-			}	
-		}
+
 		IF = {
 			limit = {
 				any_state = {
@@ -7707,18 +7575,6 @@ country_event = {
 				add_claim_by = ROOT
 			}
 		}
-		
-		IF = {
-			limit = {
-				COG = {
-					exists = yes
-				}
-			}
-			create_wargoal = {
-				type = take_claimed_state
-				target = COG
-			}	
-		}
 
 	}
 	option = { # Today is a good day (OBS: "CONGO SAID YES")
@@ -7781,86 +7637,12 @@ country_event = {
 
 		hidden_effect = {
 
-			IF = {
-				limit = {
-					COG = {
-						is_subject_of = ROOT
-					}
-				}
-				ROOT = {
-					set_autonomy = {
-						target = COG
-						autonomy_state = autonomy_free
-						freedom_level = 1
-						end_wars  = no
-						end_civil_wars = no
-					}
-				}
-			}
-			IF = {
-				limit = {
-					COG = {
-						has_cosmetic_tag = COG_belgian_congo
-					}
-				}
-				COG = {
-					drop_cosmetic_tag = yes
-					set_politics = {
-						ruling_party = democratic
-						elections_allowed = yes
-					}	
-					add_popularity = {
-						ideology = democratic
-						popularity = 0.25
-					}	
-					add_popularity = {
-						ideology = communism
-						popularity = 0.1
-					}	 
-				}
-				
-			}
-
-			IF = {
-				limit = {
-					COG = {
-						has_idea = BEL_albert_de_vleeschauwer
-					}
-				}
-				COG = {
-					remove_ideas = BEL_albert_de_vleeschauwer
-				}
-			}
-
-			COG = {
-				set_party_name = {
-					ideology = neutrality
-					long_name = house_of_agua_rosada_long
-					name = house_of_agua_rosada
-				}
-
-				add_country_leader_role = {
-					character =  COG_pedro_vii_alfonso
-					promote_leader = yes
-					country_leader = {
-						ideology = despotism
-						expire = "1969.1.1.1"
-						traits = { manikongo_of_kongo } 
-					}
-				}
-			}
-
 		}
 
 	}
 
 	option = { # We must destroy them for the protection of our people! ("CONGO SAID NO!!!")
 		name = wuw_GER_weltpolitik.11.a	
-
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = COG
-		}	
 		
 	}
 }
@@ -9133,21 +8915,6 @@ country_event = {
 	picture = GFX_report_event_german_politician_speech
 
 	immediate = {
-		hidden_effect = {
-			IF = {
-				limit = {
-					UKR = {
-						exists = no
-					}
-				}
-				UKR = {
-					set_nationality = {
-					    target_country = RKU
-					    character = UKR_mykhailo_omelianovych_pavlenko
-					}
-				}
-			}
-		}
 	}
 
 	is_triggered_only = yes
@@ -9157,26 +8924,6 @@ country_event = {
 		ai_chance = {
 			base = 85
 		}	
-
-		RKU = {
-			add_ideas = GER_german_controlled_reichskommissariat
-		}
-
-		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-				limit = {
-					UKR = {
-						exists = no
-					}
-				}
-				RKU = {
-					set_nationality = {
-					    target_country = UKR
-					    character = UKR_mykhailo_omelianovych_pavlenko
-					}
-				}
-			}
-		}
 		
 	}
 
@@ -9190,21 +8937,6 @@ country_event = {
 		ai_chance = {
 			base = 15
 		}		
-		
-		RKU = {
-			UKR_mykhailo_omelianovych_pavlenko = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = 1960.1.1
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_local_controlled_reichskommissariat
-		}
 
 	}
 }
@@ -9218,27 +8950,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			IF = {
-				limit = {
-					BLR = {
-						OR = {
-							exists = no
-							AND = {
-								exists = yes
-							}
-							NOT = {
-								has_government = fascism
-							}
-						}
-					}
-				}
-				BLR = {
-					set_nationality = {
-					    target_country = RKO
-					    character = BLR_radislau_astrouski
-					}
-				}
-			}
+
 		}
 	}
 
@@ -9250,57 +8962,16 @@ country_event = {
 			base = 85
 		}	
 
-		RKO = {
-			add_ideas = GER_german_controlled_reichskommissariat
-		}
-
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-				limit = {
-					BLR = {
-						NOT = {
-							has_government = fascism
-						}
-					}
-				}
-				RKO = {
-					set_nationality = {
-					    target_country = BLR
-					    character = BLR_radislau_astrouski
-					}
-				}
-			}
 		}
 		
 	}
 
 	option = { # It might be wise to use a local puppet
 		name = wuw_GER_reichskommissariats.5.b
-		trigger = {
-			BLR = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-		}
 		ai_chance = {
 			base = 15
 		}		
-		
-		RKO = {
-			BLR_radislau_astrouski = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = "1965.3.1"
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_local_controlled_reichskommissariat
-		}
 
 	}
 }
@@ -9313,21 +8984,7 @@ country_event = {
 	picture = GFX_report_event_german_politician_speech
 
 	immediate = {
-		hidden_effect = {
-			IF = {
-				limit = {
-					GEO = {
-						exists = no
-					}
-				}
-				GEO = {
-					set_nationality = {
-					    target_country = RKK
-					    character = GEO_shalva_maglakelidze
-					}
-				}
-			}
-		}
+
 	}
 
 	is_triggered_only = yes
@@ -9338,24 +8995,7 @@ country_event = {
 			base = 85
 		}	
 
-		RKK = {
-			add_ideas = GER_german_controlled_reichskommissariat
-		}
-
 		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-				limit = {
-					GEO = {
-						exists = no
-					}
-				}
-				RKK = {
-					set_nationality = {
-					    target_country = GEO
-					    character = GEO_shalva_maglakelidze
-					}
-				}
-			}
 		}
 		
 	}
@@ -9370,22 +9010,6 @@ country_event = {
 		ai_chance = {
 			base = 15
 		}		
-		
-		RKK = {
-			GEO_shalva_maglakelidze = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = 1960.1.1
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_local_controlled_reichskommissariat
-		}
-
 	}
 }
 
@@ -9511,9 +9135,6 @@ country_event = {
 			base = 85
 		}		
 		
-		RKT = {
-			add_ideas = GER_local_controlled_reichskommissariat
-		}
 
 		hidden_effect = {
 			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
@@ -9524,12 +9145,6 @@ country_event = {
 						}
 					}
 				}
-				RKT = {
-					set_nationality = {
-					    target_country = ROOT
-					    character = GER_friedrich_schulz
-					}
-				}
 			}
 			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
@@ -9537,12 +9152,6 @@ country_event = {
 						NOT = {
 							has_completed_focus = GER_panzer_troops_school
 						}
-					}
-				}
-				RKT = {
-					set_nationality = {
-					    target_country = ROOT
-					    character = GER_hasso_von_manteuffel
 					}
 				}
 			}
@@ -9665,42 +9274,6 @@ country_event = {
 			add_core_of = ROOT
 		}
 		
-	}
-
-	option = { # It should be incorporated into Moskowien
-		name = wuw_GER_reichskommissariats.9.b
-		trigger = {
-			RKM = {
-				exists = yes
-			}
-		}
-		ai_chance = {
-			base = 20
-		}		
-		
-		829 = {
-			transfer_state_to = RKM
-			add_compliance = 45	
-		}
-
-	}
-
-	option = { # It should be incorporated into Turkestan
-		name = wuw_GER_reichskommissariats.9.c
-		trigger = {
-			RKT = {
-				exists = yes
-			}
-		}
-		ai_chance = {
-			base = 0
-		}		
-		
-		829 = {
-			transfer_state_to = RKT
-			add_compliance = 45	
-		}
-
 	}
 }
 
@@ -9844,80 +9417,6 @@ country_event = {
 		}
 
 	}
-
-	option = { # It should be incorporated into Turkestan
-		name = wuw_GER_reichskommissariats.10.c
-		trigger = {
-			RKT = {
-				exists = yes
-			}
-		}
-		ai_chance = {
-			base = 5
-		}		
-		
-		custom_effect_tooltip = GER_reichskommissariat_ural_rkt_effect_tt
-			
-		hidden_effect = {
-			every_state = {
-				limit = {
-					GER_is_RK_south_urals_state = yes
-					OR = {
-						is_owned_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							owns_state = PREV
-						}
-					}
-				}
-				transfer_state_to = RKT
-			}
-			every_state = {	
-				limit = {
-					GER_is_RK_south_urals_state = yes
-					NOT = {
-						OR = {
-							is_owned_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								owns_state = PREV
-							}
-						}
-					}
-				}
-				add_contested_owner = RKT
-				set_state_controller_to = RKT
-				add_claim_by = RKT
-			}
-
-			RKT = {
-				add_manpower = 15000
-				add_equipment_to_stockpile = { 
-					type = infantry_equipment
-					amount = 500
-					producer = GER
-				}	
-				add_equipment_to_stockpile = { 
-					type = support_equipment
-					amount = 250
-					producer = GER
-				}	
-			}
-
-			IF = {
-				limit = {
-					POL = {
-						NOT = {
-							AND = {
-								exists = yes
-							}
-						}
-					}
-				}
-			}
-		}
-
-	}
 }
 
 # The Status of Eastern Karelia - event for GER
@@ -9983,67 +9482,6 @@ country_event = {
 			}
 		}
 		
-	}
-
-	option = { # It should be incorporated into Moskowien
-		name = wuw_GER_reichskommissariats.11.b
-		trigger = {
-			RKM = {
-				exists = yes
-			}
-		}
-		ai_chance = {
-			base = 50
-		}		
-		
-		custom_effect_tooltip = GER_karelia_rkm_effect_tt
-			
-		hidden_effect = {
-			every_state = {
-				limit = {
-					OR = {
-						GER_is_soviet_greater_finland_state = yes
-						GER_is_additional_soviet_greater_finland_state = yes
-					}
-					OR = {
-						is_owned_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							owns_state = PREV
-						}
-					}
-				}
-				transfer_state_to = RKM
-			}
-			every_state = {	
-				limit = {
-					OR = {
-						GER_is_soviet_greater_finland_state = yes
-						GER_is_additional_soviet_greater_finland_state = yes
-					}
-					NOT = {
-						OR = {
-							is_owned_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								owns_state = PREV
-							}
-						}
-					}
-					OR = {
-						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
-						}
-					}
-				}
-				add_contested_owner = RKM
-				set_state_controller_to = RKM
-				add_claim_by = RKM
-			}
-		}
-
 	}
 }
 
@@ -10332,31 +9770,7 @@ country_event = {
 	picture = GFX_report_event_german_politician_speech
 
 	immediate = {
-		hidden_effect = {
-			IF = {
-				limit = {
-					SPR = {
-						NOT = {
-							has_government = fascism
-						}
-					}
-					SPA = {
-						NOT = {
-							has_government = fascism
-						}
-					}
-				}
-				every_possible_country = {
-					limit = {
-						has_character = SPA_emilio_mola
-					}
-					set_nationality = {
-					    target_country = RKI
-					    character = SPA_emilio_mola
-					}
-				}
-			}
-		}
+
 	}
 
 	is_triggered_only = yes
@@ -10366,28 +9780,6 @@ country_event = {
 		ai_chance = {
 			base = 95
 		}	
-
-		RKI = {
-			add_ideas = GER_german_controlled_reichskommissariat
-		}
-
-		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-				limit = {
-					SPR = {
-						NOT = {
-							has_government = fascism
-						}
-					}
-				}
-				RKI = {
-					set_nationality = {
-					    target_country = SPR
-					    character = SPA_emilio_mola
-					}
-				}
-			}
-		}
 		
 	}
 
@@ -10409,20 +9801,6 @@ country_event = {
 			base = 5
 		}		
 		
-		RKI = {
-			SPA_emilio_mola = {
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = 1960.1.1
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_local_controlled_reichskommissariat
-		}
 
 	}
 }
@@ -10437,24 +9815,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			# Local Guy
-			IF = {
-				limit = {
-					CRO = {
-						OR = {
-							NOT = {
-								has_government = fascism
-							}
-							exists = no
-						}
-					}
-				}
-				CRO = {
-					set_nationality = {
-					    target_country = RKC
-					    character = CRO_ante_pavelic
-					}
-				}
-			}
+
 
 			# German Guy
 			IF = {
@@ -10468,20 +9829,9 @@ country_event = {
 						}
 					}
 				}
-				HUN = {
-					set_nationality = {
-					    target_country = RKC
-					    character = HUN_franz_friedrich
-					}
-				}
+
 			}
 			ELSE = {
-				GER = {
-					set_nationality = {
-					    target_country = RKC
-					    character = GER_georghans_reinhardt
-					}
-				}
 			}
 		}
 	}
@@ -10493,73 +9843,6 @@ country_event = {
 		ai_chance = {
 			base = 55
 		}	
-
-		RKC = {
-			IF = {
-				limit = {
-					HUN = {
-						OR = {
-							NOT = {
-								has_completed_focus = wuw_HUN_elect_a_fascist_king
-							}
-							exists = no
-						}
-					}
-				}
-				HUN_franz_friedrich = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			ELSE = {
-				GER_georghans_reinhardt = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-			add_ideas = GER_german_controlled_reichskommissariat
-		}
-
-		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-				limit = {
-					CRO = {
-						OR = {
-							NOT = {
-								has_government = fascism
-							}
-							exists = no
-						}
-					}
-				}
-				RKC = {
-					set_nationality = {
-					    target_country = CRO
-					    character = CRO_ante_pavelic
-					}
-				}
-			}
-		}
 		
 	}
 
@@ -10578,24 +9861,6 @@ country_event = {
 		ai_chance = {
 			base = ´45
 		}		
-		
-		RKC = {
-			CRO_ante_pavelic = {
-				remove_country_leader_role = {
-					ideology = nazism
-				}
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = 1960.1.1
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_local_controlled_reichskommissariat
-		}
 
 		hidden_effect = {
 			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
@@ -10609,20 +9874,10 @@ country_event = {
 						}
 					}
 				}
-				RKC = {
-					set_nationality = {
-					    target_country = HUN
-					    character = HUN_franz_friedrich
-					}
-				}
+
 			}
 			ELSE = {
-				RKC = {
-					set_nationality = {
-					    target_country = GER
-					    character = GER_georghans_reinhardt
-					}
-				}
+
 			}
 		}
 
@@ -10636,52 +9891,6 @@ country_event = {
 	desc = wuw_GER_reichskommissariats.16.desc 
 	picture = GFX_report_event_german_politician_speech
 
-	immediate = {
-		hidden_effect = {
-			# Local Guy
-			IF = {
-				limit = {
-					ENG = {
-						OR = {
-							NOT = {
-								has_government = fascism
-							}
-							exists = no
-						}
-					}
-				}
-				ENG = {
-					set_nationality = {
-					    target_country = RGB
-					    character = ENG_oswald_mosley
-					}
-				}
-			}
-
-			# German Guy
-			IF = {
-				limit = {
-					HES = {
-						exists = no
-					}
-				}
-				HES = {
-					set_nationality = {
-					    target_country = RGB
-					    character = HES_philipp_of_hesse
-					}
-				}
-			}
-			ELSE = {
-				GER = {
-					set_nationality = {
-					    target_country = RGB
-					    character = GER_otto_strasser
-					}
-				}
-			}
-		}
-	}
 
 	is_triggered_only = yes
 
@@ -10690,128 +9899,7 @@ country_event = {
 		ai_chance = {
 			base = 55
 		}	
-
-		RGB = {
-			IF = {
-				limit = {
-					HES = {
-						exists = no
-					}
-				}
-				HES_philipp_of_hesse = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
-				}
-			}
-			ELSE = {
-				GER_otto_strasser = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_german_controlled_reichskommissariat
-		}
-
-		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-				limit = {
-					ENG = {
-						OR = {
-							NOT = {
-								has_government = fascism
-							}
-							exists = no
-						}
-					}
-				}
-				RGB = {
-					set_nationality = {
-					    target_country = ENG
-					    character = ENG_oswald_mosley
-					}
-				}
-			}
-		}
 		
-	}
-
-	option = { # It might be wise to use a local puppet
-		name = wuw_GER_reichskommissariats.16.b
-		trigger = {
-			CRO = {
-				OR = {
-					NOT = {
-						has_government = fascism
-					}
-					exists = no
-				}
-			}
-		}
-		ai_chance = {
-			base = ´45
-		}		
-		
-		RGB = {
-			ENG_oswald_mosley = {
-				remove_country_leader_role = {
-					ideology = nazism
-				}
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = 1960.1.1
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_local_controlled_reichskommissariat
-		}
-
-		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-				limit = {
-					HES = {
-						exists = no
-					}
-				}
-				RGB = {
-					set_nationality = {
-					    target_country = HES
-					    character = HES_philipp_of_hesse
-					}
-				}
-			}
-			ELSE = {
-				RGB = {
-					set_nationality = {
-					    target_country = GER
-					    character = GER_otto_strasser
-					}
-				}
-			}
-		}
-
 	}
 }
 
@@ -10870,73 +9958,9 @@ country_event = {
 		
 	}
 
-	option = { # It should be incorporated into Balkan
-		name = wuw_GER_reichskommissariats.17.b
-		trigger = {
-			RKC = {
-				exists = yes
-			}
-			has_country_flag = GER_decided_on_hungarian_status
-		}
-		ai_chance = {
-			base = 60
-		}		
-		
-		custom_effect_tooltip = GER_slovakia_rkc_effect_tt
-			
-		hidden_effect = {
-			every_state = {
-				limit = {
-					GER_is_far_north_RKC_state = yes
-					OR = {
-						is_owned_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							owns_state = PREV
-						}
-					}
-				}
-				transfer_state_to = RKC
-			}
-			every_state = {	
-				limit = {
-					GER_is_far_north_RKC_state = yes
-					NOT = {
-						OR = {
-							is_owned_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								owns_state = PREV
-							}
-						}
-					}
-					OR = {
-						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
-						}
-					}
-				}
-				add_contested_owner = RKC
-				set_state_controller_to = RKC
-				add_claim_by = RKC
-			}
-		}
-
-	}
-
 	option = { # It should be incorporated into Böhmen-Mähren
 		name = wuw_GER_reichskommissariats.17.c
 		trigger = {
-			AND = {
-				RKH = {
-					exists = yes
-				}
-				SLO = {
-					exists = no
-				}
-			}
 		}
 		ai_chance = {
 			base = 15
@@ -20898,12 +19922,6 @@ country_event = {
 
 		ai_chance = {
 			base = 1
-			modifier = { #Himmler should replace Bormann on Historical when he ascends
-				factor = 100
-				GER_is_historical_ai = yes
-				check_variable = { GER_ascending_advisor = 4 } #Himmler Ascending
-				check_variable = { GER_ascended_advisor_1 = 7 } #Bormann ascended in this slot
-			}
 		}
 		
 		GER_remove_replaced_advisor_1_effects = yes
@@ -20925,12 +19943,6 @@ country_event = {
 
 		ai_chance = {
 			base = 1
-			modifier = { #Himmler should replace Bormann on Historical when he ascends
-				factor = 100
-				GER_is_historical_ai = yes
-				check_variable = { GER_ascending_advisor = 4 } #Himmler Ascending
-				check_variable = { GER_ascended_advisor_2 = 7 } #Bormann ascended in this slot
-			}
 		}
 
 		GER_remove_replaced_advisor_2_effects = yes
@@ -20952,12 +19964,6 @@ country_event = {
 
 		ai_chance = {
 			base = 1
-			modifier = { #Himmler should replace Bormann on Historical when he ascends
-				factor = 100
-				GER_is_historical_ai = yes
-				check_variable = { GER_ascending_advisor = 4 } #Himmler Ascending
-				check_variable = { GER_ascended_advisor_3 = 7 } #Bormann ascended in this slot
-			}
 		}
 
 		GER_remove_replaced_advisor_3_effects = yes
@@ -21693,16 +20699,6 @@ country_event = {
 
 		ai_chance = {
 			base = 0
-			modifier = { #Speer is preferred for Historical plan
-				add = 100
-				check_variable = { GER_intrigue_character = 2 } #Speer
-				GER_is_historical_ai = yes
-			}
-			modifier = { #Göring is preferred for Alt-Fascist plan
-				add = 100
-				check_variable = { GER_intrigue_character = 3 } #Göring
-				GER_is_alt_fascist_ai = yes
-			}
 		}
 		
 		if = {
@@ -22078,11 +21074,7 @@ country_event = {
 		name = GER_inner_circle.03.c
 
 		ai_chance = {
-			base = 1
-			modifier = { #Speer is preferred for Historical plan
-				add = 100
-				GER_is_historical_ai = yes
-			}
+			base = 100
 			modifier = { #Göring is preferred for Alt-Fascist plan - Choosing someone else only delays the country leader change
 				factor = 0.1 #Leaving non-0 so that there's fallback if for some reason Göring is not there
 				GER_is_alt_fascist_ai = yes
@@ -23039,10 +22031,6 @@ country_event = {
 		name = GER_inner_circle_himmler.00.b
 		ai_chance = {
 			base = 10
-			modifier = {
-				factor = 0.01
-				GER_is_historical_ai = yes
-			}
 		}
 		custom_effect_tooltip = GER_inner_circle_himmler_gestapo_tt
 
