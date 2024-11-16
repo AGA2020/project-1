@@ -9630,13 +9630,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
@@ -9655,41 +9648,6 @@ focus_tree = {
 				}
 				set_global_flag = end_of_czechoslovakia
 				CZE = { country_event = germany.53 }
-			}
-			else_if = {
-				limit = {
-					CZE = { 
-						is_subject_of = ROOT
-					}
-				}
-				CZE = { country_event = { id = wuw_GER_diplomacy.117 days = 1 }}
-			}
-			else_if = {
-				limit = {
-					CZE = {
-						exists = no
-					}
-					9 = {
-						is_controlled_by = ROOT
-					}
-					75 = {
-						is_controlled_by = ROOT
-					}
-				}
-				add_state_claim = 9
-				add_state_claim = 75
-				country_event = { id = germany.55 hours = 6 }
-			}
-			else_if = {
-				limit = {
-					CZE = { exists = yes }
-				}
-				add_state_claim = 9
-				add_state_claim = 75
-				create_wargoal = {
-					type = annex_everything
-					target = CZE
-				}
 			}
 		}
 	}
@@ -10750,23 +10708,6 @@ focus_tree = {
 
 		will_lead_to_war_with = POL
 
-		bypass = {
-			OR = {
-				has_war_with = POL
-				is_in_faction_with = POL
-				NOT = {
-					85 = {
-						controller = {
-							original_tag = POL 
-						}
-						owner = {
-							original_tag = POL 
-						}
-					}
-				}
-			}
-		}
-
 		continue_if_invalid = yes
 
 		available = {
@@ -10832,6 +10773,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
 		
 		completion_reward = {
+		hidden_effect = { POL = { set_nationality = { target_country = ENG character = POL_jan_zumbach } } }
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
 			if = {
 				limit = {

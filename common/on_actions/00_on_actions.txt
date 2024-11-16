@@ -811,6 +811,23 @@ on_actions = {
 			}
 		}
 	}
+	
+	#GERMANY - Set Flag in capitulated country for Seize Gold Reserves Decision purposes
+	effect = {
+		if = {
+			limit = {
+				FROM = { 
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+			ROOT = {
+				set_country_flag = GER_has_capitulated_to_germany
+			}
+		}
+	}
 
 	# ROOT is previously capitulated country
 	on_uncapitulation = {
@@ -1176,6 +1193,47 @@ on_actions = {
 	#FROM = defending side
 	#fired when two countries end up at war with each other (on_war is fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first)
 	on_war_relation_added = {
+		#Remove MEFO bills if Germany is gets into a war
+		effect = { 
+			if = {
+				limit = {
+					ROOT = { 
+						original_tag = GER
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+					}
+					NOT = { 
+						FROM = {
+							OR = {
+								original_tag = GER 
+								original_tag = SIL 
+							}
+						} 
+					} # Don't remove it from Fascist Germany if they start the civil war
+				}
+				ROOT = {
+					country_event = { id = germany_mefo_bills.1 hours = 2 }
+				}
+			}
+			if = {
+				limit = {
+					FROM = { 
+						original_tag = GER
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+					}
+					ROOT = {
+						NOT = {
+							OR = {
+								original_tag = GER
+								original_tag = SIL
+							}
+						}
+					}
+				}
+				FROM = {
+					country_event = { id = germany_mefo_bills.1 hours = 2 }
+				}
+			}
+		}
 		effect = {
 			if = {
 				limit = {
@@ -1207,6 +1265,34 @@ on_actions = {
 				FROM = {
 					GER_remove_mefo_bills = yes
 					set_country_flag = mefo_bills_removed_through_war
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = { original_tag = GER }
+					NOT = { FROM = { original_tag = GER } }
+				}
+				FROM = {
+					add_to_array = { 
+						array = GER.GER_war_targets_array 
+						value = THIS
+					}
+					log = "[THIS.GetName] was added to array"
+				}
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = GER }
+					NOT = { ROOT = { original_tag = GER } }
+				}
+				ROOT = {
+					add_to_array = { 
+						array = GER.GER_war_targets_array 
+						value = THIS
+					}
+					log = "[THIS.GetName] was added to array"
 				}
 			}
 		}
@@ -1358,10 +1444,186 @@ on_actions = {
 				}
 				FROM.FROM = { remove_dynamic_modifier = { modifier = international_city } }
 			}
+			if = {
+				limit = {
+					FROM = {
+						is_in_faction = yes
+					}
+
+					FROM.FROM = {
+						has_state_flag = prevent_auto_flip_after_capitulation
+					}
+				}
+
+				FROM.FROM = { clr_state_flag = prevent_auto_flip_after_capitulation }
+				FROM = {
+					set_state_controller = FROM.FROM
+				}	
+			}
+		}
+	}
+	#MEFO BILLS AND ECONOMY OF CONQUEST MODIFIER
+	effect = {
+		if = {
+			limit = {
+				ROOT = { #New Controller
+					original_tag = GER
+					OR = {
+						has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+						has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+					}
+					FROM.FROM = {
+						NOT = {
+							is_core_of = PREV
+						}
+					}
+				}
+			}
+			add_to_variable = { GER_num_of_occupied_states = 1 }
+			if = {
+				limit = { #Advance to Level 1 Occupied States
+					GER_occupied_states_level_1 = yes
+				}
+				if = {
+					limit = {
+						check_variable = { GER_num_of_occupied_states_level < 1 }
+					}
+					add_to_variable = { GER_num_of_occupied_states_level = 1 }
+					add_to_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }
+				}
+			}
+			else_if = {
+				limit = { #Advance to Level 2 Occupied States
+					GER_occupied_states_level_2 = yes
+				}
+				if = {
+					limit = {
+						check_variable = { GER_num_of_occupied_states_level < 2 }
+					}
+					add_to_variable = { GER_num_of_occupied_states_level = 1 }
+					add_to_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states } #Increasemonthly CG change
+				}
+			}
+			else_if = {
+				limit = { #Advance to Level 3 Occupied States
+					GER_occupied_states_level_3 = yes						
+				}
+				if = {
+					limit = {
+						check_variable = { GER_num_of_occupied_states_level < 3 }
+					}
+					add_to_variable = { GER_num_of_occupied_states_level = 1 }
+					add_to_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states } #Increasemonthly CG change
+				}
+			}
+			else_if = {
+				limit = { #Advance to Level 4 Occupied States
+					GER_occupied_states_level_4 = yes
+				}
+				if = {
+					limit = {
+						check_variable = { GER_num_of_occupied_states_level < 4 }
+					}
+					add_to_variable = { GER_num_of_occupied_states_level = 1 }
+					add_to_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states } #Increasemonthly CG change
+				}
+			}
+			else_if = {
+				limit = { #Much wow, so large empire, plz advance to Level 5 Occupied States
+					GER_occupied_states_level_5 = yes
+				}
+				if = {
+					limit = {
+						check_variable = { GER_num_of_occupied_states_level < 5 }
+					}
+					add_to_variable = { GER_num_of_occupied_states_level = 1 }
+					add_to_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states } #Increasemonthly CG change
+				}
+			}
 		}
 	}
 
-
+		effect = {
+			if = {
+				limit = {
+					FROM = { #Old Controller
+						original_tag = GER
+						OR = {
+							has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+							has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
+						}
+						FROM.FROM = {
+							NOT = {
+								is_core_of = PREV
+							}
+						}
+					}
+				}
+				FROM = { 
+					subtract_from_variable = { GER_num_of_occupied_states = 1 }
+					if = {
+						limit = { #no wow, so smol empire, get outta here and return to level 0
+							GER_occupied_states_level_0 = yes
+						}
+						if = {
+							limit = {
+								check_variable = { GER_num_of_occupied_states_level > 0 }
+							}
+							set_variable = { GER_num_of_occupied_states_level = 0 }
+							subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }
+						}
+					}
+					else_if = {
+						limit = { #Return to Level 1 Occupied States
+							GER_occupied_states_level_1 = yes
+						}
+						if = {
+							limit = {
+								check_variable = { GER_num_of_occupied_states_level > 1 }
+							}
+							set_variable = { GER_num_of_occupied_states_level = 1 }
+							subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states } #Reduce monthly CG change
+						}
+					}
+					else_if = {
+						limit = { #Return to Level 2 Occupied States
+							GER_occupied_states_level_2 = yes						
+						}
+						if = {
+							limit = {
+								check_variable = { GER_num_of_occupied_states_level > 2 }
+							}
+							set_variable = { GER_num_of_occupied_states_level = 2 }
+							subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states } #Reduce monthly CG change
+						}
+					}
+					else_if = {
+						limit = { #Return to Level 3 Occupied States
+							GER_occupied_states_level_3 = yes
+						}
+						if = {
+							limit = {
+								check_variable = { GER_num_of_occupied_states_level >3 }
+							}
+							set_variable = { GER_num_of_occupied_states_level = 3 }
+							subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states } #Reduce monthly CG change
+						}
+					}
+					else_if = {
+						limit = { #Return to Level 4 Occupied States
+							GER_occupied_states_level_4 = yes
+						}
+						if = {
+							limit = {
+								check_variable = { GER_num_of_occupied_states_level > 4 }
+							}
+							set_variable = { GER_num_of_occupied_states_level = 4 }
+							subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states } #Reduce monthly CG change
+						}
+					}
+				}
+			}
+		}
 
 	# From is owner country
 	on_army_leader_daily = {

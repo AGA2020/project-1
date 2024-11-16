@@ -6414,44 +6414,6 @@ country_event = {
 			}
 		}
 	}
-
-	# We will never submit!
-	option = {
-		name = wuw_GER_diplomacy.117.b
-		ai_chance = {
-			base = 2
-			modifier = {
-				factor = 5
-				strength_ratio = {
-				    tag = FROM
-				    ratio > 1
-				}
-			}
-			modifier = {
-				factor = 5
-				strength_ratio = {
-				    tag = FROM
-				    ratio > 1.25
-				}
-			}
-			modifier = {
-				factor = 0
-				is_subject_of = FROM
-			}
-		}
-
-		add_war_support = 0.1
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		FROM = { # FROM Rejects
-			country_event = { 
-				id = wuw_GER_diplomacy.118
-				hours = 5 
-				random_hours = 6
-			}
-		}
-	}
 }
  
 # Germany annexes CZE peacefully
@@ -11869,16 +11831,6 @@ country_event = {
 		name = wuw_GER_civil_war.1.a
 		ai_chance = {
 			base = 85
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = GER_AI_RANDOM_KAISER
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = KAISER
-					}
-				}
-			}
 		}
 		
 		add_timed_idea = {
@@ -11899,21 +11851,6 @@ country_event = {
 		name = wuw_GER_civil_war.1.b
 		ai_chance = {
 			base = 15
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_STALINIST
-					}
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_SPARTACUS
-					}
-				}
-			}
 		}
 
 		add_popularity = {
@@ -12490,21 +12427,6 @@ country_event = {
 		name = wuw_GER_civil_war.7.a
 		ai_chance = {
 			base = 50
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_STALINIST
-					}
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_SPARTACUS
-					}
-				}
-			}
 		}
 		
 		custom_effect_tooltip = GER_promised_erich_raeder_a_great_navy_tt

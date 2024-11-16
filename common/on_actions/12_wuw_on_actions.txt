@@ -1128,35 +1128,6 @@ on_actions = {
 			}
 		}
 
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = TRA
-					}
-
-					AUS = {
-						OR = {
-							has_completed_focus = AUS_demand_romanian_lands
-							has_completed_focus = AUS_subjugate_lands_of_old
-						}
-					}
-				}
-
-				TRA = {
-					capital_scope = {
-						add_to_array = {
-							array = AUS.expansion_targets
-							value = THIS
-						}
-
-						log = "[THIS.GetName] was added to array"
-					}
-				}
-				
-			}
-		}
-
 	}
 
 	on_release_as_free = { #ROOT is free nation FROM is releaser.
@@ -1198,25 +1169,6 @@ on_actions = {
 			}
 		}
 
-		# Jan Zumbach flees to the UK if in faction with them when Poland caps
-		effect = {
-			IF = {
-				limit = {
-					original_tag = POL
-					is_in_faction_with = ENG
-					NOT = {
-						has_global_flag = jan_zumbach_fled_to_britain
-					}
-				}
-				country_event = {
-					id = ww_congo.70
-					hours = 2
-					random_hours = 4
-				}	
-				set_global_flag = jan_zumbach_fled_to_britain
-			}
-		}
-
 		effect = { #If a Reichskommissariat has capitulated, make Alfred Rosenberg suck a bit
 			IF = {
 				limit = {
@@ -1239,41 +1191,6 @@ on_actions = {
 	
 	
 	on_capitulation = { # ROOT is capitulated country, FROM is winner
-
-		effect = { #recall the volunteers for ITA from ETH as war can go on and troops are needed
-			IF = { 
-				limit = {
-					original_tag = ETH
-					FROM = { tag = ITA }
-					ITA = {
-						has_volunteers_amount_from = {
-							tag = AUS
-							count > 0
-						}
-					}
-				}
-				AUS = {
-					recall_volunteers_from = ITA 
-				}
-			}
-		}
-
-		effect = { #Set the new flag and fire event when HAI capitulates to AUS
-			IF = {
-				limit = {
-					original_tag = HAI
-					FROM = { tag = AUS }
-				}
-				AUS = {
-					set_cosmetic_tag = AUS_true_liechtenstein 
-
-					country_event = {
-						id = AUS_political_events.95
-						days = 10
-					}
-				}
-			}
-		}
 
 		effect = {
 			IF = {
@@ -1955,35 +1872,6 @@ on_actions = {
 					id = ww_congo.20
 					hours = 6
 					random_hours = 24
-				}
-			}
-		}
-
-		# Checks to see if Burundi should revolt against Congolese rule or not
-		effect = {
-			IF = {
-				limit = {
-					NOT = {
-						has_global_flag = burundian_revolution_happened_flag
-					}
-					ROOT = {
-						is_subject = no
-						owns_state = 769
-						has_war = no
-					}
-					BRD = {
-						exists = no
-					}
-					769 = {
-						NOT = {
-							is_core_of = COG
-						}
-					}
-				}
-				country_event = {
-					id = ww_congo.21
-					days = 1
-					random_days = 2
 				}
 			}
 		}
