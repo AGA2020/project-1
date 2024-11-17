@@ -1,5 +1,60 @@
 ideas = {
 	country = {
+		ROM_preserve_greater_romania = {
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				has_government = democratic 
+			}				
+
+			
+			modifier = {
+				guarantee_tension = -1.0
+				guarantee_cost = -0.5
+			}
+		}
+		ROM_agrarian_reform = {
+
+			picture = generic_agrarian_society
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+		ROM_a_deal_with_the_devil_2 = {
+
+			picture = generic_deal_with_the_devil
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			modifier = {
+				communism_drift = 0.01
+				conscription = 0.01
+			}
+		}
 		ROM_army_purge = {
 		
 			removal_cost = -1

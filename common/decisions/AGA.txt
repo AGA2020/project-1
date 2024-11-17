@@ -1,4 +1,21 @@
 operations = {
+        #i_want_old_focus_tree_back = {
+        #    # icon = generic_operation
+        #    allowed = {
+        #        tag = ROM
+        #    }
+        #    cost = 0
+        #    ai_will_do = {
+        #        factor = 0
+        #    }
+        #    visible = {
+        #        date<1936.2.1
+        #    }
+        #    complete_effect = {
+        #        load_focus_tree = romanian_focus_old
+        #    }
+        #
+        #}
         annex_Mexiko = {
             # icon = generic_operation
             allowed = {

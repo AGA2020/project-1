@@ -176,55 +176,6 @@ defined_text = {
 	}
 }
 
-
-defined_text = {
-	name = GetHostilityItalianClaimTitle56
-
-	text = {
-		trigger = {
-			has_completed_focus = AUS_strike_deal_with_italy		
-		}
-
-		localization_key = AUS_seeks_a_deal_title_56
-	}
-}
-
-defined_text = {
-	name = GetHostilityItalianClaimDesc56
-
-	text = {
-		trigger = {
-			has_completed_focus = AUS_strike_deal_with_italy		
-		}
-
-		localization_key = AUS_seeks_a_deal_desc_56
-	}
-}
-
-defined_text = {
-	name = GetHostilityItalianClaimTitle57
-
-	text = {
-		trigger = {
-			has_completed_focus = AUS_strike_deal_with_italy		
-		}
-
-		localization_key = AUS_seeks_a_deal_title_57
-	}
-}
-
-defined_text = {
-	name = GetHostilityItalianClaimDesc57
-
-	text = {
-		trigger = {
-			has_completed_focus = AUS_strike_deal_with_italy		
-		}
-
-		localization_key = AUS_seeks_a_deal_desc_57
-	}
-}
-
 defined_text = {
 	name = GetHowAvoidedAnschluss
 
@@ -247,19 +198,6 @@ defined_text = {
 
 defined_text = {
 	name = GetAirPartners
-
-	text = {
-		trigger = {
-			NOT = {
-				any_country = {
-					has_country_flag = AUS_this_country_agreed_to_air_partnership
-				}
-			}
-			has_completed_focus = AUS_seek_international_partners
-		}
-
-		localization_key = AUS_has_no_air_partners
-	}
 
 	text = {
 		trigger = { 

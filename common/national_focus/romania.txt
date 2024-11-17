@@ -7,6 +7,11 @@ focus_tree = {
 			add = 20
 			tag = ROM
 		}
+		modifier = {
+			add = -20
+			tag = ROM
+			has_decision = i_want_old_focus_tree_back
+		}
 	}
 	default = no
 
