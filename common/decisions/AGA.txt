@@ -416,7 +416,6 @@ operations = {
             }
             days_mission_timeout = 30
             timeout_effect = {
-                ENG = { add_offsite_building = { type = industrial_complex level = 1 } }
                 set_country_flag = engvanillaic6 
             }
             complete_effect = {
@@ -441,7 +440,6 @@ operations = {
             }
             days_mission_timeout = 90
             timeout_effect = {
-                ENG = { add_offsite_building = { type = industrial_complex level = 1 } }
                 336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
                 set_country_flag = engvanillaic7 
             }
@@ -467,7 +465,6 @@ operations = {
             }
             days_mission_timeout = 120
             timeout_effect = {
-                ENG = { add_offsite_building = { type = industrial_complex level = -1 } }
                 set_country_flag = engvanillaic8 
             }
             complete_effect = {
@@ -492,7 +489,6 @@ operations = {
             }
             days_mission_timeout = 60
             timeout_effect = {
-                ENG = { add_offsite_building = { type = industrial_complex level = 1 } }
                 set_country_flag = engvanillaic9 
             }
             complete_effect = {
@@ -542,7 +538,6 @@ operations = {
             }
             days_mission_timeout = 210
             timeout_effect = {
-                ENG = { add_offsite_building = { type = industrial_complex level = 1 } }
                 set_country_flag = engvanillaic11 
             }
             complete_effect = {
@@ -567,7 +562,6 @@ operations = {
             }
             days_mission_timeout = 60
             timeout_effect = {
-                ENG = { add_offsite_building = { type = industrial_complex level = -1 } }
                 set_country_flag = engvanillaic12 
             }
             complete_effect = {
@@ -592,7 +586,6 @@ operations = {
             }
             days_mission_timeout = 60
             timeout_effect = {
-                ENG = { add_offsite_building = { type = industrial_complex level = 1 } }
                 set_country_flag = engvanillaic13 
             }
             complete_effect = {

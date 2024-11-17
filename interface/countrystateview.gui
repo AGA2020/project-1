@@ -719,7 +719,7 @@ guiTypes = {
 
 		iconType = {
 			name = "flag"
-			position = { x = 18 y = 45 }
+			position = { x = 0 y = 0 }
 			quadTextureSprite ="GFX_mapicon_unit_flag_stripe"
 			orientation = "UPPER_LEFT"
 		}

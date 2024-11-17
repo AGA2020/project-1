@@ -6198,20 +6198,12 @@ GER_reichskommissariats = {
 		ai_will_do = {
 			base = 0
 			modifier = {
-				add = 1
-				WLS = { exists = no }
-			}
-			modifier = {
 				add = 8
 				ENG = { exists = no }
 			}
 			modifier = {
 				add = 5
 				ENG = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 1
-				SCO = { exists = no }
 			}
 		}
 
@@ -13169,7 +13161,7 @@ GER_influence_countries_cat = {
 			}
 		}
 
-		targets = { CRO MAC MNT BOS HRZ SER ALB YUG GRE ROM MLD BUL KOS TRA }
+		targets = { ALB YUG GRE ROM BUL }
 
 		target_trigger = {
 			FROM = {
@@ -17850,12 +17842,6 @@ GER_realpolitik_cat = {
 
 		visible = {
 			has_completed_focus = GER_establish_western_grand_duchies
-			WLS = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
 		}
 
 		fire_only_once = yes
@@ -17899,12 +17885,6 @@ GER_realpolitik_cat = {
 			base = 50
 			modifier = {
 				add = 150
-				WLS = { 
-					OR = {
-						has_capitulated = yes 
-						exists = no
-					}
-				}
 			}
 			modifier = {
 				add = 25
@@ -17919,44 +17899,17 @@ GER_realpolitik_cat = {
 			IF = {
 				limit = {
 					has_government = neutrality
-					WLS = {
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				set_autonomy = { 
-					target = WLS 
-					autonomy_state = autonomy_personal_union
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			ELSE_IF = {
 				limit = {
 					has_government = democratic
-					WLS = {
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				set_autonomy = { 
-					target = WLS 
-					autonomy_state = autonomy_colony
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			ELSE_IF = {
 				limit = {
-					WLS = {
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				set_autonomy = { 
-					target = WLS 
-					autonomy_state = autonomy_puppet 
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -17972,22 +17925,6 @@ GER_realpolitik_cat = {
 							state = 123
 						}
 					}
-					add_core_of = WLS
-					transfer_state_to = WLS
-				}
-
-				WLS = {
-					add_manpower = 25000
-					add_equipment_to_stockpile = { 
-						type = infantry_equipment
-						amount = 1000
-						producer = GER
-					}	
-					add_equipment_to_stockpile = { 
-						type = support_equipment
-						amount = 250
-						producer = GER
-					}	
 				}
 			}
 		}
@@ -18002,12 +17939,6 @@ GER_realpolitik_cat = {
 
 		visible = {
 			has_completed_focus = GER_establish_western_grand_duchies
-			SCO = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
 		}
 
 		fire_only_once = yes
