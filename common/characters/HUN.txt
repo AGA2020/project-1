@@ -654,12 +654,12 @@ characters = {
 			
 			# Will be upgradeable through various focuses
 			corps_commander = {
-				traits = { trait_HUN_vitez infantry_officer }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 2
-				logistics_skill = 2
+				traits = { trait_HUN_vitez infantry_leader trickster hill_fighter }
+				skill=5
+				attack_skill=4
+				defense_skill=3
+				planning_skill=3
+				logistics_skill=2
 				legacy_id = -1 
 				visible = {
 					NOT = {
@@ -788,21 +788,13 @@ characters = {
 			}
 			
 			corps_commander = {
-				traits = { trait_HUN_fascist_sympathies }
-				skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
+				traits = { trait_HUN_fascist_sympathies infantry_officer infantry_leader trickster trait_engineer swamp_fox }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 3
 				legacy_id = -1
-				visible = {
-					NOT = {
-						OR = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
-				}
 			}
 
 			advisor = {
@@ -813,12 +805,6 @@ characters = {
 				}
 				available = {
 					has_completed_focus = wuw_HUN_invest_in_ludovica_academy
-					NOT = {
-						OR = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
 				}
 				traits = {
 					army_chief_drill_2

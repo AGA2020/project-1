@@ -9156,23 +9156,6 @@ country_event = {
 	picture = GFX_report_event_german_politician_speech
 
 	immediate = {
-		hidden_effect = {
-			IF = {
-				limit = {
-					POL = {
-						NOT = {
-							has_government = fascism
-						}
-					}
-				}
-				POL = {
-					set_nationality = {
-					    target_country = GEN
-					    character = POL_boleslaw_piasecki
-					}
-				}
-			}
-		}
 	}
 
 	is_triggered_only = yes
@@ -9182,28 +9165,6 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}	
-
-		GEN = {
-			add_ideas = GER_government_general_idea
-		}
-
-		hidden_effect = {
-			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-				limit = {
-					POL = {
-						NOT = {
-							has_government = fascism
-						}
-					}
-				}
-				GEN = {
-					set_nationality = {
-					    target_country = POL
-					    character = POL_boleslaw_piasecki
-					}
-				}
-			}
-		}
 		
 	}
 
@@ -9219,24 +9180,6 @@ country_event = {
 		ai_chance = {
 			base = 0
 		}		
-		
-		GEN = {
-			POL_boleslaw_piasecki = {
-				remove_country_leader_role = {
-					ideology = falangism
-				}	
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = falangism
-						expire = 1960.1.1
-						traits = { unruly_falangist_marionette } 
-					}
-				}	
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_government_general_idea
-		}
 
 	}
 }

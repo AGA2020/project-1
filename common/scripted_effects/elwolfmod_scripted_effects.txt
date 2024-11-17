@@ -439,6 +439,7 @@ elwolfmod_capitulations_on_actions = {
 			transfer_state = 802
 			transfer_state = 804
             transfer_state = 853
+            transfer_state = 970
 		}
 		BUL = {
 			if = {
@@ -462,7 +463,6 @@ elwolfmod_capitulations_on_actions = {
 				limit = { is_ai = no }
 				transfer_state = 764
 				transfer_state = 45
-				transfer_state = 109
 			}
 			else_if = {
 				limit = {

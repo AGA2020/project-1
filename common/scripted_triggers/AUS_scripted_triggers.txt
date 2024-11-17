@@ -203,45 +203,6 @@ AUS_danubian_communism_bypass = {
 			}
 
 			IF = {
-				limit = { SLO = { exists = yes } }
-
-				SLO = { 
-					OR = {
-					
-						has_government = communism
-							
-						has_country_flag = AUS_this_country_refused_communism_flag
-					}
-				}
-			}
-
-			IF = {
-				limit = { TRA = { exists = yes } }
-
-				TRA = { 
-					OR = {
-					
-						has_government = communism
-							
-						has_country_flag = AUS_this_country_refused_communism_flag
-					}
-				}
-			}
-
-			IF = {
-				limit = { CRO = { exists = yes } }
-
-				CRO = { 
-					OR = {
-					
-						has_government = communism
-							
-						has_country_flag = AUS_this_country_refused_communism_flag
-					}
-				}
-			}
-
-			IF = {
 				limit = { FRA = { exists = yes } }
 
 				FRA = { 
