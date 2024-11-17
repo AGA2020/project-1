@@ -273,19 +273,6 @@ bookmarks = {
 			focuses = {
 			}
 		}
-		"VIC"={
-			minor = yes
-			history = "NEEDS THE GAMERULE TO BE ON Starts with Algeria, has normal French tree plus Vichy tree, you get the French navy, starts with same spirits as France"
-			ideology = neutrality
-			ideas = {
-				FRA_up_with_jean_darc
-				FRA_venerate_the_craftsman
-				VIC_aircraft_parts
-			}
-			focuses = {
-
-			}
-		}
 		FIN={
 			minor = yes
 			history = FIN_GATHERING_STORM_DESC

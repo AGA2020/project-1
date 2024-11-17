@@ -191,19 +191,6 @@ bookmarks = {
 			focuses = {
 			}
 		}
-
-		"VIC"={
-			minor = yes
-			history = "NEEDS THE GAMERULE TO BE ON Starts with Algeria, has normal French tree plus Vichy tree, you get the French navy, starts with same spirits as France"
-			ideology = neutrality
-			ideas = {
-				FRA_up_with_jean_darc
-				FRA_venerate_the_craftsman
-				VIC_aircraft_parts
-			}
-			focuses = {
-			}
-		}
 		FIN={
 			minor = yes
 			history = FIN_GATHERING_STORM_DESC
@@ -215,19 +202,6 @@ bookmarks = {
 				FIN_winter_warfare
 				FIN_greater_finland
 				FIN_oy_alkoholiliike
-			}
-		}
-		"NOR"={
-			minor = yes
-			history = "NOR_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				NOR_complacent_cabinet_ns
-				NOR_the_hard_thirties_ns
-				NOR_anti_communist_sentiment_ns
-			}
-			focuses = {
-				NOR_continue_nygaardsvold_government
 			}
 		}
 		"BRA"={
