@@ -3552,12 +3552,8 @@ focus_tree = {
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			GER_modify_army_modifier = yes
-			add_to_variable = { 
-				GER_military_initiative_factor = 0.1
-				tooltip = initiative_factor_tt
-			}
+			
+			custom_effect_tooltip = give_my_iniative_paradoxxxxxx_aga
 			hidden_effect = { set_technology = { give_my_iniative_paradoxxxxxx = 1 popup = no } }			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_chief_of_army
