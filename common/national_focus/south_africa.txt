@@ -552,6 +552,7 @@
 				transfer_state = 890
 				transfer_state = 718
 				transfer_state = 768
+				transfer_state = 981
 				every_owned_state = {
 					add_compliance = 100
 				}
