@@ -3408,7 +3408,7 @@ technologies = {
 		xor = {
 			guerilla_warfare_disabled
 		}
-
+		allow_branch = { not = { tag = ROM  } }
 		doctrine = yes	
 		research_cost = 4.5
 		

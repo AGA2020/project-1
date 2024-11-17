@@ -1381,6 +1381,13 @@ characters = {
 			}
 		}
 		
+		country_leader={
+			ideology=fascism_ideology
+			traits={ desperate_resilience }
+			expire="1965.1.1.1"
+			id=-1
+		}
+
 		navy_leader = {
 			traits = { navy_career_officer seawolf }
 			skill = 5
