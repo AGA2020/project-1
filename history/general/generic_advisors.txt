@@ -142,6 +142,9 @@ every_possible_country = {
 		has_dlc = "La Resistance"
 		# china gets a special one via focus
 		NOT = { original_tag = CHI }
+		# Germany as Wilhelm Canaris
+		NOT = { original_tag = GER }
+		NOT = { original_tag = HUN }
 		NOT = { is_chinese_warlord = yes }
 		IF = {
 			limit = {
@@ -149,12 +152,7 @@ every_possible_country = {
 			}
 			NOT = {
 				tag = GRE
-				tag = TUR
 			}
-		}
-		IF = {
-			limit = { has_dlc = "By Blood Alone" }
-			NOT = { OR = { tag = ETH tag = SWI } }
 		}
 
 		IF = {
@@ -164,7 +162,7 @@ every_possible_country = {
 
 		IF = {
 			limit = { has_dlc = "Trial of Allegiance" }
-			NOT = { OR = { tag = CHL tag = ARG tag = BRA } }
+			NOT = { tag = BRA }
 		}
 
 		NOT = {

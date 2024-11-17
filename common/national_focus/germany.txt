@@ -8617,9 +8617,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-			date > 1937.6.1
-		}		
 		continue_if_invalid = yes
 		
 		ai_will_do = {
