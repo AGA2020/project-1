@@ -1332,7 +1332,7 @@ focus_tree = {
 		mutually_exclusive = { focus = BRA_expand_fordlandia }
 		cost = 10
 		ai_will_do = {
-			factor = 4
+			factor = 0
 		}
 		available = {
 		}

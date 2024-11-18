@@ -1293,6 +1293,7 @@ technologies = {
 			defense = 0.05
 			breakthrough = 0.05
 		}
+
 		
 		path = {
 			leads_to_tech = support_weapons2
@@ -1318,14 +1319,7 @@ technologies = {
 				factor = 15
 				OR = {
 					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
 					tag = MAN
-					tag = MEN
 					tag = JAP
 				}
 			}
@@ -1347,6 +1341,10 @@ technologies = {
 			modifier = {
 				has_war = yes
 				factor = 2
+			}
+			modifier = {
+				factor = 0
+				tag = BRA
 			}
 		}
 	}

@@ -51,7 +51,7 @@ shared_focus = {
 	}
 
 	ai_will_do = {
-			factor = 10
+			factor = 5
 		}
 
 	bypass = {
@@ -245,7 +245,7 @@ shared_focus = {
 	}
 
 	ai_will_do = {
-			factor = 20
+			factor = 0
 		}
 
 	completion_reward = {
@@ -2016,7 +2016,7 @@ shared_focus = {
 	cost = 5
 
 	ai_will_do = {
-		factor = 10
+		factor = 4
 	}
 
 	available = {
@@ -2156,7 +2156,7 @@ shared_focus = {
 	cost = 5
 
 	ai_will_do = {
-			factor = 20
+			factor = 10
 		}
 
 	available = {
@@ -2481,7 +2481,7 @@ shared_focus = {
 	}
 
 	ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 
 	completion_reward = {
@@ -2514,7 +2514,7 @@ shared_focus = {
 	}
 
 	ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 
 	completion_reward = {

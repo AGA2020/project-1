@@ -31673,14 +31673,7 @@ focus_tree = {
 		will_lead_to_war_with = ENG
 		will_lead_to_war_with = FRA
 		will_lead_to_war_with = BEL
-		will_lead_to_war_with = COG
-		will_lead_to_war_with = CMR
-		will_lead_to_war_with = TOG
-		will_lead_to_war_with = NMB
 		will_lead_to_war_with = SAF
-		will_lead_to_war_with = TZN
-		will_lead_to_war_with = RWA
-		will_lead_to_war_with = BRD
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
