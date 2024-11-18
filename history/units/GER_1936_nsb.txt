@@ -20,6 +20,7 @@
         artillery = { x = 0 y = 1 }
 	}
 }
+
 division_template = {
 	name = "Panzer-Division"
 
@@ -43,6 +44,8 @@ division_template = {
 	name = "Infanterie-Division (mot.)" 			# Used to be SS division -> New system for SS. Also messed up the civil war by refusing to move to the fascists, and immersion-breaking to have them around as royalists
 
 	division_names_group = GER_MOT_02
+
+	role = motorized
 
 	regiments = {
 		motorized = { x = 0 y = 0 }
@@ -202,6 +205,7 @@ instant_effect = {
 		requested_factories = 2
 		progress = 0.3
 		efficiency = 50
+		industrial_manufacturer = mio:GER_carl_walther_organization
 	}
 
 	add_equipment_production = {
@@ -219,7 +223,7 @@ instant_effect = {
 		equipment = {
 			type = light_tank_chassis_2
 			creator = "GER" 
-			version_name = "Panzer II Ausf. a"
+			version_name = "Panzer II"
 		}
 		requested_factories = 2
 		progress = 0.4
@@ -236,6 +240,16 @@ instant_effect = {
 		progress = 0.4
 		efficiency = 50
 		industrial_manufacturer = mio:GER_opel_organization
+	}
+	
+	add_equipment_production = { 
+		equipment = { 
+			type = train_equipment_1 
+			creator = "GER" 
+		}
+		requested_factories = 1 
+		progress = 0
+		efficiency = 5 
 	}
 }
 

@@ -1646,6 +1646,10 @@ technologies = {
 			factor = 50
 			
 			modifier = {
+				add = 100
+				original_tag = BRA
+			}  
+			modifier = {
 				factor = 5
 				date > "1937.1.1"
 			}
@@ -1675,6 +1679,11 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+
+			modifier = {
+				add = 100
+				original_tag = BRA
+			}  
 			
 			modifier = {
 				factor = 5.0
@@ -1731,7 +1740,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 4
-			
+			modifier = {
+				add = 100
+				original_tag = BRA
+			}  			
 			modifier = {
 				factor = 10
 				date > "1937.1.1"
@@ -1775,7 +1787,10 @@ technologies = {
 					chromium > 0
 				}
 			}
-			
+			modifier = {
+				add = 100
+				original_tag = BRA
+			}  			
 			modifier = {
 				factor = 1.5
 				OR = {
@@ -1825,7 +1840,10 @@ technologies = {
 				factor = 1.5
 				has_war = yes
 			}
-			
+			modifier = {
+				add = 100
+				original_tag = BRA
+			}  			
 			modifier = {
 				factor = 0.5
 				has_war = no
@@ -1863,7 +1881,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
+			modifier = {
+				add = 100
+				original_tag = BRA
+			}  			
 			modifier = {
 				factor = 5.0
 				OR = {
@@ -1926,7 +1947,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 4
-			
+			modifier = {
+				add = 100
+				original_tag = BRA
+			}  			
 			modifier = {
 				factor = 10
 				date > "1941.1.1"
@@ -1958,7 +1982,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
+			modifier = {
+				add = 100
+				original_tag = BRA
+			}  			
 			modifier = {
 				factor = 5.0
 				OR = {
@@ -2011,7 +2038,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 4
-			
+			modifier = {
+				add = 100
+				original_tag = BRA
+			}  			
 			modifier = {
 				factor = 10
 				date > "1943.1.1"
@@ -2044,7 +2074,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 2
-			
+			modifier = {
+				add = 100
+				original_tag = BRA
+			}  			
 			modifier = {
 				factor = 5.0
 				OR = {

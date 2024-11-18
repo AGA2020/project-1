@@ -51,7 +51,7 @@ shared_focus = {
 	}
 
 	ai_will_do = {
-			factor = 20
+			factor = 10
 		}
 
 	bypass = {
@@ -278,12 +278,6 @@ shared_focus = {
 	#	}
 	#}
 
-	allow_branch = { 
-		NOT = {
-			original_tag = CHL
-		}
-	}
-
 	available = {
 		#OR = {
 		#	has_war = yes
@@ -296,31 +290,15 @@ shared_focus = {
 	}
 
 	ai_will_do = {
-			factor = 20
+			factor = 0
 		}
 
 	completion_reward = {
 		IF = {
 			limit = {
-				original_tag = CHL
-			}
-			custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-			add_to_variable = { JUNO_supply_combat_penalties_on_core_factor = -0.15 tooltip = supply_combat_penalties_on_core_factor_tt }
-			add_to_variable = { JUNO_modifier_production_speed_supply_node_factor = 0.25 tooltip = production_speed_supply_node_factor_tt }
-		}
-		ELSE_IF = {
-			limit = {
 				original_tag = BRA
 			}
 			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-			add_to_variable = { JUNO_supply_combat_penalties_on_core_factor = -0.15 tooltip = supply_combat_penalties_on_core_factor_tt }
-			add_to_variable = { JUNO_modifier_production_speed_supply_node_factor = 0.25 tooltip = production_speed_supply_node_factor_tt }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = ARG
-			}
-			custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
 			add_to_variable = { JUNO_supply_combat_penalties_on_core_factor = -0.15 tooltip = supply_combat_penalties_on_core_factor_tt }
 			add_to_variable = { JUNO_modifier_production_speed_supply_node_factor = 0.25 tooltip = production_speed_supply_node_factor_tt }
 		}
@@ -469,7 +447,7 @@ shared_focus = {
 	}
 
 	ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 
 	completion_reward = {
@@ -831,7 +809,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-			factor = 20
+			factor = 0
 		}
 
 	available = {
@@ -900,7 +878,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-			factor = 20
+			factor = 0
 		}
 
 	available = {
@@ -1952,7 +1930,7 @@ shared_focus = {
 	}
 
 	ai_will_do = {
-			factor = 20
+			factor = 0
 		}
 
 	completion_reward = {
@@ -2038,7 +2016,7 @@ shared_focus = {
 	cost = 5
 
 	ai_will_do = {
-		factor = 20
+		factor = 10
 	}
 
 	available = {
@@ -2122,7 +2100,7 @@ shared_focus = {
 	cost = 5
 
 	ai_will_do = {
-			factor = 20
+			factor = 0
 		}
 
 	available = {
@@ -2561,7 +2539,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-			factor = 20
+			factor = 0
 		}
 
 	available = {

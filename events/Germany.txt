@@ -2605,7 +2605,11 @@ country_event = {
 			NOT = { has_global_flag = GER_HUN_CZE_split }
 		}
 		HUN = { country_event = germany.56 }
-		add_war_support = 0.1
+		if = {
+			limit = { country_exists = CZE }
+			annex_country = { target = CZE }
+			add_war_support = 0.1
+		}
 		if = {
 			limit = {
 				72 = {
@@ -2697,10 +2701,6 @@ country_event = {
 		transfer_state = 71
 		transfer_state = 73
 		hidden_effect = {
-			GER = {
-				annex_country = { target = CZE }
-				add_to_faction = HUN
-			}
 			HUN = {
 				add_ai_strategy = {
 					type = alliance
