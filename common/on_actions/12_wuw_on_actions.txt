@@ -2304,7 +2304,6 @@ on_actions = {
 						original_tag = BEL
 						has_country_flag = BEL_leopold_flag
 						NOT = {
-							has_completed_focus = BEL_kings_abdication
 							has_country_flag = BEL_king_surrendered_on_action_flag
 						}
 						has_war = yes
@@ -2534,7 +2533,6 @@ on_actions = {
 					limit = {
 						AUS = {	
 							OR = {
-								has_completed_focus = AUS_reinstate_the_imperial_council
 								has_government = neutrality
 							}
 							

@@ -1373,27 +1373,6 @@ on_actions = {
 				}
 			}
 		}
-		effect = { # Waiting for Norway to be over 50% conquered. 
-			if = {
-				limit = {
-					FROM = {
-						original_tag = NOR 
-						NOT = { has_government = fascism }
-						surrender_progress > 0.45
-						has_completed_focus = NOR_continue_nygaardsvold_government 
-						has_country_flag = NOR_delayed_quislings_coup
-						has_civil_war = no 
-					}
-				}
-				FROM = {
-					country_event = {
-						id = AAT_norway.15
-						hours = 2 
-					}
-				}
-				clr_country_flag = NOR_delayed_quislings_coup
-			}
-		}
 		#	ROOT is new controller, FROM is old controller, FROM.FROM is state ID.
 		# JAN MAYEN'S REVENGE
 		effect = { 

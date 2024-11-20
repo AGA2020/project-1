@@ -136,30 +136,10 @@ focus_tree = {
 		cost = 10
 
 		available = { 
-			is_puppet = no 
 			NOT = { has_war_with = CHI }
 		}
 		bypass = {
-			OR = {
-				AND = {
-					608 = {
-						NOT = {
-							is_controlled_by = CHI
-						}
-					}
-					597 = {
-						NOT = {
-							is_controlled_by = CHI
-						}
-					}
-					614 = {
-						NOT = {
-							is_controlled_by = CHI
-						}
-					}
-				}
-				has_war_with = CHI
-			}
+			has_war_with = CHI
 		}
 
 		will_lead_to_war_with = CHI
@@ -589,16 +569,6 @@ focus_tree = {
 		}
 
 		available = {
-			any_country = {
-				original_tag = GER
-				has_government = fascism
-				NOT = { has_war_with = ROOT }
-			}
-			any_country = {
-				original_tag = ITA
-				has_government = fascism
-				NOT = { has_war_with = ROOT }
-			}
 		}
 
 		bypass = {

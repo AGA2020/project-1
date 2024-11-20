@@ -14545,16 +14545,6 @@ country_event = {
 			add_core_of = ROOT
 		}
 
-		IF = {
-			limit = { AUS = { has_completed_focus = AUS_bring_generals_out_of_retirement } }
-
-			AUS = {
-				AUS_wilhelm_gebauer = {
-					set_nationality = ROOT
-				}
-			}
-		}
-
 		AUS = {
 			AUS_ludwig_von_eimannsberger = {
 				set_nationality = ROOT
@@ -14972,7 +14962,6 @@ country_event = {
 				limit = {
 					NOT = { 
 						OR = {
-							has_completed_focus = AUS_reinstate_the_imperial_council
 							has_global_flag = HUN_otto_von_habsburg_has_joined_hungary_flag
 						}
 					}
@@ -14990,9 +14979,6 @@ country_event = {
 			ELSE_IF = {
 				limit = {
 					has_global_flag = HUN_otto_von_habsburg_has_joined_hungary_flag
-					NOT = {
-						has_completed_focus = AUS_reinstate_the_imperial_council
-					}
 				}
 
 				AUS_ernst_rudiger_starhemberg = {

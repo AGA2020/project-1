@@ -3332,41 +3332,6 @@ focus_tree = {
 
 			add_ideas = HUN_bastion_of_catholicism
 
-			IF = {
-				limit = {
-					AND = {
-						has_dlc = "By Blood Alone"
-						ITA = {
-							exists = yes
-							has_completed_focus = ITA_seek_papal_support
-						}
-					}
-				}
-				ITA = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = embraced_catholicism
-					}
-				}
-			}
-
-			IF = {
-				limit = {
-					AND = {
-						has_dlc = "La Resistance"
-						SPR = {
-							has_completed_focus = SPA_defenders_of_catholicism
-						}
-					}
-				}
-				SPR = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = embraced_catholicism
-					}
-				}
-			}
-
 		}
 	}
 
