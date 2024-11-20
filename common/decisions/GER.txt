@@ -6615,14 +6615,6 @@ GER_reichskommissariats = {
 				IRE = { has_capitulated = yes }
 			}
 			modifier = {
-				add = 1
-				NIR = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 2
-				NIR = { exists = no }
-			}
-			modifier = {
 				add = 13
 				IRE = { exists = no }
 			}

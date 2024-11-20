@@ -388,22 +388,6 @@ characters={
 				small="GFX_idea_CZE_josef_frantisek"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = CZE_josef_frantisek
-			ledger = air
-			allowed = {
-				original_tag = GER
-			}
-			available = { has_completed_focus = GER_end_of_czechoslovakia }
-			traits = {
-				air_air_superiority_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	CZE_karel_kuttelwascher={
@@ -413,21 +397,6 @@ characters={
 				small="GFX_idea_CZE_karel_kuttelwascher"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = CZE_karel_kuttelwascher
-			ledger = air
-			allowed = {
-				original_tag = CZE
-			}
-			traits = {
-				air_air_combat_training_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 	
 	CZE_frantisek_havel={
@@ -435,21 +404,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_CZE_frantisek_havel"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = CZE_frantisek_havel
-			ledger = army
-			allowed = {
-				original_tag = CZE
-			}
-			traits = {
-				army_logistics_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
 			}
 		}
 	}

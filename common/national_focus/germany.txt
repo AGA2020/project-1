@@ -292,8 +292,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_lower_taxes
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
 
@@ -338,8 +336,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_abolish_price_controls
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 
@@ -363,16 +359,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_currency_reforms
 		cost = 5
-		available = {
-			OR ={
-				763 = { #Köningsberg
-					is_owned_and_controlled_by = ROOT
-				}
-				56 = { #Weser-Ems
-					is_owned_and_controlled_by = ROOT
-				}
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -423,8 +409,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_housing_developments
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
@@ -466,8 +450,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_lower_taxes
 		cost = 10
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
@@ -573,10 +555,6 @@ focus_tree = {
 		relative_position_id = GER_industrial_expansion
 		cost = 10
 		available = {
-			42 = {
-				is_fully_controlled_by = ROOT
-				is_demilitarized_zone = no
-			}
 			has_tech = excavation3
 		}
 
@@ -25737,163 +25715,13 @@ focus_tree = {
 
 		cost = 10
 
-		available = {
-			is_subject = no
-			OR = {
-				AUS = { 
-					is_subject_of = ROOT 
-				}
-				AUS = {
-					is_subject = no
-				}
-			}
-			AUS = {
-				OR = {
-					has_government = ROOT
-					has_country_flag = AUS_is_more_likely_to_accept_being_brothers_in_arms_flag
-				}
-			}
-		}
-
 		dynamic = yes
-
-		bypass = {
-			OR = {
-				AUS = { 
-					is_subject = yes
-					NOT = { is_subject_of = ROOT }
-				}
-				AUS = { exists = no }
-			}
-		}
 
 		will_lead_to_war_with = AUS
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-
-			AUS = {
-				country_event = {
-					id = wuw_GER_realpolitik.36
-					hours = 6
-					random_hours = 12
-				}	
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-
-				annex_country = {
-					target = AUS
-					transfer_troops = yes
-				}
-
-				custom_effect_tooltip =  generic_skip_one_line_tt
-				
-				every_state = {
-					limit = {
-						is_core_of = AUS
-					}
-					add_core_of = ROOT
-				}
-
-				AUS = {
-					IF = {
-						limit = {
-							has_completed_focus = AUS_bring_generals_out_of_retirement
-						}
-						AUS_wilhelm_gebauer = {
-							set_nationality = ROOT
-						}
-					}
-					
-					AUS_ludwig_von_eimannsberger = {
-						set_nationality = ROOT
-					}
-
-					AUS_anton_kienbauer = {
-						set_nationality = ROOT
-					}
-				}
-			}
-
-			custom_effect_tooltip =  generic_skip_one_line_tt
-
-			custom_effect_tooltip = GER_the_austrian_question_more_likely_to_accept_tt
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					HUN = {
-						exists = yes
-						is_subject = no
-						is_in_faction = no
-						OR = {
-							has_government = neutrality
-							has_government = democratic
-							has_government = fascism
-						}
-					}
-				}
-				HUN = {
-					country_event = {
-						id = wuw_GER_realpolitik.39
-						days = 2
-						random_days = 3
-					}	
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-
-					every_state = {
-						limit = {
-							OR = {
-								state = 664
-								state = 73
-								state = 76
-								state = 84
-								state = 83
-								state = 82
-								state = 45
-								state = 975
-							}
-						}
-						add_claim_by = HUN
-					}
-
-					HUN = {
-						set_cosmetic_tag = HUN_GREATER
-					}
-
-					custom_effect_tooltip = generic_skip_one_line_tt
-
-					every_state = {
-						limit = {
-							OR = {
-								state = 664
-								state = 73
-								state = 76
-								state = 84
-								state = 83
-								state = 82
-								state = 45
-								state = 975
-							}
-							is_owned_by = ROOT
-						}
-						transfer_state_to = HUN
-						add_core_of = HUN
-					}
-
-					ROOT = {
-						add_to_faction = HUN
-					}
-
-				}
-
-			}
-
 		}
 
 	}
@@ -32983,16 +32811,7 @@ focus_tree = {
 		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
 		prerequisite = { focus = GER_the_central_powers }
 		available = {
-			is_subject = no
-			NOT = { has_war_with = AUS }
-			NOT = { has_war_with = HUN }
-			NOT = { has_war_with = CZE }
 		}
-		bypass = {
-			HUN = {
-				is_in_faction_with = ROOT
-				has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary
-			}
 		}
 		cancel_if_invalid = yes
 		x = 2
@@ -33004,31 +32823,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			if = {
-				limit = {
-					AUS = { exists = yes }
-				}
-				AUS = {
-					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
-				}
-			}
-			if = {
-				limit = {
-					HUN = { exists = yes }
-				}
-				HUN = {
-					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
-				}
-			}
-			if = {
-				limit = {
-					CZE = { exists = yes }
-				}
-				CZE = {
-					add_timed_idea = { idea = GER_rekindle_imperial_sentiment days = 1095 }
-				}
-			}
-			custom_effect_tooltip = GER_rekindle_imperial_sentiment_tt
+	
 		}
 	}
 
@@ -33038,8 +32833,7 @@ focus_tree = {
 		prerequisite = { focus = GER_return_of_the_kaiser }
 		mutually_exclusive = { focus = GER_focus_on_the_true_enemy }
 		available = {
-			is_subject = no
-			NOT = { has_war_with = FRA }
+
 		}
 		cancel_if_invalid = yes
 		x = -2
@@ -33051,49 +32845,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-			add_war_support = 0.05
-			add_timed_idea = {
-				idea = GER_expatriate_the_communists
-				days = 720
-			}
-			add_named_threat = { threat = 5 name = GER_expatriate_the_communists }
-			FRA = { 
-				add_timed_idea = {
-					idea = GER_communist_refugees
-					days = 720
-				}
-				country_event = { id = wtt_germany.17 }
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = { has_dlc = "La Resistance" }
-						AND = {
-							has_global_flag = spanish_civil_war
-							NOT = { has_global_flag = scw_over }
-						}
-					}
-					random_other_country = {
-						limit = {
-							original_tag = SPR
-							has_government = communism
-						}
-						country_event = { id = wtt_germany.2 days = 1 }
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "La Resistance"
-						AND = {
-							has_global_flag = spanish_civil_war
-							NOT = { has_global_flag = scw_over }
-						}
-					}
-					SPD = {
-						country_event = { id = wtt_germany.2 days = 1 }
-					}
-				}
-			}
+	
 		}
 	}
 

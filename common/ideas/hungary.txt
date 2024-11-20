@@ -1769,7 +1769,6 @@ ideas = {
 					has_government = democratic
 					AND = {
 						has_government = neutrality
-						NOT = { has_completed_focus = HUN_responsible_government }
 					}
 				}
 			}

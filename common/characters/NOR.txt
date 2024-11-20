@@ -113,22 +113,6 @@ characters={
 			traits = { NOR_conciliatory_socialist }
 			id=-1
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = NOR_olav_scheflo
-			allowed  = {
-				NOR_AAT = yes
-			}
-			available = {
-				has_government = democratic
-				OR = {
-					has_completed_focus = NOR_continue_nygaardsvold_government
-				}			
-			}
-			traits  = {
-				 NOR_conciliatory_socialist
-			}
-		}
 	}
 
 	NOR_peder_anker_wedel_jarlsberg={ # Monarchist Leader
@@ -144,19 +128,6 @@ characters={
 			expire="1965.1.1.1"
 			traits = { NOR_shrewd_regent }
 			id=-1
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = NOR_peder_anker_wedel_jarlsberg
-			allowed  = {
-				NOR_AAT = yes
-			}
-			traits  = {
-				 NOR_royal_chamberlain
-			}
-			ai_will_do = {
-				base = 0
-			}
 		}
 	}
 
@@ -201,22 +172,6 @@ characters={
 			expire="1965.1.1.1"
 			traits = { NOR_fascist_lackey }
 			id=-1
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = NOR_vidkun_quisling
-			allowed  = {
-				NOR_AAT = yes
-			}
-			available = {				
-				is_country_leader = no
-			}
-			traits  = {
-				 NOR_fascist_lackey
-			}
-			ai_will_do = {
-				base = 0
-			}
 		}
 	}
 
@@ -271,19 +226,6 @@ characters={
 				small=GFX_portrait_NOR_axel_aubert_small
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = NOR_axel_aubert
-			allowed  = {
-				NOR_aat = yes 
-			}
-			available = {
-				has_government = neutrality
-			}
-			traits  = {
-				 NOR_aristocratic_industrialist
-			}
-		}
 	}
 
 	NOR_johan_ludwig_mowinckel={
@@ -291,33 +233,6 @@ characters={
 		portraits={
 			civilian={
 				small=GFX_portrait_NOR_johan_ludwig_mowinckel_small
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = NOR_johan_ludwig_mowinckel
-			allowed  = {
-				NOR_AAT = yes
-			}
-			available = {
-				has_government = democratic
-				OR = {
-					has_completed_focus = NOR_continue_nygaardsvold_government
-				}
-			}
-			traits  = {
-				 NOR_shipping_capitalist
-			}
-			on_add = {
-				mio:NOR_akers_mekaniske_verksted_organization = {
-					unlock_mio_trait_tooltip = {
-						trait = NOR_mio_trait_convoy_production
-						show_modifiers = yes 
-					}
-				}
-			}
-			ai_will_do = {
-				base = 0
 			}
 		}
 	}
@@ -358,38 +273,6 @@ characters={
 				small="GFX_idea_SOV_lev_trotsky"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = NOR_lev_trotsky
-			allowed  = {
-				NOR_AAT = yes
-			}	
-			ai_will_do = {
-				factor = 1
-			}
-			available = {
-				has_country_flag = NOR_trotsky_embraced
-				NOT = { has_government = fascism } 
-				NOT = { has_government = neutrality }
-				NOR_trotsky_not_in_sov = yes 
-				NOR_trotsky_not_in_mex = yes #Yes, I know this is bullshit but it's all for the tooltip
-			}
-			traits  = {
-				NOR_permanent_revolutionary
-			}
-		}
-		corps_commander={
-			visible = {
-				always = no
-			}
-			traits={  }
-			skill=3
-			attack_skill=4
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=1
-			legacy_id=-1
-		}
 	}
 	
 	NOR_sverre_riisnaes={
@@ -397,19 +280,6 @@ characters={
 		portraits={
 			civilian={
 				small=GFX_portrait_NOR_sverre_riisnaes_small
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = NOR_sverre_riisnaes
-			allowed  = {
-				NOR_AAT = yes
-			}
-			available = {
-				has_government = fascism 
-			}
-			traits  = {
-				NOR_fascist_judiciary
 			}
 		}
 	}
@@ -430,19 +300,6 @@ characters={
 				small=GFX_portrait_NOR_ragnar_skancke_small
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = NOR_ragnar_skancke
-			allowed  = {
-				NOR_AAT = yes
-			}
-			available = {
-				has_government = fascism 
-			}
-			traits  = {
-				NOR_callous_engineer
-			}
-		}
 	}
 
 	NOR_joakim_lehmkuhl={
@@ -460,18 +317,6 @@ characters={
 			civilian={
 				small=GFX_portrait_NOR_hans_ystgaard_small
 			} 
-		}
-
-		advisor = {
-			slot = political_advisor 
-			idea_token = NOR_hans_ystgaard
-			allowed = {
-				NOR_AAT = yes 
-			}
-			available = { has_government = democratic }
-			traits = {
-				NOR_minister_of_agriculture 
-			}
 		}
 
 	}
