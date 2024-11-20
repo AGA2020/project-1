@@ -54,19 +54,6 @@ defined_text = {
 	name = GetMilitiaName
 
 	text = {
-		trigger = {
-			
-			has_completed_focus = AUS_schutzbund_support
-		}
-
-		localization_key = AUS_militia_is_schutzbund
-	}
-	text = {
-		trigger = {
-			NOT = {
-				has_completed_focus = AUS_schutzbund_support
-			}
-		}
 
 		localization_key = AUS_militia_is_undecided
 	}

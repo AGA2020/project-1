@@ -19718,42 +19718,16 @@ GER_the_fading_eagle_category = {
 		}
 	
 		visible = { 
-			any_country_with_original_tag = {
-				original_tag_to_check = ITA
-				is_subject_of = ROOT
-			}
-			CRO = {
-				is_in_faction_with = ROOT
-				is_subject = no
-			}
 			NOT = { has_country_flag = GER_demanded_croatian_subjugation_flag }
 		} 
 	
 		available = {
 			has_government = fascism
-			CRO = {
-				is_in_faction_with = ROOT
-				is_subject = no
-				all_owned_state = {
-					is_controlled_by = CRO
-				}
-			}
 		}
 	
 		cost = 50
 
 		complete_effect = {
-
-			CRO = {
-				country_event = {
-					id = GOT_GER_fading_eagle.01
-					hours = 6
-				}		
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				puppet = CRO
-			}
 
 			hidden_effect = {
 				set_country_flag = GER_demanded_croatian_subjugation_flag 
@@ -19778,42 +19752,16 @@ GER_the_fading_eagle_category = {
 		}
 	
 		visible = { 
-			any_country_with_original_tag = {
-				original_tag_to_check = ITA
-				is_subject_of = ROOT
-			}
-			SER = {
-				is_in_faction_with = ROOT
-				is_subject = no
-			}
 			NOT = { has_country_flag = GER_demanded_serbian_subjugation_flag }
 		} 
 	
 		available = {
 			has_government = fascism
-			SER = {
-				is_in_faction_with = ROOT
-				is_subject = no
-				all_owned_state = {
-					is_controlled_by = SER
-				}
-			}
 		}
 	
 		cost = 50
 
 		complete_effect = {
-
-			SER = {
-				country_event = {
-					id = GOT_GER_fading_eagle.01
-					hours = 6
-				}		
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				puppet = SER
-			}
 
 			hidden_effect = {
 				set_country_flag = GER_demanded_serbian_subjugation_flag 
@@ -19838,42 +19786,16 @@ GER_the_fading_eagle_category = {
 		}
 	
 		visible = { 
-			any_country_with_original_tag = {
-				original_tag_to_check = ITA
-				is_subject_of = ROOT
-			}
-			BOS = {
-				is_in_faction_with = ROOT
-				is_subject = no
-			}
 			NOT = { has_country_flag = GER_demanded_bosnian_subjugation_flag }
 		} 
 	
 		available = {
 			has_government = fascism
-			BOS = {
-				is_in_faction_with = ROOT
-				is_subject = no
-				all_owned_state = {
-					is_controlled_by = BOS
-				}
-			}
 		}
 	
 		cost = 50
 
 		complete_effect = {
-
-			BOS = {
-				country_event = {
-					id = GOT_GER_fading_eagle.01
-					hours = 6
-				}		
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				puppet = BOS
-			}
 
 			hidden_effect = {
 				set_country_flag = GER_demanded_bosnian_subjugation_flag 
@@ -19941,38 +19863,16 @@ GER_the_fading_eagle_category = {
 				original_tag_to_check = ITA
 				is_subject_of = ROOT
 			}
-			MAC = {
-				is_in_faction_with = ROOT
-				is_subject = no
-			}
 			NOT = { has_country_flag = GER_demanded_macedonian_subjugation_flag }
 		} 
 	
 		available = {
 			has_government = fascism
-			MAC = {
-				is_in_faction_with = ROOT
-				is_subject = no
-				all_owned_state = {
-					is_controlled_by = MAC
-				}
-			}
 		}
 	
 		cost = 50
 
 		complete_effect = {
-
-			MAC = {
-				country_event = {
-					id = GOT_GER_fading_eagle.01
-					hours = 6
-				}		
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				puppet = MAC
-			}
 
 			hidden_effect = {
 				set_country_flag = GER_demanded_macedonian_subjugation_flag 
@@ -20037,42 +19937,16 @@ GER_the_fading_eagle_category = {
 		}
 	
 		visible = { 
-			any_country_with_original_tag = {
-				original_tag_to_check = ITA
-				is_subject_of = ROOT
-			}
-			KOS = {
-				is_in_faction_with = ROOT
-				is_subject = no
-			}
 			NOT = { has_country_flag = GER_demanded_kosovar_subjugation_flag }
 		} 
 	
 		available = {
 			has_government = fascism
-			KOS = {
-				is_in_faction_with = ROOT
-				is_subject = no
-				all_owned_state = {
-					is_controlled_by = KOS
-				}
-			}
 		}
 	
 		cost = 50
 
 		complete_effect = {
-
-			KOS = {
-				country_event = {
-					id = GOT_GER_fading_eagle.01
-					hours = 6
-				}		
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				puppet = KOS
-			}
 
 			hidden_effect = {
 				set_country_flag = GER_demanded_kosovar_subjugation_flag 

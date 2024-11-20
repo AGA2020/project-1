@@ -18787,10 +18787,6 @@ country_event = {
 
 		ai_chance = {
 			base = 1
-			modifier = { #Göring is preferred for Alt-Fascist plan - Choosing someone else only delays the country leader change
-				factor = 0.1 #Leaving non-0 so that there's fallback if for some reason Göring is not there
-				GER_is_alt_fascist_ai = yes
-			}
 		}
 
 		trigger = {
@@ -19062,10 +19058,6 @@ country_event = {
 
 		ai_chance = {
 			base = 100
-			modifier = { #Göring is preferred for Alt-Fascist plan - Choosing someone else only delays the country leader change
-				factor = 0.1 #Leaving non-0 so that there's fallback if for some reason Göring is not there
-				GER_is_alt_fascist_ai = yes
-			}
 		}
 
 		trigger = {
@@ -19337,10 +19329,6 @@ country_event = {
 
 		ai_chance = {
 			base = 1
-			modifier = { #Göring is preferred for Alt-Fascist plan
-				add = 100
-				GER_is_alt_fascist_ai = yes
-			}
 		}
 
 		trigger = {

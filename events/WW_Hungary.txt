@@ -3430,42 +3430,6 @@ country_event = {
 			factor = 100
 		}
 
-		LBV = {
-			every_core_state = {
-				limit = {
-					OR = {
-						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
-						}
-					}
-					NOT = {
-						is_core_of = ROOT
-					}
-					NOT = {
-						is_owned_and_controlled_by = LBV
-					}
-				}
-				transfer_state_to = LBV
-			}
-		}
-
-		LBV = {
-			drop_cosmetic_tag = yes	
-		}
-
-		IF = {
-			limit = {
-				LBV = {
-					NOT = {
-						is_subject_of = ROOT
-					}
-				}
-			}
-			puppet = LBV 
-		}
-
 		hidden_effect = {
 			set_country_flag = HUN_created_lombardo_venetian_habsburg_monarchy 
 		}
@@ -4118,58 +4082,6 @@ country_event = {
 			}
 			FROM = {
 				AUS_lothar_rendulic = {
-					set_nationality = ROOT
-				}
-			}
-		}
-
-		IF = {
-			limit = {
-				FROM = {
-					has_character = MNT_blazo_dukanovic
-				}
-			}
-			FROM = {
-				MNT_blazo_dukanovic = {
-					set_nationality = ROOT
-				}
-			}
-		}
-
-		IF = {
-			limit = {
-				FROM = {
-					has_character = CRO_duro_jakcin
-				}
-			}
-			FROM = {
-				CRO_duro_jakcin = {
-					set_nationality = ROOT
-				}
-			}
-		}
-
-		IF = {
-			limit = {
-				FROM = {
-					has_character = AUS_johannes_of_liechtenstein
-				}
-			}
-			FROM = {
-				AUS_johannes_of_liechtenstein = {
-					set_nationality = ROOT
-				}
-			}
-		}
-
-		IF = {
-			limit = {
-				FROM = {
-					has_character = AUS_alois_of_liechtenstein
-				}
-			}
-			FROM = {
-				AUS_alois_of_liechtenstein = {
 					set_nationality = ROOT
 				}
 			}

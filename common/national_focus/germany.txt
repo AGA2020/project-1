@@ -28019,66 +28019,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_political_power = 50
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = GER_liberate_oppressed_people_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					AND = {
-						218 = {
-							NOT = {
-								is_core_of = DON
-							}
-						}
-						245 = {
-							NOT = {
-								is_core_of = DON
-							}
-						}
-						238 = {
-							NOT = {
-								is_core_of = DON
-							}
-						}
-					}
-				}
-				custom_effect_tooltip = GER_liberate_oppressed_people_cossacks_tt
-				DON = {
-					add_state_core = 218
-					add_state_core = 245
-					add_state_core = 238
-				}
-			}
-			IF = {
-				limit = {
-					AND = {
-						234 = {
-							NOT = {
-								is_core_of = KUB
-							}
-						}
-						233 = {
-							NOT = {
-								is_core_of = KUB
-							}
-						}
-						235 = {
-							NOT = {
-								is_core_of = KUB
-							}
-						}
-					}
-				}
-				KUB = {
-					add_state_core = 234
-					add_state_core = 233
-					add_state_core = 235
-				}
-			}
-
 		}
 	}
 
@@ -28093,87 +28033,11 @@ focus_tree = {
 		cost = 5
 		
 		available = {
-			any_country = {
-				OR = {
-					original_tag = LIT
-					original_tag = LAT
-					original_tag = POL
-					original_tag = EST
-					original_tag = UBD
-					original_tag = BLR
-					original_tag = KSH
-					original_tag = SIL
-					original_tag = UKR
-				}
-				OR = {
-					is_guaranteed_by = ROOT
-					is_in_faction_with = ROOT
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			
-			add_timed_idea = {
-				idea = GER_invesments_into_minor_partners_cost
-				days = 180
-			}	
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					NOT = {
-						any_country = {
-							OR = {
-								original_tag = LIT
-								original_tag = LAT
-								original_tag = POL
-								original_tag = EST
-								original_tag = UBD
-								original_tag = BLR
-								original_tag = KSH
-								original_tag = SIL
-								original_tag = UKR
-							}
-							OR = {
-								is_guaranteed_by = ROOT
-								is_in_faction_with = ROOT
-							}
-						}
-					}
-				}
-				custom_effect_tooltip = GER_offer_military_production_support_tt
-				show_ideas_tooltip = GER_FIN_industrial_support
-			}
-
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = LIT
-						original_tag = LAT
-						original_tag = POL
-						original_tag = EST
-						original_tag = UBD
-						original_tag = BLR
-						original_tag = KSH
-						original_tag = SIL
-						original_tag = UKR
-					}
-					exists = yes
-					OR = {
-						is_guaranteed_by = ROOT
-						is_in_faction_with = ROOT
-					}
-				}
-				add_timed_idea = {
-					idea = GER_FIN_industrial_support
-					days = 730
-				}	
-			}
-
 		}
 	}
 
@@ -28187,10 +28051,6 @@ focus_tree = {
 		relative_position_id = GER_liberate_oppressed_people
 		cost = 10
 		available = {
-			SOV = {
-				has_government = communism
-				has_civil_war = no
-			}
 		}
 
 		bypass = {
@@ -28199,141 +28059,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					SOV = {
-						has_government = communism
-						has_civil_war = no
-					}
-					DON = {
-						exists = no
-					}
-					KUB = {
-						exists = no
-					}
-				}
-				custom_effect_tooltip = GER_andrey_shckuro_and_pyotr_krasnov_join_tt
-				hidden_effect = {
-					every_possible_country = {
-						limit = {
-							has_character = SOV_andrey_shkuro
-						}
-						SOV_andrey_shkuro = {
-							clr_character_flag = SOV_exiled_flag
-							clr_character_flag = SOV_exiled_army_leader
-						}
-						set_nationality = {
-						    target_country = ROOT
-						    character = SOV_andrey_shkuro
-						}
-					}
-					every_possible_country = {
-						limit = {
-							has_character = SOV_pyotr_krasnov
-						}
-						SOV_pyotr_krasnov = {
-							clr_character_flag = SOV_exiled_flag
-							clr_character_flag = SOV_exiled_army_leader
-						}
-						set_nationality = {
-						    target_country = ROOT
-						    character = SOV_pyotr_krasnov
-						}
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
-			add_manpower = 15000
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.05
-			}	
-
-			custom_effect_tooltip = GER_white_russian_exiles_divisions_recruitment_tt
-
-			hidden_effect = {
-				delete_unit_template_and_units = {
-					division_template = "Kosaken-Kavallerie-Division"
-					disband = yes #if yes, will refund equipment/manpower.
-				}
-				delete_unit_template_and_units = {
-					division_template = "Russische Befreiungsarmee"
-					disband = yes #if yes, will refund equipment/manpower.
-				}
-
-				division_template = {
-					name = "Kosaken-Kavallerie-Division"	
-					division_names_group = GER_CAV_01
-					template_counter = 106 # The Cossack Regiment Symbol 
-					regiments = {
-						cavalry = { x = 0 y = 0 }
-						cavalry = { x = 0 y = 1 }
-						cavalry = { x = 0 y = 2 }
-						cavalry = { x = 1 y = 0 }
-						cavalry = { x = 1 y = 1 }
-						cavalry = { x = 1 y = 2 }
-					}
-					support = {
-						recon = { x = 0 y = 0 }  
-						artillery = { x = 0 y = 1 }  
-					}
-				}
-
-				division_template = {
-					name = "Russische Befreiungsarmee"	
-					division_names_group = GER_INF_01
-					template_counter = 49 # The Griffin 
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 0 y = 3 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						infantry = { x = 1 y = 3 }
-						artillery_brigade = { x = 2 y = 0 }
-						artillery_brigade = { x = 2 y = 1 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }  
-						artillery = { x = 0 y = 1 }  
-						anti_tank = { x = 0 y = 2 }  
-					}
-				}
-
-				random_state = { 
-					limit = {
-						is_fully_controlled_by = ROOT
-						is_owned_by = ROOT
-						is_core_of = ROOT
-					}
-					create_unit = {
-					    division = "name = \"Kosaken-Kavallerie-Division 'Don-Wolga'\" division_template = \"Kosaken-Kavallerie-Division\" start_experience_factor = 0.3 start_equipment_factor = 0.7"
-					    owner = ROOT
-					}
-					create_unit = {
-					    division = "name = \"Kosaken-Kavallerie-Division 'Kuban'\" division_template = \"Kosaken-Kavallerie-Division\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
-					    owner = ROOT
-					}
-				}
-				random_state = { 
-					limit = {
-						is_fully_controlled_by = ROOT
-						is_owned_by = ROOT
-						is_core_of = ROOT
-					}
-					create_unit = {
-					    division = "name = \"Russische Befreiungsarmee 'Moskau'\" division_template = \"Russische Befreiungsarmee\" start_experience_factor = 0.3 start_equipment_factor = 0.9"
-					    owner = ROOT
-					}
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_white_russian_advisors
 		}
 	}
 
@@ -32812,7 +32537,6 @@ focus_tree = {
 		prerequisite = { focus = GER_the_central_powers }
 		available = {
 		}
-		}
 		cancel_if_invalid = yes
 		x = 2
 		y = 1
@@ -33039,10 +32763,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			any_country = {
-				owns_state = 188
-				is_in_faction_with = GER
-			}	
 		}
 		
 		cancel_if_invalid = yes
@@ -33056,81 +32776,6 @@ focus_tree = {
 
 
 		completion_reward = {
-			188 = { add_claim_by = GER }
-			add_named_threat = { threat = 4 name = GER_demand_memel_threat }
-			random_other_country = {
-				limit = {
-					owns_state = 188
-					controls_state = 188 
-				}
-				country_event = { 
-					id = baltic.4 
-					days = 1
-					random_days = 3
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 5
-				}
-				5 = {
-					custom_effect_tooltip = GER_see_to_the_eastern_front_tt
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 9327
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 11386
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 9372
-							instant_build = yes
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_full_control_of_state = 763
-				}
-				763 = {
-					custom_effect_tooltip = GER_see_to_the_eastern_front_tt2
-					hidden_effect = {
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 11265
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 348
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 281
-							instant_build = yes
-						}
-						add_building_construction = {
-							type = bunker
-							level = 2
-							province = 3384
-							instant_build = yes
-						}
-					}
-				}
-			}
 		}
 	}
 
