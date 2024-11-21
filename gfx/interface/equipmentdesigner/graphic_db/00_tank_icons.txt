@@ -77,6 +77,19 @@ default = {
 			}
 		}
 	}
+
+	light_tank_flame_chassis = {
+		pool = {
+			weight = 1
+			icons = {
+				GFX_light_flame_tank_medium
+			}
+			models = {
+				light_flame_tank_entity
+			}
+		}
+	}
+
 	medium_tank_chassis_0 = {
 		pool = {
 			weight = 2
@@ -156,6 +169,19 @@ default = {
 			}
 		}
 	}
+
+	medium_tank_flame_chassis = {
+		pool = {
+			weight = 1
+			icons = {
+				GFX_medium_flame_tank_medium
+			}
+			models = {
+				medium_flame_tank_entity
+			}
+		}
+	}
+
 	heavy_tank_chassis_0 = {
 		pool = {
 			weight = 2
@@ -236,6 +262,18 @@ default = {
 		}
 	}
 
+	heavy_tank_flame_chassis = {
+		pool = {
+			weight = 1
+			icons = {
+				GFX_heavy_flame_tank_medium
+			}
+			models = {
+				heavy_flame_tank_entity
+			}
+		}
+	}
+
 	super_heavy_tank_chassis_1 = {
 		pool = {
 			icons = { 
@@ -248,6 +286,17 @@ default = {
 		pool = {
 			icons = { 
 				GFX_generic_modern_tank_medium
+			}
+		}
+	}
+
+	land_cruiser_chassis_1 = {
+		pool = {
+			icons = {
+				GFX_land_cruiser_armor_medium
+			}
+			models = {
+				land_cruiser_entity
 			}
 		}
 	}
@@ -270,7 +319,10 @@ GER = {
 		pool = {
 			weight = 2
 			icons = { 
-				GFX_gwtank_medium
+				GFX_GER_gwtank_medium
+			}
+			models = {
+				GER_iw_armor_entity
 			}
 		}
 	}
@@ -992,13 +1044,49 @@ GER = {
 			icons = { 
 				GFX_GER_super_heavy_tank_medium #Panzer VIII Maus
 			}
+			models = {
+				GER_super_heavy_armor_entity #Maus
+			}
+		}
+	}
+
+	super_heavy_tank_aa_chassis = {
+		pool = {
+			icons = { 
+				GFX_GER_super_heavy_spaa_medium # SPAA Mauss (Made-up)
+			}
+		}
+	}
+
+	super_heavy_tank_destroyer_chassis = {
+		pool = {
+			icons = { 
+				GFX_GER_super_heavy_td_medium # SPAT Mauss (Made-up)
+			}
+		}
+	}
+
+	super_heavy_tank_artillery_chassis = {
+		pool = {
+			icons = { 
+				GFX_GER_super_heavy_art_medium # SPART Mauss (Made-up)
+			}
 		}
 	}
 
 	modern_tank_chassis = {
 		pool = {
+			icons = {
+				GFX_GER_main_battle_tank_2_medium #E-50 with long turret (Old icon, as alternative version now)
+				GFX_GER_main_battle_tank_medium #E-50 Standardpanzer (Schmalturm turret)
+			}
+		}
+	}
+
+	modern_tank_destroyer_chassis = {
+		pool = {
 			icons = { 
-				GFX_GER_main_battle_tank_medium #E-50 Standardpanzer
+				GFX_GER_modern_td_medium #Jagdpanzer E-25
 			}
 		}
 	}
