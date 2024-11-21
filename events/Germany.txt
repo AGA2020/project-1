@@ -2734,28 +2734,6 @@ country_event = {
 		ai_chance = { factor = 60 }
 		if = {
 			limit = {
-				70 = {
-					OR = {
-						is_owned_by = CZE
-						is_owned_by = GER
-					}
-				}
-			}
-			SLO = { transfer_state = 70 }
-		}
-		if = {
-			limit = {
-				71 = {
-					OR = {
-						is_owned_by = CZE
-						is_owned_by = GER
-					}
-				}
-			}
-			SLO = { transfer_state = 71 }
-		}
-		if = {
-			limit = {
 				154 = { is_owned_by = HUN }
 				73 = {
 					OR = {
@@ -2767,39 +2745,8 @@ country_event = {
 			HUN = { transfer_state = 73 }
 		}
 		if = {
-			limit = {
-				NOT = { 154 = { is_owned_by = HUN } }
-				73 = {
-					OR = {
-						is_owned_by = CZE
-						is_owned_by = GER
-					}
-				}
-			}
-			SLO = { transfer_state = 73 }
-		}
-		if = {
-			limit = {
-				664 = {
-					OR = {
-						is_owned_by = CZE
-						is_owned_by = GER
-					}
-				}
-			}
-			SLO = { transfer_state = 664 }
-		}
-		if = {
 			limit = { country_exists = CZE }
 			annex_country = { target = CZE }
-		}
-		add_to_faction = SLO
-		SLO = {
-			add_ai_strategy = {
-				type = alliance
-				id = "GER"
-				value = 200
-			}
 		}
 		if = {
 			limit = {
