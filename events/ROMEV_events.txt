@@ -97,384 +97,389 @@ country_event = {
 	hidden = yes
 
 	immediate = {
-		random_list = {
-			33 = {
-				modifier = {
-					factor = 0
-					OR = { 
-						has_country_flag = romid_iron_guard_integrated
-						has_country_flag = romid_iron_guard_crushed
-					}
-        			}
-				random_list = {
-					25 = { 
-						modifier = {
-							factor = 2
-          						check_variable = {
-								var = ROMID_iron_guard_popularity
-								value = 15
- 								compare = less_than_or_equals
-							}
-        					}
-						modifier = {
-							factor = 1.5
-          						check_variable = {
-								var = ROMID_iron_guard_popularity
-								value = 35
- 								compare = less_than_or_equals
-							}
-							check_variable = {
-								var = ROMID_iron_guard_popularity
-								value = 15
- 								compare = greater_than_or_equals
-							}
-        					}
-						country_event = {
-							id = ROMEV_events.6
-						}
-						#rally
-					}
-					25 = {
-						modifier = {
-							factor = 3
-          						check_variable = {
-								var = ROMID_iron_guard_loyalty
-								value = 20
- 								compare = less_than_or_equals
-							}
-							check_variable = {
-								var = ROMID_iron_guard_popularity
-								value = 35
- 								compare = greater_than_or_equals
-							}
-        					}
-						modifier = {
-							factor = 1.5
-          						check_variable = {
-								var = ROMID_iron_guard_loyalty
-								value = 40
- 								compare = less_than_or_equals
-							}
-							check_variable = {
-								var = ROMID_iron_guard_loyalty
-								value = 20
- 								compare = greater_than_or_equals
-							}
-							check_variable = {
-								var = ROMID_iron_guard_popularity
-								value = 60
- 								compare = greater_than_or_equals
-							}
-        					}
-						modifier = {
-							factor = 0
-							OR = {
-								has_completed_focus = ROM_stab_goga_in_the_back
-								AND = {
-									NOT = { has_completed_focus = ROM_request_german_help }
-									has_completed_focus = ROM_gogacodreanu_cooperation
-								}
-							}
-        					}
-						country_event = {
-							id = ROMEV_events.7
-						}
-						#protest
-					}
-					25 = {
-						modifier = {
-							factor = 0
-							OR = {
-								has_completed_focus = ROM_stab_goga_in_the_back
-								AND = {
-									NOT = { has_completed_focus = ROM_request_german_help }
-									has_completed_focus = ROM_gogacodreanu_cooperation
-								}
-							}
-        					}
-						country_event = {
-							id = ROMEV_events.8
-						}
-						#arrested
-					}
-					25 = {
-						country_event = {
-							id = ROMEV_events.9
-						}
-						#compliance
-					}
-				}
-			} 
-			33 = { 
-				modifier = {
-					factor = 0
-					OR = { 
-						has_country_flag = romid_lancieri_integrated
-						has_country_flag = romid_lancieri_crushed
-					}
-        			}
-				random_list = {
-					25 = { 
-						modifier = {
-							factor = 2
-          						check_variable = {
-								var = ROMID_lancieri_popularity
-								value = 15
- 								compare = less_than_or_equals
-							}
-        					}
-						modifier = {
-							factor = 1.5
-          						check_variable = {
-								var = ROMID_lancieri_popularity
-								value = 35
- 								compare = less_than_or_equals
-							}
-							check_variable = {
-								var = ROMID_lancieri_popularity
-								value = 15
- 								compare = greater_than_or_equals
-							}
-        					}
-						country_event = {
-							id = ROMEV_events.10
-						}
-						#rally
-					}
-					25 = {
-						modifier = {
-							factor = 3
-          						check_variable = {
-								var = ROMID_lancieri_loyalty
-								value = 20
- 								compare = less_than_or_equals
-							}
-							check_variable = {
-								var = ROMID_lancieri_popularity
-								value = 35
- 								compare = greater_than_or_equals
-							}
-        					}
-						modifier = {
-							factor = 1.5
-          						check_variable = {
-								var = ROMID_lancieri_loyalty
-								value = 40
- 								compare = less_than_or_equals
-							}
-							check_variable = {
-								var = ROMID_lancieri_loyalty
-								value = 20
- 								compare = greater_than_or_equals
-							}
-							check_variable = {
-								var = ROMID_lancieri_popularity
-								value = 60
- 								compare = greater_than_or_equals
-							}
-        					}
-						modifier = {
-							factor = 0
-							OR = {
-								has_completed_focus = ROM_request_german_help
-								AND = {
-									NOT = { has_completed_focus = ROM_stab_goga_in_the_back }
-									has_completed_focus = ROM_gogacodreanu_cooperation
-								}
-							}
-        					}
-						country_event = {
-							id = ROMEV_events.11
-						}
-						#protest
-					}
-					25 = {
-						modifier = {
-							factor = 0
-							OR = {
-								has_completed_focus = ROM_request_german_help
-								AND = {
-									NOT = { has_completed_focus = ROM_stab_goga_in_the_back }
-									has_completed_focus = ROM_gogacodreanu_cooperation
-								}
-							}
-        					}
-						country_event = {
-							id = ROMEV_events.12
-						}
-						#arrested
-					}
-					25 = {
-						country_event = {
-							id = ROMEV_events.13
-						}
-						#compliance
-					}
-				}
-			} 
-			33 = {
-				modifier = {
-					factor = 0
-					OR = { 
-						has_country_flag = romid_royalists_integrated
-						has_country_flag = romid_royalists_crushed
-					}
-        			}
-				random_list = {
-					25 = {
-						#party
-						country_event = {
-							id = ROMEV_events.14
-						}
-					}
-					25 = {
-						#siphon taxes
-						country_event = {
-							id = ROMEV_events.15
-						}
-					}
-					25 = {
-						#royal duties
-						country_event = {
-							id = ROMEV_events.16
-						}
-					}
-					25 = {
-						#tax the rich
-						country_event = {
-							id = ROMEV_events.17
-						}
-					}
-				}
-			} 
-			33 = {
-				modifier = {
-					factor = 0
-					NOT = { has_country_flag = romid_iron_guard_integrated }
-        			}
-				random_list = {
-					25 = {
-						#recruitment
-						modifier = {
-							factor = 2
-          						has_war = yes
-        					}
-						modifier = {
-							factor = 2
-          						has_defensive_war = yes
-        					}
-						modifier = {
-							factor = 0.5
-          						 has_war_support < 0.35
-        					}
-						country_event = {
-							id = ROMEV_events.41
-						}
-					}
-					25 = {
-						#killings
-						country_event = {
-							id = ROMEV_events.42
-						}
-					}
-					25 = {
-						#speech
-						country_event = {
-							id = ROMEV_events.43
-						}
-					}
-					25 = {
-						#propaganda
-						country_event = {
-							id = ROMEV_events.45
-						}
-					}
-				}
+		if = {
+			limit = {
+				NOT = { has_global_flag = romania_old_dod }
 			}
-			33 = {
-				modifier = {
-					factor = 0
-					NOT = { has_country_flag = romid_lancieri_integrated }
-        			}
-				random_list = {
-					25 = {
-						#recruitment
-						modifier = {
-							factor = 2
-          						has_war = yes
-        					}
-						modifier = {
-							factor = 2
-          						has_defensive_war = yes
-        					}
-						modifier = {
-							factor = 0.5
-          						 has_war_support < 0.35
-        					}
-						country_event = {
-							id = ROMEV_events.41
+			random_list = {
+				33 = {
+					modifier = {
+						factor = 0
+						OR = { 
+							has_country_flag = romid_iron_guard_integrated
+							has_country_flag = romid_iron_guard_crushed
+						}
+        				}
+					random_list = {
+						25 = { 
+							modifier = {
+								factor = 2
+        	  						check_variable = {
+									var = ROMID_iron_guard_popularity
+									value = 15
+ 									compare = less_than_or_equals
+								}
+        						}
+							modifier = {
+								factor = 1.5
+        	  						check_variable = {
+									var = ROMID_iron_guard_popularity
+									value = 35
+ 									compare = less_than_or_equals
+								}
+								check_variable = {
+									var = ROMID_iron_guard_popularity
+									value = 15
+ 									compare = greater_than_or_equals
+								}
+        						}
+							country_event = {
+								id = ROMEV_events.6
+							}
+							#rally
+						}
+						25 = {
+							modifier = {
+								factor = 3
+        	  						check_variable = {
+									var = ROMID_iron_guard_loyalty
+									value = 20
+ 									compare = less_than_or_equals
+								}
+								check_variable = {
+									var = ROMID_iron_guard_popularity
+									value = 35
+ 									compare = greater_than_or_equals
+								}
+        						}
+							modifier = {
+								factor = 1.5
+        	  						check_variable = {
+									var = ROMID_iron_guard_loyalty
+									value = 40
+ 									compare = less_than_or_equals
+								}
+								check_variable = {
+									var = ROMID_iron_guard_loyalty
+									value = 20
+ 									compare = greater_than_or_equals
+								}
+								check_variable = {
+									var = ROMID_iron_guard_popularity
+									value = 60
+ 									compare = greater_than_or_equals
+								}
+        						}
+							modifier = {
+								factor = 0
+								OR = {
+									has_completed_focus = ROM_stab_goga_in_the_back
+									AND = {
+										NOT = { has_completed_focus = ROM_request_german_help }
+										has_completed_focus = ROM_gogacodreanu_cooperation
+									}
+								}
+        						}
+							country_event = {
+								id = ROMEV_events.7
+							}
+							#protest
+						}
+						25 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_completed_focus = ROM_stab_goga_in_the_back
+									AND = {
+										NOT = { has_completed_focus = ROM_request_german_help }
+										has_completed_focus = ROM_gogacodreanu_cooperation
+									}
+								}
+        						}
+							country_event = {
+								id = ROMEV_events.8
+							}
+							#arrested
+						}
+						25 = {
+							country_event = {
+								id = ROMEV_events.9
+							}
+							#compliance
 						}
 					}
-					25 = {
-						#killings
-						country_event = {
-							id = ROMEV_events.42
+				} 
+				33 = { 
+					modifier = {
+						factor = 0
+						OR = { 
+							has_country_flag = romid_lancieri_integrated
+							has_country_flag = romid_lancieri_crushed
+						}
+        				}
+					random_list = {
+						25 = { 
+							modifier = {
+								factor = 2
+        	  						check_variable = {
+									var = ROMID_lancieri_popularity
+									value = 15
+ 									compare = less_than_or_equals
+								}
+        						}
+							modifier = {
+								factor = 1.5
+        	  						check_variable = {
+									var = ROMID_lancieri_popularity
+									value = 35
+ 									compare = less_than_or_equals
+								}
+								check_variable = {
+									var = ROMID_lancieri_popularity
+									value = 15
+ 									compare = greater_than_or_equals
+								}
+        						}
+							country_event = {
+								id = ROMEV_events.10
+							}
+							#rally
+						}
+						25 = {
+							modifier = {
+								factor = 3
+        	  						check_variable = {
+									var = ROMID_lancieri_loyalty
+									value = 20
+ 									compare = less_than_or_equals
+								}
+								check_variable = {
+									var = ROMID_lancieri_popularity
+									value = 35
+ 									compare = greater_than_or_equals
+								}
+        						}
+							modifier = {
+								factor = 1.5
+        	  						check_variable = {
+									var = ROMID_lancieri_loyalty
+									value = 40
+ 									compare = less_than_or_equals
+								}
+								check_variable = {
+									var = ROMID_lancieri_loyalty
+									value = 20
+ 									compare = greater_than_or_equals
+								}
+								check_variable = {
+									var = ROMID_lancieri_popularity
+									value = 60
+ 									compare = greater_than_or_equals
+								}
+        						}
+							modifier = {
+								factor = 0
+								OR = {
+									has_completed_focus = ROM_request_german_help
+									AND = {
+										NOT = { has_completed_focus = ROM_stab_goga_in_the_back }
+										has_completed_focus = ROM_gogacodreanu_cooperation
+									}
+								}
+        						}
+							country_event = {
+								id = ROMEV_events.11
+							}
+							#protest
+						}
+						25 = {
+							modifier = {
+								factor = 0
+								OR = {
+									has_completed_focus = ROM_request_german_help
+									AND = {
+										NOT = { has_completed_focus = ROM_stab_goga_in_the_back }
+										has_completed_focus = ROM_gogacodreanu_cooperation
+									}
+								}
+        						}
+							country_event = {
+								id = ROMEV_events.12
+							}
+							#arrested
+						}
+						25 = {
+							country_event = {
+								id = ROMEV_events.13
+							}
+							#compliance
 						}
 					}
-					25 = {
-						#speech
-						country_event = {
-							id = ROMEV_events.43
+				} 
+				33 = {
+					modifier = {
+						factor = 0
+						OR = { 
+							has_country_flag = romid_royalists_integrated
+							has_country_flag = romid_royalists_crushed
+						}
+        				}
+					random_list = {
+						25 = {
+							#party
+							country_event = {
+								id = ROMEV_events.14
+							}
+						}
+						25 = {
+							#siphon taxes
+							country_event = {
+								id = ROMEV_events.15
+							}
+						}
+						25 = {
+							#royal duties
+							country_event = {
+								id = ROMEV_events.16
+							}
+						}
+						25 = {
+							#tax the rich
+							country_event = {
+								id = ROMEV_events.17
+							}
 						}
 					}
-					25 = {
-						#propaganda
-						country_event = {
-							id = ROMEV_events.45
+				} 
+				33 = {
+					modifier = {
+						factor = 0
+						NOT = { has_country_flag = romid_iron_guard_integrated }
+        				}
+					random_list = {
+						25 = {
+							#recruitment
+							modifier = {
+								factor = 2
+        	  						has_war = yes
+        						}
+							modifier = {
+								factor = 2
+        	  						has_defensive_war = yes
+        						}
+							modifier = {
+								factor = 0.5
+        	  						 has_war_support < 0.35
+        						}
+							country_event = {
+								id = ROMEV_events.41
+							}
+						}
+						25 = {
+							#killings
+							country_event = {
+								id = ROMEV_events.42
+							}
+						}
+						25 = {
+							#speech
+							country_event = {
+								id = ROMEV_events.43
+							}
+						}
+						25 = {
+							#propaganda
+							country_event = {
+								id = ROMEV_events.45
+							}
 						}
 					}
 				}
-			}
-			33 = {
-				modifier = {
-					factor = 0
-					NOT = { has_country_flag = romid_royalists_integrated }
-        			}
-				random_list = {
-					25 = {
-						#recruitment
-						modifier = {
-							factor = 2
-          						has_war = yes
-        					}
-						modifier = {
-							factor = 2
-          						has_defensive_war = yes
-        					}
-						modifier = {
-							factor = 0.5
-          						 has_war_support < 0.35
-        					}
-						country_event = {
-							id = ROMEV_events.41
+				33 = {
+					modifier = {
+						factor = 0
+						NOT = { has_country_flag = romid_lancieri_integrated }
+        				}
+					random_list = {
+						25 = {
+							#recruitment
+							modifier = {
+								factor = 2
+        	  						has_war = yes
+        						}
+							modifier = {
+								factor = 2
+        	  						has_defensive_war = yes
+        						}
+							modifier = {
+								factor = 0.5
+        	  						 has_war_support < 0.35
+        						}
+							country_event = {
+								id = ROMEV_events.41
+							}
+						}
+						25 = {
+							#killings
+							country_event = {
+								id = ROMEV_events.42
+							}
+						}
+						25 = {
+							#speech
+							country_event = {
+								id = ROMEV_events.43
+							}
+						}
+						25 = {
+							#propaganda
+							country_event = {
+								id = ROMEV_events.45
+							}
 						}
 					}
-					25 = {
-						#killings
-						country_event = {
-							id = ROMEV_events.42
+				}
+				33 = {
+					modifier = {
+						factor = 0
+						NOT = { has_country_flag = romid_royalists_integrated }
+        				}
+					random_list = {
+						25 = {
+							#recruitment
+							modifier = {
+								factor = 2
+        	  						has_war = yes
+        						}
+							modifier = {
+								factor = 2
+        	  						has_defensive_war = yes
+        						}
+							modifier = {
+								factor = 0.5
+        	  						 has_war_support < 0.35
+        						}
+							country_event = {
+								id = ROMEV_events.41
+							}
 						}
-					}
-					25 = {
-						#speech
-						country_event = {
-							id = ROMEV_events.43
+						25 = {
+							#killings
+							country_event = {
+								id = ROMEV_events.42
+							}
 						}
-					}
-					25 = {
-						#propaganda
-						country_event = {
-							id = ROMEV_events.44
+						25 = {
+							#speech
+							country_event = {
+								id = ROMEV_events.43
+							}
+						}
+						25 = {
+							#propaganda
+							country_event = {
+								id = ROMEV_events.44
+							}
 						}
 					}
 				}
