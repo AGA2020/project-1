@@ -6,16 +6,15 @@ ROMID_internal_factions = {
 	picture = GFX_decision_cat_picture_faction_management_bulgaria
 
 	visible = {
-		OR = {
-			NOT = { is_ai = yes }
-			#NOT = { has_decision = i_want_old_focus_tree_back }
-		}
+		NOT = { is_ai = yes }
+		NOT = { has_global_flag = romania_old_dod }
 	}
 
 	scripted_gui = romid_internal_factions_decision_ui
 	visible_when_empty = yes
 	allowed = {
 		original_tag = ROM
+		NOT = { has_decision = i_want_old_focus_tree_back }
 	}
 }
 
@@ -94,6 +93,7 @@ ROMID_army_affairs = {
 	icon = GFX_decision_romid_army_faction
 	visible = {
 		NOT = { is_ai = yes }
+		NOT = { has_global_flag = romania_old_dod }
 	}
 
 	allowed = {
@@ -114,6 +114,7 @@ ROMID_royalists_affairs = {
 			has_country_flag = romid_royalists_integrated
 		}
 		NOT = { is_ai = yes }
+		NOT = { has_global_flag = romania_old_dod }
 	}
 }
 ROMID_iron_guard_affairs = {
@@ -129,6 +130,7 @@ ROMID_iron_guard_affairs = {
 			has_country_flag = romid_iron_guard_integrated
 		}
 		NOT = { is_ai = yes }
+		NOT = { has_global_flag = romania_old_dod }
 	}
 }
 ROMID_lancieri_affairs = {
@@ -144,6 +146,7 @@ ROMID_lancieri_affairs = {
 			has_country_flag = romid_lancieri_integrated
 		}
 		NOT = { is_ai = yes }
+		NOT = { has_global_flag = romania_old_dod }
 	}
 }
 ROMID_socialists_affairs = {
@@ -159,5 +162,6 @@ ROMID_socialists_affairs = {
 			has_country_flag = romid_socialists_integrated
 		}
 		NOT = { is_ai = yes }
+		NOT = { has_global_flag = romania_old_dod }
 	}
 }

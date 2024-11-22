@@ -1758,37 +1758,6 @@ on_actions = {
 
 	on_subject_free = {
 
-		# Sends Raoul van Overstraeten back to Belgium
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = COG
-						has_character = BEL_raoul_van_overstraeten
-					}
-				}
-				ROOT = {
-					country_event = {
-						id = ww_congo.4
-						hours = 2
-					}	
-				}
-			}
-		}
-
-		# If the Belgian Congo is freed, they are no longer Belgian
-		effect = {
-			IF = {
-				limit = {
-					original_tag = COG
-					has_cosmetic_tag = COG_belgian_congo
-				}
-				COG = {
-					drop_cosmetic_tag = yes
-				}
-			}
-		}
-
 		effect = { #If a Reichskommissariat is freed, make Alfred Rosenberg suck a bit
 			IF = {
 				limit = {
@@ -1809,27 +1778,6 @@ on_actions = {
 		}
 
 	}
-
-	on_peaceconference_ended = {
-
-		# Drop Belgian Congo cosmetic tag to set correct flag and name
-		effect = {
-			IF = {
-				limit = {
-					original_tag = COG
-					has_cosmetic_tag = COG_belgian_congo
-					NOT = {
-						is_subject_of = BEL
-					}
-				}
-				COG = {
-					drop_cosmetic_tag = yes
-				}
-			}
-		}
-
-	}
-
 	on_peace = {
 
 		# Hungary has now ended a war together with Germany, thus at the very least resetting the timer
@@ -1843,39 +1791,6 @@ on_actions = {
 				clr_country_flag = HUN_time_at_war_together_with_germany
 			}
 		}
-	}
-
-	on_monthly_COG = {
-
-		# Checks to see if Rwanda should revolt against Congolese rule or not
-		effect = {
-			IF = {
-				limit = {
-					NOT = {
-						has_global_flag = rwandan_revolution_happened_flag
-					}
-					ROOT = {
-						is_subject = no
-						owns_state = 768
-						has_war = no
-					}
-					RWA = {
-						exists = no
-					}
-					768 = {
-						NOT = {
-							is_core_of = COG
-						}
-					}
-				}
-				country_event = {
-					id = ww_congo.20
-					hours = 6
-					random_hours = 24
-				}
-			}
-		}
-
 	}
 
 	on_monthly_ENG = {

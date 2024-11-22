@@ -2251,9 +2251,6 @@ HUN_territorial_revision_category = {
 	
 		available = {
 			has_completed_focus = wuw_HUN_revenge_for_the_brusilov_offensive
-			UKR = {
-				exists = no
-			}
 			is_subject = no
 			custom_trigger_tooltip = {
 				tooltip = wuw_HUN_the_kingdom_of_ukraine_required_states_tt
@@ -2455,98 +2452,9 @@ HUN_territorial_revision_category = {
 
 		complete_effect = {
 
-			ROOT = {
-				HUN_vasyl_vyshyvanyi = { set_nationality = UKR }
-			}
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = wuw_HUN_the_kingdom_of_ukraine_tt
-			hidden_effect = {
-				every_state = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
-							}
-						}
-						NOT = {
-							is_core_of = ROOT
-						}
-						OR = {
-							state = 93
-							state = 199
-							state = 201
-							state = 198
-							state = 834
-							state = 192
-							state = 766
-							state = 202
-							state = 193
-							state = 225
-							state = 259
-							state = 203
-							state = 197
-							state = 226
-							state = 196
-							state = 200
-							state = 221
-							state = 227
-							state = 228
-							state = 137
-							state = 218
-							state = 234
-						}
-					}
-					transfer_state_to = UKR
-				}
-
-				every_state = {
-					limit = {
-						NOT = {
-							is_core_of = UKR
-						}
-						OR = {
-							state = 93
-							state = 199
-							state = 201
-							state = 198
-							state = 834
-							state = 192
-							state = 766
-							state = 202
-							state = 193
-							state = 225
-							state = 259
-							state = 203
-							state = 197
-							state = 226
-							state = 196
-							state = 200
-							state = 221
-							state = 227
-							state = 228
-							state = 137
-							state = 218
-							state = 234
-						}
-					}
-					add_core_of = UKR
-				}
-
-				UKR = {
-					drop_cosmetic_tag = yes
-					country_event = {
-					    id = WW_hungary.54
-					    days = 0
-					}
-				}
-				
-				puppet = UKR 
-
-			}
 
 			hidden_effect = {
 				set_country_flag = HUN_created_ukrainian_habsburg_monarchy 
@@ -3732,63 +3640,7 @@ HUN_the_empire_category = {
 
 		complete_effect = {
 
-			every_state = {
-				limit = {
-					OR  = {
-						state = 104
-						state = 804
-					}
-					NOT = {
-						is_core_of = CRO
-					}
-				}
-				add_core_of = CRO
-			}
-
-			CRO = {
-				every_core_state = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
-							}
-						}
-						NOT = {
-							is_core_of = ROOT
-						}
-						NOT = {
-							is_owned_and_controlled_by = CRO
-						}
-					}
-					transfer_state_to = CRO
-				}
-			}
-
 			custom_effect_tooltip = HUN_croatia_slavonia_tt
-
-			CRO = {
-				hidden_effect = {
-					drop_cosmetic_tag = yes
-					set_cosmetic_tag = CRO_croatia_slavonia_kingdom
-				}
-				country_event = {
-					id = WW_hungary.65
-					hours = 0
-				}	
-			}
-
-			IF = {
-				limit = {
-					CRO = {
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				puppet = CRO 
-			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -4149,7 +4001,7 @@ HUN_balkan_pact_category = {
 		
 		fire_only_once = yes
 
-		targets = { CZE SLO TRA CRO MNT BOS SLV YUG ROM MOL GRE ALB MAC SER HRZ BUL AUS }
+		targets = { CZE YUG ROM GRE ALB SER BUL AUS }
 
 		target_trigger = {
 			country_exists = FROM
@@ -5031,7 +4883,7 @@ HUN_the_danubian_federation_category = {
 		
 		fire_only_once = yes
 
-		targets = { AUS CZE SLO TRA CRO LBV SIL MNT BOS SLV YUG ROM BUL UKR MOL SER HRZ }
+		targets = { AUS CZE YUG ROM BUL }
 
 		target_trigger = {
 			country_exists = FROM

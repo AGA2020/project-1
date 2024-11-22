@@ -5,6 +5,7 @@ ROMID_internal_factions = {
 
 	visible = {
 		NOT = { is_ai = yes }
+		NOT = { has_decision = i_want_old_focus_tree_back }
 	}
 
 	scripted_gui = romid_internal_factions_decision_ui
@@ -82,6 +83,7 @@ ROMID_army_affairs = {
 	icon = GFX_decision_romid_army_faction
 	visible = {
 		NOT = { is_ai = yes }
+		NOT = { has_decision = i_want_old_focus_tree_back }
 	}
 
 	allowed = {
@@ -102,6 +104,7 @@ ROMID_royalists_affairs = {
 			has_country_flag = romid_royalists_integrated
 		}
 		NOT = { is_ai = yes }
+		NOT = { has_decision = i_want_old_focus_tree_back }
 	}
 }
 ROMID_iron_guard_affairs = {
@@ -117,6 +120,7 @@ ROMID_iron_guard_affairs = {
 			has_country_flag = romid_iron_guard_integrated
 		}
 		NOT = { is_ai = yes }
+		NOT = { has_decision = i_want_old_focus_tree_back }
 	}
 }
 ROMID_lancieri_affairs = {
@@ -132,6 +136,7 @@ ROMID_lancieri_affairs = {
 			has_country_flag = romid_lancieri_integrated
 		}
 		NOT = { is_ai = yes }
+		NOT = { has_decision = i_want_old_focus_tree_back }
 	}
 }
 ROMID_socialists_affairs = {
@@ -147,5 +152,6 @@ ROMID_socialists_affairs = {
 			has_country_flag = romid_socialists_integrated
 		}
 		NOT = { is_ai = yes }
+		NOT = { has_decision = i_want_old_focus_tree_back }
 	}
 }

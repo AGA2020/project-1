@@ -8602,12 +8602,6 @@ country_event = {
 						}
 					}
 				}
-				NOR = {
-					set_nationality = {
-					    target_country = RKG
-					    character = NOR_vidkun_quisling
-					}
-				}
 			}
 			IF = {
 				limit = {
@@ -8618,12 +8612,6 @@ country_event = {
 								character = NOR_josef_terboven
 							}	
 						}
-					}
-				}
-				NOR = {
-					set_nationality = {
-					    target_country = RKG
-					    character = NOR_josef_terboven
 					}
 				}
 			}
@@ -8647,15 +8635,6 @@ country_event = {
 		ai_chance = {
 			base = 85
 		}	
-
-		RKG = {
-			NOR_josef_terboven = {
-				promote_character = yes 
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_german_controlled_reichskommissariat
-		}
-
 		hidden_effect = {
 			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
@@ -8663,12 +8642,6 @@ country_event = {
 						NOT = {
 							has_government = fascism
 						}
-					}
-				}
-				RKG = {
-					set_nationality = {
-					    target_country = NOR
-					    character = NOR_vidkun_quisling
 					}
 				}
 			}
@@ -8691,14 +8664,6 @@ country_event = {
 		ai_chance = {
 			base = 15
 		}		
-		
-		RKG = {
-			NOR_vidkun_quisling = {
-				promote_character = yes 
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_local_controlled_reichskommissariat
-		}
 
 	}
 }

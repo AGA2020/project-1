@@ -912,26 +912,6 @@ characters={
 				small="GFX_idea_ROM_iuliu_maniu"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = ROM_iuliu_maniu
-			allowed = {
-				original_tag = ROM
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			traits = {
-				democratic_reformer 
-			}
-		}
 	}
 	
 	ROM_gheorghe_gheorghiu_dej={
@@ -939,27 +919,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ROM_gheorghe_gheorghiu_dej"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = ROM_gheorghe_gheorghiu_dej
-			available = {
-				NOT = { has_completed_focus = ROM_the_1937_election }
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-			}
-			allowed = {
-				original_tag = ROM
-			}
-			traits = {
-				communist_revolutionary 
 			}
 		}
 	}
@@ -1089,7 +1048,8 @@ characters={
 				has_completed_focus = ROM_gogacodreanu_cooperation
 				has_government = fascism
 				NOT = {has_completed_focus = ROM_strike_the_iron_guard}
-			}			
+			}
+			visible = { NOT = { has_decision = i_want_old_focus_tree_back } }			
 			traits = {
 				ROMID_propaganda_writer
 			}
@@ -1117,7 +1077,8 @@ characters={
 			available = {
 				has_completed_focus = ROM_institute_statul_nationallegionar
 				NOT = {has_completed_focus = ROM_support_the_coup}
-			}			
+			}
+			visible = { NOT = { has_decision = i_want_old_focus_tree_back } } 			
 			traits = {
 				ROMID_fascist_paramilitarist
 			}
