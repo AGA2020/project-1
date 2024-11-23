@@ -8,15 +8,15 @@ focus_tree = {
 		}
 		modifier = {
 			add = 10
-			tag = BEL
-		}
-		modifier = {
-			add = 10
 			tag = LUX
 		}
 		modifier = {
 			add = 10
 			tag = ALB
+		}
+		modifier = {
+			add = 10
+			tag = BEL
 		}
 		modifier = {
 			add = 10

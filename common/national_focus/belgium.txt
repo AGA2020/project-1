@@ -1,0 +1,219 @@
+focus_tree = {
+	id = belgium_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = BEL
+			has_dlc = "Gotterdammerung"
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1500 }
+
+
+#######################
+#######################
+###### DEFENSIVE ######
+#######################
+#######################
+
+
+	focus = {
+		id = CONGO_jungle_industry
+		
+		dynamic = yes 
+		
+		icon = GFX_focus_BRA_amazon_colonization
+
+
+		x = 2
+		y = 1
+
+		cost = 10
+
+		text_icon = CONGO_BEL_COG_focus_style
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_TFV_AUTONOMY }
+
+		available = { 
+		} 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				
+			538 = {
+				prioritize = { 538 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+			}
+			538 = {
+				add_resource = {
+					type = rubber
+					amount = 6
+				}	
+			}
+			718 = {
+				add_resource = {
+					type = rubber
+					amount = 5
+				}	
+			}
+		}
+	}	
+	focus = {
+		id = CONGO_rubber_plantations
+		
+		dynamic = yes 
+		
+		icon = GFX_focus_generic_rubber_plantations
+
+		prerequisite = { focus = CONGO_jungle_industry }
+
+		relative_position_id = CONGO_jungle_industry
+		x = 0
+		y = 1
+
+		cost = 10
+
+		text_icon = CONGO_BEL_COG_focus_style
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_TFV_AUTONOMY }
+
+		available = { 
+		} 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			890 = {
+				add_resource = {
+					type = rubber
+					amount = 7
+				}	
+			}
+			718 = {
+				add_resource = {
+					type = rubber
+					amount = 8
+				}	
+			}
+		}
+	}	
+	focus = {
+		id = CONGO_expanded_rubber_plantations
+		
+		dynamic = yes 
+		
+		icon = GFX_focus_generic_rubber
+
+		prerequisite = { focus = CONGO_rubber_plantations }
+
+		relative_position_id = CONGO_jungle_industry
+		x = 0
+		y = 2
+
+		cost = 10
+
+		text_icon = CONGO_BEL_COG_focus_style
+
+		joint_trigger = {
+			CONGO_is_a_congo_viable_nation = yes 
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_TFV_AUTONOMY }
+
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = CONGO_jungle_industry_available_tt
+			}
+			custom_trigger_tooltip = {
+				tooltip = CONGO_expanded_rubber_plantations_available_tt
+				any_country = {
+					has_war_with = ROOT
+					AND = {
+						OR = {
+							controls_state = 671
+							any_country = {
+								OR = {
+									is_subject_of = PREV
+									is_ally_with = PREV
+								}
+								controls_state = 671
+							}
+						}
+						OR = {
+							controls_state = 286
+							any_country = {
+								OR = {
+									is_subject_of = PREV
+									is_ally_with = PREV
+								}
+								controls_state = 286
+							}
+						}
+						OR = {
+							controls_state = 670
+							any_country = {
+								OR = {
+									is_subject_of = PREV
+									is_ally_with = PREV
+								}
+								controls_state = 670
+							}
+						}
+						OR = {
+							controls_state = 741
+							any_country = {
+								OR = {
+									is_subject_of = PREV
+									is_ally_with = PREV
+								}
+								controls_state = 741
+							}
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = CONGO_expanded_rubber_plantations_available_malaya_tt
+				336 = { controller = { has_war_with = ROOT } }
+			}
+		} 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			890 = {
+				add_resource = {
+					type = rubber
+					amount = 8
+				}	
+			}
+			718 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}	
+			}
+			538 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}	
+			}
+		}
+	}	
+}	
+
+
+

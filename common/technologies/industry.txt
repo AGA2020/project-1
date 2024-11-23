@@ -1648,7 +1648,11 @@ technologies = {
 			modifier = {
 				add = 100
 				original_tag = BRA
-			}  
+			}
+			modifier = {
+				add = 100
+				original_tag = BEL
+			}    
 			modifier = {
 				factor = 5
 				date > "1937.1.1"
@@ -1684,7 +1688,10 @@ technologies = {
 				add = 100
 				original_tag = BRA
 			}  
-			
+			modifier = {
+				add = 100
+				original_tag = BEL
+			} 			
 			modifier = {
 				factor = 5.0
 				OR = {
@@ -1743,7 +1750,11 @@ technologies = {
 			modifier = {
 				add = 100
 				original_tag = BRA
-			}  			
+			}
+			modifier = {
+				add = 100
+				original_tag = BEL
+			}   			
 			modifier = {
 				factor = 10
 				date > "1937.1.1"
@@ -1790,6 +1801,10 @@ technologies = {
 			modifier = {
 				add = 100
 				original_tag = BRA
+			} 
+			modifier = {
+				add = 100
+				original_tag = BEL
 			}  			
 			modifier = {
 				factor = 1.5
@@ -1843,6 +1858,10 @@ technologies = {
 			modifier = {
 				add = 100
 				original_tag = BRA
+			} 
+			modifier = {
+				add = 100
+				original_tag = BEL
 			}  			
 			modifier = {
 				factor = 0.5
@@ -1884,7 +1903,11 @@ technologies = {
 			modifier = {
 				add = 100
 				original_tag = BRA
-			}  			
+			}
+			modifier = {
+				add = 100
+				original_tag = BEL
+			}   			
 			modifier = {
 				factor = 5.0
 				OR = {
@@ -1950,7 +1973,11 @@ technologies = {
 			modifier = {
 				add = 100
 				original_tag = BRA
-			}  			
+			}
+			modifier = {
+				add = 100
+				original_tag = BEL
+			}   			
 			modifier = {
 				factor = 10
 				date > "1941.1.1"
@@ -1985,7 +2012,11 @@ technologies = {
 			modifier = {
 				add = 100
 				original_tag = BRA
-			}  			
+			}
+			modifier = {
+				add = 100
+				original_tag = BEL
+			}   			
 			modifier = {
 				factor = 5.0
 				OR = {
@@ -2041,6 +2072,10 @@ technologies = {
 			modifier = {
 				add = 100
 				original_tag = BRA
+			} 
+			modifier = {
+				add = 100
+				original_tag = BEL
 			}  			
 			modifier = {
 				factor = 10
@@ -2077,7 +2112,11 @@ technologies = {
 			modifier = {
 				add = 100
 				original_tag = BRA
-			}  			
+			}
+			modifier = {
+				add = 100
+				original_tag = BEL
+			}   			
 			modifier = {
 				factor = 5.0
 				OR = {
