@@ -310,14 +310,6 @@ country_event = {
 				has_country_flag = GER_trading_proposal_flag
 			}
 			effect_tooltip = {
-				INS = {
-					add_ideas = GER_german_trade_ns
-
-					add_opinion_modifier = {
-						target = FROM
-						modifier = GER_trading_partners
-					}
-				}
 			}
 		}
 		if = {
@@ -387,13 +379,6 @@ country_event = { #FROM accepts our trade deal
 				FROM = {
 					original_tag = HOL
 					has_country_flag = GER_trading_proposal_flag
-				}
-			}
-			INS = {
-				add_ideas = GER_german_trade_ns
-				add_opinion_modifier = {
-					target = GER
-					modifier = GER_trading_partners
 				}
 			}
 		}
@@ -9569,24 +9554,6 @@ country_event = {
 		ai_chance = {
 			base = 15
 		}		
-		
-		RKA = {
-			SAF_d_f_malan = {
-				remove_country_leader_role = {
-					ideology = nazism
-				}	
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = 1960.1.1
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_local_controlled_reichskommissariat
-		}
 
 	}
 }
@@ -9794,20 +9761,6 @@ country_event = {
 						has_global_flag = GER_installed_franz_anton_bach_as_governor_of_hungary_flag
 					}
 				}
-				RUS = {
-					set_nationality = {
-					    target_country = HUN
-					    character = HUN_franz_anton_bach
-					}
-				}
-			}
-			ELSE = {
-				RUS = {
-					set_nationality = {
-					    target_country = GER
-					    character = GER_alfred_jodl
-					}
-				}
 			}
 			
 		}
@@ -9873,66 +9826,15 @@ country_event = {
 
 	option = { # It should be incorporated into Nordamerika
 		name = wuw_GER_reichskommissariats.23.b
-		trigger = {
-			RUS = {
-				exists = yes
-			}
-		}
 		ai_chance = {
 			base = 50
 		}		
 		
 		custom_effect_tooltip = GER_west_coast_america_rus_effect_tt
-			
-		hidden_effect = {
-			every_state = {
-				limit = {
-					GER_is_west_coast_north_america_state = yes
-					OR = {
-						is_owned_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							owns_state = PREV
-						}
-					}
-				}
-				transfer_state_to = RUS
-			}
-			every_state = {	
-				limit = {
-					GER_is_west_coast_north_america_state = yes
-					NOT = {
-						OR = {
-							is_owned_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								owns_state = PREV
-							}
-						}
-					}
-					OR = {
-						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
-						}
-					}
-				}
-				add_contested_owner = RUS
-				set_state_controller_to = RUS
-				add_claim_by = RUS
-			}
-		}
-
 	}
 
 	option = { # It should be incorporated into Kolumbus
 		name = wuw_GER_reichskommissariats.23.c
-		trigger = {
-			RCO = {
-				exists = yes
-			}
-		}
 		ai_chance = {
 			base = 50
 		}		
@@ -9940,43 +9842,6 @@ country_event = {
 		custom_effect_tooltip = GER_west_coast_america_rco_effect_tt
 			
 		hidden_effect = {
-			every_state = {
-				limit = {
-					GER_is_west_coast_north_america_state = yes
-					OR = {
-						is_owned_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							owns_state = PREV
-						}
-					}
-				}
-				transfer_state_to = RCO
-			}
-			every_state = {	
-				limit = {
-					GER_is_west_coast_north_america_state = yes
-					NOT = {
-						OR = {
-							is_owned_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								owns_state = PREV
-							}
-						}
-					}
-					OR = {
-						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
-						}
-					}
-				}
-				add_contested_owner = RCO
-				set_state_controller_to = RCO
-				add_claim_by = RCO
-			}
 		}
 
 	}
@@ -9996,14 +9861,6 @@ country_event = {
 			IF = {
 				limit = {
 					has_dlc = "By Blood Alone"
-					SWI = {
-						NOT = {
-							AND = {
-								has_government = fascism
-								exists = yes
-							}
-						}
-					}
 				}
 			}
 			ELSE = {
@@ -10073,14 +9930,6 @@ country_event = {
 			IF = {
 				limit = {
 					has_dlc = "By Blood Alone"
-					SWI = {
-						NOT = {
-							AND = {
-								has_government = fascism
-								exists = yes
-							}
-						}
-					}
 				}
 			}
 			ELSE = {
@@ -10169,20 +10018,6 @@ country_event = {
 						}
 					}
 				}
-				POL = {
-					set_nationality = {
-					    target_country = RAA
-					    character = POL_pavel_bermondt_avalov
-					}
-				}
-			}
-			ELSE = {
-				ROOT = {
-					set_nationality = {
-					    target_country = RAA
-					    character = GER_werner_von_fritsch
-					}
-				}
 			}
 
 			IF = {
@@ -10194,12 +10029,6 @@ country_event = {
 								exists = yes
 							}
 						}
-					}
-				}
-				AST = {
-					set_nationality = {
-					    target_country = RAA
-					    character = AST_eric_campbell
 					}
 				}
 			}
@@ -10214,50 +10043,6 @@ country_event = {
 		ai_chance = {
 			base = 60
 		}	
-
-		RAA = {
-			IF = {
-				limit = {
-					POL = {
-						NOT = {
-							AND = {
-								exists = yes
-							}
-						}
-					}
-				}
-				POL_pavel_bermondt_avalov = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}	
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
-				}
-			}
-			ELSE = {
-				GER_werner_von_fritsch = {
-					remove_country_leader_role = {
-						ideology = nazism
-					}	
-					add_country_leader_role = {
-						promote_leader = yes
-						country_leader = {
-							ideology = nazism
-							expire = 1960.1.1
-							traits = { GER_reichskommissar_trait } 
-						}
-					}	
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_german_controlled_reichskommissariat
-		}
 		
 	}
 

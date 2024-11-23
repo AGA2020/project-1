@@ -4149,13 +4149,6 @@ country_event = {
 				factor = 2
 			}
 			modifier = {
-				NOT = {
-					OR = {
-						has_completed_focus = AUS_great_austrian_economic_push
-						has_completed_focus = AUS_bring_phonix_insurance_from_the_ashes
-						has_completed_focus = AUS_apprentice_programmes
-					}
-				}
 				factor = 1.5
 			}
 		}
@@ -4195,10 +4188,6 @@ country_event = {
 			modifier = {
 				strength_ratio = { tag = HUN ratio > 1.5 }
 				factor = 2
-			}
-			modifier = {
-				has_completed_focus = AUS_great_austrian_economic_push
-				factor = 2.5
 			}
 		}
 
@@ -5312,10 +5301,6 @@ country_event = {
 		ai_chance = {
 			factor = 60
 			modifier = {
-				factor = 0.5
-				original_tag = CRO
-			}
-			modifier = {
 				strength_ratio = { tag = HUN ratio < 1 }
 				factor = 2
 			}
@@ -5341,10 +5326,6 @@ country_event = {
 		name = WW_hungary.104.b
 		ai_chance = {
 			factor = 40
-			modifier = {
-				factor = 1.5
-				original_tag = CRO
-			}
 			modifier = {
 				strength_ratio = { tag = HUN ratio > 1 }
 				factor = 2
@@ -5401,31 +5382,14 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		IF = {
+		every_possible_country = {
 			limit = {
-				OR = {
-					FROM = {
-						original_tag = CRO
-					}
-					CRO = {
-						exists = no
-					}
-				}
+				has_character = CRO_duro_jakcin
 			}
-
-			every_possible_country = {
-
-				limit = {
-					has_character = CRO_duro_jakcin
-				}
-
-				set_nationality = {
-				    target_country = ROOT
-				    character = CRO_duro_jakcin
-				}	
-
-			}
-
+			set_nationality = {
+			    target_country = ROOT
+			    character = CRO_duro_jakcin
+			}	
 		}
 
 	}

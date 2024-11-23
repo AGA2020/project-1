@@ -2345,21 +2345,7 @@ ideas = {
 			picture = HUN_ganz_danubius
 
 			available = {
-				IF = {
-					limit = { 
-						has_dlc = "Death or Dishonor" 
-						NOT = {
-							has_dlc = "Gotterdammerung"
-						}
-					}
-					has_completed_focus = HUN_naval_warfare
-				}
-				IF = {
-					limit = {
-						has_dlc = "Gotterdammerung"
-					}
-					has_completed_focus = wuw_HUN_enlarge_the_ganz_danubius_division
-				}
+				has_completed_focus = wuw_HUN_enlarge_the_ganz_danubius_division
 			}
 
 			allowed = {
@@ -2391,21 +2377,7 @@ ideas = {
 			picture = HUN_obudai_hajogyar
 
 			available = {
-				IF = {
-					limit = { 
-						has_dlc = "Death or Dishonor" 
-						NOT = {
-							has_dlc = "Gotterdammerung"
-						}
-					}
-					has_completed_focus = HUN_naval_warfare
-				}
-				IF = {
-					limit = {
-						has_dlc = "Gotterdammerung"
-					}
-					has_completed_focus = wuw_HUN_reinstate_the_navy
-				}
+				has_completed_focus = wuw_HUN_reinstate_the_navy
 			}
 
 			allowed = {
