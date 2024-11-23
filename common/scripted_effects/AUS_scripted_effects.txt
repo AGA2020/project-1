@@ -26,7 +26,7 @@ AUS_fascist_vaterlandische_leader_setup = {
 				ideology = fascism_ideology
 				expire = "1965.1.1.1"
 				id = -1
-				traits = { AUS_under_german_pressure }
+				traits = { }
 			}
 		}
 	
@@ -44,7 +44,7 @@ AUS_herrenhaus_and_vf_leaders_setup = {
 				ideology = fascism_ideology
 				expire = "1965.1.1.1"
 				id = -1
-				traits = { AUS_under_german_pressure }
+				traits = {  }
 			}
 			promote_character = yes 
 		}
@@ -225,28 +225,6 @@ AUS_set_danubian_cosmetic_for_country = {
 		drop_cosmetic_tag = yes
 
 		set_cosmetic_tag = BUL_AUS_danubian_state
-	}
-}
-
-AUS_display_right_communism_spirit = {
-	IF = {
-		limit = {
-			has_dynamic_modifier = {
-				modifier = AUS_austrostalinism
-			}
-		}
-		custom_effect_tooltip = AUS_austrostalinism_intro_tt
-	}
-	ELSE_IF = {
-		limit = {
-			has_dynamic_modifier = {
-				modifier = AUS_austrotrotskyism
-			}
-		}
-		custom_effect_tooltip = AUS_austrotrotskyism_intro_tt
-	}
-	ELSE = {
-		custom_effect_tooltip = AUS_austromarxism_intro_tt
 	}
 }
 
