@@ -9497,12 +9497,6 @@ country_event = {
 						}
 					}
 				}
-				SAF = {
-					set_nationality = {
-					    target_country = RKA
-					    character = SAF_d_f_malan
-					}
-				}
 			}
 		}
 	}
@@ -9515,10 +9509,6 @@ country_event = {
 			base = 85
 		}	
 
-		RKA = {
-			add_ideas = GER_german_controlled_reichskommissariat
-		}
-
 		hidden_effect = {
 			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
@@ -9529,12 +9519,6 @@ country_event = {
 								exists = yes
 							}
 						}
-					}
-				}
-				RKA = {
-					set_nationality = {
-					    target_country = SAF
-					    character = SAF_d_f_malan
 					}
 				}
 			}
@@ -9726,24 +9710,6 @@ country_event = {
 		ai_chance = {
 			base = 5
 		}		
-		
-		RUS = {
-			USA_william_dudley_pelley = {
-				remove_country_leader_role = {
-					ideology = nazism
-				}	
-				add_country_leader_role = {
-					promote_leader = yes
-					country_leader = {
-						ideology = nazism
-						expire = 1960.1.1
-						traits = { GER_reichskommissar_trait } 
-					}
-				}	
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = GER_local_controlled_reichskommissariat
-		}
 
 		hidden_effect = {
 			

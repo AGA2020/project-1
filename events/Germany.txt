@@ -5057,10 +5057,6 @@ country_event = {
 	option = {
 		name = germany.81.a
 		if = {
-			limit = { SLO = { exists = yes } }
-			POL = { annex_country = { target = SLO } }
-		}
-		if = {
 			limit = { owns_state = 70 }
 			POL = { transfer_state = 70 }
 		}
