@@ -126,10 +126,6 @@ focus_tree = {
 
 		text_icon = CONGO_BEL_COG_focus_style
 
-		joint_trigger = {
-			CONGO_is_a_congo_viable_nation = yes 
-		}
-
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_TFV_AUTONOMY }
 
 		available = { 
