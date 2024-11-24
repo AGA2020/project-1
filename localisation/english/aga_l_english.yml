@@ -2,7 +2,7 @@
   ROM_king_carol_emptied_accounts_old:0 "King Carol Emptied Accounts"
   wtt_soviet_hold_city_t_success:0 "[state.GetName] Stands"
  wtt_soviet_hold_city_d_success:0 "Despite the enemy onslaught, the defenders of [state.GetName] have stood firm and held the enemy at bay. The invaders have bled themselves white on the defenses, paying a hefty price for every centimeter of ground taken. The tales of the Heroes of [state.GetName] will be remembered for generations to come!"
-  give_my_iniative_paradoxxxxxx_aga:0 "§YLight Infantry:§!§G +%1 Initiative§! §YAll Tanks: §!§G+%1 Initiative§!"
+  give_my_iniative_paradoxxxxxx_aga:0 "§YLight Infantry:§!§G +%1 Initiative§!\n§YAll Tanks: §!§G+%0.9 Initiative§!"
   GER_mio_trait_quick_draw:0 "Quick Draw"
   ROM_invite_german_advisors_old:0 "Invite German Advisors"
   romanian_focus_old:0 "Romania dod focus tree"

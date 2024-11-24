@@ -7680,12 +7680,12 @@ category = land_doctrine
 			add_tech_bonus = {
  			    bonus = 1.0
  			    uses = 1
-			    technology = antitank5
+			    technology = antitank4
 			}
 			add_tech_bonus = {
  			    bonus = 0.5
  			    uses = 1
-			    technology = antitank4
+			    technology = antitank3
 			}
 		}
 		prerequisite = { focus = ROM_domestic_arms_production  focus = ROM_licensing_arms  }

@@ -8384,6 +8384,12 @@ focus_tree = {
 				custom_effect_tooltip = available_designer
 				show_ideas_tooltip = HUN_rheinmetall
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = GER_daimler_benz_organization
+			mio:GER_daimler_benz_organization = {
+				add_mio_size = 2
+			}
 
 		}
 	}
