@@ -610,20 +610,6 @@ on_actions = {
 				}
 			}
 		}
-
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = BEL
-						has_completed_focus = BEL_interpreters
-					}
-				}
-				FROM = {
-					add_ideas = BEL_interpreters_ns
-				}
-			}
-		}
 	}
 
 	# FROM is the one that joins the faction. Trigger the following commands whenever a country creates a faction.	
@@ -1786,12 +1772,6 @@ on_actions = {
 			IF = {
 				limit = {
 					original_tag = ENG
-					COG = {
-						exists = yes
-						NOT = {
-							has_war_with = ENG
-						}
-					}
 					has_global_flag = jan_zumbach_fled_to_britain
 					NOT = {
 						has_global_flag = jan_zumbach_wanted_to_go_to_the_congo
@@ -1854,27 +1834,6 @@ on_actions = {
 					}
 				}
 			}
-		}
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = AUS
-						has_government = neutrality
-						has_completed_focus = AUS_legacy_of_the_empire
-						has_dynamic_modifier = {
-							modifier = AUS_army
-						}
-					}
-				}
-				remove_dynamic_modifier = {
-					modifier = AUS_army
-				}
-
-				add_dynamic_modifier = {
-					modifier = AUS_army_monarchy
-				}
-			}			
 		}
 
 		effect = {
