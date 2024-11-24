@@ -395,20 +395,6 @@ on_actions = {
 			}
 		}
 
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = BEL
-						has_completed_focus = BEL_interpreters
-					}
-				}
-				ROOT = {
-					add_ideas = BEL_interpreters_ns
-				}
-			}
-		}
-
 	}
 
 	# FROM is the country invited, THIS and ROOT are the faction leader.

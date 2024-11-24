@@ -14419,89 +14419,74 @@ country_event = {
 			hidden_effect = {
 				IF = {
 					limit = {
-						NOT = {
-							has_completed_focus = AUS_legacy_of_the_empire
+						has_country_leader = {
+							ruling_only = yes # default = yes
+							character = HUN_otto_von_habsburg
 						}
 					}
-					IF = {
-						limit = {
-							has_country_leader = {
-								ruling_only = yes # default = yes
-								character = HUN_otto_von_habsburg
-							}
-						}
-
-						add_dynamic_modifier = {
-							modifier = AUS_habsburg_monarchy_restored
-						}
+					add_dynamic_modifier = {
+						modifier = AUS_habsburg_monarchy_restored
 					}
-
-					ELSE = {
-						add_dynamic_modifier = {
-							modifier = AUS_austrian_monarchy_restored
-						}
+				}
+				ELSE = {
+					add_dynamic_modifier = {
+						modifier = AUS_austrian_monarchy_restored
 					}
-
-					add_to_variable = { AUS_habsburg_monarchy_restored_neutrality_drift = 0.02 tooltip = neutrality_drift_tt }
-					add_to_variable = { AUS_habsburg_monarchy_restored_drift_defence_factor = 0.3 tooltip = drift_defence_factor_tt }
-					add_to_variable = { AUS_habsburg_monarchy_restored_war_support_factor = 0.05 tooltip = war_support_factor_tt }
-
-
-					IF = {
-						limit = {
-							HUN = {
-								exists = yes
-							}
-						}
+				}
+				add_to_variable = { AUS_habsburg_monarchy_restored_neutrality_drift = 0.02 tooltip = neutrality_drift_tt }
+				add_to_variable = { AUS_habsburg_monarchy_restored_drift_defence_factor = 0.3 tooltip = drift_defence_factor_tt }
+				add_to_variable = { AUS_habsburg_monarchy_restored_war_support_factor = 0.05 tooltip = war_support_factor_tt }
+				IF = {
+					limit = {
 						HUN = {
-							add_opinion_modifier = {
-								target = ROOT
-								modifier = AUS_imperilalist_sentiments
-							}
-						}		
-					}
-
-					IF = {
-						limit = {
-							CZE = {
-								exists = yes
-							}
+							exists = yes
 						}
+					}
+					HUN = {
+						add_opinion_modifier = {
+							target = ROOT
+							modifier = AUS_imperilalist_sentiments
+						}
+					}		
+				}
+				IF = {
+					limit = {
 						CZE = {
-							add_opinion_modifier = {
-								target = ROOT
-								modifier = AUS_imperilalist_sentiments
-							}
-						}		
-					}
-
-					IF = {
-						limit = {
-							YUG = {
-								exists = yes
-							}
+							exists = yes
 						}
+					}
+					CZE = {
+						add_opinion_modifier = {
+							target = ROOT
+							modifier = AUS_imperilalist_sentiments
+						}
+					}		
+				}
+				IF = {
+					limit = {
 						YUG = {
-							add_opinion_modifier = {
-								target = ROOT
-								modifier = AUS_imperilalist_sentiments
-							}
-						}		
-					}
-
-					IF = {
-						limit = {
-							ROM = {
-								exists = yes
-							}
+							exists = yes
 						}
-						ROM = {
-							add_opinion_modifier = {
-								target = ROOT
-								modifier = AUS_imperilalist_sentiments
-							}
-						}		
 					}
+					YUG = {
+						add_opinion_modifier = {
+							target = ROOT
+							modifier = AUS_imperilalist_sentiments
+						}
+					}		
+				}
+				IF = {
+					limit = {
+						ROM = {
+							exists = yes
+						}
+					}
+					ROM = {
+						add_opinion_modifier = {
+							target = ROOT
+							modifier = AUS_imperilalist_sentiments
+						}
+					}		
 				}
 			}
 

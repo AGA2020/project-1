@@ -1616,21 +1616,6 @@ on_actions = {
 				}
 			}
 		}
-		
-		effect = { # Effect to re-add 'An Independent Norway' National Spirit  
-			ROOT = {
-				if = {
-					limit = {
-						NOR_aat = yes 
-						has_completed_focus = NOR_building_an_independent_norway
-						NOT = { 
-							has_dynamic_modifier = { modifier = NOR_independent_norway_dmod }
-						}
-					}
-					add_dynamic_modifier = { modifier = NOR_independent_norway_dmod	}
-				}
-			}
-		}
 		#DENMARK becomes free without completing DEN_declare_independence
 		effect = {
 			if = {
