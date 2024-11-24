@@ -97,9 +97,7 @@
 			is_subject = no 
 		}
 
-		joint_trigger = {
-			HABSBURG_joint_trigger = yes 
-		}
+ 
 
 		ai_will_do = {
 			base = 10
@@ -193,9 +191,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 3
@@ -290,9 +286,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 3
@@ -393,9 +387,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 8
@@ -493,9 +485,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 15
@@ -612,9 +602,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 8
@@ -719,9 +707,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -791,9 +777,7 @@
 		is_subject = no 
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -897,9 +881,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 10
@@ -993,9 +975,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 8
@@ -1097,9 +1077,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -1199,9 +1177,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -1317,9 +1293,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 8
@@ -1419,9 +1393,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 8
@@ -1521,9 +1493,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -1629,9 +1599,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 8
@@ -1735,9 +1703,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 10
@@ -1841,9 +1807,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -1939,9 +1903,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -2045,9 +2007,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -2151,9 +2111,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 8
@@ -2257,9 +2215,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 3
@@ -2362,9 +2318,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 8
@@ -2459,9 +2413,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -2564,9 +2516,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 8
@@ -2667,9 +2617,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -2770,9 +2718,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 10
@@ -2885,9 +2831,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -2992,9 +2936,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 8
@@ -3099,9 +3041,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -3206,9 +3146,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -3313,9 +3251,7 @@
 		}
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -3390,9 +3326,7 @@
 
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -3455,9 +3389,7 @@
 		
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 5
@@ -3517,9 +3449,7 @@
 		
 	}
 
-	joint_trigger = {
-		HABSBURG_joint_trigger = yes 
-	}
+ 
 
 	ai_will_do = {
 		base = 15
