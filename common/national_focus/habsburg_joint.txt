@@ -19,7 +19,7 @@
 
 		allow_branch = {
 			has_dlc = "Gotterdammerung"
-			HABSBURG_is_a_habsburg_viable_nation = yes
+			 
 			has_global_flag = AH_joint_tree_activated_flag
 		}
 
@@ -92,7 +92,7 @@
 					is_in_faction_with = ROOT 
 					is_subject_of = ROOT
 				}
-				HABSBURG_is_a_habsburg_viable_nation = yes 
+				  
 			}
 			is_subject = no 
 		}
@@ -150,7 +150,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -177,7 +177,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -189,7 +189,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -247,7 +247,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -274,7 +274,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -286,7 +286,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -350,7 +350,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -377,7 +377,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -389,7 +389,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -450,7 +450,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -477,7 +477,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -489,7 +489,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -569,7 +569,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -596,7 +596,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -608,7 +608,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -676,7 +676,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -703,7 +703,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -715,7 +715,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -786,7 +786,7 @@
 				is_in_faction_with = ROOT 
 				is_subject_of = ROOT
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 		is_subject = no 
 	}
@@ -854,7 +854,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -881,7 +881,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -893,7 +893,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -950,7 +950,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -977,7 +977,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -989,7 +989,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -1054,7 +1054,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -1081,7 +1081,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -1093,7 +1093,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -1156,7 +1156,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -1183,7 +1183,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -1195,7 +1195,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -1274,7 +1274,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -1301,7 +1301,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -1313,7 +1313,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -1376,7 +1376,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -1403,7 +1403,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -1415,7 +1415,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -1478,7 +1478,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -1505,7 +1505,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -1517,7 +1517,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -1586,7 +1586,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -1613,7 +1613,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -1625,7 +1625,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -1692,7 +1692,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -1719,7 +1719,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -1731,7 +1731,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -1798,7 +1798,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -1825,7 +1825,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -1837,7 +1837,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -1896,7 +1896,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -1923,7 +1923,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -1935,7 +1935,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -2002,7 +2002,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -2029,7 +2029,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -2041,7 +2041,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -2108,7 +2108,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -2135,7 +2135,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -2147,7 +2147,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -2214,7 +2214,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -2241,7 +2241,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -2253,7 +2253,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -2319,7 +2319,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -2346,7 +2346,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -2358,7 +2358,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -2416,7 +2416,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -2443,7 +2443,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -2455,7 +2455,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -2521,7 +2521,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -2548,7 +2548,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -2560,7 +2560,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -2624,7 +2624,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -2651,7 +2651,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -2663,7 +2663,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -2727,7 +2727,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -2754,7 +2754,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -2766,7 +2766,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -2842,7 +2842,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -2869,7 +2869,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -2881,7 +2881,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -2949,7 +2949,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -2976,7 +2976,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -2988,7 +2988,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -3056,7 +3056,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -3083,7 +3083,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -3095,7 +3095,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -3163,7 +3163,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -3190,7 +3190,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -3202,7 +3202,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -3270,7 +3270,7 @@
 				AND = {
 					is_faction_leader = yes
 					any_allied_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes 
+						  
 					}	
 				}
 				AND = {
@@ -3297,7 +3297,7 @@
 						original_tag = AUS
 					}
 					any_subject_country = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
+						 
 					}
 					is_subject = no
 				}
@@ -3309,7 +3309,7 @@
 					}
 				}
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 	}
 
@@ -3379,7 +3379,7 @@
 				is_in_faction_with = ROOT 
 				is_subject_of = ROOT
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 		is_subject = no 
 
@@ -3444,7 +3444,7 @@
 				is_in_faction_with = ROOT 
 				is_subject_of = ROOT
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 		is_subject = no 
 
@@ -3512,7 +3512,7 @@
 				is_in_faction_with = ROOT 
 				is_subject_of = ROOT
 			}
-			HABSBURG_is_a_habsburg_viable_nation = yes 
+			  
 		}
 		
 	}
