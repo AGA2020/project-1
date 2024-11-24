@@ -264,15 +264,6 @@ bookmarks = {
 				BUL_prussia_of_the_balkans
 			}
 		}
-		"ETH"={
-			minor = yes
-			history = "ETH_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-			}
-			focuses = {
-			}
-		}
 		FIN={
 			minor = yes
 			history = FIN_GATHERING_STORM_DESC
@@ -284,19 +275,6 @@ bookmarks = {
 				FIN_winter_warfare
 				FIN_greater_finland
 				FIN_oy_alkoholiliike
-			}
-		}
-		"NOR"={
-			minor = yes
-			history = "NOR_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				NOR_complacent_cabinet_ns
-				NOR_the_hard_thirties_ns
-				NOR_anti_communist_sentiment_ns
-			}
-			focuses = {
-				NOR_continue_nygaardsvold_government
 			}
 		}
 		"BRA"={

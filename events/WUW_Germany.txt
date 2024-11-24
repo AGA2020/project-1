@@ -11866,13 +11866,6 @@ country_event = { # FROM accepts our faction invitation - event for GER
 	option = { # Naisu
 		name = wuw_GER_realpolitik.2.a  
 
-		effect_tooltip = {
-			ROOT = {
-				add_to_faction = FROM
-			}
-			GER_setup_faction_wide_aoe_effects_root = yes
-		}
-
 	}
 }
 
@@ -13266,8 +13259,6 @@ country_event = { # FROM accepts our faction invitation - event for GER
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			GER_setup_faction_wide_aoe_effects_root = yes
 		}
 
 	}
@@ -13661,8 +13652,6 @@ country_event = {
 			add_to_faction = FROM
 		}
 		custom_effect_tooltip = generic_skip_one_line_tt
-
-		GER_setup_faction_wide_aoe_effects_root = yes
 
 	}
 }
@@ -14270,8 +14259,6 @@ country_event = { # FROM accepts our faction invitation - event for GER
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			GER_setup_faction_wide_aoe_effects_root = yes
 		}
 
 	}
@@ -14389,18 +14376,6 @@ country_event = {
 			ELSE_IF = {
 				limit = {
 					has_global_flag = HUN_otto_von_habsburg_has_joined_hungary_flag
-				}
-
-				AUS_ernst_rudiger_starhemberg = {
-
-					remove_country_leader_trait = {
-						ideology = despotism
-						trait = anti_communist 
-					}
-
-					add_country_leader_trait = AUS_prince_of_starhemberg
-
-					promote_character = yes
 				}
 			}
 
@@ -14800,8 +14775,6 @@ country_event = { # FROM accepts our faction invitation - event for GER
 			add_to_faction = FROM
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			GER_setup_faction_wide_aoe_effects_root = yes
 		}
 
 	}
