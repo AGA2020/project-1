@@ -13706,11 +13706,6 @@ country_event = {
 			}
 		}
 
-		swap_ideas = {
-			remove_idea = GER_mitteleuropa_customs_union_member
-			add_idea = GER_mitteleuropa_integrated_customs_union_member
-		}	
-
 		custom_effect_tooltip = generic_skip_one_line_tt
 
 		FROM = { # FROM Accepts

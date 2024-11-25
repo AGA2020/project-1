@@ -10,7 +10,7 @@ technologies = {
 
 
 		experience_gain_artillery_combat_factor = 0.1
-        	special_forces_cap = 0.05
+        special_forces_min = 200
 		artillery_brigade = {
 			mountain = {
 				attack = 0.1

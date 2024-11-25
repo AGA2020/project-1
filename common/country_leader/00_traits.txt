@@ -2424,7 +2424,7 @@ leader_traits = {
 	commander_of_the_fetno_derash = {
 		random = no
 		sprite = 15
-		special_forces_cap = 0.2
+		special_forces_min = 800
 		special_forces_out_of_supply_factor = -0.1
 		agency_upgrade_time = -0.1
 		intel_network_gain_factor = 0.1
@@ -2434,7 +2434,7 @@ leader_traits = {
 	commander_of_the_fetno_derash_no_lar = {
 		random = no
 		sprite = 15
-		special_forces_cap = 0.2
+		special_forces_min = 800
 		special_forces_out_of_supply_factor = -0.15
 		resistance_growth_on_our_occupied_states = 0.15
 	}
@@ -10343,7 +10343,7 @@ leader_traits = {
 		intel_from_combat_factor = 0.25
 		resistance_growth = -0.15
 		compliance_growth = -0.1
-		special_forces_cap = 0.05
+		special_forces_min = 200
 	}
 
 	GER_goebbels_fuhrer = { # Goebbels Fuhrer - Shoud match idea GER_goebbels_reich_minister_of_propaganda_master

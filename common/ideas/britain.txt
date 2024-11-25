@@ -402,7 +402,7 @@ ideas = {
 			}
 
 			modifier = {
-				special_forces_cap = 0.05
+				special_forces_min = 200
 				special_forces_training_time_factor = -0.1
 			}
 
