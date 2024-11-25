@@ -8508,11 +8508,6 @@ focus_tree = {
 						}
 						
 					}
-					ITA = {
-						NOT = {
-							has_completed_focus = ITA_guarantee_austrian_independence
-						}
-					}
 				}
 				custom_effect_tooltip = germany.126.warning
 				random_other_country = {
