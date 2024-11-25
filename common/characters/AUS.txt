@@ -563,13 +563,11 @@ characters = {
 			available = {
 				OR = {
 					has_government = fascism
-					has_completed_focus = AUS_pardon_political_exiles
 				}
 			}
 			visible = {
 				OR = {
 					has_government = fascism
-					has_completed_focus = AUS_pardon_political_exiles
 				}
 			}
 
@@ -605,14 +603,6 @@ characters = {
 			}
 			ai_will_do = {
 				base = 1
-				modifier = {
-					factor = 10
-					has_completed_focus = AUS_reinstate_the_imperial_council
-				}
-				modifier = {
-					factor = 0
-					has_completed_focus = AUS_austromarxism_focus
-				}
 			}
 		}
 		name = AUS_ludwig_von_mises
@@ -795,14 +785,8 @@ characters = {
 				NOT = {
 					has_government = fascism
 				}
-				NOT = {
-					has_completed_focus = AUS_cut_ties_with_the_church
-				}
 			}
 			visible = {
-				NOT = {
-					has_completed_focus = AUS_cut_ties_with_the_church
-				}
 			}
 
 			ai_will_do = {
@@ -874,24 +858,6 @@ characters = {
 	}
 
 	AUS_karl_polheim = {
-		advisor = {
-			slot = political_advisor
-			idea_token = AUS_karl_polheim
-			allowed = { 
-				original_tag = AUS
-			}
-			traits = { 
-				AUS_ruthless_university_rector
-			}
-			available = {
-				has_completed_focus = AUS_recruiting_the_graduates
-				has_government = fascism
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-		}
 		name = AUS_karl_polheim
 		portraits = { 
 			civilian = {
@@ -971,14 +937,8 @@ characters = {
 				original_tag = AUS
 			}
 			available = {
-				NOT = {
-					has_completed_focus = AUS_cut_ties_with_the_church
-				}
 			}
 			visible = {
-				NOT = {
-					has_completed_focus = AUS_cut_ties_with_the_church
-				}
 			}
 			traits = { #this will be changed in an event
 				AUS_fascist_cardinal 
@@ -997,31 +957,6 @@ characters = {
 	}
 
 	AUS_elizabet_von_gutmann = {
-		advisor = {
-			slot = political_advisor
-			idea_token = AUS_elizabet_von_gutmann
-			allowed = { 
-				original_tag = AUS
-			}
-			available = {
-				has_completed_focus = AUS_courting_the_princess_of_industry
-			}
-			visible = {
-				has_completed_focus = AUS_courting_the_princess_of_industry
-			}
-			traits = { 
-				AUS_resourceful_princess
-			}
-
-			ai_will_do = {
-				base = 1
-				modifier = {
-					factor = 3
-					has_government = neutrality
-					has_completed_focus = AUS_reinstate_the_imperial_council
-				}
-			}
-		}
 		name = AUS_elizabet_von_gutmann
 		portraits = {
 			civilian = {
@@ -1103,10 +1038,6 @@ characters = {
 
 			ai_will_do = {
 				base = 1
-				modifier = {
-					factor = 0
-					has_completed_focus = AUS_totalitarian_safety
-				}
 			}
 		}
 		name = AUS_franz_koritschoner
@@ -1165,38 +1096,6 @@ characters = {
 	}
 
 	AUS_otto_bauer = {
-		advisor = {
-			slot = political_advisor
-			idea_token = AUS_otto_bauer
-			allowed = { 
-				original_tag = AUS
-			}
-			available = {
-				OR = {
-					has_completed_focus = AUS_austromarxism_focus
-					AND = {
-						has_completed_focus = AUS_pardon_political_exiles
-						has_government = democratic
-						NOT = {
-							has_country_leader = {
-								character = AUS_vinzenz_schumy
-							}
-						}
-					}
-				}
-			}
-			traits = { 
-				AUS_the_father_of_austromarxism 
-			}
-
-			ai_will_do = {
-				base = 2
-				modifier = {
-					factor = 5
-					has_completed_focus = AUS_austromarxism_focus
-				}
-			}
-		}
 		name = AUS_otto_bauer
 		portraits = {
 			civilian = {
@@ -1558,7 +1457,6 @@ characters = {
 					AND = {
 						has_government = fascism
 						NOT = { 
-							has_completed_focus = AUS_clamp_down_on_dnsap 
 							has_completed_focus = AUS_rebuild_democratic_systems
 							has_completed_focus = AUS_ban_dnsap
 						}
@@ -1644,7 +1542,6 @@ characters = {
 				has_government = communism
 				OR = {
 					has_completed_focus = AUS_schutzbund_support
-					has_completed_focus = AUS_properly_trained_militias
 				}
 				NOT = { original_tag = GER }
 			}
@@ -1756,10 +1653,7 @@ characters = {
 			}
 			visible = {
 				NOT = {
-					OR = {
-						has_completed_focus = AUS_establish_bohme_plan 
-						original_tag = GER
-					}
+					original_tag = GER
 				}
 			}
 			traits = {
@@ -1859,37 +1753,6 @@ characters = {
 		instance = {
 			allowed = {
 				has_dlc = "Gotterdammerung"
-			}
-
-			advisor = {
-				slot = army_chief
-				idea_token = AUS_franz_bohme
-				allowed = {
-					original_tag = AUS
-				}
-				available = {
-					has_completed_focus = AUS_establish_bohme_plan
-				}
-
-				visible = {
-					NOT = {has_completed_focus = AUS_follow_the_jansa_plan}
-				}
-				traits = {
-					army_chief_offensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					base = 1
-					modifier = {
-						factor = 10
-						original_tag = AUS
-						OR = {
-							has_completed_focus = AUS_demand_hungarian_submission
-							has_completed_focus = AUS_bring_hungary_back_into_the_fold
-						}
-						
-					}
-				}
 			}
 			name = AUS_franz_bohme
 			portraits = {
@@ -2018,10 +1881,6 @@ characters = {
 			cost = 100
 			ai_will_do = {
 				base = 1
-				modifier = {
-					factor = 0.1
-					NOT = { has_completed_focus = AUS_osterreichische_luftstreitkrafte }
-				}
 			}
 		}
 		name = AUS_godwin_von_brumowski
@@ -2050,10 +1909,6 @@ characters = {
 				cost = 100
 				ai_will_do = {
 					base = 1
-					modifier = {
-						factor = 0.1
-						NOT = { has_completed_focus = AUS_osterreichische_luftstreitkrafte }
-					}
 				}
 			}
 			name = AUS_alexander_lohr
@@ -2080,10 +1935,6 @@ characters = {
 				cost = 100
 				ai_will_do = {
 					base = 1
-					modifier = {
-						factor = 0.1
-						NOT = { has_completed_focus = AUS_osterreichische_luftstreitkrafte }
-					}
 				}
 			}
 			name = AUS_alexander_lohr
@@ -2113,10 +1964,6 @@ characters = {
 				cost = 100
 				ai_will_do = {
 					base = 1
-					modifier = {
-						factor = 0.1
-						NOT = { has_completed_focus = AUS_osterreichische_luftstreitkrafte }
-					}
 				}
 			}
 			name = AUS_otto_schobel
@@ -2682,7 +2529,6 @@ characters = {
 				}
 				OR = {
 					has_completed_focus = AUS_schutzbund_support
-					has_completed_focus = AUS_properly_trained_militias
 				}
 				
 			}
@@ -2740,7 +2586,6 @@ characters = {
 				owner = { #Yes, this is needed, otherwise you get a scope error as the game checks if the scientist have completed the focus... they haven't :D
 					OR = {
 						has_completed_focus = AUS_royal_scientific_grants
-						has_completed_focus = AUS_recruiting_the_graduates
 					}
 				}
 			}
@@ -2752,19 +2597,6 @@ characters = {
 		portraits = {
 			army = {
 				large = GFX_portrait_AUS_eugen_sanger
-			}
-		}
-
-		scientist = {
-			traits = { scientist_trait_jet_expert }
-			skills = {
-				specialization_air = 2
-			}
-
-			visible = {
-				owner = { #Yes, this is needed, otherwise you get a scope error as the game checks if the scientist have completed the focus... they haven't :D
-					has_completed_focus = AUS_recruiting_the_graduates
-				}
 			}
 		}
 	}
@@ -2796,19 +2628,6 @@ characters = {
 		portraits = {
 			army = {
 				large = GFX_portrait_AUS_egon_schweidler
-			}
-		}
-
-		scientist = {
-			traits = { scientist_trait_nuclear_power_expert scientist_trait_bright }
-			skills = {
-				specialization_nuclear = 2
-			}
-
-			visible = {
-				owner = { #Yes, this is needed, otherwise you get a scope error as the game checks if the scientist have completed the focus... they haven't :D
-					has_completed_focus = AUS_recruiting_the_graduates
-				}
 			}
 		}
 	}
