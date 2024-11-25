@@ -71,9 +71,6 @@
 		offset = { 
 			x = 3
 			y = -2
-			trigger = {
-				has_completed_focus = AUS_reinstate_the_imperial_council
-			}
 		}
 
 		

@@ -586,7 +586,7 @@ ROMID_training_normal:0 "§YNormal§!"
 ROMID_training_advanced:0 "§GAdvanced§!"
 ROMID_training_elite:0 "§5Elite§!"
 
-ROMID_mountain_artillery_tech_tt:0 "Enables §HMountain Gun§!:\nSpecial Forces Capacity Multiplier: §G+5.0%§! \nArtillery experience gain from combat: §G+10%§!\n§HArtillery\n    Mountain§!: \n        Movement: §G+15%§! \n        Attack: §G+10%§! \n§HAnti-Tank\n    Mountain§!: \n        Movement: §G+15%§! \n        Attack: §G+10%§!"
+ROMID_mountain_artillery_tech_tt:0 "Enables §HMountain Gun§!:\nSpecial Forces Min Limit: §G+200§! \nArtillery experience gain from combat: §G+10%§!\n§HArtillery\n    Mountain§!: \n        Movement: §G+15%§! \n        Attack: §G+10%§! \n§HAnti-Tank\n    Mountain§!: \n        Movement: §G+15%§! \n        Attack: §G+10%§!"
 ROMID_mountain_brigades_tech_tt:0 "Enables §H"Vânători" Brigades§!:\n§HMountaineers\n    Mountain§!: \n        Movement: §G+20%§! \n        Attack: §G+15%§! \n        Defence: §G+15%§! \n    §HHills§!: \n        Movement: §G+20%§! \n        Attack: §G+15%§! \n        Defence: §G+15%§!"
 ROMID_mountain_gun:0 "Mountain Gun"
 ROMID_mountain_brigades:0 ""Vânători" Brigades"

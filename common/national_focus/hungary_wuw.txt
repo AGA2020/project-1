@@ -2149,12 +2149,6 @@ focus_tree = {
 
 		available = {
 
-			is_subject = no
-
-			GEO = {
-				exists = no
-			}
-
 			custom_trigger_tooltip = {
 				tooltip = wuw_HUN_the_kingdom_of_georgia_required_states_tt
 				AND = {
@@ -2192,32 +2186,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			every_state = {
-				limit = {
-					OR = {
-						is_controlled_by = ROOT
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = PREV
-						}
-					}
-					NOT = {
-						is_core_of = ROOT
-					}
-					OR = {
-						state = 231
-						state = 826
-					}
-				}
-				transfer_state_to = GEO
-			}
-
-			GEO = {
-				drop_cosmetic_tag = yes
-			}
-
-			puppet = GEO
 
 			set_country_flag = HUN_created_georgian_monarchy
 
@@ -9797,19 +9765,6 @@ focus_tree = {
 			factor = 15
 		}
 
-		available = {
-			has_government = democratic
-			is_subject = no
-			is_in_faction = no
-			any_country = {
-				HABSBURG_is_a_habsburg_viable_nation = yes
-				OR = {
-					has_government = neutrality
-					has_government = democratic
-				}
-			}
-		}
-
 		bypass = {
 
 		}
@@ -9821,39 +9776,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-
-			add_political_power = 50
-			create_faction = AUS_danubian_federation
-			set_rule = {
-				can_create_factions = yes
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = AUS_invite_danubian_countries_tt
-			ROOT = {
-				hidden_effect = {
-					save_event_target_as = alliance_inviter
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = HABSBURG_joint_ft_unlock_tt
-
-			hidden_effect = {
-				set_global_flag = AH_joint_tree_activated_flag
-
-				every_country = {
-					limit = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
-
-			# Set Hungary as Leader of the federation
-			set_variable = { global.AH_originator_country = ROOT }
 		}
 	}
 
@@ -9937,9 +9859,6 @@ focus_tree = {
 					owns_state = 76
 					controls_state = 76
 				}
-			}
-			TRA = {
-				exists = no
 			}
 		}
 

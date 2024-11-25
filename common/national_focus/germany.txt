@@ -24487,12 +24487,6 @@ focus_tree = {
 
 		prerequisite = { focus = GER_return_of_the_kaiser_ww focus = GER_military_dictatorship }
 
-		available = {
-			is_subject = no
-			NOT = { has_war_with = FRA }
-			has_government = neutrality
-		}
-
 		cancel_if_invalid = yes
 
 		x = 4
@@ -24507,70 +24501,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-
-			add_war_support = 0.05
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_timed_idea = {
-				idea = GER_expatriate_the_communists
-				days = 720
-			}
-			add_named_threat = { threat = 3 name = GER_expatriate_the_communists }
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			FRA = { 
-				add_timed_idea = {
-					idea = GER_communist_refugees
-					days = 720
-				}
-				country_event = { id = wtt_germany.17 }
-			}
-
-			IF = {
-				limit = {
-					has_idea = GER_expatriated_communists_return_home_ns
-				}
-				remove_ideas = GER_expatriated_communists_return_home_ns	
-			}
-			IF = {
-				limit = {
-					has_idea = GER_expatriated_communists_return_home_supressed_ns
-				}
-				remove_ideas = GER_expatriated_communists_return_home_supressed_ns
-			}
-
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = { has_dlc = "La Resistance" }
-						AND = {
-							has_global_flag = spanish_civil_war
-							NOT = { has_global_flag = scw_over }
-						}
-					}
-					random_other_country = {
-						limit = {
-							original_tag = SPR
-							has_government = communism
-						}
-						country_event = { id = wtt_germany.2 days = 1 }
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "La Resistance"
-						AND = {
-							has_global_flag = spanish_civil_war
-							NOT = { has_global_flag = scw_over }
-						}
-					}
-					SPD = {
-						country_event = { id = wtt_germany.2 days = 1 }
-					}
-				}
-			}
 			
 		}
 	}
@@ -24588,15 +24518,6 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			is_subject = no
-			has_civil_war = no
-			NOT = {
-				912 = { is_fully_controlled_by = ROOT }
-			}
-		}
-
-		bypass = {
-			912 = { is_fully_controlled_by = ROOT }
 		}
 
 		will_lead_to_war_with = DEN
@@ -24604,101 +24525,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-
-			add_named_threat = { threat = 2 name = GER_demand_the_return_of_southern_jutland }
-			
-			add_state_claim = 912
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					912 = {
-						is_owned_by = DEN
-					}
-				}
-				DEN = {
-					country_event = {
-						id = wuw_GER_diplomacy.57
-						days = 2
-						random_days = 2
-					}	
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					add_political_power = 25
-					add_popularity = {
-						ideology = ROOT
-						popularity = 0.05
-					}	
-
-					custom_effect_tooltip = generic_skip_one_line_tt
-					
-					912 = {
-						transfer_state_to = ROOT
-						add_core_of = ROOT
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					any_other_country = {
-						owns_state = 912
-						NOT = {
-							original_tag = DEN
-						}
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				912 = {
-					OWNER = {
-						country_event = {
-							id = wuw_GER_diplomacy.60
-							days = 2
-							random_days = 2
-						}
-					}
-				}
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					add_political_power = 25
-					add_popularity = {
-						ideology = ROOT
-						popularity = 0.05
-					}	
-
-					custom_effect_tooltip = generic_skip_one_line_tt
-					
-					912 = {
-						transfer_state_to = ROOT
-						add_core_of = ROOT
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					any_other_country = {
-						owns_state = 912
-						is_subject_of = ROOT
-					}
-				}
-				912 = {
-					OWNER = {
-						country_event = {
-							id = wuw_GER_diplomacy.63
-							hours = 1
-						}
-					}
-				}
-				effect_tooltip = {
-					912 = {
-						transfer_state_to = ROOT
-						add_core_of = ROOT
-					}
-				}
-			}
 			
 		}
 	}
@@ -24722,42 +24548,9 @@ focus_tree = {
 
 		cost = 2
 
-		available = {
-			is_subject = no
-			NOT = {
-				has_country_leader = {
-					ruling_only = yes
-					character = GER_august_von_mackensen
-				}		
-			}
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-
-			add_political_power = 50
-
-			IF = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				hidden_effect = {
-					GER_wilhelm_canaris = {
-						remove_trait = {
-							slot = political_advisor
-							trait = head_of_the_abwehr
-						}
-					}
-				}
-				GER_wilhelm_canaris = {
-	 				add_trait = { 
-	 					slot = political_advisor
-	 					trait = head_of_the_abwehr_improved
-	 				}
-	 			}
-			}
 
 		}
 	}
@@ -24771,44 +24564,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_realpolitik
 		cost = 2
-		available = {
-			is_subject = no
-			OR = {
-				is_faction_leader = yes
-				is_in_faction = no
-			}
-		}
 
-		bypass = {
-			is_faction_leader = yes
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-
-			if = {
-				limit = {
-					is_in_faction = no
-				}
-				custom_effect_tooltip = GER_central_european_alliance_tt
-			}
-			effect_tooltip = {
-				create_faction = GER_mitteleuropa_alliance
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			hidden_effect = {
-				if = {
-					limit = {
-						is_in_faction = no
-					}
-					create_faction = GER_mitteleuropa_alliance
-				}
-			}
-
-			custom_effect_tooltip = GER_mitteleuropa_tt
 
 		}
 	}
@@ -24850,37 +24610,9 @@ focus_tree = {
 		relative_position_id = GER_the_austrian_question
 		cost = 5
 
-		available = {
-			is_subject = no
-			is_faction_leader = yes
-			CZE = {
-				exists = yes
-				is_in_faction = no
-				is_subject = no
-			}
-		}
-
-		bypass = {
-			CZE = {
-				OR = {
-					is_in_faction = yes
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			
-			CZE = {
-				country_event = {
-					id = wuw_GER_realpolitik.1
-					hours = 6
-					random_hours = 6
-				}		
-			}
 			
 		}
 	}
@@ -24901,8 +24633,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-
-			custom_effect_tooltip = GER_sway_the_balkans_tt
 
 		}
 	}
