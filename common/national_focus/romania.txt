@@ -6122,7 +6122,6 @@ category = land_doctrine
 						free_building_slots = {
 							building = infrastructure
 							size > 0
-							include_locked = yes
 						}
 					}
 					add_building_construction = {
@@ -6139,7 +6138,6 @@ category = land_doctrine
 						free_building_slots = {
 							building = infrastructure
 							size > 0
-							include_locked = yes
 						}
 					}
 					add_building_construction = {
@@ -6156,7 +6154,6 @@ category = land_doctrine
 						free_building_slots = {
 							building = infrastructure
 							size > 0
-							include_locked = yes
 						}
 					}
 					add_building_construction = {
@@ -6368,7 +6365,6 @@ category = land_doctrine
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				add_building_construction = {
@@ -6385,7 +6381,6 @@ category = land_doctrine
 					free_building_slots = {
 						building = infrastructure
 						size > 0
-						include_locked = yes
 					}
 				}
 				add_building_construction = {
@@ -7081,7 +7076,6 @@ category = land_doctrine
 						free_building_slots = {
 							building = infrastructure
 							size > 0
-							include_locked = yes
 						}
 					}
 					add_building_construction = {
@@ -7098,7 +7092,6 @@ category = land_doctrine
 						free_building_slots = {
 							building = infrastructure
 							size > 0
-							include_locked = yes
 						}
 					}
 					add_building_construction = {
@@ -7115,7 +7108,6 @@ category = land_doctrine
 						free_building_slots = {
 							building = infrastructure
 							size > 0
-							include_locked = yes
 						}
 					}
 					add_building_construction = {
@@ -7333,7 +7325,6 @@ category = land_doctrine
 						free_building_slots = {
                 		        		building = infrastructure
                 		        		size > 0
-               			        		include_locked = yes
                   		  		}
 					}
 					add_building_construction = {
@@ -7351,7 +7342,6 @@ category = land_doctrine
                 			free_building_slots = {
                 		        	building = infrastructure
                 		        	size > 0
-               			        	include_locked = yes
                   		  	}
               			}
             		    	add_building_construction = {

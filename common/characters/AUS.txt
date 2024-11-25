@@ -94,45 +94,6 @@ characters = {
 			traits = { anti_communist }
 		}
 
-		advisor = {
-			slot = political_advisor
-			idea_token = AUS_ernst_rudiger_starhemberg
-			allowed = {
-				original_tag = AUS
-			}
-			traits = {
-				AUS_prince_of_starhemberg
-			}
-			visible = {
-				NOT = {
-					has_government = communism
-				}
-				NOT = {
-					has_country_leader = {
-						ruling_only = yes
-						character = AUS_ernst_rudiger_starhemberg
-					}
-				}
-			}
-
-			available = {
-				has_completed_focus = AUS_repeal_the_adelsaufhebungsgesetz
-				NOT = {
-					has_country_leader = {
-						ruling_only = yes
-						character = AUS_ernst_rudiger_starhemberg
-					}
-				}
-				NOT = {
-					has_government = communism
-				}
-			}
-
-			ai_will_do = {
-				base = 2
-			}
-		}
-
 		corps_commander = {
 			traits = { militias_officer politically_connected }
 			skill = 3
@@ -148,8 +109,7 @@ characters = {
 						has_government = neutrality
 					}
 					OR = {
-						has_completed_focus = AUS_heimwehr_support	
-						has_completed_focus = AUS_sturmscharen_support
+						has_completed_focus = AUS_heimwehr_support
 					}
 					NOT = {
 						has_country_leader = {
@@ -679,14 +639,12 @@ characters = {
 			visible = {
 				has_government = neutrality
 				OR = {
-					has_completed_focus = AUS_the_royals_of_liechtenstein
 					has_completed_focus = wuw_HUN_renovato_imperii
 				}
 			}
 			available = {
 				has_government = neutrality
 				OR = {
-					has_completed_focus = AUS_the_royals_of_liechtenstein
 					has_completed_focus = wuw_HUN_renovato_imperii
 				}
 			}
@@ -711,7 +669,6 @@ characters = {
 		navy_leader = {
 			visible = { 
 				OR = {
-					has_completed_focus = AUS_promote_admirals
 					has_completed_focus = wuw_HUN_renovato_imperii
 				}
 				NOT = {
@@ -745,14 +702,12 @@ characters = {
 			visible = {
 				has_government = neutrality
 				OR = {
-					has_completed_focus = AUS_the_royals_of_liechtenstein
 					has_completed_focus = wuw_HUN_renovato_imperii
 				}
 			}
 			available = {
 				has_government = neutrality
 				OR = {
-					has_completed_focus = AUS_the_royals_of_liechtenstein
 					has_completed_focus = wuw_HUN_renovato_imperii
 				}
 			}
@@ -867,30 +822,6 @@ characters = {
 	}
 
 	AUS_marianne_pollak = {
-		advisor = {
-			slot = political_advisor
-			idea_token = AUS_marianne_pollak
-			allowed = { 
-				original_tag = AUS
-			}
-			available = {
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-				has_completed_focus = AUS_womens_education_initiative
-			}
-			visible = {
-				has_completed_focus = AUS_womens_education_initiative
-			}
-			traits = { 
-				ARG_socialist_feminist
-			}
-
-			ai_will_do = {
-				base = 3
-			}
-		}
 		name = AUS_marianne_pollak
 		portraits = {
 			civilian = {
@@ -900,27 +831,6 @@ characters = {
 	}
 
 	AUS_bruno_kreisky = {
-		advisor = {
-			slot = political_advisor
-			idea_token = AUS_bruno_kreisky
-			allowed = { 
-				original_tag = AUS
-			}
-			traits = { 
-				AUS_meticulous_lawyer
-			}
-			available = {
-				has_completed_focus = AUS_release_imprisoned_leaders
-			}
-
-			ai_will_do = {
-				base = 1
-				modifier = {
-					factor = 10
-					has_government = democratic
-				}
-			}
-		}
 		name = AUS_bruno_kreisky
 		portraits = {
 			civilian = {
@@ -966,27 +876,6 @@ characters = {
 	}
 
 	AUS_malke_schorr = {
-		advisor = {
-			slot = political_advisor
-			idea_token = AUS_malke_schorr
-			allowed = { 
-				original_tag = AUS
-			}
-			available = {
-				has_government = communism
-				has_completed_focus = AUS_establish_rote_hilfe	
-			}
-			visible = {
-				has_completed_focus = AUS_establish_rote_hilfe	
-			}
-			traits = { 
-				AUS_the_red_helper
-			}
-
-			ai_will_do = {
-				base = 2
-			}
-		}
 		name = AUS_malke_schorr
 		portraits = {
 			civilian = {
@@ -996,27 +885,6 @@ characters = {
 	}
 
 	AUS_egon_schonhof = {
-		advisor = {
-			slot = political_advisor
-			idea_token = AUS_egon_schonhof
-			allowed = { 
-				original_tag = AUS
-			}
-			available = {
-				has_government = communism
-				has_completed_focus = AUS_establish_rote_hilfe	
-			}
-			visible = {
-				has_completed_focus = AUS_establish_rote_hilfe	
-			}
-			traits = { 
-				AUS_communist_lawyer
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-		}
 		name = AUS_egon_schonhof
 		portraits = {
 			civilian = {
@@ -1071,22 +939,6 @@ characters = {
 	}
 
 	AUS_adolf_hoch = {
-		advisor = {
-			slot = political_advisor
-			idea_token = AUS_adolf_hoch
-			allowed = { 
-				original_tag = AUS
-			}
-			available = {
-				has_completed_focus = AUS_architechtual_advancements
-			}
-			traits = { 
-				AUS_reknowned_architecht
-			}
-			ai_will_do = {
-				base = 1
-			}
-		}
 		name = AUS_adolf_hoch
 		portraits = {
 			civilian = {
@@ -1453,15 +1305,11 @@ characters = {
 			logistics_skill = 2
 			legacy_id = -1
 			visible = {
-				OR = { 
-					AND = {
-						has_government = fascism
-						NOT = { 
-							has_completed_focus = AUS_rebuild_democratic_systems
-							has_completed_focus = AUS_ban_dnsap
-						}
+				AND = {
+					has_government = fascism
+					NOT = { 
+						has_completed_focus = AUS_ban_dnsap
 					}
-					has_completed_focus = AUS_bring_generals_out_of_retirement
 				}
 				NOT = {
 					original_tag = GER
@@ -1612,21 +1460,6 @@ characters = {
 				small = "GFX_portrait_AUS_carl_heinz_birnbacher_small"
 			}
 		}
-		navy_leader = {
-			traits = {navy_career_officer}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 2
-			maneuvering_skill = 1
-			coordination_skill = 2
-			legacy_id = -1
-			visible = {
-				has_completed_focus = AUS_promote_admirals
-				NOT = {
-					original_tag = GER
-				}
-			}
-		}
 	}
 
 	###########################
@@ -1711,7 +1544,6 @@ characters = {
 			}
 			available = {
 				OR = {
-					has_completed_focus = AUS_bring_generals_out_of_retirement
 					has_completed_focus = GER_the_austrian_question
 				}
 				
@@ -1733,15 +1565,9 @@ characters = {
 			logistics_skill = 3
 			legacy_id = -1
 			visible = {
-				OR = {
-					AND = {
-						has_completed_focus = AUS_bring_generals_out_of_retirement
-						original_tag = AUS
-					}
-					AND = {
-						has_country_flag = GER_got_austrian_generals
-						original_tag = GER
-					}
+				AND = {
+					has_country_flag = GER_got_austrian_generals
+					original_tag = GER
 				}
 				
 				
@@ -2575,21 +2401,6 @@ characters = {
 				large = GFX_portrait_AUS_herbert_wagner
 			}
 		}
-
-		scientist = {
-			traits = { scientist_trait_guidance_systems_expert }
-			skills = {
-				specialization_air = 3
-			}
-
-			visible = {
-				owner = { #Yes, this is needed, otherwise you get a scope error as the game checks if the scientist have completed the focus... they haven't :D
-					OR = {
-						has_completed_focus = AUS_royal_scientific_grants
-					}
-				}
-			}
-		}
 	}
 
 	AUS_eugen_sanger = {
@@ -2608,19 +2419,6 @@ characters = {
 				large = GFX_portrait_AUS_hedy_lamarr
 			}
 		}
-
-		scientist = {
-			traits = { scientist_trait_submarine_specialist scientist_trait_fast_learner }
-			skills = {
-				specialization_naval = 1
-			}
-
-			visible = {
-				owner = { #Yes, this is needed, otherwise you get a scope error as the game checks if the scientist have completed the focus... they haven't :D
-					has_completed_focus = AUS_womens_education_initiative
-				}
-			}
-		}
 	}
 
 	AUS_egon_schweidler = {
@@ -2637,19 +2435,6 @@ characters = {
 		portraits = {
 			army = {
 				large = GFX_portrait_AUS_paul_eisler
-			}
-		}
-
-		scientist = {
-			traits = { scientist_trait_electronics_specialist }
-			skills = {
-				specialization_air = 2
-			}
-
-			visible = {
-				owner = { #Yes, this is needed, otherwise you get a scope error as the game checks if the scientist have completed the focus... they haven't :D
-					has_completed_focus = AUS_royal_scientific_grants
-				}
 			}
 		}
 	}
