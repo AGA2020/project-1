@@ -32,24 +32,6 @@
 
 # This specifically overrides the rule check as to whether or not you can guarantee other ideologies
 
-
-
-DIPLOMACY_REQUEST_ACCESS_TO_LICENCE_PRODUCTION_ENABLE_TRIGGER = { 
-	custom_trigger_tooltip = { 
-		tooltip = AGA_sameside
-		OR = {
-			AND = {
-				ROOT = { is_axis_country = yes }
-				FROM = { is_axis_country = yes  }
-			}
-			AND = {
-				ROOT = { is_allied_country = yes }
-				FROM = { is_allied_country = yes  }
-			}
-		}
-	}
-}
-
 DIPLOMACY_GUARANTEE_ENABLE_TRIGGER_OVERRIDES_GAME = {
 	NOT = {
 		has_game_rule = {
