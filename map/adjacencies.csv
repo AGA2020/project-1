@@ -277,5 +277,6 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 11779;6915;impassable;-1;-1;-1;-1;-1;;spain-france Border
 11779;9853;impassable;-1;-1;-1;-1;-1;;spain-france Border
 9824;9853;impassable;-1;-1;-1;-1;-1;;spain-france Border
+3898;3915;impassable;-1;-1;-1;-1;-1;;spain-france Border
 1421;10184;sea;2899;-1;-1;-1;-1;;Sulu-Mindanao
 -1;-1;;-1;-1;-1;-1;-1;-1
