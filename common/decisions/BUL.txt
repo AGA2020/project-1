@@ -4216,35 +4216,6 @@ BUL_macedonian_revolutionary_organizations = {
 			owns_state = 48
 		}
 
-		cancel_trigger = {
-			OR = {
-				custom_trigger_tooltip = { #SOFIA - Macedonia
-					tooltip = BUL_destroy_imro_divisions_macedonia_tt
-					divisions_in_border_state = {
-						size < 2
-						state = 48
-						border_state = 106
-					}
-				}
-				custom_trigger_tooltip = { #PLOVDIV - Central Macedonia
-					tooltip = BUL_destroy_imro_divisions_central_macedonia_tt
-					divisions_in_border_state = {
-						size < 4
-						state = 212
-						border_state = 731
-					}
-				}
-				custom_trigger_tooltip = { #PLOVDIV - Thrace
-					tooltip = BUL_destroy_imro_divisions_thrace_tt
-					divisions_in_border_state = {
-						size < 4
-						state = 212
-						border_state = 184
-					}
-				}
-			}
-		}
-
 		cancel_effect = {
 			clr_country_flag = BUL_macedonian_affairs_ongoing_flag
 			48 = {
