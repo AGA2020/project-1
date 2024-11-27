@@ -21904,6 +21904,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
+		completion_reward = {
 		}
 	}
 
@@ -22007,49 +22008,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_the_peoples_victory
 		cost = 5
-		available = {
-			NOT = {
-				has_war_with = SOV
-				SOV = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
-		}
-
-		bypass = {
-			OR = {
-				SOV = { is_subject = yes }
-				NOT = { country_exists = SOV }
-				is_in_faction_with = SOV
-				has_non_aggression_pact_with = SOV
-				AND = {
-					is_guaranteed_by = SOV
-					has_guaranteed = SOV
-				}
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			SOV = {
-				country_event = {
-					id = wuw_GER_diplomacy.90
-					hours = 12
-				}
-			}
-
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				add_opinion_modifier = {
-					target = SOV
-					modifier = medium_increase 
-				}
-			}
-			SOV = {
-				event_option_tooltip = wuw_GER_diplomacy.90.a
-			}
 			
 			
 		}
