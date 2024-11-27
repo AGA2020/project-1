@@ -4204,8 +4204,6 @@ BUL_macedonian_revolutionary_organizations = {
 		available = {
 			NOT = { has_country_flag = BUL_macedonian_affairs_ongoing_flag }
 			has_war = no
-			has_equipment = { support_equipment > 199 }
-			has_equipment = { infantry_equipment > 799 }	
 		}
 
 		days_remove = 60
