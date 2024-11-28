@@ -9783,11 +9783,6 @@ focus_tree = {
 		will_lead_to_war_with = LAT
 		will_lead_to_war_with = LIT
 		will_lead_to_war_with = POL
-		will_lead_to_war_with = BLR
-
-		available = {
-			is_subject = no
-		}
 
 		ai_will_do = {
 			factor = 10

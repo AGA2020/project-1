@@ -93,33 +93,6 @@ characters = {
 			id = -1
 			traits = { anti_communist }
 		}
-
-		corps_commander = {
-			traits = { militias_officer politically_connected }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = -1
-			visible = {
-				AND = {
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}
-					OR = {
-						has_completed_focus = AUS_heimwehr_support
-					}
-					NOT = {
-						has_country_leader = {
-							ruling_only = yes
-							character = AUS_ernst_rudiger_starhemberg
-						}
-					}
-				}
-			}
-		}
 	}
 
 	AUS_wilhelm_miklas = {
@@ -1378,22 +1351,6 @@ characters = {
 				small = "GFX_portrait_AUS_julius_deutsch_small"
 			}
 		}
-		corps_commander = {
-			traits = { militias_officer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = -1
-			visible = {
-				has_government = communism
-				OR = {
-					has_completed_focus = AUS_schutzbund_support
-				}
-				NOT = { original_tag = GER }
-			}
-		}
 	}
 
 	AUS_richard_steidle = {
@@ -1402,22 +1359,6 @@ characters = {
 			army = {
 				large = "GFX_portrait_AUS_richard_steidle" 
 				small = "GFX_portrait_AUS_richard_steidle_small" 
-			}
-		}
-		corps_commander = {
-			traits = { militias_officer }
-			skill = 1
-			attack_skill = 1
-			defense_skill = 0
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = -1
-			visible = {
-				has_government = neutrality
-				has_completed_focus = AUS_eiserne_legion
-				NOT = {
-					original_tag = GER
-				}
 			}
 		}
 	}
@@ -1429,21 +1370,6 @@ characters = {
 				large = "GFX_portrait_europe_generic_land_13"
 				small = "GFX_portrait_europe_generic_land_13_small"
 				
-			}
-		}
-		corps_commander = {
-			traits = { harsh_leader }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 1
-			legacy_id = -1
-			visible = {
-				NOT = {
-					original_tag = GER
-				}
-				has_completed_focus = AUS_invite_spanish_refugees
 			}
 		}
 	}
@@ -1472,29 +1398,6 @@ characters = {
 			army = {
 				large = "GFX_portrait_AUS_alfred_jansa"
 				small = "GFX_portrait_AUS_alfred_jansa_small"
-			}
-		}
-
-		advisor = {
-			slot = army_chief
-			idea_token = AUS_alfred_jansa
-			allowed = {
-				original_tag = AUS
-			}
-			available = {
-				has_completed_focus = AUS_follow_the_jansa_plan
-			}
-			visible = {
-				NOT = {
-					original_tag = GER
-				}
-			}
-			traits = {
-				army_chief_defensive_2
-			}
-			cost = 100
-			ai_will_do = {
-				base = 5
 			}
 		}
 		field_marshal = {
@@ -2337,26 +2240,6 @@ characters = {
 			cost = 50
 			ai_will_do = {
 				base = 1
-			}
-		}
-
-		corps_commander = {
-			traits = { militias_officer }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = -1
-			visible = {
-				OR = {
-					has_government = communism
-					has_government = democratic
-				}
-				OR = {
-					has_completed_focus = AUS_schutzbund_support
-				}
-				
 			}
 		}
 		name = AUS_theodor_korner

@@ -530,20 +530,6 @@ ideas = {
 			}
 		}
 
-		HABSBURG_imperial_integration = {
-			allowed = {
-				HABSBURG_is_a_habsburg_viable_nation = yes
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = HABSBURG_imperial_integration
-
-			modifier = {
-				autonomy_gain = -0.5
-			}
-		}
-
 		### NEW NATIONAL SPIRITS ###
 
 		HUN_low_popular_support = {
