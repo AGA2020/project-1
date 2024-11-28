@@ -1278,12 +1278,6 @@ characters = {
 			logistics_skill = 2
 			legacy_id = -1
 			visible = {
-				AND = {
-					has_government = fascism
-					NOT = { 
-						has_completed_focus = AUS_ban_dnsap
-					}
-				}
 				NOT = {
 					original_tag = GER
 				}
