@@ -2990,7 +2990,7 @@ focus_tree = {
 		id = ROM_german_military_adivsors
 		icon = GFX_ROM_german_military_adivsors-262050
 		x = 5
-		y = 1
+		y = 2
 		relative_position_id = ROM_ostasivaordontrecetiprutul
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
@@ -2999,7 +2999,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = ROMID_german_military_adivsors
 		}
-		prerequisite = { focus = ROM_ostasivaordontrecetiprutul  focus = ROM_reclaim_bessarabia  }
+		prerequisite = { focus = ROM_romanian_claims_between_dniester_and_southern_bug  focus = ROM_reclaim_bessarabia  }
 	}
 
 	#Increased Exports to Germany
@@ -3125,7 +3125,7 @@ focus_tree = {
 				producer = GER
 			}
 		}
-		prerequisite = { focus = ROM_ostasivaordontrecetiprutul  } prerequisite = { focus = ROM_germandefencesatploiesti  }
+		prerequisite = { focus = ROM_romanian_claims_between_dniester_and_southern_bug  } prerequisite = { focus = ROM_germandefencesatploiesti  }
 	}
 
 	#Munca Tineretului Român
@@ -5263,7 +5263,7 @@ focus_tree = {
 		id = ROM_romanian_occupation_of_ukraine
 		icon = GFX_ROM_romanian_occupation_of_ukraine-312260
 		x = 2
-		y = 1
+		y = 2
 		relative_position_id = ROM_ostasivaordontrecetiprutul
 		cost = 5
 		search_filters = {
@@ -5276,7 +5276,7 @@ focus_tree = {
 			add_political_power = 25
 			add_ideas = ROMID_occupying_ukraine
 		}
-		prerequisite = { focus = ROM_ostasivaordontrecetiprutul  focus = ROM_reclaim_bessarabia  }
+		prerequisite = { focus = ROM_romanian_claims_between_dniester_and_southern_bug  }
 	}
 
 	#Refurbish Odessa
