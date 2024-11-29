@@ -6404,6 +6404,7 @@ category = land_doctrine
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
 		}
+		available = { always = no }
 		cost = 5
 		completion_reward = {
 			add_resource = {

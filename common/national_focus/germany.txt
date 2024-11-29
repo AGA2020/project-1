@@ -3500,12 +3500,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_army_leader = {
-				limit = {
-					NOT = { has_trait = scavenger }
-				}
-				random_select_amount = 2
-				add_trait = { trait = scavenger }
+			GER_fedor_von_bock = {
+				add_trait = { trait = GER_kriegaga }
+			}
+			GER_erwin_rommel = {
+				add_trait = { trait = GER_kriegaga }
 			}
 		}
 	}

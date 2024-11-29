@@ -4,4 +4,8 @@ spriteTypes = {
 		name = "GFX_Portrait_Soviet_Power_Vacuum"
 		texturefile = "gfx/leaders/SOV/Portraits_Soviet_Congress_of_Soviets.dds"
 	}
+	spriteType = {
+		name = "GFX_trait_GER_kriegaga"
+		texturefile = "gfx/interface/traits/trait_scavenger.dds"
+	}
 }
