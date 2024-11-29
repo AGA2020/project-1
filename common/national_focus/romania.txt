@@ -2644,13 +2644,13 @@ focus_tree = {
 	focus = {
 		id = ROM_ostasivaordontrecetiprutul
 		icon = GFX_focus_attack_soviet
-		x = 1
-		y = 1
+		x = 2
+		y = 0
 		relative_position_id = ROM_purge_the_iron_guard
 		search_filters = {
 			FOCUS_FILTER_FRA_POLITICAL_VIOLENCE
 		}
-		available = { if = { limit = { ROM = { is_ai = yes } } GER = { has_war_with = SOV } } }
+		available = { GER = { has_war_with = SOV } }
 		cost = 5
 		completion_reward = {
 			add_timed_idea = {
@@ -2661,7 +2661,7 @@ focus_tree = {
     				id = ROMEV_events.33
 			}
 		}
-		prerequisite = { focus = ROM_purge_the_iron_guard  } prerequisite = { focus = ROM_romanian_claims_between_dniester_and_southern_bug  }
+		prerequisite = { focus = ROM_abolishstatulnationallegionar  }
 	}	
 
 	#Mobilize More Men to the Front
@@ -2670,7 +2670,7 @@ focus_tree = {
 		icon = GFX_focus_generic_little_entente
 		x = -1
 		y = 2
-		relative_position_id = ROM_ostasivaordontrecetiprutul
+		relative_position_id = ROM_romanian_claims_between_dniester_and_southern_bug
 		search_filters = {
 			FOCUS_FILTER_MANPOWER
 		}
@@ -2679,7 +2679,7 @@ focus_tree = {
 			custom_effect_tooltip = ROMID_unlock_prepare_coup_tt
 			add_ideas = ROMID_mobilization_effort
 		}
-		prerequisite = { focus = ROM_ostasivaordontrecetiprutul  } prerequisite = { focus = ROM_german_war_support  }
+		prerequisite = { focus = ROM_romanian_claims_between_dniester_and_southern_bug  } prerequisite = { focus = ROM_german_war_support  }
 	}
 
 	#Sign the Tripartite Pact
@@ -5179,9 +5179,8 @@ focus_tree = {
 	focus = {
 		id = ROM_romanian_claims_between_dniester_and_southern_bug
 		icon = GFX_goal_generic_more_territorial_claims
-		x = 1
-		y = 1
-		available = { GER = { has_war_with = SOV } }
+		x = 0
+		y = 2
 		relative_position_id = ROM_abolishstatulnationallegionar
 		cost = 4
 		search_filters = {
@@ -5193,7 +5192,7 @@ focus_tree = {
 			add_state_claim = 198
 			add_state_claim = 834
 		}
-		prerequisite = { focus = ROM_abolishstatulnationallegionar  focus = ROM_expand_the_forced_labour_camps  }
+		prerequisite = { focus = ROM_ostasivaordontrecetiprutul  } prerequisite = { focus = ROM_purge_the_iron_guard  }
 	}
 
 	#Ban Oil Export to Germany
