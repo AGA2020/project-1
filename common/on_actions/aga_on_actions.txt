@@ -179,11 +179,13 @@ on_actions = {
 		}
 		effect = {
 			if = { 
-				limit = { AND = { tag = ROM ROM = { controls_state = 48 } } }
-					48 = { add_compliance = 100 }
-					801 = { add_compliance = 100 }
-					211 = { add_compliance = 100 }
-					212 = { add_compliance = 100 }
+				limit = { tag = ROM } 
+                every_state = {
+                    limit = {
+                        is_controlled_by = ROM
+                    }
+                    add_compliance = 100
+                } 
 			}
 		}
 	}	
