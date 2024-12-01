@@ -420,13 +420,120 @@ country_event = {
 		}
 
 		hidden_effect =  { add_timed_idea = { idea = SOV_molotov_ribbentrop_pact days = 730 } }
+		if = {
+			limit = {
+				NOT = { has_tech = basic_ship_hull_cruiser }
+			}
+			set_technology = { basic_ship_hull_cruiser = 1 }
+		}
+		if = {
+			limit = {
+				NOT = { has_tech = basic_cruiser_armor_scheme }
+			}
+			set_technology = { basic_cruiser_armor_scheme = 1 }
+		}
+		if = {
+			limit = {
+				has_tech = basic_medium_battery
+			}
+			create_equipment_variant = {
+				name = "Hipper Class"
+				type = ship_hull_cruiser_2
+				name_group = SOV_CA_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since event grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_battery_slot = ship_medium_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = empty
+					fixed_ship_armor_slot = ship_armor_cruiser_2
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_torpedo_1
+					mid_2_custom_slot = ship_airplane_launcher_1
+					rear_1_custom_slot = ship_medium_battery_2
+				}
+			}
+		}
+		else = {
+			create_equipment_variant = {
+				name = "Hipper Class"
+				type = ship_hull_cruiser_2
+				name_group = SOV_CA_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since event grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_battery_slot = ship_medium_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = empty
+					fixed_ship_armor_slot = ship_armor_cruiser_2
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_torpedo_1
+					mid_2_custom_slot = ship_airplane_launcher_1
+					rear_1_custom_slot = ship_medium_battery_1
+				}
+			}
+		}
+		
+		# CA: Lützow -> Petropavlovsk
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_cruiser_2
+				creator = "SOV"
+				version_name = "Hipper Class"
+			}
+			name = "Petropavlovsk"
+			requested_factories = 1
+			progress = 0.5
+			amount = 1
+		}
+		add_tech_bonus = {
+			name = NSB_soviet_soviet_german_trade_agreement.1.t
+			bonus = 0.5
+			uses = 2
+			category = ship_modules_tech
+			category = bb_tech
+			category = dd_tech
+		}
+		add_tech_bonus = {
+			name = NSB_soviet_soviet_german_trade_agreement.1.t
+			bonus = 0.5
+			uses = 2
+			category = air_equipment
+		}
+
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 1
+					include_locked = yes
+				}	
+			}
+			prioritize = { 217 202 195 }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}	
+		}
 		GER = {
 			country_event = { days = 1 id = germany.12 }
+			country_event = { id = NSB_soviet_soviet_german_trade_agreement.1 hours = 1 } 
+			add_timed_idea = { idea = SOV_soviet_german_trade_agreement days = 800 } 			
 			effect_tooltip = {
 				add_opinion_modifier = { target = SOV modifier = MR_pact }# pact
 			}
 		}
 		set_global_flag = sov_yes_pact
+		hidden_effect = { news_event = { id = nsb_news.103 days = 1 } }
 	}
 }
 
