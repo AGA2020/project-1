@@ -658,32 +658,10 @@ SOV_kirov_organization = {
 	icon = GFX_idea_SOV_kirov
 	
 	allowed = {	
-		OR = {
-			original_tag = SOV
-			AND = {
-				tag = BEL
-				has_dlc = "Gotterdammerung"
-			}
-		}
+		original_tag = SOV
 	}
 
 	available = {
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
-
-		IF = {
-			limit = { 
-				FROM = { 
-					original_tag = BEL 
-				} 
-			}
-
-			FROM = { has_completed_focus = BEL_invite_soviet_tank_makers }
-		}
 	}
 
 	override_trait = {
@@ -984,26 +962,13 @@ SOV_rubin_design_bureau_organization = {
 	icon = GFX_idea_SOV_rubin_design_bureau
 	
 	allowed = {	
-		OR = {
-			tag = SOV
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-		}
+		tag = SOV
 	}
 
 	visible = {
 	}
 
 	available = {
-
-		IF = {
-			limit = {
-				FROM = { original_tag = BRA }
-			}
-			FROM = { has_completed_focus = BRA_soviet_arms_industry }
-		}
 	}
 
 	add_trait = { #MTG version
@@ -1526,13 +1491,7 @@ SOV_mig_design_bureau_organization = {
 	icon = GFX_idea_mig_design_bureau
 	
 	allowed = {	
-		OR = {
-			tag = SOV
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance" #TODO MH Change DLC
-			}
-		}
+		tag = SOV
 	}
 	
 	visible = {
@@ -1550,13 +1509,6 @@ SOV_mig_design_bureau_organization = {
 				FROM = { original_tag = SOV }
 			}
 			FROM = { NOT = { has_country_flag = SOV_mig_design_bureau_dissolved_flag } }
-		}
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { original_tag = BRA }
-			}
-			FROM = { has_completed_focus = BRA_soviet_arms_industry }
 		}
 	}
 
@@ -2507,10 +2459,6 @@ SOV_gaz_organization = {
 				tag = BUL
 				has_dlc = "Battle for the Bosporus"
 			}
-			AND = {
-				tag = BRA
-				has_dlc = "Trial of Allegiance" #TODO MH fix DLC
-			}
 		}
 	}
 
@@ -2542,12 +2490,6 @@ SOV_gaz_organization = {
 				#is_in_faction_with = SOV
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
-		}
-		IF = {
-			limit = {
-				FROM = { original_tag = BRA }
-			}
-			FROM = { has_completed_focus = BRA_soviet_arms_industry }
 		}
 	}
 
