@@ -8347,16 +8347,9 @@ focus_tree = {
 			}
 			modifier = {
 				factor = 2
-				CZE = {
-					has_completed_focus = CZE_go_right
-				}
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
 			}
 		}		
 
