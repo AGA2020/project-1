@@ -359,20 +359,14 @@ set_popularities = {
 	communism = 2
 	neutrality = 20
 }
+create_equipment_variant = {
+	name = "ZB vz.24 (ROM)"
+	type = infantry_equipment_1
+	parent_version = 0
+	design_team = mio:ROM_cugir_organization
+}
 
 1939.1.1 = {
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1939.7.15"
-		election_frequency = 48
-		elections_allowed = no
-	}
-	set_popularities = {
-		democratic = 20
-		fascism = 35
-		communism = 2
-		neutrality = 43
-	}
 }
 ### VARIANTS ###
 # 1936 Start #
