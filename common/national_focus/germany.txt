@@ -21928,7 +21928,6 @@ focus_tree = {
 		id = GER_bring_turkey_into_the_fold
 		
 		prerequisite = { focus = GER_conquer_italy focus = GER_european_confederation focus = GER_align_italy focus = GER_prepare_italian_coup_ww }
-		mutually_exclusive = { focus = GER_german_hegemony_in_the_middle_east }
 
 		icon = {
 			trigger = {
@@ -23493,7 +23492,6 @@ focus_tree = {
 		icon = GFX_focus_attack_switzerland
 		prerequisite = { focus = GER_carte_blanche_for_alsace_and_french_colonies }
 		cancel_if_invalid = yes
-		will_lead_to_war_with = SWI
 		x = 0
 		y = 2
 		relative_position_id = GER_carte_blanche_for_alsace_and_french_colonies
@@ -23672,7 +23670,6 @@ focus_tree = {
 		id = GER_reestablish_free_elections
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = GER_secure_the_new_state }
-		mutually_exclusive = { focus = GER_revive_the_kaiserreich }
 		cancel_if_invalid = yes
 		x = 1
 		y = 1
