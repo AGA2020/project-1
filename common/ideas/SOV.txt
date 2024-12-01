@@ -835,12 +835,12 @@ ideas = {
 				tag = SOV
 			}
 
-			picture = generic_exploit_mines
+			picture = SOV_restoration_and_development_idea_ccp_sov_compatibility
 
 			modifier = {
 				industry_repair_factor = 0.1
 				production_speed_infrastructure_factor = 0.1
-				consumer_goods_factor = 0.05
+				consumer_goods_factor = 0.10
 			}
 		}
 
@@ -880,8 +880,8 @@ ideas = {
 
 			modifier = {
 				stability_factor = 0.05
-				consumer_goods_factor = -0.03
-				global_building_slots = 0.1
+				consumer_goods_factor = -0.06
+				global_building_slots = 1
 			}
 		}
 
@@ -1105,7 +1105,7 @@ ideas = {
 		SOV_defense_industry_artillery_bonus = {
 			name = SOV_soviet_artillery
 
-			picture = generic_artillery_regiments
+			picture = SOV_defense_industry_artillery_bonus_ccp_sov_compatibility
 
 			removal_cost = -1
 
@@ -1336,7 +1336,7 @@ ideas = {
 				research_speed_factor = 0.02
 				drift_defence_factor = 0.05
 				communism_drift = 0.05
-				consumer_goods_factor = -0.02
+				consumer_goods_factor = -0.05
 			}
 		}
 
@@ -1595,7 +1595,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor  = -0.03
+				consumer_goods_factor  = -0.10
 			}
 		}
 
@@ -1611,7 +1611,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor  = 0.05
+				consumer_goods_factor  = 0.10
 			}
 		}
 
@@ -1643,7 +1643,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				cic_to_overlord_factor = 0.5
 				mic_to_overlord_factor = 0.5
 				extra_trade_to_overlord_factor = 0.25
@@ -1665,7 +1665,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.25
 				cic_to_overlord_factor = 0.5
 				mic_to_overlord_factor = 0.5
 				extra_trade_to_overlord_factor = 0.25
@@ -1688,7 +1688,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				cic_to_overlord_factor = 0.5
 				mic_to_overlord_factor = 0.5
 				extra_trade_to_overlord_factor = 0.25
@@ -1713,7 +1713,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor  = -0.03
+				consumer_goods_factor  = -0.10
 			}
 		}
 
@@ -1729,7 +1729,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor  = 0.05
+				consumer_goods_factor  = 0.15
 			}
 		}
 
@@ -1761,7 +1761,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				cic_to_overlord_factor = 0.5
 				mic_to_overlord_factor = 0.5
 				extra_trade_to_overlord_factor = 0.25
@@ -1783,7 +1783,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.1
+				consumer_goods_factor = -0.25
 				cic_to_overlord_factor = 0.5
 				mic_to_overlord_factor = 0.5
 				extra_trade_to_overlord_factor = 0.25
@@ -1806,7 +1806,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 				cic_to_overlord_factor = 0.5
 				mic_to_overlord_factor = 0.5
 				extra_trade_to_overlord_factor = 0.25
@@ -1835,18 +1835,23 @@ ideas = {
 			}
 
 			on_remove = {
-				var:SOV_capital_for_soviet_imports = { #This is where the German capital is stored and where Soviet Imports state modifier was added
-					if = {
-						limit = {
-							has_dynamic_modifier = { modifier = SOV_soviet_imports }
-						}
-						remove_dynamic_modifier = { modifier = SOV_soviet_imports }
-					}
-				}
+				#var:SOV_capital_for_soviet_imports = { #This is where the German capital is stored and where Soviet Imports state modifier was added
+				#	if = {
+				#		limit = {
+				#			has_dynamic_modifier = { modifier = SOV_soviet_imports }
+				#		}
+				#		remove_dynamic_modifier = { modifier = SOV_soviet_imports }
+				#	}
+				#}
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.10
+				country_resource_steel = 20 
+				country_resource_oil = 30
+				country_resource_chromium = 6
+				country_resource_rubber = 6
+				country_resource_tungsten = 4
 			}
 		}
 
@@ -1956,7 +1961,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.15
 			}
 		}
 
@@ -2250,7 +2255,7 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = -0.10
 				industry_repair_factor = 0.25
 			}
 		}
@@ -3286,7 +3291,7 @@ ideas = {
 				army_core_attack_factor = 0.05
 
 				army_org_factor = 0.05
-				army_morale_factor = -0.1
+				army_morale_factor = 0.1
 			}
 		}
 
@@ -8806,7 +8811,7 @@ ideas = {
 			traits = { artillery_manufacturer }
 
 			modifier = {
-				production_factory_max_efficiency_factor = 0.02
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 
@@ -9064,7 +9069,7 @@ ideas = {
 			traits = { infantry_equipment_manufacturer }
 
 			modifier = {
-				production_factory_max_efficiency_factor = 0.02
+				production_factory_max_efficiency_factor = 0.05
 			}
 		}
 

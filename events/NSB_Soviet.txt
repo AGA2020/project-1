@@ -5559,22 +5559,6 @@ country_event = {
 		}
 		FROM = { country_event = { id = NSB_soviet_soviet_german_trade_agreement.2 hours = 1 } }
 	}
-
-	option = { # Refuse
-		name = NSB_soviet_soviet_german_trade_agreement.1.b
-
-		ai_chance = {
-			base = 1
-		}
-
-		FROM = {
-			country_event = { id = NSB_soviet_soviet_german_trade_agreement.3 hours = 1 }
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = SOV_rejected_our_demands
-			}
-		}
-	}
 }
 
 # Soviet-German Trade Agreement - GER Accepts - Event for SOV
