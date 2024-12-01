@@ -488,6 +488,7 @@ focus = {
 						type = ship_hull_cruiser_2
 						name_group = RAJ_CL_HISTORICAL
 						parent_version = 0
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
 						modules = {
 							fixed_ship_battery_slot = ship_light_medium_battery_2
 							fixed_ship_anti_air_slot = ship_anti_air_1
@@ -1234,6 +1235,10 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
 			add_tech_bonus = {
 				name = RAJ_indian_armor
 				bonus = 1.0
@@ -1560,6 +1565,10 @@ focus = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			air_experience = 25
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
 			add_doctrine_cost_reduction = {
 				name = RAJ_royal_indian_air_force
 				cost_reduction = 0.5
@@ -1574,7 +1583,7 @@ focus = {
 		icon = GFX_focus_smiling_buddha
 		prerequisite = { focus = RAJ_royal_indian_air_force }
 		prerequisite = { focus = RAJ_institute_of_fundamental_research }
-		x = 1
+		x = 3
 		y = 4
 		relative_position_id = RAJ_british_pilot_training
 
@@ -1585,14 +1594,7 @@ focus = {
 		}
 
 		available = {
-			if = {
-				limit = { NOT = { has_government = fascism } }
 				compare_autonomy_state > autonomy_colony
-			}
-			if = {
-				limit = { has_government = fascism }
-				compare_autonomy_state > autonomy_reichsprotectorate
-			}
 		}
 
 		bypass = {
@@ -1605,12 +1607,31 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = RAJ_the_smiling_buddha
-				bonus = 3.0
-				uses = 1
-				category = nuclear
+			
+			if = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = RAJ_the_smiling_buddha
+					bonus = 3.0
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
 			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 1
+				}
+			}
+
 		}
 	}
 
@@ -1870,14 +1891,35 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+
+			if = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = RAJ_institute_of_fundamental_research
+					bonus = 1.0
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.25
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.75
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = RAJ_homi_j_bhabha
-			add_tech_bonus = {
-				name = RAJ_institute_of_fundamental_research
-				bonus = 1.0
-				uses = 1
-				category = nuclear
-			}
 		}
 	}
 
