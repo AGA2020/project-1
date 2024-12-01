@@ -920,13 +920,45 @@ political_actions = {
 		}
 
 		cost = 100
-		
+		targets = {
+			BRA
+		}				
 		visible = {
 
 		}
 		
 		complete_effect = {
 			ENG = { add_to_faction = BRA }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ENG_secure_norway = {
+
+		icon = generic_prepare_civil_war
+	
+		allowed = {
+			tag = ENG
+		}
+		
+		available = {
+			has_war = yes
+			date>1940.1.1
+		}
+
+		cost = 100
+		
+		visible = {
+
+		}
+		targets = {
+			NOR
+		}		
+		complete_effect = {
+			ENG = { add_to_faction = NOR }
 		}
 
 		ai_will_do = {
