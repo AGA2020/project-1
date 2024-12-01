@@ -7971,8 +7971,6 @@ focus_tree = {
 		icon = GFX_focus_GER_remilitarize_the_rhineland
 		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
 
-		mutually_exclusive = { focus = GER_oppose_hitler_ww focus = GER_oppose_hitler }
-
 		x = 33
 		y = 0
 		relative_position_id = GER_prioritize_economic_growth
@@ -23074,7 +23072,7 @@ focus_tree = {
 
 		allow_branch = {
 
-			NOT = { has_dlc = "Gotterdammerung" } 
+			always = no
 
 		}
 
