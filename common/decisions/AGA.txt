@@ -42,102 +42,102 @@ operations = {
             }
 
         }
-        i_want_old_focus_tree_back = {
-            # icon = generic_operation
-            allowed = {
-                tag = ROM
-            }
-            cost = 0
-            ai_will_do = {
-                factor = 0
-            }
-            visible = {
-                date<1936.2.1
-            }
-            complete_effect = {
-                load_focus_tree = romanian_focus_old
-                set_global_flag = romania_old_dod
-                mark_focus_tree_layout_dirty = yes
-                hidden_effect = {
-                    remove_ideas = ROMID_the_ruined_army
-                    remove_ideas = ROMID_crippled_logistics_combined
-                    remove_ideas = ROMID_the_lancieri_weak_low_loyalty
-                    remove_ideas = ROMID_the_socialists_weak_low_loyalty
-                    remove_ideas = ROMID_carol_lifestyle
-                    remove_ideas = ROMID_the_better_unions
-                    remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
-                    remove_ideas = ROMID_the_royalists_normal_high_loyalty
-                    remove_ideas = ROMID_backwards_military_industry
-                    remove_ideas = ROMID_stable_politics
-                    add_ideas = ROM_king_carol_ii_hedonist
-                    ROM = {
-                        #Pick from list of the sane events first
-                        random_list = {
-                            100 = { country_event = { id = DOD_romania.81 days = 2 random_days = 20 } }
-                        }
-                    }
-                    set_popularities = {
-                        democratic = 60
-                        neutrality = 20
-                        fascism = 18
-                        communism = 2
-                    }
-                    81 = {
-                        remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-                        clr_state_flag = iron_guard_supporters
-                    }
-                    83 = {
-                        remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-                        clr_state_flag = iron_guard_supporters
-                    }
-                    82 = {
-                        remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-                        clr_state_flag = iron_guard_supporters
-                    }
-                    46 = {
-                        remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-                        clr_state_flag = iron_guard_supporters
-                    }
-                    84 = {
-                        remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
-                        clr_state_flag = iron_guard_supporters
-                    }
-                    76 = {
-                        remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
-                        clr_state_flag = lancieri_supporters
-                    }
-                    79 = {
-                        remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
-                        clr_state_flag = lancieri_supporters
-                    }
-                    80 = {
-                        remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
-                        clr_state_flag = lancieri_supporters
-                    }
-                    78 = {
-                        remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
-                        clr_state_flag = lancieri_supporters
-                    }
-                    766 = {
-                        remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
-                        clr_state_flag = lancieri_supporters
-                    }
-                    76 = {
-                        remove_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
-                    }
-                    83 = {
-                        remove_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
-                    }
-                    84 = {
-                        remove_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
-                    }
-                    82 = {
-                        remove_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
-                    }
-                }
-            }
-        
-        }
+        #i_want_old_focus_tree_back = {
+        #    # icon = generic_operation
+        #    allowed = {
+        #        tag = ROM
+        #    }
+        #    cost = 0
+        #    ai_will_do = {
+        #        factor = 0
+        #    }
+        #    visible = {
+        #        date<1936.2.1
+        #    }
+        #    complete_effect = {
+        #        load_focus_tree = romanian_focus_old
+        #        set_global_flag = romania_old_dod
+        #        mark_focus_tree_layout_dirty = yes
+        #        hidden_effect = {
+        #            remove_ideas = ROMID_the_ruined_army
+        #            remove_ideas = ROMID_crippled_logistics_combined
+        #            remove_ideas = ROMID_the_lancieri_weak_low_loyalty
+        #            remove_ideas = ROMID_the_socialists_weak_low_loyalty
+        #            remove_ideas = ROMID_carol_lifestyle
+        #            remove_ideas = ROMID_the_better_unions
+        #            remove_ideas = ROMID_the_iron_guard_weak_low_loyalty
+        #            remove_ideas = ROMID_the_royalists_normal_high_loyalty
+        #            remove_ideas = ROMID_backwards_military_industry
+        #            remove_ideas = ROMID_stable_politics
+        #            add_ideas = ROM_king_carol_ii_hedonist
+        #            ROM = {
+        #                #Pick from list of the sane events first
+        #                random_list = {
+        #                    100 = { country_event = { id = DOD_romania.81 days = 2 random_days = 20 } }
+        #                }
+        #            }
+        #            set_popularities = {
+        #                democratic = 60
+        #                neutrality = 20
+        #                fascism = 18
+        #                communism = 2
+        #            }
+        #            81 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+        #                clr_state_flag = iron_guard_supporters
+        #            }
+        #            83 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+        #                clr_state_flag = iron_guard_supporters
+        #            }
+        #            82 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+        #                clr_state_flag = iron_guard_supporters
+        #            }
+        #            46 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+        #                clr_state_flag = iron_guard_supporters
+        #            }
+        #            84 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_iron_guard_supporters }
+        #                clr_state_flag = iron_guard_supporters
+        #            }
+        #            76 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+        #                clr_state_flag = lancieri_supporters
+        #            }
+        #            79 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+        #                clr_state_flag = lancieri_supporters
+        #            }
+        #            80 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+        #                clr_state_flag = lancieri_supporters
+        #            }
+        #            78 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+        #                clr_state_flag = lancieri_supporters
+        #            }
+        #            766 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_lancieri_supporters }
+        #                clr_state_flag = lancieri_supporters
+        #            }
+        #            76 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
+        #            }
+        #            83 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
+        #            }
+        #            84 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
+        #            }
+        #            82 = {
+        #                remove_dynamic_modifier = { modifier = ROMID_transylvanian_minorities_1 }
+        #            }
+        #        }
+        #    }
+        #
+        #}
         annex_Mexiko = {
             # icon = generic_operation
             allowed = {
@@ -186,799 +186,799 @@ operations = {
             }
 
         }
-    usa_vanillaic1 = {
-            # icon = generic_operation
-            allowed = {
-                tag = USA
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
- 
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 90
-            timeout_effect = {
-                USA = { add_offsite_building = { type = industrial_complex level = -2 } }
-                set_country_flag = usavanillaic1 
-            }
-            complete_effect = {
-            }
-        }
-    usa_vanillaic2 = {
-            # icon = generic_operation
-            allowed = {
-                tag = USA
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = usavanillaic1
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 30
-            timeout_effect = {
-                USA = { add_offsite_building = { type = industrial_complex level = -5 } }
-                set_country_flag = usavanillaic2 
-            }
-            complete_effect = {
-            }
-        }
-    usa_vanillaic3 = {
-            # icon = generic_operation
-            allowed = {
-                tag = USA
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = usavanillaic2
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 90
-            timeout_effect = {
-                USA = { add_offsite_building = { type = industrial_complex level = 3 } }
-                set_country_flag = usavanillaic3 
-            }
-            complete_effect = {
-            }
-        }
-    usa_vanillaic4 = {
-            # icon = generic_operation
-            allowed = {
-                tag = USA
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = usavanillaic3
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 30 
-            timeout_effect = {
-                USA = { add_offsite_building = { type = industrial_complex level = -2 } }
-                set_country_flag = usavanillaic4 
-            }
-            complete_effect = {
-            }
-        }
-    usa_vanillaic5 = {
-            # icon = generic_operation
-            allowed = {
-                tag = USA
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = usavanillaic4
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 270 
-            timeout_effect = {
-                USA = { add_offsite_building = { type = industrial_complex level = 2 } }
-                set_country_flag = usavanillaic5 
-            }
-            complete_effect = {
-            }
-        }
-    usa_vanillaic6 = {
-            # icon = generic_operation
-            allowed = {
-                tag = USA
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = usavanillaic5
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 180 
-            timeout_effect = {
-                USA = { add_offsite_building = { type = industrial_complex level = 1 } }
-                set_country_flag = usavanillaic6 
-            }
-            complete_effect = {
-            }
-        }
-    usa_vanillaic7 = {
-            # icon = generic_operation
-            allowed = {
-                tag = USA
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = usavanillaic6
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 60 
-            timeout_effect = {
-                USA = { add_offsite_building = { type = industrial_complex level = 1 } }
-                set_country_flag = usavanillaic7 
-            }
-            complete_effect = {
-            }
-        }
-    usa_vanillaic8 = {
-            # icon = generic_operation
-            allowed = {
-                tag = USA
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = usavanillaic7
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 60 
-            timeout_effect = {
-                USA = { add_offsite_building = { type = industrial_complex level = 1 } }
-                set_country_flag = usavanillaic8 
-            }
-            complete_effect = {
-            }
-        }
-    usa_vanillaic9 = {
-            # icon = generic_operation
-            allowed = {
-                tag = USA
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = usavanillaic8
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 300 
-            timeout_effect = {
-                USA = { add_offsite_building = { type = industrial_complex level = 1 } }
-                set_country_flag = usavanillaic9 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic1 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
- 
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 120
-            timeout_effect = {
-                ENG = { add_offsite_building = { type = industrial_complex level = -5 } }
-                set_country_flag = engvanillaic1 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic2 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic1
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 30
-            timeout_effect = {
-                336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
-                set_country_flag = engvanillaic2
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic3 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic2
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 30
-            timeout_effect = {
-                ENG = { add_offsite_building = { type = industrial_complex level = -1 } }
-                set_country_flag = engvanillaic3 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic4 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic3
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 30
-            timeout_effect = {
-                ENG = { add_offsite_building = { type = industrial_complex level = 1 } }
-                set_country_flag = engvanillaic4 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic5 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic4
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 60
-            timeout_effect = {
-                336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
-                set_country_flag = engvanillaic5 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic6 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic5
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 30
-            timeout_effect = {
-                set_country_flag = engvanillaic6 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic7 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic6
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 90
-            timeout_effect = {
-                336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
-                set_country_flag = engvanillaic7 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic8 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic7
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 120
-            timeout_effect = {
-                set_country_flag = engvanillaic8 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic9 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic8
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 60
-            timeout_effect = {
-                set_country_flag = engvanillaic9 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic10 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic9
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 60
-            timeout_effect = {
-                336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
-                set_country_flag = engvanillaic10 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic11 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic10
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 210
-            timeout_effect = {
-                set_country_flag = engvanillaic11 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic12 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic11
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 60
-            timeout_effect = {
-                set_country_flag = engvanillaic12 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic13 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic12
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 60
-            timeout_effect = {
-                set_country_flag = engvanillaic13 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic14 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic13
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 60
-            timeout_effect = {
-                336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
-                set_country_flag = engvanillaic14 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic15 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic14
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 60
-            timeout_effect = {
-                336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
-                set_country_flag = engvanillaic15 
-            }
-            complete_effect = {
-            }
-        }
-    eng_vanillaic16 = {
-            # icon = generic_operation
-            allowed = {
-                tag = ENG
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = engvanillaic15
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 240
-            timeout_effect = {
-                ENG = { add_offsite_building = { type = industrial_complex level = 5 } }
-                set_country_flag = engvanillaic16 
-            }
-            complete_effect = {
-            }
-        }
-    raj_vanillaic1 = {
-            # icon = generic_operation
-            allowed = {
-                tag = RAJ
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
- 
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 210
-            timeout_effect = {
-                RAJ = { add_offsite_building = { type = industrial_complex level = 1 } }
-                set_country_flag = rajvanillaic1 
-            }
-            complete_effect = {
-            }
-        }
-    raj_vanillaic2 = {
-            # icon = generic_operation
-            allowed = {
-                tag = RAJ
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = rajvanillaic1
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 210
-            timeout_effect = {
-                RAJ = { add_offsite_building = { type = industrial_complex level = 2 } }
-                set_country_flag = rajvanillaic2 
-            }
-            complete_effect = {
-            }
-        }
-    raj_vanillaic3 = {
-            # icon = generic_operation
-            allowed = {
-                tag = RAJ
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = rajvanillaic2
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 120
-            timeout_effect = {
-                RAJ = { add_offsite_building = { type = industrial_complex level = 1 } }
-                set_country_flag = rajvanillaic3 
-            }
-            complete_effect = {
-            }
-        }
-    raj_vanillaic4 = { 
-            # icon = generic_operation
-            allowed = {
-                tag = RAJ
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = rajvanillaic3
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 180
-            timeout_effect = {
-                RAJ = { add_offsite_building = { type = industrial_complex level = -4 } }
-                set_country_flag = rajvanillaic4 
-            }
-            complete_effect = {
-            }
-        }
-    raj_vanillaic5 = { 
-            # icon = generic_operation
-            allowed = {
-                tag = RAJ
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = rajvanillaic4
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 480
-            timeout_effect = {
-                RAJ = { add_offsite_building = { type = industrial_complex level = -2 } }
-                set_country_flag = rajvanillaic5 
-            }
-            complete_effect = {
-            }
-        }
-    raj_vanillaic6 = { 
-            # icon = generic_operation
-            allowed = {
-                tag = RAJ
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = rajvanillaic5
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 180
-            timeout_effect = {
-                RAJ = { add_offsite_building = { type = industrial_complex level = 2 } }
-                set_country_flag = rajvanillaic6 
-            }
-            complete_effect = {
-            }
-        }
-    raj_vanillaic7 = { 
-            # icon = generic_operation
-            allowed = {
-                tag = RAJ
-            }
-            fire_only_once = yes
-            ai_will_do = {
-                factor = 0
-            }
-            activation = {
-            has_country_flag = rajvanillaic6
-            }
-            available = {
-                hidden_trigger = {
-                    always = no
-                }
-            }
-            days_mission_timeout = 150
-            timeout_effect = {
-                RAJ = { add_offsite_building = { type = industrial_complex level = 3 } } 
-            }
-            complete_effect = {
-            }
-        }
+    #usa_vanillaic1 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = USA
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+ #
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 90
+    #        timeout_effect = {
+    #            USA = { add_offsite_building = { type = industrial_complex level = -2 } }
+    #            set_country_flag = usavanillaic1 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #usa_vanillaic2 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = USA
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = usavanillaic1
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 30
+    #        timeout_effect = {
+    #            USA = { add_offsite_building = { type = industrial_complex level = -5 } }
+    #            set_country_flag = usavanillaic2 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #usa_vanillaic3 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = USA
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = usavanillaic2
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 90
+    #        timeout_effect = {
+    #            USA = { add_offsite_building = { type = industrial_complex level = 3 } }
+    #            set_country_flag = usavanillaic3 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #usa_vanillaic4 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = USA
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = usavanillaic3
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 30 
+    #        timeout_effect = {
+    #            USA = { add_offsite_building = { type = industrial_complex level = -2 } }
+    #            set_country_flag = usavanillaic4 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #usa_vanillaic5 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = USA
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = usavanillaic4
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 270 
+    #        timeout_effect = {
+    #            USA = { add_offsite_building = { type = industrial_complex level = 2 } }
+    #            set_country_flag = usavanillaic5 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #usa_vanillaic6 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = USA
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = usavanillaic5
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 180 
+    #        timeout_effect = {
+    #            USA = { add_offsite_building = { type = industrial_complex level = 1 } }
+    #            set_country_flag = usavanillaic6 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #usa_vanillaic7 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = USA
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = usavanillaic6
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 60 
+    #        timeout_effect = {
+    #            USA = { add_offsite_building = { type = industrial_complex level = 1 } }
+    #            set_country_flag = usavanillaic7 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #usa_vanillaic8 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = USA
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = usavanillaic7
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 60 
+    #        timeout_effect = {
+    #            USA = { add_offsite_building = { type = industrial_complex level = 1 } }
+    #            set_country_flag = usavanillaic8 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #usa_vanillaic9 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = USA
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = usavanillaic8
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 300 
+    #        timeout_effect = {
+    #            USA = { add_offsite_building = { type = industrial_complex level = 1 } }
+    #            set_country_flag = usavanillaic9 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic1 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+ #
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 120
+    #        timeout_effect = {
+    #            ENG = { add_offsite_building = { type = industrial_complex level = -5 } }
+    #            set_country_flag = engvanillaic1 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic2 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic1
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 30
+    #        timeout_effect = {
+    #            336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes #} }
+    #            set_country_flag = engvanillaic2
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic3 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic2
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 30
+    #        timeout_effect = {
+    #            ENG = { add_offsite_building = { type = industrial_complex level = -1 } }
+    #            set_country_flag = engvanillaic3 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic4 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic3
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 30
+    #        timeout_effect = {
+    #            ENG = { add_offsite_building = { type = industrial_complex level = 1 } }
+    #            set_country_flag = engvanillaic4 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic5 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic4
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 60
+    #        timeout_effect = {
+    #            336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes #} }
+    #            set_country_flag = engvanillaic5 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic6 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic5
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 30
+    #        timeout_effect = {
+    #            set_country_flag = engvanillaic6 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic7 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic6
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 90
+    #        timeout_effect = {
+    #            336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build #= yes } }
+    #            set_country_flag = engvanillaic7 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic8 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic7
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 120
+    #        timeout_effect = {
+    #            set_country_flag = engvanillaic8 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic9 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic8
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 60
+    #        timeout_effect = {
+    #            set_country_flag = engvanillaic9 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic10 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic9
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 60
+    #        timeout_effect = {
+    #            336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build #= yes } }
+    #            set_country_flag = engvanillaic10 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic11 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic10
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 210
+    #        timeout_effect = {
+    #            set_country_flag = engvanillaic11 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic12 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic11
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 60
+    #        timeout_effect = {
+    #            set_country_flag = engvanillaic12 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic13 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic12
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 60
+    #        timeout_effect = {
+    #            set_country_flag = engvanillaic13 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic14 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic13
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 60
+    #        timeout_effect = {
+    #            336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build #= yes } }
+    #            set_country_flag = engvanillaic14 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic15 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic14
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 60
+    #        timeout_effect = {
+    #            336 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes #} }
+    #            set_country_flag = engvanillaic15 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #eng_vanillaic16 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ENG
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = engvanillaic15
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 240
+    #        timeout_effect = {
+    #            ENG = { add_offsite_building = { type = industrial_complex level = 5 } }
+    #            set_country_flag = engvanillaic16 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #raj_vanillaic1 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = RAJ
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+ #
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 210
+    #        timeout_effect = {
+    #            RAJ = { add_offsite_building = { type = industrial_complex level = 1 } }
+    #            set_country_flag = rajvanillaic1 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #raj_vanillaic2 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = RAJ
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = rajvanillaic1
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 210
+    #        timeout_effect = {
+    #            RAJ = { add_offsite_building = { type = industrial_complex level = 2 } }
+    #            set_country_flag = rajvanillaic2 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #raj_vanillaic3 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = RAJ
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = rajvanillaic2
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 120
+    #        timeout_effect = {
+    #            RAJ = { add_offsite_building = { type = industrial_complex level = 1 } }
+    #            set_country_flag = rajvanillaic3 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #raj_vanillaic4 = { 
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = RAJ
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = rajvanillaic3
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 180
+    #        timeout_effect = {
+    #            RAJ = { add_offsite_building = { type = industrial_complex level = -4 } }
+    #            set_country_flag = rajvanillaic4 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #raj_vanillaic5 = { 
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = RAJ
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = rajvanillaic4
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 480
+    #        timeout_effect = {
+    #            RAJ = { add_offsite_building = { type = industrial_complex level = -2 } }
+    #            set_country_flag = rajvanillaic5 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #raj_vanillaic6 = { 
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = RAJ
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = rajvanillaic5
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 180
+    #        timeout_effect = {
+    #            RAJ = { add_offsite_building = { type = industrial_complex level = 2 } }
+    #            set_country_flag = rajvanillaic6 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
+    #raj_vanillaic7 = { 
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = RAJ
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+    #        has_country_flag = rajvanillaic6
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 150
+    #        timeout_effect = {
+    #            RAJ = { add_offsite_building = { type = industrial_complex level = 3 } } 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
     annex_Irland = {
             # icon = generic_operation
             allowed = {

@@ -74,10 +74,6 @@ on_actions = {
 				}
 				add_compliance = 100
 			}
-
-			USA = { add_offsite_building = { type = industrial_complex level = 22 } activate_decision = usa_vanillaic1}
-			ENG = { add_offsite_building = { type = industrial_complex level = 6 } activate_decision = eng_vanillaic1}
-			RAJ = { add_offsite_building = { type = industrial_complex level = 6 } activate_decision = raj_vanillaic1}
 			FIN = {
 				add_opinion_modifier = { target = YUG modifier = large_decrease }
 				add_opinion_modifier = { target = YUG modifier = hostile_status }
