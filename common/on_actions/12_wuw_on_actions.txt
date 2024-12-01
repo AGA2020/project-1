@@ -304,28 +304,6 @@ on_actions = {
 			}
 		}
 
-		effect = { # Adding the correct stuff for puppets for German Mitteleuropa stuff
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = GER
-						is_faction_leader = yes
-						OR = {
-							has_completed_focus = GER_pool_technical_know_how_ww
-							has_completed_focus = GER_pool_technical_know_how
-							has_completed_focus = GER_shared_rd_programs_ww
-							has_completed_focus = GER_shared_rd_programs
-							has_completed_focus = GER_establish_a_customs_union
-							has_completed_focus = GER_mitteleuropa_cooperation_sphere
-						}
-					}
-				}
-
-				GER_setup_faction_wide_aoe_effects_from = yes
-
-			}
-		}
-
 	}
 
 	on_liberate = { # ROOT is the nation being liberated, FROM is the leader of the liberators.
@@ -404,42 +382,6 @@ on_actions = {
 				101 = {
 					set_state_controller_to = GRN 
 				}
-			}
-		}
-
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = GER
-						has_completed_focus = GER_shared_rd_programs_ww
-					}
-				}
-				FROM = {
-					GER_one_more_member_increase_rnd_program_strength = yes
-				}
-			}
-		}
-
-		effect = { # Adding the correct stuff for puppets for the German Mitteleruopa faction stuff
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = GER
-						is_faction_leader = yes
-						OR = {
-							has_completed_focus = GER_pool_technical_know_how_ww
-							has_completed_focus = GER_pool_technical_know_how
-							has_completed_focus = GER_shared_rd_programs_ww
-							has_completed_focus = GER_shared_rd_programs
-							has_completed_focus = GER_establish_a_customs_union
-							has_completed_focus = GER_mitteleuropa_cooperation_sphere
-						}
-					}
-				}
-
-				GER_setup_faction_wide_aoe_effects_from = yes
-
 			}
 		}
 
