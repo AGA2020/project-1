@@ -7782,6 +7782,43 @@ category = land_doctrine
 		prerequisite = { focus = ROM_domestic_arms_production  focus = ROM_licensing_arms  }
 	}
 
+	focus = {
+		id = ROM_the_maresal
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = ROM_import_zb_vz_24 }
+		x = 0
+		y = 3
+		relative_position_id = ROM_import_zb_vz_24
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROM_the_maresal
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cat_heavy_armor
+			}
+		}
+	}
+
 	#Orita
 	focus = {
 		id = ROM_orita

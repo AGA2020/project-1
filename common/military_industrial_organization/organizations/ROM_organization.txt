@@ -20,7 +20,10 @@ ROMID_atelierele_leonida_organization = {
 		tag = ROM
 	}
 	available = {
-		FROM = { has_completed_focus = ROM_ateliereleleonida }
+		OR = {
+			FROM = { has_completed_focus = ROM_ateliereleleonida }
+			FROM = { has_completed_focus = ROM_mobile_tank_destroyers }
+		}
 	}
 }
 
@@ -86,7 +89,10 @@ ROMID_sn_galati_organization = {
 		tag = ROM
 	}
 	available = {
-		FROM = { has_completed_focus = ROM_galatibrailashipyards }
+		OR = {
+			FROM = { has_completed_focus = ROM_galatibrailashipyards }
+			FROM = { has_completed_focus = ROM_coastal_defense_navy }
+		}
 	}
 	initial_trait = {
 		name = generic_mio_initial_trait_raiding_fleet

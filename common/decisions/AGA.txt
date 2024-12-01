@@ -57,6 +57,7 @@ operations = {
             complete_effect = {
                 load_focus_tree = romanian_focus_old
                 set_global_flag = romania_old_dod
+                mark_focus_tree_layout_dirty = yes
                 hidden_effect = {
                     remove_ideas = ROMID_the_ruined_army
                     remove_ideas = ROMID_crippled_logistics_combined
