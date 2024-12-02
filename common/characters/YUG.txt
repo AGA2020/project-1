@@ -502,16 +502,6 @@ characters={
 		}
 	}
 	YUG_milan_nedic={
-		advisor={
-			slot = political_advisor
-			idea_token = YUG_milan_nedic
-			allowed  = {
-					original_tag  = YUG
-				}
-				traits  = {
-					prince_of_terror 
-				}
-		}
 		name=YUG_milan_nedic
 		portraits={
 			army={

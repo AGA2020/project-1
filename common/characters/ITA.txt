@@ -366,10 +366,6 @@ characters = {
 			}
 		}
 
-		allowed_civil_war = {
-			ITA_is_appropriate_cw_side_for_character_split = yes
-		}
-
 		corps_commander={
 			traits = {  cavalry_leader armor_officer war_hero panzer_leader trait_engineer infantry_leader trickster organizer desert_fox trait_mountaineer }
 			skill=6
