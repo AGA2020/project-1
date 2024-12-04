@@ -2185,7 +2185,6 @@ ideas = {
 				OR = {
 					original_tag = ITA 
 					original_tag = GRE 
-					original_tag = TUR 
 				}
 			}
 			

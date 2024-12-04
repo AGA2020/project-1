@@ -91,21 +91,6 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = GetGermanAntiTankBonusStatus
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = german_anti_tank_bonus
-				option = on
-			}
-		}
-		localization_key = check_gamerules_on
-	}
-	text = {
-		localization_key = check_gamerules_off
-	}
-}
-defined_text = {
 	name = GetTechStealingStatus
 	text = {
 		trigger = {

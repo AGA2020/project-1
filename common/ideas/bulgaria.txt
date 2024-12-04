@@ -39,7 +39,6 @@ ideas = {
 					has_non_aggression_pact_with = GRE
 					has_non_aggression_pact_with = YUG
 					has_non_aggression_pact_with = ROM
-					has_non_aggression_pact_with = TUR
 				}
 			}
 
@@ -97,7 +96,6 @@ ideas = {
 					has_non_aggression_pact_with = GRE
 					has_non_aggression_pact_with = YUG
 					has_non_aggression_pact_with = ROM
-					has_non_aggression_pact_with = TUR
 				}
 			}
 
@@ -4119,12 +4117,6 @@ ideas = {
 				tag = BUL	
 			}
 			removal_cost = -1
-
-			targeted_modifier = {
-				tag = TUR
-				attack_bonus_against = 0.1
-				defense_bonus_against = 0.1
-			}
 
 			cancel = {
 				OR = {

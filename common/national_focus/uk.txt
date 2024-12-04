@@ -4557,18 +4557,6 @@ focus_tree = {
 
 			custom_effect_tooltip = ENG_home_defence_tt
 
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
-
 		}
 	}
 	# END IRAQ/IRAN/USSR INTERVENTION #

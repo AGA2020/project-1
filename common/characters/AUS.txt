@@ -133,41 +133,6 @@ characters = {
 				id = -1
 				traits = { resolute_social_democrat }
 			}
-
-			advisor = {
-				slot = political_advisor
-				idea_token = AUS_karl_renner
-				allowed = {
-					original_tag = AUS
-				}
-				traits = {
-					
-				}
-				visible = {
-					has_idea = AUS_revised_treaty_of_saint_germain_en_laye
-					NOT = {
-						has_country_leader = {
-							ruling_only = yes 
-							character = AUS_karl_renner
-						}
-						has_country_flag = AUS_no_overseer_needed_flag
-					}
-				}
-
-				available = {
-					has_idea = AUS_revised_treaty_of_saint_germain_en_laye
-					NOT = {
-						has_country_leader = {
-							ruling_only = yes 
-							character = AUS_karl_renner
-						}
-					}
-				}
-
-				ai_will_do = {
-					base = 0
-				}
-			}
 		}
 
 		instance = {

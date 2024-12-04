@@ -9824,6 +9824,26 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ITA_italys_destiny
+		icon = GFX_focus_ITA_italian_hegemony
+		prerequisite = { focus = ITA_balkan_ambition }
+
+		x = -4
+		y = 1
+		relative_position_id = ITA_balkan_ambition
+		cost = 10
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+
+			add_ideas = ITA_italys_destiny_idea 
+		}
+	}
+
+	focus = {
 		id = ITA_albanian_occupation
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = ITA_balkan_ambition }

@@ -200,18 +200,6 @@ intelligence_agency = {
 
 intelligence_agency = {
 	
-	picture = GFX_intelligence_agency_logo_tur
-	names = { "Millî Emniyet Hizmeti" }
-
-	
-	available = { always = yes }
-	
-	default = { tag = TUR }
-	available = { original_tag = TUR }
-}
-
-intelligence_agency = {
-	
 	picture = GFX_intelligence_agency_logo_gre
 	names = { "Diéfthynsi Eidikís Asfaleías tou Krátous" "I Eidikí" }
 	
@@ -230,53 +218,6 @@ intelligence_agency = {
 	
 	default = { tag = BUL }
 	available = { original_tag = BUL }
-}
-
-intelligence_agency = {
-	
-	picture = GFX_agency_logo_eth_fetno_derash
-	names = { fetno_derash arbegnoch }
-	
-	default = { 
-		tag = ETH 
-		NOT = { has_government = communism }
-		NOT = { is_subject_of = ITA }
-	} 
-	available = { 
-		original_tag = ETH 
-		NOT = { has_government = communism }
-		NOT = { is_subject_of = ITA }
-	}
-}
-
-intelligence_agency = {
-	
-	picture = GFX_intelligence_agency_logo_eth_crid
-	names = { crid black_lions }
-	
-	default = { 
-		tag = ETH 
-		has_government = communism
-	} 
-	available = { 
-		original_tag = ETH 
-		has_government = communism
-	}
-}
-
-intelligence_agency = {
-	
-	picture = GFX_intelligence_agency_logo_eth_smie
-	names = { smie }
-	
-	default = { 
-		tag = ETH 
-		is_subject_of = ITA
-	} 
-	available = { 
-		original_tag = ETH 
-		is_subject_of = ITA
-	}
 }
 
 intelligence_agency = {
@@ -310,15 +251,6 @@ intelligence_agency = {
 
 	default = { tag = CAN }
 	available = { original_tag = CAN }
-}
-
-intelligence_agency = {
-	
-	picture = GFX_intelligence_agency_logo_CHL_policia_de_investigaciones_de_chile
-	names = { "Policía de Investigaciones de Chile" }
-	
-	default = { tag = CHL }
-	available = { original_tag = CHL }
 }
 
 intelligence_agency = {
@@ -364,15 +296,6 @@ intelligence_agency = {
 		tag = BRA
 		NOT = { has_government = communism }
 	} 
-}
-
-intelligence_agency = {
-	
-	picture = GFX_intelligence_agency_logo_ARG_intelligence
-	names = { "S.I." }
-	
-	default = { tag = ARG }
-	available = { original_tag = ARG }
 }
 
 

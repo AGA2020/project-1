@@ -1861,23 +1861,6 @@ ideas = {
 				resistance_damage_to_garrison = -0.25
 				resistance_decay_on_our_occupied_states = -0.25
 			}
-		}
-
-		GRE_battle_for_the_bosporus = { 
-				
-			allowed = {
-				original_tag = GRE
-			}
-
-			picture = bul_supremacy_on_the_bosphorus
-				
-			removal_cost = -1
-				
-			targeted_modifier = {
-				tag = TUR
-				attack_bonus_against = 0.25
-				defense_bonus_against = 0.15
-			}
 		}																													
 	}	 													
 

@@ -13215,16 +13215,18 @@ leader_traits = {
 		land_reinforce_rate = 0.02
 		#experience_gain_army = @experience_gain_medium
 
-		command_cap = @tier2
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
 
 		ai_will_do = {
 			factor = 2
 			modifier = {
 				factor = 0
-				command_power < @tier2
+				command_power < @tier2_cp_cost
 			}
 		}
 	}
+
 	army_chief_army_high_command = { # Werner von Fritsch (Oberkommando des Heeres)
 		sprite = 5
 		army_artillery_attack_factor = 0.15
