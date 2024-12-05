@@ -120,8 +120,8 @@ leader_traits = {
 		}
 		
 	}
-		
-		
+	
+
 	inflexible_strategist = { 
 		type = land
 		trait_type = personality_trait
@@ -186,7 +186,7 @@ leader_traits = {
 		planning_skill_factor = 1
 		logistics_skill_factor = 1
 	}
-		
+
 	war_hero = { 
 		type = { land navy }
 		trait_type = personality_trait
@@ -202,7 +202,7 @@ leader_traits = {
 		attack_skill_factor = 1
 		planning_skill_factor = 1
 	}
-		
+
 	career_officer = { 
 		type = land
 		trait_type = personality_trait
@@ -2174,7 +2174,7 @@ leader_traits = {
 		
 		trait_type = assignable_trait
 		any_parent = { seawolf spotter fleet_protector superior_tactician }
-		
+		mutually_exclusive = silent_hunter
 		gui_row = 3
 		gui_column = 1
 	}
