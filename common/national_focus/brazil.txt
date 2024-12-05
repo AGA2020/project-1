@@ -827,7 +827,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = BRA_resource_extraction_bonus
-				bonus = 0.75
+				bonus = 0.50
 				uses = 2
 				category = excavation_tech
 			}
@@ -1359,7 +1359,7 @@ focus_tree = {
 			ELSE = {
 				add_tech_bonus = {
 					name = BRA_nacional_de_motores_bonus
-					bonus = 0.75
+					bonus = 0.50
 					uses = 2
 					category = motorized_equipment
 				}
@@ -1953,10 +1953,11 @@ focus_tree = {
 					has_war_with = USA
 					is_major = yes
 				}
-				BRA = {
-					declare_war_on = {
-						target = PREV
-						type = topple_government
+				ROOT = {
+					add_to_war = {
+					    targeted_alliance = USA
+					    enemy = PREV
+					    hostility_reason = asked_to_join
 					}
 				}
 			}
@@ -2050,8 +2051,7 @@ focus_tree = {
 					498 = {
 						free_building_slots = {
 							building = air_base
-							size > 2 
-							include_locked = yes
+							size > 2
 						}
 					}
 				}
@@ -2068,8 +2068,7 @@ focus_tree = {
 						498 = {
 							free_building_slots = {
 								building = air_base
-								size > 1 
-								include_locked = yes
+								size > 1
 							}
 						}
 					}
@@ -2087,8 +2086,7 @@ focus_tree = {
 						498 = {
 							free_building_slots = {
 								building = air_base
-								size > 0 
-								include_locked = yes
+								size > 0
 							}
 						}
 					}

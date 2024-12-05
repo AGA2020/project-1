@@ -9352,9 +9352,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = 
-
-
+		id = GER_fate_of_czechoslovakia
 		icon = GFX_focus_GER_fate_of_czechoslovakia
 		alternate_icon = GFX_focus_GER_fate_of_czechoslovakia_historical
 

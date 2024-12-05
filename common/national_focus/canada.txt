@@ -182,6 +182,21 @@
 					instant_build = yes
 				}
 			}
+
+			IF = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						character = CAN_mackenzie_king
+					}
+				}
+
+				add_trait = {
+					character = CAN_mackenzie_king
+					trait = CAN_father_of_the_canadian_welfare_state
+					ideology = liberalism 
+				}
+			}
 		}
 
 		completion_reward = {
@@ -200,6 +215,22 @@
 					instant_build = yes
 				}
 				set_state_flag = CAN_national_housing_act_IC
+			}
+
+			IF = {
+				limit = {
+					has_country_leader = {
+						ruling_only = yes
+						character = CAN_mackenzie_king
+					}
+				}
+				
+				add_trait = {
+					character = CAN_mackenzie_king
+					trait = CAN_father_of_the_canadian_welfare_state
+					ideology = liberalism 
+				}
+				
 			}
 		}
 	}
@@ -274,11 +305,43 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+				}
+
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 			build_railway = { #Vancouver - NW Canada
 				path = {
 					1408 1858 10273 4870 10548
 				}
 			}
+
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = canadian_pacific_railway
 		}
 	}
 
@@ -334,6 +397,8 @@
 						include_locked = yes
 					}
 				}
+
+				add_extra_state_shared_building_slots = 2
 
 				add_building_construction = {
 					type = industrial_complex
@@ -560,7 +625,7 @@
 		y = 1
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 50
@@ -878,9 +943,16 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = CAN_great_depression_1
-				add_idea = CAN_great_depression_2		
+			if = {
+				limit = { has_idea = CAN_great_depression_1 }
+				swap_ideas = {
+					remove_idea = CAN_great_depression_1
+					add_idea = CAN_great_depression_2		
+				}
+			}
+			else_if = {
+				limit = { has_idea = CAN_great_depression_2 }
+				remove_ideas = CAN_great_depression_2
 			}
 		}
 	}
@@ -1582,12 +1654,29 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = CAN_uranium_mining
-				bonus = 1.0
-				uses = 2
-				category = nuclear
-			}	
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = CAN_uranium_mining
+					bonus = 0.5
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.25
+				}
+			}
+			ELSE = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.75
+				}
+			}
 		}
 	}
 
@@ -1658,7 +1747,7 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 20
+			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = CAN_independent_command
 				cost_reduction = 0.5
@@ -1769,7 +1858,6 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		complete_tooltip = {
-			remove_ideas = CAN_great_depression_2
 			random_state = {
 				limit = {
 					has_state_flag = CAN_war_fueled_economy_AF1
@@ -1806,7 +1894,22 @@
 		}
 
 		completion_reward = {
-			remove_ideas = CAN_great_depression_2
+			if = {
+				limit = { 
+					OR = {
+						has_idea = CAN_great_depression_1
+						has_idea = CAN_great_depression_2
+					}
+				}
+				remove_ideas = CAN_great_depression_2
+				custom_effect_tooltip = if_no_depression_get_stuff_TT
+			}
+			else = {
+				add_timed_idea = {
+					idea = CAN_booming_economy
+					days = 1095
+				}
+			}
 			random_owned_controlled_state = {
 				limit = {
 					is_in_home_area = yes
@@ -1971,7 +2074,7 @@
 			add_tech_bonus = {
 				name = CAN_cmp_truck
 				ahead_reduction = 2
-				bonus = 3.0
+				bonus = 2.0
 				uses = 1
 				category = motorized_equipment
 			}
@@ -2052,6 +2155,10 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.15
+			}
 			add_tech_bonus = {
 				name = CAN_royal_regiment_of_canadian_artillery
 				bonus = 1.0
@@ -2138,7 +2245,7 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 5
+			army_experience = 30
 			add_doctrine_cost_reduction = {
 				name = CAN_red_deer_training_camp
 				cost_reduction = 0.5
@@ -2178,9 +2285,17 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = CAN_1st_canadian_parachute_battalion
-				bonus = 3.0
+				bonus = 1.0
 				uses = 1
 				category = para_tech
+			}
+			if = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 2
+					category = special_forces_doctrine
+				}
 			}
 		}
 	}
@@ -2288,6 +2403,12 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+
 			add_tech_bonus = {
 				name = CAN_the_valentine_tank
 				bonus = 1.0
@@ -2301,6 +2422,7 @@
 				uses = 1
 				category = cat_light_armor
 			}
+
 		}
 	}
 
@@ -2662,7 +2784,7 @@
 
 		available = {
 			controls_state = 682
-			controls_state = 466
+			controls_state = 863
 			controls_state = 468
 		}
 		
@@ -2682,7 +2804,7 @@
 					amount = 20
 				}
 			}
-			466 = {
+			863 = {
 				add_resource = {
 					type = aluminium
 					amount = 8
@@ -2841,10 +2963,7 @@
 				name = CAN_we_have_the_hurricane
 				bonus = 1.0
 				uses = 1
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
+				category = light_fighter
 			}
 		}
 	}
@@ -2877,6 +2996,12 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		complete_tooltip = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
+
 			add_tech_bonus = {
 				name = CAN_the_pacific_coast_air_defence_radar_system
 				bonus = 1.0
@@ -2916,6 +3041,12 @@
 		}
 
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
+
 			add_tech_bonus = {
 				name = CAN_the_pacific_coast_air_defence_radar_system
 				bonus = 1.0
@@ -2977,8 +3108,8 @@
 					set_state_flag = CAN_the_pacific_coast_air_defence_radar_system_radar3
 				}
 				else = {
-					set_technology = {
-						radio_detection = 1
+					complete_special_project = {
+						project = sp:sp_air_radar
 					}
 					effect_tooltip = {
 						random_owned_controlled_state = {
@@ -3156,6 +3287,8 @@
 				category = cas_bomber
 			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -3213,6 +3346,8 @@
 				category = cat_strategic_bomber
 			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -3266,13 +3401,20 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+
 			add_tech_bonus = {
 				name = CAN_the_sabre_project
 				ahead_reduction = 2
-				uses = 2
+				uses = 1 # was 2
 				category = rocketry
 				category = jet_technology
 			}
+
 		}
 	}
 
@@ -3372,6 +3514,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+
+			navy_experience = 25
+
 			add_tech_bonus = {
 				name = CAN_destroyer_effort
 				bonus = 1.0
@@ -3412,10 +3557,21 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = CAN_light_cruiser_effort
-				bonus = 1.0
+				bonus = 0.5
 				ahead_reduction = 2
 				uses = 1
 				category = cl_tech
+			}
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = CAN_light_cruiser_effort
+					bonus = 0.5
+					uses = 1
+					category = cat_ship_light_battery
+				}
 			}
 		}
 	}
@@ -3451,9 +3607,20 @@
 			add_tech_bonus = {
 				name = CAN_heavy_cruiser_effort
 				bonus = 1.0
-				ahead_reduction = 2
+				ahead_reduction = 1
 				uses = 1
 				category = ca_tech
+			}
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = CAN_heavy_cruiser_effort
+					bonus = 0.5
+					uses = 1
+					category = cat_ship_medium_battery
+				}
 			}
 		}
 	}
@@ -3492,6 +3659,10 @@
 
 		completion_reward = {
 			navy_experience = 25
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.15
+			}
 			add_doctrine_cost_reduction = {
 				name = CAN_escort_fleet
 				cost_reduction = 0.25
@@ -3531,6 +3702,10 @@
 
 		completion_reward = {
 			navy_experience = 25
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.15
+			}
 			add_doctrine_cost_reduction = {
 				name = CAN_fleet_in_being
 				cost_reduction = 0.25
@@ -3568,7 +3743,6 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_ideas = CAN_degauss_ship_hulls
 			if = {
 				limit = {
 					has_dlc = "Man the Guns"
@@ -3588,9 +3762,18 @@
 						    degaussing = 1
 						}
 					}
+					}
 				}
+			
+			if = {
+				limit = {
+						NOT = {
+							has_dlc = "Man the Guns"
+						}
+					}
+				add_ideas = CAN_degauss_ship_hulls
 			}
-		}
+		}	
 	}
 
 	focus = {
