@@ -137,8 +137,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
+			add_ideas = civilian_economy
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_stability = -0.1
+
 			add_popularity = {
 			    ideology = ROOT
 			    popularity = -0.1
@@ -228,7 +232,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.15
+				GER_industrial_consumer_goods_factor = -0.2
 				tooltip = consumer_goods_factor_tt
 			}
 		}
@@ -801,7 +805,7 @@ focus_tree = {
 
 			custom_effect_tooltip = GER_replace_recovering_economy_with_wirtschaftswunder_tt
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = -0.2
+				GER_industrial_consumer_goods_factor = -0.15
 				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = { 
@@ -9348,7 +9352,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_fate_of_czechoslovakia
+		id = 
+
 
 		icon = GFX_focus_GER_fate_of_czechoslovakia
 		alternate_icon = GFX_focus_GER_fate_of_czechoslovakia_historical
@@ -10387,7 +10392,7 @@ focus_tree = {
 
 		prerequisite = { focus = GER_fate_of_czechoslovakia focus = GER_integrate_czechoslovakia }
 
-		mutually_exclusive = { focus = GER_danzig_or_war }
+
 		allow_branch = { always = no } 
 		x = 0
 		y = 1
@@ -10407,35 +10412,12 @@ focus_tree = {
 		}
 		
 		available = {
-			is_subject = no
-			OR = {
-				owns_state = 70
-			}
-			NOT = { owns_state = 85 }
-			NOT = { has_war_with = POL }
-			POL = { owns_state = 72 }
-		}
 
-		bypass = {
-			OR = {
-				POL = {
-					exists = no
-				}
-				owns_state = 85
-				has_war_with = POL
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-
-			POL = {
-				country_event = { 
-					id = germany.80 
-					days = 1 
-				}
-			}
 
 		}
 	}
@@ -10447,7 +10429,7 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_danzig_or_war_historical
 
 		prerequisite = { focus = GER_reassert_eastern_claims }
-		mutually_exclusive = { focus = GER_danzig_for_slovakia }
+
 		x = 0
 		y = 2
 		relative_position_id = GER_reassert_eastern_claims
@@ -10458,36 +10440,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
-			#Make custom trigger tooltip here
-			85 = {
-				owner = {
-					original_tag = POL
-				}
-				controller = {
-					original_tag = POL
-				}
-			}
-			OR = {
-				POL = {
-					has_civil_war = no
-				}
-				#custom_trigger_tooltip = {
-					#tooltip = GER_danzig_trigger_polish_civil_war
-					AND = {
-						any_other_country = {
-							original_tag = POL
-							has_civil_war = yes
-							OR = {
-								is_in_faction_with = ROOT
-								has_volunteers_amount_from = {
-									tag = GER
-									count > 0
-								}
-							}
-						}
-					}
-				#}
-			}
+	
 		}
 
 		ai_will_do = {
@@ -10518,7 +10471,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
 		
 		completion_reward = {
-		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
 		hidden_effect = { POL = { set_nationality = { target_country = ENG character = POL_jan_zumbach } } }
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
 			if = {

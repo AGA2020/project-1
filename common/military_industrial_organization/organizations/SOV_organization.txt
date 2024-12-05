@@ -515,30 +515,13 @@ SOV_mytishchy_machine_building_plant_organization = {
 	icon = GFX_idea_SOV_mytishchy_machine_building_plant
 	
 	allowed = {	
-		OR = {
 			tag = SOV
-			AND = {
-				tag = ETH 
-				has_dlc = "By Blood Alone"
-			}
-		}
 	}
 
 	visible = {
-		IF = { 
-			limit = { FROM = { original_tag = ETH } } 
-			FROM = { has_completed_focus = ETH_mytishchi-ababa_plant }
-		}
 	}
 
 	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = SOV } }
-			}
-			FROM = { NOT = { has_war_with = SOV } }
-		}
 	}
 
 	add_trait = { 

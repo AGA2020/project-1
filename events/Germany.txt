@@ -197,7 +197,7 @@ country_event = {
 	id = germany.6
 	title = germany.6.t
 	desc = germany.6.d
-	picture = GFX_report_event_hitler_croatia_handshake
+	picture = [GetHitlerCroatianHandshakeEventPicture]
 
 
 	is_triggered_only = yes
@@ -1807,7 +1807,7 @@ country_event = {
 	id = germany.24
 	title = germany.24.t
 	desc = germany.24.d
-	picture = GFX_report_event_hitler_china
+	picture = [GetHitlerChinaEventPicture]
 
 	is_triggered_only = yes
 
@@ -1974,7 +1974,7 @@ country_event = {
 	id = germany.28
 	title = germany.28.t
 	desc = germany.28.d
-	picture = GFX_report_event_hitler_parade
+	picture = GFX_report_event_soldiers_parade
 
 	is_triggered_only = yes
 
@@ -2692,6 +2692,8 @@ country_event = {
 		
 		GER_czechoslovakia_modify_mefo_bills_or_economy_of_conquest = yes
 		GER_seize_gold_reserves_in_europe_peacefully = yes
+		
+		add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 	}
 	option = {
 		name = germany.55.c
@@ -2719,7 +2721,7 @@ country_event = {
 		GER_czechoslovakia_modify_mefo_bills_or_economy_of_conquest = yes
 		GER_seize_gold_reserves_in_europe_peacefully = yes
 
-		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+		add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 	}
 
 	option = {
@@ -2739,7 +2741,7 @@ country_event = {
 
 		GER_czechoslovakia_modify_mefo_bills_or_economy_of_conquest = yes
 		GER_seize_gold_reserves_in_europe_peacefully = yes
-		add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+		add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 	}
 }
 
@@ -5680,7 +5682,7 @@ country_event = {
 			add_named_threat = { threat = 5 name = GER_fate_of_yugoslavia }
 			annex_country = { target = YUG transfer_troops = no }
 			GER_yugoslavia_modify_mefo_bills_or_economy_of_conquest = yes
-			add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+			add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 		}
 	}
 
@@ -5706,7 +5708,7 @@ country_event = {
 			add_named_threat = { threat = 3 name = GER_fate_of_yugoslavia }
 			annex_country = { target = YUG transfer_troops = no }
 			custom_effect_tooltip = yugoslavia_mefo_bills_tt
-			add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+			add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 		}
 	}
 
@@ -5724,7 +5726,7 @@ country_event = {
 				news_event = { hours = 6 id = news.169 }
 			}
 			#custom_effect_tooltip = yugoslavia_mefo_bills_tt
-			#add_to_variable = { var = GER_mefo_bill_counter value = -5 }
+			#add_to_variable = { var = GER_mefo_bill_counter value = -10 }
 		}
 	}
 }
@@ -6788,6 +6790,7 @@ country_event = {
 			56 = { set_state_flag = yalta_wgr }
 			57 = { set_state_flag = yalta_wgr }
 			58 = { set_state_flag = yalta_wgr }
+			909 = { set_state_flag = yalta_wgr }
 			59 = { set_state_flag = yalta_wgr }
 		#	add_state_core = 42
 		#	add_state_core = 50

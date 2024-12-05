@@ -1697,7 +1697,7 @@ ideas = {
 						has_dynamic_modifier = { modifier = GER_recovering_economy_modifier }
 					}
 					add_to_variable = { #These numbers must match the once set in the event to stop the mefo bills
-						GER_industrial_consumer_goods_factor = 0.75
+						GER_industrial_consumer_goods_factor = GER_economic_crash_consumer_goods
 					}
 				}
 			}
