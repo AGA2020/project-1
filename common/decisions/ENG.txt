@@ -919,7 +919,7 @@ political_actions = {
 			BRA = { is_in_faction = no }
 		}
 
-		cost = 100
+		cost = 0
 		targets = {
 			BRA
 		}				
@@ -949,7 +949,7 @@ political_actions = {
 			date>1940.1.1
 		}
 
-		cost = 100
+		cost = 0
 		
 		visible = {
 

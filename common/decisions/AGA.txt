@@ -1060,7 +1060,6 @@ operations = {
                 SAF = { has_tech = improved_small_airframe } 
                 BRA = { has_tech = improved_small_airframe }
                 MEX = { has_tech = improved_small_airframe } 
-                AST = { has_tech = improved_small_airframe } 
                 NZL = { has_tech = improved_small_airframe }
             }                  
         }
@@ -1151,7 +1150,6 @@ operations = {
                         SAF = { has_tech = advanced_small_airframe } 
                         BRA = { has_tech = advanced_small_airframe }
                         MEX = { has_tech = advanced_small_airframe } 
-                        AST = { has_tech = advanced_small_airframe } 
                         NZL = { has_tech = advanced_small_airframe }
                     }
                 }

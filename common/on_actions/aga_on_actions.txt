@@ -150,6 +150,16 @@ on_actions = {
 				if = { limit = { HUN = { is_ai = no } } HUN = { declare_war_on = { target = SOV type = annex_everything } } }
 			}
 		}
+		effect = {
+			BRA = {
+				add_to_war = {
+				    targeted_alliance = ENG
+				    enemy = GER
+				    hostility_reason = asked_to_join
+				}
+			}
+		}
+
 	}	
 	on_naval_invasion = { 
 		effect ={  

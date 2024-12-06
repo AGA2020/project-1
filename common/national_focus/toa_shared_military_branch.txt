@@ -33,6 +33,14 @@ shared_focus = {
 	}
 
 	offset = {
+		x = 48
+		y = 0
+		trigger = {
+			tag = ARG
+		}
+	}
+
+	offset = {
 		x = -15
 		y = 0
 		trigger = {
