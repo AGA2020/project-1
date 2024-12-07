@@ -13550,15 +13550,6 @@ country_event = { # [FROM.GetNameDefCap] Accepts our offer - event for GER
 	option = { # We are grateful for their naiveté
 		name = wuw_GER_realpolitik.34.a  
 
-		effect_tooltip = {
-			FROM = {
-				swap_ideas = {
-					remove_idea = GER_mitteleuropa_customs_union_member
-					add_idea = GER_mitteleuropa_integrated_customs_union_member
-				}	
-			}
-		}
-
 	}
 }
 

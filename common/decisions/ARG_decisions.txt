@@ -1,4 +1,255 @@
 
+ARG_military_coup_decisions = {
+	
+	### MISSIONS ###
+
+	ARG_military_coup_attempt = {
+
+		priority = 100
+
+		icon = generic_ignite_civil_war 
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 365
+
+		fire_only_once = yes
+
+		activation = {
+			original_tag = ARG
+			has_completed_focus = ARG_the_castillo_cabinet
+			NOT = {
+				has_government = fascism
+			}
+			NOT = { has_global_flag = military_coup_attempt_happened }
+			NOT = { has_completed_focus = ARG_subdue_dissension }
+		}
+
+		visible = {
+			tag = ARG
+			NOT = {
+				has_government = fascism
+			}
+			NOT = { has_global_flag = military_coup_attempt_happened }
+			NOT = { has_completed_focus = ARG_subdue_dissension } 
+			NOT = { has_completed_focus = ARG_march_to_la_casa_rosada } 
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		timeout_effect = {
+			IF = {
+				limit = {
+					has_completed_focus = ARG_consolidating_power
+				}
+				country_event = ARG_political_events.9
+			}
+			ELSE_IF = {
+				limit = {
+					has_completed_focus = ARG_subdue_dissension
+				}
+				country_event = ARG_political_events.10
+			}
+			ELSE = {
+				country_event = ARG_political_events.11
+			}
+		}
+	}
+
+	ARG_military_state_absorption_mission = {
+
+			priority = 99
+	
+			icon = GFX_decision_eng_blackshirt_speech 
+	
+			available = {
+				hidden_trigger = { always = no }
+			}
+	
+			days_mission_timeout = 75
+			days_re_enable = 1
+	
+			fire_only_once = no
+	
+			activation = {
+				original_tag = ARG
+				has_completed_focus = ARG_the_castillo_cabinet
+				NOT = {
+					has_government = fascism
+				}
+				NOT = { has_global_flag = military_coup_attempt_happened }
+				NOT = { has_completed_focus = ARG_subdue_dissension }
+				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }
+			}
+	
+			visible = {
+				tag = ARG 
+				NOT = {
+					has_government = fascism
+				}
+				NOT = { has_global_flag = military_coup_attempt_happened }
+				NOT = { has_completed_focus = ARG_subdue_dissension } 
+				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }  
+
+			}
+	
+			cancel_if_not_visible = yes
+	
+			timeout_effect = {
+				custom_effect_tooltip = ARG_military_state_absorption_timer_tt
+	
+				random_owned_state = {
+					limit = {
+						NOT = {
+							OR = {
+								has_dynamic_modifier = {
+								modifier = ARG_military_owned_state
+								}
+								has_dynamic_modifier = {
+									modifier = ARG_federal_intervention_modifier
+								}
+							}
+						}
+
+						NOT = { state = 278 }
+					}
+
+					add_dynamic_modifier = {
+						modifier = ARG_military_owned_state
+					}
+				}
+			}
+		}
+
+		### DECISIONS ###
+
+		ARG_sanction_the_generals = {
+
+			priority = 98
+
+			icon = GFX_decision_eng_trade_unions_support
+
+			ai_will_do = {
+				base = 50
+			}
+
+			allowed = {
+				original_tag = ARG
+			}
+
+			available = {
+				has_completed_focus = ARG_the_castillo_cabinet
+				NOT = { has_government = fascism }
+				NOT = { has_global_flag = military_coup_attempt_happened }
+				NOT = { has_completed_focus = ARG_subdue_dissension } 
+				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada } 
+			}
+
+			visible = {
+				tag = ARG
+				has_completed_focus = ARG_the_castillo_cabinet
+				NOT = { has_government = fascism }
+				NOT = { has_global_flag = military_coup_attempt_happened }
+				NOT = { has_completed_focus = ARG_subdue_dissension } 
+				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }   
+			}
+
+			days_remove = 50
+
+			cost = 100
+
+			complete_effect = {
+
+			}
+
+			modifier = {
+				political_power_factor = -0.15
+			}
+
+			remove_effect = {
+
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.05
+				}
+
+				custom_effect_tooltip = CHL_skip_one_line_tt
+
+				add_days_mission_timeout = {
+				mission = ARG_military_coup_attempt
+				days = 75
+			}
+
+			custom_effect_tooltip = ARG_sanction_the_generals_tt
+		}
+	}
+
+	ARG_increase_military_salaries = {
+
+			priority = 97
+
+			icon = GFX_decision_eng_trade_unions_support 
+
+			ai_will_do = {
+				base = 50
+			}
+
+			allowed = {
+				original_tag = ARG
+			}
+
+			available = {
+				has_completed_focus = ARG_the_castillo_cabinet
+				NOT = { has_government = fascism }
+				NOT = { has_global_flag = military_coup_attempt_happened }
+				NOT = { has_completed_focus = ARG_subdue_dissension } 
+				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada } 
+			}
+
+			visible = {
+				tag = ARG
+				has_completed_focus = ARG_the_castillo_cabinet
+				NOT = { has_government = fascism }
+				NOT = { has_global_flag = military_coup_attempt_happened }
+				NOT = { has_completed_focus = ARG_subdue_dissension } 
+				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }   
+			}
+
+			days_remove = 50
+
+			cost = 50
+
+			complete_effect = {
+
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+
+			remove_effect = {
+
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.05
+				}
+
+				custom_effect_tooltip = CHL_skip_one_line_tt
+
+				add_days_mission_timeout = {
+				mission = ARG_military_coup_attempt
+				days = 75
+			}
+
+			custom_effect_tooltip = ARG_sanction_the_generals_tt
+		}
+	}
+}
+
 ARG_international_loan_decisions = {
 	
 	ARG_loan_from_britain = {

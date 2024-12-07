@@ -21,21 +21,6 @@ news_event = {
 			}
 	}
 }
-news_event = {
-	id = aga.123
-	title = aga.1.t
-	desc = aga.1.d
-	picture = GFX_report_event_generic_read_write
-	
-	is_triggered_only = yes
-
-	immediate = {
-		ROM = { complete_national_focus = ROM_the_1937_election }  
-	}
-	option = {
-		name = aga.123.a
-	}
-}
 country_event = {
 	id = aga.999
 	title = aga.999.t

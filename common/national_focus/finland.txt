@@ -170,18 +170,6 @@ focus_tree = {
 					}
 				}
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_dlc = "Arms Against Tyranny"
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 		}
 	}
 	
