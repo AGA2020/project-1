@@ -1048,20 +1048,9 @@ country_event = {
 		ai_chance = {
 			base = 10
 		}
-		ARG = {
-				IF = {
-					limit = {
-						is_in_faction = yes
-					}
-					add_to_faction = CHL
-				}
-			}
-				CHL = {
-					transfer_state = 953
-					transfer_state = 954
-				}
-			}	
-		}
+
+	}	
+}
 
 # Chile refuses to join
 country_event = {
@@ -1077,13 +1066,8 @@ country_event = {
 		ai_chance = {
 			base = 2
 		}
-		
-		add_opinion_modifier = {
-				target = CHL
-				modifier = large_decrease
-			}
-		}	
-	}
+	}	
+}
 
 # The Chilean Ultimatum
 country_event = {
@@ -2350,31 +2334,8 @@ country_event = {
 		name = ARG_political_events.111.a 
 		ai_chance = {  
 			base = 50
-		} 
-
-		IF = {
-			limit = {
-				ARG = {
-					has_completed_focus = ARG_revive_the_colonial_plan
-				}
-			}
-			FROM = {
-				create_wargoal = {
-					type = liberate_wargoal
-					target = ROOT
-					generator = { 300 }
-				}
-			}
-		}	
-		ELSE = {
-			FROM = {
-				 create_wargoal = {
-						type = annex_everything
-						target = ROOT
-					}
-				}
-			}      
-		}
+		}  
+	}
 
 	# De-escalate
 	option = {
