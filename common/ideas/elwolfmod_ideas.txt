@@ -127,6 +127,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 			modifier = {
 				industrial_capacity_factory = -1
+				industrial_capacity_dockyard = -1
 				production_factory_max_efficiency_factor = -1
 				conscription = -1
 				consumer_goods_factor = 100

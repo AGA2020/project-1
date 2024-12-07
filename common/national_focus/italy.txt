@@ -4633,15 +4633,15 @@ focus_tree = {
 				ITA_add_citta_dell_aria_templates = yes
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			GER = { set_technology = { photo_reconnaisance = 1 popup = no } }
-			ITA = { set_technology = { photo_reconnaisance = 1 popup = no } }
-			HUN = { set_technology = { photo_reconnaisance = 1 popup = no } }
-			JAP = { set_technology = { photo_reconnaisance = 1 popup = no } }
-			ROM = { set_technology = { photo_reconnaisance = 1 popup = no } }
-			SIA = { set_technology = { photo_reconnaisance = 1 popup = no } }
-			FIN = { set_technology = { photo_reconnaisance = 1 popup = no } }
-			SPR = { set_technology = { photo_reconnaisance = 1 popup = no } }
-			MAN = { set_technology = { photo_reconnaisance = 1 popup = no } }
+			ITA = { set_technology = { photo_reconnaisance = 1 popup = no } set_technology = { range_improvements = 1 popup = no } }
+			GER = { set_technology = { photo_reconnaisance = 1 popup = no } set_technology = { range_improvements = 1 popup = no } }
+			HUN = { set_technology = { photo_reconnaisance = 1 popup = no } set_technology = { range_improvements = 1 popup = no } }
+			JAP = { set_technology = { photo_reconnaisance = 1 popup = no } set_technology = { range_improvements = 1 popup = no } }
+			ROM = { set_technology = { photo_reconnaisance = 1 popup = no } set_technology = { range_improvements = 1 popup = no } }
+			SIA = { set_technology = { photo_reconnaisance = 1 popup = no } set_technology = { range_improvements = 1 popup = no } }
+			FIN = { set_technology = { photo_reconnaisance = 1 popup = no } set_technology = { range_improvements = 1 popup = no } }
+			SPR = { set_technology = { photo_reconnaisance = 1 popup = no } set_technology = { range_improvements = 1 popup = no } }
+			MAN = { set_technology = { photo_reconnaisance = 1 popup = no } set_technology = { range_improvements = 1 popup = no } }
 		}
 	}
 

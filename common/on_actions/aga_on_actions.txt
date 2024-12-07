@@ -151,11 +151,16 @@ on_actions = {
 			}
 		}
 		effect = {
-			BRA = {
-				add_to_war = {
-				    targeted_alliance = ENG
-				    enemy = GER
-				    hostility_reason = asked_to_join
+			if = {
+				limit = {
+					ROOT = { tag = BRA } 
+				}
+				BRA = {
+					add_to_war = {
+					    targeted_alliance = ENG
+					    enemy = GER
+					    hostility_reason = asked_to_join
+					}
 				}
 			}
 		}

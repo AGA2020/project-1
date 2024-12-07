@@ -781,47 +781,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_stability = 0.1
-			add_war_support = 0.1
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			set_cosmetic_tag = HUN_transleithanian_kingdom
-
-			every_state = {
-				limit = {
-					OR = {
-						state = 975
-						state = 76
-						state = 83
-						state = 84
-						state = 82
-					}
-					NOT = {
-						is_core_of = ROOT
-					}
-				}
-				add_core_of = ROOT
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = HABSBURG_joint_ft_unlock_tt
-
-			hidden_effect = {
-				set_global_flag = AH_joint_tree_activated_flag
-
-				every_country = {
-					limit = {
-						HABSBURG_is_a_habsburg_viable_nation = yes
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
-
-			# Set Hungary as Leader of the federation
-			set_variable = { global.AH_originator_country = ROOT }
-
 		}
 	}
 
@@ -840,50 +799,6 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-			is_subject = no
-			has_government = neutrality
-			AUS = {
-				has_civil_war = no
-				OR = {
-					exists = yes
-					AND = {
-						exists = no
-						4 = {
-							is_owned_by = ROOT
-						}
-						152 = {
-							is_owned_by = ROOT
-						}
-						153 = {
-							is_owned_by = ROOT
-						}
-						848 = {
-							is_owned_by = ROOT
-						}
-						975 = {
-							is_owned_by = ROOT
-						}
-						976 = {
-							is_owned_by = ROOT
-						}
-					}
-				}
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		bypass = {
-
-			OR = {
-				has_country_flag = HUN_created_austrian_monarchy
-				has_global_flag = GER_reformed_austro_hungarian_empire
-			}
-
-		}
-
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = no
@@ -891,52 +806,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					AUS = {
-						exists = yes
-						is_subject = no
-					}
-				}
-				AUS = {
-					country_event = {
-						id = WW_hungary.32
-						days = 1
-						random_days = 2
-					}
-				}
-				custom_effect_tooltip = HUN_unify_with_austria_tt
-			}
-			ELSE_IF = {
-				limit = {
-					AUS = {
-						is_subject = yes
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = AUS
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					AUS = {
-						is_subject_of = ROOT
-					}
-				}
-				add_political_power = 75
-				add_stability = 0.05
-				add_war_support = 0.025
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			unlock_decision_tooltip = HUN_seize_control_of_burgenland_dec
-			unlock_decision_tooltip = HUN_place_a_habsburg_on_the_austrian_throne
 
 		}
 	}
@@ -956,32 +825,6 @@ focus_tree = {
 			factor = 15
 		}
 
-		available = {
-			is_subject = no
-			has_government = neutrality
-			CZE = {
-				OR = {
-					AND = {
-						exists = yes
-						has_civil_war = no
-						NOT = {
-							has_war_with = ROOT
-						}
-					}
-					exists = no
-				}
-			}
-		}
-
-		bypass = {
-
-			OR = {
-				has_country_flag = HUN_created_bohemian_monarchy
-				has_global_flag = GER_reformed_austro_hungarian_empire
-			}
-
-		}
-
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = no
@@ -989,73 +832,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					CZE = {
-						exists = yes
-						is_subject = no
-					}
-				}
-				CZE = {
-					country_event = {
-						id = WW_hungary.55
-						days = 1
-						random_days = 2
-					}
-				}
-				custom_effect_tooltip = HUN_protect_czechoslovakia_tt
-			}
-			ELSE_IF = {
-				limit = {
-					CZE = {
-						exists = yes
-						is_subject = yes
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = CZE
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					CZE = {
-						exists = yes
-						is_subject_of = ROOT
-					}
-				}
-				add_political_power = 75
-				add_stability = 0.05
-				add_war_support = 0.025
-			}
-			ELSE_IF = {
-				limit = {
-					CZE = {
-						exists = no
-					}
-				}
-				add_war_support = 0.05
-				every_state = {
-					limit = {
-						is_core_of = CZE
-						NOT = {
-							OR = {
-								is_owned_by = ROOT
-								is_claimed_by = ROOT
-							}
-						}
-					}
-					add_claim_by = ROOT
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			unlock_decision_tooltip = HUN_place_a_habsburg_on_the_bohemian_throne
 
 		}
 	}
@@ -1075,24 +851,6 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-			GER = {
-				has_government = neutrality
-				OR = {
-					is_faction_leader = yes
-					is_in_faction = no
-				}
-			}
-			NOT = {
-				has_global_flag = GER_Rejected_HUN_central_powers
-			}
-			is_subject = no
-		}
-
-		bypass = {
-			is_in_faction_with = GER
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = yes
@@ -1100,34 +858,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					GER = {
-						is_faction_leader = yes
-					}
-				}
-				# We will attempt to join the German faction
-				GER = {
-					country_event = {
-						id = WW_hungary.35
-						hours = 24
-						random_hours = 12
-					}
-				}
-			}
-			ELSE = {
-				set_rule = { can_create_factions = yes }
-				create_faction = GER_central_powers_faction
-				# We create our own faction and invite Germany
-				GER = {
-					country_event = {
-						id = WW_hungary.38
-						hours = 24
-						random_hours = 12
-					}
-				}
-			}
 
 		}
 	}
@@ -1147,15 +877,6 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-			has_government = neutrality
-			is_subject = no
-		}
-
-		bypass = {
-
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = no
@@ -1163,12 +884,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			add_political_power = 25
-
-			create_faction = habsburg_alliance_faction
-
-			set_rule = { can_create_factions = yes }
 
 		}
 	}
@@ -1188,26 +903,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-			has_government = neutrality
-			ENG = {
-				OR = {
-					has_government = democratic
-					has_government = neutrality
-				}
-				is_faction_leader = yes
-				has_civil_war = no
-			}
-			is_subject = no
-			NOT = {
-				has_global_flag = ENG_Rejected_HUN_grand_alliance
-			}
-		}
-
-		bypass = {
-
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = yes
@@ -1215,15 +910,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			# We will attempt to join the British faction
-			ENG = {
-				country_event = {
-					id = WW_hungary.41
-					hours = 24
-					random_hours = 12
-				}
-			}
 
 		}
 	}
@@ -1243,38 +929,6 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-			is_subject = no
-			ALB = {
-				has_civil_war = no
-				OR = {
-					exists = yes
-					AND = {
-						exists = no
-						934 = {
-							is_owned_by = ROOT
-						}
-						44 = {
-							is_owned_by = ROOT
-						}
-						805 = {
-							is_owned_by = ROOT
-						}
-					}
-				}
-				NOT = {
-					has_war_with = ROOT
-				}
-				NOT = {
-					has_cosmetic_tag = ALB_wiedist_principality
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = no
@@ -1282,88 +936,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					ALB = {
-						exists = yes
-						is_subject = no
-					}
-				}
-				ALB = {
-					country_event = {
-						id = WW_hungary.44
-						days = 1
-						random_days = 2
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					ALB = {
-						is_subject = yes
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = ALB
-				}
-				unlock_decision_tooltip = HUN_place_wied_on_the_albanian_throne
-			}
-			ELSE_IF = {
-				limit = {
-					ALB = {
-						OR = {
-							is_subject_of = ROOT
-							exists = no
-						}
-					}
-				}
-
-				802 = {
-					add_core_of = ALB
-				}
-
-				970 = {
-					add_core_of = ALB
-				}
-
-				every_state = {
-					limit = {
-						is_controlled_by = ROOT
-						NOT = {
-							is_core_of = ROOT
-						}
-						is_core_of = ALB
-					}
-					transfer_state_to = ALB
-				}
-
-				ALB = {
-					drop_cosmetic_tag = yes
-					set_cosmetic_tag = ALB_wiedist_principality
-					promote_character = ALB_wilhelm_of_wied
-				}
-
-				IF = {
-					limit = {
-						ALB = {
-							NOT = {
-								is_subject_of = ROOT
-							}
-						}
-					}
-					puppet = ALB
-				}
-
-				hidden_effect = {
-					set_country_flag = HUN_created_wiedist_monarchy
-				}
-
-			}
 
 		}
 	}
@@ -1383,41 +955,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-			has_government = neutrality
-			is_subject = no
-			is_faction_leader = yes
-			has_global_flag = scw_over
-			OR = {
-				SPR = {
-					exists = yes
-					has_civil_war = no
-					OR = {
-						has_government = neutrality
-						has_government = fascism
-					}
-				}
-				AND = {
-					SPR = {
-						exists = no
-					}
-					OR = {
-						41 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 41
-						}
-					}
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = no
@@ -1425,92 +962,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					SPR = {
-						exists = yes
-						is_subject = no
-					}
-				}
-				SPR = {
-					country_event = {
-						id = WW_hungary.51
-						days = 1
-						random_days = 2
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					SPR = {
-						is_subject = yes
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = SPR
-				}
-				unlock_decision_tooltip = HUN_place_a_habsburg_on_the_spanish_throne
-			}
-			ELSE_IF = {
-				limit = {
-					SPR = {
-						OR = {
-							is_subject_of = ROOT
-							exists = no
-						}
-					}
-				}
-
-				every_state = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
-							}
-						}
-						NOT = {
-							is_core_of = ROOT
-						}
-						is_core_of = SPR
-						NOT = {
-							is_owned_and_controlled_by = SPR
-						}
-					}
-					transfer_state_to = SPR
-				}
-
-				SPR = {
-					drop_cosmetic_tag = yes
-					set_cosmetic_tag = SPR_habsburg
-					country_event = {
-						id = WW_hungary.50
-						hours = 0
-					}
-				}
-
-				IF = {
-					limit = {
-						SPR = {
-							NOT = {
-								is_subject_of = ROOT
-							}
-						}
-					}
-					puppet = SPR
-				}
-
-				hidden_effect = {
-					set_country_flag = HUN_created_spanish_habsburg_monarchy
-				}
-
-			}
 
 		}
 	}
@@ -1530,36 +981,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-			has_government = neutrality
-			is_subject = no
-			is_faction_leader = yes
-			OR = {
-				POL = {
-					exists = yes
-					has_civil_war = no
-				}
-				AND = {
-					POL = {
-						exists = no
-					}
-					OR = {
-						10 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 10
-						}
-					}
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = no
@@ -1567,105 +988,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					POL = {
-						exists = yes
-						is_subject = no
-					}
-				}
-				POL = {
-					country_event = {
-						id = WW_hungary.47
-						days = 1
-						random_days = 2
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					POL = {
-						is_subject = yes
-						NOT = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = POL
-				}
-				unlock_decision_tooltip = HUN_place_a_habsburg_on_the_polish_throne
-			}
-			ELSE_IF = {
-				limit = {
-					POL = {
-						OR = {
-							is_subject_of = ROOT
-							exists = no
-						}
-					}
-				}
-
-				every_state = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							any_country = {
-								is_subject_of = ROOT
-								controls_state = PREV
-							}
-						}
-						NOT = {
-							is_core_of = ROOT
-						}
-						is_core_of = POL
-						NOT = {
-							is_owned_and_controlled_by = POL
-						}
-						NOT = {
-							OR = {
-								state = 762
-								state = 88
-								state = 91
-								state = 89
-								state = 80
-								state = 72
-								state = 93
-							}
-						}
-					}
-					transfer_state_to = POL
-				}
-
-				POL = {
-					drop_cosmetic_tag = yes
-					set_cosmetic_tag = POL_KINGDOM
-					IF = {
-						limit = {
-							has_character = POL_karl_albrecht
-						}
-						promote_character = POL_karl_albrecht
-					}
-				}
-
-				IF = {
-					limit = {
-						POL = {
-							NOT = {
-								is_subject_of = ROOT
-							}
-						}
-					}
-					puppet = POL
-				}
-
-				hidden_effect = {
-					set_country_flag = HUN_created_polish_habsburg_monarchy
-				}
-
-			}
 
 		}
 	}
@@ -1685,41 +1007,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-
-			has_government = neutrality
-			is_subject = no
-			is_faction_leader = yes
-			OR = {
-				MEX = {
-					exists = yes
-					has_civil_war = no
-					NOT = {
-						has_government = communism
-					}
-				}
-				AND = {
-					MEX = {
-						exists = no
-					}
-					OR = {
-						277 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 277
-						}
-					}
-				}
-			}
-
-		}
-
-		bypass = {
-
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = no
@@ -1727,92 +1014,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-				IF = {
-					limit = {
-						MEX = {
-							exists = yes
-							is_subject = no
-						}
-					}
-					MEX = {
-						country_event = {
-							id = WW_hungary.62
-							days = 1
-							random_days = 2
-						}
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						MEX = {
-							is_subject = yes
-							NOT = {
-								is_subject_of = ROOT
-							}
-						}
-					}
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = MEX
-					}
-					unlock_decision_tooltip = HUN_place_a_habsburg_on_the_mexican_throne
-				}
-				ELSE_IF = {
-					limit = {
-						MEX = {
-							OR = {
-								is_subject_of = ROOT
-								exists = no
-							}
-						}
-					}
-
-					every_state = {
-						limit = {
-							OR = {
-								is_controlled_by = ROOT
-								any_country = {
-									is_subject_of = ROOT
-									controls_state = PREV
-								}
-							}
-							NOT = {
-								is_core_of = ROOT
-							}
-							is_core_of = MEX
-							NOT = {
-								is_owned_and_controlled_by = MEX
-							}
-						}
-						transfer_state_to = MEX
-					}
-
-					MEX = {
-						drop_cosmetic_tag = yes
-						set_cosmetic_tag = MEX_habsburg_empire
-						country_event = {
-							id = WW_hungary.61
-							hours = 0
-						}
-					}
-
-					IF = {
-						limit = {
-							MEX = {
-								NOT = {
-									is_subject_of = ROOT
-								}
-							}
-						}
-						puppet = MEX
-					}
-
-					hidden_effect = {
-						set_country_flag = HUN_created_mexican_habsburg_monarchy
-					}
-
-				}
 		}
 	}
 
@@ -1839,69 +1040,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = HUN_sich_riflemen_infantry_recruitment
-			hidden_effect = {
-				delete_unit_template_and_units = {
-					division_template = "Ukrainski Sichovi Striltsi"
-					disband = yes #if yes, will refund equipment/manpower.
-				}
-
-				division_template = {
-					name = "Ukrainski Sichovi Striltsi"
-					division_names_group = AUSHUN_INF_01
-					role = infantry
-					template_counter = 91
-					is_locked = no
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-						infantry = { x = 2 y = 2 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-						artillery = { x = 0 y = 1 }
-					}
-				}
-
-				random_owned_state = {
-					limit = {
-						is_controlled_by = ROOT
-						is_core_of = ROOT
-					}
-					create_unit = {
-					    division = "name = \"Pershyy Dyvizion Ukrainskih Sichovih Striltsiv'\" division_template = \"Ukrainski Sichovi Striltsi\" start_experience_factor = 0.4 start_equipment_factor = 0.6"
-					    owner = ROOT
-					    officer = {
-					    	name = HUN_yevhen_konovalets
-					    }
-					}
-					create_unit = {
-					    division = "name = \"Druhyy Dyvizion Ukrainskih Sichovih Striltsiv\" division_template = \"Ukrainski Sichovi Striltsi\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
-					    owner = ROOT
-					    officer = {
-					    	name = HUN_andriy_melnyk
-					    }
-					}
-					create_unit = {
-					    division = "name = \"Tretiy Dyvizion Ukrainskih Sichovih Striltsiv\" division_template = \"Ukrainski Sichovi Striltsi\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
-					    owner = ROOT
-					    officer = {
-					    	name = HUN_yuriy_otmarstein
-					    }
-					}
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = HUN_vasyl_vyshivani_becomes_available_as_field_marshal_tt
-
 		}
 	}
 
@@ -1919,204 +1057,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-
-		available = {
-
-			custom_trigger_tooltip = {
-				tooltip = wuw_HUN_the_kingdom_of_ukraine_required_states_tt
-				AND = {
-					OR = {
-						93 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 93
-						}
-					}
-					OR = {
-						199 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 199
-						}
-					}
-					OR = {
-						201 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 201
-						}
-					}
-					OR = {
-						202 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 202
-						}
-					}
-					OR = {
-						198 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 198
-						}
-					}
-					OR = {
-						834 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 834
-						}
-					}
-					OR = {
-						192 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 192
-						}
-					}
-					OR = {
-						203 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 203
-						}
-					}
-					OR = {
-						197 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 197
-						}
-					}
-					OR = {
-						193 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 193
-						}
-					}
-					OR = {
-						225 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 225
-						}
-					}
-					OR = {
-						259 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 259
-						}
-					}
-					OR = {
-						226 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 226
-						}
-					}
-					OR = {
-						196 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 196
-						}
-					}
-					OR = {
-						200 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 200
-						}
-					}
-					OR = {
-						227 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 227
-						}
-					}
-					OR = {
-						221 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 221
-						}
-					}
-					OR = {
-						228 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 228
-						}
-					}
-					OR = {
-						137 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 137
-						}
-					}
-					OR = {
-						218 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 218
-						}
-					}
-					OR = {
-						234 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 234
-						}
-					}
-				}
-			}
-		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = no
@@ -2124,10 +1064,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = wuw_HUN_the_kingdom_of_ukraine_tt
 
 		}
 	}
@@ -2147,38 +1083,6 @@ focus_tree = {
 			factor = 25
 		}
 
-		available = {
-
-			custom_trigger_tooltip = {
-				tooltip = wuw_HUN_the_kingdom_of_georgia_required_states_tt
-				AND = {
-					OR = {
-						231 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 231
-						}
-					}
-					OR = {
-						826 = {
-							is_controlled_by = ROOT
-						}
-						any_country = {
-							is_subject_of = ROOT
-							controls_state = 826
-						}
-					}
-				}
-			}
-
-		}
-
-		bypass = {
-
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		cancel_if_invalid = no
@@ -2186,9 +1090,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			set_country_flag = HUN_created_georgian_monarchy
-
 		}
 	}
 
@@ -2236,28 +1137,6 @@ focus_tree = {
 
 		available = {
 
-			is_subject = no
-
-			NOT = {
-				AND = {
-					664 = {
-						is_core_of = ROOT
-						is_owned_and_controlled_by = ROOT
-					}
-					70 = {
-						is_core_of = ROOT
-						is_owned_and_controlled_by = ROOT
-					}
-					71 = {
-						is_core_of = ROOT
-						is_owned_and_controlled_by = ROOT
-					}
-					73 = {
-						is_core_of = ROOT
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-			}
 
 		}
 
@@ -2272,72 +1151,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			every_state = {
-				limit = {
-					NOT = {
-						is_core_of = ROOT
-					}
-					OR = {
-						state = 664
-						state = 70
-						state = 71
-						state = 73
-						state = 72
-					}
-				}
-				add_core_of = ROOT
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_state = {
-				limit = {
-					NOT = {
-						is_owned_by = ROOT
-					}
-					any_country = {
-						is_subject_of = ROOT
-						owns_state = PREV
-					}
-					OR = {
-						state = 664
-						state = 70
-						state = 71
-						state = 73
-						state = 72
-					}
-				}
-				transfer_state_to = ROOT
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_country = {
-				limit = {
-					NOT = {
-						OR = {
-							original_tag = ROOT
-							is_subject_of = ROOT
-							is_in_faction_with = ROOT
-						}
-					}
-					OR = {
-						owns_state = 664
-						owns_state = 70
-						owns_state = 71
-						owns_state = 73
-						owns_state = 72
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						type = take_core_state
-						target = PREV
-						#generator = { state_id }
-					}
-				}
-			}
 
 		}
 	}
@@ -2360,30 +1173,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-
-			is_subject = no
-			has_government = neutrality
-
-			any_other_country = {
-				OR = {
-					owns_state = 762
-					owns_state = 67
-					owns_state = 66
-				}
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-
-			has_army_manpower = { size > 250000 }
-
-		}
-
-		bypass = {
-
-		}
-
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		cancel_if_invalid = no
@@ -2391,78 +1180,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					CZE = {
-						is_subject_of = ROOT
-					}
-				}
-				every_state = {
-					limit = {
-						is_core_of = SIL
-						NOT = {
-							OR = {
-								is_claimed_by = CZE
-								is_core_of = CZE
-								is_owned_by = CZE
-							}
-						}
-					}
-					add_core_of = CZE
-				}
-				ELSE = {
-					every_state = {
-						limit = {
-							is_core_of = SIL
-							NOT = {
-								OR = {
-									is_claimed_by = ROOT
-									is_core_of = ROOT
-									is_owned_by = ROOT
-								}
-							}
-						}
-						add_claim_by = ROOT
-					}
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = HUN_demands_tt
-			every_country = {
-				limit = {
-					AND = {
-						OR = {
-							AND = {
-								owns_state = 762
-								controls_state = 762
-							}
-							AND = {
-								owns_state = 67
-								controls_state = 67
-							}
-							AND = {
-								owns_state = 66
-								controls_state = 66
-							}
-						}
-						NOT = {
-							OR = {
-								has_war_with = ROOT
-								original_tag = ROOT
-								is_subject_of = ROOT
-							}
-						}
-					}
-				}
-				country_event = {
-					id = WW_hungary.72
-					days = 2
-					random_days = 3
-				}
-			}
 
 		}
 	}
