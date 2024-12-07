@@ -113,14 +113,6 @@ defined_text = {
 defined_text = {
 	name = NOR_get_air_force_name
 	text = {
-		trigger = {
-			NOR = {
-				has_completed_focus = NOR_luftforsvaret
-			}
-		}
-		localization_key = NOR_royal_air_force_name
-	}
-	text = {
 		localization_key = NOR_army_air_force_name
 	}
 }

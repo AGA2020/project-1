@@ -741,12 +741,6 @@ leader_traits = {
 					has_completed_focus = ITA_strengthen_ascari_corps
 				}
 			}
-			modifier = { #ITALY
-				factor = 2
-				FROM = {
-					has_completed_focus = ITA_novus_ordo
-				}
-			}
 		}
 
 		defense_skill_factor = 1

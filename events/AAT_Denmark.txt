@@ -1302,16 +1302,6 @@ country_event = { #Denmark becomes a puppet
 			ROOT = {
 				country_event = { id = denmark_occupation_event.4 }
 			}
-
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				mark_focus_tree_layout_dirty = yes
-			}
 		}
 		FROM = {
 			add_ideas = DEN_sahnefront_ns
