@@ -1678,7 +1678,6 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = ARG_war_division
-		mutually_exclusive = { focus = ARG_join_the_axis }
 		cost = 10
 		available = {
 			is_subject = no
