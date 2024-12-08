@@ -96,6 +96,31 @@ characters={
 				large="GFX_portrait_SPA_jose_antonio_primo_de_rivera"
 			}
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_SPA_jose_antonio_primo_de_rivera
+			name = SPA_jose_antonio_primo_de_rivera 
+			allowed = {
+				has_dlc = "La Resistance"
+				original_tag = SPR
+			}
+			visible = {
+				NOT = {
+					tag = SPD
+					tag = SPC
+				}
+			}
+			available = {
+				has_completed_focus = SPA_primo_de_rivera_prisoner_exchange
+				custom_trigger_tooltip = {
+					tooltip = SPA_not_republican_spain_tt
+					NOT = { tag = SPD }
+				}
+			}
+			traits = {
+				falangist_figurehead 
+			}
+		}
 
 		country_leader={
 			ideology=falangism
@@ -117,6 +142,46 @@ characters={
 			traits={ jefe }
 			expire="1965.1.1.1"
 			id=-1
+		}
+	}
+
+	SPR_manuel_azana = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+
+			name = SPR_manuel_azana
+
+			portraits = {
+				civilian = {
+					large = "GFX_portrait_Manuel_Azana"
+				}
+			}
+			#country_leader = {
+			#	ideology = conservatism
+			#	traits = { figurehead_president }
+			#	expire = "1965.1.1.1"
+			#	id = -1
+			#}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "La Resistance" }
+			}
+
+			name = SPR_manuel_azana
+
+			portraits = {
+				civilian = {
+					large = "GFX_portrait_Manuel_Azana"
+				}
+			}
+			#country_leader = {
+			#	ideology = conservatism
+			#	expire = "1965.1.1.1"
+			#	id = -1
+			#}
 		}
 	}
 
@@ -480,6 +545,7 @@ characters={
 							has_global_flag = spanish_civil_war
 							has_global_flag = SPR_sin_paquito
 						}
+						original_tag = CHL
 					}
 				}
 			}
@@ -555,12 +621,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader infantry_leader panzer_leader trait_engineer ranger trickster }
-			skill=6
-			attack_skill=6
-			defense_skill=4
-			planning_skill=5
-			logistics_skill=5
+			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies }
+			skill=4
+			attack_skill=5
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
 			legacy_id=1109
 		}
 	}
@@ -650,6 +716,7 @@ characters={
 			name=SPA_emilio_mola_vidal
 			portraits={
 				army={
+					large="GFX_portrait_SPA_emilio_mola"
 					small="GFX_idea_generic_army_europe_5"
 				}
 			}
@@ -698,7 +765,10 @@ characters={
 				ledger = army
 				allowed = {
 					has_dlc = "La Resistance"
-					original_tag = SPR
+					OR = {
+						original_tag = SPR
+						original_tag = CHL
+					}
 				}
 				visible = {
 					NOT = {
@@ -719,12 +789,12 @@ characters={
 			}
 
 			corps_commander={
-				traits={ brilliant_strategist trait_reckless trait_SPA_nationalist_sympathies organizer cavalry_leader infantry_leader panzer_leader trait_engineer ranger trickster }
-				skill=6
-				attack_skill=6
-				defense_skill=4
-				planning_skill=4
-				logistics_skill=5
+				traits={ brilliant_strategist trait_reckless trait_SPA_nationalist_sympathies }
+				skill=3
+				attack_skill=4
+				defense_skill=2
+				planning_skill=2
+				logistics_skill=2
 				legacy_id=1112
 				visible = {
 					OR = {
@@ -827,7 +897,10 @@ characters={
 				ledger = army
 				allowed = {
 					has_dlc = "La Resistance"
-					original_tag = SPR
+					OR = {
+						original_tag = SPR
+						original_tag = CHL
+					}
 				}
 				visible = {
 					NOT = {
@@ -913,7 +986,10 @@ characters={
 				ledger = army
 				allowed = {
 					has_dlc = "La Resistance"
-					original_tag = SPR
+					OR = {
+						original_tag = SPR
+						original_tag = CHL
+					}
 				}
 				visible = {
 					NOT = {
@@ -922,8 +998,6 @@ characters={
 					}
 				}
 				available = {
-					if = {
-					}
 					if = {
 						limit = {
 							has_completed_focus = SPA_unify_the_nationalist_front
@@ -1003,6 +1077,21 @@ characters={
 				}
 			}
 		}
+	}
+
+	SPA_karl_pius_von_habsburg = {
+		name = SPA_karl_pius_von_habsburg
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SPR_karl_pius_von_habsburg
+			}
+		}
+		#country_leader = {
+		#	ideology = despotism
+		#	traits = { carlist_habsburg_pretender }
+		#	expire="1965.1.1.1"
+		#	id = -1
+		#}
 	}
 
 	SPA_miguel_cabanellas={ # Carlist
@@ -1281,7 +1370,10 @@ characters={
 			ledger = army
 			allowed = {
 				has_dlc = "La Resistance"
-				original_tag = SPR
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
 			}
 			visible = {
 				NOT = {
@@ -1290,8 +1382,6 @@ characters={
 				}
 			}
 			available = {
-				if = {
-				}
 				if = {
 					limit = {
 						has_completed_focus = SPA_unify_the_nationalist_front
@@ -1325,7 +1415,10 @@ characters={
 			ledger = army
 			allowed = {
 				has_dlc = "La Resistance"
-				original_tag = SPR
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
 			}
 
 			visible = {
@@ -1336,8 +1429,6 @@ characters={
 			}
 
 			available = {
-				if = {
-				}
 				if = {
 					limit = {
 						has_completed_focus = SPA_unify_the_nationalist_front
@@ -1889,6 +1980,15 @@ characters={
 		}
 	}
 
+	SPR_andres_nin = { # POUM
+		name=SPR_andres_nin
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+	}
+
 	SPR_council_of_theorists = { # Anarchists
 		name=SPR_council_of_theorists
 		portraits={
@@ -2015,6 +2115,33 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_SPR_mate_zalka"
+			}
+		}
+	}
+
+	SPR_defensive_military_council = { # Anarchist
+		name=SPR_defensive_military_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
+	SPR_offensive_military_council = { # Anarchist
+		name=SPR_offensive_military_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
+	SPR_organizational_military_council = { # Anarchist
+		name=SPR_organizational_military_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
 			}
 		}
 	}
@@ -2274,6 +2401,24 @@ characters={
 		}
 	}
 
+	SPR_air_safety_aviation_council = { # Anarchist
+		name=SPR_air_safety_aviation_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
+	SPR_all_weather_aviation_council = { # Anarchist
+		name=SPR_all_weather_aviation_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
 	SPR_luis_gonzalez_de_ubieta = { # Democratic
 		instance = {
 			allowed = {
@@ -2346,6 +2491,33 @@ characters={
 				ai_will_do = {
 					factor = 1.000
 				}
+			}
+		}
+	}
+
+	SPR_joakin_egia_unzueta = { # POUM
+		name=SPR_joakin_egia_unzueta
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_1"
+			}
+		}
+	}
+
+	SPR_commerce_raiding_naval_council = { # Anarchist
+		name=SPR_commerce_raiding_naval_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
+	SPR_reform_naval_council = { # Anarchist
+		name=SPR_reform_naval_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
 			}
 		}
 	}
@@ -2503,6 +2675,26 @@ characters={
 		}
 	}
 
+	SPR_jose_rovira = { # POUM
+		name=SPR_jose_rovira
+		portraits={
+			army={
+				small=GFX_portrait_SPR_jose_rovira_small
+				large = GFX_portrait_SPR_jose_rovira
+			}
+		}
+	}
+
+
+	SPR_carmel_rosa_baserba = { # POUM
+		name=SPR_carmel_rosa_baserba
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_4"
+			}
+		}
+	}
+
 	SPR_wilhelm_zaisser = { # Stalinist
 		name=SPR_wilhelm_zaisser
 		portraits={
@@ -2545,6 +2737,69 @@ characters={
 		}
 	}
 
+	SPR_infantry_military_council = { # Anarchist
+		name=SPR_infantry_military_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
+	SPR_army_regrouping_military_council = { # Anarchist
+		name=SPR_army_regrouping_military_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
+	SPR_concealment_military_council = { # Anarchist
+		name=SPR_concealment_military_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
+	SPR_naval_strike_aviation_council = { # Anarchist
+		name=SPR_naval_strike_aviation_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
+	SPR_close_air_support_aviation_council = { # Anarchist
+		name=SPR_close_air_support_aviation_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
+	SPR_logistics_naval_council = { # Anarchist
+		name=SPR_logistics_naval_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
+	SPR_anti_submarine_naval_council = { # Anarchist
+		name=SPR_anti_submarine_naval_council
+		portraits={
+			army={
+				small="GFX_idea_SPR_anarchist_council"
+			}
+		}
+	}
+
 	SPR_augusto_barcia_trelles={
 		instance = {
 			allowed = {
@@ -2561,7 +2816,10 @@ characters={
 				idea_token = SPR_augusto_barcia_trelles
 				allowed = {
 					has_dlc = "La Resistance"
-					original_tag = SPR
+					OR = {
+						original_tag = SPR
+						original_tag = SWE
+					}
 				}
 				visible = {
 					NOT = {
@@ -2570,12 +2828,18 @@ characters={
 					}
 				}
 				available = {
-					custom_trigger_tooltip = {
-						tooltip = SPR_not_nationalist_spain_tt
-						NOT = {
-							tag = SPA 
-							tag = SPB 
+					OR = {
+						AND = {
+							custom_trigger_tooltip = {
+								tooltip = SPR_not_nationalist_spain_tt
+								NOT = {
+									tag = SPA 
+									tag = SPB 
+								}
+							}
 						}
+
+						SWE_refuge_for_revolutionaries_trigger = yes
 					}
 				}
 				traits = {
@@ -2586,7 +2850,7 @@ characters={
 					modifier = {
 						factor = 0.000
 						OR = {
-							has_completed_focus = SPA_a_great_spain
+							has_completed_focus = SPA_a_great_spain 
 						}
 					}
 				}
@@ -2792,7 +3056,7 @@ characters={
 				modifier = {
 					factor = 0.000
 					OR = {
-						has_completed_focus = SPA_a_great_spain
+						has_completed_focus = SPA_a_great_spain 
 					}
 				}
 				modifier = {
@@ -2932,7 +3196,7 @@ characters={
 					modifier = {
 						factor = 0.000
 						OR = {
-							has_completed_focus = SPA_a_great_spain
+							has_completed_focus = SPA_a_great_spain 
 						}
 					}
 				}
@@ -2981,7 +3245,10 @@ characters={
 			idea_token = SPR_federica_montseny
 			allowed = {
 				has_dlc = "La Resistance"
-				original_tag = SPR
+				OR = {
+					original_tag = SWE
+					original_tag = SPR
+				}
 			}
 			visible = {
 				NOT = {
@@ -2990,11 +3257,16 @@ characters={
 				}
 			}
 			available = {
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = {
-						tag = SPA 
+				OR = {
+					AND = {
+						custom_trigger_tooltip = {
+							tooltip = SPR_not_nationalist_spain_tt
+							NOT = {
+								tag = SPA 
+							}
+						}
 					}
+					SWE_refuge_for_revolutionaries_trigger = yes
 				}
 			}
 			traits = {
@@ -3011,6 +3283,25 @@ characters={
 				}
 			}
 		}
+	}
+
+	SPR_juan_andrade={
+		name=SPR_juan_andrade
+		portraits={
+			army={
+				small="GFX_idea_SPR_juan_andrade"
+			}
+		}
+	}
+
+	SPR_antonia_adroher_i_pascual={
+		name=SPR_antonia_adroher_i_pascual
+		portraits={
+			army={
+				small="GFX_idea_SPR_antonia_adroher_i_pascual"
+			}
+		}
+		gender = female
 	}
 
 	SPR_jesus_hernandez_tomas={
@@ -3063,7 +3354,7 @@ characters={
 		name=SPR_alexander_orlov
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_5"
+				small="GFX_idea_SPR_alexander_orlov"
 			}
 		}
 		advisor={
@@ -3095,12 +3386,9 @@ characters={
 				modifier = {
 					factor = 0.000
 					OR = {
-						has_completed_focus = SPA_a_great_spain
+						has_completed_focus = SPA_a_great_spain 
 						has_completed_focus = SPR_oppose_the_communists 
 					}
-				}
-				modifier = {
-					factor = 5.000
 				}
 			}
 		}
@@ -3142,7 +3430,7 @@ characters={
 				modifier = {
 					factor = 0.000
 					OR = {
-						has_completed_focus = SPA_a_great_spain
+						has_completed_focus = SPA_a_great_spain 
 					}
 				}
 			}
@@ -3262,7 +3550,10 @@ characters={
 			name = SPA_manuel_hedilla 
 			allowed = {
 				has_dlc = "La Resistance"
-				original_tag = SPR
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
 			}
 
 			visible = {
@@ -3335,7 +3626,10 @@ characters={
 			name = SPA_tomas_dominguez_arevalo 
 			allowed = {
 				has_dlc = "La Resistance"
-				original_tag = SPR
+				OR = {
+					original_tag = SPR
+					original_tag = CHL
+				}
 			}
 			visible = {
 				NOT = {
@@ -3344,8 +3638,6 @@ characters={
 				}
 			}
 			available = {
-				if = {
-				}
 				if = {
 					limit = {
 						has_completed_focus = SPA_unify_the_nationalist_front
@@ -3441,7 +3733,16 @@ characters={
 		name=SPA_martin_de_riquer
 		portraits={
 			army={
-				small="GFX_idea_generic_political_advisor_europe_2"
+				small="GFX_idea_SPA_martin_de_riquer"
+			}
+		}
+	}
+	
+	SPA_mauricio_de_sivatte={ #Carlist
+		name=SPA_mauricio_de_sivatte
+		portraits={
+			army={
+				small="GFX_idea_SPA_mauricio_de_sivatte"
 			}
 		}
 	}

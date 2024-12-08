@@ -8093,7 +8093,7 @@ focus_tree = {
 		cost = 5
 		available = {
 		}
-
+		allow_branch = { always = no }
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
@@ -8401,7 +8401,7 @@ focus_tree = {
 
 		prerequisite = { focus = GER_reorganize_the_wehrmacht focus = GER_heed_von_neuraths_concerns }
 
-		x = 7
+		x = 5
 		y = 1
 		relative_position_id = GER_heed_von_neuraths_concerns
 		cost = 10
@@ -9029,7 +9029,7 @@ focus_tree = {
 		alternate_icon = GFX_focus_ger_reichskommisariats_historical
 		prerequisite = { focus = GER_heed_von_neuraths_concerns focus = GER_reorganize_the_wehrmacht }
 
-		x = 17
+		x = 16
 		y = 1
 		relative_position_id = GER_heed_von_neuraths_concerns
 		cost = 5
@@ -11138,7 +11138,7 @@ focus_tree = {
 		prerequisite = { focus = GER_war_with_france }
 
 		x = 4
-		y = 2
+		y = 1
 		relative_position_id = GER_war_with_france
 		cost = 10
 
@@ -11336,8 +11336,7 @@ focus_tree = {
 
 		icon = GFX_focus_FIN_keepers_of_the_north
 
-		prerequisite = { focus = GER_operation_weserubung focus = GER_utilize_the_nordliche_gesellschaft }
-		allow_branch = { always = no } 
+		prerequisite = { focus = GER_operation_weserubung }
 		x = 0
 		y = 1
 		relative_position_id = GER_utilize_the_nordliche_gesellschaft
@@ -12918,7 +12917,7 @@ focus_tree = {
 
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
 		mutually_exclusive = { focus = GER_heed_von_neuraths_concerns }
-		x = 20
+		x = 17
 		y = 0
 		relative_position_id = GER_heed_von_neuraths_concerns
 		cost = 5
@@ -13019,7 +13018,7 @@ focus_tree = {
 
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
 
-		x = 2
+		x = 4
 		y = 0
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
@@ -13299,7 +13298,7 @@ focus_tree = {
 		prerequisite = { focus = GER_reorganize_the_wehrmacht focus = GER_heed_von_neuraths_concerns }
 
 		mutually_exclusive = { focus = GER_anti_soviet_pact }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
@@ -13633,103 +13632,30 @@ focus_tree = {
 		y = 2
 		relative_position_id = GER_war_with_the_ussr
 		cost = 10
-		available = {
+	    available = {
+			date > 1942.3.10
+			date < 1942.10.10
+			SOV = { controls_state = 242 }
+			SOV = { controls_state = 221 }
+			SOV = { controls_state = 227 }
+			SOV = { controls_state = 808 }
+			SOV = { controls_state = 224 }
 		}
 
 		ai_will_do = {
 			factor = 5
 		}
 
-		will_lead_to_war_with = SOV
-
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			custom_effect_tooltip = GER_war_against_communism_tt
-			every_other_country = {
-				limit = {
-					#capital_scope = { is_on_continent = europe } #Intentionally made so that it grants wargoal against any commie in the world (not just Europe)
-					has_government = communism
-					NOT = { 
-						ROOT = {
-							has_wargoal_against = PREV
-						}
-					}
-				}
-				hidden_effect = { #Tooltip is bad so better to just hide it and show the countries via the every_other_country scope
-					ROOT = {
-						create_wargoal = {
-							type = annex_everything
-							target = PREV
-						}
-					}
-				}
-			}
-
-			#This is important stuff (Someone leaving faction) so show it when appropriate
-			if = {
-				limit = {
-					any_allied_country = {
-						has_government = communism
-					}
-				}
-				if = {
-					limit = {
-						is_faction_leader = yes
-					}
-					every_other_country = {
-						limit = {
-							is_in_faction_with = ROOT
-							has_government = communism
-						}
-						ROOT = { remove_from_faction = PREV }
-					}
-				}
-				else = {
-					ROOT = { leave_faction = yes }
-				}
-			}
-
-			#Not so important so just hide it, it should be logic that any diplo relations are terminated
-			hidden_effect = {
-				every_other_country = {
-					limit = {
-						OR = {
-							is_guaranteed_by = ROOT
-							has_non_aggression_pact_with = ROOT
-						}
-						has_government = communism
-					}
-					
-					if = {
-						limit = {
-							ROOT = {
-								has_guaranteed = PREV
-							}
-						}
-						ROOT = {
-							diplomatic_relation = {
-								country = PREV
-								relation = guarantee
-								active = no
-							}
-						}
-					}
-
-					if = {
-						limit = {
-							has_non_aggression_pact_with = ROOT
-						}
-						ROOT = {
-							diplomatic_relation = {
-								country = PREV
-								relation = non_aggression_pact
-								active = no
-							}
-						}
-					}
-				}
-			}
+			add_timed_idea = { idea = fall_blau days = 180 }
+			ITA = {add_timed_idea = { idea = fall_blau days = 180 }}
+			ROM = {add_timed_idea = { idea = fall_blau days = 180 }}
+			HUN = {add_timed_idea = { idea = fall_blau days = 180 }}
+			SPR = {add_timed_idea = { idea = fall_blau days = 180 }}
+			FIN = {add_timed_idea = { idea = fall_blau days = 180 }}
+			BUL = {add_timed_idea = { idea = fall_blau days = 180 }}
 		}
 	}
 

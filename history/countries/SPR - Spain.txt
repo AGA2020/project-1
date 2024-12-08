@@ -183,7 +183,6 @@ if = {
 	recruit_character = SPA_ricardo_rada
 	recruit_character = SPR_nicolas_molero
 	recruit_character = SPR_felipe_diaz_sandino
-	recruit_character = SPR_andres_nin
 	recruit_character = SPR_council_of_theorists
 	recruit_character = SPR_domenec_batet
 	recruit_character = SPR_etelvino_vega

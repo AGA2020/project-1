@@ -39,25 +39,25 @@ country_event = {
 		news_event = { id = dfu_news.10 hours = 1 }
 	}
 }
-country_event = {
-	id = aga.998
-	title = aga.998.t
-	desc = aga.998.d
-	picture = GFX_report_event_generic_read_write
-	
-	trigger = {
-		tag = WST
-		GER = { surrender_progress > 0.4 }
-		NOT = { 64 = { is_controlled_by = GER } }
-	}
-
-	fire_only_once = yes 
-
-	option = {
-		name = aga.998.a
-		news_event = { id = aga.2 hours = 1 }
-	}
-}
+#country_event = {
+#	id = aga.998
+#	title = aga.998.t
+#	desc = aga.998.d
+#	picture = GFX_report_event_generic_read_write
+#	
+#	trigger = {
+#		tag = WST
+#		GER = { surrender_progress > 0.4 }
+#		NOT = { 64 = { is_controlled_by = GER } }
+#	}
+#
+#	fire_only_once = yes 
+#
+#	option = {
+#		name = aga.998.a
+#		news_event = { id = aga.2 hours = 1 }
+#	}
+#}
 country_event = {
 	id = aga.244
 	title = aga.244.t

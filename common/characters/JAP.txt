@@ -251,7 +251,7 @@ characters={
 		}
 		corps_commander={
 			traits = { organizer infantry_leader trait_engineer infantry_expert naval_invader commando trickster trait_mountaineer jungle_rat }
-			skill=7
+			skill=8
 			attack_skill=5
 			defense_skill=2
 			planning_skill=3

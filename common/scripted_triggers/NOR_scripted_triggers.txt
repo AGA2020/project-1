@@ -132,22 +132,6 @@ NOR_broken_gun_trigger = {
 	}
 }
 
-NOR_kings_no_allow_trigger = {
-	if = {
-		limit = {
-			has_mtg = yes
-		}
-		if = {
-			limit = {
-				has_hide_rule = yes 
-			}
-		}
-	}
-	else = {
-		always = no 
-	}
-}
-
 NOR_is_only_core_denmark = {
 	original_tag = DEN 
 	owns_state = 912
