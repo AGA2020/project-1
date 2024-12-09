@@ -221,6 +221,7 @@ on_actions = {
 						NOT = {
 							original_tag = SPR
 							original_tag = FIN
+							original_tag = ARG
 						}
 					}
 				}
