@@ -1061,6 +1061,7 @@ operations = {
                 BRA = { has_tech = improved_small_airframe }
                 MEX = { has_tech = improved_small_airframe } 
                 NZL = { has_tech = improved_small_airframe }
+                AST = { has_tech = improved_small_airframe }
             }                  
         }
         complete_effect = {
@@ -1151,6 +1152,7 @@ operations = {
                         BRA = { has_tech = advanced_small_airframe }
                         MEX = { has_tech = advanced_small_airframe } 
                         NZL = { has_tech = advanced_small_airframe }
+                        AST = { has_tech = advanced_small_airframe }
                     }
                 }
                 create_equipment_variant = {

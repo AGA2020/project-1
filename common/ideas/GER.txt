@@ -972,7 +972,7 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-
+			cancel = { has_idea = fall_blau }
 			removal_cost = -1
 
 			picture = generic_acquire_tanks

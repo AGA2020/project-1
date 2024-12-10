@@ -164,6 +164,20 @@ on_actions = {
 				}
 			}
 		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = FIN } 
+				}
+				FIN = {
+					add_to_war = {
+					    targeted_alliance = GER
+					    enemy = ENG
+					    hostility_reason = asked_to_join
+					}
+				}
+			}
+		}
 
 	}	
 	on_naval_invasion = { 
