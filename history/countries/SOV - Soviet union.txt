@@ -880,6 +880,18 @@ diplomatic_relation = {
 	active = yes
 }
 
+diplomatic_relation = {
+	country = ROM
+	relation = embargo
+	active = yes
+}
+
+diplomatic_relation = {
+	country = JAP
+	relation = embargo
+	active = yes
+}
+
 1939.1.1 = {
 }
 
