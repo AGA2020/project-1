@@ -1,4 +1,7 @@
 ﻿l_english:
+  Caliph_aga:0 "Caliph"
+  SOV_the_allies:0 "Red Alarm"
+    SOV_the_allies_desc:0 "With the fall of the British Empire, the Soviet Union, once secure in its position, now faces the growing threat of a resurgent Axis. The collapse of the United Kingdom leaves a vacuum of power that the Germans are eager to exploit, and the USSR must prepare for the looming dangers. As the world darkens, the red flag of communism is under siege, and the Soviet Union must brace for the worst."
     fall_blau:0 "Operation Fall Blau"
     fall_blau_desc:0 "We failed to capture our objectives of the last year, however we have not yet lost the innitiative on the Eastern front. The majority of the Soviet forces are situated in and around Moscow and along our central front. We have the option to strike south and capture the vital baku oil fields, along with the City of Stalins name, which would be a striking blow to the Bolsheviks."
   ENG_secure_norway:0 "Securing Norway's Allegiance"

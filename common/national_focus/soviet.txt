@@ -8278,7 +8278,29 @@ focus_tree = {
 ##       ##     ## ##    ##  ##        ##  ##    ##  ##   ###    ##    ## ##     ## ##     ## ##     ##  ##  ##       
 ##        #######  ##     ## ######## ####  ######   ##    ##     ######   #######  ##     ## ##     ## #### ######## 
 
-
+	focus = {
+		id = SOV_the_allies
+		
+		x = -2
+		y = 1
+		cost = 0
+		
+		available_if_capitulated = yes
+		icon = GFX_focus_SOV_the_last_purge
+		
+		prerequisite = { focus = SOV_anti_fascist_policies }
+		relative_position_id = SOV_anti_fascist_policies
+	
+		available = {
+			ENG = { 
+				has_capitulated = yes
+			}
+		}
+		
+		completion_reward = {
+			add_country_leader_trait = GER_sword_of_islam_trait
+		}
+	}
 
 	focus = {
 		id = SOV_the_comintern
