@@ -105,6 +105,25 @@ characters={
 		}
 	}
 
+	SAF_william_poole={
+		name="William Poole"
+		portraits={
+			army={
+				large="gfx/leaders/SAF/r56_portrait_SAF_William_Poole.dds"
+				small="GFX_idea_ENG_generic_land_6"
+			}
+		}
+		field_marshal={
+			traits = { panzer_leader trickster trait_engineer  }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id=-1
+		}
+	}
+
 	SAF_guy_hallifax={
 		name=SAF_guy_hallifax
 		portraits={
