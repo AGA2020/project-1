@@ -4868,49 +4868,6 @@ country_event = {
 	}
 }
 
-# Karelian Rebellion in the Soviet Civil War - Event for FIN
-country_event = {
-	id = AAT_finland_kinship_war.06
-	title = AAT_finland_kinship_war.06.t
-	desc = AAT_finland_kinship_war.06.desc
-	picture = GFX_report_event_FIN_heimosodat_volunteers
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	# We should support them
-	option = {
-		name = AAT_finland_kinship_war.06.a
-
-		add_stability = -0.1
-
-		add_manpower = -1000
-
-
-
-		hidden_effect = {
-			ROOT = {
-				set_rule = { can_send_volunteers = yes }
-				add_timed_idea = {
-					idea = ETH_aid_SPC
-					days = 730
-				}
-
-			}
-		}	
-		
-	}
-
-	# We shouldn't risk anything
-	option = {
-		name = AAT_finland_kinship_war.06.b
-
-		add_political_power = 30
-		
-	}
-}
-
 
 ##      ## ##     ## #### ######## ########    ########  ########    ###    ######## ##     ## 
 ##  ##  ## ##     ##  ##     ##    ##          ##     ## ##         ## ##      ##    ##     ## 

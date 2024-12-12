@@ -40,18 +40,6 @@ shared_focus = {
 		}
 	}
 
-	offset = {
-		x = -15
-		y = 0
-		trigger = {
-			has_game_rule = {
-				rule = obsolete_focus_branches_visibility
-				option = HIDE
-			}
-			has_completed_focus = BRA_end_the_state_of_emergency
-		}	
-	}
-
 	cost = 5
 
 	available = {
