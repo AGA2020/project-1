@@ -1,4 +1,487 @@
 operations = {
+   ger_weak_sperm_wantsmech = {
+        icon = GFX_decision_generic_industry
+        fire_only_once = yes
+
+        allowed = {
+            tag = GER
+        }
+        available = {
+        }
+        visible = {
+            original_tag = GER
+            SPR = { is_ai = yes }
+            BUL = { is_ai = no }
+        }
+        complete_effect = {
+            set_global_flag = GER_weak_sperm
+        }
+    }
+   mech_delivery_SPR_part1 = { # 1 august 1938
+        icon = GFX_decision_generic_industry
+        #fire_only_once = yes
+
+        allowed = {
+            tag = GER
+        }
+        available = {
+            hidden_trigger = {
+                always = no
+            }
+        }
+        visible = {
+            original_tag = GER
+            SPR = { is_ai = yes }
+        }
+        days_mission_timeout = 948
+        timeout_effect = {
+            set_country_flag = spainmechpart1
+            if = { 
+                limit = {
+                    AND = {
+                        NOT = { has_global_flag = GER_weak_sperm } 
+                        BUL = { is_ai = no }
+                    }
+                } 
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 549 producer = SWE } 
+            } 
+            else = { 
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 549 producer = SWE } 
+            }  
+        }
+    }
+    mech_delivery_SPR_part2 = { # 15 january 1939
+            # icon = generic_operation
+            name = mech_delivery_SPR_part1
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            ai_will_do = {
+                factor = 0
+            }
+            activation = {
+            has_country_flag = spainmechpart1
+            }
+            available = {
+                hidden_trigger = {
+                    always = no
+                }
+            }
+            days_mission_timeout = 163
+            timeout_effect = {
+                set_country_flag = spainmechpart2
+                if = { 
+                    limit = {
+                        AND = {
+                            NOT = { has_global_flag = GER_weak_sperm } 
+                            BUL = { is_ai = no }
+                        }
+                    } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 963 producer = SWE } 
+                } 
+                else = { 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 963 producer = SWE } 
+                }  
+            }
+            complete_effect = {
+            }
+        }
+    mech_delivery_SPR_part3 = { # 6 july 1939
+            # icon = generic_operation
+            name = mech_delivery_SPR_part1
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            ai_will_do = {
+                factor = 0
+            }
+            activation = {
+            has_country_flag = spainmechpart2
+            }
+            available = {
+                hidden_trigger = {
+                    always = no
+                }
+            }
+            days_mission_timeout = 172
+            timeout_effect = {
+                set_country_flag = spainmechpart3
+                if = { 
+                    limit = {
+                        AND = {
+                            NOT = { has_global_flag = GER_weak_sperm } 
+                            BUL = { is_ai = no }
+                        }
+                    } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2843 producer = SWE } 
+                } 
+                else = { 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2843 producer = SWE } 
+                }  
+            }
+            complete_effect = {
+            }
+        }
+    mech_delivery_SPR_part4 = { # 23 january 1940
+            # icon = generic_operation
+            name = mech_delivery_SPR_part1
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            ai_will_do = {
+                factor = 0
+            }
+            activation = {
+            has_country_flag = spainmechpart3
+            }
+            available = {
+                hidden_trigger = {
+                    always = no
+                }
+            }
+            days_mission_timeout = 201
+            timeout_effect = {
+                set_country_flag = spainmechpart4
+                if = { 
+                    limit = {
+                        AND = {
+                            NOT = { has_global_flag = GER_weak_sperm } 
+                            BUL = { is_ai = no }
+                        }
+                    } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5778 producer = SWE } 
+                } 
+                else = { 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5778 producer = SWE } 
+                }  
+            }
+            complete_effect = {
+            }
+        }
+    mech_delivery_SPR_part5 = { # 21 june 1940
+            # icon = generic_operation
+            name = mech_delivery_SPR_part1
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            ai_will_do = {
+                factor = 0
+            }
+            activation = {
+            has_country_flag = spainmechpart4
+            }
+            available = {
+                hidden_trigger = {
+                    always = no
+                }
+            }
+            days_mission_timeout = 150
+            timeout_effect = {
+                set_country_flag = spainmechpart5
+                if = { 
+                    limit = {
+                        AND = {
+                            NOT = { has_global_flag = GER_weak_sperm } 
+                            BUL = { is_ai = no }
+                        }
+                    } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5911 producer = SWE } 
+                } 
+                else = { 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5911 producer = SWE } 
+                }  
+            }
+            complete_effect = {
+            }
+        }
+    mech_delivery_SPR_part6 = { # 18 january 1941
+            # icon = generic_operation
+            name = mech_delivery_SPR_part1
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            ai_will_do = {
+                factor = 0
+            }
+            activation = {
+            has_country_flag = spainmechpart5
+            }
+            available = {
+                hidden_trigger = {
+                    always = no
+                }
+            }
+            days_mission_timeout = 211
+            timeout_effect = {
+                set_country_flag = spainmechpart6
+                if = { 
+                    limit = {
+                        AND = {
+                            NOT = { has_global_flag = GER_weak_sperm } 
+                            BUL = { is_ai = no }
+                        }
+                    } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13764 producer = SWE } 
+                } 
+                else = { 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13764 producer = SWE } 
+                }  
+            }
+            complete_effect = {
+            }
+        }
+    mech_delivery_SPR_part7 = { # 19 june 1941
+            # icon = generic_operation
+            name = mech_delivery_SPR_part1
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            ai_will_do = {
+                factor = 0
+            }
+            activation = {
+            has_country_flag = spainmechpart6
+            }
+            available = {
+                hidden_trigger = {
+                    always = no
+                }
+            }
+            days_mission_timeout = 152
+            timeout_effect = {
+                set_country_flag = spainmechpart7
+                if = { 
+                    limit = {
+                        AND = {
+                            NOT = { has_global_flag = GER_weak_sperm } 
+                            BUL = { is_ai = no }
+                        }
+                    } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13936 producer = SWE } 
+                } 
+                else = { 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13936 producer = SWE } 
+                }  
+            }
+            complete_effect = {
+            }
+        }
+    mech_delivery_SPR_part8 = { # 28 december 1941
+            # icon = generic_operation
+            name = mech_delivery_SPR_part1
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            ai_will_do = {
+                factor = 0
+            }
+            activation = {
+            has_country_flag = spainmechpart7
+            }
+            available = {
+                hidden_trigger = {
+                    always = no
+                }
+            }
+            days_mission_timeout = 192
+            timeout_effect = {
+                set_country_flag = spainmechpart8
+                if = { 
+                    limit = {
+                        AND = {
+                            NOT = { has_global_flag = GER_weak_sperm } 
+                            BUL = { is_ai = no }
+                        }
+                    } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20584 producer = SWE } 
+                } 
+                else = { 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20584 producer = SWE } 
+                }  
+            }
+            complete_effect = {
+            }
+        }
+    mech_delivery_SPR_part9 = { # 10 june 1942
+            # icon = generic_operation
+            name = mech_delivery_SPR_part1
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            ai_will_do = {
+                factor = 0
+            }
+            activation = {
+            has_country_flag = spainmechpart8
+            }
+            available = {
+                hidden_trigger = {
+                    always = no
+                }
+            }
+            days_mission_timeout = 164
+            timeout_effect = {
+                set_country_flag = spainmechpart9
+                if = { 
+                    limit = {
+                        AND = {
+                            NOT = { has_global_flag = GER_weak_sperm } 
+                            BUL = { is_ai = no }
+                        }
+                    } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20000 producer = SWE } 
+                } 
+                else = { 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20000 producer = SWE } 
+                }  
+            }
+            complete_effect = {
+            }
+        }
+    mech_delivery_SPR_part10 = { # 10 october 1942
+            # icon = generic_operation
+            name = mech_delivery_SPR_part1
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            ai_will_do = {
+                factor = 0
+            }
+            activation = {
+            has_country_flag = spainmechpart9
+            }
+            available = {
+                hidden_trigger = {
+                    always = no
+                }
+            }
+            days_mission_timeout = 122
+            timeout_effect = {
+                set_country_flag = spainmechpart10
+                if = { 
+                    limit = {
+                        AND = {
+                            NOT = { has_global_flag = GER_weak_sperm } 
+                            BUL = { is_ai = no }
+                        }
+                    } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13165 producer = SWE } 
+                } 
+                else = { 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13165 producer = SWE } 
+                }  
+            }
+            complete_effect = {
+            }
+        }
+    mech_delivery_SPR_part11 = { # 21 december 1942
+            # icon = generic_operation
+            name = mech_delivery_SPR_part1
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            ai_will_do = {
+                factor = 0
+            }
+            activation = {
+            has_country_flag = spainmechpart10
+            }
+            available = {
+                hidden_trigger = {
+                    always = no
+                }
+            }
+            days_mission_timeout = 72
+            timeout_effect = {
+                set_country_flag = spainmechpart11
+                if = { 
+                    limit = {
+                        AND = {
+                            NOT = { has_global_flag = GER_weak_sperm } 
+                            BUL = { is_ai = no }
+                        }
+                    } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 8553 producer = SWE } 
+                } 
+                else = { 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 8553 producer = SWE } 
+                }  
+            }
+            complete_effect = {
+            }
+        }
+    mech_delivery_SPR_part12 = { # 30 may 1943
+            # icon = generic_operation
+            name = mech_delivery_SPR_part1
+            allowed = {
+                tag = GER
+            }
+            fire_only_once = yes
+            ai_will_do = {
+                factor = 0
+            }
+            activation = {
+            has_country_flag = spainmechpart11
+            }
+            available = {
+                hidden_trigger = {
+                    always = no
+                }
+            }
+            days_mission_timeout = 160
+            timeout_effect = {
+                set_country_flag = spainmechpart12
+                if = { 
+                    limit = {
+                        AND = {
+                            NOT = { has_global_flag = GER_weak_sperm } 
+                            BUL = { is_ai = no }
+                        }
+                    } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 19586 producer = SWE } 
+                } 
+                else = { 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 19586 producer = SWE } 
+                }  
+            }
+            complete_effect = {
+            }
+        }
+    #usa_vanillaic1 = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = USA
+    #        }
+    #        fire_only_once = yes
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        activation = {
+ #
+    #        }
+    #        available = {
+    #            hidden_trigger = {
+    #                always = no
+    #            }
+    #        }
+    #        days_mission_timeout = 90
+    #        timeout_effect = {
+    #            USA = { add_offsite_building = { type = industrial_complex level = -2 } }
+    #            set_country_flag = usavanillaic1 
+    #        }
+    #        complete_effect = {
+    #        }
+    #    }
      annex_Irak = {
             # icon = generic_operation
             allowed = {
@@ -2485,141 +2968,141 @@ operations = {
                 43 = { add_compliance = 100 } 
             }
         }
-    annex_spain = {
-            # icon = generic_operation
-            allowed = {
-                tag = ITA
-            }
-            fire_only_once = yes
-            cost = 0
-            ai_will_do = {
-                factor = 0
-            }
-            available = {
-            OR = {
-            date>1938.6.1
-            has_global_flag = scw_over 
-            }
-                SPR = {
-                    is_ai = yes
-                }
-            }
-            visible = {
-                SPR = {
-                    is_ai = yes
-                }
-            }
-            targets = {
-                SPR
-            }
-            complete_effect = {
-            if = { limit = { NOT = { has_global_flag = scw_over } } SPR = { annex_country = { target = D01 transfer_troops = yes } } SPR = { annex_country = { target = D02 transfer_troops = yes } } SPR = { annex_country = { target = D03 transfer_troops = yes } } }
-                169 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 1048
-                        }
-                    }
-                } 
-                173 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 9979
-                        }
-                    }
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 12038
-                        }
-                    }
-                }
-                168 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 10024
-                        }
-                    }
-                } 
-                171 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 758
-                        }
-                    }
-                }
-                165 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 9764
-                        }
-                    }
-                } 
-                167 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 6906
-                        }
-                    }
-                }
-                set_global_flag = scw_over
-                WST = { transfer_state = 178 transfer_state = 699 transfer_state = 783 transfer_state = 290 transfer_state = 297 }
-                if = { limit = { NOT = { ITA = { has_completed_focus = ITA_demand_balearic_islands_bba } } } }    
-                WST = { if = { limit = { ITA = { NOT = { has_completed_focus = ITA_demand_balearic_islands_bba } } } transfer_state = 177 } }                
-                SPR = {
-                    transfer_units_fraction = {
-                        target = ITA
-                        size = 1
-                        stockpile_ratio = 1
-                        army_ratio = 0
-                        navy_ratio = 1
-                        air_ratio = 1
-                        keep_unit_leaders_trigger = {
-                            always = no
-                        }
-                    }
-                }
-                ITA = {
-                    annex_country = {
-                        target = SPR
-                        transfer_troops = no
-                    }
-                }
-                171 = { add_compliance = 100 }
-                790 = { add_compliance = 100 }
-                174 = { add_compliance = 100 }
-                792 = { add_compliance = 100 }
-                169 = { add_compliance = 100 }
-                168 = { add_compliance = 100 }
-                166 = { add_compliance = 100 } 
-                41 = { add_compliance = 100 }  
-                789 = { add_compliance = 100 }
-                173 = { add_compliance = 100 } 
-                167 = { add_compliance = 100 }
-                165 = { add_compliance = 100 } 
-                791 = { add_compliance = 100 }   
-                176 = { add_compliance = 100 } 
-                793 = { add_compliance = 100 } 
-                172 = { add_compliance = 100 } 
-                794 = { add_compliance = 100 }
-                170 = { add_compliance = 100 }
-                175 = { add_compliance = 100 } 
-                788 = { add_compliance = 100 }  
-            }
-        }
+    #annex_spain = {
+    #        # icon = generic_operation
+    #        allowed = {
+    #            tag = ITA
+    #        }
+    #        fire_only_once = yes
+    #        cost = 0
+    #        ai_will_do = {
+    #            factor = 0
+    #        }
+    #        available = {
+    #        OR = {
+    #        date>1938.6.1
+    #        has_global_flag = scw_over 
+    #        }
+    #            SPR = {
+    #                is_ai = yes
+    #            }
+    #        }
+    #        visible = {
+    #            SPR = {
+    #                is_ai = yes
+    #            }
+    #        }
+    #        targets = {
+    #            SPR
+    #        }
+    #        complete_effect = {
+    #        if = { limit = { NOT = { has_global_flag = scw_over } } SPR = { annex_country = { target = D01 transfer_troops = yes } } SPR = { #annex_country = { target = D02 transfer_troops = yes } } SPR = { annex_country = { target = D03 transfer_troops = yes } } }
+    #            169 = {
+    #                set_building_level = {
+    #                    type = naval_base
+    #                    level = 0
+    #                    province = {
+    #                        id = 1048
+    #                    }
+    #                }
+    #            } 
+    #            173 = {
+    #                set_building_level = {
+    #                    type = naval_base
+    #                    level = 0
+    #                    province = {
+    #                        id = 9979
+    #                    }
+    #                }
+    #                set_building_level = {
+    #                    type = naval_base
+    #                    level = 0
+    #                    province = {
+    #                        id = 12038
+    #                    }
+    #                }
+    #            }
+    #            168 = {
+    #                set_building_level = {
+    #                    type = naval_base
+    #                    level = 0
+    #                    province = {
+    #                        id = 10024
+    #                    }
+    #                }
+    #            } 
+    #            171 = {
+    #                set_building_level = {
+    #                    type = naval_base
+    #                    level = 0
+    #                    province = {
+    #                        id = 758
+    #                    }
+    #                }
+    #            }
+    #            165 = {
+    #                set_building_level = {
+    #                    type = naval_base
+    #                    level = 0
+    #                    province = {
+    #                        id = 9764
+    #                    }
+    #                }
+    #            } 
+    #            167 = {
+    #                set_building_level = {
+    #                    type = naval_base
+    #                    level = 0
+    #                    province = {
+    #                        id = 6906
+    #                    }
+    #                }
+    #            }
+    #            set_global_flag = scw_over
+    #            WST = { transfer_state = 178 transfer_state = 699 transfer_state = 783 transfer_state = 290 transfer_state = 297 }
+    #            if = { limit = { NOT = { ITA = { has_completed_focus = ITA_demand_balearic_islands_bba } } } }    
+    #            WST = { if = { limit = { ITA = { NOT = { has_completed_focus = ITA_demand_balearic_islands_bba } } } transfer_state = 177 } #}                
+    #            SPR = {
+    #                transfer_units_fraction = {
+    #                    target = ITA
+    #                    size = 1
+    #                    stockpile_ratio = 1
+    #                    army_ratio = 0
+    #                    navy_ratio = 1
+    #                    air_ratio = 1
+    #                    keep_unit_leaders_trigger = {
+    #                        always = no
+    #                    }
+    #                }
+    #            }
+    #            ITA = {
+    #                annex_country = {
+    #                    target = SPR
+    #                    transfer_troops = no
+    #                }
+    #            }
+    #            171 = { add_compliance = 100 }
+    #            790 = { add_compliance = 100 }
+    #            174 = { add_compliance = 100 }
+    #            792 = { add_compliance = 100 }
+    #            169 = { add_compliance = 100 }
+    #            168 = { add_compliance = 100 }
+    #            166 = { add_compliance = 100 } 
+    #            41 = { add_compliance = 100 }  
+    #            789 = { add_compliance = 100 }
+    #            173 = { add_compliance = 100 } 
+    #            167 = { add_compliance = 100 }
+    #            165 = { add_compliance = 100 } 
+    #            791 = { add_compliance = 100 }   
+    #            176 = { add_compliance = 100 } 
+    #            793 = { add_compliance = 100 } 
+    #            172 = { add_compliance = 100 } 
+    #            794 = { add_compliance = 100 }
+    #            170 = { add_compliance = 100 }
+    #            175 = { add_compliance = 100 } 
+    #            788 = { add_compliance = 100 }  
+    #        }
+    #    }
     annex_romania = {
             # icon = generic_operation
             allowed = {
