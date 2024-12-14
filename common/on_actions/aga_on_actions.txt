@@ -213,5 +213,16 @@ on_actions = {
                 } 
 			}
 		}
+		effect = {
+			if = { 
+				limit = { tag = HUN } 
+                every_state = {
+                    limit = {
+                        is_controlled_by = HUN
+                    }
+                    add_compliance = 100
+                } 
+			}
+		}
 	}	
 }
