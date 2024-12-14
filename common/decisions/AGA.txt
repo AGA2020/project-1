@@ -33,6 +33,15 @@ operations = {
             original_tag = GER
             SPR = { is_ai = yes }
         }
+        cancel_trigger = {
+            OR = {
+                GER = { controls_state = 41 }
+                any_other_country = {
+                    is_in_faction_with = GER
+                    controls_state = 41
+                }
+            }
+        }
         days_mission_timeout = 948
         timeout_effect = {
             set_country_flag = spainmechpart1
@@ -66,6 +75,15 @@ operations = {
             available = {
                 hidden_trigger = {
                     always = no
+                }
+            }
+            cancel_trigger = {
+                OR = {
+                    GER = { controls_state = 41 }
+                    any_other_country = {
+                        is_in_faction_with = GER
+                        controls_state = 41
+                    }
                 }
             }
             days_mission_timeout = 163
@@ -105,6 +123,15 @@ operations = {
                     always = no
                 }
             }
+            cancel_trigger = {
+                OR = {
+                    GER = { controls_state = 41 }
+                    any_other_country = {
+                        is_in_faction_with = GER
+                        controls_state = 41
+                    }
+                }
+            }
             days_mission_timeout = 172
             timeout_effect = {
                 set_country_flag = spainmechpart3
@@ -140,6 +167,15 @@ operations = {
             available = {
                 hidden_trigger = {
                     always = no
+                }
+            }
+            cancel_trigger = {
+                OR = {
+                    GER = { controls_state = 41 }
+                    any_other_country = {
+                        is_in_faction_with = GER
+                        controls_state = 41
+                    }
                 }
             }
             days_mission_timeout = 201
@@ -179,6 +215,15 @@ operations = {
                     always = no
                 }
             }
+            cancel_trigger = {
+                OR = {
+                    GER = { controls_state = 41 }
+                    any_other_country = {
+                        is_in_faction_with = GER
+                        controls_state = 41
+                    }
+                }
+            }
             days_mission_timeout = 150
             timeout_effect = {
                 set_country_flag = spainmechpart5
@@ -214,6 +259,15 @@ operations = {
             available = {
                 hidden_trigger = {
                     always = no
+                }
+            }
+            cancel_trigger = {
+                OR = {
+                    GER = { controls_state = 41 }
+                    any_other_country = {
+                        is_in_faction_with = GER
+                        controls_state = 41
+                    }
                 }
             }
             days_mission_timeout = 211
@@ -253,6 +307,15 @@ operations = {
                     always = no
                 }
             }
+            cancel_trigger = {
+                OR = {
+                    GER = { controls_state = 41 }
+                    any_other_country = {
+                        is_in_faction_with = GER
+                        controls_state = 41
+                    }
+                }
+            }
             days_mission_timeout = 152
             timeout_effect = {
                 set_country_flag = spainmechpart7
@@ -288,6 +351,15 @@ operations = {
             available = {
                 hidden_trigger = {
                     always = no
+                }
+            }
+            cancel_trigger = {
+                OR = {
+                    GER = { controls_state = 41 }
+                    any_other_country = {
+                        is_in_faction_with = GER
+                        controls_state = 41
+                    }
                 }
             }
             days_mission_timeout = 192
@@ -327,6 +399,15 @@ operations = {
                     always = no
                 }
             }
+            cancel_trigger = {
+                OR = {
+                    GER = { controls_state = 41 }
+                    any_other_country = {
+                        is_in_faction_with = GER
+                        controls_state = 41
+                    }
+                }
+            }
             days_mission_timeout = 164
             timeout_effect = {
                 set_country_flag = spainmechpart9
@@ -362,6 +443,15 @@ operations = {
             available = {
                 hidden_trigger = {
                     always = no
+                }
+            }
+            cancel_trigger = {
+                OR = {
+                    GER = { controls_state = 41 }
+                    any_other_country = {
+                        is_in_faction_with = GER
+                        controls_state = 41
+                    }
                 }
             }
             days_mission_timeout = 122
@@ -401,6 +491,15 @@ operations = {
                     always = no
                 }
             }
+            cancel_trigger = {
+                OR = {
+                    GER = { controls_state = 41 }
+                    any_other_country = {
+                        is_in_faction_with = GER
+                        controls_state = 41
+                    }
+                }
+            }
             days_mission_timeout = 72
             timeout_effect = {
                 set_country_flag = spainmechpart11
@@ -436,6 +535,15 @@ operations = {
             available = {
                 hidden_trigger = {
                     always = no
+                }
+            }
+            cancel_trigger = {
+                OR = {
+                    GER = { controls_state = 41 }
+                    any_other_country = {
+                        is_in_faction_with = GER
+                        controls_state = 41
+                    }
                 }
             }
             days_mission_timeout = 160
