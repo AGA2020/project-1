@@ -19,7 +19,7 @@ operations = {
     }
    mech_delivery_SPR_part1 = { # 1 august 1938
         icon = GFX_decision_generic_industry
-        #fire_only_once = yes
+        fire_only_once = yes
 
         allowed = {
             tag = GER
@@ -51,7 +51,7 @@ operations = {
         }
     }
     mech_delivery_SPR_part2 = { # 15 january 1939
-            # icon = generic_operation
+        icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
                 tag = GER
@@ -88,7 +88,7 @@ operations = {
             }
         }
     mech_delivery_SPR_part3 = { # 6 july 1939
-            # icon = generic_operation
+        icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
                 tag = GER
@@ -125,7 +125,7 @@ operations = {
             }
         }
     mech_delivery_SPR_part4 = { # 23 january 1940
-            # icon = generic_operation
+        icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
                 tag = GER
@@ -162,7 +162,7 @@ operations = {
             }
         }
     mech_delivery_SPR_part5 = { # 21 june 1940
-            # icon = generic_operation
+        icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
                 tag = GER
@@ -199,7 +199,7 @@ operations = {
             }
         }
     mech_delivery_SPR_part6 = { # 18 january 1941
-            # icon = generic_operation
+        icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
                 tag = GER
@@ -236,7 +236,7 @@ operations = {
             }
         }
     mech_delivery_SPR_part7 = { # 19 june 1941
-            # icon = generic_operation
+        icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
                 tag = GER
@@ -273,7 +273,7 @@ operations = {
             }
         }
     mech_delivery_SPR_part8 = { # 28 december 1941
-            # icon = generic_operation
+        icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
                 tag = GER
@@ -310,7 +310,7 @@ operations = {
             }
         }
     mech_delivery_SPR_part9 = { # 10 june 1942
-            # icon = generic_operation
+        icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
                 tag = GER
@@ -347,7 +347,7 @@ operations = {
             }
         }
     mech_delivery_SPR_part10 = { # 10 october 1942
-            # icon = generic_operation
+        icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
                 tag = GER
@@ -384,7 +384,7 @@ operations = {
             }
         }
     mech_delivery_SPR_part11 = { # 21 december 1942
-            # icon = generic_operation
+        icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
                 tag = GER
@@ -421,7 +421,7 @@ operations = {
             }
         }
     mech_delivery_SPR_part12 = { # 30 may 1943
-            # icon = generic_operation
+        icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
                 tag = GER
