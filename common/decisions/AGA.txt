@@ -43,10 +43,10 @@ operations = {
                         BUL = { is_ai = no }
                     }
                 } 
-                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 549 producer = SWE } 
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 549 producer = SWE } }
             } 
             else = { 
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 549 producer = SWE } 
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 549 producer = SWE } }
             }  
         }
     }
@@ -78,10 +78,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 963 producer = SWE } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 963 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 963 producer = SWE } 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 963 producer = SWE } }
                 }  
             }
             complete_effect = {
@@ -115,10 +115,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2843 producer = SWE } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2843 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2843 producer = SWE } 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2843 producer = SWE } }
                 }  
             }
             complete_effect = {
@@ -152,10 +152,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5778 producer = SWE } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5778 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5778 producer = SWE } 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5778 producer = SWE } }
                 }  
             }
             complete_effect = {
@@ -189,10 +189,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5911 producer = SWE } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5911 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5911 producer = SWE } 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5911 producer = SWE } }
                 }  
             }
             complete_effect = {
@@ -226,10 +226,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13764 producer = SWE } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13764 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13764 producer = SWE } 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13764 producer = SWE } }
                 }  
             }
             complete_effect = {
@@ -263,10 +263,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13936 producer = SWE } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13936 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13936 producer = SWE } 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13936 producer = SWE } }
                 }  
             }
             complete_effect = {
@@ -300,10 +300,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20584 producer = SWE } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20584 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20584 producer = SWE } 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20584 producer = SWE } }
                 }  
             }
             complete_effect = {
@@ -337,10 +337,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20000 producer = SWE } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20000 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20000 producer = SWE } 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20000 producer = SWE } }
                 }  
             }
             complete_effect = {
@@ -374,10 +374,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13165 producer = SWE } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13165 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13165 producer = SWE } 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13165 producer = SWE } }
                 }  
             }
             complete_effect = {
@@ -411,10 +411,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 8553 producer = SWE } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 8553 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 8553 producer = SWE } 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 8553 producer = SWE } }
                 }  
             }
             complete_effect = {
@@ -448,10 +448,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 19586 producer = SWE } 
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 19586 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 19586 producer = SWE } 
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 19586 producer = SWE } }
                 }  
             }
             complete_effect = {
