@@ -1,7 +1,6 @@
 operations = {
    ger_weak_sperm_wantsmech = {
         icon = GFX_decision_generic_industry
-        fire_only_once = yes
 
         allowed = {
             tag = GER
@@ -12,9 +11,28 @@ operations = {
             original_tag = GER
             SPR = { is_ai = yes }
             BUL = { is_ai = no }
+            NOT = { has_global_flag = GER_weak_sperm }
         }
         complete_effect = {
             set_global_flag = GER_weak_sperm
+        }
+    }
+   ger_strong_sperm= {
+        icon = GFX_decision_generic_industry
+
+        allowed = {
+            tag = GER
+        }
+        available = {
+        }
+        visible = {
+            original_tag = GER
+            SPR = { is_ai = yes }
+            BUL = { is_ai = no }
+            has_global_flag = GER_weak_sperm
+        }
+        complete_effect = {
+            clr_global_flag = GER_weak_sperm
         }
     }
    mech_delivery_SPR_part1 = { # 1 august 1938
