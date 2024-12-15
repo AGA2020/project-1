@@ -49,10 +49,10 @@ operations = {
         }
         visible = {
             original_tag = GER
-            SPR = { is_ai = yes }
         }
         cancel_trigger = {
             OR = {
+                SPR = { is_ai = no }
                 GER = { controls_state = 41 }
                 any_other_country = {
                     is_in_faction_with = GER
@@ -95,12 +95,9 @@ operations = {
                     always = no
                 }
             }
-            visible = {
-                original_tag = GER
-                SPR = { is_ai = yes }
-            }
             cancel_trigger = {
                 OR = {
+                    SPR = { is_ai = no }
                     GER = { controls_state = 41 }
                     any_other_country = {
                         is_in_faction_with = GER
@@ -145,12 +142,9 @@ operations = {
                     always = no
                 }
             }
-            visible = {
-                original_tag = GER
-                SPR = { is_ai = yes }
-            }
             cancel_trigger = {
                 OR = {
+                    SPR = { is_ai = no }
                     GER = { controls_state = 41 }
                     any_other_country = {
                         is_in_faction_with = GER
@@ -195,12 +189,9 @@ operations = {
                     always = no
                 }
             }
-            visible = {
-                original_tag = GER
-                SPR = { is_ai = yes }
-            }
             cancel_trigger = {
                 OR = {
+                    SPR = { is_ai = no }
                     GER = { controls_state = 41 }
                     any_other_country = {
                         is_in_faction_with = GER
@@ -245,12 +236,9 @@ operations = {
                     always = no
                 }
             }
-            visible = {
-                original_tag = GER
-                SPR = { is_ai = yes }
-            }
             cancel_trigger = {
                 OR = {
+                    SPR = { is_ai = no }
                     GER = { controls_state = 41 }
                     any_other_country = {
                         is_in_faction_with = GER
@@ -295,12 +283,9 @@ operations = {
                     always = no
                 }
             }
-            visible = {
-                original_tag = GER
-                SPR = { is_ai = yes }
-            }
             cancel_trigger = {
                 OR = {
+                    SPR = { is_ai = no }
                     GER = { controls_state = 41 }
                     any_other_country = {
                         is_in_faction_with = GER
@@ -345,12 +330,9 @@ operations = {
                     always = no
                 }
             }
-            visible = {
-                original_tag = GER
-                SPR = { is_ai = yes }
-            }
             cancel_trigger = {
                 OR = {
+                    SPR = { is_ai = no }
                     GER = { controls_state = 41 }
                     any_other_country = {
                         is_in_faction_with = GER
@@ -395,12 +377,9 @@ operations = {
                     always = no
                 }
             }
-            visible = {
-                original_tag = GER
-                SPR = { is_ai = yes }
-            }
             cancel_trigger = {
                 OR = {
+                    SPR = { is_ai = no }
                     GER = { controls_state = 41 }
                     any_other_country = {
                         is_in_faction_with = GER
@@ -445,12 +424,9 @@ operations = {
                     always = no
                 }
             }
-            visible = {
-                original_tag = GER
-                SPR = { is_ai = yes }
-            }
             cancel_trigger = {
                 OR = {
+                    SPR = { is_ai = no }
                     GER = { controls_state = 41 }
                     any_other_country = {
                         is_in_faction_with = GER
@@ -495,12 +471,9 @@ operations = {
                     always = no
                 }
             }
-            visible = {
-                original_tag = GER
-                SPR = { is_ai = yes }
-            }
             cancel_trigger = {
                 OR = {
+                    SPR = { is_ai = no }
                     GER = { controls_state = 41 }
                     any_other_country = {
                         is_in_faction_with = GER
@@ -545,12 +518,9 @@ operations = {
                     always = no
                 }
             }
-            visible = {
-                original_tag = GER
-                SPR = { is_ai = yes }
-            }
             cancel_trigger = {
                 OR = {
+                    SPR = { is_ai = no }
                     GER = { controls_state = 41 }
                     any_other_country = {
                         is_in_faction_with = GER
@@ -595,12 +565,9 @@ operations = {
                     always = no
                 }
             }
-            visible = {
-                original_tag = GER
-                SPR = { is_ai = yes }
-            }
             cancel_trigger = {
                 OR = {
+                    SPR = { is_ai = no }
                     GER = { controls_state = 41 }
                     any_other_country = {
                         is_in_faction_with = GER

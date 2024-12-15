@@ -621,12 +621,12 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies }
-			skill=4
-			attack_skill=5
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=3
+			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader infantry_leader panzer_leader trait_engineer ranger trickster }
+			skill=6
+			attack_skill=6
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=5
 			legacy_id=1109
 		}
 	}
@@ -789,12 +789,12 @@ characters={
 			}
 
 			corps_commander={
-				traits={ brilliant_strategist trait_reckless trait_SPA_nationalist_sympathies }
-				skill=3
-				attack_skill=4
-				defense_skill=2
-				planning_skill=2
-				logistics_skill=2
+				traits={ brilliant_strategist trait_reckless trait_SPA_nationalist_sympathies organizer cavalry_leader infantry_leader panzer_leader trait_engineer ranger trickster }
+				skill=6
+				attack_skill=6
+				defense_skill=4
+				planning_skill=4
+				logistics_skill=5
 				legacy_id=1112
 				visible = {
 					OR = {

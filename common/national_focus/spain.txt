@@ -1453,10 +1453,6 @@ focus_tree = {
 			remove_ideas = SPA_recovering_from_civil_war_3
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
 					is_core_of = ROOT
 				}
 				set_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ
@@ -1469,12 +1465,7 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
 					is_core_of = ROOT
-					NOT = { has_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ }
 				}
 				set_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ
 				add_extra_state_shared_building_slots = 2
@@ -1487,12 +1478,7 @@ focus_tree = {
 
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
 					is_core_of = ROOT
-					NOT = { has_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ }
 				}
 				set_state_flag = SPA_ensure_agricultural_self_sufficiency_2civ
 				add_extra_state_shared_building_slots = 2
