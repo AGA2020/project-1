@@ -95,6 +95,10 @@ operations = {
                     always = no
                 }
             }
+            visible = {
+                original_tag = GER
+                SPR = { is_ai = yes }
+            }
             cancel_trigger = {
                 OR = {
                     GER = { controls_state = 41 }
@@ -140,6 +144,10 @@ operations = {
                 hidden_trigger = {
                     always = no
                 }
+            }
+            visible = {
+                original_tag = GER
+                SPR = { is_ai = yes }
             }
             cancel_trigger = {
                 OR = {
@@ -187,6 +195,10 @@ operations = {
                     always = no
                 }
             }
+            visible = {
+                original_tag = GER
+                SPR = { is_ai = yes }
+            }
             cancel_trigger = {
                 OR = {
                     GER = { controls_state = 41 }
@@ -232,6 +244,10 @@ operations = {
                 hidden_trigger = {
                     always = no
                 }
+            }
+            visible = {
+                original_tag = GER
+                SPR = { is_ai = yes }
             }
             cancel_trigger = {
                 OR = {
@@ -279,6 +295,10 @@ operations = {
                     always = no
                 }
             }
+            visible = {
+                original_tag = GER
+                SPR = { is_ai = yes }
+            }
             cancel_trigger = {
                 OR = {
                     GER = { controls_state = 41 }
@@ -324,6 +344,10 @@ operations = {
                 hidden_trigger = {
                     always = no
                 }
+            }
+            visible = {
+                original_tag = GER
+                SPR = { is_ai = yes }
             }
             cancel_trigger = {
                 OR = {
@@ -371,6 +395,10 @@ operations = {
                     always = no
                 }
             }
+            visible = {
+                original_tag = GER
+                SPR = { is_ai = yes }
+            }
             cancel_trigger = {
                 OR = {
                     GER = { controls_state = 41 }
@@ -416,6 +444,10 @@ operations = {
                 hidden_trigger = {
                     always = no
                 }
+            }
+            visible = {
+                original_tag = GER
+                SPR = { is_ai = yes }
             }
             cancel_trigger = {
                 OR = {
@@ -463,6 +495,10 @@ operations = {
                     always = no
                 }
             }
+            visible = {
+                original_tag = GER
+                SPR = { is_ai = yes }
+            }
             cancel_trigger = {
                 OR = {
                     GER = { controls_state = 41 }
@@ -509,6 +545,10 @@ operations = {
                     always = no
                 }
             }
+            visible = {
+                original_tag = GER
+                SPR = { is_ai = yes }
+            }
             cancel_trigger = {
                 OR = {
                     GER = { controls_state = 41 }
@@ -554,6 +594,10 @@ operations = {
                 hidden_trigger = {
                     always = no
                 }
+            }
+            visible = {
+                original_tag = GER
+                SPR = { is_ai = yes }
             }
             cancel_trigger = {
                 OR = {
