@@ -136,11 +136,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_timed_idea = {
-				idea = HUN_resurgent_communist_party_idea
-				days = 180
-			}
-
 		}
 	}
 
@@ -299,75 +294,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			swap_ideas = {
-				remove_idea = HUN_hungarian_monarchy_2
-				add_idea = HUN_hungarian_monarchy_resored_habsburgs
-			}
-
-			every_country = {
-				limit = {
-					exists = yes
-					has_war = no
-					is_subject = no
-					NOT = {
-						is_in_faction_with = ROOT
-					}
-					OR = {
-						original_tag = ROM
-						original_tag = YUG
-						original_tag = CZE
-					}
-				}
-				country_event = {
-					id = WW_hungary.29
-					days = 2
-					random_days = 3
-				}
-			}
-			custom_effect_tooltip = wuw_HUN_reinstate_the_pragmatic_sanction_tt
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					OR = {
-						ROM = {
-							exists = yes
-							is_subject = no
-							NOT = {
-								is_in_faction_with = ROOT
-							}
-						}
-						YUG = {
-							exists = yes
-							is_subject = no
-							NOT = {
-								is_in_faction_with = ROOT
-							}
-						}
-						CZE = {
-							exists = yes
-							is_subject = no
-							NOT = {
-								is_in_faction_with = ROOT
-							}
-						}
-					}
-				}
-				country_event = {
-					id = WW_hungary.30
-					hours = 0
-				}
-				custom_effect_tooltip = if_we_accept_newline_tt
-				effect_tooltip = {
-					add_timed_idea = {
-						idea = HUN_promises_of_peace
-						days = 365
-					}
-				}
-			}
-
 		}
 	}
 
@@ -446,11 +372,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = neutrality
-			has_war = no
-			SPR_scw_in_progress = yes
-			country_exists = SPB
-			NOT = { has_war_with = SPB }
 		}
 
 		bypass = {
@@ -462,49 +383,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			SPB = {
-				add_opinion_modifier = {
-				    target = ROOT
-				    modifier = POR_helped_in_civil_war
-				}
-				add_manpower = 10000
-			}
-			add_manpower = -10000
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			hidden_effect = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 2000
-				}
-			}
-			send_equipment = {
-			    equipment = infantry_equipment
-			    amount = 2000
-			    target = SPB
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_timed_idea = {
-				idea = HUN_supporting_carlists
-				days = 730
-			}
-
-			hidden_effect = {
-				ROOT = {
-
-					add_ai_strategy = {
-						type = send_volunteers_desire
-						id = SPB
-						value = 200
-					}
-				}
-			}
-
-			set_rule = { can_send_volunteers = yes }
 
 		}
 	}
@@ -532,23 +410,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			promote_character = HUN_otto_von_habsburg
-			swap_ideas = {
-				remove_idea = HUN_hungarian_monarchy_resored_habsburgs
-				add_idea = HUN_hungarian_monarchy_resored_habsburgs_otto
-			}
-
-			hidden_effect = {
-				news_event = { id = news.290 }
-				set_global_flag = HUN_otto_von_habsburg_has_joined_hungary_flag
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = HUN_joseph_august_von_habsburg_becomes_available_as_field_marshal_tt
-			custom_effect_tooltip = HUN_otto_von_habsburg_becomes_available_as_field_marshal_tt
-			custom_effect_tooltip = HUN_antal_freiherr_becomes_available_as_general_tt
-
 		}
 	}
 
@@ -568,10 +429,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = neutrality
-			NOT = {
-				has_global_flag = GER_reformed_austro_hungarian_empire
-			}
 		}
 
 		bypass = {
@@ -585,53 +442,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			add_country_leader_role = {
-			    character = HUN_joseph_august_von_habsburg
-			    promote_leader = yes
-			    country_leader = {
-			        ideology = despotism
-			        expire = "1965.1.1.1"
-			        traits = { HUN_the_old_warden }
-			    }
-			}
-
-			swap_ideas = {
-				remove_idea = HUN_hungarian_monarchy_resored_habsburgs
-				add_idea = HUN_hungarian_monarchy_resored_habsburgs_otto
-			}
-
-			add_doctrine_cost_reduction = {
-				name = HUN_feldmarchall_augusts_expertise
-				cost_reduction = 0.25
-				uses = 1
-				category = cat_grand_battle_plan
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					975 = {
-						NOT = {
-							is_core_of = ROOT
-						}
-					}
-				}
-				975 = {
-					add_core_of = ROOT
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = HUN_joseph_august_von_habsburg_becomes_available_as_field_marshal_tt
-			custom_effect_tooltip = HUN_antal_freiherr_becomes_available_as_general_tt
-
-			hidden_effect = {
-				news_event = { id = wuw_HUN_news_events.6 }
-
-			}
 
 		}
 	}
@@ -652,7 +462,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
+
 		}
 
 		bypass = {
@@ -666,36 +476,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					has_idea = HUN_gombos_trade_treaty
-				}
-				remove_ideas = {
-					HUN_gombos_trade_treaty
-				}
-				add_stability = -0.1
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			random_state = {
-				limit = {
-					is_owned_and_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
 
 		}
 	}
@@ -716,7 +496,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = neutrality
+
 		}
 
 		bypass = {
@@ -730,22 +510,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			custom_effect_tooltip = HUN_every_fascist_sympathizer_tt
-			every_army_leader = {
-				limit = {
-					has_trait = trait_HUN_fascist_sympathies
-				}
-				retire = yes
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			army_experience = 50
-
-			add_manpower = 20000
-
-			add_war_support = 0.1
 
 		}
 	}
@@ -3347,17 +3111,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_reclaim_the_slovak_possessions
 
-		will_lead_to_war_with = ROM
-		will_lead_to_war_with = YUG
-		will_lead_to_war_with = AUS
-		will_lead_to_war_with = CZE
-		will_lead_to_war_with = POL
-		will_lead_to_war_with = SOV
-		will_lead_to_war_with = UKR
-		will_lead_to_war_with = ENG
-		will_lead_to_war_with = FRA
-		will_lead_to_war_with = GRE
-
 		cost = 10
 
 		ai_will_do = {
@@ -3365,12 +3118,6 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
-			has_government = neutrality
-			has_war_support > 0.90
-			all_core_state = {
-				is_owned_and_controlled_by = ROOT
-			}
 		}
 
 		bypass = {
@@ -3384,172 +3131,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			add_ideas = HUN_apostolic_kingdom_idea
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = { is_in_faction = yes }
-				leave_faction = yes
-			}
-			set_rule = { can_create_factions = yes }
-			set_rule = { can_join_factions = no }
-			every_other_country = {
-				limit = {
-					NOT = { is_puppet_of = ROOT }
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = HUN_has_threatening_ambitions
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = embargo
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_state = {
-				limit = {
-					NOT = {
-						OR = {
-							is_claimed_by = ROOT
-							is_core_of = ROOT
-							is_owned_by = ROOT
-							any_other_country = {
-								AND = {
-									is_subject_of = ROOT
-									owns_state = PREV
-								}
-							}
-						}
-					}
-					OR = {
-						state = 664
-						state = 70
-						state = 71
-						state = 73
-						state = 76
-						state = 84
-						state = 83
-						state = 82
-						state = 764
-						state = 45
-						state = 109
-						state = 102
-						state = 853
-						state = 103
-						state = 163
-						state = 104
-						state = 804
-						state = 975
-						state = 976
-						state = 4
-						state = 152
-						state = 153
-						state = 848
-						state = 72
-						state = 972
-						state = 75
-						state = 762
-						state = 74
-						state = 67
-						state = 66
-						state = 9
-						state = 69
-						state = 88
-						state = 89
-						state = 91
-						state = 90
-						state = 81
-						state = 46
-						state = 80
-						state = 79
-						state = 78
-						state = 766
-						state = 551
-						state = 883
-						state = 457
-						state = 456
-						state = 907
-						state = 447
-						state = 446
-						state = 453
-						state = 454
-						state = 455
-						state = 553
-						state = 554
-						state = 677
-						state = 799
-						state = 183
-						state = 164
-						state = 116
-						state = 797
-						state = 199
-						state = 198
-						state = 201
-						state = 202
-						state = 203
-						state = 834
-						state = 192
-						state = 197
-						state = 259
-						state = 193
-						state = 226
-						state = 196
-						state = 200
-						state = 227
-						state = 221
-						state = 228
-						state = 218
-						state = 240
-						state = 225
-						state = 245
-						state = 260
-						state = 265
-						state = 234
-						state = 235
-						state = 232
-						state = 238
-						state = 237
-						state = 236
-						state = 217
-						state = 187
-					}
-				}
-				add_claim_by = ROOT
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = ROM
-						original_tag = YUG
-						original_tag = AUS
-						original_tag = CZE
-						original_tag = POL
-						original_tag = SOV
-						original_tag = UKR
-						original_tag = ENG
-						original_tag = FRA
-						original_tag = GRE
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						type = take_claimed_state
-						target = PREV
-					}
-				}
-			}
-
-			hidden_effect = {
-				news_event = { id = wuw_HUN_news_events.4 }
-			}
 
 		}
 	}
