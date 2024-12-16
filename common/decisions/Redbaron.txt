@@ -236,6 +236,7 @@ Technologies = {
                         original_tag = SIA
                         original_tag = SPR
                         original_tag = FIN
+                        original_tag = ARG
                         }
                     
                 }
@@ -280,6 +281,7 @@ Technologies = {
                             original_tag = SIA
                             original_tag = SPR
                             original_tag = FIN
+                            original_tag = ARG
                          }
                     }
                     available = {

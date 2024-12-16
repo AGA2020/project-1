@@ -1,4 +1,97 @@
 operations = {
+   armor_allies_license = {
+        # icon = generic_operation
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        allowed = {
+            OR = {
+                tag = ENG
+                tag = USA
+                tag = SOV
+                tag = FRA
+                tag = CAN
+                tag = RAJ
+                tag = SAF
+                tag = BRA
+                tag = MEX
+                tag = AST
+                tag = NZL
+            }
+        }
+        available = {
+            OR = { 
+                OR = {      
+                    ENG = { has_tech = survivability_studies }
+                    USA = { has_tech = survivability_studies }
+                    SOV = { has_tech = survivability_studies }
+                    FRA = { has_tech = survivability_studies }
+                    CAN = { has_tech = survivability_studies }
+                    RAJ = { has_tech = survivability_studies }
+                    SAF = { has_tech = survivability_studies }
+                    BRA = { has_tech = survivability_studies }
+                    FRA = { has_tech = survivability_studies }
+                    CAN = { has_tech = survivability_studies }
+                    RAJ = { has_tech = survivability_studies }
+                    SAF = { has_tech = survivability_studies } 
+                    BRA = { has_tech = survivability_studies }
+                    MEX = { has_tech = survivability_studies } 
+                    AST = { has_tech = survivability_studies } 
+                    NZL = { has_tech = survivability_studies }
+                }
+            }                     
+        }
+        complete_effect = {
+            set_technology = { survivability_studies = 1 popup = no }
+        }
+    }
+  armor_axis_license = {
+        # icon = generic_operation
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        allowed = {
+            OR = {
+                tag = GER
+                tag = SPR
+                tag = ITA
+                tag = HUN
+                tag = FIN
+                tag = ROM
+                tag = DEN
+                tag = JAP
+                tag = MAN
+                tag = SIA
+                tag = BUL
+                tag = ARG
+            }
+        }
+        available = {
+            OR = { 
+                OR = {      
+                    GER = { has_tech = survivability_studies }
+                    SPR = { has_tech = survivability_studies }
+                    ITA = { has_tech = survivability_studies }
+                    HUN = { has_tech = survivability_studies }
+                    FIN = { has_tech = survivability_studies }
+                    ROM = { has_tech = survivability_studies }
+                    DEN = { has_tech = survivability_studies }
+                    JAP = { has_tech = survivability_studies }
+                    MAN = { has_tech = survivability_studies }
+                    SIA = { has_tech = survivability_studies }
+                    BUL = { has_tech = survivability_studies }
+                    ARG = { has_tech = survivability_studies }
+                }
+            }                     
+        }
+        complete_effect = {
+            set_technology = { survivability_studies = 1 popup = no }
+        }
+    }
    ger_weak_sperm_wantsmech = {
         icon = GFX_decision_generic_industry
 
@@ -2356,21 +2449,7 @@ operations = {
             }                     
         }
         complete_effect = {
-            create_equipment_variant = {
-                name = "Fighter mg"
-                type = small_plane_airframe_1
-                allow_without_tech = yes
-                parent_version = 0
-                modules = {
-                    fixed_main_weapon_slot = heavy_mg_4x
-                    fixed_auxiliary_weapon_slot_1 = empty
-                    fixed_auxiliary_weapon_slot_2 = empty
-                    engine_type_slot = empty
-                    special_type_slot_1 = empty
-                    special_type_slot_2 = empty
-                    special_type_slot_3 = empty
-                }
-            }
+            set_technology = { popup = no }
         }
     }
   heavymg_axis_license = {
@@ -2393,6 +2472,7 @@ operations = {
                 tag = MAN
                 tag = SIA
                 tag = BUL
+                tag = ARG
             }
         }
         available = {
@@ -2409,25 +2489,12 @@ operations = {
                     MAN = { has_tech = aa_hmg }
                     SIA = { has_tech = aa_hmg }
                     BUL = { has_tech = aa_hmg }
+                    ARG = { has_tech = aa_hmg }
                 }
             }                     
         }
         complete_effect = {
-            create_equipment_variant = {
-                name = "Fighter mg"
-                type = small_plane_airframe_1
-                allow_without_tech = yes
-                parent_version = 0
-                modules = {
-                    fixed_main_weapon_slot = heavy_mg_4x
-                    fixed_auxiliary_weapon_slot_1 = empty
-                    fixed_auxiliary_weapon_slot_2 = empty
-                    engine_type_slot = empty
-                    special_type_slot_1 = empty
-                    special_type_slot_2 = empty
-                    special_type_slot_3 = empty
-                }
-            }
+            set_technology = { aa_hmg = 1 popup = no }
         }
     }
     fighter2_axis_license = {

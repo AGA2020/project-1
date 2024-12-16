@@ -225,5 +225,16 @@ on_actions = {
                 } 
 			}
 		}
+		effect = {
+			if = { 
+				limit = { tag = ARG } 
+                every_state = {
+                    limit = {
+                        is_controlled_by = ARG
+                    }
+                    add_compliance = 100
+                } 
+			}
+		}
 	}	
 }

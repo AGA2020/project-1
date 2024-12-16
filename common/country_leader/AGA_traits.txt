@@ -1,4 +1,11 @@
 leader_traits = {
+	namaz_kiliyor = {
+		random = no
+		resistance_growth = -1
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	Masallah = {
 		random = no
 		stability_factor = 1

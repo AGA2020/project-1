@@ -10,12 +10,14 @@ ARG_international_loan_decisions = {
 	
 		allowed = {
 			OR = {
+				original_tag = ARG
 				original_tag = BRA
 			}
 		}
 
 		available = {
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			ENG = {
@@ -28,6 +30,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			NOT = {
@@ -100,12 +103,14 @@ ARG_international_loan_decisions = {
 	
 		allowed = {
 			OR = {
+				original_tag = ARG
 				original_tag = BRA
 			}
 		}
 
 		available = {
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			#ENG = {
@@ -118,6 +123,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			has_country_flag = ARG_british_loan_flag
@@ -168,12 +174,14 @@ ARG_international_loan_decisions = {
 	
 		allowed = {
 			OR = {
+				original_tag = ARG
 				original_tag = BRA
 			}
 		}
 
 		available = {
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			GER = {
@@ -186,6 +194,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			NOT = {
@@ -258,12 +267,14 @@ ARG_international_loan_decisions = {
 	
 		allowed = {
 			OR = {
+				original_tag = ARG
 				original_tag = BRA
 			}
 		}
 
 		available = {
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			#GER = {
@@ -276,6 +287,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			} 
 			has_country_flag = ARG_german_loan_flag
@@ -326,12 +338,14 @@ ARG_international_loan_decisions = {
 	
 		allowed = {
 			OR = {
+				original_tag = ARG
 				original_tag = BRA
 			}
 		}
 
 		available = {
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			USA = {
@@ -344,6 +358,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			NOT = {
@@ -416,12 +431,14 @@ ARG_international_loan_decisions = {
 	
 		allowed = {
 			OR = {
+				original_tag = ARG
 				original_tag = BRA
 			}
 		}
 
 		available = {
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			#USA = {
@@ -434,6 +451,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			} 
 			has_country_flag = ARG_usa_loan_flag
@@ -484,12 +502,14 @@ ARG_international_loan_decisions = {
 	
 		allowed = {
 			OR = {
+				original_tag = ARG
 				original_tag = BRA
 			}
 		}
 
 		available = {
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			ITA = {
@@ -502,6 +522,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			NOT = {
@@ -574,12 +595,14 @@ ARG_international_loan_decisions = {
 	
 		allowed = {
 			OR = {
+				original_tag = ARG
 				original_tag = BRA
 			}
 		}
 
 		available = {
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			#ITA = {
@@ -592,6 +615,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
+				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			} 
 			has_country_flag = ARG_italy_loan_flag

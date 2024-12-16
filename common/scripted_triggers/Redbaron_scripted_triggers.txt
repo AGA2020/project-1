@@ -11,6 +11,7 @@ axis = {
 		tag = MAN
 		tag = EFR
 		tag = FIN
+		tag = ARG
 	}
 }
 
@@ -43,7 +44,7 @@ is_axis_country = {
 		original_tag = SIA
 		original_tag = SPR
 		original_tag = FIN
-
+		original_tag = ARG
 
 		#just to be safe
 		original_tag = KOR
