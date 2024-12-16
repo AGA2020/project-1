@@ -25,12 +25,6 @@ on_actions = {
 	on_startup = {
 		effect = {
 			if = { limit = { SPR = { is_ai = yes } } GER = { activate_decision = mech_delivery_SPR_part1 } }
-			WST = {
-				country_event = {
-					id = aga.123
-					days = 720
-				}
-			}
 			ETH = {
 				transfer_units_fraction = {
 					target = ITA
