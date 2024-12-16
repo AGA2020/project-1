@@ -4034,7 +4034,6 @@ focus_tree = {
 			any_other_country = {
 				original_tag = SPR
 				OR = {
-					has_completed_focus = SPR_the_anti_fascist_workers_revolution
 					has_completed_focus = SPR_maintain_the_second_republic
 				}
 			}
