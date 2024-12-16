@@ -3172,141 +3172,141 @@ operations = {
                 43 = { add_compliance = 100 } 
             }
         }
-    #annex_spain = {
-    #        # icon = generic_operation
-    #        allowed = {
-    #            tag = ITA
-    #        }
-    #        fire_only_once = yes
-    #        cost = 0
-    #        ai_will_do = {
-    #            factor = 0
-    #        }
-    #        available = {
-    #        OR = {
-    #        date>1938.6.1
-    #        has_global_flag = scw_over 
-    #        }
-    #            SPR = {
-    #                is_ai = yes
-    #            }
-    #        }
-    #        visible = {
-    #            SPR = {
-    #                is_ai = yes
-    #            }
-    #        }
-    #        targets = {
-    #            SPR
-    #        }
-    #        complete_effect = {
-    #        if = { limit = { NOT = { has_global_flag = scw_over } } SPR = { annex_country = { target = D01 transfer_troops = yes } } SPR = { #annex_country = { target = D02 transfer_troops = yes } } SPR = { annex_country = { target = D03 transfer_troops = yes } } }
-    #            169 = {
-    #                set_building_level = {
-    #                    type = naval_base
-    #                    level = 0
-    #                    province = {
-    #                        id = 1048
-    #                    }
-    #                }
-    #            } 
-    #            173 = {
-    #                set_building_level = {
-    #                    type = naval_base
-    #                    level = 0
-    #                    province = {
-    #                        id = 9979
-    #                    }
-    #                }
-    #                set_building_level = {
-    #                    type = naval_base
-    #                    level = 0
-    #                    province = {
-    #                        id = 12038
-    #                    }
-    #                }
-    #            }
-    #            168 = {
-    #                set_building_level = {
-    #                    type = naval_base
-    #                    level = 0
-    #                    province = {
-    #                        id = 10024
-    #                    }
-    #                }
-    #            } 
-    #            171 = {
-    #                set_building_level = {
-    #                    type = naval_base
-    #                    level = 0
-    #                    province = {
-    #                        id = 758
-    #                    }
-    #                }
-    #            }
-    #            165 = {
-    #                set_building_level = {
-    #                    type = naval_base
-    #                    level = 0
-    #                    province = {
-    #                        id = 9764
-    #                    }
-    #                }
-    #            } 
-    #            167 = {
-    #                set_building_level = {
-    #                    type = naval_base
-    #                    level = 0
-    #                    province = {
-    #                        id = 6906
-    #                    }
-    #                }
-    #            }
-    #            set_global_flag = scw_over
-    #            WST = { transfer_state = 178 transfer_state = 699 transfer_state = 783 transfer_state = 290 transfer_state = 297 }
-    #            if = { limit = { NOT = { ITA = { has_completed_focus = ITA_demand_balearic_islands_bba } } } }    
-    #            WST = { if = { limit = { ITA = { NOT = { has_completed_focus = ITA_demand_balearic_islands_bba } } } transfer_state = 177 } #}                
-    #            SPR = {
-    #                transfer_units_fraction = {
-    #                    target = ITA
-    #                    size = 1
-    #                    stockpile_ratio = 1
-    #                    army_ratio = 0
-    #                    navy_ratio = 1
-    #                    air_ratio = 1
-    #                    keep_unit_leaders_trigger = {
-    #                        always = no
-    #                    }
-    #                }
-    #            }
-    #            ITA = {
-    #                annex_country = {
-    #                    target = SPR
-    #                    transfer_troops = no
-    #                }
-    #            }
-    #            171 = { add_compliance = 100 }
-    #            790 = { add_compliance = 100 }
-    #            174 = { add_compliance = 100 }
-    #            792 = { add_compliance = 100 }
-    #            169 = { add_compliance = 100 }
-    #            168 = { add_compliance = 100 }
-    #            166 = { add_compliance = 100 } 
-    #            41 = { add_compliance = 100 }  
-    #            789 = { add_compliance = 100 }
-    #            173 = { add_compliance = 100 } 
-    #            167 = { add_compliance = 100 }
-    #            165 = { add_compliance = 100 } 
-    #            791 = { add_compliance = 100 }   
-    #            176 = { add_compliance = 100 } 
-    #            793 = { add_compliance = 100 } 
-    #            172 = { add_compliance = 100 } 
-    #            794 = { add_compliance = 100 }
-    #            170 = { add_compliance = 100 }
-    #            175 = { add_compliance = 100 } 
-    #            788 = { add_compliance = 100 }  
-    #        }
-    #    }
+    annex_spain = {
+            # icon = generic_operation
+            allowed = {
+                tag = ITA
+            }
+            fire_only_once = yes
+            cost = 0
+            ai_will_do = {
+                factor = 0
+            }
+            available = {
+            OR = {
+            date>1938.6.1
+            has_global_flag = scw_over 
+            }
+                SPR = {
+                    is_ai = yes
+                }
+            }
+            visible = {
+                SPR = {
+                    is_ai = yes
+                }
+            }
+            targets = {
+                SPR
+            }
+            complete_effect = {
+            if = { limit = { NOT = { has_global_flag = scw_over } } SPR = { annex_country = { target = D01 transfer_troops = yes } } SPR = { annex_country = { target = D02 transfer_troops = yes } } SPR = { annex_country = { target = D03 transfer_troops = yes } } }
+                169 = {
+                    set_building_level = {
+                        type = naval_base
+                        level = 0
+                        province = {
+                            id = 1048
+                        }
+                    }
+                } 
+                173 = {
+                    set_building_level = {
+                        type = naval_base
+                        level = 0
+                        province = {
+                            id = 9979
+                        }
+                    }
+                    set_building_level = {
+                        type = naval_base
+                        level = 0
+                        province = {
+                            id = 12038
+                        }
+                    }
+                }
+                168 = {
+                    set_building_level = {
+                        type = naval_base
+                        level = 0
+                        province = {
+                            id = 10024
+                        }
+                    }
+                } 
+                171 = {
+                    set_building_level = {
+                        type = naval_base
+                        level = 0
+                        province = {
+                            id = 758
+                        }
+                    }
+                }
+                165 = {
+                    set_building_level = {
+                        type = naval_base
+                        level = 0
+                        province = {
+                            id = 9764
+                        }
+                    }
+                } 
+                167 = {
+                    set_building_level = {
+                        type = naval_base
+                        level = 0
+                        province = {
+                            id = 6906
+                        }
+                    }
+                }
+                set_global_flag = scw_over
+                WST = { transfer_state = 178 transfer_state = 699 transfer_state = 783 transfer_state = 290 transfer_state = 297 }
+                if = { limit = { NOT = { ITA = { has_completed_focus = ITA_demand_balearic_islands_bba } } } }    
+                WST = { if = { limit = { ITA = { NOT = { has_completed_focus = ITA_demand_balearic_islands_bba } } } transfer_state = 177 } }                
+                SPR = {
+                    transfer_units_fraction = {
+                        target = ITA
+                        size = 1
+                        stockpile_ratio = 1
+                        army_ratio = 0
+                        navy_ratio = 1
+                        air_ratio = 1
+                        keep_unit_leaders_trigger = {
+                            always = no
+                        }
+                    }
+                }
+                ITA = {
+                    annex_country = {
+                        target = SPR
+                        transfer_troops = no
+                    }
+                }
+                171 = { add_compliance = 100 }
+                790 = { add_compliance = 100 }
+                174 = { add_compliance = 100 }
+                792 = { add_compliance = 100 }
+                169 = { add_compliance = 100 }
+                168 = { add_compliance = 100 }
+                166 = { add_compliance = 100 } 
+                41 = { add_compliance = 100 }  
+                789 = { add_compliance = 100 }
+                173 = { add_compliance = 100 } 
+                167 = { add_compliance = 100 }
+                165 = { add_compliance = 100 } 
+                791 = { add_compliance = 100 }   
+                176 = { add_compliance = 100 } 
+                793 = { add_compliance = 100 } 
+                172 = { add_compliance = 100 } 
+                794 = { add_compliance = 100 }
+                170 = { add_compliance = 100 }
+                175 = { add_compliance = 100 } 
+                788 = { add_compliance = 100 }  
+            }
+        }
     annex_romania = {
             # icon = generic_operation
             allowed = {

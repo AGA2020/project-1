@@ -2415,6 +2415,32 @@ focus_tree = {
 #  # #   #    #  # #  # #    #  #  # #  # #  #   #            #  # #  # #   # #   # #  # #  #  #    #  #    # 
 #  # ### #     ##  ###  ### ###  ##  #  # #  # ##              ##   ##  #   # #   #  ##  #  # ### ##   #  ##  
 
+	focus = {
+		id = SPR_maintain_the_second_republic
+		available = {
+			has_global_flag = spanish_civil_war
+			hidden_trigger = { always = no }
+		}
+		bypass = {
+		}
+		prerequisite = { focus = SPR_disband_the_army }
+		
+		icon = GFX_focus_spr_maintain_the_republic
+		x = 0
+		y = 1
+		relative_position_id = SPR_disband_the_army
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_political_power = 60
+			add_war_support = 0.05
+			activate_mission = SPR_anarchist_uprising_mission
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = SPR_antonio_escobar_huerta
+		}
+	}
 
 	focus = {
 		id = SPR_strengthen_the_euzko_gudarostea
@@ -2518,32 +2544,6 @@ focus_tree = {
 #  # #   #    #  # #  # #    #  #  # #  # #  #   #            #  # #   #   # #  # #  # #  # #  #  #    # 
 #  # ### #     ##  ###  ### ###  ##  #  # #  # ##             ###  ### #   #  ##   ##  #  # #  #  #  ##  
 
-	focus = {
-		id = SPR_maintain_the_second_republic
-		available = {
-			has_global_flag = spanish_civil_war
-			hidden_trigger = { always = no }
-		}
-		bypass = {
-		}
-		prerequisite = { focus = SPR_disband_the_army }
-		
-		icon = GFX_focus_spr_maintain_the_republic
-		x = 0
-		y = 1
-		relative_position_id = SPR_disband_the_army
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
-		completion_reward = {
-			add_political_power = 60
-			add_war_support = 0.05
-			activate_mission = SPR_anarchist_uprising_mission
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = SPR_antonio_escobar_huerta
-		}
-	}
 
 	focus = {
 		id = SPR_new_leadership
