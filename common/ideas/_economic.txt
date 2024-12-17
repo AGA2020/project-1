@@ -213,30 +213,7 @@ ideas = {
 
 			available = {
 				has_war_support > 0.25
-
 				IF = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-						NOT = {
-							has_dlc = "Gotterdammerung"
-						}
-					}
-					IF = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						OR = {
-							has_completed_focus = HUN_secret_rearmament
-							NOT = { has_idea = HUN_treaty_of_triannon_aat }
-						}
-					}
-					ELSE = {
-						has_completed_focus = HUN_secret_rearmament
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
-				}
-				ELSE_IF = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Gotterdammerung"
