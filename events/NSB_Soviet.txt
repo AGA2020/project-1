@@ -695,8 +695,6 @@ unit_leader_event = {
 
 					has_character_flag = SOV_purge_accused_flag
 				}
-				NOT = { has_id = 410 }
-				NOT = { has_id = 402 }
 
 				SOV_purge_character_effect = yes
 			}
