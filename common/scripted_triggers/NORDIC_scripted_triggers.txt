@@ -124,7 +124,6 @@ NORDIC_monarchist_alliance_viable = {
 
 NORDIC_has_started_democratic_focus_tree = {
 	OR = {
-		has_completed_focus = NOR_continue_nygaardsvold_government
 		has_completed_focus = FIN_finnish_neutrality
 	}
 } 

@@ -1960,62 +1960,6 @@ focus_tree = {
 
 		completion_reward = {
 
-			swap_ideas = {
-				add_idea = HUN_hungarian_monarchy_nice_democratic
-				remove_idea = HUN_hungarian_monarchy_nice
-			}
-
-			add_ideas = HUN_dynastic_ties
-			add_ideas = HUN_charles_v
-			add_relation_modifier = {
-				target = SWE
-				modifier = HUN_dynastic_ties_license
-			}
-
-			hidden_effect = {
-				add_ai_strategy = {
-					type = befriend
-					id = "SWE"
-					value = 200
-				}
-				add_ai_strategy = {
-					type = support
-					id = "SWE"
-					value = 200
-				}
-				SWE = {
-					add_ai_strategy = {
-						type = befriend
-						id = "HUN"
-						value = 200
-					}
-					add_ai_strategy = {
-						type = support
-						id = "HUN"
-						value = 200
-					}
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = HUN_fascist_uprising_mission_activation_tt
-			add_ideas = HUN_the_volksbund_idea
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			unlock_decision_tooltip = { decision = HUN_carl_wilhelm_takes_absolute_cotrol_decision show_effect_tooltip = no }
-			unlock_decision_tooltip = HUN_call_in_sweden
-
-			hidden_effect = {
-
-				set_cosmetic_tag = HUN_MONARCHY
-
-				news_event = { id = news.296 }
-
-				activate_mission = HUN_the_incoming_fascist_civil_war_mission
-
-			}
 		}
 	}
 
@@ -2035,10 +1979,6 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				has_government = neutrality
-				has_government = democratic
-			}
 		}
 
 		bypass = {
@@ -2052,59 +1992,6 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			custom_effect_tooltip = HUN_increase_economic_cooperation_tt
-			hidden_effect = {
-				IF = {
-					limit = {
-						country_exists = ALB
-						ALB = { has_opinion = { target = HUN value > 85 } }
-					}
-					add_offsite_building = { type = industrial_complex level = 1 }
-				}
-				IF = {
-					limit = {
-						country_exists = BUL
-						BUL = { has_opinion = { target = HUN value > 85 } }
-					}
-					add_offsite_building = { type = industrial_complex level = 1 }
-				}
-				IF = {
-					limit = {
-						country_exists = GRE
-						GRE = { has_opinion = { target = HUN value > 85 } }
-					}
-					add_offsite_building = { type = industrial_complex level = 1 }
-				}
-				IF = {
-					limit = {
-						country_exists = YUG
-						YUG = { has_opinion = { target = HUN value > 85 } }
-					}
-					add_offsite_building = { type = industrial_complex level = 1 }
-				}
-				IF = {
-					limit = {
-						country_exists = AUS
-						AUS = { has_opinion = { target = HUN value > 85 } }
-					}
-					add_offsite_building = { type = industrial_complex level = 1 }
-				}
-				IF = {
-					limit = {
-						country_exists = ROM
-						ROM = { has_opinion = { target = HUN value > 85 } }
-					}
-					add_offsite_building = { type = industrial_complex level = 1 }
-				}
-				IF = {
-					limit = {
-						country_exists = CZE
-						CZE = { has_opinion = { target = HUN value > 85 } }
-					}
-					add_offsite_building = { type = industrial_complex level = 1 }
-				}
-			}
 
 		}
 	}
