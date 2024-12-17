@@ -621,7 +621,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader infantry_leader panzer_leader trait_engineer ranger trickster }
+			traits={ career_officer harsh_leader trait_SPA_nationalist_sympathies organizer cavalry_leader infantry_leader panzer_leader trait_engineer ranger trickster commando }
 			skill=6
 			attack_skill=6
 			defense_skill=4

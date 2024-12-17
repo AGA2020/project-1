@@ -128,7 +128,7 @@ operations = {
             clr_global_flag = GER_weak_sperm
         }
     }
-   mech_delivery_SPR_part1 = { # 1 august 1938
+   mech_delivery_SPR_part1 = { # 1 august 1938 decreased to %70
         icon = GFX_decision_generic_industry
         fire_only_once = yes
 
@@ -163,14 +163,14 @@ operations = {
                         BUL = { is_ai = no }
                     }
                 } 
-                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 549 producer = SWE } }
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 384 producer = SWE } }
             } 
             else = { 
-                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 549 producer = SWE } }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 384 producer = SWE } }
             }  
         }
     }
-    mech_delivery_SPR_part2 = { # 15 january 1939
+    mech_delivery_SPR_part2 = { # 15 january 1939 decreased to %70
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
@@ -208,16 +208,16 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 963 producer = SWE } }
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 674 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 963 producer = SWE } }
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 674 producer = SWE } }
                 }  
             }
             complete_effect = {
             }
         }
-    mech_delivery_SPR_part3 = { # 6 july 1939
+    mech_delivery_SPR_part3 = { # 6 july 1939 decreased to %70
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
@@ -255,16 +255,16 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2843 producer = SWE } }
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1990 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 2843 producer = SWE } }
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1990 producer = SWE } }
                 }  
             }
             complete_effect = {
             }
         }
-    mech_delivery_SPR_part4 = { # 23 january 1940
+    mech_delivery_SPR_part4 = { # 23 january 1940 decreased to %70
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
@@ -302,16 +302,16 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5778 producer = SWE } }
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4044 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5778 producer = SWE } }
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4044 producer = SWE } }
                 }  
             }
             complete_effect = {
             }
         }
-    mech_delivery_SPR_part5 = { # 21 june 1940
+    mech_delivery_SPR_part5 = { # 21 june 1940 decreased to %70
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
@@ -349,16 +349,16 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5911 producer = SWE } }
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4137 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5911 producer = SWE } }
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4137 producer = SWE } }
                 }  
             }
             complete_effect = {
             }
         }
-    mech_delivery_SPR_part6 = { # 18 january 1941
+    mech_delivery_SPR_part6 = { # 18 january 1941 decreased to %70
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
@@ -396,16 +396,16 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13764 producer = SWE } }
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9634 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13764 producer = SWE } }
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9634 producer = SWE } }
                 }  
             }
             complete_effect = {
             }
         }
-    mech_delivery_SPR_part7 = { # 19 june 1941
+    mech_delivery_SPR_part7 = { # 19 june 1941 decreased to %70
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
@@ -443,16 +443,16 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13936 producer = SWE } }
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9755 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13936 producer = SWE } }
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9755 producer = SWE } }
                 }  
             }
             complete_effect = {
             }
         }
-    mech_delivery_SPR_part8 = { # 28 december 1941
+    mech_delivery_SPR_part8 = { # 28 december 1941 decreased to %70
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
@@ -490,16 +490,16 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20584 producer = SWE } }
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 14408 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20584 producer = SWE } }
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 14408 producer = SWE } }
                 }  
             }
             complete_effect = {
             }
         }
-    mech_delivery_SPR_part9 = { # 10 june 1942
+    mech_delivery_SPR_part9 = { # 10 june 1942 decreased to %70
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
@@ -537,16 +537,16 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20000 producer = SWE } }
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 14000 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 20000 producer = SWE } }
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 14000 producer = SWE } }
                 }  
             }
             complete_effect = {
             }
         }
-    mech_delivery_SPR_part10 = { # 10 october 1942
+    mech_delivery_SPR_part10 = { # 10 october 1942 decreased to %70
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
@@ -584,16 +584,16 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13165 producer = SWE } }
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9215 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13165 producer = SWE } }
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9215 producer = SWE } }
                 }  
             }
             complete_effect = {
             }
         }
-    mech_delivery_SPR_part11 = { # 21 december 1942
+    mech_delivery_SPR_part11 = { # 21 december 1942 decreased to %70
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
@@ -631,16 +631,16 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 8553 producer = SWE } }
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5987 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 8553 producer = SWE } }
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5987 producer = SWE } }
                 }  
             }
             complete_effect = {
             }
         }
-    mech_delivery_SPR_part12 = { # 30 may 1943
+    mech_delivery_SPR_part12 = { # 30 may 1943 decreased to %70
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
@@ -678,10 +678,10 @@ operations = {
                             BUL = { is_ai = no }
                         }
                     } 
-                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 19586 producer = SWE } }
+                    BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13710 producer = SWE } }
                 } 
                 else = { 
-                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 19586 producer = SWE } }
+                    GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13710 producer = SWE } }
                 }  
             }
             complete_effect = {
@@ -2449,7 +2449,7 @@ operations = {
             }                     
         }
         complete_effect = {
-            set_technology = { popup = no }
+            set_technology = { aa_hmg = 1 popup = no }
         }
     }
   heavymg_axis_license = {
