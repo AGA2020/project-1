@@ -321,9 +321,6 @@ if = {
 	FIN_elias_simojoki = {
 		set_character_flag = FIN_anti_communist_character_flag
 	}
-	FIN_vilho_helanen = {
-		set_character_flag = FIN_anti_communist_character_flag
-	}
 	FIN_paavo_susitaival = {
 		set_character_flag = FIN_anti_communist_character_flag
 	}
