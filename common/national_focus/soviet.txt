@@ -8310,7 +8310,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_comintern
 		cost = 5
-
+		allow_branch = { always = no }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -8386,15 +8386,15 @@ ai_will_do = {
 	focus = {
 		id = SOV_the_allies
 		
-		x = -2
+		x = 2
 		y = 1
 		cost = 0
 		
 		available_if_capitulated = yes
 		icon = GFX_focus_SOV_the_last_purge
 		
-		prerequisite = { focus = SOV_anti_fascist_policies }
-		relative_position_id = SOV_anti_fascist_policies
+		prerequisite = { focus = SOV_the_comintern }
+		relative_position_id = SOV_the_comintern
 	
 		available = {
 			ENG = { 
@@ -8752,7 +8752,7 @@ ai_will_do = {
 		id = SOV_baltic_security
 		icon = GFX_focus_SOV_baltic_security
 		prerequisite = { focus = SOV_the_comintern }
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = SOV_the_comintern
 		cost = 5
