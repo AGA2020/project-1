@@ -1584,42 +1584,15 @@ focus_tree = {
 
 		completion_reward = {
 			unlock_decision_category_tooltip = ROM_change_sides
-			if = {
-				limit = {
-					POL = {
-						has_country_leader = {
-							character = ROM_king_michael
-							ruling_only = yes
-						}
-					}
-				}
-				set_cosmetic_tag = ROM_polish_loyalists
-				set_politics = {
-					ruling_party = neutrality
-					elections_allowed = no
-				}
-				set_political_party = {
-					ideology = neutrality
-					popularity = 50
-				}
-				POL = {
-					set_autonomy = {
-						target = ROM
-						autonomy_state = autonomy_personal_union
-					}
-				}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
 			}
-			else = {
-				set_politics = {
-					ruling_party = democratic
-					elections_allowed = yes
-				}
-				set_political_party = {
-					ideology = democratic
-					popularity = 50
-				}
-				promote_character = { character = ROM_king_michael ideology = liberalism }
+			set_political_party = {
+				ideology = democratic
+				popularity = 50
 			}
+			promote_character = { character = ROM_king_michael ideology = liberalism }
 			if = {
 				limit = {
 					has_idea = ROM_king_carol_ii_hedonist

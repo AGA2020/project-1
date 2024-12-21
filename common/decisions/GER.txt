@@ -7986,11 +7986,6 @@ GER_reichskommissariats = {
 			}
 
 			custom_effect_tooltip = GER_reichskommissariat_anden_effect_tt
-
-			set_autonomy = { 
-				target = RAN 
-				autonomy_state = autonomy_integrated_puppet 
-			}
 			
 			hidden_effect = {
 				every_state = {
