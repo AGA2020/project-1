@@ -1,4 +1,38 @@
 operations = {
+   help_rp_usa = {
+        # icon = generic_operation
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        allowed = {
+            tag = ENG
+        }
+        available = {
+            USA = { has_war = yes }
+            NOT = { ENG = { controls_state = 118 } }  
+            naval_strength_ratio = {
+                tag = ITA
+                ratio < 1.5
+            }                       
+        }
+        complete_effect = {
+            USA = {
+                transfer_units_fraction = {
+                    target = ENG
+                    size = 1
+                    stockpile_ratio = 0
+                    army_ratio = 0
+                    navy_ratio = 1
+                    air_ratio = 0
+                    keep_unit_leaders_trigger = {
+                        always = no
+                    }
+                }
+            }
+        }
+    }
    armor_allies_license = {
         # icon = generic_operation
         fire_only_once = no
