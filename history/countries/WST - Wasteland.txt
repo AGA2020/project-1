@@ -17,6 +17,11 @@ create_country_leader = {
 		namaz_kiliyor
 	}
 }
+recruit_character = WST_hacikurt
+add_ideas = {	
+	WST_hacikurt
+	kurdish_tales
+}
 set_popularities = {
 	neutrality = 100
 }

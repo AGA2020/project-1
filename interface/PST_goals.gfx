@@ -5,4 +5,9 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/anchluss.dds"			
 	}
 
+	spriteType = {
+		name = "GFX_idea_hacikurt"
+		texturefile = "gfx/interface/ideas/hacikurt.dds"
+	}
+
 }

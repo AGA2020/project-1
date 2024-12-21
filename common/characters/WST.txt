@@ -1,0 +1,27 @@
+characters = {
+
+	WST_hacikurt = {
+		name = "Haci Antonius"
+		portraits = {
+			army = {
+				small=GFX_idea_hacikurt
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = WST_hacikurt
+			allowed = {
+				tag = WST
+			}
+			available = {
+			}
+			traits = {
+				kurdish
+			}
+			cost = 0
+			ai_will_do = {
+				base = 0.300
+			}
+		}
+	}
+}
