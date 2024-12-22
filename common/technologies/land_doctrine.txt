@@ -3400,11 +3400,20 @@ technologies = {
 		}
 		
 		resistance_growth_on_our_occupied_states = 0.25 
+
+		enable_tactic = tactic_guerrilla_tactics
 		
 		xor = {
 			guerilla_warfare_disabled
 		}
-		allow_branch = { not = { tag = ROM  } }
+		allow_branch = { 
+			NOT = { 
+				OR = {
+					tag = ROM
+					tag = SOV
+				}
+			}
+		}
 		doctrine = yes	
 		research_cost = 4.5
 		
@@ -3443,7 +3452,7 @@ technologies = {
 		category_army = {
 			default_morale = 0.2
 		}
-		
+		allow_branch = { OR = { tag = ROM tag = SOV } }		
 		resistance_growth_on_our_occupied_states = 0.25 
 		doctrine = yes	
 		research_cost = 4.5

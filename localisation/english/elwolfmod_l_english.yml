@@ -715,6 +715,6 @@
 
  #Guerrilla Tactics loc
 
- guerilla_warfare_disabled:0 "Guerrilla Warfare(Romania)"
+ guerilla_warfare_disabled:0 "Guerrilla Warfare"
  guerilla_warfare_disabled_desc:0 "The enemy advances, we retreat; the enemy camps, we harass; the enemy tires, we attack; the enemy retreats, we pursue."
 
