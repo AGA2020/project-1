@@ -220,7 +220,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger  organizer  adaptable_allower }
+			traits = { cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger  organizer }
 			skill = 6
 			attack_skill = 7
 			defense_skill = 10
@@ -654,7 +654,7 @@ characters = {
 			}
 		}
 		field_marshal = {
-			traits = { skilled_staffer commando cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist adaptable_allower organizer offn
+			traits = { skilled_staffer commando cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist organizer offn
 		 }
 			skill = 8
 			attack_skill = 6
