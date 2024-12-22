@@ -189,20 +189,27 @@ operations = {
                 }
             }
         }
-        days_mission_timeout = 948
+        days_mission_timeout = 984
         timeout_effect = {
-            set_country_flag = spainmechpart1
+            BUL = { set_country_flag = spainmechpart1 } 
+            GER = { set_country_flag = spainmechpart1 } 
             if = { 
                 limit = {
                     AND = {
-                        NOT = { has_global_flag = GER_weak_sperm } 
+                        NOT = { has_global_flag = GER_weak_sperm }
+                        NOT = { has_global_flag = spainmechpart1deliverycompleted }  
                         BUL = { is_ai = no }
                     }
                 } 
                 BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 384 producer = SWE } }
+                set_global_flag = spainmechpart1deliverycompleted
             } 
-            else = { 
+            ELSE_IF = {
+                limit = {
+                    NOT = { has_global_flag = spainmechpart1deliverycompleted }  
+                }
                 GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 384 producer = SWE } }
+                set_global_flag = spainmechpart1deliverycompleted
             }  
         }
     }
@@ -239,18 +246,25 @@ operations = {
             }
             days_mission_timeout = 163
             timeout_effect = {
-                set_country_flag = spainmechpart2
+                BUL = { set_country_flag = spainmechpart2 } 
+                GER = { set_country_flag = spainmechpart2 } 
                 if = { 
                     limit = {
                         AND = {
                             NOT = { has_global_flag = GER_weak_sperm } 
+                            NOT = { has_global_flag = spainmechpart2deliverycompleted }  
                             BUL = { is_ai = no }
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 674 producer = SWE } }
+                    set_global_flag = spainmechpart2deliverycompleted
                 } 
-                else = { 
+                ELSE_IF = {
+                    limit = {
+                        NOT = { has_global_flag = spainmechpart2deliverycompleted }  
+                    }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 674 producer = SWE } }
+                    set_global_flag = spainmechpart2deliverycompleted
                 }  
             }
             complete_effect = {
@@ -289,18 +303,25 @@ operations = {
             }
             days_mission_timeout = 172
             timeout_effect = {
-                set_country_flag = spainmechpart3
+                BUL = { set_country_flag = spainmechpart3 } 
+                GER = { set_country_flag = spainmechpart3 } 
                 if = { 
                     limit = {
                         AND = {
-                            NOT = { has_global_flag = GER_weak_sperm } 
+                            NOT = { has_global_flag = GER_weak_sperm }
+                            NOT = { has_global_flag = spainmechpart3deliverycompleted }   
                             BUL = { is_ai = no }
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1990 producer = SWE } }
+                    set_global_flag = spainmechpart3deliverycompleted
                 } 
-                else = { 
+                ELSE_IF = {
+                    limit = {
+                        NOT = { has_global_flag = spainmechpart3deliverycompleted }  
+                    }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 1990 producer = SWE } }
+                    set_global_flag = spainmechpart3deliverycompleted
                 }  
             }
             complete_effect = {
@@ -339,18 +360,25 @@ operations = {
             }
             days_mission_timeout = 201
             timeout_effect = {
-                set_country_flag = spainmechpart4
+                BUL = { set_country_flag = spainmechpart4 } 
+                GER = { set_country_flag = spainmechpart4 } 
                 if = { 
                     limit = {
                         AND = {
-                            NOT = { has_global_flag = GER_weak_sperm } 
+                            NOT = { has_global_flag = GER_weak_sperm }
+                            NOT = { has_global_flag = spainmechpart4deliverycompleted }    
                             BUL = { is_ai = no }
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4044 producer = SWE } }
+                    set_global_flag = spainmechpart4deliverycompleted
                 } 
-                else = { 
+                ELSE_IF = {
+                    limit = {
+                        NOT = { has_global_flag = spainmechpart4deliverycompleted }  
+                    }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4044 producer = SWE } }
+                    set_global_flag = spainmechpart4deliverycompleted
                 }  
             }
             complete_effect = {
@@ -389,18 +417,25 @@ operations = {
             }
             days_mission_timeout = 150
             timeout_effect = {
-                set_country_flag = spainmechpart5
+                BUL = { set_country_flag = spainmechpart5 } 
+                GER = { set_country_flag = spainmechpart5 } 
                 if = { 
                     limit = {
                         AND = {
                             NOT = { has_global_flag = GER_weak_sperm } 
+                            NOT = { has_global_flag = spainmechpart5deliverycompleted } 
                             BUL = { is_ai = no }
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4137 producer = SWE } }
+                    set_global_flag = spainmechpart5deliverycompleted
                 } 
-                else = { 
+                ELSE_IF = {
+                    limit = {
+                        NOT = { has_global_flag = spainmechpart5deliverycompleted }  
+                    }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 4137 producer = SWE } }
+                    set_global_flag = spainmechpart5deliverycompleted
                 }  
             }
             complete_effect = {
@@ -439,18 +474,25 @@ operations = {
             }
             days_mission_timeout = 211
             timeout_effect = {
-                set_country_flag = spainmechpart6
+                BUL = { set_country_flag = spainmechpart6 } 
+                GER = { set_country_flag = spainmechpart6 } 
                 if = { 
                     limit = {
                         AND = {
                             NOT = { has_global_flag = GER_weak_sperm } 
+                            NOT = { has_global_flag = spainmechpart6deliverycompleted } 
                             BUL = { is_ai = no }
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9634 producer = SWE } }
+                    set_global_flag = spainmechpart6deliverycompleted
                 } 
-                else = { 
+                ELSE_IF = {
+                    limit = {
+                        NOT = { has_global_flag = spainmechpart6deliverycompleted }  
+                    }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9634 producer = SWE } }
+                    set_global_flag = spainmechpart6deliverycompleted
                 }  
             }
             complete_effect = {
@@ -489,18 +531,25 @@ operations = {
             }
             days_mission_timeout = 152
             timeout_effect = {
-                set_country_flag = spainmechpart7
+                BUL = { set_country_flag = spainmechpart7 } 
+                GER = { set_country_flag = spainmechpart7 } 
                 if = { 
                     limit = {
                         AND = {
                             NOT = { has_global_flag = GER_weak_sperm } 
+                            NOT = { has_global_flag = spainmechpart7deliverycompleted }
                             BUL = { is_ai = no }
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9755 producer = SWE } }
+                    set_global_flag = spainmechpart7deliverycompleted
                 } 
-                else = { 
+                ELSE_IF = {
+                    limit = {
+                        NOT = { has_global_flag = spainmechpart7deliverycompleted }  
+                    }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9755 producer = SWE } }
+                    set_global_flag = spainmechpart7deliverycompleted
                 }  
             }
             complete_effect = {
@@ -539,18 +588,25 @@ operations = {
             }
             days_mission_timeout = 192
             timeout_effect = {
-                set_country_flag = spainmechpart8
+                BUL = { set_country_flag = spainmechpart8 } 
+                GER = { set_country_flag = spainmechpart8 } 
                 if = { 
                     limit = {
                         AND = {
                             NOT = { has_global_flag = GER_weak_sperm } 
+                            NOT = { has_global_flag = spainmechpart8deliverycompleted }
                             BUL = { is_ai = no }
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 14408 producer = SWE } }
+                    NOT = { has_global_flag = spainmechpart8deliverycompleted }
                 } 
-                else = { 
+                ELSE_IF = {
+                    limit = {
+                        NOT = { has_global_flag = spainmechpart8deliverycompleted }  
+                    }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 14408 producer = SWE } }
+                    NOT = { has_global_flag = spainmechpart8deliverycompleted }
                 }  
             }
             complete_effect = {
@@ -589,18 +645,25 @@ operations = {
             }
             days_mission_timeout = 164
             timeout_effect = {
-                set_country_flag = spainmechpart9
+                BUL = { set_country_flag = spainmechpart9 } 
+                GER = { set_country_flag = spainmechpart9 } 
                 if = { 
                     limit = {
                         AND = {
-                            NOT = { has_global_flag = GER_weak_sperm } 
+                            NOT = { has_global_flag = GER_weak_sperm }
+                            NOT = { has_global_flag = spainmechpart9deliverycompleted } 
                             BUL = { is_ai = no }
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 14000 producer = SWE } }
+                    set_global_flag = spainmechpart9deliverycompleted
                 } 
-                else = { 
+                ELSE_IF = {
+                    limit = {
+                        NOT = { has_global_flag = spainmechpart9deliverycompleted }  
+                    }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 14000 producer = SWE } }
+                    set_global_flag = spainmechpart9deliverycompleted
                 }  
             }
             complete_effect = {
@@ -639,18 +702,25 @@ operations = {
             }
             days_mission_timeout = 122
             timeout_effect = {
-                set_country_flag = spainmechpart10
+                BUL = { set_country_flag = spainmechpart10 } 
+                GER = { set_country_flag = spainmechpart10 } 
                 if = { 
                     limit = {
                         AND = {
                             NOT = { has_global_flag = GER_weak_sperm } 
+                            NOT = { has_global_flag = spainmechpart10deliverycompleted } 
                             BUL = { is_ai = no }
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9215 producer = SWE } }
+                    set_global_flag = spainmechpart10deliverycompleted
                 } 
-                else = { 
+                ELSE_IF = {
+                    limit = {
+                        NOT = { has_global_flag = spainmechpart10deliverycompleted }  
+                    }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 9215 producer = SWE } }
+                    set_global_flag = spainmechpart10deliverycompleted
                 }  
             }
             complete_effect = {
@@ -689,18 +759,25 @@ operations = {
             }
             days_mission_timeout = 72
             timeout_effect = {
-                set_country_flag = spainmechpart11
+                BUL = { set_country_flag = spainmechpart11 } 
+                GER = { set_country_flag = spainmechpart11 } 
                 if = { 
                     limit = {
                         AND = {
-                            NOT = { has_global_flag = GER_weak_sperm } 
+                            NOT = { has_global_flag = GER_weak_sperm }
+                            NOT = { has_global_flag = spainmechpart11deliverycompleted }  
                             BUL = { is_ai = no }
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5987 producer = SWE } }
+                    set_global_flag = spainmechpart11deliverycompleted
                 } 
-                else = { 
+                ELSE_IF = {
+                    limit = {
+                        NOT = { has_global_flag = spainmechpart11deliverycompleted }  
+                    }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 5987 producer = SWE } }
+                    set_global_flag = spainmechpart11deliverycompleted
                 }  
             }
             complete_effect = {
@@ -739,18 +816,25 @@ operations = {
             }
             days_mission_timeout = 160
             timeout_effect = {
-                set_country_flag = spainmechpart12
+                BUL = { set_country_flag = spainmechpart12 } 
+                GER = { set_country_flag = spainmechpart12 } 
                 if = { 
                     limit = {
                         AND = {
                             NOT = { has_global_flag = GER_weak_sperm } 
+                            NOT = { has_global_flag = spainmechpart12deliverycompleted } 
                             BUL = { is_ai = no }
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13710 producer = SWE } }
+                    set_global_flag = spainmechpart12deliverycompleted
                 } 
-                else = { 
+                ELSE_IF = {
+                    limit = {
+                        NOT = { has_global_flag = spainmechpart12deliverycompleted }  
+                    }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 13710 producer = SWE } }
+                    set_global_flag = spainmechpart12deliverycompleted
                 }  
             }
             complete_effect = {
