@@ -599,14 +599,14 @@ operations = {
                         }
                     } 
                     BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 14408 producer = SWE } }
-                    NOT = { has_global_flag = spainmechpart8deliverycompleted }
+                    set_global_flag = spainmechpart8deliverycompleted
                 } 
                 ELSE_IF = {
                     limit = {
                         NOT = { has_global_flag = spainmechpart8deliverycompleted }  
                     }
                     GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 14408 producer = SWE } }
-                    NOT = { has_global_flag = spainmechpart8deliverycompleted }
+                    set_global_flag = spainmechpart8deliverycompleted
                 }  
             }
             complete_effect = {
