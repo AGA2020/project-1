@@ -189,7 +189,7 @@ operations = {
                 }
             }
         }
-        days_mission_timeout = 984
+        days_mission_timeout = 948
         timeout_effect = {
             BUL = { set_country_flag = spainmechpart1 } 
             GER = { set_country_flag = spainmechpart1 } 
