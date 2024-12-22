@@ -786,6 +786,32 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SPA_martyrdom_for_primo_de_rivera
+		available = {
+		}
+		bypass = {
+			has_global_flag = scw_over
+		}
+		prerequisite = { focus = SPA_save_the_alcazar }
+		
+		icon = GFX_goal_generic_secret_weapon
+		x = -1
+		y = 1
+		relative_position_id = SPA_save_the_alcazar
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
 		id = SPA_extol_the_martyrs_of_the_war
 		available = {
 		}
@@ -1520,32 +1546,6 @@ focus_tree = {
 
 		completion_reward = {
 			activate_mission = SPA_save_the_alcazar_mission
-		}
-	}
-
-	focus = {
-		id = SPA_martyrdom_for_primo_de_rivera
-		available = {
-		}
-		bypass = {
-			has_global_flag = scw_over
-		}
-		prerequisite = { focus = SPA_save_the_alcazar }
-		
-		icon = GFX_goal_generic_secret_weapon
-		x = -1
-		y = 1
-		relative_position_id = SPA_save_the_alcazar
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			add_war_support = 0.1
-			add_popularity = {
-			    ideology = fascism
-			    popularity = 0.05
-			}
 		}
 	}
 
@@ -3604,7 +3604,6 @@ focus_tree = {
 		bypass = {
 		}
 		prerequisite = { focus = SPR_prepare_for_the_next_war }
-		mutually_exclusive = { focus = SPR_enemies_of_our_enemy }
 
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		x = 0
