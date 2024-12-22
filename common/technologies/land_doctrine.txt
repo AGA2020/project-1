@@ -3452,7 +3452,13 @@ technologies = {
 		category_army = {
 			default_morale = 0.2
 		}
-		allow_branch = { OR = { tag = ROM tag = SOV } }		
+		allow_branch = { 
+			OR = { 
+				tag = ROM 
+				tag = SOV
+				tag = HUN
+			} 
+		}		
 		resistance_growth_on_our_occupied_states = 0.25 
 		doctrine = yes	
 		research_cost = 4.5

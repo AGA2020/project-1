@@ -24,7 +24,16 @@ on_actions = {
 	}	
 	on_startup = {
 		effect = {
-			if = { limit = { SPR = { is_ai = yes } } GER = { activate_decision = mech_delivery_SPR_part1 } }
+			if = { 
+				limit = { 
+					SPR = { is_ai = yes } 
+            		BUL = { is_ai = no }
+				} 
+				BUL = { activate_decision = mech_delivery_SPR_part1 }
+			}
+			else = { 
+				GER = { activate_decision = mech_delivery_SPR_part1 }
+			}
 			ETH = {
 				transfer_units_fraction = {
 					target = ITA

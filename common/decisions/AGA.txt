@@ -167,7 +167,10 @@ operations = {
         fire_only_once = yes
 
         allowed = {
-            tag = GER
+            OR = {
+                tag = GER
+                tag = BUL
+            }
         }
         available = {
             hidden_trigger = {
@@ -175,7 +178,6 @@ operations = {
             }
         }
         visible = {
-            original_tag = GER
         }
         cancel_trigger = {
             OR = {
@@ -208,7 +210,10 @@ operations = {
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
-                tag = GER
+                OR = {
+                    tag = GER
+                    tag = BUL
+                }
             }
             fire_only_once = yes
             ai_will_do = {
@@ -255,7 +260,10 @@ operations = {
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
-                tag = GER
+                OR = {
+                    tag = GER
+                    tag = BUL
+                }
             }
             fire_only_once = yes
             ai_will_do = {
@@ -302,7 +310,10 @@ operations = {
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
-                tag = GER
+                OR = {
+                    tag = GER
+                    tag = BUL
+                }
             }
             fire_only_once = yes
             ai_will_do = {
@@ -349,7 +360,10 @@ operations = {
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
-                tag = GER
+                OR = {
+                    tag = GER
+                    tag = BUL
+                }
             }
             fire_only_once = yes
             ai_will_do = {
@@ -396,7 +410,10 @@ operations = {
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
-                tag = GER
+                OR = {
+                    tag = GER
+                    tag = BUL
+                }
             }
             fire_only_once = yes
             ai_will_do = {
@@ -443,7 +460,10 @@ operations = {
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
-                tag = GER
+                OR = {
+                    tag = GER
+                    tag = BUL
+                }
             }
             fire_only_once = yes
             ai_will_do = {
@@ -490,7 +510,10 @@ operations = {
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
-                tag = GER
+                OR = {
+                    tag = GER
+                    tag = BUL
+                }
             }
             fire_only_once = yes
             ai_will_do = {
@@ -537,7 +560,10 @@ operations = {
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
-                tag = GER
+                OR = {
+                    tag = GER
+                    tag = BUL
+                }
             }
             fire_only_once = yes
             ai_will_do = {
@@ -584,7 +610,10 @@ operations = {
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
-                tag = GER
+                OR = {
+                    tag = GER
+                    tag = BUL
+                }
             }
             fire_only_once = yes
             ai_will_do = {
@@ -631,7 +660,10 @@ operations = {
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
-                tag = GER
+                OR = {
+                    tag = GER
+                    tag = BUL
+                }
             }
             fire_only_once = yes
             ai_will_do = {
@@ -678,7 +710,10 @@ operations = {
         icon = GFX_decision_generic_industry
             name = mech_delivery_SPR_part1
             allowed = {
-                tag = GER
+                OR = {
+                    tag = GER
+                    tag = BUL
+                }
             }
             fire_only_once = yes
             ai_will_do = {
