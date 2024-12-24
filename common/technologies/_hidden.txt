@@ -5,7 +5,7 @@ technologies = {
 		}
 	
 		category_all_armor = {
-			initiative = 0.009
+			initiative = 0.008
 		}
 		category_light_infantry = {
 			initiative = 0.01

@@ -241,7 +241,7 @@ Technologies = {
                     
                 }
                 available = {
-                        date > 1940.5.1
+                        date > 1939.12.01
                     }
                 complete_effect = {
                     SWE = {
