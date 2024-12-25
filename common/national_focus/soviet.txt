@@ -4426,25 +4426,12 @@ focus_tree = {
 			add_to_variable = { SOV_defense_industry_breakthrough_factor = 0.05 }
 			add_to_variable = { SOV_defense_industry_army_artillery_defence_factor = 0.05 }
 			custom_effect_tooltip = SOV_pc_of_mortar_armament_ns_tt
-
-			if = { #DEFAULT COMMIE
-				limit = {
-					has_government = communism
-				}
-				add_tech_bonus = {
-					name = SOV_pc_of_mortar_armament_name_default
-					bonus = 0.75
-					uses = 2
-					category = artillery
-				}
-			}
-			else = { #ALT IDEOLOGY
-				add_tech_bonus = {
-					name = SOV_pc_of_mortar_armament_name_alt
-					bonus = 0.75
-					uses = 2
-					category = artillery
-				}
+			add_tech_bonus = {
+				name = SOV_pc_of_mortar_armament_name_default
+				bonus = 0.75
+				uses = 2
+				technology = antitank4
+				technology = antitank5
 			}
 
 			219 = {
