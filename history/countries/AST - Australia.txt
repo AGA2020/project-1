@@ -76,6 +76,7 @@ if = {
 			bba_early_transport_plane = 1
 			engines_1 = 1
 			aa_lmg = 1
+			aircraft_construction = 1
 		}
 	else = {
 		set_air_oob = "AST_1936_air_legacy"
