@@ -295,7 +295,6 @@ if = {
 		has_dlc = "Arms Against Tyranny"
 	}
 	#Fascists
-	recruit_character = FIN_vilho_helanen
 	recruit_character = FIN_reino_ala_kulju
 
 	#Socialists
@@ -306,7 +305,6 @@ if = {
 	recruit_character = FIN_kaisu_mirjami_rydberg
 	recruit_character = FIN_sandra_lehtinen
 	recruit_character = FIN_kullervo_manner
-	recruit_character = FIN_arvo_tuominen
 }
 
 #Set up flags for Civil Wars
