@@ -211,7 +211,7 @@ Technologies = {
                 }
             }
         }
-}         
+    }         
     auto_gun3_allies = {
         # icon = generic_operation
         allowed = {
