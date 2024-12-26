@@ -3408,10 +3408,7 @@ technologies = {
 		}
 		allow_branch = { 
 			NOT = { 
-				OR = {
-					tag = ROM
-					tag = SOV
-				}
+				tag = SOV
 			}
 		}
 		doctrine = yes	
