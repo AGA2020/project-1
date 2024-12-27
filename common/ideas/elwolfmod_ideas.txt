@@ -146,7 +146,6 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = 100
 				conversion_cost_mil_to_civ_factor = 100
 				enemy_operative_detection_chance = -200
-				intelligence_agency_defense = -1
 			}
 		}
 	}

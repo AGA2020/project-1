@@ -148,8 +148,6 @@ check_has_focus_tree_to_switch_to_democratic = {
 }
 
 check_has_focus_tree_to_switch_to_communism = {
-	NOT = { tag = PRC }
-	NOT = { tag = SIK }
 	NOT = { tag = MAN }
 	NOT = { tag = SOV }
 	NOT = {
@@ -161,12 +159,6 @@ check_has_focus_tree_to_switch_to_communism = {
 	NOT = {
 		AND = {
 			tag = JAP
-			has_dlc = "Waking the Tiger"
-		}
-	}
-	NOT = {
-		AND = {
-			tag = YUN
 			has_dlc = "Waking the Tiger"
 		}
 	}
@@ -536,10 +528,6 @@ is_available_to_collaboration_government = { # occupied_countries.1 should be up
 			FROM = { original_tag = YUG }
 			original_tag = ITA
 		}
-		AND = {
-			FROM = { original_tag = DNZ }
-			original_tag = POL
-		}
 		any_country_with_original_tag = {
 			original_tag_to_check = FROM
 			is_puppet_of = PREV # if already created one do not create another
@@ -629,26 +617,9 @@ has_same_ideology = {
 
 is_latin_american_country = {
 	OR = {
-		original_tag = CUB
-		original_tag = ARG
 		original_tag = BRA
-		original_tag = URG
-		original_tag = PAR
-		original_tag = CHL
-		original_tag = BOL
-		original_tag = PRU
-		original_tag = ECU
-		original_tag = COL
 		original_tag = VEN
-		original_tag = PAN
-		original_tag = COS
-		original_tag = NIC
-		original_tag = HON
-		original_tag = ELS
-		original_tag = GUA
 		original_tag = MEX
-		original_tag = HAI
-		original_tag = DOM
 	}
 }
 
@@ -956,57 +927,6 @@ country_can_be_reasonable_target_of_wargoal = { #Expected scopes: Target country
 }
 
 is_unlikely_country_tag = {
-	OR = {
-	    tag = BRI
-	    tag = CAT
-	    tag = NAV
-	    tag = GLC
-	    tag = ADU
-	    tag = BRI
-	    tag = OCC
-	    tag = COR
-	    tag = DNZ
-	    tag = KSH
-	    tag = CKK
-	    tag = FER
-	    tag = YAK
-	    tag = VLA
-	    tag = KKP
-	    tag = YAM
-	    tag = TAY
-	    tag = OVO
-	    tag = NEN
-	    tag = KOM
-	    tag = CHU
-	    tag = MEL
-	    tag = RIF
-	    tag = HAR
-	    tag = TIG
-	    tag = AFA
-	    tag = BEG
-	    tag = GBA
-	    tag = SID
-	    tag = ORO
-	    tag = QEM
-	    tag = LBV
-	    tag = PAP
-	    tag = TOS
-	    tag = SPM
-	    tag = TTS
-		tag = BSK
-		tag = TAT
-		tag = UDM
-		tag = KHA
-		tag = VGE
-		tag = KAL
-		tag = KAR
-		tag = SIL
-		tag = KSH
-		tag = ALT
-		tag = UZB
-		tag = KHI
-		tag = SMI
-	}
 }
 
 big_communist_exists = {
@@ -1273,6 +1193,7 @@ ai_has_completed_army_doctrine = {
 		has_tech = c3i_theory
 		has_tech = infiltration_in_depth
 		has_tech = continuous_offensive
+		has_tech = guerilla_warfare
 	}
 }
 

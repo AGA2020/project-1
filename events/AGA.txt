@@ -172,4 +172,32 @@ country_event = {
 
 	}
 }
+country_event = {
+	id = aga.248
+	title = aga.248.t
+	desc = aga.248.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = HUN
+		HUN = {
+			num_divisions_in_states = {
+				 count > 1
+				 states = { 203 226 202 809 197 207 204 }
+			}
+		}
+		HUN = {
+			has_tech = guerilla_warfare
+		}
+	}
+
+	fire_only_once = yes 
+    immediate = {
+				 HUN = { set_country_flag = guerillaviolater }
+    }
+	option = {
+		name = aga.248.a
+
+	}
+}
 

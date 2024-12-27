@@ -1,5 +1,25 @@
 operations = {
-
+   #test = {
+   #     # icon = generic_operation
+   #     fire_only_once = yes
+   #     cost = 0
+   #     ai_will_do = {
+   #         factor = 0
+   #     }
+   #     allowed = {
+   #         tag = GER
+   #     }
+   #     available = {
+   #         mio:GER_porsche_organization = {
+   #             has_mio_size > 5
+   #         }                     
+   #     }
+   #     complete_effect = {
+   #         mio:GER_daimler_benz_organization = {
+   #             add_mio_funds = 10000
+   #         }
+   #     }
+   # }
    help_rp_usa = {
         # icon = generic_operation
         fire_only_once = no

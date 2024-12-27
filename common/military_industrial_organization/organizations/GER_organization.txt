@@ -77,7 +77,10 @@ GER_porsche_organization = {
 		position = { x=@tank_hoesch_X y=@tank_hoesch_Y }
 
 		visible = {
-			FROM = { original_tag = GER }
+			OR = {
+				FROM = { original_tag = GER }
+				FROM = { original_tag = SPR }				
+			}
 		}
 
 		available = {
@@ -112,7 +115,10 @@ GER_porsche_organization = {
 		relative_position_id = GER_mio_trait_hoesch_facilities
 
 		visible = {
-			FROM = { original_tag = GER }
+			OR = {
+				FROM = { original_tag = GER }
+				FROM = { original_tag = SPR }				
+			}
 		}
 
 		available = {
@@ -146,7 +152,10 @@ GER_porsche_organization = {
 		relative_position_id = generic_mio_trait_one_piece_hull_side_coverings
 
 		visible = {
-			FROM = { original_tag = GER }
+			OR = {
+				FROM = { original_tag = GER }
+				FROM = { original_tag = SPR }				
+			}
 		}
 
 		available = {
@@ -177,7 +186,10 @@ GER_porsche_organization = {
 		relative_position_id = generic_mio_trait_one_piece_hull_side_coverings
 
 		visible = {
-			FROM = { original_tag = GER }
+			OR = {
+				FROM = { original_tag = GER }
+				FROM = { original_tag = SPR }				
+			}
 		}
 
 		available = {
@@ -207,7 +219,10 @@ GER_porsche_organization = {
 		relative_position_id = generic_mio_trait_simplified_transmission_system
 
 		visible = {
-			FROM = { original_tag = GER }
+			OR = {
+				FROM = { original_tag = GER }
+				FROM = { original_tag = SPR }				
+			}
 		}
 
 		available = {
