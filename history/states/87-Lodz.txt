@@ -8,18 +8,12 @@ state={
 		owner = POL
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 2
+			industrial_complex = 4
 		}
 		victory_points = {
 			9508 10
 		}
 		add_core_of = POL
-
-		1939.1.1 = {
-			buildings = {
-				air_base = 3
-			}
-		}
 	}
 
 	provinces={

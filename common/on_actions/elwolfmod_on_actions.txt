@@ -52,6 +52,17 @@ on_actions = {
 						days = 1
 					}
 				}
+				if = {
+					limit = {
+						AND = {
+							FIN = { NOT = { has_completed_focus = FIN_the_lone_wolf } }
+							FIN = { is_ai = no }
+						}
+					}
+					GER = {
+						add_to_faction = FIN
+					}
+				}
 			}
 			#if = {
 			#	limit = {

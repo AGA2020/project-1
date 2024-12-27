@@ -124,6 +124,7 @@ GER_porsche_organization = {
 				localization_key = available_scientist_one_line_tt
 				CHARACTER = GER_ferdinand_porsche
 			}
+
 		}
 
 		organization_modifier = {
