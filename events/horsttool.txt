@@ -59,3 +59,15 @@ news_event = {
 		clear_variable=this.target_country
 	}
 }
+news_event = {
+	id = horsttool.6
+	title = "Host Tool"
+	desc = " [From.Getname] gave 10 compliance to [From.From.Owner.Getname] in state [?ROOT.marked_states^num]"
+	picture = GFX_news_event_001
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = "OK..."
+		clear_variable=this.target_country
+	}
+}

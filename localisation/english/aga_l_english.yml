@@ -1,4 +1,6 @@
 ﻿l_english:
+  add_compliance:0 "Add 10 Compliance"
+  add_compliance_delayed:0 "Add 10 Compliance To Marked State"
   auto_amtrak:0 "Amtrak"
   hosttool_gun2:0 "Gun 2"
   auto_gun3_allies:0 "Gun 3"

@@ -177,6 +177,27 @@ scripted_gui = {
 						}
 					}
 				}
+				add_compliance_click = {
+					owner={
+						set_temp_variable = { ROOT.taker = this}
+						for_each_loop = {
+						    array = ROOT.marked_states
+						    value = state
+						    var:state = { add_compliance = 10 }
+						}
+						GER = {
+							news_event={id=horsttool.6}
+						}
+						ROOT = {
+							for_each_scope_loop={
+								array=marked_states
+								clear_variable=mark_status
+							}
+							clear_array=marked_states
+							clear_variable=first_marked_state
+						}
+					}
+				}			
 					####Thrasy you put everything in here that happens when you click the button. Look at others for examples -milky
 					cheat1_click={if={limit={Root={has_country_flag=cheating}} set_variable={Root.selected_cheat=1} ROOT={clr_country_flag=cheating}} else={ROOT={set_country_flag=cheating}}	}
 					cheat2_click={set_variable={Root.selected_cheat=2} ROOT={clr_country_flag=cheating}}
