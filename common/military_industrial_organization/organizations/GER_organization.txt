@@ -19,8 +19,11 @@ GER_porsche_organization = {
 	include = generic_heavy_tank_organization
 	icon = GFX_idea_porsche
 	
-	allowed = {	
-		original_tag = GER 
+	allowed = {
+		OR = {
+			original_tag = GER 
+			original_tag = SPR
+		} 
 	}
 
 	available = {
