@@ -189,7 +189,6 @@ IF = {
 	recruit_character = BRA_lindolfo_collor
 	recruit_character = BRA_jose_americo_de_almeida
 	recruit_character = BRA_anisio_teixeira
-	recruit_character = BRA_integralist_militia_general
 	recruit_character = BRA_pedro_henrique
 	recruit_character = BRA_pedro_de_alcantara
 	recruit_character = BRA_alianca_nacional_libertadora_council
