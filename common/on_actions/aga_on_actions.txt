@@ -23,7 +23,27 @@ on_actions = {
 		}
 	}	
 	on_startup = {
+
 		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = argentina_existence
+						option = allow
+					}
+				}
+            	every_state = {
+            	    limit = {
+            	        is_argentina = yes
+            	    }
+            	    transfer_state_to = ARG
+            	    add_core_of = ARG
+            	    ARG = { add_ideas = USA_monroe_doctrine_idea }
+            	    ARG = { load_oob = ARG_1936 }  
+            	    ARG = { load_oob = ARG_1936_air_bba }
+            	    ARG = { load_oob = ARG_1936_naval_mtg }  
+            	}
+			}
 			if = { 
 				limit = { 
 					SPR = { is_ai = yes } 

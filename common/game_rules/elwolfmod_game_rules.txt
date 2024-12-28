@@ -241,3 +241,35 @@ elwolf_guerrilla_tactics = {
 		desc = "Gurilla Tatics are not able to be Selected"
 	}
 }
+
+argentina_existence = {
+	name = "Argentina"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_eng_trade_unions_support"
+	option = {
+		name = allow
+		text = "RAllow"
+		desc = "Argentina will be playable (Not Reccomended)"
+	}
+	default = {
+		name = banned
+		text = "GBanned"
+		desc = "Argentina will not be playable (Reccomended)"
+	}
+}
+
+mongolia_existence = {
+	name = "Mongolia"
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_eng_trade_unions_support"
+	option = {
+		name = allow
+		text = "RAllow"
+		desc = "Mongolia will be playable (Not Reccomended)"
+	}
+	default = {
+		name = banned
+		text = "GBanned"
+		desc = "Mongolia will not be playable (Reccomended)"
+	}
+}

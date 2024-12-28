@@ -1,0 +1,34 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		exampel_trigger = yes
+#	}
+# 
+
+is_argentina = {
+	OR = {
+		state = 184
+		state = 278
+		state = 508
+		state = 510
+		state = 956
+		state = 958
+		state = 512
+		state = 955
+		state = 954
+		state = 953
+		state = 509
+		state = 511
+		state = 957
+		state = 960
+		state = 959
+	}
+}
