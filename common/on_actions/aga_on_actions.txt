@@ -192,48 +192,13 @@ on_actions = {
 	on_ruling_party_change = {
 		# temp var old_ideology_token is available for effects
 		effect = {
-			if = { 
-				limit = { tag = RAJ } 
-					440 = { add_compliance = 100 }
-					442 = { add_compliance = 100 }
-					443 = { add_compliance = 100 }
-					444 = { add_compliance = 100 }
-					445 = { add_compliance = 100 }
-					288 = { add_compliance = 100 }
-					640 = { add_compliance = 100 }
-			}
-		}
-		effect = {
-			if = { 
-				limit = { tag = ROM } 
-                every_state = {
-                    limit = {
-                        is_controlled_by = ROM
-                    }
-                    add_compliance = 100
-                } 
-			}
-		}
-		effect = {
-			if = { 
-				limit = { tag = HUN } 
-                every_state = {
-                    limit = {
-                        is_controlled_by = HUN
-                    }
-                    add_compliance = 100
-                } 
-			}
-		}
-		effect = {
-			if = { 
-				limit = { tag = ARG } 
-                every_state = {
-                    limit = {
-                        is_controlled_by = ARG
-                    }
-                    add_compliance = 100
-                } 
+			every_controlled_state = {
+				limit = {
+					has_resistance = yes
+				}
+				set_temp_variable = { new_compliance = compliance }
+				multiply_temp_variable = { new_compliance = 2 }
+				set_compliance = new_compliance
 			}
 		}
 	}	
