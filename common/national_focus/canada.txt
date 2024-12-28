@@ -941,7 +941,19 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-
+		complete_tooltip = {
+			if = {
+				limit = { has_global_flag = depressionremoval1 }
+				swap_ideas = {
+					remove_idea = CAN_great_depression_1
+					add_idea = CAN_great_depression_2		
+				}
+			}
+			else_if = {
+				limit = { has_idea = CAN_great_depression_2 }
+				remove_ideas = CAN_great_depression_2
+			}
+		}
 		completion_reward = {
 			if = {
 				limit = { has_idea = CAN_great_depression_1 }
@@ -949,6 +961,7 @@
 					remove_idea = CAN_great_depression_1
 					add_idea = CAN_great_depression_2		
 				}
+				set_global_flag=depressionremoval1
 			}
 			else_if = {
 				limit = { has_idea = CAN_great_depression_2 }
