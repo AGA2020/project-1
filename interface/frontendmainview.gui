@@ -121,13 +121,6 @@ guiTypes = {
 		animation_time = 1000
 		size = { width = 256 height = 768}
 		
-		iconType =
-		{
-			name ="frontend_game_logo"
-			spriteType = "GFX_frontend_game_logo"
-			position = { x= 20 y = 20 }
-		}
-		
 	}
 
 	#containerWindowType = {
@@ -161,20 +154,6 @@ guiTypes = {
 			position = { x = -50 y = 25 }
 			quadTextureSprite ="achievements"
 			pdx_tooltip = "MENU_ACHIEVEMENTS"
-		}
-
-		iconType =
-		{
-			name ="frontend_dev_logo"
-			spriteType = "GFX_frontend_dev_logo"
-			position = { x= 15 y = 15 }
-		}
-		
-		iconType =
-		{
-			name ="pdx_int_logo"
-			spriteType = "GFX_pdx_int_logo"
-			position = { x= 135 y = 15 }
 		}		
 		
 	}		
@@ -279,8 +258,8 @@ guiTypes = {
 	### MAIN MENU PANEL (bottom)
 	containerWindowType = {
 		name ="mainmenu_panel_bottom"
-		position = { x=-400 y =-190}
-		size = { width = 320 height = 335 }
+		position = { x=0 y =-340}
+		size = { width = 320 height = 435 }
 		Orientation = CENTER
 		Origo = center		
 
@@ -324,7 +303,7 @@ guiTypes = {
 		instantTextBoxType = {
 
 			name ="version_label"
-			position = { x = 35 y = 301 }
+			position = { x = 35 y = 396 }
 			textureFile = ""
 			font = "hoi_18b"
 			borderSize = {x = 0 y = 0}
@@ -378,10 +357,20 @@ guiTypes = {
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
+
+		ButtonType = {
+			name = "credits_button"
+			position = {  x = 16 y = 218 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "FE_CREDITS"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
 		
 		ButtonType = {
 			name = "nudge_button"
-			position = { x = 16 y = 218 }
+			position = { x = 16 y = 258 }
 			quadTextureSprite ="GFX_main_lobby_button"	
 			buttonText = "Nudge!"
 			buttonFont = "hoi_24header"
@@ -389,7 +378,7 @@ guiTypes = {
 
 		ButtonType = {
 			name = "exit_button"
-			position = { x = 16 y = 255 }
+			position = { x = 16 y = 300 }
 			quadTextureSprite ="GFX_main_lobby_button"
 			font = "hoi_24header"			
 			text = "FE_EXIT"			
