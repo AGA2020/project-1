@@ -38,12 +38,12 @@ on_actions = {
             	    }
             	    transfer_state_to = ARG
             	    add_core_of = ARG
-            	    ARG = { add_ideas = USA_monroe_doctrine_idea }
-            	    ARG = { load_oob = ARG_1936 }  
-            	    ARG = { load_oob = ARG_1936_air_bba }
-            	    ARG = { load_oob = ARG_1936_naval_mtg }  
             	}
 			}
+			else = {
+            WST = { transfer_state = 278 }
+            278 = { remove_core_of = ARG }
+           	}
 			if = { 
 				limit = { 
 					SPR = { is_ai = yes } 
