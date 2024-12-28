@@ -1499,13 +1499,6 @@ early_ship_hull_carrier = {
 
 	improved_ship_hull_submarine = {
 
-		allow = {
-			has_game_rule = {
-				rule = max_submarine_tech
-				option = sub3
-			}
-		}
-
 		enable_equipments = {
 			ship_hull_submarine_3
 		}
@@ -1561,7 +1554,7 @@ early_ship_hull_carrier = {
 				option = sub4
 			}
 		}
-
+		
 		enable_equipments = {
 			ship_hull_submarine_4
 		}
