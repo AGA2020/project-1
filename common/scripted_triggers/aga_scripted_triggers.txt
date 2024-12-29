@@ -32,3 +32,27 @@ is_argentina = {
 		state = 959
 	}
 }
+
+DIPLOMACY_WAR_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			AND = {
+			date>1940.1.1
+			date<1941.1.1
+			tag = JAP
+			}
+		}
+		date>1940.12.31
+	}
+	else_if = {
+		limit = {
+			tag = JAP
+		}
+		NOT ={ 
+			FROM = { tag = SOV } 
+		} 
+	}
+}
+
+DIPLOMACY_REQUEST_INTERNATIONAL_MARKET_ACCESS_RIGHTS_ENABLE_TRIGGER = { always = no } 
+DIPLOMACY_REQUEST_EQUIPMENT_PURCHASE_ENABLE_TRIGGER = { always = no } 
