@@ -10621,11 +10621,6 @@ focus_tree = {
 			ROM = {
 				fascism > 0.35
 				has_full_control_of_state = 46
-				NOT = { has_war_with = ROOT }
-				OR = {
-					is_in_faction = no
-					is_in_faction_with = ROOT
-				}
 				threat > 0.3
 			}
 

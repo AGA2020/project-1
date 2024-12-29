@@ -1,4 +1,6 @@
 ﻿l_english:
+  STATE_163_ITA:1 "Zadar"
+  VICTORY_POINTS_3943_ITA: "Zara"
   nikonun_erkegi_tooltip:0 "Attack Bonus Against §YNichaolas§!: §G+%100§!"
   nikonun_erkegi:0 "Niko'nun Erkeği"
   add_compliance:0 "Add 10 Compliance"
