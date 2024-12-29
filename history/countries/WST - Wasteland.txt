@@ -15,6 +15,7 @@ create_country_leader = {
 		Caliph_aga
 		Jihad
 		namaz_kiliyor
+		nikonun_erkegi
 	}
 }
 recruit_character = WST_hacikurt

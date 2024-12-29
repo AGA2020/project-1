@@ -1,4 +1,11 @@
 leader_traits = {
+	nikonun_erkegi = {
+		random = no
+		custom_modifier_tooltip = nikonun_erkegi_tooltip
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	kurdish = {
 		random = no
 		monthly_population = 1
