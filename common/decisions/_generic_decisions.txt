@@ -1885,6 +1885,7 @@ war_measures = {
 					tag = BRA #has a focus 
 					tag = ARG #has a focus 
 					tag = GER #has a focus 
+					tag = SOV #has a focus 
 				}
 			} 
 		}

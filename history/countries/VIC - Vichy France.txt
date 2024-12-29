@@ -991,8 +991,3 @@ if = {
 	}
 }
 
-recruit_character = VIC_philippe_petain
-recruit_character = VIC_marcel_bucard
-recruit_character = VIC_georges_bonnet
-recruit_character = VIC_maurice_gamelin
-recruit_character = VIC_maxime_weygand

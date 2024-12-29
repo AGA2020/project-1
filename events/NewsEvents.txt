@@ -3021,6 +3021,7 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_cairo
+		sound_effect = "faso"
 	}
 	
 	mean_time_to_happen = {
@@ -3193,6 +3194,7 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_cairo_ita
+		sound_effect = "faso"
 	}
 	
 	mean_time_to_happen = {
