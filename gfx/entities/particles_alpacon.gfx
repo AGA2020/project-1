@@ -1,0 +1,7 @@
+objectTypes = {
+	pdxparticle = {
+		name = "alpacon_overrun_particle"
+		type = "alpacon_overrun_file"
+		scale = 1.5
+	}
+}

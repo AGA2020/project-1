@@ -13,7 +13,7 @@ entity = {
 	
 	default_state = "idle"
 	state = { name = "idle" state_time = 3 looping = no
-		event = { time = 0 particle = "overrun_particle" keep_particle = yes sound = { soundeffect = "dayibenyalarimya_soundeffect" } } 
+		event = { time = 0 particle = "alpacon_overrun_particle" keep_particle = yes sound = { soundeffect = "dayibenyalarimya_soundeffect" } } 
 	}
 }
 

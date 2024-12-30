@@ -2,7 +2,7 @@ sound = {
 	name = "dayibenyalarimya"
 	file = "dayi.wav"
 	always_load = no
-	volume = 1.0
+	volume = 2.0
 }
 
 soundeffect = {
@@ -16,7 +16,7 @@ soundeffect = {
 	is3d = yes
 	max_audible = 3
 
-	volume = 1
+	volume = 2
 	fade_in = 0
 	fade_out = 0
 }
