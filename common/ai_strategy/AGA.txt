@@ -16,3 +16,13 @@ be_useful_ai_please = {
 		value = 10
 	}
 }
+ai_no_gar = {
+	enable = {
+		always = yes
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = guarantee
+		value = -1000
+	}
+}
