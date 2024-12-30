@@ -1,0 +1,22 @@
+sound = {
+	name = "dayibenyalarimya"
+	file = "dayi.wav"
+	always_load = no
+	volume = 1.0
+}
+
+soundeffect = {
+	name = dayibenyalarimya_soundeffect
+	falloff = "falloff_80"
+	sounds = {
+		sound = dayibenyalarimya
+	}
+
+	loop = no
+	is3d = yes
+	max_audible = 3
+
+	volume = 1
+	fade_in = 0
+	fade_out = 0
+}
