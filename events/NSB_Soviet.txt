@@ -5783,7 +5783,6 @@ country_event = {
 				}
 			}
 		}
-		hidden_effect = { news_event = { id = nsb_news.103 days = 1 } }
 	}
 }
 
