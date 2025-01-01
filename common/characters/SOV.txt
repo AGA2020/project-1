@@ -589,8 +589,20 @@ characters = {
 			legacy_id = 0
 			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
+		advisor = {
+			slot = high_command
+			idea_token = semyon_budyonny
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+			}
+			traits = {
+				army_CombinedArms_3
+			}
+		}
 	}
-
 	SOV_ivan_chernyakhovsky = {
 		name = SOV_ivan_chernyakhovsky
 		portraits = {
