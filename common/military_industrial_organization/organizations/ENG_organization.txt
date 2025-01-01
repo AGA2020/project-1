@@ -123,6 +123,7 @@ ENG_vauxhall_organization = {
 				has_dlc = "Trial of Allegiance"
 			}
 			tag = BUL
+			tag = MEX
 		}
 	}
 
@@ -158,16 +159,6 @@ ENG_vauxhall_organization = {
 				}
 				#is_in_faction_with = ENG
 				NOT = { has_completed_focus = BUL_nationalization }
-			}
-		}
-		IF = {
-			limit = { FROM = { original_tag = BRA } }
-			custom_trigger_tooltip = {
-				tooltip = has_invited_mio_tt
-				FROM = {
-					has_completed_focus = BRA_invite_foreign_companies
-					has_country_flag = has_vauxhall_mio_flag
-				}
 			}
 		}
 	}
