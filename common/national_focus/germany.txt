@@ -17240,10 +17240,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = {
-				limit = {
-					59 = { is_fully_controlled_by = ROOT }
-				}
+
 				59 = { #Hannover
 					add_resource = {
 						type = steel
@@ -17254,95 +17251,17 @@ focus_tree = {
 						scope = GER
 					}
 				}
-				random_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						NOT = {
-							state = 59
-						}
-						OR = {
-							has_resources_amount = {
-								resource = oil
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = aluminium
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = rubber
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = tungsten
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = steel
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = chromium
-								amount > 19
-								delivered = no
-							}
-						}
+				66 = { #Hannover
+					add_resource = {
+						type = steel
+						amount = 6
 					}
 					add_dynamic_modifier = { 
 						modifier = GER_four_year_plan_initiative_modifier
 						scope = GER
 					}
 				}
-			}
-			else = {
-				every_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						OR = {
-							has_resources_amount = {
-								resource = oil
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = aluminium
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = rubber
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = tungsten
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = steel
-								amount > 19
-								delivered = no
-							}
-							has_resources_amount = {
-								resource = chromium
-								amount > 19
-								delivered = no
-							}
-						}
-					}
-					random_select_amount = 2
-					add_dynamic_modifier = { 
-						modifier = GER_four_year_plan_initiative_modifier
-						scope = GER
-					}
-				}
-			}
+				
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
