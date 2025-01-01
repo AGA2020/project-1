@@ -2,3 +2,5 @@
 
 
 finland_coastline = { OR = { state = 928 state = 111  state = 926 state = 149 state = 929 state = 148 state = 722	}}
+
+spaingerman_coastline = { OR = { state = 790 state = 792 } }

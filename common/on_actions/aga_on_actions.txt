@@ -1,14 +1,30 @@
 on_actions = {
-	#on_monthly = {
-	#	effect = {
-	#		if = {
-	#			limit = {
-	#				any_country = { axis = yes has_tech = antitank2 }
-	#			}
-	#			axis = { scoped_play_song = "entertheeast" }			
-	#		}
-	#	}
-	#}
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					HOL = {
+						has_equipment = {
+							convoy_1 < 1000
+						}
+						has_capitulated = yes
+					}
+				}
+				HOL = {
+					add_equipment_to_stockpile = {
+						type = convoy
+						amount = 1000
+					}
+				}
+			}
+			#if = {
+			#	limit = {
+			#		any_country = { axis = yes has_tech = antitank2 }
+			#	}
+			#	axis = { scoped_play_song = "entertheeast" }			
+			#}
+		}
+	}
 	on_state_control_changed = {
 		effect = {
 			if = {
@@ -206,6 +222,12 @@ on_actions = {
 			if = { 
 				limit = { OR = {  finland_coastline = yes   }  } 
 				 teleport_armies = {limit = { original_tag = SOV  } to_state = 637 }     every_country = {  delete_unit = { state = 637 disband = yes  } } PREV = { if = { limit = { FIN = { owns_state = 150 } }transfer_state_to = FIN}  else = { transfer_state_to = GER }  }
+			}
+		}
+		effect ={  
+			if = { 
+				limit = { OR = {  spaingerman_coastline = yes   }  } 
+				 teleport_armies = {limit = { is_allied_country = yes  } to_state = 361 }     every_country = {  delete_unit = { state = 361 disband = yes  } } PREV = { if = { limit = { GER = { owns_state = 64 } }transfer_state_to = GER}  else = { transfer_state_to = GER }  }
 			}
 		}
 	}

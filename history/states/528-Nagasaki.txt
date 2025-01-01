@@ -23,6 +23,9 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 			}
 
 		}
+        add_dynamic_modifier = {
+            modifier = kamikaze
+        }
 		victory_points = {
 			1025 10 
 		}

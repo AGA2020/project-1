@@ -23,3 +23,36 @@ spain_nowar_aga = {
 		state_production_speed_naval_base_factor = -2
 
 }
+kamikaze = {
+	remove_trigger = {
+		AND = { 
+			OR = {
+				USA = { has_full_control_of_state = 524 }
+				any_other_country = {
+					is_in_faction_with = USA
+					has_full_control_of_state = 524
+				}
+			}
+			OR = {
+				USA = { has_full_control_of_state = 526 }
+				any_other_country = {
+					is_in_faction_with = USA
+					has_full_control_of_state = 526
+				}
+			}
+			OR = {
+				USA = { has_full_control_of_state = 645 }
+				any_other_country = {
+					is_in_faction_with = USA
+					has_full_control_of_state = 645
+				}
+			}
+		}
+	}
+
+	icon = GFX_modifiers_FIN_motti_tactics_modifier
+
+		army_core_attack_factor = 1
+		army_core_defence_factor = 1
+
+}
