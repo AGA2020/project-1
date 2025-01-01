@@ -2566,7 +2566,7 @@ shared_focus = {
 	cost = 10
 
 	available = {
-
+		date > 1941.1.1
 	}
 
 	bypass = {
@@ -2626,7 +2626,7 @@ shared_focus = {
 		}
 
 	available = {
-
+		date > 1941.1.1
 	}
 
 	bypass = {
@@ -2682,7 +2682,7 @@ shared_focus = {
 	cost = 10
 
 	available = {
-
+		date > 1941.1.1
 	}
 
 	bypass = {
@@ -2743,7 +2743,7 @@ shared_focus = {
 	cost = 10
 
 	available = {
-
+		date > 1941.1.1
 	}
 
 	bypass = {
