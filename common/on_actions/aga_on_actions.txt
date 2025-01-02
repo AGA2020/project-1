@@ -17,12 +17,92 @@ on_actions = {
 					}
 				}
 			}
-			#if = {
-			#	limit = {
-			#		any_country = { axis = yes has_tech = antitank2 }
-			#	}
-			#	axis = { scoped_play_song = "entertheeast" }			
-			#}
+			#axis = { scoped_play_song = "entertheeast" }	
+			if = {
+			    limit = {
+			        any_country = { axis = yes has_tech = survivability_studies }
+			    }
+			    every_country = {
+			        limit = {
+			            axis = yes
+			        }
+			        set_technology = {
+			            survivability_studies = 1
+			        }
+			    }
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			#axis = { scoped_play_song = "entertheeast" }	
+			if = {
+			    limit = {
+			        any_country = { axis = yes has_tech = survivability_studies }
+			    }
+			    every_country = {
+			        limit = {
+			            axis = yes
+			        }
+			        set_technology = {
+			            survivability_studies = 1
+			        }
+			    }
+			}
+			if = {
+			    limit = {
+			        any_country = { axis = yes has_tech = aa_hmg }
+			    }
+			    every_country = {
+			        limit = {
+			            axis = yes
+			        }
+			        set_technology = {
+			            aa_hmg = 1
+			        }
+			    }
+			}
+		}
+		effect = {
+			if = {
+			    limit = {
+			        any_country = { allies = yes has_tech = survivability_studies }
+			    }
+			    every_country = {
+			        limit = {
+			            allies = yes
+			        }
+			        set_technology = {
+			            survivability_studies = 1
+			        }
+			    }
+			}
+			if = {
+			    limit = {
+			        any_country = { allies = yes has_tech = aa_hmg }
+			    }
+			    every_country = {
+			        limit = {
+			            allies = yes
+			        }
+			        set_technology = {
+			            aa_hmg = 1
+			        }
+			    }
+			}
+			if = {
+			    limit = {
+			        any_country = { allies = yes has_tech = range_improvements }
+			    }
+			    every_country = {
+			        limit = {
+			            allies = yes
+			        }
+			        set_technology = {
+			            range_improvements = 1
+			        }
+			    }
+			}
 		}
 	}
 	on_state_control_changed = {

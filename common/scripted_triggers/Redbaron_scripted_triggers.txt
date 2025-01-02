@@ -27,9 +27,7 @@ allies = {
 		tag = USA
 		tag = RAJ
 		tag = SAF
-		tag = IRE
 		tag = SOV
-		tag = NOR
 	}
 }
 is_axis_country = {

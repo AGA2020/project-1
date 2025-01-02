@@ -2644,7 +2644,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 4
+		days = 20
 	}
 	
 	option = {
@@ -2719,7 +2719,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 2
+		days = 20
 	}
 	
 	option = {
@@ -3111,7 +3111,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 4
+		days = 20
 	}
 	
 	option = {
@@ -3542,7 +3542,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 4
+		days = 20
 	}
 	
 	option = {
@@ -3585,7 +3585,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 4
+		days = 20
 	}
 	
 	option = {
@@ -4030,7 +4030,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 4
+		days = 20
 	}
 	
 	option = {
@@ -4502,7 +4502,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 4
+		days = 20
 	}
 	
 	option = {
@@ -4545,7 +4545,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 4
+		days = 20
 	}
 	
 	option = {
@@ -4564,49 +4564,6 @@ news_event = {
 	option = {
 		name = news.100.c
 		trigger = { TAG = GER }
-	}
-}
-
-# The Fall of London (USSR)
-news_event = {
-	id = news.144
-	title = news.102.t
-	desc = news.144.d
-	picture = GFX_news_event_063
-	
-	major = yes
-	
-	trigger = {
-		126 = { is_controlled_by = SOV }
-		126 = { is_owned_by = ENG }
-		SOV = { has_war_with = ENG }
-		NOT = { has_global_flag = fall_of_london_sov }
-	}
-	
-	immediate = {
-		set_global_flag = fall_of_london_sov
-	}
-	
-	mean_time_to_happen = {
-		days = 4
-	}
-	
-	option = {
-		name = news.140.a
-		trigger = {
-			NOT = {
-				TAG = SOV
-				TAG = ENG
-			}
-		}
-	}
-	option = {
-		name = news.138.b
-		trigger = { TAG = SOV }
-	}
-	option = {
-		name = news.100.c
-		trigger = { TAG = ENG }
 	}
 }
 
@@ -4631,7 +4588,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 4
+		days = 20
 	}
 	
 	option = {
@@ -4650,49 +4607,6 @@ news_event = {
 	option = {
 		name = news.100.c
 		trigger = { TAG = GER }
-	}
-}
-
-# The Fall of Tokyo (USSR)
-news_event = {
-	id = news.146
-	title = news.135.t
-	desc = news.146.d
-	picture = GFX_news_event_072
-	
-	major = yes
-	
-	trigger = {
-		282 = { is_controlled_by = SOV }
-		282 = { is_owned_by = JAP }
-		SOV = { has_war_with = JAP }
-		NOT = { has_global_flag = fall_of_tokyo_sov }
-	}
-	
-	immediate = {
-		set_global_flag = fall_of_tokyo_sov
-	}
-	
-	mean_time_to_happen = {
-		days = 4
-	}
-	
-	option = {
-		name = news.145.a
-		trigger = {
-			NOT = {
-				TAG = SOV
-				TAG = JAP
-			}
-		}
-	}
-	option = {
-		name = news.138.b
-		trigger = { TAG = SOV }
-	}
-	option = {
-		name = news.100.c
-		trigger = { TAG = JAP }
 	}
 }
 
@@ -4736,101 +4650,6 @@ news_event = {
 	option = {
 		name = news.100.c
 		trigger = { TAG = SOV }
-	}
-}
-
-# The Fall of Tokyo (China)
-news_event = {
-	id = news.148
-	title = news.135.t
-	desc = news.148.d
-	picture = GFX_news_event_chinese_soldiers_march
-	
-	major = yes
-	
-	trigger = {
-		282 = { is_controlled_by = CHI }
-		282 = { is_owned_by = JAP }
-		JAP = { has_war_with = CHI }
-		NOT = { has_global_flag = fall_of_tokyo_chi }
-	}
-	
-	immediate = {
-		set_global_flag = fall_of_tokyo_chi
-	}
-	
-	mean_time_to_happen = {
-		days = 4
-	}
-	
-	option = {
-		name = news.145.a
-		trigger = {
-			NOT = {
-				TAG = CHI
-				TAG = JAP
-			}
-		}
-	}
-	option = {
-		name = news.132.b
-		trigger = { TAG = CHI }
-	}
-	option = {
-		name = news.100.c
-		trigger = { TAG = JAP }
-	}
-}
-
-# The Fall of Gibraltar (Spain)
-news_event = {
-	id = news.149
-	title = news.112.t
-	desc = news.149.d
-	picture = GFX_news_event_052
-	
-	major = yes
-	
-	trigger = {
-		any_other_country = {
-			original_tag = SPR
-			controls_state = 118
-			has_war_with = ENG
-		}
-		118 = { is_owned_by = ENG }
-		NOT = {
-			AND = {
-				has_global_flag = spanish_civil_war
-				NOT = { has_global_flag = scw_over }
-			}
-		}
-		NOT = { has_global_flag = fall_of_gibraltar_spa }
-	}
-	
-	immediate = {
-		set_global_flag = fall_of_gibraltar_spa
-	}
-	
-	mean_time_to_happen = {
-		days = 4
-	}
-	
-	option = {
-		name = news.145.a
-		trigger = {
-			NOT = { original_tag = SPR }
-			NOT = { tag = ENG }
-		}
-	}
-	option = {
-		name = news.132.b
-		trigger = { 
-			original_tag = SPR
-		}
-	}
-	option = {
-		name = news.100.c
-		trigger = { TAG = ENG }
 	}
 }
 
@@ -5145,7 +4964,7 @@ news_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 4
+		days = 20
 	}
 	
 	option = {
