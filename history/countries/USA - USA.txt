@@ -269,7 +269,6 @@ recruit_character = USA_donald_nelson
 recruit_character = USA_joseph_mccarthy
 recruit_character = USA_cordell_hull
 recruit_character = USA_harold_ickes
-recruit_character = USA_william_regnery
 recruit_character = USA_joseph_patterson
 recruit_character = USA_henry_stimson
 recruit_character = USA_victor_perlo
