@@ -171,6 +171,9 @@ on_actions = {
 				}
 
 				ITA_end_the_italo_ethiopian_war = yes
+				ITA_missiolinis_initialize_missiolinis_system = yes
+				ITA_missiolinis_system_available = yes
+				ITA_missiolinis_cd_ready = yes
 				delete_unit_template_and_units = {
 					division_template = "Chitet Sefari"
 					disband = yes				# if yes, equipment will be returned to country equipment. default is no
