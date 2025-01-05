@@ -134,6 +134,8 @@ on_actions = {
 	on_startup = {
 
 		effect = {
+            ENG = { load_oob = "ENG_1936_air_bba_carrier" }
+            JAP = { load_oob = "JAP_1936_air_bba_carrier" }
 			if = {
 				limit = {
 					has_game_rule = {

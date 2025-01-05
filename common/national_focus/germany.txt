@@ -8022,30 +8022,6 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "La Resistance" }
-				}
-				any_other_country = {
-					original_tag = SPR
-					has_government = fascism
-					has_volunteers_amount_from = {
-						tag = ROOT
-						count > 1
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				SPA = {
-					has_volunteers_amount_from = {
-						tag = ROOT
-						count > 1
-					}
-				}
-			}
 		}
 
 		continue_if_invalid = yes
