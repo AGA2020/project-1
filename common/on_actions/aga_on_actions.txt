@@ -103,6 +103,19 @@ on_actions = {
 			        }
 			    }
 			}
+			if = {
+			    limit = {
+			        any_country = { allies = yes has_tech = photo_reconnaisance }
+			    }
+			    every_country = {
+			        limit = {
+			            allies = yes
+			        }
+			        set_technology = {
+			            photo_reconnaisance = 1
+			        }
+			    }
+			}
 		}
 	}
 	on_state_control_changed = {
