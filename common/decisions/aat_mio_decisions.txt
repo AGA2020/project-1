@@ -7,12 +7,18 @@ foreign_mio_decisions_category = {
 
 		cost = 50
 
-		fire_only_once = yes 
+		fire_only_once = yes
+		
+		targets = { GER }
+		
 		allowed = {
-			tag = BUL 
+			tag = BUL
 		}
 
 		visible = {
+			GER = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
 			IF = {
 				limit = { original_tag = BUL }
 				has_completed_focus = BUL_contract_foreign_companies
@@ -23,6 +29,9 @@ foreign_mio_decisions_category = {
 		}
 
 		available = {
+			GER = { 
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
 			IF = {
 				limit = { original_tag = BUL }
 				OR = {
@@ -31,14 +40,6 @@ foreign_mio_decisions_category = {
 				}
 				#is_in_faction_with = GER
 				NOT = { has_completed_focus = BUL_nationalization }
-				GER = { 
-					has_opinion = {
-						target = ROOT
-						value > 49
-					}
-					has_capitulated = no
-					BUL_is_valid_subject = yes
-				}
 			}
 		}
 
@@ -92,11 +93,12 @@ foreign_mio_decisions_category = {
 
 		cost = 50
 
-		fire_only_once = yes 
+		fire_only_once = yes
+
+		targets = { GER }
+
 		allowed = {
-			OR = {
-				tag = BUL 
-			}
+			tag = BUL
 		}
 
 		visible = {
@@ -113,6 +115,9 @@ foreign_mio_decisions_category = {
 		}
 
 		available = {
+			GER = { 
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
 			IF = {
 				limit = { original_tag = BUL }
 				OR = {
@@ -121,14 +126,6 @@ foreign_mio_decisions_category = {
 				}
 				#is_in_faction_with = GER
 				NOT = { has_completed_focus = BUL_nationalization }
-				GER = { 
-					has_opinion = {
-						target = ROOT
-						value > 49
-					}
-					has_capitulated = no
-					BUL_is_valid_subject = yes
-				}
 			}
 		}
 
@@ -165,9 +162,16 @@ foreign_mio_decisions_category = {
 
 		ai_will_do = {
 			base = 10
+			modifier = {
+				factor = 5
+				GER = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				GER = { is_in_faction_with = ROOT }
+			}
 		}
 	}
-
 
 	# materiel
 	invite_GER_opel_organization = {
@@ -178,11 +182,21 @@ foreign_mio_decisions_category = {
 
 		fire_only_once = yes 
 
+		targets = { GER }
+		
 		allowed = {
-			tag = BUL 
+			OR = {
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				} 
+			}
 		}
 
 		visible = {
+			GER = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
 			IF = {
 				limit = { original_tag = BUL }
 				has_completed_focus = BUL_contract_foreign_companies
@@ -193,6 +207,10 @@ foreign_mio_decisions_category = {
 		}
 
 		available = {
+			GER = { 
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
 			IF = {
 				limit = { original_tag = BUL }
 				OR = {
@@ -201,15 +219,6 @@ foreign_mio_decisions_category = {
 				}
 				#is_in_faction_with = GER
 				NOT = { has_completed_focus = BUL_nationalization }
-				GER = { 
-					has_opinion = {
-						target = ROOT
-						value > 49
-					}
-					has_capitulated = no
-					BUL_is_valid_subject = yes
-				}
-
 			}
 		}
 
@@ -246,6 +255,845 @@ foreign_mio_decisions_category = {
 
 		ai_will_do = {
 			base = 10
+			modifier = {
+				factor = 5
+				GER = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				GER = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	# Soviet MIOs 
+	invite_SOV_okmo_organization = {
+
+		icon = generic_tank
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { SOV }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
+			}
+		}
+
+		visible = {
+			SOV = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				has_completed_focus = BUL_contract_foreign_companies
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			SOV = { 
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = SOV
+				}
+				#is_in_faction_with = SOV
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_okmo_mio_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = SOV_okmo_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_soviet_tank_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_soviet_tank_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+		base = 10
+			modifier = {
+				factor = 5
+				SOV = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				SOV = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	# Ships 
+	invite_SOV_nevskoye_design_bureau_organization = {
+
+		icon = generic_naval
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { SOV }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
+			}
+		}
+
+		visible = {
+			SOV = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					has_completed_focus = BUL_contract_foreign_companies
+					has_completed_focus = BUL_a_black_sea_fleet
+				}
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			SOV = { 
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = SOV
+				}
+				#is_in_faction_with = SOV
+				has_completed_focus = BUL_a_black_sea_fleet
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_nevskoye_mio_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = SOV_nevskoye_design_bureau_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_soviet_naval_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes 
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_soviet_naval_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				SOV = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				SOV = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	#Planes
+	invite_SOV_ilyushin_design_bureau_organization = {
+
+		icon = generic_air
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { SOV }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
+			}
+		}
+
+		visible = {
+			SOV = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				has_completed_focus = BUL_contract_foreign_companies
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			SOV = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = SOV
+				}
+				#is_in_faction_with = SOV
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_ilyushin_mio_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = SOV_ilyushin_design_bureau_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_soviet_aircraft_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_soviet_aircraft_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				SOV = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				SOV = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	# Materiel 
+	invite_SOV_gaz_organization = {
+
+		icon = generic_motorized
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { SOV }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				} 
+			}
+		}
+
+		visible = {
+			SOV = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				has_completed_focus = BUL_contract_foreign_companies
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			SOV = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = SOV
+				}
+				#is_in_faction_with = SOV
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_gaz_mio_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = SOV_gaz_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_soviet_materiel_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_soviet_materiel_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				SOV = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				SOV = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	# British MIOs 
+	# Tanks
+	invite_ENG_vickers_armstrong_eng_organization = {
+
+		icon = generic_tank
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { ENG }
+		
+		allowed = {
+			tag = BUL
+		}
+
+		visible = {
+			ENG = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				has_completed_focus = BUL_contract_foreign_companies
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			ENG = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+				}
+				#is_in_faction_with = ENG
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_vickers_mio_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = ENG_vickers_armstrong_eng_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_british_tank_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_british_tank_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				ENG = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				ENG = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	# Ships
+	invite_ENG_yarrow_shipbuilders_organization = {
+
+		icon = generic_naval
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { ENG }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
+			}
+		}
+
+		visible = {
+			ENG = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					has_completed_focus = BUL_contract_foreign_companies
+					has_completed_focus = BUL_a_black_sea_fleet
+				}
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			ENG = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+				}
+				#is_in_faction_with = ENG
+				has_completed_focus = BUL_a_black_sea_fleet
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_yarrow_mio_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = ENG_yarrow_shipbuilders_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_british_naval_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes 
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_british_naval_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				ENG = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				ENG = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	invite_ENG_john_brown_organization = {
+
+		icon = generic_naval
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { ENG }
+		
+		allowed = {
+			tag = BUL
+		}
+
+		visible = {
+			ENG = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					has_completed_focus = BUL_contract_foreign_companies
+					has_completed_focus = BUL_a_black_sea_fleet
+				}
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			ENG = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+				}
+				#is_in_faction_with = ENG
+				has_completed_focus = BUL_a_black_sea_fleet
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_ENG_john_brown_organization_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = ENG_john_brown_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_british_naval_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes 
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_british_naval_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				ENG = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				ENG = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+	# Planes 
+	invite_ENG_fairey_aviation_organization = {
+
+		icon = generic_air
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { ENG }
+		
+		allowed = {
+			tag = BUL
+		}
+
+		visible = {
+			ENG = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				has_completed_focus = BUL_contract_foreign_companies
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			ENG = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+				}
+				#is_in_faction_with = ENG
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_fairey_aviation_mio_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = ENG_fairey_aviation_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_british_aircraft_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_british_aircraft_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				ENG = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				ENG = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	# materiel
+	invite_ENG_vauxhall_organization = {
+
+		icon = generic_motorized
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { ENG }
+		
+		allowed = {
+			tag = BUL
+		}
+
+		visible = {
+			ENG = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				has_completed_focus = BUL_contract_foreign_companies
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			ENG = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+				}
+				#is_in_faction_with = ENG
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = { #This decision unlocks both Vauxhall MIOs (tanks and motorized)
+			hidden_effect = { set_country_flag = has_invited_vauxhall_mio_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = ENG_vauxhall_organization
+			show_mio_tooltip = ENG_vauxhall_automotive_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_british_materiel_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_british_materiel_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				ENG = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				ENG = { is_in_faction_with = ROOT }
+			}
 		}
 	}
 
@@ -259,13 +1107,21 @@ foreign_mio_decisions_category = {
 
 		fire_only_once = yes 
 
+		targets = { ITA }
+		
 		allowed = {
 			OR = {
-				tag = BUL 
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
 			}
 		}
 
 		visible = {
+			ITA = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
 			IF = {
 				limit = { original_tag = BUL }
 				has_completed_focus = BUL_contract_foreign_companies
@@ -276,6 +1132,10 @@ foreign_mio_decisions_category = {
 		}
 
 		available = {
+			ITA = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
 			IF = {
 				limit = { original_tag = BUL }
 				OR = {
@@ -284,16 +1144,7 @@ foreign_mio_decisions_category = {
 				}
 				#is_in_faction_with = ITA
 				NOT = { has_completed_focus = BUL_nationalization }
-				ITA = {
-					has_opinion = {
-						target = ROOT
-						value > 49
-					}
-					has_capitulated = no
-					BUL_is_valid_subject = yes
-				}
 			}
-
 		}
 
 		complete_effect = {
@@ -348,11 +1199,16 @@ foreign_mio_decisions_category = {
 
 		fire_only_once = yes 
 
+		targets = { ITA }
+		
 		allowed = {
-			tag = BUL 
+			tag = BUL
 		}
 
 		visible = {
+			ITA = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
 			IF = {
 				limit = { original_tag = BUL }
 				OR = {
@@ -366,6 +1222,10 @@ foreign_mio_decisions_category = {
 		}
 
 		available = {
+			ITA = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
 			IF = {
 				limit = { original_tag = BUL }
 				OR = {
@@ -375,15 +1235,6 @@ foreign_mio_decisions_category = {
 				#is_in_faction_with = ITA
 				has_completed_focus = BUL_a_black_sea_fleet
 				NOT = { has_completed_focus = BUL_nationalization }
-				ITA = {
-					has_opinion = {
-						target = ROOT
-						value > 49
-					}
-					has_capitulated = no
-					BUL_is_valid_subject = yes
-				}
-
 			}
 		}
 
@@ -439,11 +1290,21 @@ foreign_mio_decisions_category = {
 
 		fire_only_once = yes 
 
+		targets = { ITA }
+		
 		allowed = {
-			tag = BUL 
+			OR = {
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
+			}
 		}
 
 		visible = {
+			ITA = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
 			IF = {
 				limit = { original_tag = BUL }
 				has_completed_focus = BUL_contract_foreign_companies
@@ -454,6 +1315,10 @@ foreign_mio_decisions_category = {
 		}
 
 		available = {
+			ITA = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
 			IF = {
 				limit = { original_tag = BUL }
 				OR = {
@@ -462,15 +1327,6 @@ foreign_mio_decisions_category = {
 				}
 				#is_in_faction_with = ITA
 				NOT = { has_completed_focus = BUL_nationalization }
-				ITA = {
-					has_opinion = {
-						target = ROOT
-						value > 49
-					}
-					has_capitulated = no
-					BUL_is_valid_subject = yes
-				}
-
 			}
 		}
 
@@ -507,6 +1363,14 @@ foreign_mio_decisions_category = {
 		
 		ai_will_do = {
 			base = 10
+			modifier = {
+				factor = 5
+				ITA = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				ITA = { is_in_faction_with = ROOT }
+			}
 		}
 	}
 }
