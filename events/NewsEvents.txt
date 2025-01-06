@@ -4133,6 +4133,7 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = liberation_of_paris
+		hidden_effect = { sound_effect = "raven" }
 	}
 	
 	option = {

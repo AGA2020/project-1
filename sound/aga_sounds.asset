@@ -20,3 +20,17 @@ soundeffect = {
 	fade_in = 0
 	fade_out = 0
 }
+
+sound = {
+	name = "raven"
+	file = "aga_sound/raven.wav"
+}
+
+soundeffect = {
+	name = "raven"
+	sounds = {
+		sound = 
+			raven
+	}
+	volume = 1.0
+}
