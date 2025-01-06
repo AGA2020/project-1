@@ -7080,10 +7080,32 @@ BUL_foreign_agreements = {
 				}
 				BUL_is_valid_subject = yes
 			}
+			#Manage Cap
+			if = { # Being in faction grants 10 civs cap
+				limit = {
+					is_in_faction_with = ENG
+					has_completed_focus = BUL_approach_the_united_kingdom
+				}
+				custom_trigger_tooltip = {
+					tooltip = BUL_british_industrial_agreements_cap_faction_tt
+					check_variable = { BUL_british_industrial_investments < BUL_industrial_investments_max_cap }
+				}
+			}
+			else_if = { # Approaching country grants 5 civs cap
+				limit = {
+					has_completed_focus = BUL_approach_the_united_kingdom
+				}
+				custom_trigger_tooltip = {
+					tooltip = BUL_british_industrial_agreements_cap_approach_tt
+					check_variable = { BUL_british_industrial_investments < BUL_industrial_investments_medium_cap }
+				}
+			}
+			else = { #Basic Cap
 				custom_trigger_tooltip = {
 					tooltip = BUL_british_industrial_agreements_cap_basic_tt
 					check_variable = { BUL_british_industrial_investments < BUL_industrial_investments_basic_cap }
 				}
+			}
 			NOT = { has_war_with = ENG }
 			NOT = { is_justifying_wargoal_against = ENG }
 			OR = {
@@ -7190,10 +7212,31 @@ BUL_foreign_agreements = {
 				BUL_is_valid_subject = yes
 			}
 			#Manage Cap
+			if = { # Being in faction grants 10 civs cap
+				limit = {
+					is_in_faction_with = SOV
+					has_completed_focus = BUL_soviet_bulgarian_treaty_of_mutual_assistance
+				}
+				custom_trigger_tooltip = {
+					tooltip = BUL_soviet_industrial_agreements_cap_faction_tt
+					check_variable = { BUL_soviet_industrial_investments < BUL_industrial_investments_max_cap }
+				}
+			}
+			else_if = { # Approaching country grants 5 civs cap
+				limit = {
+					has_completed_focus = BUL_soviet_bulgarian_treaty_of_mutual_assistance
+				}
+				custom_trigger_tooltip = {
+					tooltip = BUL_soviet_industrial_agreements_cap_approach_tt
+					check_variable = { BUL_soviet_industrial_investments < BUL_industrial_investments_medium_cap }
+				}
+			}
+			else = { #Basic Cap
 				custom_trigger_tooltip = {
 					tooltip = BUL_soviet_industrial_agreements_cap_basic_tt
 					check_variable = { BUL_soviet_industrial_investments < BUL_industrial_investments_basic_cap }
 				}
+			}
 			NOT = { has_war_with = SOV }
 			NOT = { is_justifying_wargoal_against = SOV }
 			OR = {
