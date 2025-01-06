@@ -821,7 +821,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			NOT = { has_idea = BUL_army_restrictions }
+			NOT = { has_idea = BUL_army_restrictions_aat }
 		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
