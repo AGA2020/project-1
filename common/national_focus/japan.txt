@@ -638,6 +638,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
+		custom_effect_tooltip = available_economy_law
+		show_ideas_tooltip = banzai_economy
+		custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
@@ -663,6 +666,7 @@ focus_tree = {
 				}
 				set_state_flag = JAP_zaibatsus_factories
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = JAP_zaibatsus
 				add_idea = JAP_guide_the_zaibatsus
