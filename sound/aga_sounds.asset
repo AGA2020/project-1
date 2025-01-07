@@ -34,3 +34,17 @@ soundeffect = {
 	}
 	volume = 1.0
 }
+
+sound = {
+	name = "raven2"
+	file = "aga_sound/raven2.wav"
+}
+
+soundeffect = {
+	name = "raven2"
+	sounds = {
+		sound = 
+			raven2
+	}
+	volume = 1.0
+}

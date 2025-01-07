@@ -13,7 +13,6 @@ containerWindowType = {
 	Orientation = center
 	Origo = center
 	clipping = no 
-	
 	#background = {
 	#	name = "Background"		
 	#	quadTextureSprite ="GFX_frontend_bg"
@@ -344,7 +343,7 @@ containerWindowType = {
 	animation_type = decelerated
 	animation_time = 1000
 	size = { width = 256 height = 768}
-	
+	show_sound = raven2
 	iconType =
 	{
 		name ="frontend_game_logo"
