@@ -435,6 +435,14 @@ set_war_support = 0.3
 1939.1.1 = {
 }
 
+create_production_license = {
+    target = HUN
+    equipment = {
+        type = anti_air_equipment_1
+        version = 0
+    }
+    cost_factor = 0
+}
 
 # Setup German Politics
 set_politics = {

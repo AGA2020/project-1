@@ -33,6 +33,22 @@ on_actions = {
 			}
 		}
 	}
+	on_join_faction = {
+		effect = {
+			if = {
+			    limit = {
+					ROOT = { tag = JAP } 
+					FROM = { tag = GER }
+			    }
+			    SOV = {
+					annex_country = {
+					    target = JAP
+					    transfer_troops = yes
+					}
+				}
+			}
+		}
+	}
 	on_weekly = {
 		effect = {
 			#axis = { scoped_play_song = "entertheeast" }	
