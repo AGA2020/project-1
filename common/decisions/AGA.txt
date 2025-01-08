@@ -3428,6 +3428,9 @@ operations = {
                         }
                     }  
                 }
+                hidden_effect = {
+                set_global_flag = ger_annexed_minor             
+                }
             }
 
         }

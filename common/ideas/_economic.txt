@@ -402,9 +402,14 @@ ideas = {
 							ratio > 0.5
 						}
 					}
+					tag = SPR
 					AND = {
-					tag = ITA
-					ITA = { has_war_with = YUG }
+ 						OR = {
+							tag = ITA
+							tag = HUN
+							tag = ROM
+						}
+						ITA = { has_war_with = YUG }
 					}
 				}
 
