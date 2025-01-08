@@ -400,7 +400,7 @@ SPR_the_inevitable_civil_war = {
 		remove_effect = {
 			add_days_mission_timeout = {
 				mission = SPR_military_plot_republicans
-				days = 37
+				days = 25
 			}
 			random_unit_leader = {
 				limit = {
