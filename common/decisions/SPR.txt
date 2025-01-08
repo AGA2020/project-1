@@ -291,7 +291,7 @@ SPR_the_inevitable_civil_war = {
 			add_stability = 0.05
 			add_days_mission_timeout = {
 				mission = SPR_military_plot_republicans
-				days = 37
+				days = 25
 			}
 			clr_country_flag = SPR_inevitable_civil_war_in_progress_flag
 			clr_country_flag = SPA_political_assassination_flag
