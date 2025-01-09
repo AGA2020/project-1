@@ -7,14 +7,15 @@
  
  OBSERVER:0 "§HObserve§!\nMoves player to observer mode\n\n"
  OBSERVER_DELAYED:0 ""
- WHITEPEACE:0 "§HWhitepeace§!\nCountry will be whitepeaced with every enemy\n\n"
+
+ WHITEPEACE:0 "§HWhitepeace§!\nCountry will be whitepeaced with every enemy\n\n"first_marked_state
  WHITEPEACE_DELAYED:0 ""
   
  CLEAR_ALL_MARKINGS:0 "§HClear All Marks§!\nEvery mark on world will be removed\n\n"
  CLEAR_ALL_MARKINGS_DELAYED:0 ""
 
- TRANSFER_STATES:0 "§HTransfer States§!\nTransfer marked states to this country\n\n"
- TRANSFER_STATES_DELAYED:0 ""
+ TRANSFER_HOSTOOL:0 "§HTransfer Host Tool§!\nSelected Country is given the Host Tool\n\n"
+ TRANSFER_HOSTOOL_DELAYED:0 ""
  
  ADD_CORES:0 "§HAdd cores§!\nAdd cores to marked states for this country\n\n"
  ADD_CORES_DELAYED:0 ""
@@ -42,8 +43,9 @@
  
  ST_TOOLTIP_on:0 "§HActivate 'Host Tool'§!"
  ST_TOOLTIP_off:0 "§HDeactivate 'Host Tool'§!"
-transfer_states_on:0 "Horst Tool: £trigger_no"
-transfer_states_off:0 "Horst Tool: £trigger_yes"
+ host_transfer_states_on:0 "Host Tool: £trigger_no"
+ host_transfer_states_off:0 "Host Tool: £trigger_yes"
+ hosttool_efficency:0 "Temp Efficency"
 
  CHEAT_SELECT:0   "Select cheat"
  CHEAT1:0   "Generic - 100%"
@@ -75,3 +77,24 @@ transfer_states_off:0 "Horst Tool: £trigger_yes"
  horsthelp.2.t:0 "Help with Horsttool"
  horsthelp.2.d:0 "The Horsttool system is made for hosts to have an easier time with their games and not waste time on hotjoins, and for games not to be over if Germany researches something wrong with its bonuses, etc. The horsttool has a few functionalities: \n\n 1. Changing borders \nThe horsttool can annex countries, transfer states and add cores. To annex a country, mark one of its states, then click on the country you want to annex it to and click the annex button. To transfer states/add cores, mark the state and then click on the recieving country and click transfer states/add cores. \n\n2. Adding tech bonuses.\n To do so, click on the target country, click on the bonus you want to add to it and click the 'Cheat' button with the research icon.\n\n3. Sending players to observer. \nTo do so, click on the country the player is playing and click the Observe button. \n\n4. Whitepeace countries. \nTo whitepeace a country, click on the target country, and click the Whitepeace button."
  horsthelp.2.a:0 "Thank you Horst, very cool!"
+
+ pause_blocker_block_all_tt:0 "§HPause Block All Nations§!"
+ pause_blocker_block_all_delayed_tt:0 "Selecting this button will revoke pause rights for all nations"
+ pause_blocker_unblock_all_tt:0 "§HUn-Pause Block All Nations§!"
+ pause_blocker_unblock_all_delayed_tt:0 "Selecting this button will grant pause rights to all nations"
+ pause_blocker_country_block_tt:0 "Country Pause Rights:"
+ pause_blocker_block_country_tt:0 "§HPause Block Selected Country§!"
+ pause_blocker_block_country_delayed_tt:0 "Selected country will loose pause rights"
+ pause_blocker_unblock_country_tt:0 "§HUn-Pause Block Selected Country§!"
+ pause_blocker_unblock_country_delayed_tt:0 "Selected country will gain pause rights"
+
+resourcesteel:0 "[?resource@steel|0Y]"
+ resourcesteel1:0 "[?resource@steel|0+]"
+ resourcerubber:0 "[?resource@rubber|0Y]"
+ resourcerubber1:0 "[?resource@rubber|0+]"
+ resourcealuminium:0 "[?resource@aluminium|0Y]"
+ resourcealuminim1:0 "[?resource@aluminium|0+]"
+ resourcetungsten:0 "[?resource@tungsten|0Y]"
+ resourcetungsten1:0 "[?resource@tungsten|0+]"
+ resourcechromium:0 "[?resource@chromium|0Y]"
+ resourcechromium1:0 "[?resource@chromium|0+]"
