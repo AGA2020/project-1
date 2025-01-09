@@ -255,7 +255,7 @@ scripted_gui = {
 				}
 
 			}
-		
+
 			toogle_mark_click = {
 				if={
 					limit={check_variable={host_mark_status=0}}
@@ -265,130 +265,169 @@ scripted_gui = {
 				else={clear_variable=host_mark_status
 					remove_from_array={ROOT.host_marked_states=THIS}}
 				set_variable={ROOT.first_marked_state=ROOT.host_marked_states^0}
-			}			
-				
-				add_cores_click = {
-					owner={
-						set_temp_variable = { ROOT.taker = this}
-						for_each_loop={
-							array=ROOT.marked_states
-							value=state
-							var:state={add_core_of=var:taker}
-						}
-						GER = {
-							news_event={id=horsttool.4}
-						}
-						ROOT = {
-							for_each_scope_loop={
-								array=marked_states
-								clear_variable=mark_status
-							}
-							clear_array=marked_states
-							clear_variable=first_marked_state
-						}
-					}
-				}
-				add_compliance_click = {
-					owner={
-						set_temp_variable = { ROOT.taker = this}
-						for_each_loop = {
-						    array = ROOT.marked_states
-						    value = state
-						    var:state = { add_compliance = 10 }
-						}
-						GER = {
-							news_event={id=horsttool.6}
-						}
-						ROOT = {
-							for_each_scope_loop={
-								array=marked_states
-								clear_variable=mark_status
-							}
-							clear_array=marked_states
-							clear_variable=first_marked_state
-						}
-					}
-				}			
-					####Thrasy you put everything in here that happens when you click the button. Look at others for examples -milky
-					cheat1_click={if={limit={Root={has_country_flag=cheating}} set_variable={Root.selected_cheat=1} ROOT={clr_country_flag=cheating}} else={ROOT={set_country_flag=cheating}}	}
-					cheat2_click={set_variable={Root.selected_cheat=2} ROOT={clr_country_flag=cheating}}
-					cheat3_click={set_variable={Root.selected_cheat=3} ROOT={clr_country_flag=cheating}}
-					cheat4_click={set_variable={Root.selected_cheat=4} ROOT={clr_country_flag=cheating}}
-					cheat5_click={set_variable={Root.selected_cheat=5} ROOT={clr_country_flag=cheating}}
-					cheat6_click={set_variable={Root.selected_cheat=6} ROOT={clr_country_flag=cheating}}
-					cheat7_click={set_variable={Root.selected_cheat=7} ROOT={clr_country_flag=cheating}}
-					cheat8_click={set_variable={Root.selected_cheat=8} ROOT={clr_country_flag=cheating}}
-					cheat9_click={set_variable={Root.selected_cheat=9} ROOT={clr_country_flag=cheating}}
-					cheat10_click={set_variable={Root.selected_cheat=10} ROOT={clr_country_flag=cheating}}
-					cheat11_click={set_variable={Root.selected_cheat=11} ROOT={clr_country_flag=cheating}}
-					cheat12_click={set_variable={Root.selected_cheat=12} ROOT={clr_country_flag=cheating}}
-					cheat13_click={set_variable={Root.selected_cheat=13} ROOT={clr_country_flag=cheating}}
-					cheat14_click={set_variable={Root.selected_cheat=14} ROOT={clr_country_flag=cheating}}
-					cheat15_click={set_variable={Root.selected_cheat=15} ROOT={clr_country_flag=cheating}}
-					cheat16_click={set_variable={Root.selected_cheat=16} ROOT={clr_country_flag=cheating}}
-					cheat17_click={set_variable={Root.selected_cheat=17} ROOT={clr_country_flag=cheating}}
-					cheat18_click={set_variable={Root.selected_cheat=18} ROOT={clr_country_flag=cheating}}
-					cheat19_click={set_variable={Root.selected_cheat=19} ROOT={clr_country_flag=cheating}}
-					cheat20_click={set_variable={Root.selected_cheat=20} ROOT={clr_country_flag=cheating}}
-					cheat21_click={set_variable={Root.selected_cheat=21} ROOT={clr_country_flag=cheating}}
-				}
-				properties = {
-					toogle_mark={ frame = mark_status }
-				}
-			
-			triggers = {
-				observer_click_enabled = {owner = { is_ai=no}	}	
-				observer_visible = {	}		
-				add_cheat_click_enabled = {check_variable={Root.selected_cheat>0}}
-				cheat1_visible={}
-				annex_country_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
-				cheat1_text_visible={}
-				cheat2_visible={ROOT={has_country_flag=cheating}}
-				cheat3_visible={ROOT={has_country_flag=cheating}}
-				cheat4_visible={ROOT={has_country_flag=cheating}}
-				cheat2_text_visible={ROOT={has_country_flag=cheating}}
-				cheat3_text_visible={ROOT={has_country_flag=cheating}}
-				award_states_click_enabled = {	check_variable = { ROOT.marked_states^num > 0 }	}
-				cheat4_text_visible={ROOT={has_country_flag=cheating}}
-				cheat5_visible={ROOT={has_country_flag=cheating}}
-				cheat5_text_visible={ROOT={has_country_flag=cheating}}
-				cheat6_visible={ROOT={has_country_flag=cheating}}
-				cheat7_visible={ROOT={has_country_flag=cheating}}
-				cheat6_text_visible={ROOT={has_country_flag=cheating}}
-				cheat7_text_visible={ROOT={has_country_flag=cheating}}
-				cheat8_visible={ROOT={has_country_flag=cheating}}
-				cheat9_visible={ROOT={has_country_flag=cheating}}
-				cheat8_text_visible={ROOT={has_country_flag=cheating}}
-				cheat9_text_visible={ROOT={has_country_flag=cheating}}
-				cheat10_visible={ROOT={has_country_flag=cheating}}
-				cheat11_visible={ROOT={has_country_flag=cheating}}
-				cheat12_visible={ROOT={has_country_flag=cheating}}
-				cheat13_visible={ROOT={has_country_flag=cheating}}
-				cheat14_visible={ROOT={has_country_flag=cheating}}
-				cheat15_visible={ROOT={has_country_flag=cheating}}
-				cheat16_visible={ROOT={has_country_flag=cheating}}
-				cheat17_visible={ROOT={has_country_flag=cheating}}
-				cheat18_visible={ROOT={has_country_flag=cheating}}
-				cheat19_visible={ROOT={has_country_flag=cheating}}
-				cheat20_visible={ROOT={has_country_flag=cheating}}
-				cheat21_visible={ROOT={has_country_flag=cheating}}
-				cheat10_text_visible={ROOT={has_country_flag=cheating}}
-				cheat11_text_visible={ROOT={has_country_flag=cheating}}
-				cheat12_text_visible={ROOT={has_country_flag=cheating}}
-				cheat13_text_visible={ROOT={has_country_flag=cheating}}
-				cheat14_text_visible={ROOT={has_country_flag=cheating}}
-				cheat15_text_visible={ROOT={has_country_flag=cheating}}
-				cheat16_text_visible={ROOT={has_country_flag=cheating}}
-				cheat17_text_visible={ROOT={has_country_flag=cheating}}
-				cheat18_text_visible={ROOT={has_country_flag=cheating}}
-				cheat19_text_visible={ROOT={has_country_flag=cheating}}
-				cheat20_text_visible={ROOT={has_country_flag=cheating}}
-				cheat21_text_visible={ROOT={has_country_flag=cheating}}
-				clear_all_markings_click_enabled = { check_variable = { ROOT.marked_states^num > 0 } }	
 			}
+
+			pause_blocker_block_all_click={every_country={set_country_flag=pause_blocked}}
+			pause_blocker_unblock_all_click={every_country={clr_country_flag=pause_blocked}}
+			pause_blocker_unblock_country_click  = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = {
+						clr_country_flag = pause_blocked
+					}
+				}
+			}
+			pause_blocker_block_country_click  = {
+				owner={
+					set_temp_variable = { ROOT.marks = this}
+					var:marks = {
+						set_country_flag = pause_blocked
+					}
+				}
+			}			
 			
+			add_compliance_click = {
+				owner={
+					set_temp_variable = { ROOT.taker = this}
+					for_each_loop = {
+					    array = ROOT.marked_states
+					    value = state
+					    var:state = { add_compliance = 10 }
+					}
+					GER = {
+						news_event={id=horsttool.6}
+					}
+					ROOT = {
+						for_each_scope_loop={
+							array=marked_states
+							clear_variable=mark_status
+						}
+						clear_array=marked_states
+						clear_variable=first_marked_state
+					}
+				}
+			}
+
+			cheat1_click={if={limit={Root={has_country_flag=cheating}} set_variable={Root.selected_cheat=1ROOT={clr_country_flag=cheating}} else={ROOT={set_country_flag=cheating}}	}
+			cheat2_click={set_variable={Root.selected_cheat=2} ROOT={clr_country_flag=cheating}}
+			cheat3_click={set_variable={Root.selected_cheat=3} ROOT={clr_country_flag=cheating}}
+			cheat4_click={set_variable={Root.selected_cheat=4} ROOT={clr_country_flag=cheating}}
+			cheat5_click={set_variable={Root.selected_cheat=5} ROOT={clr_country_flag=cheating}}
+			cheat6_click={set_variable={Root.selected_cheat=6} ROOT={clr_country_flag=cheating}}
+			cheat7_click={set_variable={Root.selected_cheat=7} ROOT={clr_country_flag=cheating}}
+			cheat8_click={set_variable={Root.selected_cheat=8} ROOT={clr_country_flag=cheating}}
+			cheat9_click={set_variable={Root.selected_cheat=9} ROOT={clr_country_flag=cheating}}
+			cheat10_click={set_variable={Root.selected_cheat=10} ROOT={clr_country_flag=cheating}}
+			cheat11_click={set_variable={Root.selected_cheat=11} ROOT={clr_country_flag=cheating}}
+			cheat12_click={set_variable={Root.selected_cheat=12} ROOT={clr_country_flag=cheating}}
+			cheat13_click={set_variable={Root.selected_cheat=13} ROOT={clr_country_flag=cheating}}
+			cheat14_click={set_variable={Root.selected_cheat=14} ROOT={clr_country_flag=cheating}}
+			cheat15_click={set_variable={Root.selected_cheat=15} ROOT={clr_country_flag=cheating}}
+			cheat16_click={set_variable={Root.selected_cheat=16} ROOT={clr_country_flag=cheating}}
+			cheat17_click={set_variable={Root.selected_cheat=17} ROOT={clr_country_flag=cheating}}
+			cheat18_click={set_variable={Root.selected_cheat=18} ROOT={clr_country_flag=cheating}}
+			cheat19_click={set_variable={Root.selected_cheat=19} ROOT={clr_country_flag=cheating}}
+			cheat20_click={set_variable={Root.selected_cheat=20} ROOT={clr_country_flag=cheating}}
+			cheat21_click={set_variable={Root.selected_cheat=21} ROOT={clr_country_flag=cheating}}
 		}
-		
-		
-		
+		properties = {
+			toogle_mark={ 
+				frame = mark_status 
+			}
+		}
+			
+		triggers = {
+
+			observer_click_enabled = {
+				owner = { 
+					is_ai=no
+				}	
+			}	
+			free_country_click_enabled = {
+				owner = {
+					is_subject = yes
+				}
+			}
+			transfer_hostool_click_enabled = {
+				owner = {
+					is_ai = no
+				}
+			}
+
+			add_cheat_click_enabled = {check_variable={Root.selected_cheat>0}}
+			cheat1_visible={}
+			cheat1_text_visible={}
+			cheat2_visible={ROOT={has_country_flag=cheating}}
+			cheat3_visible={ROOT={has_country_flag=cheating}}
+			cheat4_visible={ROOT={has_country_flag=cheating}}
+			cheat2_text_visible={ROOT={has_country_flag=cheating}}
+			cheat3_text_visible={ROOT={has_country_flag=cheating}}
+			cheat4_text_visible={ROOT={has_country_flag=cheating}}
+			cheat5_visible={ROOT={has_country_flag=cheating}}
+			cheat5_text_visible={ROOT={has_country_flag=cheating}}
+			cheat6_visible={ROOT={has_country_flag=cheating}}
+			cheat7_visible={ROOT={has_country_flag=cheating}}
+			cheat6_text_visible={ROOT={has_country_flag=cheating}}
+			cheat7_text_visible={ROOT={has_country_flag=cheating}}
+			cheat8_visible={ROOT={has_country_flag=cheating}}
+			cheat9_visible={ROOT={has_country_flag=cheating}}
+			cheat8_text_visible={ROOT={has_country_flag=cheating}}
+			cheat9_text_visible={ROOT={has_country_flag=cheating}}
+			cheat10_visible={ROOT={has_country_flag=cheating}}
+			cheat11_visible={ROOT={has_country_flag=cheating}}
+			cheat12_visible={ROOT={has_country_flag=cheating}}
+			cheat13_visible={ROOT={has_country_flag=cheating}}
+			cheat14_visible={ROOT={has_country_flag=cheating}}
+			cheat15_visible={ROOT={has_country_flag=cheating}}
+			cheat16_visible={ROOT={has_country_flag=cheating}}
+			cheat17_visible={ROOT={has_country_flag=cheating}}
+			cheat18_visible={ROOT={has_country_flag=cheating}}
+			cheat19_visible={ROOT={has_country_flag=cheating}}
+			cheat20_visible={ROOT={has_country_flag=cheating}}
+			cheat21_visible={ROOT={has_country_flag=cheating}}
+			cheat10_text_visible={ROOT={has_country_flag=cheating}}
+			cheat11_text_visible={ROOT={has_country_flag=cheating}}
+			cheat12_text_visible={ROOT={has_country_flag=cheating}}
+			cheat13_text_visible={ROOT={has_country_flag=cheating}}
+			cheat14_text_visible={ROOT={has_country_flag=cheating}}
+			cheat15_text_visible={ROOT={has_country_flag=cheating}}
+			cheat16_text_visible={ROOT={has_country_flag=cheating}}
+			cheat17_text_visible={ROOT={has_country_flag=cheating}}
+			cheat18_text_visible={ROOT={has_country_flag=cheating}}
+			cheat19_text_visible={ROOT={has_country_flag=cheating}}
+			cheat20_text_visible={ROOT={has_country_flag=cheating}}
+			cheat21_text_visible={ROOT={has_country_flag=cheating}}
+
+			pause_blocker_unblock_country_visible = {
+				owner = {
+					has_country_flag = pause_blocked
+				}
+			}
+			pause_blocker_block_country_visible = {
+				owner = {
+					NOT = {
+						has_country_flag = pause_blocked
+					}
+				}
+			}
+			clear_all_markings_click_enabled = {
+				check_variable = { ROOT.host_marked_states^num > 0 }
+			}
+			award_states_click_enabled = {
+				check_variable = { ROOT.host_marked_states^num > 0 }
+			}
+			annex_country_click_enabled = {
+				check_variable = { ROOT.host_marked_states^num > 0 }
+			}
+			puppet_country_click_enabled = {
+				check_variable = { ROOT.host_marked_states^num > 0 }
+			}
+			add_cores_click_enabled = {
+				check_variable = { ROOT.host_marked_states^num > 0 }
+			}
+			remove_cores_click_enabled = {
+				check_variable = { ROOT.host_marked_states^num > 0 }
+			}
+		}		
+	}
 }

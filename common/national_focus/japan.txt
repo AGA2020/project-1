@@ -638,7 +638,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		custom_effect_tooltip = available_economy_law
+		custom_effect_tooltip = available_trade_law
 		show_ideas_tooltip = banzai_economy
 		custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
