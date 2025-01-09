@@ -295,7 +295,7 @@ scripted_gui = {
 					    var:state = { add_compliance = 10 }
 					}
 					GER = {
-						news_event={id=horsttool.6}
+						news_event={id=horsttool.10}
 					}
 					ROOT = {
 						for_each_scope_loop={
