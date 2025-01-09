@@ -110,7 +110,7 @@ news_event = {
 	}
 }
 news_event = {
-	id = horsttool.10
+	id = hosttool.10
 	title = "Host Tool"
 	desc = " [From.Getname] gave 10 compliance to [From.From.Owner.Getname] in [?ROOT.marked_states^num] states"
 	picture = GFX_news_event_001

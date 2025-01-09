@@ -295,7 +295,7 @@ scripted_gui = {
 					    var:state = { add_compliance = 10 }
 					}
 					GER = {
-						news_event={id=horsttool.10}
+						news_event={id=hosttool.10}
 					}
 					ROOT = {
 						for_each_scope_loop={
@@ -308,7 +308,7 @@ scripted_gui = {
 				}
 			}
 
-			cheat1_click={if={limit={Root={has_country_flag=cheating}} set_variable={Root.selected_cheat=1ROOT={clr_country_flag=cheating}} else={ROOT={set_country_flag=cheating}}	}
+			cheat1_click={if={limit={Root={has_country_flag=cheating}} set_variable={Root.selected_cheat=1} ROOT={clr_country_flag=cheating}} else={ROOT={set_country_flag=cheating}}}
 			cheat2_click={set_variable={Root.selected_cheat=2} ROOT={clr_country_flag=cheating}}
 			cheat3_click={set_variable={Root.selected_cheat=3} ROOT={clr_country_flag=cheating}}
 			cheat4_click={set_variable={Root.selected_cheat=4} ROOT={clr_country_flag=cheating}}
