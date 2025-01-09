@@ -1,5 +1,5 @@
-horst_host_country = {
-	name = "Select Host"
+select_host_country = {
+	name = "Select Host for Host Tool"
 	group = "elwolfmod Rules"
 	icon = "GFX_volunteers"
 	default = {
