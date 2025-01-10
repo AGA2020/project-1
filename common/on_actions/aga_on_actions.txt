@@ -33,6 +33,23 @@ on_actions = {
 			}
 		}
 	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = { 
+					original_tag = RAJ 
+					JAP = { has_war_with = RAJ }
+				} 
+				JAP = {
+					transfer_state = 322
+					transfer_state = 758
+					transfer_state = 757
+					transfer_state = 323
+					transfer_state = 324
+				}
+			}
+		}
+	}
 	on_join_faction = {
 		effect = {
 			if = {

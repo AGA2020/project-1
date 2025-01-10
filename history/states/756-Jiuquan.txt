@@ -4,6 +4,10 @@ state={
 	provinces={
 		1778 2028 4783 5076 7727 7803 7971 8102 10770 10899 12596 12820 
 	}
+	resources={
+		aluminium=2 # was: 2
+		chromium=2 # was: 3
+	}
 	manpower=1000000
 	buildings_max_level_factor=1.000
 	state_category = wasteland
@@ -11,9 +15,10 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = CHI
 		add_core_of = CHI
 		buildings = {
-			infrastructure = 1
-
+			infrastructure = 2
+			industrial_complex = 4
 		}
+		add_extra_state_shared_building_slots = 4
 
 	}
 

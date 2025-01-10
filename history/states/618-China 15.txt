@@ -5,15 +5,13 @@ state={
 	manpower = 670800
 
 	state_category = pastoral
+	impassable = yes	
 
 history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = CHI
 		add_core_of = CHI
-		add_core_of = SIK
-		add_core_of = SIK
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
 		}
 		victory_points = {
 			4823 2
