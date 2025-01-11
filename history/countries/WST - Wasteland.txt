@@ -22,6 +22,7 @@ recruit_character = WST_hacikurt
 add_ideas = {	
 	WST_hacikurt
 	kurdish_tales
+	alpacon_banged_storyline
 }
 set_popularities = {
 	neutrality = 100

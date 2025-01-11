@@ -1,5 +1,20 @@
 ideas = {
 	country = {
+		alpacon_banged_storyline = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.24	
+			}
+			picture = alpacino
+
+		}
 		kurdish_tales = {
 			removal_cost = -1
 			allowed = {

@@ -1,5 +1,9 @@
-spriteTypes = {	
+spriteTypes = {
 
+	SpriteType = {
+	name = "GFX_goal_anchluss"
+	texturefile = "gfx/interface/goals/anchluss.dds"			
+	}
 
 	SpriteType = {
 		name = "GFX_goal_anchluss_shine"
@@ -32,8 +36,30 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-	
-	#### Spot mod goal icons
+
+	spriteType = {
+		name = "GFX_idea_hacikurt"
+		texturefile = "gfx/interface/ideas/hacikurt.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_alpacino"
+		texturefile = "gfx/interface/ideas/alpacino.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Soviet_Power_Vacuum"
+		texturefile = "gfx/leaders/SOV/Portraits_Soviet_Congress_of_Soviets.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_GER_kriegaga"
+		texturefile = "gfx/interface/traits/trait_scavenger.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_banzai_economy"
+		texturefile = "gfx/interface/ideas/idea_jap_zaibatsu_ally.dds"
+	}	
+
 		SpriteType = {
 	name = "goal_baltic_cross_shine"
 		texturefile = "gfx/interface/goals/goal_baltic_cross.dds"
@@ -65,5 +91,4 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}	
-
 }
