@@ -279,7 +279,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 9824;9853;impassable;-1;-1;-1;-1;-1;;spain-france Border
 3898;3915;impassable;-1;-1;-1;-1;-1;;spain-france Border
 1421;10184;sea;2899;-1;-1;-1;-1;;Sulu-Mindanao
-3761;6521;sea;;-1;-1;-1;-1;Berlin-Madrid;Berlin-Madrid
+3761;6521;sea;;-1;-1;-1;-1;;Berlin-Madrid
 11130;3058;impassable;-1;-1;-1;-1;-1;;norway-finland Border
 11130;3082;impassable;-1;-1;-1;-1;-1;;norway-finland Border
 11130;6107;impassable;-1;-1;-1;-1;-1;;norway-finland Border
