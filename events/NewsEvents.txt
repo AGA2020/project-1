@@ -3496,6 +3496,16 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_los_angeles
+		hidden_effect = { 
+			USA = { 
+				if = { 
+					limit = {
+						NOT = { has_idea = USA_homeland_defense }
+					} 
+					USA = { activate_decision = USA_homeland_defense add_political_power = -50 } 
+				} 
+			}
+		}
 	}
 	
 	mean_time_to_happen = {

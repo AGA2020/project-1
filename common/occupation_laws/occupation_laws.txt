@@ -67,15 +67,12 @@ no_garrison = {
 	sound_effect = "Martial_Law_Interface_No_Garrison"
 
 	state_modifier = {
-		resistance_target = 0.4
-		no_compliance_gain = 1
-		required_garrison_factor = -1
-	}
-
-	suppressed_state_modifier = {
-		#no_compliance_gain = 1
-		required_garrison_factor = -1
-		resistance_target = 0.4
+		#resistance_target 				= 0.0
+		required_garrison_factor 		= -0.20
+		resistance_damage_to_garrison 	= -0.25
+		compliance_gain 				= 0.000
+		local_factories 				= 0.00
+		local_resources 				= 0.00
 	}
 
 	ai_will_do = {

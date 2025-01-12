@@ -45,6 +45,39 @@ on_actions = {
 				POL = {
 					load_oob = "POL_ELWOLF_SPAWN"
 				}
+				hidden_effect = {
+					SOV = {
+						diplomatic_relation = {
+							country = BRA
+							relation = embargo
+							active = no
+						}
+						
+						diplomatic_relation = {
+							country = RAJ
+							relation = embargo
+							active = no
+						}
+						
+						diplomatic_relation = {
+							country = AST
+							relation = embargo
+							active = no
+						}
+						
+						diplomatic_relation = {
+							country = SAF
+							relation = embargo
+							active = no
+						}
+						
+						diplomatic_relation = {
+							country = CAN
+							relation = embargo
+							active = no
+						}
+					}
+				}
 				ENG = {
 					add_to_faction = POL
 					country_event = {
