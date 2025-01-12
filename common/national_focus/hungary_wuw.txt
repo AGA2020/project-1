@@ -4496,11 +4496,6 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				has_government = fascism
-				has_government = neutrality
-			}
-			is_subject = no
 		}
 
 		bypass = {
@@ -4534,7 +4529,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = fascism
 		}
 
 		bypass = {
@@ -4616,7 +4610,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = fascism
 		}
 
 		bypass = {
@@ -4650,7 +4643,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = fascism
 		}
 
 		bypass = {
@@ -4690,7 +4682,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = fascism
 		}
 
 		bypass = {
@@ -4807,7 +4798,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = fascism
 		}
 
 		bypass = {
@@ -4872,21 +4862,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = fascism
-			is_subject = no
-			any_country = {
-				has_government = communism
-				NOT = {
-					OR = {
-						is_in_faction_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				OR = {
-					is_major = yes
-					is_neighbor_of = ROOT
-				}
-			}
 		}
 
 		bypass = {
@@ -4905,46 +4880,9 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.15
 			}
-
-			custom_effect_tooltip = POR_the_communist_threat_tt
-			every_country = {
-				limit = {
-					has_government = communism
-					NOT = { is_in_faction_with = ROOT }
-					OR = {
-						is_major = yes
-						is_neighbor_of = ROOT
-					}
-				}
-			}
-
-			hidden_effect = {
-				every_country = {
-					limit = {
-						has_government = communism
-						NOT = {
-							OR = {
-								is_in_faction_with = ROOT
-								is_subject_of = ROOT
-							}
-						}
-						OR = {
-							is_major = yes
-							is_neighbor_of = ROOT
-						}
-					}
-					ROOT = {
-						add_ai_strategy = {
-							type = declare_war
-							id = PREV
-							value = 100
-						}
-						create_wargoal = {
-							type = topple_government
-							target = PREV
-						}
-					}
-				}
+			create_wargoal = {
+				type = topple_government
+				target = SOV
 			}
 
 		}
@@ -5090,8 +5028,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = fascism
-			is_subject = no
 		}
 
 		bypass = {
@@ -5240,9 +5176,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_government = fascism
-			is_subject = no
-			is_in_faction = yes
 			any_other_country = {
 				OR = {
 					owns_state = 109
@@ -5330,8 +5263,6 @@ focus_tree = {
 
 		available = {
 
-			is_subject = no
-
 			664 = {
 				NOT = {
 					OR = {
@@ -5340,15 +5271,6 @@ focus_tree = {
 					}
 				}
 			}
-
-			IF = {
-				limit = {
-					country_exists = CZE
-					664 = { is_owned_by = CZE }
-				}
-				strength_ratio = { tag = CZE ratio > 0.75 }
-			}
-
 			has_army_manpower = { size > 120000 }
 
 		}
@@ -5437,21 +5359,10 @@ focus_tree = {
 
 		available = {
 
-			is_subject = no
-
 			73 = {
 				NOT = {
 					is_owned_by = ROOT
 				}
-			}
-
-			IF = {
-				limit = {
-					73 = {
-						is_owned_by = CZE
-					}
-				}
-				strength_ratio = { tag = CZE ratio > 0.70 }
 			}
 
 			has_army_manpower = { size > 150000 }
@@ -5519,7 +5430,7 @@ focus_tree = {
 
 		available = {
 
-			is_subject = no
+
 			has_army_manpower = { size > 200000 }
 
 			NOT = {
@@ -5545,15 +5456,6 @@ focus_tree = {
 						}
 					}
 				}
-			}
-
-			IF = {
-				limit = {
-					ROM = {
-						owns_state = 76
-					}
-				}
-				strength_ratio = { tag = ROM ratio > 0.66 }
 			}
 
 
@@ -5638,8 +5540,6 @@ focus_tree = {
 		will_lead_to_war_with = YUG
 
 		available = {
-
-			is_subject = no
 
 			45 = {
 				NOT = {
@@ -5761,8 +5661,6 @@ focus_tree = {
 
 		available = {
 
-			is_subject = no
-
 			975 = {
 				NOT = {
 					is_owned_by = ROOT
@@ -5834,8 +5732,6 @@ focus_tree = {
 		}
 
 		available = {
-
-			is_subject = no
 
 				any_other_country = {
 					owns_state = 70
@@ -5919,8 +5815,6 @@ focus_tree = {
 
 		available = {
 
-			is_subject = no
-
 			any_other_country = {
 				OR = {
 					owns_state = 70
@@ -6002,42 +5896,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
-			OR = {
-				has_government = fascism
-				has_government = neutrality
-			}
-			OR = {
-				owns_state = 664
-				owns_state = 73
-				owns_state = 76
-				owns_state = 84
-				owns_state = 83
-				owns_state = 82
-				owns_state = 45
-				owns_state = 975
-			}
-			NOT = { has_global_flag = GER_reformed_austro_hungarian_empire }
-			custom_trigger_tooltip = {
-				tooltip = wuw_HUN_proclaim_greater_hungary_core_states_requirement
-				AND = {
-					155 = {
-						is_fully_controlled_by = ROOT
-					}
-					974 = {
-						is_fully_controlled_by = ROOT
-					}
-					973 = {
-						is_fully_controlled_by = ROOT
-					}
-					43 = {
-						is_fully_controlled_by = ROOT
-					}
-					154 = {
-						is_fully_controlled_by = ROOT
-					}
-				}
-			}
+
 		}
 
 		bypass = {
@@ -6278,25 +6137,6 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { has_war_with = ITA }
-			NOT = { has_war_with = AUS }
-			ITA = {
-				exists = yes
-				is_subject = no
-				NOT = { has_war_with = AUS }
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
-			AUS = {
-				exists = yes
-				is_subject = no
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
 			OR = {
 				has_country_leader = {
 					ruling_only = yes
@@ -6376,16 +6216,6 @@ focus_tree = {
 		}
 
 		available = {
-			GER = {
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
-			}
 		}
 
 		bypass = {
@@ -6466,13 +6296,6 @@ focus_tree = {
 		}
 
 		available = {
-			ROOT = { has_full_control_of_state = 43 }
-			GER = {
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
 		}
 
 		bypass = {
@@ -6592,7 +6415,6 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
 			975 = {
 				is_owned_by = AUS
 			}
@@ -6669,8 +6491,6 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = { has_war_with = ITA }
-			is_subject = no
 			is_in_faction = no
 			ITA = {
 				OR = {
@@ -6773,10 +6593,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				has_government = democratic
-				has_government = communism
-			}
 		}
 
 		cancel_if_invalid = no
@@ -6822,10 +6638,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				has_government = democratic
-				has_government = communism
-			}
 		}
 
 		cancel_if_invalid = no
@@ -6872,10 +6684,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				has_government = democratic
-				has_government = communism
-			}
 		}
 
 		cancel_if_invalid = no
@@ -6915,10 +6723,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				has_government = democratic
-				has_government = communism
-			}
 		}
 
 		cancel_if_invalid = no
@@ -6955,7 +6759,6 @@ focus_tree = {
 
 		available = {
 			has_war = no
-			is_subject = no
 			custom_trigger_tooltip = {
 				tooltip = wuw_HUN_reviving_the_spirit_of_1848_requirements_tt
 				OR = {
@@ -6972,10 +6775,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				has_government = democratic
-				has_government = communism
-			}
 		}
 
 		cancel_if_invalid = no
@@ -7445,11 +7244,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_war = no
-			OR = {
-				has_government = democratic
-				has_government = communism
-			}
 		}
 
 		bypass = {
