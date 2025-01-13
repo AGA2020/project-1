@@ -1,8 +1,0 @@
-soundeffect = {
-	name = "faso"
-	sounds = {
-		sound = 
-			faso
-	}
-	volume = 1.0
-}

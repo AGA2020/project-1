@@ -36,8 +36,22 @@ soundeffect = {
 }
 
 sound = {
+	name = "faso"
+	file = "aga_sound/faso.wav"
+}
+
+soundeffect = {
+	name = "faso"
+	sounds = {
+		sound = 
+			faso
+	}
+	volume = 1.0
+}
+
+sound = {
 	name = "nanjing"
-	file = "dfu_sound/nanjing.wav"
+	file = "aga_sound/nanjing.wav"
 }
 
 soundeffect = {
