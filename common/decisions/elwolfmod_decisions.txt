@@ -295,7 +295,7 @@ operations = {
 					is_core_of = NZL
 					is_controlled_by = ENG
 				}
-				add_compliance = 100
+				add_core_of = ENG
 			}
 		}
 	}
@@ -342,7 +342,7 @@ operations = {
 					is_core_of = CAN
 					is_controlled_by = ENG
 				}
-				add_compliance = 100
+				add_core_of = ENG
 			}
 		}
 	}
@@ -389,7 +389,7 @@ operations = {
 					is_core_of = SAF
 					is_controlled_by = ENG
 				}
-				add_compliance = 100
+				add_core_of = ENG
 			}
 		}
 
@@ -439,7 +439,7 @@ operations = {
 					is_core_of = RAJ
 					is_controlled_by = ENG
 				}
-				add_compliance = 100
+				add_core_of = ENG
 			}
 
 		}
@@ -488,7 +488,7 @@ operations = {
 					is_core_of = AST
 					is_controlled_by = ENG
 				}
-				add_compliance = 100
+				add_core_of = ENG
 			}
 		}
 	}

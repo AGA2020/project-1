@@ -203,9 +203,17 @@ scripted_gui = {
 							}
 							annex_country = { target = PREV transfer_troops = yes }
 							every_state = { 
+							    limit = { 
+							        is_owned_by = var:ROOT.taker 
+							        is_core_of = var:ROOT.target
+							        NOT = { is_core_of = RAJ }
+							    }
+							    add_core_of = PREV
+							}
+							every_state = { 
 								limit = { 
 									is_owned_by = var:ROOT.taker 
-									is_core_of = var:ROOT.target
+									is_core_of = RAJ
 								}
 								add_compliance = 100
 							}
