@@ -275,7 +275,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			factor = 0
 		}
 
 		available = {
@@ -315,20 +315,7 @@
 		}
 
 		available = {
-			OR = {
-				num_of_factories > 50
-				all_state = {
-					OR = {
-						NOT = { is_core_of = CHI }
-						NOT = { is_core_of = PRC }
-						OR = {
-							is_controlled_by = ROOT
-							CONTROLLER = { is_in_faction_with = ROOT }
-							CONTROLLER = { is_subject_of = ROOT }
-						}
-					}
-				}
-			}
+			num_of_factories > 50
 		}
 
 		bypass = {

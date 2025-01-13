@@ -16,10 +16,6 @@ MAN_banditry_category = {
 		available = {
 			has_completed_focus = MAN_pacify_the_countryside
 			has_country_flag = MAN_northern_bandits
-			divisions_in_state = {
-				state = 714	
-				size > 5
-			}
 		}
 
 		highlight_states = {
@@ -31,14 +27,7 @@ MAN_banditry_category = {
 		cost = 0
 
 		ai_will_do = {
-			factor = 0
-			modifier = {
-				add = 200
-				divisions_in_state = {
-					state = 714	
-					size > 5
-				}
-			}
+			factor = 200
 		}
 
 		visible = {
@@ -79,14 +68,7 @@ MAN_banditry_category = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 0
-			modifier = {
-				add = 200
-				divisions_in_state = {
-					state = 714	
-					size < 6
-				}
-			}
+			factor = 200
 		}
 
 		complete_effect = {
@@ -124,13 +106,6 @@ MAN_banditry_category = {
 
 		activation = {
 			always = no #Triggered from effect
-		}
-
-		cancel_trigger = {
-			divisions_in_state = {
-				state = 714	
-				size < 6
-			}
 		}
 
 		highlight_states = {
@@ -172,10 +147,6 @@ MAN_banditry_category = {
 		available = {
 			has_completed_focus = MAN_pacify_the_countryside
 			has_country_flag = MAN_eastern_bandits
-			divisions_in_state = {
-				state = 717
-				size > 5
-			}
 		}
 
 		highlight_states = {
@@ -187,14 +158,7 @@ MAN_banditry_category = {
 		cost = 0
 
 		ai_will_do = {
-			factor = 0
-			modifier = {
-				add = 200
-				divisions_in_state = {
-					state = 717	
-					size > 5
-				}
-			}
+			factor = 200
 		}
 
 		visible = {
@@ -237,14 +201,7 @@ MAN_banditry_category = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 0
-			modifier = {
-				add = 200
-				divisions_in_state = {
-					state = 717	
-					size < 6
-				}
-			}
+			factor = 200
 		}
 
 		complete_effect = {
@@ -282,13 +239,6 @@ MAN_banditry_category = {
 
 		activation = {
 			always = no #Triggered from effect
-		}
-
-		cancel_trigger = {
-			divisions_in_state = {
-				state = 717	
-				size < 6
-			}
 		}
 
 		highlight_states = {
@@ -330,10 +280,6 @@ MAN_banditry_category = {
 		available = {
 			has_completed_focus = MAN_pacify_the_countryside
 			has_country_flag = MAN_western_bandits
-			divisions_in_state = {
-				state = 610	
-				size > 5
-			}
 		}
 
 		highlight_states = {
@@ -345,14 +291,7 @@ MAN_banditry_category = {
 		cost = 0
 
 		ai_will_do = {
-			factor = 0
-			modifier = {
-				add = 200
-				divisions_in_state = {
-					state = 610	
-					size > 5
-				}
-			}
+			factor = 200
 		}
 
 		visible = {
@@ -395,14 +334,7 @@ MAN_banditry_category = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 0
-			modifier = {
-				add = 200
-				divisions_in_state = {
-					state = 610	
-					size < 6
-				}
-			}
+			factor = 200
 		}
 
 		complete_effect = {
@@ -440,13 +372,6 @@ MAN_banditry_category = {
 
 		activation = {
 			always = no #Triggered from effect
-		}
-
-		cancel_trigger = {
-			divisions_in_state = {
-				state = 610	
-				size < 6
-			}
 		}
 
 		highlight_states = {
