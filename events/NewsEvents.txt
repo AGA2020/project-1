@@ -3548,6 +3548,9 @@ news_event = {
 	}
 	
 	immediate = {
+		hidden_effect = {
+		sound_effect = nanjing
+		}
 		set_global_flag = fall_of_nanjing
 	}
 	
