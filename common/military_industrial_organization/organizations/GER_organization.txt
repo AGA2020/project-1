@@ -25,6 +25,7 @@ GER_porsche_organization = {
 			original_tag = SPR
 			original_tag = JAP
 			original_tag = HUN
+			original_tag = MAN
 		} 
 	}
 
@@ -83,7 +84,8 @@ GER_porsche_organization = {
 				FROM = { original_tag = GER }
 				FROM = { original_tag = SPR }
 				FROM = { original_tag = JAP }
-				FROM = { original_tag = HUN }						
+				FROM = { original_tag = HUN }
+				FROM = { original_tag = MAN }						
 			}
 		}
 
@@ -124,6 +126,7 @@ GER_porsche_organization = {
 				FROM = { original_tag = SPR }
 				FROM = { original_tag = JAP }
 				FROM = { original_tag = HUN }
+				FROM = { original_tag = MAN }
 			}
 		}
 
@@ -163,6 +166,7 @@ GER_porsche_organization = {
 				FROM = { original_tag = SPR }
 				FROM = { original_tag = JAP }
 				FROM = { original_tag = HUN }
+				FROM = { original_tag = MAN }
 			}
 		}
 
@@ -199,6 +203,7 @@ GER_porsche_organization = {
 				FROM = { original_tag = SPR }
 				FROM = { original_tag = JAP }
 				FROM = { original_tag = HUN }
+				FROM = { original_tag = MAN }
 			}
 		}
 
@@ -234,6 +239,7 @@ GER_porsche_organization = {
 				FROM = { original_tag = SPR }
 				FROM = { original_tag = JAP }
 				FROM = { original_tag = HUN }
+				FROM = { original_tag = MAN }
 			}
 		}
 
