@@ -76,3 +76,18 @@ soundeffect = {
 	}
 	volume = 1.0
 }
+
+sound =
+{
+	name = "entertheeast"
+	file = "aga_sound/entertheeast.wav"
+}
+
+soundeffect = {
+	name = "entertheeast"
+	sounds = {
+		sound = 
+			entertheeast
+	}
+	volume = 1.0
+}
