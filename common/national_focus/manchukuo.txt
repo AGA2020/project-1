@@ -323,7 +323,16 @@
 				name = MAN_trade_delegation
 				bonus = 1.0
 				uses = 1
-				category = industry
+				technology = construction3
+				technology = construction4
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = dispersed_industry3
+				technology = dispersed_industry4
+				technology = advanced_machine_tools
+				technology = assembly_line_production
+				technology = fuel_refining3
+				technology = fuel_refining4
 			}
 		}
 	}
@@ -810,33 +819,19 @@
 
 		completion_reward = {
 
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = MAN_mamc_light_organization
-				show_mio_tooltip = MAN_mamc_medium_organization
-				show_mio_tooltip = MAN_mamc_heavy_organization
-				
-
-
-				mio:MAN_mamc_light_organization = {
-					add_mio_funds = 500
-				}
-				mio:MAN_mamc_medium_organization = {
-					add_mio_funds = 500
-				}
-				mio:MAN_mamc_heavy_organization = {
-					add_mio_funds = 500
-				}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
 			}
-
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = MAN_mamc_light
-				show_ideas_tooltip = MAN_mamc_medium
-				show_ideas_tooltip = MAN_mamc_heavy
+			custom_effect_tooltip = generic_skip_one_line_tt
+			mio:MAN_mamc_light_organization = {
+				add_mio_funds = 1000
+			}
+			mio:MAN_mamc_medium_organization = {
+				add_mio_funds = 1000
+			}
+			mio:MAN_mamc_heavy_organization = {
+				add_mio_funds = 1000
 			}
 		}
 	}
@@ -965,6 +960,7 @@
 				value = 0.15
 				localization = MAN_the_two_emperors
 			}
+			MAN_low_legitimacy_level_down_twice = yes
 		}
 	}
 

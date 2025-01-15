@@ -41,7 +41,7 @@ MAN_mamc_organization = {
 	}
 
 	available = {
-		owner = { controls_state = 714 }
+
 	}
 }
 
@@ -50,11 +50,10 @@ MAN_mamc_light_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 	allowed = {	
 		original_tag = MAN
-		has_dlc = "Waking the Tiger"
 	}
 
 	available = {
-		owner = { has_completed_focus = MAN_mamc }
+
 	}
 }
 
@@ -63,11 +62,10 @@ MAN_mamc_medium_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 	allowed = {	
 		original_tag = MAN
-		has_dlc = "Waking the Tiger"
 	}
 
 	available = {
-		owner = { has_completed_focus = MAN_mamc }
+
 	}
 }
 
@@ -76,11 +74,10 @@ MAN_mamc_heavy_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 	allowed = {	
 		original_tag = MAN
-		has_dlc = "Waking the Tiger"
 	}
 
 	available = {
-		owner = { has_completed_focus = MAN_mamc }
+
 	}
 }
 

@@ -1886,6 +1886,7 @@ war_measures = {
 					tag = ARG #has a focus 
 					tag = GER #has a focus 
 					tag = SOV #has a focus 
+					tag = MAN #JAP focus unlocks for MAN as well (not vanilla) 
 				}
 			} 
 		}
