@@ -47,8 +47,6 @@ recruit_character = NOR_adolf_indrebo
 recruit_character = NOR_halvdan_koht
 recruit_character = NOR_trygve_halvdan_lie
 
-set_global_flag = NOR_trotsky_in_norway 
-
 if = {
 	limit = {
 		has_aat = yes 
