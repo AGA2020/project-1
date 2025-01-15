@@ -10,18 +10,31 @@ MAN_request_china = {
            has_completed_focus = MAN_national_cooperation_government 
         }
         target_trigger = {
-            FROM = {
-                is_china = yes
-                NOT = { is_controlled_by = MAN }
-                controller = {
-                    PREV = {
-                        NOT = { is_core_of = PREV }
-                        is_fully_controlled_by = PREV
+            OR = {
+                FROM = {
+                    state = 524
+                    NOT = { is_controlled_by = MAN }
+                    controller = {
+                        PREV = {
+                            NOT = { is_core_of = PREV }
+                            is_fully_controlled_by = PREV
+                        }
+                        is_in_faction_with = ROOT
                     }
-                    is_in_faction_with = ROOT
                 }
-                any_neighbor_state = {
-                    is_fully_controlled_by = MAN
+                FROM = {
+                    is_china = yes
+                    NOT = { is_controlled_by = MAN }
+                    controller = {
+                        PREV = {
+                            NOT = { is_core_of = PREV }
+                            is_fully_controlled_by = PREV
+                        }
+                        is_in_faction_with = ROOT
+                    }
+                    any_neighbor_state = {
+                        is_fully_controlled_by = MAN
+                    }
                 }
             }
         }
@@ -30,17 +43,30 @@ MAN_request_china = {
         }
         visible = {
             has_completed_focus = MAN_national_cooperation_government
-            FROM = {
-                NOT = { is_controlled_by = MAN }
-                any_neighbor_state = {
-                    is_fully_controlled_by = MAN
-                }
-                controller = {
-                    PREV = {
-                        NOT = { is_core_of = PREV }
-                        is_fully_controlled_by = PREV
+            OR = {
+                FROM = {
+                    state = 524
+                    NOT = { is_controlled_by = MAN }
+                    controller = {
+                        PREV = {
+                            NOT = { is_core_of = PREV }
+                            is_fully_controlled_by = PREV
+                        }
+                        is_in_faction_with = ROOT
                     }
-                    is_in_faction_with = ROOT
+                }
+                FROM = {
+                    NOT = { is_controlled_by = MAN }
+                    any_neighbor_state = {
+                        is_fully_controlled_by = MAN
+                    }
+                    controller = {
+                        PREV = {
+                            NOT = { is_core_of = PREV }
+                            is_fully_controlled_by = PREV
+                        }
+                        is_in_faction_with = ROOT
+                    }
                 }
             }
         }
