@@ -22,7 +22,7 @@ state = {
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
-			industrial_complex = 2
+			industrial_complex = 6
 			dockyard = 1
 			air_base = 4
 			6115 = {
@@ -31,6 +31,7 @@ state = {
 			}
 		}
 		add_core_of = NOR
+		add_extra_state_shared_building_slots = 4
 	}
 
 	provinces={
