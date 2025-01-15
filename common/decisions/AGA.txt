@@ -52,7 +52,7 @@ MAN_request_china = {
         complete_effect = {
             FROM = {
                 controller = {
-                    country_event = { id = bftb_bulgarian_claims.7 hours = 1 }
+                    country_event = { id = aga.301 hours = 1 }
                 }
             }
             custom_effect_tooltip = BUL_secure_occupation_in_balkan_state_tt

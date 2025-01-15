@@ -1,4 +1,6 @@
 ﻿l_english:
+  aga.301.b:0 "Manchu territorial ambitions are limitless!"
+  aga.301.desc:0 "Assuming their peacekeeping role in the occupied Chinese territories, the [FROM.GetAdjective]s have proposed that we grant them administrative control of [FROM.FROM.GetName] to preserve order and stability in the territories taken over by the [ROOT.GetFactionName] and to relieve [ROOT.GetAdjective] garrisons so that our troops can reinforce other fronts."
   BUL_peaceful_development_tt:0 "Unlocks §YSecure Occupation§! decisions, allowing to ask for control over neighboring China states occupied by Japan."
   MAN_request_china:0 "Negotiate our Claims in the China"
   MAN_secure_china:1 "Secure the Occupation in [FROM.GetName]"
