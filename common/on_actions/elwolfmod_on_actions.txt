@@ -254,12 +254,6 @@ on_actions = {
 			}
 			every_country = {
 				limit = {
-					has_idea = MTG_naval_treaty_adherent
-				}
-				remove_ideas = MTG_naval_treaty_adherent
-			}
-			every_country = {
-				limit = {
 					AND = {
 						is_playable_country = yes
 						NOT = {
