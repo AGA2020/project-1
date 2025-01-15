@@ -932,22 +932,7 @@
 		}
 
 		available = {
-			is_subject_of = JAP
-			compare_autonomy_state > autonomy_wtt_imperial_protectorate			
-			MAN = { 
-				ic_ratio = {
-					tag = JAP
-					ratio > 0.2
-				}
-			}
-			strength_ratio = {
-				tag = JAP
-				ratio > 0.25
-			}
-		}
 
-		bypass = {
-			is_subject = no
 		}
 
 		cancel_if_invalid = yes
@@ -957,7 +942,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			add_autonomy_ratio = {
-				value = 0.15
+				value = 0.50
 				localization = MAN_the_two_emperors
 			}
 			MAN_low_legitimacy_level_down_twice = yes

@@ -867,6 +867,12 @@ focus_tree = {
 			}
 			else = {
 				add_ideas = war_economy
+				if = {
+					limit = {
+						country_exists = MAN
+					}
+				MAN = { add_ideas = war_economy }
+				}
 			}
 		}
 	}
@@ -945,6 +951,12 @@ focus_tree = {
 			}
 			else = {
 				add_ideas = tot_economic_mobilisation
+				if = {
+					limit = {
+						country_exists = MAN
+					}
+				MAN = { add_ideas = tot_economic_mobilisation }
+				}
 			}
 		}
 	}
@@ -2339,7 +2351,12 @@ focus_tree = {
 				uses = 2
 				category = special_forces_doctrine
 			}
+			if = {
+				limit = {
+					country_exists = MAN
+				}
 			MAN = { add_potential_special_forces_tree = yes }
+			}
 		}
 	}
 
