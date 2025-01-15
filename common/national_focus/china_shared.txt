@@ -1967,7 +1967,6 @@ shared_focus = {
 				USA_will_support = yes
 			}
 		}
-		is_subject = no
 	}
 
 	bypass = {
@@ -1987,8 +1986,7 @@ shared_focus = {
 			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = CHI_camco_medium_organization
 			mio:CHI_camco_medium_organization = {
-				add_mio_size = 1
-				add_mio_funds = 500
+				add_mio_size = 2
 			}
 		}
 
@@ -2042,11 +2040,9 @@ shared_focus = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
-			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = CHI_camco_fighter_organization
 			mio:CHI_camco_fighter_organization = {
-				add_mio_size = 1
-				add_mio_funds = 500
+				add_mio_size = 2
 			}
 		}
 
@@ -2099,11 +2095,9 @@ shared_focus = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
-			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = CHI_camco_bomber_organization
 			mio:CHI_camco_bomber_organization = {
-				add_mio_size = 1
-				add_mio_funds = 500
+				add_mio_size = 2
 			}
 		}
 

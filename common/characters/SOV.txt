@@ -222,9 +222,9 @@ characters = {
 		corps_commander = {
 			traits = { cavalry_leader brilliant_strategist trait_cautious armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger  organizer }
 			skill = 6
-			attack_skill = 8
+			attack_skill = 7
 			defense_skill = 10
-			planning_skill = 7
+			planning_skill = 6
 			logistics_skill = 6
 			legacy_id = 402
 			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
@@ -669,9 +669,9 @@ characters = {
 			traits = { skilled_staffer commando cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist organizer offn
 		 }
 			skill = 8
-			attack_skill = 7
+			attack_skill = 8
 			defense_skill = 10
-			planning_skill = 6
+			planning_skill = 7
 			logistics_skill = 6
 			legacy_id = 0
 			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
