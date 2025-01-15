@@ -3179,8 +3179,7 @@ operations = {
                 if = {
                     limit = {
                         NOT = { has_global_flag = ger_annexed_minor } 
-                    }
-                    subtract_from_variable = {  GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }             
+                    }           
                     SOV = {             
                         823= {
                             add_extra_state_shared_building_slots = 5 
@@ -3505,8 +3504,7 @@ operations = {
                 if = {
                     limit = {
                         NOT = { has_global_flag = ger_annexed_minor } 
-                    }
-                    subtract_from_variable = {  GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }               
+                    }               
                     SOV = {             
                         823= {
                             add_extra_state_shared_building_slots = 5 
