@@ -75,10 +75,6 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			unlock_decision_category_tooltip = MAN_banditry_category
 			set_variable = { MAN_maintain_control_timer = 180 }
@@ -112,10 +108,6 @@
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
-		complete_tooltip = {
-
-		}
-
 		completion_reward = {
 			army_experience = 30
 		}
@@ -146,10 +138,6 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 		
 		completion_reward = {
 			add_ideas = MAN_mukden_military_academy
@@ -173,10 +161,6 @@
 		available = {
 			NOT = { has_idea = MAN_banditry }
 			NOT = { has_war_with = JAP }
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -240,17 +224,9 @@
 
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -282,17 +258,9 @@
 
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -318,17 +286,9 @@
 			num_of_factories > 50
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
@@ -348,14 +308,6 @@
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes

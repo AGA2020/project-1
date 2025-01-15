@@ -120,7 +120,7 @@ guiTypes = {
 		animation_type = decelerated
 		animation_time = 1000
 		size = { width = 256 height = 768}
-		show_sound = fasoobaninmali
+
 		
 
 		
@@ -151,7 +151,7 @@ guiTypes = {
 		animation_time = 1000					
 		size = { width = 256 height = 768}
 		Orientation = upper_right
-
+		show_sound = fasoobaninmali
 		ButtonType = {
 			name = "achievements_button"
 			position = { x = -50 y = 25 }
