@@ -1078,7 +1078,10 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = JAP_guide_the_zaibatsus
-				has_war = yes
+				OR = {
+					has_war = yes
+					CHI = { has_capitulated = yes }
+				}
 			}
 			rule = {
 				can_access_market = no

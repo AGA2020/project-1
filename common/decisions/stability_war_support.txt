@@ -495,6 +495,9 @@ demobilization = {
 		visible = {
 			has_war = no
 			has_unsupported_economic_law = yes
+			NOT = {
+				original_tag = MAN
+			}
 		}
 		complete_effect = {
 			if = {
@@ -558,6 +561,7 @@ demobilization = {
 			has_war = no
 			NOT = {
 				original_tag = SWE
+				original_tag = MAN
 			}
 		}
 		icon = revolt

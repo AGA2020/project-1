@@ -46,13 +46,13 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ infantry_officer }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=-1
+			traits={ brilliant_strategist politically_connected trickster trait_engineer organizer infantry_leader panzer_leader trickster commando }
+			skill=6
+			attack_skill=5
+			defense_skill=6
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=1
 		}
 	}
 	MAN_aisin_gioro_xiqia={

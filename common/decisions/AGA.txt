@@ -1,3 +1,64 @@
+MAN_request_china = {
+    MAN_secure_china = {
+
+        icon = hol_draw_up_staff_plans
+    
+        on_map_mode = map_and_decisions_view
+    
+        state_target = asia
+        target_root_trigger = {
+           has_completed_focus = MAN_national_cooperation_government 
+        }
+        target_trigger = {
+            FROM = {
+                is_china = yes
+                NOT = { is_controlled_by = MAN }
+                controller = {
+                    PREV = {
+                        NOT = { is_core_of = PREV }
+                        is_fully_controlled_by = PREV
+                    }
+                    is_in_faction_with = ROOT
+                }
+                any_neighbor_state = {
+                    is_fully_controlled_by = MAN
+                }
+            }
+        }
+        available = {
+            has_manpower > 4999
+        }
+        visible = {
+            has_completed_focus = MAN_national_cooperation_government
+            FROM = {
+                NOT = { is_controlled_by = MAN }
+                any_neighbor_state = {
+                    is_fully_controlled_by = MAN
+                }
+                controller = {
+                    PREV = {
+                        NOT = { is_core_of = PREV }
+                        is_fully_controlled_by = PREV
+                    }
+                    is_in_faction_with = ROOT
+                }
+            }
+        }
+        ai_will_do = {
+            base = 0
+        }
+        cost = 25
+        
+        complete_effect = {
+            FROM = {
+                controller = {
+                    country_event = { id = bftb_bulgarian_claims.7 hours = 1 }
+                }
+            }
+            custom_effect_tooltip = BUL_secure_occupation_in_balkan_state_tt
+        }
+    }
+}
 operations = {
    #test = {
    #     # icon = generic_operation

@@ -474,7 +474,7 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			country_event = wtt_manchukou.11
+			add_ideas = { MAN_five_year_plan_industry }
 		}
 	}
 
@@ -706,26 +706,7 @@
 		}
 
 		available = {
-			if = {
-				limit = { has_idea = MAN_five_year_plan_air }
-				NOT = { has_idea = MAN_five_year_plan_air }
-			}
-			if = {
-				limit = { has_idea = MAN_five_year_plan_tank }
-				NOT = { has_idea = MAN_five_year_plan_tank }
-			}
-			if = {
-				limit = { has_idea = MAN_five_year_plan_industry }
-				NOT = { has_idea = MAN_five_year_plan_industry }
-			}
-			if = {
-				limit = {
-					NOT = { has_idea = MAN_five_year_plan_air }
-					NOT = { has_idea = MAN_five_year_plan_tank }
-					NOT = { has_idea = MAN_five_year_plan_industry }
-				}
-				NOT = { has_idea = MAN_five_year_plan_air }
-			}
+			date>1939.1.1
 		}
 
 		cancel_if_invalid = yes
@@ -734,7 +715,10 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			country_event = wtt_manchukou.11
+				swap_ideas = {
+					remove_idea = MAN_five_year_plan_industry
+					add_idea = MAN_five_year_plan_industry_2
+				}
 		}
 	}
 
@@ -910,6 +894,7 @@
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+		custom_effect_tooltip = BUL_peaceful_development_tt
 			every_state = {
 				limit = { is_core_of = CHI }
 				add_core_of = ROOT

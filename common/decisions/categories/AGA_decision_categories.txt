@@ -1,0 +1,13 @@
+################
+##### MAN ######
+################
+
+MAN_request_china = {
+	priority = 8
+	
+	icon = generic_fascism
+
+	allowed = {
+		original_tag = MAN
+	}
+}
