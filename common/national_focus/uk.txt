@@ -4117,32 +4117,8 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			OR = {
-				SAF = {
-					exists = no
-				}
-				SAF = {
-					custom_trigger_tooltip = {
-						tooltip = construction_effort_tt
-						all_owned_state = {
-							free_building_slots = {
-								building = industrial_complex
-								size < 1
-								include_locked = yes
-							}
-						}
-					}
-					custom_trigger_tooltip = {
-						tooltip = naval_effort_tt
-						all_owned_state = {
-							free_building_slots = {
-								building = dockyard
-								size < 1
-								include_locked = yes
-							}
-						}
-					}
-				}
+			SAF = {
+				exists = no
 			}
 		}
 		icon = GFX_goal_generic_construct_civ_factory
@@ -4211,11 +4187,7 @@ focus_tree = {
 				}
 				random_owned_controlled_state = {
 					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
+						is_core_of = SAF
 					}
 					add_extra_state_shared_building_slots = 2
 					add_building_construction = {
@@ -4227,11 +4199,7 @@ focus_tree = {
 				}
 				random_owned_controlled_state = {
 					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
+						is_core_of = SAF
 					}
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
@@ -4244,11 +4212,7 @@ focus_tree = {
 				random_owned_controlled_state = {
 					limit = {
 						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
+						is_core_of = SAF
 					}
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
@@ -4261,11 +4225,7 @@ focus_tree = {
 				random_owned_controlled_state = {
 					limit = {
 						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
+						is_core_of = SAF
 					}
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
