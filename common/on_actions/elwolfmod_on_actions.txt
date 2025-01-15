@@ -279,7 +279,6 @@ on_actions = {
 						tag = SIA
 						tag = SPR
 						tag = AUS
-						tag = VIC
 					}
 				}
 				if = {
@@ -535,29 +534,7 @@ on_actions = {
 						token = team_airforce
 					}
 				}
-				if = {
-					limit = {
-						NOT = {
-							tag = VIC 
-						}
-					}
-					add_operation_token = {
-						tag = VIC 
-						token = team_civilian
-					}
-					add_operation_token = {
-						tag = VIC 
-						token = team_army
-					}
-					add_operation_token = {
-						tag = VIC 
-						token = team_navy
-					}
-					add_operation_token = {
-						tag = VIC 
-						token = team_airforce
-					}
-				}
+				
 			}
 			every_country = {
 				limit = {
