@@ -27,7 +27,7 @@ political_actions = {
 			#Target is FROM
 			FROM = {
         		NOT = { is_in_faction_with = ROOT }
-				has_tech = nuclear_reactor
+				is_special_project_completed = sp:sp_nuclear_reactor
 				any_owned_state = {
 					nuclear_reactor > 0
 				}
@@ -41,7 +41,7 @@ political_actions = {
             NOT = { has_idea = race_for_the_bomb }
             FROM = {
         		NOT = { is_in_faction_with = ROOT }
-				has_tech = nuclear_reactor
+				is_special_project_completed = sp:sp_nuclear_reactor
 				any_owned_state = {
 					nuclear_reactor > 0
 				}
@@ -54,11 +54,7 @@ political_actions = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				any_other_country = { has_tech = nukes }
-			}
+			factor = 0
 		}
 	}
 	add_convoy = { #yey we fix convoy bug cuz fuck you
@@ -88,7 +84,7 @@ political_actions = {
 	improved_worker_conditions = {
 
 		icon = generic_industry
-
+        priority = 10
 		available = {
 			has_stability < 1.0
 			if = {
@@ -587,8 +583,18 @@ propaganda_efforts = {
 		icon = generic_prepare_civil_war
 
 		available = {
-			threat > 0.25
-			has_tech = radio
+			IF = {
+				limit = {
+					tag = BRA
+				}
+				threat > 0.25
+				#has_tech = radio
+				has_completed_focus = BRA_radio_nacional
+			}
+			ELSE = {
+				threat > 0.25
+				has_tech = radio
+			}
 		}
 
 		visible = {
@@ -1719,10 +1725,24 @@ war_measures = {
         cost = 100
         days_remove = -1
         remove_trigger = {
-        	OR = {
-            	has_war = no
-            	not = { has_idea = tot_economic_mobilisation }
+            if = {
+            	limit = {
+            		original_tag = GER
+            	}
+        		OR = {
+        			has_war = no
+        			AND = {
+        				NOT = { has_idea = tot_economic_mobilisation }
+        				NOT = { has_idea = totaler_krieg_economy }
+        			}
+        		}
             }
+        	else = {
+	        	OR = {
+	            	has_war = no
+	            	NOT = { has_idea = tot_economic_mobilisation }
+	            }
+        	}
         }
         modifier = {
             conscription = 0.03
@@ -1967,6 +1987,7 @@ foreign_politics = {
 }
 
 economy_decisions = {
+
 	infrastructure_building_slot = {
 
 		icon = generic_construction
@@ -1980,27 +2001,27 @@ economy_decisions = {
 
         days_re_enable = 30
 
-	available = {
-		any_owned_state = {
-			NOT = { has_state_flag = infrastructure_building_slot_flag }
-			is_fully_controlled_by = ROOT
-			free_building_slots = {
-				building = infrastructure
-				size < 1
+		available = {
+			any_owned_state = {
+				NOT = { has_state_flag = infrastructure_building_slot_flag }
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
 			}
 		}
-	}
-
-	visible = {
-		any_owned_state = {
-			NOT = { has_state_flag = infrastructure_building_slot_flag }
-			is_fully_controlled_by = ROOT
-			free_building_slots = {
-				building = infrastructure
-				size < 1
+	
+		visible = {
+			any_owned_state = {
+				NOT = { has_state_flag = infrastructure_building_slot_flag }
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
 			}
 		}
-	}
 
         complete_effect = {
 			random_owned_state = {
@@ -2022,10 +2043,10 @@ economy_decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			base = 1
 			modifier = {
-				factor = 10
-				any_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
+				factor = 1.5
+				all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
 			}
 		}
     }
@@ -2145,18 +2166,7 @@ economy_decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				all_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
-			}
-			modifier = {
-				any_owned_state = {
-					infrastructure > 3
-					free_building_slots = { building = industrial_complex size > 0 include_locked = no }
-				}
-				factor = 0
-			}
+			base = 0
 		}
     }
 }
