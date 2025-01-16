@@ -2575,9 +2575,6 @@ characters = {
 				}
 
 				available = {
-					NOT = {
-						has_government = communism
-					}
 				}
 
 				traits = {
@@ -2844,51 +2841,6 @@ characters = {
 				small="GFX_idea_HUN_zoltan_tildy"
 			}
 		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_zoltan_tildy
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_elect_a_fascist_king
-						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_reinstate_the_pragmatic_sanction
-					}
-				}
-			}
-
-			available = {
-				IF = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				OR = {
-					has_completed_focus = wuw_HUN_elect_a_democratic_king
-					has_completed_focus = wuw_HUN_elections_in_the_revolutionary_council
-				}
-			}
-
-			traits = {
-				democratic_reformer 
-			}
-
-			ai_will_do = {
-				base = 0
-			}
-
-		}
 	}
 
 	HUN_laszlo_rajk = {
@@ -2953,47 +2905,6 @@ characters = {
 				army = {
 					small = "GFX_idea_HUN_laszlo_rajk"
 				}
-			}
-
-			advisor = {
-
-				slot = political_advisor
-
-				idea_token = HUN_laszlo_rajk
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				visible = {
-					NOT = {
-						OR = {
-							has_completed_focus = wuw_HUN_end_the_regency
-							has_completed_focus = wuw_HUN_continue_the_regency
-						}
-					}
-				}
-
-				available = {
-					IF = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-					has_completed_focus = wuw_HUN_elections_in_the_revolutionary_council
-				}
-
-				traits = {
-					marxist_philosopher 
-				}
-
-				ai_will_do = {
-					base = 0
-				}
-				
 			}
 
 		}
@@ -3101,9 +3012,6 @@ characters = {
 			}
 
 			available = {
-				NOT = {
-					has_government = communism
-				}
 				# This is replaced by an on_action
 				#has_war = no 
 				NOT = {
@@ -3183,43 +3091,6 @@ characters = {
 			}
 		}
 
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_erno_gero
-
-			allowed = {
-				original_tag = HUN
-				has_dlc = "La Resistance"
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-						has_completed_focus = wuw_HUN_establish_the_second_republic
-						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
-					}
-				}
-			}
-
-			available = {
-				has_government = communism 
-				has_completed_focus = wuw_HUN_join_the_comintern
-			}
-
-			traits = {
-				HUN_stalinist_agent
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-
-		}
-
 	}
 
 	HUN_fidel_palffy = {
@@ -3242,22 +3113,7 @@ characters = {
 				original_tag = HUN
 			}
 
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-						has_completed_focus = wuw_HUN_join_the_comintern
-					}
-				}
-			}
-
 			available = {
-				NOT = {
-					OR = {
-						has_government = communism
-						has_government = democratic
-					}
-				}
 			}
 
 			# He should get a better trait through the focus wuw_HUN_sway_the_count
@@ -3294,9 +3150,6 @@ characters = {
 			}
 
 			available = {
-				NOT = {
-					has_government = communism
-				}
 			}
 
 			traits = {
@@ -3335,16 +3188,12 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = wuw_HUN_end_the_regency
-						has_completed_focus = wuw_HUN_end_the_white_terror
 						has_completed_focus = wuw_HUN_undermine_the_admiral
 					}
 				}
 			}
 
 			available = {
-				NOT = {
-					has_government = communism
-				}
 				has_completed_focus = wuw_HUN_pass_statute_xix
 			}
 
@@ -3447,39 +3296,6 @@ characters = {
 			}
 		}
 
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_sandor_garbai
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
-					}
-				}
-			}
-
-			available = {
-				has_government = communism
-			}
-
-			traits = {
-				socialist_economist
-			}
-
-			ai_will_do = {
-				base = 3
-			}
-
-		}
-
 	}
 
 	HUN_jozsef_kelen = {
@@ -3490,42 +3306,6 @@ characters = {
 			civilian = {
 				small = "GFX_portrait_HUN_jozsef_kelen_small"
 			}
-		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_jozsef_kelen
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
-					}
-				}
-			}
-
-			available = {
-				OR = {
-					has_government = communism
-					has_government = democratic
-				}
-			}
-
-			traits = {
-				peoples_commisar_of_heavy_industries
-			}
-
-			ai_will_do = {
-				base = 2
-			}
-
 		}
 
 	}
@@ -3552,10 +3332,7 @@ characters = {
 
 			available = {
 				NOT = {
-					OR = {
-						has_government = communism
-						has_government = fascism
-					}
+					has_government = fascism
 				}
 			}
 
@@ -3592,20 +3369,8 @@ characters = {
 				has_dlc = "La Resistance"
 			}
 
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-						has_completed_focus = wuw_HUN_join_the_comintern
-					}
-				}
-			}
-
 			available = {
 				has_intelligence_agency  = yes 
-				NOT = {
-					has_government = communism
-				}
 			}
 
 			traits = {
@@ -3628,44 +3393,6 @@ characters = {
 			civilian = {
 				small = "GFX_portrait_HUN_imre_nagy_small"
 			}
-		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_imre_nagy
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
-					}
-				}
-			}
-
-			available = {
-				NOT = {
-					OR = {
-						has_government = neutrality
-						has_government = fascism
-					}
-				}
-			}
-
-			traits = {
-				HUN_internationalist_marxist
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-
 		}
 
 	}
@@ -3692,10 +3419,7 @@ characters = {
 
 			available = {
 				NOT = {
-					OR = {
-						has_government = communism
-						has_government = fascism
-					}
+					has_government = fascism
 				}
 			}
 
@@ -3757,44 +3481,6 @@ characters = {
 			}
 		}
 
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_janos_kadar
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_establish_the_second_republic
-						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
-					}
-				}
-			}
-
-			available = {
-				OR = {
-					has_completed_focus = wuw_HUN_goulash_communism
-					has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-				}
-				has_government = communism
-			}
-
-			traits = {
-				HUN_goulash_communist
-			}
-
-			ai_will_do = {
-				base = 5
-			}
-
-		}
-
 	}
 
 	HUN_jusztinian_seredi = {
@@ -3815,12 +3501,6 @@ characters = {
 
 			allowed = {
 				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					has_completed_focus = wuw_HUN_end_the_white_terror
-				}
 			}
 
 			available = {
@@ -3850,44 +3530,6 @@ characters = {
 			civilian = {
 				small = "GFX_portrait_HUN_lennart_bernadotte_small"
 			}
-		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_lennart_bernadotte
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_reinstate_the_pragmatic_sanction
-						has_completed_focus = wuw_HUN_end_the_white_terror
-						has_completed_focus = wuw_HUN_continue_the_regency
-					}
-				}
-			}
-
-			available = {
-				has_completed_focus = wuw_HUN_a_responsible_government
-				OR = {
-					has_government = democratic
-					has_government = neutrality
-				}
-			}
-
-			traits = {
-				HUN_filmmaker
-			}
-
-			ai_will_do = {
-				base = 5
-			}
-
 		}
 
 	}
