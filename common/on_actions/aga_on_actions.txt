@@ -1,4 +1,44 @@
 on_actions = {
+	on_operative_captured = {
+		effect = {
+			if = {
+				limit = {
+					YUG = { has_captured_operative = yes }
+				}
+				free_operative = { captured_by = YUG }
+			}
+			else_if = {
+				limit = {
+					BEL = { has_captured_operative = yes }
+				}
+				free_operative = { captured_by = BEL }
+			}
+			else_if = {
+				limit = {
+					POL = { has_captured_operative = yes }
+				}
+				free_operative = { captured_by = POL }
+			}
+			else_if = {
+				limit = {
+					EST = { has_captured_operative = yes }
+				}
+				free_operative = { captured_by = EST }
+			}
+			else_if = {
+				limit = {
+					HOL = { has_captured_operative = yes }
+				}
+				free_operative = { captured_by = HOL }
+			}
+			else_if = {
+				limit = {
+					GRE = { has_captured_operative = yes }
+				}
+				free_operative = { captured_by = GRE }
+			}
+		}
+	}
 	on_monthly = {
 		effect = {
 			if = {
