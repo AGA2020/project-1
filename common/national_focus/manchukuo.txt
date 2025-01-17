@@ -206,96 +206,6 @@
 	}
 
 	focus = {
-		id = MAN_collective_farms
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = MAN_invite_japanese_settlers }
-		x = 0
-		y = 1
-		relative_position_id = MAN_invite_japanese_settlers
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			every_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-			}
-		}
-	}
-
-	focus = {
-		id = MAN_law_university
-		icon = GFX_focus_research
-		prerequisite = { focus = MAN_collective_farms focus = MAN_mukden_military_academy focus = MAN_expand_the_textile_industry }
-		x = 0
-		y = 1
-		relative_position_id = MAN_collective_farms
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		available = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = MAN_research_and_education_department
-		icon = GFX_focus_research
-		prerequisite = { focus = MAN_law_university }
-		x = 0
-		y = 1
-		relative_position_id = MAN_law_university
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			num_of_factories > 50
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1			
-		}
-	}
-
-	focus = {
 		id = MAN_trade_delegation
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = MAN_pacify_the_countryside }
@@ -338,12 +248,102 @@
 	}
 
 	focus = {
-		id = MAN_expand_the_textile_industry
-		icon = GFX_goal_generic_consumer_goods
+		id = MAN_collective_farms
+		icon = GFX_goal_generic_construction
 		prerequisite = { focus = MAN_trade_delegation }
 		x = 0
 		y = 1
 		relative_position_id = MAN_trade_delegation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_law_university
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_collective_farms focus = MAN_mukden_military_academy focus = MAN_expand_the_textile_industry }
+		x = -3
+		y = 1
+		relative_position_id = MAN_collective_farms
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = MAN_research_and_education_department
+		icon = GFX_focus_research
+		prerequisite = { focus = MAN_collective_farms focus = MAN_mukden_military_academy focus = MAN_expand_the_textile_industry }
+		x = 2
+		y = 0
+		relative_position_id = MAN_law_university
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			num_of_factories > 50
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1			
+		}
+	}
+
+	focus = {
+		id = MAN_expand_the_textile_industry
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = MAN_invite_japanese_settlers }
+		x = 0
+		y = 1
+		relative_position_id = MAN_invite_japanese_settlers
 
 		cost = 10
 
@@ -394,9 +394,9 @@
 	focus = {
 		id = MAN_obedience
 		icon = GFX_focus_CZE_german_puppet
-		prerequisite = { focus = MAN_army_modernization }
-		x = -2
-		y = 4
+		prerequisite = { focus = MAN_mukden_military_academy focus = MAN_collective_farms focus = MAN_expand_the_textile_industry }
+		x = 2
+		y = 3
 		relative_position_id = MAN_army_modernization
 
 		cost = 10
