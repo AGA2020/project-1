@@ -86,7 +86,10 @@ MEX_category_military_issues = {
 		timeout_effect = {
 			if = {
 				limit = {
-					has_idea = MEX_cedillo_tension_4
+					AND = {
+						has_idea = MEX_cedillo_tension_4
+						is_ai = no
+					}
 				}
 
 				remove_ideas = MEX_cedillo_tension_4

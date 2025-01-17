@@ -136,15 +136,6 @@ country_event = {
 					planning_skill = 2
 					logistics_skill = 2
 				}
-				add_corps_commander_role = { # Fictitious
-					character = MEX_manuel_sanchez
-					traits = { harsh_leader }
-					skill = 3
-					attack_skill = 2
-					defense_skill = 2
-					planning_skill = 3
-					logistics_skill = 3
-				}
 				if = {
 					limit = {
 						has_government = neutrality
@@ -1028,97 +1019,6 @@ country_event = {
 			factor = 0
 		}
 	}
-}
-
-# Trotsky arrives from Norway
-
-country_event = {
-	id = mexico.17
-	title = mexico.17.title
-	desc = mexico.17.desc
-	
-	picture = GFX_report_event_communists_cheer
-	
-	is_triggered_only = yes
-
-	# fire_only_once = yes
-	
-	# trigger = {
-	# 	tag = MEX
-	# 	date > 1936.08.28
-	# 	OR = {
-	# 		has_government = neutrality
-	# 		AND = {
-	# 			has_government = communism
-	# 			NOT = {
-	# 				has_country_leader = { ruling_only = yes character = MEX_dionisio_encina }
-	# 			} 
-	# 		}
-
-	# 	}
-	# 	NOT = {
-	# 		has_global_flag = trotsky_not_welcome_in_mexico
-	# 	}
-	# 	NOT = {
-	# 		SOV_is_left_opposition = yes 
-	# 		NOT = { SOV_soviet_civil_war_not_started = yes } # IF the civil war has already started, and Left Opposition has risen up, Trotsky probably won't appear in Mexico
-	# 	}
-	# 	NOT = {
-	# 		has_global_flag = flag_trotsky_dead
-	# 	}
-
-	# }
-	
-	# mean_time_to_happen = {
-	# 	months = 3 # Historically arrived in January 1937
-	# }
-	
-	option = {
-		trigger = {
-			SOV = {
-				has_country_leader = { character = SOV_iosif_stalin }
-			}
-			NOT = {
-				has_war_with = SOV
-			}
-		}
-		
-		name = mexico.17.b # Send him to Stalin to face trial for his crimes
-				
-		if = {
-			limit = {
-				SOV = {
-					has_country_leader = { character = SOV_iosif_stalin }
-				}
-				NOT = {
-					has_country_leader = {
-						character = MEX_hernan_laborde
-						ruling_only = yes
-					}
-				}
-			}
-			SOV = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = mexico_extradited_trotsky
-				}
-				country_event = {
-					id = mexico.21
-					days = 1
-				}
-			}
-		}
-		USA = {
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = mexico_communist_menace
-			}
-		}
-		ai_chance = {
-			factor = 100
-		}
-	}
-	
 }
 
 # The 1940 election begins
