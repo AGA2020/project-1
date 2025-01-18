@@ -363,6 +363,7 @@ leader_traits = {
 		cavalry_attack_factor = 0.05
 		equipment_bonus = {
 			small_plane_naval_bomber_airframe = {
+				instant = yes
 				air_range = 0.1 naval_strike_attack = 0.1
 			}
 		}
