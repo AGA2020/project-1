@@ -869,6 +869,10 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
+			add_autonomy_ratio = {
+				value = 0.20
+				localization = MAN_leadership_aga
+			}
 			MAN_low_legitimacy_level_down = yes
 		}
 	}
