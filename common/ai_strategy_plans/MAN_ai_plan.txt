@@ -12,9 +12,10 @@ MAN_historical = {
 
 	ai_national_focuses = {
 		MAN_pacify_the_countryside
-		MAN_trade_delegation
+        MAN_invite_japanese_settlers    
 		MAN_expand_the_textile_industry
-		MAN_invite_japanese_settlers			
+        MAN_trade_delegation
+		
 	}
 
 	
