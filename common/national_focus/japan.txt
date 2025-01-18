@@ -23,7 +23,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 7
 		}
 
 		available = {
@@ -596,7 +596,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 6
+			factor = 8
 		}
 
 		available = {
@@ -828,7 +828,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 4
+			factor = 5
 		}
 
 		available = {
@@ -912,7 +912,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 		}
 
 		available = {
@@ -1084,24 +1084,11 @@ focus_tree = {
 		x = 8
 		y = 0
 		relative_position_id = JAP_purge_the_kodoha_faction
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "Waking the Tiger" }
-			}
-		}
 
 		cost = 5
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				OR = {
-					has_completed_focus = JAP_purge_the_kodoha_faction
-				}
-			}
+			factor = 2
 		}
 
 		available = {
@@ -1797,11 +1784,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_purge_the_kodoha_faction
-			}
+			factor = 2
 		}
 
 		available = {
@@ -1888,11 +1871,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_purge_the_kodoha_faction
-			}
+			factor = 2
 		}
 
 		available = {
@@ -1937,11 +1916,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_purge_the_kodoha_faction
-			}
+			factor = 2
 		}
 
 		available = {
@@ -2151,11 +2126,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_purge_the_kodoha_faction
-			}
+			factor = 2
 		}
 
 		available = {
@@ -2273,11 +2244,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 2
-				has_completed_focus = JAP_purge_the_kodoha_faction
-			}
+			factor = 2
 		}
 
 		available = {
