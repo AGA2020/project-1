@@ -3196,18 +3196,13 @@ characters = {
 		}
 
 		corps_commander = {
-			traits = { cavalry_officer cavalry_leader }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 3
+			traits = { cavalry_officer cavalry_leader trait_engineer organizer trickster }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 4
 			legacy_id = 0
-			visible = {
-				OR = {
-					has_idea = SOV_grigory_semyonov
-				}
-			}
 		}
 
 		advisor = {
@@ -3247,6 +3242,16 @@ characters = {
 			traits = {
 				ataman_transbaikal_host
 			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = SOV_grigory_semyonov
+			ledger = army
+			allowed = {
+				original_tag = MAN
+			}
+			traits = { army_cavalry_3 }
 		}		
 	}
 
