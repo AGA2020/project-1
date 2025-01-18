@@ -38,9 +38,6 @@ MAN_request_china = {
                 }
             }
         }
-        available = {
-            has_manpower > 4999
-        }
         visible = {
             has_completed_focus = MAN_national_cooperation_government
             OR = {
