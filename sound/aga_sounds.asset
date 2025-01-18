@@ -48,17 +48,3 @@ soundeffect = {
 	}
 	volume = 1.0
 }
-
-sound = {
-	name = "nanjing"
-	file = "aga_sound/nanjing.wav"
-}
-
-soundeffect = {
-	name = "nanjing"
-	sounds = {
-		sound = 
-			nanjing
-	}
-	volume = 1.0
-}
