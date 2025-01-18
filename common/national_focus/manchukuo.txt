@@ -934,5 +934,31 @@
 		}
 	}
 
+	focus = {
+		id = MAN_vassalize_mengukuo
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = MAN_the_two_emperors }
+		x = 0
+		y = 1
+		relative_position_id = MAN_the_two_emperors
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+
+		completion_reward = {
+			add_country_leader_trait = spirit_of_genghis
+		}
+	}
+
 	shared_focus = CHI_invite_foreign_investors
 }
