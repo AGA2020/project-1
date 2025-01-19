@@ -13617,7 +13617,7 @@ focus_tree = {
 		completion_reward = {
 			every_country = {
 			    limit = {
-			        axis = yes
+			        european_axis = yes
 			    }
 				add_timed_idea = { idea = fall_blau days = 180 }
 			}		
