@@ -262,6 +262,15 @@ IF = {
 1939.1.1 = {
 }
 
+create_production_license = {
+    target = MAN
+    equipment = {
+        type = infantry_equipment_1
+        version = 0
+    }
+    cost_factor = 0
+}
+
 set_convoys = 400
 
 set_autonomy = {
