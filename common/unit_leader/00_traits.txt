@@ -1671,7 +1671,7 @@ leader_traits = {
 				}
 			}
 			enable_ability = siege_artillery
-			
+			allowed = { NOT = { has_trait = scavenger } } 			
 			slot = high_command
 			specialist_advisor_trait = army_artillery_1
 			expert_advisor_trait = army_artillery_2
@@ -1697,7 +1697,7 @@ leader_traits = {
 			modifier = {
 				equipment_capture = 0.03
 			}
-			
+			allowed = { NOT = { has_trait = fortress_buster } }			
 			ai_will_do = {
 				factor = 1
 			}

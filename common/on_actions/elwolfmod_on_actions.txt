@@ -201,11 +201,6 @@ on_actions = {
 				}
 				add_ideas = peace_training
 			}
-			SWE = {
-				country_event = {
-					id = elwolfmod.1
-				}
-			}
 		}
 	}
 	on_capitulation = {
