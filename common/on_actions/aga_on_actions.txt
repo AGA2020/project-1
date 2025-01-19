@@ -257,7 +257,10 @@ on_actions = {
 					target = ETH
 					transfer_troops = no
 				}
-
+				add_named_threat = { 
+					threat = 3.5
+					name = aga_eth
+				}
 				ITA_end_the_italo_ethiopian_war = yes
 				ITA_missiolinis_initialize_missiolinis_system = yes
 				delete_unit_template_and_units = {
