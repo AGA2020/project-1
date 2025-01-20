@@ -108,7 +108,6 @@ on_actions = {
 	}
 	on_weekly = {
 		effect = {
-			#axis = { scoped_play_song = "entertheeast" }	
 			if = {
 			    limit = {
 			        any_country = { axis = yes has_tech = survivability_studies }
@@ -319,43 +318,57 @@ on_actions = {
 			}
 		}
 	}
+	on_war_relation_added = {
+        effect = {
+            if = {
+                limit = {
+                    tag = JAP
+                    FROM = {
+                        is_in_faction_with = ENG
+                    }
+                }
+                every_country = {
+                    limit = {
+                        is_in_faction_with = ENG
+                    }
+                    add_to_war = {
+                        targeted_alliance = FROM
+                        enemy = JAP
+                        hostility_reason = asked_to_join
+                    }
+                }
+                every_country = {
+                    limit = {
+                        is_in_faction_with = JAP
+                    }
+                    add_to_war = {
+                        targeted_alliance = ROOT
+                        enemy = FROM
+                        hostility_reason = asked_to_join
+                    }
+                }
+            }
+			if = {
+                limit = {
+                    tag = GER
+                    FROM = {
+                       tag = SOV
+                    }
+                }
+                every_country = {
+                    limit = {
+                        is_in_faction_with = GER
+                    }
+                    add_to_war = {
+                        targeted_alliance = ROOT
+                        enemy = SOV
+                        hostility_reason = asked_to_join
+                    }
+                }
+            }
+        }
+    }
 	on_declare_war = {
-		effect = {
-			if = {
-				limit = {
-					FROM = {
-						tag = ENG
-					}
-					ENG = { has_war = yes }
-					date>1940.12.1
-				}
-				JAP = { add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 } }
-				JAP = { declare_war_on = { target = USA type = annex_everything } }
-				JAP = { declare_war_on = { target = FRA type = annex_everything } }
-				JAP = { declare_war_on = { target = SAF type = annex_everything } }
-				JAP = { declare_war_on = { target = CAN type = annex_everything } }
-				JAP = { declare_war_on = { target = AST type = annex_everything } }
-				JAP = { declare_war_on = { target = NZL type = annex_everything } }
-				JAP = { declare_war_on = { target = HOL type = annex_everything } }
-				JAP = { declare_war_on = { target = BEL type = annex_everything } }
-				if = { limit = { BRA = { is_ai = no } } JAP = { declare_war_on = { target = BRA type = annex_everything } } }
-				if = { limit = { MEX = { is_ai = no } } JAP = { declare_war_on = { target = MEX type = annex_everything } } }
-
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					ROOT = { tag = GER } 
-					FROM = { tag = SOV }
-					date>1941.1.1
-				}
-				ITA = { declare_war_on = { target = SOV type = annex_everything } }
-				if = { limit = { BUL = { is_ai = no } } BUL = { declare_war_on = { target = SOV type = annex_everything } } }
-				if = { limit = { ROM = { is_ai = no } } ROM = { declare_war_on = { target = SOV type = annex_everything } } }
-				if = { limit = { HUN = { is_ai = no } } HUN = { declare_war_on = { target = SOV type = annex_everything } } }
-			}
-		}
 		effect = {
 			if = {
 				limit = {
