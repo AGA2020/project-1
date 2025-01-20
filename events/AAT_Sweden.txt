@@ -1502,24 +1502,6 @@ country_event = {
 	picture = GFX_report_event_german_troops_paris
 	is_triggered_only = yes
 
-	# allow access
-
-	option = {
-		name = AAT_Sweden_flashpoints.42.a
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0
-				has_war_with = FROM
-			}
-			modifier = {
-				factor = 0
-				is_in_faction = yes
-			}
-		}
-		SWE_permittentrafiken_response_picker = yes
-
-	}
 	# maintain neutrality
 	option = {
 		name = AAT_Sweden_flashpoints.42.b
@@ -1535,10 +1517,6 @@ country_event = {
 			}
 		}
 		FROM = {
-			country_event = {
-				id = AAT_Sweden_flashpoints.32
-				days = 3
-			}
 			add_opinion_modifier = {
 				target = SWE
 				modifier = refused_GER_military_access_request
