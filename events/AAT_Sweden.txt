@@ -1047,49 +1047,6 @@ country_event = {
 	picture = GFX_report_event_generic_train
 	is_triggered_only = yes
 
-	# Escalate tensions
-	option = {
-		name = AAT_Sweden_flashpoints.32.a
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0
-				NOT = {
-					OR = {
-						any_allied_country = {
-							any_controlled_state = {
-								is_core_of = NOR
-							}
-						}
-						any_controlled_state = {
-							is_core_of = NOR
-						}
-						any_allied_country = {
-							any_controlled_state = {
-								is_core_of = FIN
-							}
-						}
-						any_controlled_state = {
-							is_core_of = FIN
-						}
-						AND = {
-							has_war_with = SOV
-							FIN = {
-								has_war_with = SOV
-							}
-							has_military_access_to = FIN
-						}
-					}
-				}
-			}
-		}
-		SWE = {
-			country_event = {
-				id = AAT_Sweden_flashpoints.33
-				days = 3
-			}
-		}
-	}
 	# drop the issue
 	option = {
 		name = AAT_Sweden_flashpoints.32.b
@@ -1502,24 +1459,6 @@ country_event = {
 	picture = GFX_report_event_german_troops_paris
 	is_triggered_only = yes
 
-	# allow access
-
-	option = {
-		name = AAT_Sweden_flashpoints.42.a
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0
-				has_war_with = FROM
-			}
-			modifier = {
-				factor = 0
-				is_in_faction = yes
-			}
-		}
-		SWE_permittentrafiken_response_picker = yes
-
-	}
 	# maintain neutrality
 	option = {
 		name = AAT_Sweden_flashpoints.42.b
@@ -1535,10 +1474,6 @@ country_event = {
 			}
 		}
 		FROM = {
-			country_event = {
-				id = AAT_Sweden_flashpoints.32
-				days = 3
-			}
 			add_opinion_modifier = {
 				target = SWE
 				modifier = refused_GER_military_access_request
