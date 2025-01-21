@@ -695,62 +695,6 @@ country_event = {
 	}
 }
 
-# Event for Soviet Union on Great Red Menace
-country_event = {
-	id = wtt_germany.19
-	title = wtt_germany.19.t
-	desc = wtt_germany.19.d
-	picture = GFX_report_event_german_politician_speech
-
-	is_triggered_only = yes
-
-	# Hold massive military exercises to intimidate the Germans into shutting up
-	option = {
-		name = wtt_germany.19.a
-		ai_chance = {
-			factor = 90
-		}
-		add_named_threat = { threat = 10 name = GER_soviet_military_exercises }
-		add_timed_idea = { idea = GER_soviet_military_exercises days = 365 }
-		army_experience = 50
-		add_political_power = 100
-		hidden_effect = { news_event = { id = wtt_news.9 hours = 6 } }
-	}
-
-	# Reduce tensions
-	option = {
-		name = wtt_germany.19.b
-		ai_chance = {
-			factor = 5
-		}
-		add_named_threat = { threat = -5 name = GER_soviet_smoothes_relationships }
-		add_political_power = -50
-		every_country = {
-			limit = {
-				has_idea = GER_the_great_red_menace
-			}
-			country_event = { id = wtt_germany.25 days = 1 random_days = 2 }
-			random_list = {
-				80 = {
-					# No effect
-				}
-				20 = {
-					remove_ideas = GER_the_great_red_menace
-				}
-			}
-		}
-		GER = { country_event = { id = wtt_germany.25 days = 1 random_days = 2 } }
-	}
-
-	# Do nothing
-	option = {
-		name = wtt_germany.19.c
-		ai_chance = {
-			factor = 5
-		}
-	}
-}
-
 # Event for Soviet Union on Central European Alliance
 country_event = {
 	id = wtt_germany.20
