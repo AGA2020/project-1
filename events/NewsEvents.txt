@@ -330,6 +330,7 @@ news_event = {
 	option = {
 		name = news.12.b
 		trigger = { TAG = SOV }
+		hidden_effect = { SOV = { set_occupation_law = liberate_workers_occupation } }
 	}
 	option = {
 		name = news.12.c

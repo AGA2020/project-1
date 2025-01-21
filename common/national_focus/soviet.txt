@@ -8720,70 +8720,23 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
-			if = {
-				limit = {
-					country_exists = EST
-				}
-				EST = {
-					if = {
-						limit = { ROOT = { has_government = fascism } }
-						add_timed_idea = { idea = fascist_influence days = 1095 }
-					}
-					if = {
-						limit = { ROOT = { has_government = democratic } }
-						add_timed_idea = { idea = democratic_influence days = 1095 }
-					}
-					if = {
-						limit = { ROOT = { has_government = communism } }
-						add_timed_idea = { idea = communist_influence days = 1095 }
-					}
-					hidden_effect = {
-						country_event = { id = generic.1 }
-					}
+		complete_national_focus = SOV_secure_leningrad
+			EST = {
+				add_timed_idea = { idea = communist_influence days = 1095 }
+				hidden_effect = {
+					country_event = { id = generic.1 }
 				}
 			}
-			if = {
-				limit = {
-					country_exists = LAT
-				}
-				LAT = {
-					if = {
-						limit = { ROOT = { has_government = fascism } }
-						add_timed_idea = { idea = fascist_influence days = 1095 }
-					}
-					if = {
-						limit = { ROOT = { has_government = democratic } }
-						add_timed_idea = { idea = democratic_influence days = 1095 }
-					}
-					if = {
-						limit = { ROOT = { has_government = communism } }
-						add_timed_idea = { idea = communist_influence days = 1095 }
-					}
-					hidden_effect = {
-						country_event = { id = generic.1 }
-					}
+			LAT = {
+				add_timed_idea = { idea = communist_influence days = 1095 }
+				hidden_effect = {
+					country_event = { id = generic.1 }
 				}
 			}
-			if = {
-				limit = {
-					country_exists = LIT
-				}
-				LIT = {
-					if = {
-						limit = { ROOT = { has_government = fascism } }
-						add_timed_idea = { idea = fascist_influence days = 1095 }
-					}
-					if = {
-						limit = { ROOT = { has_government = democratic } }
-						add_timed_idea = { idea = democratic_influence days = 1095 }
-					}
-					if = {
-						limit = { ROOT = { has_government = communism } }
-						add_timed_idea = { idea = communist_influence days = 1095 }
-					}
-					hidden_effect = {
-						country_event = { id = generic.1 }
-					}
+			LIT = {
+				add_timed_idea = { idea = communist_influence days = 1095 }
+				hidden_effect = {
+					country_event = { id = generic.1 }
 				}
 			}
 		}
@@ -8809,11 +8762,6 @@ ai_will_do = {
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			is_subject = no
-		}
-
-		bypass = {
-			has_full_control_of_state = 146
 		}
 		
 		search_filters = {FOCUS_FILTER_ANNEXATION}
