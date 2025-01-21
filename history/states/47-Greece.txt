@@ -38,7 +38,7 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 3
-			dockyard = 1
+			dockyard = 4
 			air_base = 4
 			4109 = {
 				naval_base = 9
@@ -47,7 +47,7 @@ state={
 
 		}
 		add_core_of = GRE
-
+		add_extra_state_shared_building_slots = 3
 	}
 
 	provinces={
