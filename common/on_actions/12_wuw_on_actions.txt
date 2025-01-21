@@ -444,6 +444,24 @@ on_actions = {
 				}
 			}
 		}
+
+		#Count how many major countries Germany has capped so they can take the Supreme Leader Focus
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = GER
+					}
+					ROOT = {
+						is_major = yes
+					}
+				}
+			}
+			FROM = {
+				add_to_variable = { GER_capitulated_major_countries = 1 }
+			}
+		}
+
 	}
 	
 	

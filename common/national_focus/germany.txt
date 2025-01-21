@@ -5676,7 +5676,7 @@ focus_tree = {
 		relative_position_id = GER_form_the_jagdwaffe
 		cost = 5
 		available = {
-			is_special_project_completed = sp:sp_air_radar
+			has_tech = improved_radio
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
@@ -5765,7 +5765,7 @@ focus_tree = {
 		cost = 5
 		available = {
 			has_war_with_major = yes
-			has_tech = cavity_magnatron
+			is_special_project_completed = sp:sp_air_radar
 			custom_trigger_tooltip = {
 				tooltip = GER_controls_atlantic_coast_brittany_finnmark_tt
 				OR = {

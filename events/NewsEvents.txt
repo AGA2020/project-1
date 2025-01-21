@@ -3720,7 +3720,15 @@ news_event = {
 	
 	trigger = {
 		431 = { is_controlled_by = JAP }
-		431 = { is_owned_by = ENG }
+		OR = {
+			431 = {
+				is_owned_by = ENG
+			}
+			RAJ = {
+				is_subject_of = ENG
+				owns_state = 431
+			}
+		}
 		JAP = { has_war_with = ENG }
 		NOT = { has_global_flag = fall_of_calcutta }
 	}
@@ -3739,6 +3747,7 @@ news_event = {
 			NOT = {
 				TAG = JAP
 				TAG = ENG
+				TAG = RAJ
 			}
 		}
 	}
@@ -3748,7 +3757,12 @@ news_event = {
 	}
 	option = {
 		name = news.100.c
-		trigger = { TAG = ENG }
+		trigger = { 
+			OR = {
+				TAG = ENG 
+				TAG = RAJ 
+			}
+		}
 	}
 }
 
@@ -3763,7 +3777,15 @@ news_event = {
 	
 	trigger = {
 		439 = { is_controlled_by = JAP }
-		439 = { is_owned_by = ENG }
+		OR = {
+			439 = {
+				is_owned_by = ENG
+			}
+			RAJ = {
+				is_subject_of = ENG
+				owns_state = 439
+			}
+		}
 		JAP = { has_war_with = ENG }
 		NOT = { has_global_flag = fall_of_new_delhi }
 	}
@@ -3782,6 +3804,7 @@ news_event = {
 			NOT = {
 				TAG = JAP
 				TAG = ENG
+				TAG = RAJ
 			}
 		}
 	}
@@ -3791,7 +3814,12 @@ news_event = {
 	}
 	option = {
 		name = news.100.c
-		trigger = { TAG = ENG }
+		trigger = { 
+			OR = {
+				TAG = ENG 
+				TAG = RAJ 
+			}
+		}
 	}
 }
 

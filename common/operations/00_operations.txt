@@ -1876,6 +1876,17 @@ operation_steal_tech_civilian = { ### 12 3/35
 				target = FROM
 				uses = 1
 			}
+			if = {
+				limit = {
+					FROM = {
+						has_facility_specialization = specialization_nuclear
+					}
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.1
+				}
+			}
 		}
 	}
 
@@ -2435,6 +2446,19 @@ operation_steal_tech_army = { ### 16 3/55
 	}
 	outcome_extra_execute = { # SCOPE_OPERATION
 		ROOT = {
+			if = {
+				limit = {
+					FROM = {
+						has_facility_specialization = specialization_land
+					}
+				}
+				ROOT = {
+					add_breakthrough_progress = {
+						specialization = specialization_land
+						value = 0.1
+					}
+				}
+			}
 			steal_random_tech_bonus = {
 				folder = nsb_armour_folder
 				folder = artillery_folder
@@ -2605,6 +2629,19 @@ operation_steal_tech_navy = { ### 17 3/55
 
 	outcome_extra_execute = { # SCOPE_OPERATION
 		ROOT = {
+			if = {
+				limit = {
+					FROM = {
+						has_facility_specialization = specialization_naval
+					}
+				}
+				ROOT = {
+					add_breakthrough_progress = {
+						specialization = specialization_naval
+						value = 0.1
+					}
+				}
+			}
 			steal_random_tech_bonus = {
 				folder = mtgnavalfolder
 
@@ -2748,6 +2785,17 @@ operation_steal_tech_airforce = { ### 18 3/55
 	}
 	outcome_extra_execute = { # SCOPE_OPERATION
 		ROOT = {
+			if = {
+				limit = {
+					FROM = {
+						has_facility_specialization = specialization_air
+					}
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_air
+					value = 0.1
+				}
+			}
 			steal_random_tech_bonus = {
 				folder = air_techs_folder
 				bonus = 1.0

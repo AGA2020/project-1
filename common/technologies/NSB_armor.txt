@@ -1967,12 +1967,6 @@ technologies = {
 			forest = {
 				movement = 0.2
 			}
-			hills = {
-				movement = 0.2
-			}
-			mountain = 	{
-				movement = 0.2
-			}
 			jungle = {
 				movement = 0.2
 			}
