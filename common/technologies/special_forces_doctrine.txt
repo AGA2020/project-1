@@ -1460,7 +1460,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		allow_branch = { 
-			tag = MAN
+			always = no
 		}		
 		recon = {
 			battalion_mult = {
