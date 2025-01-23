@@ -3555,7 +3555,7 @@ GER_reichskommissariats = {
 
 		complete_effect = {
 
-			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }
+			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states_half }
 
 			GER_improve_rosenbergs_trait_effect = yes
 
@@ -3639,7 +3639,7 @@ GER_reichskommissariats = {
 		}
 
 		complete_effect = {
-			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }
+			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states_half }
 
 			GER_improve_rosenbergs_trait_effect = yes
 
@@ -3730,7 +3730,7 @@ GER_reichskommissariats = {
 		}
 
 		complete_effect = {
-			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }
+			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states_half }
 
 			GER_improve_rosenbergs_trait_effect = yes
 
@@ -3769,7 +3769,6 @@ GER_reichskommissariats = {
 		}
 
 		available = {
-			is_subject = no
 			OR = {
 				has_completed_focus = GER_heed_von_neuraths_concerns
 				has_completed_focus = GER_reorganize_the_wehrmacht
@@ -3900,7 +3899,7 @@ GER_reichskommissariats = {
 
 		complete_effect = {
 
-			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }
+			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states_half }
 
 			GER_improve_rosenbergs_trait_effect = yes
 
@@ -3971,7 +3970,6 @@ GER_reichskommissariats = {
 		}
 
 		available = {
-			is_subject = no
 			OR = {
 				has_completed_focus = GER_heed_von_neuraths_concerns
 				has_completed_focus = GER_reorganize_the_wehrmacht
@@ -4066,7 +4064,7 @@ GER_reichskommissariats = {
 		}
 
 		complete_effect = {
-			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }
+			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states_half }
 
 			GER_improve_rosenbergs_trait_effect = yes
 
@@ -4129,10 +4127,6 @@ GER_reichskommissariats = {
 		}
 
 		available = {
-			OR = {
-				has_completed_focus = GER_heed_von_neuraths_concerns
-				has_completed_focus = GER_reorganize_the_wehrmacht
-			}
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				192 = {
@@ -4305,11 +4299,6 @@ GER_reichskommissariats = {
 		}
 
 		available = {
-			is_subject = no
-			OR = {
-				has_completed_focus = GER_heed_von_neuraths_concerns
-				has_completed_focus = GER_reorganize_the_wehrmacht
-			}
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				231 = {
@@ -4387,7 +4376,7 @@ GER_reichskommissariats = {
 		}
 
 		complete_effect = {
-			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }
+			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states_half }
 
 			GER_improve_rosenbergs_trait_effect = yes
 
@@ -4842,7 +4831,7 @@ GER_reichskommissariats = {
 
 		complete_effect = {
 
-			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }
+			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states_half }
 
 			GER_improve_rosenbergs_trait_effect = yes
 
@@ -5466,7 +5455,7 @@ GER_reichskommissariats = {
 		}
 
 		complete_effect = {
-			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }
+			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states_half }
 
 			GER_improve_rosenbergs_trait_effect = yes
 
@@ -6327,7 +6316,7 @@ GER_reichskommissariats = {
 
 		complete_effect = {
 
-			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states }
+			subtract_from_variable = {	GER_monthly_consumer_goods_increase = GER_change_monthly_CG_occupied_states_half }
 
 			GER_improve_rosenbergs_trait_effect = yes
 
