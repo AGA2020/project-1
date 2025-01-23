@@ -10,7 +10,10 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = -0.24	
+				stability_factor = -0.24
+				civilian_intel_to_others = 100
+				army_intel_to_others = 100
+				navy_intel_to_others = 100
 			}
 			picture = alpacino
 

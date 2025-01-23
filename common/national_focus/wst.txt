@@ -1,0 +1,32 @@
+﻿focus_tree = {
+	id = wst_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = WST 
+		}
+	}
+	
+	default = no
+
+	initial_show_position = {
+		x = 0
+	}
+	focus = {
+		id = praise_rp_god
+		available = {
+		}
+		icon = GFX_goal_rpgod
+		x = 0
+		y = 0
+		cost = 500
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+}
