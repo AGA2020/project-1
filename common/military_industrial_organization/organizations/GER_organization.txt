@@ -20,13 +20,7 @@ GER_porsche_organization = {
 	icon = GFX_idea_porsche
 	
 	allowed = {
-		OR = {
-			original_tag = GER 
-			original_tag = SPR
-			original_tag = JAP
-			original_tag = HUN
-			original_tag = MAN
-		} 
+		original_tag = GER
 	}
 
 	available = {
@@ -266,14 +260,15 @@ GER_henschel_organization = {
 	include = generic_infantry_tank_organization
 	icon = GFX_idea_henschel
 	
-	allowed = {	
+	allowed = {
 		OR = {
 			original_tag = GER 
-			AND = {
-				original_tag = BUL
-				has_dlc = "Battle for the Bosporus"
-			}
-		}
+			original_tag = SPR
+			original_tag = JAP
+			original_tag = HUN
+			original_tag = MAN
+			original_tag = BUL
+		} 
 	}
 
 	available = {
@@ -338,7 +333,14 @@ GER_henschel_organization = {
 		position = { x=@tank_hoesch_X y=@tank_hoesch_Y }  
 		
 		visible = {
-			FROM = { original_tag = GER }
+			OR = {
+				FROM = { original_tag = GER }
+				FROM = { original_tag = SPR }
+				FROM = { original_tag = JAP }
+				FROM = { original_tag = HUN }
+				FROM = { original_tag = MAN }
+				FROM = { original_tag = BUL }							
+			}
 		}
 
 		available = {
@@ -372,7 +374,14 @@ GER_henschel_organization = {
 		position = { x=8 y=0 }
 
 		visible = {
-			FROM = { original_tag = GER }
+			OR = {
+				FROM = { original_tag = GER }
+				FROM = { original_tag = SPR }
+				FROM = { original_tag = JAP }
+				FROM = { original_tag = HUN }
+				FROM = { original_tag = MAN }
+				FROM = { original_tag = BUL }							
+			}
 		}
 
 		available = {
@@ -409,7 +418,14 @@ GER_henschel_organization = {
 		any_parent = { generic_mio_trait_interleaved_track_wheels generic_mio_trait_overlapped_track_wheels }
 
 		visible = {
-			FROM = { original_tag = GER }
+			OR = {
+				FROM = { original_tag = GER }
+				FROM = { original_tag = SPR }
+				FROM = { original_tag = JAP }
+				FROM = { original_tag = HUN }
+				FROM = { original_tag = MAN }
+				FROM = { original_tag = BUL }							
+			}
 		}
 
 		equipment_bonus = {
@@ -437,7 +453,14 @@ GER_henschel_organization = {
 		any_parent = { generic_mio_trait_turret_sights }
 
 		visible = {
-			FROM = { original_tag = GER }
+			OR = {
+				FROM = { original_tag = GER }
+				FROM = { original_tag = SPR }
+				FROM = { original_tag = JAP }
+				FROM = { original_tag = HUN }
+				FROM = { original_tag = MAN }
+				FROM = { original_tag = BUL }							
+			}
 		}
 
 		equipment_bonus = {
@@ -463,7 +486,14 @@ GER_henschel_organization = {
 		any_parent = { generic_mio_trait_adaptable_chassis }
 
 		visible = {
-			FROM = { original_tag = GER }
+			OR = {
+				FROM = { original_tag = GER }
+				FROM = { original_tag = SPR }
+				FROM = { original_tag = JAP }
+				FROM = { original_tag = HUN }
+				FROM = { original_tag = MAN }
+				FROM = { original_tag = BUL }							
+			}
 		}
 
 		equipment_bonus = {
