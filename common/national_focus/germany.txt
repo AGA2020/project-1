@@ -127,12 +127,14 @@ focus_tree = {
 			NOT = {
 				has_dynamic_modifier = { modifier = GER_economy_of_conquest_modifier }
 			}
+		}
+		ai_will_do = {
+			factor = 0
 		}		
 		mutually_exclusive = { focus = GER_the_four_year_plan }
 		x = 45
 		y = 0
 		cost = 5
-		#relative_position_id = GER_strengthen_the_kriegsmarine
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
 
@@ -153,11 +155,6 @@ focus_tree = {
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
 				}
 				random_select_amount = 2
 				add_extra_state_shared_building_slots = 1
@@ -8011,7 +8008,9 @@ focus_tree = {
 
 		available = {
 		}
-
+		ai_will_do = {
+			factor = 0
+		}
 		continue_if_invalid = yes
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }
@@ -13585,27 +13584,8 @@ focus_tree = {
 		
 		available_if_capitulated = yes
 
-		available = {
-			is_subject = no
-			AND = {
-				country_exists = JAP
-				JAP = { is_subject = no }
-				NOT = { has_war_with = JAP }
-				JAP = {
-					custom_trigger_tooltip = {
-						tooltip = GER_alone_or_peace_faction_tt
-						is_alone_or_in_faction_at_peace_with_GER = yes
-					}
-				}
-			}
-		}
-
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				is_in_faction_with = JAP
-				factor = 0 #GER-sempai has already noticed you!
-			}
+			factor = 0
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER }
