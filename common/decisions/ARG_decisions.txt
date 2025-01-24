@@ -17,7 +17,6 @@ ARG_international_loan_decisions = {
 
 		available = {
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			ENG = {
@@ -30,7 +29,6 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			NOT = {
@@ -110,7 +108,6 @@ ARG_international_loan_decisions = {
 
 		available = {
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			#ENG = {
@@ -123,7 +120,6 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			has_country_flag = ARG_british_loan_flag
@@ -181,7 +177,6 @@ ARG_international_loan_decisions = {
 
 		available = {
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			GER = {
@@ -194,7 +189,6 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			NOT = {
@@ -274,7 +268,6 @@ ARG_international_loan_decisions = {
 
 		available = {
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			#GER = {
@@ -287,7 +280,6 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			} 
 			has_country_flag = ARG_german_loan_flag
@@ -345,7 +337,7 @@ ARG_international_loan_decisions = {
 
 		available = {
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
+ 
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			USA = {
@@ -358,7 +350,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
+ 
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			NOT = {
@@ -438,7 +430,7 @@ ARG_international_loan_decisions = {
 
 		available = {
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
+ 
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			#USA = {
@@ -451,7 +443,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
+ 
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			} 
 			has_country_flag = ARG_usa_loan_flag
@@ -509,7 +501,7 @@ ARG_international_loan_decisions = {
 
 		available = {
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
+ 
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			ITA = {
@@ -522,7 +514,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
+ 
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			NOT = {
@@ -602,7 +594,7 @@ ARG_international_loan_decisions = {
 
 		available = {
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
+ 
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			}
 			#ITA = {
@@ -615,7 +607,7 @@ ARG_international_loan_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = ARG_reach_out_to_the_great_powers
+ 
 				has_completed_focus = BRA_reach_out_to_the_great_powers
 			} 
 			has_country_flag = ARG_italy_loan_flag
@@ -937,7 +929,6 @@ ARG_military_coup_decisions = {
 				has_government = fascism
 			}
 			NOT = { has_global_flag = military_coup_attempt_happened }
-			NOT = { has_completed_focus = ARG_subdue_dissension }
 		}
 
 		visible = {
@@ -946,7 +937,6 @@ ARG_military_coup_decisions = {
 				has_government = fascism
 			}
 			NOT = { has_global_flag = military_coup_attempt_happened }
-			NOT = { has_completed_focus = ARG_subdue_dissension } 
 			NOT = { has_completed_focus = ARG_march_to_la_casa_rosada } 
 		}
 
@@ -960,12 +950,6 @@ ARG_military_coup_decisions = {
 					has_completed_focus = ARG_consolidating_power
 				}
 				country_event = ARG_political_events.9
-			}
-			ELSE_IF = {
-				limit = {
-					has_completed_focus = ARG_subdue_dissension
-				}
-				country_event = ARG_political_events.10
 			}
 			ELSE = {
 				country_event = ARG_political_events.11
@@ -995,7 +979,6 @@ ARG_military_coup_decisions = {
 					has_government = fascism
 				}
 				NOT = { has_global_flag = military_coup_attempt_happened }
-				NOT = { has_completed_focus = ARG_subdue_dissension }
 				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }
 			}
 	
@@ -1005,7 +988,6 @@ ARG_military_coup_decisions = {
 					has_government = fascism
 				}
 				NOT = { has_global_flag = military_coup_attempt_happened }
-				NOT = { has_completed_focus = ARG_subdue_dissension } 
 				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }  
 
 			}
@@ -1058,7 +1040,6 @@ ARG_military_coup_decisions = {
 				has_completed_focus = ARG_the_castillo_cabinet
 				NOT = { has_government = fascism }
 				NOT = { has_global_flag = military_coup_attempt_happened }
-				NOT = { has_completed_focus = ARG_subdue_dissension } 
 				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada } 
 			}
 
@@ -1067,7 +1048,6 @@ ARG_military_coup_decisions = {
 				has_completed_focus = ARG_the_castillo_cabinet
 				NOT = { has_government = fascism }
 				NOT = { has_global_flag = military_coup_attempt_happened }
-				NOT = { has_completed_focus = ARG_subdue_dissension } 
 				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }   
 			}
 
@@ -1119,7 +1099,6 @@ ARG_military_coup_decisions = {
 				has_completed_focus = ARG_the_castillo_cabinet
 				NOT = { has_government = fascism }
 				NOT = { has_global_flag = military_coup_attempt_happened }
-				NOT = { has_completed_focus = ARG_subdue_dissension } 
 				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada } 
 			}
 
@@ -1128,7 +1107,6 @@ ARG_military_coup_decisions = {
 				has_completed_focus = ARG_the_castillo_cabinet
 				NOT = { has_government = fascism }
 				NOT = { has_global_flag = military_coup_attempt_happened }
-				NOT = { has_completed_focus = ARG_subdue_dissension } 
 				NOT = { has_completed_focus = ARG_march_to_la_casa_rosada }   
 			}
 
