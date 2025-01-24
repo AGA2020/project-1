@@ -1867,13 +1867,9 @@ operations = {
             ai_will_do = {
                 factor = 0
             }
-            available = {
-                AND = { IRE = {
-                         is_ai = yes
-                         }
-                         FRA = {has_capitulated = yes}
-                }
-                    }
+            visible = {
+                always = no
+            }
             targets = {
                 IRE
             }

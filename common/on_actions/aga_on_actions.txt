@@ -194,6 +194,36 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					FROM = { tag = FRA }
+					FROM.FROM = { is_core_of = FRA }
+					FRA = { NOT = { has_completed_focus = FRA_defensive_strategems } }
+					OR = {  
+						AND = {  
+							FRA = { surrender_progress > 0.32 NOT = { controls_state = 16 } 
+							} 
+						}	
+						FRA = { surrender_progress > 0.5 }	 
+					}
+						NOT = { FRA = { has_country_flag = france_tp } 
+					}
+				}
+				FRA = { 
+					set_country_flag = france_tp
+					transfer_units_fraction = {
+						target = IRE
+						size = 1
+						stockpile_ratio = 1
+						army_ratio = 0
+						navy_ratio = 0
+						air_ratio = 0
+						keep_unit_leaders_trigger = {
+							always = yes
+						}
+					}	
+				}
+			}
+			if = {
+				limit = {
 					NOT = { ENG = { controls_state = 907 } }
 				}
 				build_railway = {
@@ -362,6 +392,25 @@ on_actions = {
                     add_to_war = {
                         targeted_alliance = ROOT
                         enemy = SOV
+                        hostility_reason = asked_to_join
+                    }
+                }
+            }
+			if = {
+                limit = {
+                    tag = GER
+                    FROM = {
+                       tag = FRA
+                    }
+                }
+                every_country = {
+                    limit = {
+                        is_in_faction_with = GER
+                        has_war = yes
+                    }
+                    add_to_war = {
+                        targeted_alliance = ROOT
+                        enemy = FRA
                         hostility_reason = asked_to_join
                     }
                 }
