@@ -238,25 +238,6 @@ on_actions = {
 		effect = {
             ENG = { load_oob = "ENG_1936_air_bba_carrier" }
             JAP = { load_oob = "JAP_1936_air_bba_carrier" }
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = argentina_existence
-						option = allow
-					}
-				}
-            	every_state = {
-            	    limit = {
-            	        is_argentina = yes
-            	    }
-            	    transfer_state_to = ARG
-            	    add_core_of = ARG
-            	}
-			}
-			else = {
-            WST = { transfer_state = 278 }
-            278 = { remove_core_of = ARG }
-           	}
 			if = { 
 				limit = { 
 					SPR = { is_ai = yes } 
