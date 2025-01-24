@@ -17,7 +17,7 @@ state=
 
 		}
         add_dynamic_modifier = {
-            modifier = kamikaze
+            modifier = Kamikaze
         }		
 		victory_points = {
 			7197 8

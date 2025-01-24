@@ -23,7 +23,7 @@ spain_nowar_aga = {
 		state_production_speed_naval_base_factor = -2
 
 }
-kamikaze = {
+Kamikaze = {
 	remove_trigger = {
 		AND = { 
 			OR = {

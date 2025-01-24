@@ -1550,7 +1550,9 @@ focus_tree = {
 
 		icon = GFX_focus_GER_the_four_year_plan
 		alternate_icon = GFX_focus_GER_the_four_year_plan_historical
-
+		ai_will_do = {
+			factor = 1
+		}
 		mutually_exclusive = { focus = GER_prioritize_economic_growth }
 		x = 6
 		y = 0
@@ -1566,11 +1568,6 @@ focus_tree = {
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
 				}
 				random_select_amount = 2
 				add_extra_state_shared_building_slots = 1
@@ -1610,11 +1607,6 @@ focus_tree = {
 			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
