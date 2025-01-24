@@ -1256,38 +1256,6 @@ ideas = {
 
 		industrial_concern = {
 
-		ARG_yacimientos_petroliferos_fiscales_idea = { 
-			name = ARG_yacimientos_petroliferos_fiscales
-
-			picture = ARG_yacimientos_petroliferos_fiscales
-
-			allowed = {
-				original_tag = ARG
-				has_dlc = "Trial of Allegiance"
-			}
-
-			available = {
-				has_completed_focus = ARG_yacimientos_petroliferos_fiscales
-			}
-
-			visible = {
-				#has_completed_focus = ARG_yacimientos_petroliferos_fiscales
-			}
-
-			#cost = 50
-
-			research_bonus = {
-				industry = 0.2
-				synth_resources = 0.35
-			}
-		
-			traits = { refining_concern } 
-
-			modifier = {
-
-			}
-		}
-
 		ARG_siam_di_tella_idea = { 
 			name = ARG_siam_di_tella
 
