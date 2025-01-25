@@ -22,11 +22,6 @@ continuous_focus_palette = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0.25		
-				is_government_in_exile = yes 
-				original_tag = ETH
-			}
 		}
 		
 		supports_ai_strategy = ai_focus_naval
@@ -40,8 +35,7 @@ continuous_focus_palette = {
 	focus = {
 		id = continuous_recruitment_drive	
 		icon = GFX_focus_ger_oppose_hitler
-		modifier = { mobilization_speed = 1.0	}
-		#available = { NOT = { AND ={  tag = EFR date < 1940.1.1 }}   }
+		modifier = { mobilization_speed = 1.0 }
 		daily_cost = 1	
 		available_if_capitulated = yes
 	}
@@ -73,11 +67,6 @@ continuous_focus_palette = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0.25		
-				is_government_in_exile = yes 
-				original_tag = ETH 
-			}
 		}
 		
 		supports_ai_strategy = ai_focus_defense
@@ -104,11 +93,6 @@ continuous_focus_palette = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0.25		
-				is_government_in_exile = yes  
-				original_tag = ETH
-			}
 		}
 		
 		supports_ai_strategy = ai_focus_defense
@@ -180,8 +164,6 @@ continuous_focus_palette = {
 		icon = GFX_goal_continuous_research
 		
 		available = {
-			hidden_trigger = { has_dlc = "Together for Victory" }
-			
 		}
 
 		enable = {
@@ -225,7 +207,6 @@ continuous_focus_palette = {
 		icon = GFX_goal_continuous_boost_freedom
 		
 		available = {
-			hidden_trigger = { has_dlc = "Together for Victory" }
 			is_subject = yes			
 		}
 		
@@ -250,7 +231,6 @@ continuous_focus_palette = {
 		icon = GFX_goal_continuous_restrict_freedom
 		
 		available = {
-			hidden_trigger = { has_dlc = "Together for Victory" }
 		}
 
 		enable = {
