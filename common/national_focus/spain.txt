@@ -129,8 +129,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_hand_over_the_ceda_campaign_chest
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -159,8 +157,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_negotiate_carlist_support
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -188,8 +184,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_the_army_of_africa
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -212,8 +206,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_secure_the_northern_garrisons
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -293,8 +285,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_con_paquito
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -336,9 +326,6 @@ focus_tree = {
 		
 		mutually_exclusive = { focus = SPA_a_great_spain }
 		cancel_if_invalid = yes
-		allow_branch = {
-
-		}
 		
 		icon = GFX_goal_generic_national_unity
 		x = 20
@@ -382,8 +369,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_secure_the_guardia_de_asalto
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -430,10 +415,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_secure_the_guardia_civil
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_the_popular_front }
 		mutually_exclusive = { focus = SPR_secure_the_guardia_de_asalto }
 		
@@ -477,8 +458,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_train_the_union_youth
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -505,8 +484,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_enlarge_the_weapon_caches
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -529,8 +506,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_distribute_arms_to_the_people
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -558,8 +533,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_disband_the_army
-		available = {
-		}
 		bypass = {
 			has_global_flag = spanish_civil_war
 		}
@@ -614,8 +587,6 @@ focus_tree = {
 		id = SPA_the_corpo_truppe_volontarie
 		available = {
 			NOT = { has_global_flag = scw_over }
-		}
-		bypass = {
 		}
 		prerequisite = { focus = SPA_unify_the_nationalist_front }
 		
@@ -689,10 +660,7 @@ focus_tree = {
 	focus = {
 		id = SPA_equipment_shipments
 		available = {
-			NOT = { has_global_flag = scw_over }
-			
-		}
-		bypass = {
+			NOT = { has_global_flag = scw_over }	
 		}
 		prerequisite = { focus = SPA_the_corpo_truppe_volontarie }
 		prerequisite = { focus = SPA_the_condor_legion }
@@ -722,18 +690,6 @@ focus_tree = {
 		id = SPA_obtain_training_staff
 		available = {
 			NOT = { has_global_flag = scw_over }
-			OR = {
-				has_volunteers_amount_from = {
-					tag = ITA
-					count > 0
-				}
-				has_volunteers_amount_from = {
-					tag = GER
-					count > 0
-				}
-			}
-		}
-		bypass = {
 		}
 		prerequisite = { focus = SPA_equipment_shipments }
 		
@@ -755,9 +711,6 @@ focus_tree = {
 		id = SPA_doctrinal_advancements
 		available = {
 			NOT = { has_global_flag = scw_over }
-			
-		}
-		bypass = {
 		}
 		prerequisite = { focus = SPA_equipment_shipments }
 		
@@ -787,8 +740,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_martyrdom_for_primo_de_rivera
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -813,10 +764,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_extol_the_martyrs_of_the_war
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_martyrdom_for_primo_de_rivera }
 		prerequisite = { focus = SPA_caudillo_of_spain }
 		
@@ -835,8 +782,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_banish_the_party_leaders
-		available = {
-		}
 		bypass = {
 			has_global_flag = SPR_carlist_uprising_flag
 		}
@@ -866,8 +811,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_fuse_the_parties
-		available = {
-		}
 		bypass = {
 			has_global_flag = SPR_carlist_uprising_flag
 		}
@@ -935,8 +878,6 @@ focus_tree = {
 		available = {
 			has_global_flag = scw_over
 		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_fuse_the_parties }
 		
 		icon = GFX_goal_generic_army_doctrines
@@ -962,10 +903,6 @@ focus_tree = {
 			army_experience = 10
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-					}
 					is_core_of = ROOT
 				}
 				set_state_flag = SPA_the_national_and_popular_army_of_spain_2mil
@@ -982,10 +919,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_the_army_of_africa_model
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_the_national_and_popular_army_of_spain }
 		
 		icon = GFX_goal_generic_army_artillery
@@ -1009,10 +942,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_equipment_modernization
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_the_army_of_africa_model }
 		
 		icon = GFX_goal_generic_small_arms
@@ -1035,10 +964,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_artillery_modernization
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_equipment_modernization }
 		
 		icon = GFX_goal_generic_army_artillery2
@@ -1061,10 +986,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_expand_the_air_branch
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_equipment_modernization }
 		
 		icon = GFX_goal_generic_air_doctrine
@@ -1095,10 +1016,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_expand_the_special_forces
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_equipment_modernization }
 		
 		icon = GFX_goal_generic_special_forces
@@ -1127,10 +1044,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_motorization
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_the_army_of_africa_model }
 		
 		icon = GFX_goal_generic_army_motorized
@@ -1153,10 +1066,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_an_armored_corps
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_motorization }
 		
 		icon = GFX_goal_generic_army_tanks
@@ -1181,8 +1090,6 @@ focus_tree = {
 		id = SPA_national_recovery
 		available = {
 			has_global_flag = scw_over
-		}
-		bypass = {
 		}
 		prerequisite = { focus = SPA_fuse_the_parties }
 		
@@ -1209,10 +1116,6 @@ focus_tree = {
 			add_timed_idea = { idea = SPA_national_recovery_1 days = 1825 }
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
 					is_core_of = ROOT
 				}
 				set_state_flag = SPA_national_recovery_2civ
