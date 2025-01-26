@@ -1197,21 +1197,6 @@ focus_tree = {
 			factor = 9
 		}
 
-		available = {
-			has_idea = ROM_king_carol_ii_hedonist
-			OR = {
-				democratic > 0.35
-				communism > 0.35
-				fascism > 0.35
-			}
-			is_subject = no
-			
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1283,14 +1268,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1371,14 +1348,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-			has_war = yes
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1407,14 +1376,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1437,14 +1398,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
