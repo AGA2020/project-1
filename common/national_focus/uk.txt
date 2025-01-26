@@ -173,20 +173,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = construction_effort_tt
-				NOT = {
-					any_owned_state = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-			}
-		}
 		available_if_capitulated = yes
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -210,11 +196,6 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
 					is_core_of = ROOT
 				}
 				add_extra_state_shared_building_slots = 2
@@ -227,11 +208,6 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
 					is_core_of = ROOT
 				}
 				add_extra_state_shared_building_slots = 2
@@ -248,8 +224,6 @@ focus_tree = {
 		id = ENG_motorized_focus
 		prerequisite = {
 			focus = limited_rearmament_focus
-		}
-		available = {
 		}
 		icon = GFX_goal_generic_army_motorized
 		x = 0
@@ -305,13 +279,6 @@ focus_tree = {
 
 		dynamic = yes
 
-		available = {
-		} 
-
-		allow_branch = {
-			has_dlc = "La Resistance"
-		}
-
 		icon = GFX_focus_generic_secret_service_agency
 
 		x = 2
@@ -342,32 +309,10 @@ focus_tree = {
 			focus = limited_rearmament_focus
 		}
 		available = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				OR = {
-					threat > 0.05
-					has_war = yes
-					has_idea = ENG_no_further_appeasement_idea
-					NOT = {
-						has_government = democratic
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "Man the Guns"
-					}
-				}
-				OR = {
-					threat > 0.05
-					has_war = yes
-					NOT = {
-						has_government = democratic
-					}
-				}
+			OR = {
+				threat > 0.05
+				has_war = yes
+				has_idea = ENG_no_further_appeasement_idea
 			}
 		}
 		continue_if_invalid = yes
@@ -747,12 +692,6 @@ focus_tree = {
 
 		dynamic = yes
 
-		available = {
-			126 = {
-				is_fully_controlled_by = ROOT
-			}
-		} 
-
 		icon = GFX_focus_generic_aircraft_production
 
 		x = 1
@@ -782,7 +721,6 @@ focus_tree = {
 				IF = {
 					limit = { 
 						126 = {
-							is_fully_controlled_by = ROOT
 							air_facility < 1
 							land_facility < 1
 							naval_facility < 1
@@ -828,32 +766,10 @@ focus_tree = {
 			focus = limited_rearmament_focus
 		}
 		available = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				OR = {
-					threat > 0.1
-					has_war = yes
-					has_idea = ENG_no_further_appeasement_idea
-					NOT = {
-						has_government = democratic
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "Man the Guns"
-					}
-				}
-				OR = {
-					threat > 0.1
-					has_war = yes
-					NOT = {
-						has_government = democratic
-					}
-				}
+			OR = {
+				threat > 0.1
+				has_war = yes
+				has_idea = ENG_no_further_appeasement_idea
 			}
 		}
 		continue_if_invalid = yes
@@ -875,9 +791,6 @@ focus_tree = {
 	focus = {
 		id = ENG_special_air_service
 		prerequisite = { focus = general_rearmament_focus }
-		available = { 
-			
-		}
 
 		continue_if_invalid = yes
 
@@ -900,9 +813,6 @@ focus_tree = {
 	focus = {
 		id = ENG_parachute_regiments
 		prerequisite = { focus = ENG_special_air_service }
-		allow_branch = {
-			has_dlc = "Arms Against Tyranny"
-		}
 		continue_if_invalid = yes
 
 		icon = GFX_focus_generic_paratrooper
@@ -926,44 +836,16 @@ focus_tree = {
 	focus = {
 		id = royal_ordinance_focus
 		available = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
+			OR = {
+				any_other_country = {
+					has_war_with = ROOT
+					num_of_factories > 30
 				}
-				OR = {
-					any_other_country = {
-						has_war_with = ROOT
-						num_of_factories > 30
-					}
-					GER = {
-						has_completed_focus = GER_remilitarize_the_rhineland
-					}
-					threat > 0.2
-					has_idea = ENG_no_further_appeasement_idea
-					NOT = {
-						has_government = democratic
-					}
+				GER = {
+					has_completed_focus = GER_remilitarize_the_rhineland
 				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "Man the Guns"
-					}
-				}
-				OR = {
-					any_other_country = {
-						has_war_with = ROOT
-						num_of_factories > 30
-					}
-					GER = {
-						has_completed_focus = GER_remilitarize_the_rhineland
-					}
-					threat > 0.2
-					NOT = {
-						has_government = democratic
-					}
-				}
+				threat > 0.2
+				has_idea = ENG_no_further_appeasement_idea
 			}
 		}
 		#at war with major or ger in rhineland or high threat
