@@ -790,17 +790,6 @@ focus_tree = {
 			factor = 9
 		}
 
-		available = {
-			is_subject = no
-			communism < 0.5
-			fascism < 0.5
-			neutrality < 0.5
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -844,14 +833,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -876,17 +857,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = ROM_carol_not_leader_trigger
-				NOT = { has_country_leader = { id = 550 } }
-			}
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -909,14 +879,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -950,10 +912,6 @@ focus_tree = {
 					has_completed_focus = ROM_national_christian_party
 				}
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -998,14 +956,6 @@ focus_tree = {
 			factor = 9
 		}
 
-		available = {
-			is_subject = no
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1031,18 +981,6 @@ focus_tree = {
 				factor = 0
 				has_war_with = GER
 			}
-		}
-
-		available = {
-			is_subject = no
-			GER = {
-				is_faction_leader = yes
-				has_government = fascism
-			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1139,14 +1077,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1203,14 +1133,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
