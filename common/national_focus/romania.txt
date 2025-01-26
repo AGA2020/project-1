@@ -1429,14 +1429,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1463,14 +1455,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1555,10 +1539,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1583,14 +1563,6 @@ focus_tree = {
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1613,14 +1585,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1651,14 +1615,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no 
@@ -1685,14 +1641,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1782,14 +1730,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1818,14 +1758,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1852,14 +1784,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1899,14 +1823,6 @@ focus_tree = {
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1928,14 +1844,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1974,14 +1882,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2012,10 +1912,6 @@ focus_tree = {
 
 		available = {
 			has_tech = tech_mountaineers
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2078,14 +1974,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2113,14 +2001,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2152,14 +2032,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2182,14 +2054,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2276,14 +2140,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2313,10 +2169,6 @@ focus_tree = {
 				has_design_based_on = light_tank_chassis
 				has_design_based_on = medium_tank_chassis
 			}		
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2478,14 +2330,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2509,14 +2353,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
