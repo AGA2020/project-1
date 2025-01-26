@@ -1479,14 +1479,6 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1515,14 +1507,6 @@
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1554,14 +1538,6 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1589,14 +1565,6 @@
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1632,53 +1600,20 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
         search_filters = { FOCUS_FILTER_RESEARCH }
 
-		complete_tooltip = {
-			navy_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = SAF_seaward_defence_force_DY
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-
 		completion_reward = {
 			navy_experience = 25
-			random_owned_controlled_state = {
-				prioritize = { 681 719 }
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
+			681 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = SAF_seaward_defence_force_DY
 			}			
 			add_doctrine_cost_reduction = {
 				name = SAF_seaward_defence_force
@@ -1702,14 +1637,6 @@
 
 		ai_will_do = {
 			factor = 0.8
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1746,14 +1673,6 @@
 			}
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1783,73 +1702,23 @@
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = SAF_expand_the_simons_town_base_DY
-				}
+		completion_reward = {
+			681 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 2
 					instant_build = yes
 				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = SAF_expand_the_simons_town_base_NB
-				}
-				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = coastal_bunker
 					province = 12589
 					level = 2
 					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 681 }
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = SAF_expand_the_simons_town_base_DY
-			}
-			if = {
-				limit = { 681 = { is_controlled_by = ROOT } }
-				681 = {
-					add_building_construction = {
-						type = coastal_bunker
-						province = 12589
-						level = 2
-						instant_build = yes
-					}
-					set_state_flag = SAF_expand_the_simons_town_base_NB
 				}
 			}
 		}
@@ -1867,14 +1736,6 @@
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1911,14 +1772,6 @@
 			}
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1948,14 +1801,6 @@
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1993,14 +1838,6 @@
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
