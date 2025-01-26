@@ -487,12 +487,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-		}
-
-		bypass = {
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -524,14 +518,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -571,11 +557,6 @@ focus_tree = {
 							state = 555
 						}
 					}
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -606,14 +587,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -656,11 +629,6 @@ focus_tree = {
 							state = 555
 						}
 					}
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -680,11 +648,6 @@ focus_tree = {
 							state = 645
 							state = 555
 						}
-					}					
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 2
@@ -710,14 +673,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 0
-		}
-
-		available = {
-			528 = { is_fully_controlled_by = ROOT }
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -758,13 +713,6 @@ focus_tree = {
 			factor = 6
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-			has_idea = tot_economic_mobilisation
-		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -810,14 +758,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -840,14 +780,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 9
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -894,14 +826,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -933,14 +857,6 @@ focus_tree = {
 				factor = 10
 				surrender_progress > 0.9
 			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -982,10 +898,6 @@ focus_tree = {
 			is_special_project_completed = sp:sp_rocket_interceptor
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1016,14 +928,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-	
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1099,15 +1003,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-			716 = { is_fully_controlled_by = MAN }
-			MAN = { is_subject_of = ROOT }
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1115,15 +1010,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			716 = {
-				if = {
-					limit = {
-						MAN = { has_focus_tree = generic_focus }
-					}
-					add_resource = {
-						type = steel
-						amount = 16
-					}				
-				}
+				add_resource = {
+					type = steel
+					amount = 16
+				}				
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -1142,10 +1032,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_expand_the_showa_steel_works
 
-		allow_branch = {
-			MAN = { has_focus_tree = generic_focus }
-		}
-
 		cost = 10
 
 		ai_will_do = {
@@ -1153,12 +1039,7 @@ focus_tree = {
 		}
 
 		available = {
-			328 = { is_fully_controlled_by = MAN }
-			MAN = { is_subject_of = ROOT }
-		}
-
-		bypass = {
-
+			MAN = { is_ai = yes }
 		}
 
 		cancel_if_invalid = yes
@@ -1168,14 +1049,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			328 = {
-				if = {
-					limit = {
-						MAN = { has_focus_tree = generic_focus }
-					}
-					add_resource = {
-						type = aluminium
-						amount = 12
-					}
+				add_resource = {
+					type = aluminium
+					amount = 12
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1201,17 +1077,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-			MAN = { 
-				is_subject_of = ROOT 
-				controls_state = 716
-			}
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1219,31 +1084,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			MAN = {
-				if = {
-					limit = {
-						controls_state = 716
-					}
-					build_railway = { #Mukden-Korean border
-						path = {
-							11771 9885 3895 3839 3970 6981
-						}
-					}
-					build_railway = { #Mukden - Dalian
-						path = {
-							11771 987 9781 11764 964 3783 6851 1150
-						}
-					}
+			build_railway = { #Mukden-Korean border
+				path = {
+					11771 9885 3895 3839 3970 6981
 				}
-				if = {
-					limit = {
-						controls_state = 716
-						controls_state = 610
-					}
-					build_railway = { #Mukden - Chinese border
-						path = { 11771 6951 11815 9835 6837 11886 3900 }
-					}
+			}
+			build_railway = { #Mukden - Dalian
+				path = {
+					11771 987 9781 11764 964 3783 6851 1150
 				}
+			}
+			build_railway = { #Mukden - Chinese border
+				path = { 11771 6951 11815 9835 6837 11886 3900 }
 			}
 		}
 	}
@@ -1260,17 +1112,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-			MAN = {
-				is_subject_of = ROOT
-				has_full_control_of_state = 715
-			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1304,17 +1145,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-			MAN = {
-				is_subject_of = ROOT
-				has_full_control_of_state = 716				
-			}
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1345,19 +1175,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-			MAN = {
-				is_subject_of = ROOT
-				has_full_control_of_state = 715
-				has_full_control_of_state = 610
-				has_full_control_of_state = 328
-			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
