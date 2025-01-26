@@ -107,11 +107,6 @@ focus_tree = {
 
 		available = {
 			NOT = { has_war_with = SOU }
-			SOU = {
-				exists = yes
-				is_puppet = no
-				has_civil_war = no
-			}
 		}
 
 		bypass = {
@@ -176,14 +171,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 9
-		}
-
-		available = {
-			NOT = { has_war_with = GER }
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
