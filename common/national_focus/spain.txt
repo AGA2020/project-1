@@ -1173,10 +1173,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_spanish_austerity
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_autarky }
 
 		ai_will_do = {
@@ -1237,10 +1233,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_reduce_reliance_on_foreign_resources
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_spanish_austerity }
 		
 		icon = GFX_goal_generic_construction2
@@ -1264,10 +1256,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_expand_the_axis_gold_trade
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_spanish_austerity }
 		
 		icon = GFX_focus_usa_reestablish_the_gold_standard
@@ -1285,11 +1273,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_expand_the_war_industry
-		available = {
-			
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_expand_the_axis_gold_trade }
 		
 		icon = GFX_goal_generic_construct_mil_factory
@@ -1315,10 +1298,6 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-					}
 					is_core_of = ROOT
 				}
 				set_state_flag = SPA_expand_the_war_industry_2mil
@@ -1331,10 +1310,6 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-					}
 					is_core_of = ROOT
 					NOT = { has_state_flag = SPA_expand_the_war_industry_2mil }
 				}
@@ -1351,10 +1326,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_ensure_agricultural_self_sufficiency
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_expand_the_axis_gold_trade }
 		
 		icon = GFX_goal_generic_construct_civ_factory
@@ -1428,8 +1399,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_save_the_alcazar
-		available = {
-		}
 		bypass = {
 			OR = {
 				controls_province = 858
@@ -1453,10 +1422,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_caudillo_of_spain
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_save_the_alcazar }
 		
 		icon = GFX_focus_spa_caudillo_of_spain
@@ -1500,8 +1465,6 @@ focus_tree = {
 			controls_state = 166
 			controls_state = 172
 			controls_state = 176
-			# controls_state = 792
-			# controls_state = 790
 		}
 		bypass = {
 			has_global_flag = scw_over
@@ -1583,12 +1546,7 @@ focus_tree = {
 
 	focus = {
 		id = SPA_expand_conscription
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_extol_the_martyrs_of_the_war }
-		
 		icon = GFX_goal_generic_axis_build_infantry
 		x = -1
 		y = 1
@@ -1604,10 +1562,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_safeguard_the_freedom_of_worship
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_extol_the_martyrs_of_the_war }
 		
 		icon = GFX_focus_generic_strike_at_democracy1
@@ -1630,8 +1584,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_foment_a_carlist_split
-		available = {
-		}
 		bypass = {
 			has_global_flag = SPR_carlist_uprising_flag
 		}
@@ -1659,8 +1611,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_a_methodical_approach
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -1682,8 +1632,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_tackle_the_vulnerable_fronts
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -1704,8 +1652,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_integrate_the_requetes
-		available = {
-		}
 		bypass = {
 			has_global_flag = SPR_carlist_uprising_flag
 		}
@@ -1762,10 +1708,6 @@ focus_tree = {
 
 	focus = {
 		id = SPA_utilize_the_intellectuals
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_integrate_the_requetes }
 		
 		icon = GFX_focus_research
@@ -1785,8 +1727,6 @@ focus_tree = {
 		id = SPA_adopt_the_26_points
 		available = {
 			has_global_flag = scw_over
-		}
-		bypass = {
 		}
 		prerequisite = { focus = SPA_fuse_the_parties }
 		
@@ -1842,8 +1782,6 @@ focus_tree = {
 		available = {
 			num_of_factories > 50
 		}
-		bypass = {
-		}
 		prerequisite = { focus = SPA_adopt_the_26_points }
 		
 		icon = GFX_focus_research2
@@ -1866,8 +1804,6 @@ focus_tree = {
 				name = "Francisco Franco"
 				ruling_only = yes
 			}
-		}
-		bypass = {
 		}
 		prerequisite = { focus = SPA_adopt_the_26_points }
 		mutually_exclusive = { focus = SPA_restore_the_monarchy }
@@ -1922,8 +1858,6 @@ focus_tree = {
 		id = SPA_invest_in_naval_infrastructure
 		available = {
 			has_completed_focus = SPA_unify_the_nationalist_front
-		}
-		bypass = {
 		}
 		prerequisite = { focus = SPA_dictator_for_life focus = SPA_restore_the_monarchy }
 		
