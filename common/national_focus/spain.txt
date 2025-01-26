@@ -2632,10 +2632,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_a_frontline_suited_for_intellectuals
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_no_pasaran }
 
 		icon = GFX_focus_research
@@ -2654,8 +2650,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_strengthen_the_anti_fascist_coalition
-		available = {
-		}
 		bypass = {
 			has_global_flag = scw_over
 		}
@@ -2683,8 +2677,6 @@ focus_tree = {
 				ruling_only = yes
 			}
 		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_strengthen_the_anti_fascist_coalition }
 
 		icon = GFX_goal_anti_comintern_pact
@@ -2709,10 +2701,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_fortify_the_central_government
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_oppose_the_communists }
 
 		icon = GFX_focus_generic_diplomatic_treaty
@@ -2731,10 +2719,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_secure_democratic_principles
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_fortify_the_central_government }
 
 		icon = GFX_goal_support_democracy
@@ -2761,8 +2745,6 @@ focus_tree = {
 		available = {
 			has_global_flag = scw_over
 		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_fortify_the_central_government }
 
 		icon = GFX_goal_generic_political_pressure
@@ -2785,8 +2767,6 @@ focus_tree = {
 			num_of_factories > 50
 			has_global_flag = scw_over
 		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_fortify_the_central_government }
 
 		icon = GFX_focus_research2
@@ -2805,10 +2785,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_engineering_advances
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_stabilize_the_nation focus = SPR_restore_higher_education }
 
 		icon = GFX_goal_generic_production
@@ -2879,10 +2855,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_rebuild_the_nation
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_engineering_advances }
 
 		icon = GFX_goal_generic_construct_civ_factory
@@ -2908,10 +2880,6 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
 					is_core_of = ROOT
 				}
 				set_state_flag = SPR_rebuild_the_nation_2civ
@@ -2924,10 +2892,6 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-					}
 					is_core_of = ROOT
 					NOT = { has_state_flag = SPR_rebuild_the_nation_2civ }
 				}
@@ -2944,10 +2908,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_reprofessionalize_the_military
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_strengthen_the_anti_fascist_coalition }
 
 		icon = GFX_goal_generic_army_artillery2
@@ -2965,10 +2925,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_experiences_from_the_civil_war
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_reprofessionalize_the_military }
 
 		icon = GFX_goal_generic_army_doctrines
@@ -2993,10 +2949,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_a_new_military_academy
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_experiences_from_the_civil_war }
 		prerequisite = { focus = SPR_restore_higher_education }
 
@@ -3019,10 +2971,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_revive_the_republican_navy
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_strengthen_the_anti_fascist_coalition }
 
 		icon = GFX_goal_generic_construct_naval_dockyard
@@ -3049,11 +2997,6 @@ focus_tree = {
 			navy_experience = 25
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
 					is_core_of = ROOT
 				}
 				add_extra_state_shared_building_slots = 1
@@ -3066,11 +3009,6 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
 					is_core_of = ROOT
 					NOT = { has_state_flag = SPR_revive_the_republican_navy_1DY }
 				}
@@ -3105,10 +3043,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_navy_modernization
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_revive_the_republican_navy }
 
 		icon = GFX_focus_generic_cruiser2
@@ -3169,10 +3103,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_prepare_for_the_next_war
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_a_new_military_academy }
 		prerequisite = { focus = SPR_expand_the_naval_academy }
 
@@ -3231,8 +3161,6 @@ focus_tree = {
 		available = {
 			has_war = yes
 		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_prepare_for_the_next_war }
 
 		icon = GFX_goal_generic_construct_mil_factory
@@ -3258,10 +3186,6 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-					}
 					is_core_of = ROOT
 				}
 				set_state_flag = SPR_wartime_industry_1mil
@@ -3274,10 +3198,6 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-					}
 					is_core_of = ROOT
 					NOT = { has_state_flag = SPR_wartime_industry_1mil }
 				}
@@ -3291,10 +3211,6 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-					}
 					is_core_of = ROOT
 					NOT = { has_state_flag = SPR_wartime_industry_1mil }
 				}
@@ -3308,10 +3224,6 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-					}
 					is_core_of = ROOT
 					NOT = { has_state_flag = SPR_wartime_industry_1mil }
 				}
@@ -3355,10 +3267,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_join_the_global_fight_against_fascism
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_prepare_for_the_next_war }
 
 		icon = GFX_focus_generic_anti_fascist_diplomacy
@@ -3389,10 +3297,6 @@ focus_tree = {
 
 	focus = {
 		id = SPR_the_anti_fascist_crusade
-		available = {
-		}
-		bypass = {
-		}
 		prerequisite = { focus = SPR_join_the_global_fight_against_fascism }
 
 		icon = GFX_focus_generic_strike_at_democracy1
