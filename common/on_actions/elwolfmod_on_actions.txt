@@ -260,12 +260,10 @@ on_actions = {
 						is_playable_country = yes
 						NOT = {
 							original_tag = SPR
-							original_tag = FIN
-							original_tag = ARG
 						}
 					}
 				}
-				add_ideas = elwolfmod_novols
+				set_rule = { can_send_volunteers = no }
 			}
 			every_country = {
 				limit = {
