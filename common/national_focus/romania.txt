@@ -2392,14 +2392,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2431,44 +2423,14 @@ focus_tree = {
 			factor = 3
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			navy_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_galati_shipyards_AB
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
 
 		completion_reward = {
 			navy_experience = 25
-			random_owned_controlled_state = {
-				prioritize = { 971 }
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
+			971 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -2495,14 +2457,6 @@ focus_tree = {
 			factor = 9
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2518,10 +2472,6 @@ focus_tree = {
 				mio:ROM_galati_shipyard_organization = {
 					add_mio_funds = 2500
 				}
-#					unlock_mio_trait_tooltip  = {
-#						department = ROM_mio_department_design_ship_capital_screen_weapons
-#						trait = ROM_mio_trait_coastal_defense_weapons
-#					}
 			}
 
 			else = {
@@ -2545,21 +2495,12 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
 			add_ideas = ROM_coastal_defense_ships
-			#custom_effect_tooltip = ROM_coastal_defense_ships_tech_tt
 			if = { 
 				limit = { has_dlc = "Man the Guns" }
 				set_technology = { coastal_defense_ships = 1 } 
@@ -2579,14 +2520,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2617,14 +2550,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2649,14 +2574,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2686,14 +2603,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2736,14 +2645,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2774,14 +2675,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2808,14 +2701,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
