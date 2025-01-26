@@ -1177,7 +1177,6 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
 			NOT = { 
 				OR = {
 					has_completed_focus = ROM_iron_guard
