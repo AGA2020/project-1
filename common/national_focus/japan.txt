@@ -1460,14 +1460,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1501,14 +1493,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1547,14 +1531,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1590,10 +1566,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-
 		}
 
 		bypass = {
@@ -1650,14 +1622,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1687,14 +1651,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1727,14 +1683,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1757,14 +1705,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1800,14 +1740,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1864,11 +1796,6 @@ focus_tree = {
 							state = 555
 						}
 					}
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1888,11 +1815,6 @@ focus_tree = {
 							state = 645
 							state = 555
 						}
-					}				
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
 					}
 				}
 				add_extra_state_shared_building_slots = 2
@@ -1918,14 +1840,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1959,14 +1873,6 @@ focus_tree = {
 				factor = 2
 				has_completed_focus = JAP_purge_the_kodoha_faction
 			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2010,14 +1916,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2040,14 +1938,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2077,14 +1967,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2240,14 +2122,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2278,14 +2152,6 @@ focus_tree = {
 			factor = 4
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2308,14 +2174,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
