@@ -9724,14 +9724,7 @@ focus_tree = {
 		will_lead_to_war_with = POL
 
 		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
+			factor = 0
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }

@@ -943,9 +943,10 @@ political_actions = {
 		allowed = {
 			tag = ENG
 		}
-		
+		fire_only_once = yes
 		available = {
 			has_war = yes
+			NOT = { NOR = { is_in_faction_with = ENG } }
 			date>1940.1.1
 		}
 
