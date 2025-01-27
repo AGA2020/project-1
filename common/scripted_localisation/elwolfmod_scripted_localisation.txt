@@ -137,19 +137,3 @@ defined_text = {
 		localization_key = check_gamerules_off
 	}
 }
-
-defined_text = {
-	name = GetVichyFranceStatus
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = vichy_france
-				option = forced
-			}
-		}
-		localization_key = check_gamerules_on
-	}
-	text = {
-		localization_key = check_gamerules_off
-	}
-}

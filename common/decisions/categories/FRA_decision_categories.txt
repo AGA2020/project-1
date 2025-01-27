@@ -19,13 +19,6 @@ FRA_spanish_intervention_category = {
 	}
 }
 
-FRA_vichy_france = {
-	
-	allowed = {
-		original_tag = FRA
-	}
-}
-
 FRA_intervention_in_overseas_territories = {
 	allowed = {
 		original_tag = FRA

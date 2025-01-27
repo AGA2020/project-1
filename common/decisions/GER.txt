@@ -9146,14 +9146,6 @@ GER_reichskommissariats = {
 
 		ai_will_do = {
 			base = 5
-			modifier = {
-				add = 10
-				IRQ = { has_capitulated = yes }
-			}
-			modifier = {
-				add = 10
-				IRQ = { exists = no }
-			}
 		}
 
 		complete_effect = {
