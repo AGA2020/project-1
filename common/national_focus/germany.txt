@@ -1551,7 +1551,7 @@ focus_tree = {
 		icon = GFX_focus_GER_the_four_year_plan
 		alternate_icon = GFX_focus_GER_the_four_year_plan_historical
 		ai_will_do = {
-			factor = 1
+			factor = 2
 		}
 		mutually_exclusive = { focus = GER_prioritize_economic_growth }
 		x = 6
@@ -1593,7 +1593,9 @@ focus_tree = {
 		id = GER_autarky_efforts
 		icon = GFX_focus_GER_autarky_ambitions
 		prerequisite = { focus = GER_the_four_year_plan  }
-
+		ai_will_do = {
+			factor = 2
+		}
 		x = 2
 		y = 1
 		relative_position_id = GER_the_four_year_plan
@@ -1661,7 +1663,9 @@ focus_tree = {
 		id = GER_institute_price_controls
 		icon = GFX_focus_generic_price_controls
 		prerequisite = { focus = GER_autarky_efforts }
-
+		ai_will_do = {
+			factor = 2
+		}
 		x = 0
 		y = 1
 		relative_position_id = GER_autarky_efforts
@@ -1709,7 +1713,9 @@ focus_tree = {
 		id = GER_establish_the_reichswerke
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = GER_autarky_efforts }
-
+		ai_will_do = {
+			factor = 2
+		}
 		x = -1
 		y = 2
 		relative_position_id = GER_autarky_efforts
