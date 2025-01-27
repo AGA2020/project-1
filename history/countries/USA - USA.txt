@@ -194,20 +194,7 @@ diplomatic_relation = {
 	active = yes
 }
 
-
-# DIPLOMACY
-set_autonomy = {
-	target = PHI
-	autonomous_state =  autonomy_puppet
-}
-
 1939.1.1 = {
-	set_politics = {
-		ruling_party = democratic
-		last_election = "1936.11.3"
-		election_frequency = 48
-		elections_allowed = yes
-	}
 }
 
 recruit_character = USA_earl_browder

@@ -4135,11 +4135,7 @@
 		prerequisite = {}
 		mutually_exclusive = { }
 		available = { 
-			has_game_rule = {
-				rule = vichy_france
-				option = forced
-			}
-			has_capitulated = yes
+			always = no
 		}
 
 		cost = 5
@@ -4678,11 +4674,7 @@
 			factor = 1
 		}
 		available = {
-			has_game_rule = {
-				rule = vichy_france
-				option = forced
-			}
-			has_capitulated = yes
+			always = no
 			if = {
 				limit = {
 					has_dlc = "Man the Guns"
