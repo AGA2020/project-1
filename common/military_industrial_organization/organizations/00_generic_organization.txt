@@ -2434,7 +2434,7 @@ generic_escort_ship_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_1
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CAN tag = SWE tag = HUN tag = CZE tag = ROM tag = YUG tag = POR tag = GRE tag = TUR tag = LAT tag = EST } }
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CAN tag = SWE tag = HUN tag = CZE tag = ROM tag = YUG tag = POR tag = GRE tag = LAT tag = EST } }
 		NOT = { OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD } }
 		NOT = {
 			AND = {
@@ -2477,13 +2477,13 @@ generic_escort_ship_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = ETH tag = SWI }
+				OR = { tag = ETH }
 				has_dlc = "By Blood Alone"
 			}
 		}
 		NOT = {
 			AND = {
-				OR = { original_tag = FIN tag = NOR tag = DEN tag = SWE tag = ICE }
+				OR = { original_tag = FIN tag = NOR tag = DEN tag = SWE }
 				has_dlc = "Arms Against Tyranny"
 			}
 		}
@@ -2491,8 +2491,6 @@ generic_escort_ship_organization = {
 			AND = {
 				OR = {
 					original_tag = BRA 
-					original_tag = CHL
-					original_tag = ARG
 				}
 				has_dlc = "Trial of Allegiance"
 			}
@@ -3924,7 +3922,7 @@ generic_general_aircraft_organization = {
 	icon = GFX_idea_generic_air_manufacturer_1
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CAN tag = YUG tag = ROM tag = CZE tag = HUN tag = CHI tag = MAN tag = HOL tag = BUL tag = GRE tag = TUR tag = LAT tag = LIT } }
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CAN tag = YUG tag = ROM tag = CZE tag = HUN tag = CHI tag = MAN tag = HOL tag = BUL tag = GRE tag = LAT tag = LIT } }
 		NOT = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
 		NOT = {
 			AND = {
@@ -3949,13 +3947,7 @@ generic_general_aircraft_organization = {
 		}
 		NOT = {
 			AND = {
-				tag = POR
-				has_dlc = "La Resistance"
-			}
-		}
-		NOT = {
-			AND = {
-				OR = { tag = ETH tag = SWI }
+				OR = { tag = ETH }
 				has_dlc = "By Blood Alone"
 			}
 		}
@@ -3969,8 +3961,6 @@ generic_general_aircraft_organization = {
 			AND = {
 				OR = {
 					original_tag = BRA 
-					original_tag = CHL
-					original_tag = ARG
 				} 
 				has_dlc = "Trial of Allegiance"
 			}
@@ -6731,13 +6721,13 @@ generic_artillery_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = SPR tag = POR}
+				OR = { tag = SPR}
 				has_dlc = "La Resistance"
 			}
 		}
 		NOT = {
 			AND = {
-				OR = { tag = BUL tag = GRE tag = TUR }
+				OR = { tag = BUL tag = GRE }
 				has_dlc = "Battle for the Bosporus"
 			}
 		}
@@ -6749,7 +6739,7 @@ generic_artillery_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = ETH tag = SWI }
+				OR = { tag = ETH }
 				has_dlc = "By Blood Alone"
 			}
 		}
@@ -6763,8 +6753,6 @@ generic_artillery_organization = {
 			AND = {
 				OR = {
 					original_tag = BRA 
-					original_tag = CHL
-					original_tag = ARG
 				}
 				has_dlc = "Trial of Allegiance"
 			}
@@ -7084,7 +7072,7 @@ generic_infantry_equipment_organization = {
 	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
 
 	allowed = {
-		NOT = { OR = { tag = SAF tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE tag = HUN tag = YUG tag = ROM tag = MEX tag = TUR tag = EST } }
+		NOT = { OR = { tag = SAF tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE tag = HUN tag = YUG tag = ROM tag = MEX tag = EST } }
 		NOT = {
 			AND = {
 				tag = POL
@@ -7117,7 +7105,7 @@ generic_infantry_equipment_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = SPR tag = POR }
+				OR = { tag = SPR }
 				has_dlc = "La Resistance"
 			}
 		}
@@ -7135,7 +7123,7 @@ generic_infantry_equipment_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = ETH tag = SWI }
+				OR = { tag = ETH }
 				has_dlc = "By Blood Alone"
 			}
 		}
@@ -7148,9 +7136,7 @@ generic_infantry_equipment_organization = {
 		NOT = {
 			AND = {
 				OR = {
-					original_tag = BRA 
-					original_tag = CHL
-					original_tag = ARG
+					original_tag = BRA
 				}
 				has_dlc = "Trial of Allegiance"
 			}
@@ -7738,13 +7724,13 @@ generic_motorized_mechanized_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
+				OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
 				has_dlc = "La Resistance"
 			}
 		}
 		NOT = {
 			AND = {
-				OR = { tag = BUL tag = GRE tag = TUR }
+				OR = { tag = BUL tag = GRE }
 				has_dlc = "Battle for the Bosporus"
 			}
 		}
@@ -7756,7 +7742,7 @@ generic_motorized_mechanized_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = ETH tag = SWI }
+				OR = { tag = ETH }
 				has_dlc = "By Blood Alone"
 			}
 		}
@@ -7770,8 +7756,6 @@ generic_motorized_mechanized_organization = {
 			AND = {
 				OR = {
 					original_tag = BRA 
-					original_tag = CHL
-					original_tag = ARG
 				}
 				has_dlc = "Trial of Allegiance"
 			}
