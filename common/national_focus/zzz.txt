@@ -16,15 +16,15 @@ focus_tree = {
 		}
 		modifier = {
 			add = 10
-			tag = IRQ
-		}
-		modifier = {
-			add = 10
 			tag = AUS
 		}
 		modifier = {
 			add = 10
 			tag = NOR
+		}
+		modifier = {
+			add = 10
+			tag = POL
 		}
 	}
 
