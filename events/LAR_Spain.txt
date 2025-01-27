@@ -5626,9 +5626,6 @@ country_event = {
 				complete_national_focus = SPA_supremacy_of_the_communion
 				complete_national_focus = SPA_prepare_the_carlist_insurrection
 				complete_national_focus = SPA_contact_the_union_militar_espanola
-				complete_national_focus = SPA_head_the_junta_nacional
-				complete_national_focus = SPA_unite_the_requetes
-				unlock_national_focus = SPA_no_compromise_on_carlist_ideals
 				add_timed_idea = { idea = SPA_death_before_surrender days = 900 }
 				every_unit_leader = {
 					limit = {

@@ -3414,6 +3414,7 @@ country_event = {
 				188 = {
 					transfer_state_to = FROM
 					add_core_of = FROM
+					remove_core_of = LIT
 				}
 			}
 			ELSE_IF = {
@@ -3509,6 +3510,7 @@ country_event = {
 			188 = {
 				transfer_state_to = ROOT
 				add_core_of = ROOT
+				remove_core_of = LIT
 			}
 		}
 		ELSE_IF = {
@@ -12046,6 +12048,7 @@ country_event = {
 				}
 				188 = {
 					add_core_of = ROOT
+					remove_core_of = LIT
 				}
 			}
 			annex_country = {
@@ -12070,6 +12073,7 @@ country_event = {
 				}
 				188 = {
 					add_core_of = ROOT
+					remove_core_of = LIT
 				}
 			}
 			puppet = FROM
