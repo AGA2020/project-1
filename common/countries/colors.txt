@@ -30,10 +30,6 @@ ROM = {
 	color = rgb { 215 196 72 }
 	color_ui = rgb { 255 255 120 }
 }
-VIC = {
-	color = rgb { 69 157 208 } 
-	color_ui = rgb { 69 157 208 }
-}
 BUL = {
 	color = rgb { 51 155 0 }
 	color_ui = rgb { 210 147 217 }
