@@ -210,22 +210,6 @@ force_attack_last_stand = {
 	}
 }
 
-vichy_france = {
-	name = "Vichy France"
-	group = "elwolfmod Rules"
-	icon = "GFX_decision_eng_trade_unions_support"
-	option = {
-		name = forced
-		text = "RForce"
-		desc = "Germany has to make Vichy (Not Reccomended)"
-	}
-	default = {
-		name = banned
-		text = "GBanned"
-		desc = "Germany can't make Vichy (Reccomended)"
-	}
-}
-
 elwolf_guerrilla_tactics = {
 	name = "Guerilla Tactics"
 	group = "elwolfmod Rules"

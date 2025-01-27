@@ -74,33 +74,6 @@ political_actions = {
 }
 
 operations = {
-	FRA_take_north_africa = {
-		visible = {
-			has_completed_focus = FRA_intervention_in_north_africa
-		}
-		fire_only_once = yes
-		cost = 50
-		days_remove = 70
-		remove_effect = {
-			#transfer_state = 513
-			#transfer_state = 461
-			#transfer_state = 462
-			#transfer_state = 514
-			#transfer_state = 459
-			#transfer_state = 460
-			#transfer_state = 665
-			#transfer_state = 458
-			GER = {
-				add_to_faction = VIC
-				#country_event = LaR_france_vichy_notification_events.11
-			}
-			VIC = {
-				declare_war_on = { target = FRA type = annex_everything }
-				declare_war_on = { target = ENG type = topple_government }
-				#country_event = LaR_france_vichy_notification_events.11
-			}
-		}
-	}
 	annex_siam = {
 		# icon = generic_operation
 		allowed = {

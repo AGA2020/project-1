@@ -18,41 +18,17 @@ elwolfmod_capitulations_on_actions = {
 			transfer_state = 97
 		}
 	}
-	# France (Vichy check instead of MTTH)
 	if = {
 		limit = {
 			AND = {
 				original_tag = FRA
 				FRA = { has_war_with = GER }
-				has_game_rule = {
-					rule = vichy_france
-					option = forced
-				}
-			}
-		}
-		GER = {
-			country_event = france.14
-		}
-		set_global_flag = fall_of_france
-	} 
-	else_if = {
-		limit = {
-			AND = {
-				original_tag = FRA
-				FRA = { has_war_with = GER }
-				has_game_rule = {
-					rule = vichy_france
-					option = banned
-				}
 			}
 		}
 		FRA = {
 			set_capital = {
 				state = 461
 			}
-		}
-		GER = {
-			country_event = france.69420
 		}
 		set_global_flag = fall_of_france
 	}
