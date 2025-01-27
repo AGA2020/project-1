@@ -640,10 +640,7 @@ foreign_politics = {
 									tag = JAP
 									AND = {
 										is_subject_of = JAP
-										OR = {
-											tag = MEN
-											tag = MAN
-										}
+										tag = MAN
 									}
 								}
 							}
@@ -722,13 +719,7 @@ foreign_politics = {
 								state = 524
 							}
 							controller = {
-								OR = {
-									tag = JAP
-									AND = {
-										is_subject_of = JAP
-										tag = MEN
-									}
-								}
+								tag = JAP
 							}
 						}
 					}
