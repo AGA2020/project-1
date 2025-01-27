@@ -739,6 +739,29 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SPA_save_the_alcazar
+		bypass = {
+			OR = {
+				controls_province = 858
+				has_global_flag = scw_over
+			}
+		}
+		prerequisite = { focus = SPA_unify_the_nationalist_front }
+		
+		icon = GFX_focus_spa_save_the_alcazar
+		x = -2
+		y = 1
+		relative_position_id = SPA_unify_the_nationalist_front
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			activate_mission = SPA_save_the_alcazar_mission
+		}
+	}
+
+	focus = {
 		id = SPA_martyrdom_for_primo_de_rivera
 		bypass = {
 			has_global_flag = scw_over
@@ -1396,29 +1419,6 @@ focus_tree = {
 # ## ####  #   #  #  # # ## #### #    #   #   #   #      ##     ##  ###  #### # ## #    #  # 
 #  # #  #  #   #  #  # #  # #  # #    #    #  #    #            #   #  # #  # #  # #  # #  # 
 #  # #  #  #  ###  ##  #  # #  # ### ### ##   #  ##             #   #  # #  # #  #  ##   ##  
-
-	focus = {
-		id = SPA_save_the_alcazar
-		bypass = {
-			OR = {
-				controls_province = 858
-				has_global_flag = scw_over
-			}
-		}
-		prerequisite = { focus = SPA_unify_the_nationalist_front }
-		
-		icon = GFX_focus_spa_save_the_alcazar
-		x = -2
-		y = 1
-		relative_position_id = SPA_unify_the_nationalist_front
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			activate_mission = SPA_save_the_alcazar_mission
-		}
-	}
 
 	focus = {
 		id = SPA_caudillo_of_spain
