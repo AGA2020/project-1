@@ -4278,7 +4278,6 @@
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			unlock_decision_tooltip = { decision = FRA_take_north_africa }
 		}
 	}
 	# focus = {
