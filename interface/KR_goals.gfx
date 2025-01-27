@@ -1,6 +1,0 @@
-spriteTypes = {
-	SpriteType = {# American Champagne
-		name = "GFX_america_goal_champagn"
-		texturefile = "gfx/interface/goals/america_goal_champagn.tga"
-	}
-}
