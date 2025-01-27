@@ -24,6 +24,7 @@ state=
 			1221 1 
 		}
 		add_core_of = SWE
+		add_dynamic_modifier = { modifier =  international_city }
 	}
 
 	provinces={
