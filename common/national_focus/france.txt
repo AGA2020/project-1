@@ -4688,9 +4688,6 @@
 
 		bypass = {
 			AND = {
-				VIC = {
-					owns_state = 26
-				}
 				not = { has_idea = FRA_defeatism }
 			}
 		}
