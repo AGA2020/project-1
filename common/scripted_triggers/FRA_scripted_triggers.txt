@@ -296,7 +296,3 @@ has_any_occupation_cost_trigger = {
 		has_idea = FRA_occupation_costs_4
 	}
 }
-
-is_vichy_france = {
-	original_tag = VIC
-}
