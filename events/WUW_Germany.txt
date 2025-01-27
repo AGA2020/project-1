@@ -9814,33 +9814,6 @@ country_event = {
 	desc = wuw_GER_reichskommissariats.24.desc 
 	picture = GFX_report_event_german_politician_speech
 
-	immediate = {
-		hidden_effect = {
-
-			IF = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-			}
-			ELSE = {
-			}
-
-			IF = {
-				limit = {
-					IRQ = {
-						NOT = {
-							AND = {
-								has_government = fascism
-								exists = yes
-							}
-						}
-					}
-				}
-			}
-
-		}
-	}
-
 	is_triggered_only = yes
 
 	option = { # We Need a German Official
@@ -9848,53 +9821,11 @@ country_event = {
 		ai_chance = {
 			base = 5
 		}	
-
-		hidden_effect = {
-			# The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-			IF = {
-				limit = {
-					IRQ = {
-						NOT = {
-							AND = {
-								has_government = fascism
-								exists = yes
-							}
-						}
-					}
-				}
-			}
-
-		}
 		
 	}
 
 	option = { # It might be wise to use a local puppet
 		name = wuw_GER_reichskommissariats.24.b
-		trigger = {
-			IRQ = {
-				NOT = {
-					AND = {
-						has_government = fascism
-						exists = yes
-					}
-				}
-			}
-		}
-		ai_chance = {
-			base = 95
-		}		
-
-		hidden_effect = {
-			
-			IF = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-			}
-			ELSE = {
-			}
-			
-		}
 
 	}
 }

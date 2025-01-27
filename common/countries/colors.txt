@@ -125,10 +125,6 @@ DEN = {
 	color = rgb { 153 116 93 }
 	color_ui = rgb { 199 151 121 }
 }
-IRQ = {
-	color = rgb { 178 114 99 }
-	color_ui = rgb { 231 148 129 }
-}
 AUS = {
 	color = rgb { 194 198 215 }
 	color_ui = rgb { 255 255 255 }
@@ -167,10 +163,6 @@ ETH = {
 PER = {
 	color = rgb { 71 113 97 }
 	color_ui = rgb { 92 147 126 }
-}
-PHI = {
-	color = rgb { 152 130 191 }
-	color_ui = rgb { 198 169 248 }
 }
 AOI = {
 	color = rgb { 0 153 51 }
