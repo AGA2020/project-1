@@ -2218,8 +2218,6 @@ focus_tree = {
 			add_political_power = 60
 			add_war_support = 0.05
 			activate_mission = SPR_anarchist_uprising_mission
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = SPR_antonio_escobar_huerta
 		}
 	}
 

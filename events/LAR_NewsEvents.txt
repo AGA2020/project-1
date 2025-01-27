@@ -231,6 +231,17 @@ news_event = {
 					}
 				}
 			}
+
+			SPR = {
+				every_state = {
+					limit = {
+						has_state_flag = SPR_sided_with_nationalists_flag
+						has_state_flag = SPR_core_of_spain_flag
+					}
+
+					add_core_of = PREV
+				}
+			}
 		}
 	}
 	
@@ -657,8 +668,16 @@ news_event = {
 							state = 794
 						}
 					}
-					remove_dynamic_modifier = {
-						modifier = unplanned_offensive
+					if = {
+						limit = {
+							has_dynamic_modifier = {
+								modifier = unplanned_offensive
+							}
+						}
+
+						remove_dynamic_modifier = {
+							modifier = unplanned_offensive
+						}
 					}
 				}
 			}

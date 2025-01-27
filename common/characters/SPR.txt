@@ -2679,39 +2679,6 @@ characters={
 		}
 	}
 
-	SPR_antonio_escobar_huerta = { # Democratic
-		name=SPR_antonio_escobar_huerta
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_5"
-			}
-		}
-		advisor={
-			slot = high_command
-			idea_token = SPR_antonio_escobar_huerta
-			ledger = army
-			allowed = {
-				has_dlc = "La Resistance"
-				original_tag = SPR
-			}
-			visible = {
-				NOT = {
-					tag = SPA
-					tag = SPB
-				}
-			}
-			available = {
-				has_completed_focus = SPR_maintain_the_second_republic
-				custom_trigger_tooltip = {
-					tooltip = SPR_not_nationalist_spain_tt
-					NOT = { tag = SPA }
-				}
-			}
-			traits = { army_logistics_2 }
-			cost = 100
-		}
-	}
-
 	SPR_infantry_military_council = { # Anarchist
 		name=SPR_infantry_military_council
 		portraits={

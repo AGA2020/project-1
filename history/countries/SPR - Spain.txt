@@ -211,7 +211,6 @@ if = {
 	recruit_character = SPR_jose_rovira
 	recruit_character = SPR_carmel_rosa_baserba
 	recruit_character = SPR_wilhelm_zaisser
-	recruit_character = SPR_antonio_escobar_huerta
 	recruit_character = SPR_infantry_military_council
 	recruit_character = SPR_army_regrouping_military_council
 	recruit_character = SPR_concealment_military_council
