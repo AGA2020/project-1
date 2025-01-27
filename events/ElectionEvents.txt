@@ -558,14 +558,6 @@ country_event = {
 				original_tag = GRE
 				has_dlc = "Battle for the Bosporus"
 			}
-			AND = {
-				original_tag = TUR
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				original_tag = SWI
-				has_dlc = "By Blood Alone"
-			}
 		}
 	}
 	
@@ -609,10 +601,6 @@ country_event = {
 		NOT = {
 			AND = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
-			AND = {
-				original_tag = TUR
 				has_dlc = "Battle for the Bosporus"
 			}
 		}

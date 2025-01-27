@@ -12,7 +12,7 @@ every_possible_country = {
 		}
 		IF = {
 			limit = { has_dlc = "Battle for the Bosporus" }
-			NOT = { tag = TUR tag = GRE }
+			NOT = { tag = GRE }
 		}
 		IF = {
 			limit = { has_dlc = "By Blood Alone" }
@@ -25,7 +25,7 @@ every_possible_country = {
 
 		IF = {
 			limit = { has_dlc = "Trial of Allegiance" }
-			NOT = { OR = { tag = CHL tag = ARG tag = BRA tag = PAR tag = URG } }
+			NOT = { OR = { tag = BRA tag = URG } }
 		}
 	}
 	generate_character = {
@@ -96,20 +96,20 @@ every_possible_country = {
 		}
 		IF = {
 			limit = { has_dlc = "Battle for the Bosporus" }
-			NOT = { tag = TUR tag = GRE }
+			NOT = { tag = GRE }
 		}
 		IF = {
 			limit = { has_dlc = "By Blood Alone" }
-			NOT = { OR = { tag = ETH tag = SWI } }
+			NOT = { OR = { tag = ETH } }
 		}
 		IF = {
 			limit = { has_dlc = "Arms Against Tyranny" }
-			NOT = { OR = { tag = ICE tag = DEN tag = SWE tag = NOR } }
+			NOT = { OR = { tag = DEN tag = SWE tag = NOR } }
 		}
 		# TODO CHANGE THIS TO THE CORRECT DLC LOCK
 		IF = {
 			limit = { has_dlc = "Trial of Allegiance" }
-			NOT = { OR = { tag = CHL tag = ARG tag = BRA tag = PAR tag = URG } }
+			NOT = { OR = { tag = BRA tag = URG } }
 		}
 	}
 	generate_character = {

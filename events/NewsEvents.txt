@@ -6702,7 +6702,6 @@ news_event = {
 		NOT = {
 			OR = {
 				tag = ITA
-				tag = TUR
 			}
 		}
 	}
@@ -6745,14 +6744,6 @@ news_event = {
 
 	is_triggered_only = yes
 
-	#This matter was settled!
-	option = {
-		name = news.189.a
-		trigger = {
-			tag = TUR
-		}
-	}
-
 	#We will have what we were promised!
 	option = {
 		name = news.189.b
@@ -6768,7 +6759,6 @@ news_event = {
 			NOT ={
 				OR = {
 					tag = ITA
-					tag = TUR
 				}
 			}
 		}
@@ -7361,12 +7351,6 @@ news_event = {
 		}
 		SOV = {
 			save_event_target_as = Soviet
-		}
-	}
-
-	trigger = {
-		NOT = {
-			tag = TUR
 		}
 	}
 
@@ -8378,16 +8362,12 @@ news_event = {
 		name = news.216.a
 		trigger = {
 			has_war_with = GER
-			NOT = {
-				is_in_faction_with = TUR
-			}
 		}
 	}
 
 	option = {
 		name = news.216.b
 		trigger = {
-			is_in_faction_with = TUR
 			NOT = {
 				is_in_faction_with = GER
 			}
@@ -8407,7 +8387,6 @@ news_event = {
 			NOT = {
 				OR = {
 					is_in_faction_with = GER
-					is_in_faction_with = TUR
 					has_war_with = GER
 				}
 			}
@@ -8429,19 +8408,9 @@ news_event = {
 	fire_for_sender = no
 
 	option = {
-		name = news.217.a
-		trigger = {
-			is_in_faction_with = TUR
-		}
-	}
-
-	option = {
 		name = news.217.b
 		trigger = {
 			has_war_with = GER
-			NOT = {
-				is_in_faction_with = TUR
-			}
 		}
 	}
 
@@ -8462,7 +8431,6 @@ news_event = {
 				OR = {
 					tag = GER
 					is_in_faction_with = GER
-					is_in_faction_with = TUR
 					has_war_with = GER
 				}
 			}
@@ -8879,18 +8847,8 @@ news_event = {
 	fire_for_sender = no
 
 	option = {
-		name = news.225.a
-		trigger = {
-			tag = TUR
-		}
-	}
-
-	option = {
 		name = news.225.b
 		trigger = {
-			NOT = {
-				tag = TUR
-			}
 			OR = {
 				has_government = fascism
 				has_government = communism
@@ -8903,7 +8861,6 @@ news_event = {
 		trigger = {
 			NOT = {
 				OR = {
-					tag = TUR
 					has_government = fascism
 					has_government = communism
 				}

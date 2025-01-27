@@ -2501,16 +2501,8 @@ news_event = {
 	major = yes
 	
 	option = {
-		name = wtt_news.61.a
-		trigger = {
-			original_tag = TUR
-			NOT = { has_war_with = FROM }
-		}
-	}
-	option = {
 		name = wtt_news.61.b
 		trigger = {
-			NOT = { original_tag = TUR }
 			NOT = { has_war_with = FROM }
 		}
 	}
