@@ -11311,7 +11311,10 @@ news_event = {
 		name = news.297.c
 		trigger = { 
 			NOT = { TAG = HUN }
-			has_government = fascism
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
 		}
 	}
 }
