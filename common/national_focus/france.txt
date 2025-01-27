@@ -478,6 +478,8 @@
 				limit = {
 					not = { is_core_of = ROOT }
 					not = { is_on_continent = europe }
+					not = { state = 713 }
+					not = { state = 730 }
 				}
 				add_compliance = 10
 			}
