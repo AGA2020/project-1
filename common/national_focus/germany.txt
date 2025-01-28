@@ -13393,6 +13393,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		custom_effect_tooltip = GER_unlock_price_controls_decision_aga
 		}
 	}
 
