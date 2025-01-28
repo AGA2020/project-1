@@ -32,14 +32,6 @@ shared_focus = {
 		}
 	}
 
-	offset = {
-		x = 48
-		y = 0
-		trigger = {
-			tag = ARG
-		}
-	}
-
 	cost = 5
 
 	available = {
@@ -60,11 +52,6 @@ shared_focus = {
 
 		random_core_state = {
 			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 0
-					include_locked = yes
-				}
 				is_owned_and_controlled_by = ROOT
 				NOT = {
 					has_dynamic_modifier = { modifier = BRA_neglected_state_dynamic_modifier }
@@ -87,28 +74,7 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
-
-		IF = {
-			limit = {
-				original_tag = CHL
-			}
-			add_dynamic_modifier = { modifier = CHL_army_modifier }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = BRA
-			}
-			add_dynamic_modifier = { modifier = BRA_army_modifier }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = ARG
-			}
-			add_dynamic_modifier = { modifier = ARG_army_modifier }
-		}
-		ELSE = {
-			add_dynamic_modifier = { modifier = south_american_army_modifier }
-		}
+		add_dynamic_modifier = { modifier = BRA_army_modifier }
 	}
 }
 
@@ -122,32 +88,6 @@ shared_focus = {
 
 	cost = 5
 
-	available = {
-		any_state = {
-			is_owned_by = ROOT
-			is_controlled_by = ROOT
-			free_building_slots = {
-			    building = arms_factory
-			    size > 1
-			    include_locked = yes
-			}
-		}
-	}
-
-	bypass = {
-		NOT = {
-			any_state = {
-				is_owned_by = ROOT
-				is_controlled_by = ROOT
-				free_building_slots = {
-				    building = arms_factory
-				    size > 1
-				    include_locked = yes
-				}
-			}
-		}
-	}
-
 	ai_will_do = {
 			factor = 20
 		}
@@ -156,11 +96,6 @@ shared_focus = {
 
 		random_core_state = {
 			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 0
-					include_locked = yes
-				}
 				is_owned_and_controlled_by = ROOT
 				NOT = {
 					OR = {
@@ -182,31 +117,8 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
-		IF = {
-			limit = {
-				original_tag = CHL
-			}
-			custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-			add_to_variable = { JUNO_army_production_speed_arms_factory_factor = 0.05 tooltip = production_speed_arms_factory_factor_tt }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = BRA
-			}
-			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-			add_to_variable = { JUNO_army_production_speed_arms_factory_factor = 0.05 tooltip = production_speed_arms_factory_factor_tt }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = ARG
-			}
-			custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-			add_to_variable = { JUNO_army_production_speed_arms_factory_factor = 0.05 tooltip = production_speed_arms_factory_factor_tt }
-		}
-		ELSE = {
-			custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-			add_to_variable = { JUNO_army_production_speed_arms_factory_factor = 0.05 tooltip = production_speed_arms_factory_factor_tt }
-		}
+		custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
+		add_to_variable = { JUNO_army_production_speed_arms_factory_factor = 0.05 tooltip = production_speed_arms_factory_factor_tt }
 
 	}
 }
@@ -226,18 +138,6 @@ shared_focus = {
 			has_war = yes
 			threat > 0.49
 		}
-	}
-
-	#offset = {
-	#	x = -1
-	#	y = 0
-	#	trigger = {
-	#		tag = BRA
-	#	}
-	#}
-
-	bypass = {
-		
 	}
 
 	ai_will_do = {
@@ -266,97 +166,14 @@ shared_focus = {
 
 	cost = 10
 
-	#offset = {
-	#	x = 3
-	#	y = 0
-	#	trigger = {
-	#		tag = BRA
-	#	}
-	#}
-
-	available = {
-		#OR = {
-		#	has_war = yes
-		#	threat > 0.49
-		#}
-	}
-
-	bypass = {
-		
-	}
-
 	ai_will_do = {
 			factor = 0
 		}
 
 	completion_reward = {
-		IF = {
-			limit = {
-				original_tag = BRA
-			}
-			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-			add_to_variable = { JUNO_supply_combat_penalties_on_core_factor = -0.15 tooltip = supply_combat_penalties_on_core_factor_tt }
-			add_to_variable = { JUNO_modifier_production_speed_supply_node_factor = 0.25 tooltip = production_speed_supply_node_factor_tt }
-		}
-		ELSE = {
-			custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-			add_to_variable = { JUNO_supply_combat_penalties_on_core_factor = -0.15 tooltip = supply_combat_penalties_on_core_factor_tt }
-			add_to_variable = { JUNO_modifier_production_speed_supply_node_factor = 0.25 tooltip = production_speed_supply_node_factor_tt }
-		}
-	}
-}
-
-shared_focus = {
-	id = SMB_support_company
-	icon = GFX_focus_generic_land_reclamation
-	relative_position_id = SMB_logistics_department
-	prerequisite = { focus = SMB_logistics_department }
-	allow_branch = {
-		OR = {
-			TAG = ARG
-			#TAG = CHL
-			TAG = PAR
-			TAG = URG
-		}
-	}
-	x = 0
-	y = 1
-
-	cost = 5
-
-	available = {
-
-	}
-
-	bypass = {
-		
-	}
-
-	ai_will_do = {
-			factor = 20
-		}
-
-	completion_reward = {
-		#IF = {
-		#	limit = {
-		#		original_tag = BRA
-		#	}
-		#	add_tech_bonus = {
-		#		name = JUNO_support_company_initiative
-		#		bonus = 0.25
-		#		uses = 1
-		#		category = support_tech
-		#	}
-		#	set_technology = { TOA_jungle_pioneers_support_tech = 1 }
-		#}
-		#ELSE = {
-			add_tech_bonus = {
-				name = JUNO_support_company_initiative
-				bonus = 0.25
-				uses = 2
-				category = support_tech
-			}
-		#}
+		custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
+		add_to_variable = { JUNO_supply_combat_penalties_on_core_factor = -0.15 tooltip = supply_combat_penalties_on_core_factor_tt }
+		add_to_variable = { JUNO_modifier_production_speed_supply_node_factor = 0.25 tooltip = production_speed_supply_node_factor_tt }
 	}
 }
 
@@ -370,48 +187,14 @@ shared_focus = {
 
 	cost = 10
 
-	available = {
-	}
-
-	allow_branch = {
-		has_dlc = "La Resistance"
-	}
-
-	bypass = {
-		
-	}
-
 	ai_will_do = {
 			factor = 20
 		}
 
 	completion_reward = {
 
-		IF = {
-			limit = {
-				original_tag = CHL
-			}
-			custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-			add_to_variable = { JUNO_army_operative_slot = 1 tooltip = operative_slot_tt }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = BRA
-			}
-			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-			add_to_variable = { JUNO_army_operative_slot = 1 tooltip = operative_slot_tt }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = ARG
-			}
-			custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-			add_to_variable = { JUNO_army_operative_slot = 1 tooltip = operative_slot_tt }
-		}
-		ELSE = {
-			custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-			add_to_variable = { JUNO_army_operative_slot = 1 tooltip = operative_slot_tt }
-		}
+		custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
+		add_to_variable = { JUNO_army_operative_slot = 1 tooltip = operative_slot_tt }
 
 		hidden_effect = {
 			set_technology = {
@@ -434,14 +217,6 @@ shared_focus = {
 
 	cost = 10
 
-	available = {
-
-	}
-
-	bypass = {
-		
-	}
-
 	ai_will_do = {
 			factor = 0
 		}
@@ -449,29 +224,13 @@ shared_focus = {
 	completion_reward = {
 		IF = {
 			limit = {
-				has_dlc = "Arms Against Tyranny"
-				original_tag = BRA
+				NOT = { has_completed_focus = BRA_fabrica_nacional_de_motores }
 			}
-			IF = {
-				limit = {
-					NOT = { has_completed_focus = BRA_fabrica_nacional_de_motores }
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = BRA_fnm_organization
-			}
-			mio:BRA_fnm_organization = {
-				add_mio_size = 1
-			}
-
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = BRA_fnm_organization
 		}
-		ELSE = {
-			add_ideas = idea_JUNO_truck_production_cost
-			add_tech_bonus = {
-				name = JUNO_motorization_initiative
-				bonus = 0.5
-				uses = 2
-				category = motorized_equipment
-			}
+		mio:BRA_fnm_organization = {
+			add_mio_size = 1
 		}
 	}
 }
