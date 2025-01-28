@@ -1,16 +1,4 @@
 on_actions = {
-	on_daily_GER = {
-		effect = {
-			if = {
-				limit = {
-					GER = { has_war_with = SOV }
-				}
-				#victory_requierements = yes
-				initilize_victory_system = yes
-			}
-
-		}
-	}
 
 	on_startup = { 
 		effect = {

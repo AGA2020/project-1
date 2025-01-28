@@ -331,6 +331,14 @@ on_actions = {
 	}
 	on_war_relation_added = {
         effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = SOV
+					}
+				}
+				initilize_victory_system = yes
+			}
             if = {
                 limit = {
                     tag = JAP
