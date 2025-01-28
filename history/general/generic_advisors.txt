@@ -1,54 +1,6 @@
 # For minor countries where advisors are not defined
 # Generate them from a generic template
 
-# Political advisors
-every_possible_country = {
-	limit = {
-		NOT = { OR = { tag = HUN tag = NZL tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR original_tag = POL tag = FIN } }
-		# avoid generic advisors in temporary countries
-		is_dynamic_country = no
-		NOT = {
-			has_allowed_idea_with_traits = { idea = communist_revolutionary characters = yes }
-		}
-		IF = {
-			limit = { has_dlc = "Battle for the Bosporus" }
-			NOT = { tag = GRE }
-		}
-		IF = {
-			limit = { has_dlc = "By Blood Alone" }
-			NOT = { OR = { tag = ETH tag = SWI } }
-		}
-		IF = {
-			limit = { has_dlc = "Arms Against Tyranny" }
-			NOT = { OR = { tag = ICE tag = DEN tag = SWE tag = NOR } }
-		}
-
-		IF = {
-			limit = { has_dlc = "Trial of Allegiance" }
-			NOT = { OR = { tag = BRA tag = URG } }
-		}
-	}
-	generate_character = {
-		token_base = generic_communist_revolutionary # token will be TAG_token_base
-		advisor = {
-			slot = political_advisor
-			traits = { communist_revolutionary }
-			available = {
-				IF = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		portraits = { 
-			army = { small = GFX_idea_generic_communist_revolutionary }
-		}
-	}
-}
-
 every_possible_country = {
 	limit = {
 		NOT = { OR = { tag = BRA tag = NOR tag = DEN tag = GRE tag = HUN tag = GER tag = ENG tag = SOV original_tag = FRA tag = ITA tag = JAP tag = USA tag = AST tag = RAJ tag = CAN tag = SAF tag = CZE tag = CHI tag = MAN tag = MEX tag = HOL original_tag = SPR original_tag = POL tag = FIN } }
