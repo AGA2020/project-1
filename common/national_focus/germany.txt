@@ -5553,10 +5553,6 @@ focus_tree = {
 				GER_military_air_manpower_requirement_factor = -0.1
 				tooltip = air_manpower_requirement_factor_tt
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = available_chief_of_airforce
-			show_ideas_tooltip = GER_helmuth_wilberg
 		}
 	}
 

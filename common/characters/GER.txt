@@ -1909,15 +1909,6 @@ characters = {
 		}
 	}
 
-	GER_helmuth_wilberg = {
-		name = GER_helmuth_wilberg
-		portraits = {
-			army = {
-				small = GFX_portrait_GER_helmuth_wilberg_small
-			}
-		}
-	}
-
 
 
 ##     ## #### ##       #### ########    ###    ########  ##    ##    ##     ## ####  ######   ##     ##     ######   #######  ##     ## ##     ##    ###    ##    ## ########  
