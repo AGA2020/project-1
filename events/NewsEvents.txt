@@ -9380,9 +9380,9 @@ news_event = {
 	trigger = {
 		tag = GER
 		has_government = fascism
-		has_war_with = USA
+		has_war_with = SOV
 		divisions_in_state = {
-			state = 378
+			state = 229
 			size > 3
 		}
 		NOT = {
@@ -9394,7 +9394,7 @@ news_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 12
+		months = 1
 	}
 
 	immediate = {
