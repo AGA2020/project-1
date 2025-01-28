@@ -650,7 +650,7 @@ shared_focus = {
 	icon = GFX_focus_BRA_corpo_navais
 	relative_position_id = SMB_special_forces
 	prerequisite = { focus = SMB_special_forces }
-	mutually_exclusive = { focus = SMB_special_forces_option_1 focus = SMB_special_forces_option_3 }
+	mutually_exclusive = { focus = SMB_special_forces_option_3 }
 	x = 2
 	y = 1
 
@@ -696,22 +696,11 @@ shared_focus = {
 	icon = GFX_focus_SMB_special_forces_option_3 
 	relative_position_id = SMB_special_forces
 	prerequisite = { focus = SMB_special_forces }
-	mutually_exclusive = { focus = SMB_special_forces_option_1 focus = SMB_special_forces_option_2 }
-	x = 0
-	y = 1
+	mutually_exclusive = { focus = SMB_special_forces_option_2 }
+	x = -1
+	y = 0
 
 	cost = 5
-
-	offset = {
-		x = -1
-		y = 0
-		trigger = {
-			OR = {
-				original_tag = BRA
-				original_tag = ARG
-			}
-		}
-	}
 
 	ai_will_do = {
 			factor = 10
@@ -930,120 +919,6 @@ shared_focus = {
 
 		navy_experience = 15
 		army_experience = 15
-	}
-}
-
-shared_focus = {
-	id = SMB_special_forces_option_1_continuation
-	icon = GFX_focus_SWE_beneath_sticks_and_stone 
-	relative_position_id = SMB_special_forces_option_1
-	prerequisite = { focus = SMB_special_forces_option_1 }
-
-	x = 0
-	y = 1
-
-	cost = 5
- 
-	available = {
-
-	}
-
-	bypass = {
-		 
-	}
-
-	ai_will_do = {
-			factor = 20
-		} 
-
-	completion_reward = {
-
-		IF = {
-			limit = { 
-				NOT = { has_tech = night_vision }
-				date > 1940.1.1
-			}
-			set_technology = { night_vision = 1 }
-		}
-		ELSE_IF = {
-			limit = { 
-				NOT = { has_tech = night_vision2 }
-				date > 1941.1.1
-			}
-			set_technology = { night_vision2 = 1 }
-		}	
-
-		IF = {
-			limit = {
-				original_tag = CHL
-			}
-			custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.1 tooltip = special_forces_cap_tt }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = BRA
-			}
-			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.1 tooltip = special_forces_cap_tt }
-		}
-		ELSE_IF = {
-			limit = {
-				original_tag = ARG
-			}
-			custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.1 tooltip = special_forces_cap_tt }
-		}
-		ELSE = {
-			custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-			add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.1 tooltip = special_forces_cap_tt }
-		}
-
-		army_experience = 30
-	}
-}
-
-shared_focus = {
-	id = SMB_mountain_guns
-	icon = GFX_focus_SMB_mountain_guns
-	relative_position_id = SMB_special_forces_option_1
-	prerequisite = { focus = SMB_special_forces_option_1 }
-	mutually_exclusive = { }
-	x = -2
-	y = 1
-
-	cost = 5
-
-	available = {
-		NOT = {
-			has_tech = mountain_gun
-		}
-	}
-
-	bypass = {
-		
-	}
-
-	allow_branch = {
-		original_tag = CHL
-	}
-
-	ai_will_do = {
-			factor = 20
-		} 
-
-	completion_reward = {
-		
-		IF = {
-			limit = {
-				NOT = {
-					has_tech = mountain_gun
-				}
-			}
-			custom_effect_tooltip = ROM_mountain_artillery_tech_tt
-			hidden_effect = { set_technology = { mountain_gun = 1 } }
-		}
-
 	}
 }
 
