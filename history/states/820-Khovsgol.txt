@@ -11,15 +11,6 @@ state = {
 		buildings = {
 			infrastructure = 1
 		}
-
-
-
-
-
-
-
-
-		add_core_of = MON
 	}
     manpower = 1
 	buildings_max_level_factor=1.000

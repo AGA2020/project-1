@@ -7,16 +7,13 @@ state={
 	
 	history={
         owner = ENG
-
-
-
 		buildings = {
 			infrastructure = 2
 			1751 = {
 				naval_base = 3
 			}
 		}
-		add_core_of = POR
+		add_core_of = SWE
 	}
 	
 	provinces={
