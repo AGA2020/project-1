@@ -20,10 +20,19 @@ GER_porsche_organization = {
 	icon = GFX_idea_porsche
 	
 	allowed = {
-		original_tag = GER
+		OR = {
+			original_tag = GER 
+			original_tag = HUN
+		} 
 	}
 
 	available = {
+		IF = {
+			limit = { FROM = { original_tag = HUN } } 
+			FROM = { 
+				has_completed_focus = wuw_HUN_seek_german_contracts
+			}
+		}
 	}
 
 	tree_header_text = {
