@@ -8977,7 +8977,7 @@ ai_will_do = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_claims_on_poland
-		cost = 0
+		cost = 10
 
 		ai_will_do = {
 			factor = 2.5
@@ -8997,7 +8997,6 @@ ai_will_do = {
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
 			NOT = { has_war_with = GER }
-			is_subject = no
 		}
 
 		bypass = {
