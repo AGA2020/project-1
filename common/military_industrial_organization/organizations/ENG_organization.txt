@@ -118,10 +118,7 @@ ENG_vauxhall_organization = {
 			tag = CAN
 			tag = AST
 			tag = NZL
-			AND = {
-				tag = BRA 
-				has_dlc = "Trial of Allegiance"
-			}
+			tag = BRA
 			tag = BUL
 			tag = MEX
 		}
