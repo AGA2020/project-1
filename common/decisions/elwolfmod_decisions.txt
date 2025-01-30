@@ -162,6 +162,9 @@ operations = {
 						always = yes
 					}
 				}
+				MAN_zhang_jinghui = {
+					set_nationality = JAP
+				}
 			}
 			JAP = {
 				annex_country = {
