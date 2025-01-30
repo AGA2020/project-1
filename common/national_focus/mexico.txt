@@ -39,14 +39,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -69,14 +61,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -108,14 +92,6 @@ focus_tree = {
 				factor = 0.1
 				is_historical_focus_on = yes
 			}
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -182,14 +158,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -213,19 +181,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-			
-			modifier = {
-				factor = 10
-				has_government = communism
-			}
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -251,14 +206,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -279,14 +226,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -311,14 +250,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -362,14 +293,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -411,14 +334,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -453,14 +368,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -491,14 +398,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -525,14 +424,6 @@ focus_tree = {
 				factor = 10
 				has_war = yes
 			}
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -585,14 +476,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -614,14 +497,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -647,14 +522,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -693,14 +560,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -730,10 +589,6 @@ focus_tree = {
 			NOT = {
 				has_global_flag = flag_mexico_cedillo_has_revolted
 			}
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -787,14 +642,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -853,16 +700,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-			NOT = {
-				has_war_with = ENG
-			}
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -900,13 +737,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
