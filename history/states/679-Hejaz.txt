@@ -6,12 +6,6 @@ state = {
 	history = {
 
         owner = WST
-		add_core_of = SAU
-
-
-
-
-		
 		buildings = {
 			infrastructure = 2
 		}
