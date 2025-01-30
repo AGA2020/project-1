@@ -744,13 +744,15 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			every_state = {
-				limit = {
-					OR = {
-						state = 477
-						state = 479
-					}
+			477 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
+			}
+			479 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -775,31 +777,12 @@ focus_tree = {
 			factor = 1 # Don't think the AI bothers with licences
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "Death or Dishonor"
-				}
-				add_ideas = MEX_capital_reserves
-			}
-			if = {
-				limit = {
-					NOT = { has_dlc = "Death or Dishonor" }
-				}
-				add_political_power = 150
-			}
+			add_ideas = MEX_capital_reserves
 		}
 	}
 	
@@ -817,23 +800,8 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-			is_subject = no
-			NOT = {
-				has_war_with = ENG
-			}
-		}
-
 		bypass = {
-			OR = {
-				is_in_faction = yes
-				ENG = {
-					exists = no
-				}
-				ENG = {
-					is_subject = yes
-				}
-			}
+			is_in_faction = yes
 		}
 
 		cancel_if_invalid = yes
@@ -841,41 +809,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			if = {
-				limit = {
-					ENG = { has_government = neutrality }
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.1
-				}
-			}
-			else_if = {
-				limit = {
-					ENG = { has_government = democratic }
-				}
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.1
-				}
-			}
-			else_if = {
-				limit = {
-					ENG = { has_government = fascism }
-				}
-				add_popularity = {
-					ideology = fascism
-					popularity = 0.1
-				}
-			}
-			else_if = {
-				limit = {
-					ENG = { has_government = communism }
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.1
-				}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
 			}
 
 			add_opinion_modifier = {
@@ -899,24 +835,13 @@ focus_tree = {
 					}
 				}
 			}
-			else_if = {
-				limit = {
-					ENG = {
-						is_in_faction = yes
-					}
-				}
+			else = {
 				random_other_country = {
 					limit = {
 						is_faction_leader = yes
 						is_in_faction_with = ENG
 					}
 					country_event = generic.2
-				}
-			}
-			else = {
-				create_faction = MEX_focus_community_of_nations
-				ENG = {
-					country_event = generic.5
 				}
 			}
 		}
@@ -937,19 +862,15 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
-			NOT = {
-				has_war_with = ENG
-			}
 			311 = {
 				is_owned_by = ENG
 			}
 		}
 
 		bypass = {
-		NOT= {
-			311 = {
-				is_owned_by = ENG
+			NOT = {
+				311 = {
+					is_owned_by = ENG
 				}
 			}
 		}
@@ -981,14 +902,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -1045,14 +958,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -1118,14 +1023,6 @@ focus_tree = {
 			}
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1175,25 +1072,13 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
-			NOT = {
-				has_war_with = USA
-			}
 			USA = {
 				is_in_faction = yes
 			}
 		}
 
 		bypass = {
-			OR = {
-				is_in_faction = yes
-				USA = {
-					exists = no
-				}
-				USA = {
-					is_subject = yes
-				}
-			}
+			is_in_faction = yes
 		}
 
 		cancel_if_invalid = yes
@@ -1201,41 +1086,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			if = {
-				limit = {
-					USA = { has_government = neutrality }
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.1
-				}
-			}
-			else_if = {
-				limit = {
-					USA = { has_government = democratic }
-				}
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.1
-				}
-			}
-			else_if = {
-				limit = {
-					USA = { has_government = fascism }
-				}
-				add_popularity = {
-					ideology = fascism
-					popularity = 0.1
-				}
-			}
-			else_if = {
-				limit = {
-					USA = { has_government = communism }
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.1
-				}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
 			}
 			
 			add_opinion_modifier = {
@@ -1276,16 +1129,9 @@ focus_tree = {
 		}
 
 		available = {
-			NOT = {
-				has_war_with = USA
-			}
 			USA = {
 				has_war = yes
 			}
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -1333,14 +1179,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-			has_offensive_war = no
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1363,14 +1201,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -1429,10 +1259,6 @@ focus_tree = {
 			democratic > 0.4
 			has_civil_war = no
 			NOT = { has_completed_focus = MEX_focus_catholic_politics }
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -1510,10 +1336,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1537,14 +1359,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -1571,14 +1385,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1601,14 +1407,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -1649,10 +1447,6 @@ focus_tree = {
 			}					
 		}
 
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1682,10 +1476,6 @@ focus_tree = {
 				has_idea = MEX_church_power_1
 				has_idea = MEX_church_power_2
 			}
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -1740,14 +1530,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-		
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1771,14 +1553,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -1807,14 +1581,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -1851,14 +1617,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
@@ -1918,14 +1676,6 @@ focus_tree = {
 			factor = 100
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -1958,14 +1708,6 @@ focus_tree = {
 		
 		ai_will_do = {
 			factor = 100
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
 		}
 
 		cancel_if_invalid = yes
