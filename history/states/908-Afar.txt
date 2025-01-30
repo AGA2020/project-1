@@ -22,13 +22,7 @@ state = {
 			13240 2 
 		}
 		owner = ETH
-		add_core_of = AFA
 		add_core_of = ETH
-		1936.6.1 = {
-			owner = ITA
-			controller = ITA
-
-		}
 
 	}
 

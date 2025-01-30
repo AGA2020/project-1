@@ -156,6 +156,61 @@ operations = {
             set_global_flag = GER_weak_sperm
         }
     }
+    al_beniiiiiiii = {
+        icon = GFX_decision_generic_industry
+        fire_only_once = yes
+        allowed = {
+            tag = HOL
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        available = {
+         
+        }
+        complete_effect = {
+            USA = { transfer_state = 672 transfer_state = 334 transfer_state = 335 transfer_state = 673 transfer_state = 668 transfer_state = 669 transfer_state = 667 transfer_state = 309 transfer_state = 695 transfer_state = 738 }
+            672 = { add_compliance = 100 }
+            334 = { add_compliance = 100 }
+            335 = { add_compliance = 100 }
+            673 = { add_compliance = 100 }
+            668 = { add_compliance = 100 }
+            669 = { add_compliance = 100 }
+            667 = { add_compliance = 100 }
+            309 = { add_compliance = 100 }
+            695 = { add_compliance = 100 }
+            738 = { add_compliance = 100 }
+        }
+    }
+    al_beniiiiiiii_2 = {
+        icon = GFX_decision_generic_industry
+        fire_only_once = yes
+        allowed = {
+            tag = HOL
+        }
+        ai_will_do = {
+            factor = 1
+        }
+        available = {
+         has_decision = al_beniiiiiiii
+        }
+        complete_effect = {
+            USA = { 
+                give_resource_rights = {
+                    receiver = BEL
+                    state = 672
+                }
+                give_resource_rights = {
+                    receiver = BEL
+                    state = 334
+                }
+                give_resource_rights = {
+                    receiver = BEL
+                    state = 335
+                } 
+            }
+        }
+    }
    ger_strong_sperm= {
         icon = GFX_decision_generic_industry
 
@@ -172,6 +227,28 @@ operations = {
         }
         complete_effect = {
             clr_global_flag = GER_weak_sperm
+        }
+        timeout_effect = {
+            BUL = { set_country_flag = spainmechpart1 } 
+            GER = { set_country_flag = spainmechpart1 } 
+            if = { 
+                limit = {
+                    AND = {
+                        NOT = { has_global_flag = GER_weak_sperm }
+                        NOT = { has_global_flag = spainmechpart1deliverycompleted }  
+                        BUL = { is_ai = no }
+                    }
+                } 
+                BUL = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 384 producer = SWE } }
+                set_global_flag = spainmechpart1deliverycompleted
+            } 
+            ELSE_IF = {
+                limit = {
+                    NOT = { has_global_flag = spainmechpart1deliverycompleted }  
+                }
+                GER = { add_equipment_to_stockpile = { type = mechanized_equipment_1 amount = 384 producer = SWE } }
+                set_global_flag = spainmechpart1deliverycompleted
+            }  
         }
     }
    mech_delivery_SPR_part1 = { # 1 august 1938 decreased to %70

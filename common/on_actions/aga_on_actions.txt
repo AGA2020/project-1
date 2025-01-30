@@ -43,33 +43,19 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					HOL = {
+					BEL = {
 						has_equipment = {
 							convoy_1 < 1000
 						}
 						has_capitulated = yes
 					}
 				}
-				HOL = {
+				BEL = {
 					add_equipment_to_stockpile = {
 						type = convoy
 						amount = 1000
 					}
 				}
-			}
-			#axis = { scoped_play_song = "entertheeast" }	
-			if = {
-			    limit = {
-			        any_country = { axis = yes has_tech = survivability_studies }
-			    }
-			    every_country = {
-			        limit = {
-			            axis = yes
-			        }
-			        set_technology = {
-			            survivability_studies = 1
-			        }
-			    }
 			}
 		}
 	}
