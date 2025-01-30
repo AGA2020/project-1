@@ -75,31 +75,34 @@
 			factor = 2
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-			NOT = { is_subject_of = ENG }
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = NZL_transfer_ships_tt
-			ENG = {
-			    transfer_ship = {
-			        prefer_name = "HMS Achilles"
-			        type = light_cruiser
-			        target = NZL
-			    }
-			    transfer_ship = {
-			        prefer_name = "HMS Leander"
-			        type = light_cruiser
-			        target = NZL
-			    }
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_1
+					creator = "FIN"
+					version_name = "Danae Class"
+				}
+				name = "Danae Class-A"
+				requested_factories = 1
+				progress = 0.99
+				amount = 1
+				industrial_manufacturer = mio:NZL_st_mary_bay_ship_organization
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_1
+					creator = "FIN"
+					version_name = "Danae Class"
+				}
+				name = "Danae Class-B"
+				requested_factories = 1
+				progress = 0.99
+				amount = 1
+				industrial_manufacturer = mio:NZL_st_mary_bay_ship_organization
 			}
 		}
 	}
