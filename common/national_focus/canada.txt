@@ -2467,14 +2467,6 @@
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2488,16 +2480,11 @@
 				uses = 1
 				category = cl_tech
 			}
-			IF = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				add_tech_bonus = {
-					name = CAN_light_cruiser_effort
-					bonus = 0.5
-					uses = 1
-					category = cat_ship_light_battery
-				}
+			add_tech_bonus = {
+				name = CAN_light_cruiser_effort
+				bonus = 0.5
+				uses = 1
+				category = cat_ship_light_battery
 			}
 		}
 	}
@@ -2516,14 +2503,6 @@
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2537,16 +2516,11 @@
 				uses = 1
 				category = ca_tech
 			}
-			IF = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				add_tech_bonus = {
-					name = CAN_heavy_cruiser_effort
-					bonus = 0.5
-					uses = 1
-					category = cat_ship_medium_battery
-				}
+			add_tech_bonus = {
+				name = CAN_heavy_cruiser_effort
+				bonus = 0.5
+				uses = 1
+				category = cat_ship_medium_battery
 			}
 		}
 	}
@@ -2568,14 +2542,6 @@
 				has_war_with = GER
 				factor = 2
 			}
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2613,14 +2579,6 @@
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2655,14 +2613,6 @@
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
@@ -2671,33 +2621,19 @@
 		completion_reward = {
 			if = {
 				limit = {
-					has_dlc = "Man the Guns"
+					has_tech = degaussing
 				}
-				if = {
-					limit = {
-						has_tech = degaussing
-					}
-					add_tech_bonus = {
-						name = CAN_degauss_ship_hulls
-						bonus = 0.5
-						uses = 1
-						category = naval_mines
-					}
-					else = {
-						set_technology = {
-						    degaussing = 1
-						}
-					}
+				add_tech_bonus = {
+					name = CAN_degauss_ship_hulls
+					bonus = 0.5
+					uses = 1
+					category = naval_mines
+				}
+				else = {
+					set_technology = {
+					    degaussing = 1
 					}
 				}
-			
-			if = {
-				limit = {
-						NOT = {
-							has_dlc = "Man the Guns"
-						}
-					}
-				add_ideas = CAN_degauss_ship_hulls
 			}
 		}	
 	}
@@ -2714,14 +2650,6 @@
 
 		ai_will_do = {
 			factor = 25
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2748,52 +2676,20 @@
 			factor = 25
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
-		complete_tooltip = {
-			navy_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = CAN_united_shipyards_DY
-				}
-				add_extra_state_shared_building_slots = 4
-				add_building_construction = {
-					type = dockyard
-					level = 4
-					instant_build = yes
-				}
-			}
-		}
-
 		completion_reward = {
 			navy_experience = 25
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 3
-						include_locked = yes
-					}
-				}
+			863 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
 					level = 4
 					instant_build = yes
 				}
-				set_state_flag = CAN_united_shipyards_DY
 			}
 		}
 	}
