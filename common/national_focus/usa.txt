@@ -882,26 +882,13 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
-	
-		available = {
-			
-		}
-			
-		bypass = {
-	
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				USA_create_joe_savoldi_operative = yes
-			}
+			USA_create_joe_savoldi_operative = yes
 			unlock_decision_tooltip = { decision = USA_execute_war_plan_silver show_effect_tooltip = yes show_modifiers = yes }
 		}
 	}
@@ -926,12 +913,7 @@ focus = {
 			GER = {
 				add_opinion_modifier = { target = USA modifier = war_plan_black }
 			}
-			IF = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				USA_create_william_sebold_operative = yes
-			}
+			USA_create_william_sebold_operative = yes
 			unlock_decision_tooltip = { decision = USA_execute_war_plan_black show_effect_tooltip = yes show_modifiers = yes }
 		}
 	}
@@ -940,18 +922,8 @@ focus = {
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = USA_war_plan_black }
 		available = {
-			country_exists = GER
-			is_subject = no
 			ENG = {
-				NOT = { is_in_faction_with = GER }
-			}
-			ENG = {
-				has_government = ROOT
 				has_war = yes
-				not = { has_war_with = ROOT }
-				any_enemy_country = {
-					is_major = yes
-				}
 			}
 		}
 		bypass = {
@@ -961,7 +933,6 @@ focus = {
 			NOT = { 693 = { is_controlled_by = ENG } } 
 			NOT = { 689 = { is_controlled_by = ENG } } 
 			NOT = { 691 = { is_controlled_by = ENG } } 
-			ENG = { exists = no }
 		}
 
 		x = 0
@@ -1008,14 +979,6 @@ focus = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1028,9 +991,6 @@ focus = {
 		id = USA_war_plan_orange
 		icon = GFX_focus_attack_japan
 		prerequisite = { focus = USA_intervention_in_asia }
-		available = {
-			
-		}
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
@@ -1055,12 +1015,6 @@ focus = {
 		id = USA_defense_of_the_pacific
 		icon = GFX_goal_generic_occupy_states_coastal
 		prerequisite = { focus = USA_war_plan_orange }
-		available = {
-			JAP = {
-				exists = yes
-				NOT = { has_government = ROOT }
-			}
-		}
 		will_lead_to_war_with = JAP
 		x = 0
 		y = 2
@@ -1173,14 +1127,6 @@ focus = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1213,10 +1159,6 @@ focus = {
 			else = {
 				congress_low_support_trigger = yes
 			}
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -1296,14 +1238,6 @@ focus = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1331,31 +1265,18 @@ focus = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
 			add_ideas = USA_airborne_divisions
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				add_potential_special_forces_tree = yes
-				add_doctrine_cost_reduction = {
-					name = USA_airborne_divisions
-					cost_reduction = 0.25
-					uses = 2
-					category = special_forces_doctrine
-				}
+			add_potential_special_forces_tree = yes
+			add_doctrine_cost_reduction = {
+				name = USA_airborne_divisions
+				cost_reduction = 0.25
+				uses = 2
+				category = special_forces_doctrine
 			}
 		}
 	}
@@ -1370,14 +1291,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1403,10 +1316,6 @@ focus = {
 
 		available = {
 			congress_medium_support_trigger = yes
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1455,14 +1364,6 @@ focus = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1494,34 +1395,16 @@ focus = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}	
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = USA_tank_destroyer_board_organization
-				mio:USA_tank_destroyer_board_organization = {
-					add_mio_size = 2
-				}
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = USA_tank_destroyer_board_organization
+			mio:USA_tank_destroyer_board_organization = {
+				add_mio_size = 2
 			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = tank_destroyer_board
-			}
-			
 		}
 	}
 	focus = {
@@ -1538,32 +1421,15 @@ focus = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}	
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = USA_detroit_arsenal_organization
-				mio:USA_detroit_arsenal_organization = {
-					add_mio_size = 2
-				}
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = detroit_arsenal
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = USA_detroit_arsenal_organization
+			mio:USA_detroit_arsenal_organization = {
+				add_mio_size = 2
 			}
 		}
 	}
@@ -1578,14 +1444,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1614,14 +1472,6 @@ focus = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1641,14 +1491,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1796,14 +1638,7 @@ focus = {
 		prerequisite = { focus = USA_strategic_bombing }
 		available = {
 			has_war = yes
-			OR = {
-				is_in_faction_with = GER
-				is_in_faction_with = JAP
-				is_in_faction_with = ITA
-				is_in_faction_with = SOV
-				is_in_faction_with = FRA
-				is_in_faction_with = ENG
-			}
+			is_in_faction_with = ENG
 		}
 		x = 0
 		y = 2
@@ -1840,14 +1675,6 @@ focus = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1875,14 +1702,6 @@ focus = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1908,14 +1727,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1958,19 +1769,20 @@ focus = {
 			else = {
 				congress_low_support_trigger = yes
 			}
-			controls_state = 378
-			controls_state = 358
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
-		complete_tooltip = {
+		search_filters = {FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			if = {
+				limit = {
+					 has_war_support < 0.4 
+				}
+				USA_congress_medium_opposition = yes
+			}
 			378 = { 
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
@@ -1988,53 +1800,6 @@ focus = {
 				}
 			}
 		}
-		search_filters = {FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			if = {
-				limit = {
-					 has_war_support < 0.4 
-				}
-				USA_congress_medium_opposition = yes
-			}
-			if = { 
-				limit = { 
-					378 = {
-						free_building_slots = {
-							building = dockyard
-							size > 4
-							include_locked = yes
-						}
-					}
-				}
-				378 = { 
-					add_extra_state_shared_building_slots = 5
-					add_building_construction = {
-						type = dockyard
-						level = 5
-						instant_build = yes
-					}
-				}
-			}
-			if = { 
-				limit = { 
-					358 = {
-						free_building_slots = {
-							building = dockyard
-							size > 4
-							include_locked = yes
-						}
-					}
-				}
-				358 = { 
-					add_extra_state_shared_building_slots = 5
-					add_building_construction = {
-						type = dockyard
-						level = 5
-						instant_build = yes
-					}
-				}
-			}
-		}
 	}
 	focus = {
 		id = USA_maritime_commission
@@ -2047,14 +1812,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2176,14 +1933,6 @@ focus = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2197,21 +1946,12 @@ focus = {
 					instant_build = yes
 				}
 			}
-			if = {
-				limit = {
-					327 = {
-						CONTROLLER = {
-							is_subject_of = ROOT
-						}
-					}
-				}
-				327 = {
-					add_building_construction = {
-						type = naval_base
-						province = 10265
-						level = 2
-						instant_build = yes
-					}
+			327 = {
+				add_building_construction = {
+					type = naval_base
+					province = 10265
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -2283,14 +2023,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2411,14 +2143,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
