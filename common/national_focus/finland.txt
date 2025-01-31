@@ -1260,8 +1260,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = FIN_arm_the_lotta_svard
 		cost = 10
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MILITARY_CHARACTER }
 
@@ -1281,8 +1279,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_union_of_finnish_brothers_in_arms
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER }
 
@@ -1369,16 +1365,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = FIN_militarized_society
-
-			hidden_effect = {
-				if = {
-					limit = {
-						has_dlc = "No Step Back"
-						has_completed_focus = FIN_national_armor_focus
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 		}
 	}
 	
@@ -1391,9 +1377,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = FIN_national_unity
 		cost = 5
-		available = {
-
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER }
 
@@ -3726,71 +3709,52 @@ focus_tree = {
 		relative_position_id = FIN_national_armor_focus
 		cost = 35
 
-		allow_branch = {
-			has_dlc = "No Step Back"
-			has_completed_focus = FIN_national_armor_focus
-			has_completed_focus = FIN_militarized_society
-		}
-
 		available = {
 			has_tech = super_heavy_tank_chassis
+			has_completed_focus = FIN_militarized_society
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = { #Intended that this is not to shown to the player until the other focus is completed.
-				limit = {
-					has_completed_focus = FIN_militarized_society
+			722 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
-				random_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+			}
+			create_equipment_variant = {
+				name = "Hyökkäysvaunu"
+				type = super_heavy_tank_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_heavy_cannon_2
+					turret_type_slot = tank_super_heavy_three_man_tank_turret
+					suspension_type_slot = tank_torsion_bar_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = secondary_turret_hmg
+					special_type_slot_2 = secondary_turret_hmg
+					special_type_slot_3 = wet_ammo_storage
+					special_type_slot_4 = empty
 				}
-				create_equipment_variant = {
-					name = "Hyökkäysvaunu"
+				upgrades = {
+					tank_nsb_engine_upgrade = 18
+					tank_nsb_armor_upgrade = 7
+				}
+				icon = "GFX_FIN_super_heavy_tank_2_medium"
+			}
+			add_equipment_production = {
+				equipment = {
 					type = super_heavy_tank_chassis_1
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_heavy_cannon_2
-						turret_type_slot = tank_super_heavy_three_man_tank_turret
-						suspension_type_slot = tank_torsion_bar_suspension
-						armor_type_slot = tank_riveted_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = secondary_turret_hmg
-						special_type_slot_2 = secondary_turret_hmg
-						special_type_slot_3 = wet_ammo_storage
-						special_type_slot_4 = empty
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 18
-						tank_nsb_armor_upgrade = 7
-					}
-					icon = "GFX_FIN_super_heavy_tank_2_medium"
+					creator = "FIN"
+					version_name = "Hyökkäysvaunu"
 				}
-
-				add_equipment_production = {
-					equipment = {
-						type = super_heavy_tank_chassis_1
-						creator = "FIN"
-						version_name = "Hyökkäysvaunu"
-					}
-					requested_factories = 1
-					progress = 0.6
-					efficiency = 50
-				}
+				requested_factories = 1
+				progress = 0.6
+				efficiency = 50
 			}
 		}
 	}
