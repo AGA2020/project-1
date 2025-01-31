@@ -605,7 +605,6 @@ recruit_character = ITA_achille_starace
 recruit_character = ITA_renato_ricci
 recruit_character = ITA_carlo_favagrossa
 recruit_character = ITA_alberto_beneduce
-recruit_character = ITA_guido_jung
 recruit_character = ITA_adelchi_serena
 recruit_character = ITA_curzio_malaparte
 recruit_character = ITA_giuseppe_bottai

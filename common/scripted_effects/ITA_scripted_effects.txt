@@ -2449,9 +2449,6 @@ ITA_set_up_character_cw_flags_effect = { #Using Unit leader flags when necessary
 	ITA_alberto_beneduce = { #Goes with player
 		set_character_flag = ITA_cw_character_fascist_side_flag
 	}
-	ITA_guido_jung = { #Goes with player
-		set_character_flag = ITA_cw_character_fascist_side_flag
-	}
 	ITA_adelchi_serena = { #Goes with player
 		set_character_flag = ITA_cw_character_fascist_side_flag
 	}

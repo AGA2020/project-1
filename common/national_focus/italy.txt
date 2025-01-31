@@ -10121,9 +10121,6 @@ focus_tree = {
 				idea = ITA_pact_of_steel
 				days = 365
 			}
-
-			custom_effect_tooltip = remove_political_advisor
-			show_ideas_tooltip = ITA_guido_jung
 		}
 	}
 
