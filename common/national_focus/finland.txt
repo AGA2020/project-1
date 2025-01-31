@@ -4898,81 +4898,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = {
-				limit = {
-					any_core_state = {
-						arms_factory > 0
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-						}
-					}
+			926 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
-				random_core_state = {
-					limit = {
-						arms_factory > 0
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-						}
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}
-					if = {
-						limit = {
-							ROOT = {
-								any_core_state = {
-									NOT = { state = PREV.PREV }
-									arms_factory > 0
-									free_building_slots = {
-										building = arms_factory
-										size > 1
-									}
-								}
-							}
-						}
-						ROOT = {
-							random_core_state = {
-								limit = {
-									NOT = { state = PREV.PREV }
-									arms_factory > 0
-									free_building_slots = {
-										building = arms_factory
-										size > 1
-									}
-								}
-								add_extra_state_shared_building_slots = 2
-								add_building_construction = {
-									type = arms_factory
-									level = 2
-									instant_build = yes
-								}
-							}
-						}
-					}
-					else = {
-						ROOT = {
-							random_core_state = {
-								limit = {
-									NOT = { state = PREV.PREV }
-									free_building_slots = {
-										building = arms_factory
-										size > 1
-									}
-								}
-								add_extra_state_shared_building_slots = 2
-								add_building_construction = {
-									type = arms_factory
-									level = 2
-									instant_build = yes
-								}
-							}
-						}
-					}
+			}
+			928 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -5066,8 +5005,6 @@ focus_tree = {
 		y = 0
 		relative_position_id = FIN_suomen_ilmavoimat
 		cost = 10
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
@@ -5087,16 +5024,7 @@ focus_tree = {
 				category = naval_doctrine
 			}
 
-			random_core_state = {
-				prioritize = { 149 } #VAASA
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
+			149 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -5123,8 +5051,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_suomen_merivoimat
 		cost = 10
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 
@@ -5157,12 +5083,6 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_war = yes
-			if = {
-				limit = {
-					NOT = { has_dlc = "Man the Guns" }
-				}
-				has_tech = early_destroyer
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
@@ -5223,184 +5143,106 @@ focus_tree = {
 			set_country_flag = refit_to_destroyer_flag
 			set_country_flag = refit_to_cruiser_flag
 
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
+			# DESTROYER
+			create_equipment_variant = { #Made-up
+				name = "Refitted Destroyer Class" 		
+				type = ship_hull_light_1
+				name_group = "FIN_DD_HISTORICAL" #Note: Doesn't matter if ROOT is not DEN, the effect will grab the appropriatecountry-specific name list anyways
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = light_ship_engine_1
+					fixed_ship_torpedo_slot = ship_torpedo_1
+					mid_1_custom_slot = empty
+					rear_1_custom_slot = empty
 				}
-				# DESTROYER
-				create_equipment_variant = { #Made-up
-					name = "Refitted Destroyer Class" 		
+				obsolete = yes
+				design_team = mio:FIN_crichton_vulcan_organization
+			}
+			#Line Production
+			add_equipment_production = {
+				equipment = {
 					type = ship_hull_light_1
-					name_group = "FIN_DD_HISTORICAL" #Note: Doesn't matter if ROOT is not DEN, the effect will grab the appropriate country-specific name list anyways
-					parent_version = 0
-					modules = {
-						fixed_ship_battery_slot = ship_light_battery_1
-						fixed_ship_anti_air_slot = ship_anti_air_1
-						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-						fixed_ship_radar_slot = empty
-						fixed_ship_engine_slot = light_ship_engine_1
-						fixed_ship_torpedo_slot = ship_torpedo_1
-						mid_1_custom_slot = empty
-						rear_1_custom_slot = empty
-					}
-					obsolete = yes
-					design_team = mio:FIN_crichton_vulcan_organization
+					creator = "FIN"
+					version_name = "Refitted Destroyer Class"
 				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_light_1
-						creator = "FIN"
-						version_name = "Refitted Destroyer Class"
-					}
-					name = "Mikkeli"
-					requested_factories = 1
-					progress = 0.75
-					amount = 3
-					industrial_manufacturer = mio:FIN_crichton_vulcan_organization
+				name = "Mikkeli"
+				requested_factories = 1
+				progress = 0.75
+				amount = 3
+				industrial_manufacturer = mio:FIN_crichton_vulcan_organization
+			}
+			# Light Cruiser
+			create_equipment_variant = { #Made-up
+				name = "Refitted Cruiser Class"				
+				type = ship_hull_cruiser_1
+				name_group = FIN_CL_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_medium_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_armor_slot = ship_armor_cruiser_1
+					fixed_ship_secondaries_slot = dp_ship_secondaries_1
+					mid_1_custom_slot = empty
+					mid_2_custom_slot = empty
+					rear_1_custom_slot = empty
 				}
-
-				# Light Cruiser
-				create_equipment_variant = { #Made-up
-					name = "Refitted Cruiser Class"				
+				obsolete = yes
+				design_team = mio:FIN_crichton_vulcan_organization
+			}
+			#Line Production
+			add_equipment_production = {
+				equipment = {
 					type = ship_hull_cruiser_1
-					name_group = FIN_CL_HISTORICAL
-					parent_version = 0
-					modules = {
-						fixed_ship_battery_slot = ship_light_medium_battery_1
-						fixed_ship_anti_air_slot = ship_anti_air_1
-						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-						fixed_ship_radar_slot = empty
-						fixed_ship_engine_slot = cruiser_ship_engine_1
-						fixed_ship_armor_slot = ship_armor_cruiser_1
-						fixed_ship_secondaries_slot = dp_ship_secondaries_1
-						mid_1_custom_slot = empty
-						mid_2_custom_slot = empty
-						rear_1_custom_slot = empty
-					}
-					obsolete = yes
-					design_team = mio:FIN_crichton_vulcan_organization
+					creator = "FIN"
+					version_name = "Refitted Cruiser Class"
 				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_cruiser_1
-						creator = "FIN"
-						version_name = "Refitted Cruiser Class"
-					}
-					name = "Pori"
-					requested_factories = 1
-					progress = 0.75
-					amount = 1
-					industrial_manufacturer = mio:FIN_crichton_vulcan_organization
-				}
-			}
-			#NO MTG
-			else = {
-				# DESTROYER	
-				create_equipment_variant = { #Made-up
-					name = "Refitted Destroyer Class"
-					type = destroyer_1
-					upgrades = {
-						ship_torpedo_upgrade = 0
-						destroyer_engine_upgrade = 0
-						ship_ASW_upgrade = 0
-						ship_anti_air_upgrade = 0
-					}
-					obsolete = yes
-					design_team = mio:FIN_crichton_vulcan_organization
-				}	
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = destroyer_1
-						creator = "FIN"
-						version_name = "Refitted Destroyer Class"
-					}
-					name = "Mikkeli"
-					requested_factories = 1
-					progress = 0.75
-					amount = 3
-					industrial_manufacturer = mio:FIN_crichton_vulcan_organization
-				}
-
-				if = {
-					limit = {
-						NOT = { has_tech = early_light_cruiser }
-					}
-					hidden_effect = {
-						set_technology = {
-							early_light_cruiser = 1
-						}
-					}
-				}
-				# CRUISER
-				create_equipment_variant = { #Made-up
-					name = "Refitted Cruiser Class"
-					type = light_cruiser_1
-					upgrades = {
-						ship_reliability_upgrade = 0
-						ship_engine_upgrade = 0
-						ship_gun_upgrade = 0
-						ship_anti_air_upgrade = 0
-					}
-					obsolete = yes
-					design_team = mio:FIN_crichton_vulcan_organization
-				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = light_cruiser_1
-						creator = "FIN"
-						version_name = "Refitted Cruiser Class"
-					}
-					name = "Pori"
-					requested_factories = 1
-					progress = 0.75
-					amount = 1
-					industrial_manufacturer = mio:FIN_crichton_vulcan_organization
-				}
+				name = "Pori"
+				requested_factories = 1
+				progress = 0.75
+				amount = 1
+				industrial_manufacturer = mio:FIN_crichton_vulcan_organization
 			}
 
-			# COASTAL DEFENSE SHIP
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
+			create_equipment_variant = { #Made-up
+				name = "Refitted Coastal Defense Ship"
+				type = ship_hull_cruiser_coastal_defense_ship
+				name_group = FIN_BC_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					front_1_custom_slot = ship_anti_air_1
+					mid_1_custom_slot = ship_anti_air_1
+					#mid_2_custom_slot = ship_anti_air_1
+					rear_1_custom_slot = ship_light_medium_battery_1
+					fixed_ship_battery_slot = ship_light_medium_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = cruiser_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
+					fixed_ship_armor_slot = ship_armor_cruiser_1
 				}
-				create_equipment_variant = { #Made-up
-					name = "Refitted Coastal Defense Ship"
+				design_team = mio:FIN_crichton_vulcan_organization
+			}
+			#Line Production
+			add_equipment_production = {
+				equipment = {
 					type = ship_hull_cruiser_coastal_defense_ship
-					name_group = FIN_BC_HISTORICAL
-					parent_version = 0
-					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
-					modules = {
-						front_1_custom_slot = ship_anti_air_1
-						mid_1_custom_slot = ship_anti_air_1
-						#mid_2_custom_slot = ship_anti_air_1
-						rear_1_custom_slot = ship_light_medium_battery_1
-						fixed_ship_battery_slot = ship_light_medium_battery_1
-						fixed_ship_anti_air_slot = ship_anti_air_1
-						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-						fixed_ship_radar_slot = empty
-						fixed_ship_engine_slot = cruiser_ship_engine_1
-						fixed_ship_secondaries_slot = ship_secondaries_1
-						fixed_ship_armor_slot = ship_armor_cruiser_1
-					}
-					design_team = mio:FIN_crichton_vulcan_organization
+					creator = "FIN"
+					version_name = "Refitted Coastal Defense Ship"
 				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_cruiser_coastal_defense_ship
-						creator = "FIN"
-						version_name = "Refitted Coastal Defense Ship"
-					}
-					name = "Voima"
-					requested_factories = 1
-					progress = 0.75
-					amount = 3
-					industrial_manufacturer = mio:FIN_crichton_vulcan_organization
-				}
+				name = "Voima"
+				requested_factories = 1
+				progress = 0.75
+				amount = 3
+				industrial_manufacturer = mio:FIN_crichton_vulcan_organization
 			}
 		}
 	}
@@ -5414,8 +5256,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_suomen_merivoimat
 		cost = 10
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
 
@@ -5423,52 +5263,12 @@ focus_tree = {
 			custom_effect_tooltip = FIN_modify_finnish_navy_ns_intro
 			add_to_variable = { FIN_finnish_navy_spotting_chance = 0.05 tooltip = spotting_chance_tt }
 
-			if = {
-				limit = {
-					any_core_state = {
-						is_fully_controlled_by = ROOT
-						is_coastal = yes
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 0
-						}
-					}
-				}
-				random_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						is_coastal = yes
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 0
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				random_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 0
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+			926 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 
@@ -5582,45 +5382,22 @@ focus_tree = {
 		y = 2
 		relative_position_id = FIN_coastal_defense
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			navy_experience = 35
 
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				add_tech_bonus = {
-					name = FIN_rapid_raiders
-					bonus = 0.75
-					uses = 2
-					category = cat_torpedoes
-					category = naval_mines
-					category = dd_tech
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = FIN_rapid_raiders
-					bonus = 0.75
-					uses = 2
-					category = dd_tech
-				}
+			add_tech_bonus = {
+				name = FIN_rapid_raiders
+				bonus = 0.75
+				uses = 2
+				category = cat_torpedoes
+				category = naval_mines
+				category = dd_tech
 			}
 
-			random_core_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
-				prioritize = { 926 111 149 } #TURKU HELSINKI VAASA
+			149 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -5875,8 +5652,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = FIN_coastal_defense
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
@@ -5904,15 +5679,7 @@ focus_tree = {
 				}
 			}
 
-			random_core_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
-				prioritize = { 926 111 149 } #TURKU HELSINKI VAASA
+			111 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -6185,44 +5952,27 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_rapid_raiders
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
+			custom_effect_tooltip = FIN_modify_finnish_navy_ns_intro
+			add_to_variable = { FIN_finnish_navy_mines_planting_by_fleets_factor = 0.1 tooltip = mines_planting_by_fleets_factor_tt }
+			add_to_variable = { FIN_finnish_navy_naval_mines_effect_reduction = 0.15 tooltip = naval_mines_effect_reduction_tt }
+			navy_experience = 25
+			add_tech_bonus = {
+				name = FIN_sea_mines_strategy
+				bonus = 0.75
+				uses = 2
+				category = naval_mines
+			}
+
+			# Tooltip for unlocking Mine the Sea dec
 			if = {
 				limit = {
-					has_dlc = "Man the Guns"
+					NOT = { has_country_flag = FIN_sea_mines_deployed_flag }
 				}
-				custom_effect_tooltip = FIN_modify_finnish_navy_ns_intro
-				add_to_variable = { FIN_finnish_navy_mines_planting_by_fleets_factor = 0.1 tooltip = mines_planting_by_fleets_factor_tt }
-				add_to_variable = { FIN_finnish_navy_naval_mines_effect_reduction = 0.15 tooltip = naval_mines_effect_reduction_tt }
-				navy_experience = 25
-				add_tech_bonus = {
-					name = FIN_sea_mines_strategy
-					bonus = 0.75
-					uses = 2
-					category = naval_mines
-				}
-
-				# Tooltip for unlocking Mine the Sea dec
-				if = {
-					limit = {
-						NOT = { has_country_flag = FIN_sea_mines_deployed_flag }
-					}
-					custom_effect_tooltip = FIN_defensive_preparations_mining_the_sea_dec_tt
-				}
-			}
-			else = {
-				navy_experience = 50
-				add_tech_bonus = {
-					name = FIN_sea_mines_strategy
-					bonus = 0.75
-					uses = 2
-					category = dd_tech
-					category = cl_tech
-				}
+				custom_effect_tooltip = FIN_defensive_preparations_mining_the_sea_dec_tt
 			}
 
 			add_doctrine_cost_reduction = {
@@ -6243,8 +5993,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_suomen_merivoimat
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -6252,108 +6000,82 @@ focus_tree = {
 			add_to_variable = { FIN_finnish_navy_repair_speed_factor = 0.1 }
 			custom_effect_tooltip = FIN_strengthen_the_naval_bases_ns_tt
 
-			if = {
-				limit = {
-					has_full_control_of_state = 926
+			#TURKU
+			926 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 3083
 				}
-				#TURKU
-				926 = {
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						instant_build = yes
-						province = 3083
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 3083
-					}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 3083
 				}
 			}
 
-			if = {
-				limit = {
-					has_full_control_of_state = 111
+			#UUSIMAA (Helsinki)
+			111 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 11105
 				}
-				#UUSIMAA (Helsinki)
-				111 = {
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						instant_build = yes
-						province = 11105
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 11105
-					}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 11105
 				}
 			}
 
-			if = {
-				limit = {
-					has_full_control_of_state = 145
+			#ÅLAND
+			145 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 9228
 				}
-				#ÅLAND
-				145 = {
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						instant_build = yes
-						province = 9228
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 9228
-					}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 9228
 				}
 			}
 				
-			if = {
-				limit = {
-					has_full_control_of_state = 149
+			#VAASA
+			149 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 3122
 				}
-				#VAASA
-				149 = {
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						instant_build = yes
-						province = 3122
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 3122
-					}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 3122
 				}
 			}
 				
-			if = {
-				limit = {
-					has_full_control_of_state = 929
+			929 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 158
 				}
-				#OULU
-				929 = {
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						instant_build = yes
-						province = 158
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 2
-						instant_build = yes
-						province = 158
-					}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 158
 				}
 			}
 		}
@@ -6368,9 +6090,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_suomen_merivoimat
 		cost = 5
-		available = {
-			has_full_control_of_state = 926
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
@@ -6381,23 +6100,12 @@ focus_tree = {
 				tooltip = industrial_capacity_dockyard_tt
 			}
 
-			if = {
-				limit = {
-					926 = {
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				926 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+			926 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 
@@ -6426,13 +6134,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_strengthen_the_naval_bases
 		cost = 10
-		available = {
-			OR = {
-				has_full_control_of_state = 111 #UUSIMAA (Helsinki)
-				has_full_control_of_state = 928 #KYME (Kotka)
-				has_full_control_of_state = 149 #VAASA (Vaasa)
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -6440,66 +6141,30 @@ focus_tree = {
 			custom_effect_tooltip = FIN_modify_finnish_navy_ns_intro
 			add_to_variable = { FIN_finnish_navy_production_speed_dockyard_factor = 0.1 tooltip = production_speed_dockyard_factor_tt }
 
-			#UUSIMAA (Helsinki)
-			if = {
-				limit = {
-					111 = {
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				111 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+			111 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 
-			#KYME (Kotka)
-			if = {
-				limit = {
-					928 = {
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				928 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+			928 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 
-			#VAASA (Vaasa)
-			if = {
-				limit = {
-					149 = {
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				149 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+			149 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -6515,15 +6180,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_sea_mines_strategy
 		cost = 10
-		available = {
-			#state is in the atlantic
-			custom_trigger_tooltip = {
-				tooltip = FIN_state_is_in_the_atlantic_tt
-				any_controlled_state = {
-					FIN_state_is_european_and_on_the_atlantic = yes
-				}
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
 
@@ -6556,26 +6212,7 @@ focus_tree = {
 				category = ca_tech
 			}
 
-			custom_effect_tooltip = FIN_expansion_towards_the_atlantic_no_state_tt
-
-			if = {
-				limit = {
-					any_controlled_state = {
-						FIN_state_is_european_and_on_the_atlantic = yes
-					}
-				}
-				custom_effect_tooltip = generic_current_effects
-			}
-
-			random_controlled_state = {
-				limit = {
-					FIN_state_is_european_and_on_the_atlantic = yes
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
+			929 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
