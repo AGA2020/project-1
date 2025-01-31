@@ -1495,100 +1495,63 @@ focus_tree = {
 				path = { 3083 9194 11211 6108 11105 }
 			}
 
-			#HÄME
-			if = {
-				limit = {
-					has_full_control_of_state = 927
+			927 = { #HÄME
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
 				}
-				927 = { #HÄME
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-
-					#Supply Hub in Tampere
-					add_building_construction = {
-						type = supply_node
-						level = 1
-						province = 3137
-						instant_build = yes
-					}
-				}
-
-				# Helsinki - Tampere - Hämeenlinna
-				build_railway = {
-					path = { 11105 9129 11172 3025 3137 9167 }
+				#Supply Hub in Tampere
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 3137
+					instant_build = yes
 				}
 			}
-			
-			#KYME
-			if = {
-				limit = {
-					has_full_control_of_state = 928
-				}
-				928 = { #KYME
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					#Naval Base in Kotka
-					add_building_construction = {
-						type = supply_node
-						level = 1
-						province = 3061
-						instant_build = yes
-					}
-				}
 
-				if = {
-					limit = {
-						has_full_control_of_state = 930
-						has_full_control_of_state = 927
-					}
-					# Helsinki - Hämeenlinna - Lahti - Kouvola - Kotka
-					build_railway = {
-						path = { 11105 9129 6144 9167 67 9073 9183 3061 }
-					}
-					# Helsinki - Porvoo - Kotka
-					build_railway = {
-						path = { 11105 6009 204 3161 3061 }
-					}
-				}
-				else = {
-					# Helsinki - Porvoo - Kouvola - Kotka
-					build_railway = {
-						path = { 11105 9129 6144 6009 204 9183 3061 }
-					}
-				}
+			# Helsinki - Tampere - Hämeenlinna
+			build_railway = {
+				path = { 11105 9129 11172 3025 3137 9167 }
+			}
 
-				#VIIPURI
-				if = {
-					limit = {
-						controls_province = 9206 #Controls Viipuri VP
-					}
-					# Kouvola - Viipuri
-					build_railway = {
-						path = { 9183 11056 6082 9206 }
-					}
+			928 = { #KYME
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				#Naval Base in Kotka
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 3061
+					instant_build = yes
 				}
 			}
+
+			# Helsinki - Hämeenlinna - Lahti - Kouvola - Kotka
+			build_railway = {
+				path = { 11105 9129 6144 9167 67 9073 9183 3061 }
+			}
+			# Helsinki - Porvoo - Kotka
+			build_railway = {
+				path = { 11105 6009 204 3161 3061 }
+			}
+
+			# Kouvola - Viipuri
+			build_railway = {
+				path = { 9183 11056 6082 9206 }
+			}
 			
-			#MIKKELI
-			if = {
-				limit = {
-					has_full_control_of_state = 930
-				}
-				930 = { #MIKKELI
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
+			930 = { #MIKKELI
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -1614,60 +1577,21 @@ focus_tree = {
 				days = 730
 			}
 
-			#UUSIMAA (Helsinki)
-			if = {
-				limit = {
-					controls_state = 111
-				}
-				111 = { #UUSIMAA (Helsinki)
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+			111 = { #UUSIMAA (Helsinki)
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
-			else = {
-				random_owned_state = {
-					prioritize = { 928 } #KYME
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			#TURKU
-			if = {
-				limit = {
-					controls_state = 926
-				}
-				926 = { #TURKU
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				random_owned_state = {
-					prioritize = { 149 } #VAASA
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+
+			926 = { #TURKU
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -1682,21 +1606,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_industrial_development
 		cost = 10
-		
-		bypass = {
-			has_civil_war = no
-			NOT = {
-				145 = { #ÅLAND
-					is_owned_by = ROOT
-				}
-			}
-		}
-
-		available = {
-			145 = { #ÅLAND
-				is_owned_and_controlled_by = ROOT
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY }
 
@@ -1745,16 +1654,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = FIN_industrial_development
 		cost = 5
-		available = {
-			722 = { #PETSAMO
-				OR = {
-					is_controlled_by = ROOT
-					controller = {
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
 
@@ -1798,13 +1697,19 @@ focus_tree = {
 			every_core_state = {
 				random_select_amount = 5
 				limit = {
-					is_fully_controlled_by = ROOT
-					infrastructure > 2
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
+				    is_fully_controlled_by = ROOT
+				    infrastructure > 2
+				    free_building_slots = {
+				        building = industrial_complex
+				        size > 0
+				        include_locked = yes
+				    }
+				    NOT = {
+				        state = 146
+				    }
+				    NOT = {
+				        state = 147
+				    }
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
