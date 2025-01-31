@@ -1443,37 +1443,15 @@ focus = {
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_industrial_expansion_IC
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 437 438 433 439 }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
+			437 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = RAJ_industrial_expansion_IC
 			}
 		}
 	}
@@ -1496,14 +1474,6 @@ focus = {
 			}
 		}
 
-		available = {
-			controls_state = 429
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1511,7 +1481,7 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			429 = {
+			439 = {
 				add_resource = {
 					type = steel
 					amount = 24
@@ -1536,14 +1506,6 @@ focus = {
 				factor = 2
 				has_completed_focus = RAJ_tata_steel
 			}
-		}
-
-		available = {
-			controls_state = 432
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1577,14 +1539,6 @@ focus = {
 			factor = 50
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1608,14 +1562,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1675,13 +1621,6 @@ focus = {
 			is_subject = no
 			has_war = yes
 			is_in_faction = yes
-			OR = {
-				num_of_factories > 50
-				any_other_country = {
-					is_in_faction_with = ROOT
-					num_of_factories > 50
-				}
-			}
 		}
 
 		bypass = {
@@ -1718,70 +1657,26 @@ focus = {
 			factor = 20
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_expand_mazagon_dock
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-				if = {
-					limit = { has_state_flag = RAJ_expand_mazagon_dock_NB }
-					add_building_construction = {
-						type = naval_base
-						level = 1
-						instant_build = yes
-						province = 1349
-					}
-				}
-			}
-		}
 
 		completion_reward = {
 			navy_experience = 5
-			random_owned_controlled_state = {
-				prioritize = { 429 }
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
+			429 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = RAJ_expand_mazagon_dock
-				if = {
-					limit = { state = 429 }
-					add_building_construction = {
-						type = naval_base
-						level = 1
-						instant_build = yes
-						province = 1349
-					}
-					set_state_flag = RAJ_expand_mazagon_dock_NB
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 1349
 				}
 			}
 		}
@@ -1814,57 +1709,21 @@ focus = {
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_found_scindia_shipyard
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-				if = {
-					limit = { has_state_flag = RAJ_found_scindia_shipyard_NB }
-					add_building_construction = {
-						type = naval_base
-						level = 1
-						instant_build = yes
-						province = 10255
-					}
-				}
-			}
-		}
 
 		completion_reward = {
 			navy_experience = 5
-			random_owned_controlled_state = {
-				prioritize = { 426 }
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
+			426 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = RAJ_found_scindia_shipyard
-				if = {
-					limit = { state = 426 }
-					add_building_construction = {
-						type = naval_base
-						level = 1
-						instant_build = yes
-						province = 10255
-					}
-					set_state_flag = RAJ_found_scindia_shipyard_NB
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 10255
 				}
 			}
 		}
@@ -1883,14 +1742,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1923,14 +1774,6 @@ focus = {
 			factor = 20
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1959,14 +1802,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 20
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1999,14 +1834,6 @@ focus = {
 			factor = 20
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2034,14 +1861,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 20
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2072,14 +1891,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2116,20 +1927,6 @@ focus = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-			NOT = {
-				AND = {
-					controls_state = 640
-					controls_state = 288
-					controls_state = 430
-				}
-			}
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2138,25 +1935,14 @@ focus = {
 		
 
 		completion_reward = {
-			if = {
-				limit = {
-					controls_state = 640
-					controls_state = 288
-				}
-				build_railway = {
-					path = { #Rangoon - Mandalay - Myitkyina
-						1330 12127 1417 12256 4626 4585 1492 7469 12464 1082 4425
-					}
+			build_railway = {
+				path = { #Rangoon - Mandalay - Myitkyina
+					1330 12127 1417 12256 4626 4585 1492 7469 12464 1082 4425
 				}
 			}
-			if = {
-				limit = {
-					controls_state = 430
-				}
-				build_railway = { #connects railway around Dacca to the rest of the network
-					path = {
-						11968 9993 4616
-					}
+			build_railway = { #connects railway around Dacca to the rest of the network
+				path = {
+					11968 9993 4616
 				}
 			}
 		}
@@ -2176,14 +1962,6 @@ focus = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2192,27 +1970,14 @@ focus = {
 
 
 		completion_reward = {
-			if = {
-				limit = {
-					controls_state = 429
-					controls_state = 427
-				}
-				build_railway = { #Bombay - Hyderabad - East Coast
-					path = {
-						1349 10270 4353 12142 1359 10324 8087 4472 12114 4280 7340
-					}
+			build_railway = { #Bombay - Hyderabad - East Coast
+				path = {
+					1349 10270 4353 12142 1359 10324 8087 4472 12114 4280 7340
 				}
 			}
-			if = {
-				limit = {
-					controls_state = 438
-					controls_state = 436
-					controls_state = 429
-				}
-				build_railway = { #Lucknow - Bombay
-					path = {
-						1349 7013 4072 7060 7430 10030 4950 11995 4953 5096 5040 4045 2036 12137
-					}
+			build_railway = { #Lucknow - Bombay
+				path = {
+					1349 7013 4072 7060 7430 10030 4950 11995 4953 5096 5040 4045 2036 12137
 				}
 			}
 		}
@@ -2232,50 +1997,20 @@ focus = {
 			factor = 30
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_ishapore_arsenal_AF
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				prioritize = { 431 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
+			431 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = RAJ_ishapore_arsenal_AF
 			}
 		}
 	}
@@ -2295,18 +2030,7 @@ focus = {
 		}
 
 		available = {
-			if = {
-				limit = { NOT = { has_government = fascism } }
-				compare_autonomy_state > autonomy_colony
-			}
-			if = {
-				limit = { has_government = fascism }
-				compare_autonomy_state > autonomy_reichsprotectorate
-			}
-		}
-
-		bypass = {
-
+			compare_autonomy_state > autonomy_colony
 		}
 
 		cancel_if_invalid = yes
@@ -2336,10 +2060,6 @@ focus = {
 			is_subject = no
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -2362,14 +2082,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 30
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2400,14 +2112,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 30
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -2447,21 +2151,9 @@ focus = {
 		}
 
 		available = {
-			OR = {
-				AND = {
-					compare_autonomy_progress_ratio > 0.4
-					compare_autonomy_state > autonomy_puppet
-					is_subject_of = ENG
-				}
-				AND = {
-					has_global_flag = ENG_decolonized
-					is_in_faction_with = ENG
-				}
-			}
-		}
-
-		bypass = {
-
+			compare_autonomy_progress_ratio > 0.4
+			compare_autonomy_state > autonomy_puppet
+			is_subject_of = ENG
 		}
 
 		cancel_if_invalid = yes
@@ -2469,73 +2161,19 @@ focus = {
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			add_autonomy_ratio = {
-				value = -0.15
-				localization = RAJ_strengthen_ties_with_british_investors
-			}
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_strengthen_ties_with_british_investors_AF1
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_strengthen_ties_with_british_investors_AF2
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
 
 		completion_reward = {
 			add_autonomy_ratio = {
 				value = -0.15
 				localization = RAJ_strengthen_ties_with_british_investors
 			}
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
+			433 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
-				set_state_flag = RAJ_strengthen_ties_with_british_investors_AF1
-			}
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = RAJ_strengthen_ties_with_british_investors_AF2
 			}
 		}
 	}
@@ -2560,44 +2198,11 @@ focus = {
 			is_subject_of = ENG
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			add_autonomy_ratio = {
-				value = -0.25
-				localization = RAJ_british_rail_investors
-			}
-			add_ideas = RAJ_british_rail_investors
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_british_rail_investors_IC1
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_british_rail_investors_IC2
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
 
 		completion_reward = {
 			add_autonomy_ratio = {
@@ -2605,39 +2210,13 @@ focus = {
 				localization = RAJ_british_rail_investors
 			}
 			add_ideas = RAJ_british_rail_investors
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
+			433 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
-				set_state_flag = RAJ_british_rail_investors_IC1
-			}
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = RAJ_british_rail_investors_IC2
 			}
 		}
 	}
@@ -2671,73 +2250,19 @@ focus = {
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			add_autonomy_ratio = {
-				value = -0.25
-				localization = RAJ_british_arms_investors
-			}
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_british_arms_investors_AF1
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = RAJ_british_arms_investors_AF2
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
 
 		completion_reward = {
 			add_autonomy_ratio = {
 				value = -0.25
 				localization = RAJ_british_arms_investors
 			}
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
+			433 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 3
 					instant_build = yes
 				}
-				set_state_flag = RAJ_british_arms_investors_AF1
-			}
-			random_owned_controlled_state = {
-				prioritize = {  }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = RAJ_british_arms_investors_AF2
 			}
 		}
 	}
