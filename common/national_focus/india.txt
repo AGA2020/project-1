@@ -80,10 +80,6 @@ focus_tree = {
 			threat > 0.1
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -115,10 +111,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 27
-		}
-
-		available = {
-			
 		}
 
 		bypass = {
@@ -161,10 +153,6 @@ focus = {
 			is_subject = yes
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -201,10 +189,7 @@ focus = {
 		}
 
 		available = {
-			OR = {
-				is_subject = yes
-				has_global_flag = ENG_decolonized
-			}
+			is_subject = yes
 		}
 
 		bypass = {
@@ -251,14 +236,6 @@ focus = {
 			factor = 25
 		}
 
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -299,14 +276,6 @@ focus = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -335,17 +304,7 @@ focus = {
 		}
 
 		available = {
-			OR = {
-				is_subject_of = ENG
-				AND = {
-					has_global_flag = ENG_decolonized
-					is_in_faction_with = ENG
-				}
-			}
-		}
-
-		bypass = {
-
+			is_subject_of = ENG
 		}
 
 		cancel_if_invalid = yes
@@ -381,21 +340,8 @@ focus = {
 		}
 
 		available = {
-			OR = {
-				is_subject_of = ENG
-				AND = {
-					has_global_flag = ENG_decolonized
-					is_in_faction_with = ENG
-				}
-			}
-			OR = {
-				has_war_with = GER
-				ENG = { has_war_with = GER }
-			}
-		}
-
-		bypass = {
-
+			is_subject_of = ENG
+			ENG = { has_war_with = GER }
 		}
 
 		cancel_if_invalid = yes
@@ -424,20 +370,8 @@ focus = {
 		}
 
 		available = {
-			if = {
-				limit = {
-					not = { has_dlc = "Man the Guns" }
-				}
-				has_tech = early_light_cruiser
-			}
-			else = {
-				has_tech = early_ship_hull_cruiser
-				has_tech = basic_battery
-			}
-		}
-
-		bypass = {
-
+			has_tech = early_ship_hull_cruiser
+			has_tech = basic_battery
 		}
 
 		cancel_if_invalid = yes
@@ -554,17 +488,7 @@ focus = {
 		}
 
 		available = {
-			OR = {
-				is_subject_of = ENG
-				AND = {
-					has_global_flag = ENG_decolonized
-					is_in_faction_with = ENG
-				}
-			}
-		}
-
-		bypass = {
-
+			is_subject_of = ENG
 		}
 
 		cancel_if_invalid = yes
@@ -595,14 +519,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -667,14 +583,6 @@ focus = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -718,14 +626,6 @@ focus = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -753,14 +653,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 3
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -796,14 +688,6 @@ focus = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -835,10 +719,6 @@ focus = {
 
 		available = {
 			has_tech = tech_mountaineers
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -895,14 +775,6 @@ focus = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -955,14 +827,6 @@ focus = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -990,14 +854,7 @@ focus = {
 		}
 
 		available = {
-			if = {
-				limit = { NOT = { has_government = fascism } }
-				compare_autonomy_state > autonomy_colony
-			}
-			if = {
-				limit = { has_government = fascism }
-				compare_autonomy_state > autonomy_reichsprotectorate
-			}
+			compare_autonomy_state > autonomy_colony
 		}
 
 		bypass = {
@@ -1032,14 +889,6 @@ focus = {
 			factor = 20
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1067,14 +916,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 20
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1106,14 +947,6 @@ focus = {
 			factor = 30
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1142,14 +975,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 30
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1185,14 +1010,6 @@ focus = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1219,14 +1036,6 @@ focus = {
 				factor = 2
 				has_completed_focus = RAJ_revive_the_screw_guns
 			}
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1261,14 +1070,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1306,10 +1107,6 @@ focus = {
 			num_of_factories > 50
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1343,15 +1140,6 @@ focus = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-		NOT = { is_in_faction_with = ENG }
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1381,14 +1169,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1466,14 +1246,6 @@ focus = {
 			factor = 25
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1503,14 +1275,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -1550,14 +1314,6 @@ focus = {
 			}
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1594,11 +1350,7 @@ focus = {
 		}
 
 		available = {
-				compare_autonomy_state > autonomy_colony
-		}
-
-		bypass = {
-
+			compare_autonomy_state > autonomy_colony
 		}
 
 		cancel_if_invalid = yes
@@ -1653,16 +1405,6 @@ focus = {
 			factor = 7
 		}
 
-		available = {
-			has_full_control_of_state = 428
-			has_full_control_of_state = 443
-			has_full_control_of_state = 433
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1694,14 +1436,6 @@ focus = {
 
 		ai_will_do = {
 			factor = 25
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
