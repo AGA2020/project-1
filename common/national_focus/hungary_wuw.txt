@@ -6006,22 +6006,10 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = HUN_henschel_organization
-
-				mio:HUN_henschel_organization = {
-					add_mio_size = 2
-				}
-
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = HUN_henschel
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = GER_henschel_organization
+			mio:GER_henschel_organization = {
+				add_mio_size = 2
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt

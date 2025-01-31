@@ -914,8 +914,7 @@ GER_daimler_benz_organization = {
 		special_trait_background = yes
 
 		position = { x=8 y=0 }  
-		
-		limit_to_equipment_type = { light_tank_chassis medium_tank_chassis }
+
 		production_bonus = {
 			production_efficiency_cap_factor = 0.05
 			production_efficiency_gain_factor = 0.05
@@ -940,8 +939,6 @@ GER_daimler_benz_organization = {
 		relative_position_id = GER_mio_trait_hotrolled_armor
 		
 		any_parent = { GER_mio_trait_hotrolled_armor }
-		
-		limit_to_equipment_type = { light_tank_chassis medium_tank_chassis }
 		
 		equipment_bonus = {
 			armor_value = 0.1
