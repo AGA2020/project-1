@@ -5463,12 +5463,7 @@ focus_tree = {
 				category = naval_bomber
 			}
 
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				ITA_naval_air_coordination_templates = yes
-			}
+			ITA_naval_air_coordination_templates = yes
 
 			add_ace = {
 				type = "support_unique"
@@ -5494,8 +5489,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_supermarina
 		cost = 5
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_NAVY_XP}
 
@@ -5522,8 +5515,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_supermarina
 		cost = 5
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP}
 
@@ -5567,8 +5558,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_supermarina
 		cost = 5
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_NAVY_XP}
 
@@ -5612,8 +5601,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_supermarina
 		cost = 5
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_NAVY_XP}
 
@@ -5635,29 +5622,19 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_supermarina
 		cost = 10
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
 
 		completion_reward = {
 			navy_experience = 25
 			custom_effect_tooltip = ITA_cooperation_programs_decisions_tt
-			if = { #Historical agreement with Sweden
-				limit = {
-					NOT = {
-						has_war_with = SWE
-						any_enemy_country = { is_in_faction_with = SWE }
-					}
-				}
-				SWE = { country_event = { id = BBA_italy_naval_cooperation_programs.08 hours = 1 } }
-				custom_effect_tooltip = if_they_accept
-				effect_tooltip = {
-					custom_effect_tooltip = ITA_cooperation_programs_deal_sweden_tt
-					add_timed_idea = {
-						idea = ITA_sold_obsolete_escort_ships_ns
-						days = 365
-					}
+			SWE = { country_event = { id = BBA_italy_naval_cooperation_programs.08 hours = 1 } }
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				custom_effect_tooltip = ITA_cooperation_programs_deal_sweden_tt
+				add_timed_idea = {
+					idea = ITA_sold_obsolete_escort_ships_ns
+					days = 365
 				}
 			}
 		}
@@ -5672,8 +5649,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_incrociatori_leggeri
 		cost = 10
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
 
@@ -5703,12 +5678,7 @@ focus_tree = {
 				}
 			}
 			
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_coastal = yes
-				}
-				prioritize = { 736 160 } #TRIESTE / VENETO
+			160 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -5759,12 +5729,7 @@ focus_tree = {
 				}
 			}
 
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_coastal = yes
-				}
-				prioritize = { 158 } #PIEDMONT (Built by Caproni, potentially in Milano, so Genova due to proximity)
+			158 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -5831,101 +5796,63 @@ focus_tree = {
 			###########
 			### MTG ###
 			###########
-			if = { #MTG 
+			if = {
 				limit = {
-					has_dlc = "Man the Guns"
+					has_tech = basic_dp_light_battery
 				}
-				#Equipment Variant
-				if = {
-					limit = {
-						has_tech = basic_dp_light_battery
+				create_equipment_variant = {
+					name = "Comandanti Medaglie d'Oro Class"
+					type = ship_hull_light_3
+					name_group = ITA_DD_HISTORICAL
+					parent_version = 0
+					allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
+					modules = {
+						fixed_ship_battery_slot = dp_light_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_sonar_1
+						fixed_ship_radar_slot = ship_radar_1
+						fixed_ship_engine_slot = light_ship_engine_2
+						fixed_ship_torpedo_slot = ship_torpedo_2
+						mid_1_custom_slot = ship_mine_layer_1
+						rear_1_custom_slot = ship_depth_charge_2
+						front_1_custom_slot = dp_light_battery_2
 					}
-					create_equipment_variant = {
-						name = "Comandanti Medaglie d'Oro Class"
-						type = ship_hull_light_3
-						name_group = ITA_DD_HISTORICAL
-						parent_version = 0
-						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-						modules = {
-							fixed_ship_battery_slot = dp_light_battery_2
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_fire_control_system_slot = ship_sonar_1
-							fixed_ship_radar_slot = ship_radar_1
-							fixed_ship_engine_slot = light_ship_engine_2
-							fixed_ship_torpedo_slot = ship_torpedo_2
-							mid_1_custom_slot = ship_mine_layer_1
-							rear_1_custom_slot = ship_depth_charge_2
-							front_1_custom_slot = dp_light_battery_2
-						}
-					}
-				}
-				else = {
-					create_equipment_variant = {
-						name = "Comandanti Medaglie d'Oro Class"
-						type = ship_hull_light_3
-						name_group = ITA_DD_HISTORICAL #TODO_Manu: Name List
-						parent_version = 0
-						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-						modules = {
-							fixed_ship_battery_slot = ship_light_battery_2
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_fire_control_system_slot = ship_sonar_1
-							fixed_ship_radar_slot = ship_radar_1
-							fixed_ship_engine_slot = light_ship_engine_2
-							fixed_ship_torpedo_slot = ship_torpedo_2
-							mid_1_custom_slot = ship_mine_layer_1
-							rear_1_custom_slot = ship_depth_charge_2
-							front_1_custom_slot = ship_light_battery_2
-						}
-					}
-				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_light_3
-						creator = "ITA"
-						version_name = "Comandanti Medaglie d'Oro Class"
-					}
-					name = "Comandante Margottini"
-					requested_factories = 2
-					progress = 0.35
-					amount = 3
 				}
 			}
-
-			##############
-			### NO MTG ###
-			##############
 			else = {
 				create_equipment_variant = {
 					name = "Comandanti Medaglie d'Oro Class"
-					type = destroyer_3
+					type = ship_hull_light_3
+					name_group = ITA_DD_HISTORICAL #TODO_Manu: Name List
+					parent_version = 0
 					allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-					upgrades = {
-						ship_torpedo_upgrade = 2
-						destroyer_engine_upgrade = 2
-						ship_ASW_upgrade = 2
-						ship_anti_air_upgrade = 2
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_sonar_1
+						fixed_ship_radar_slot = ship_radar_1
+						fixed_ship_engine_slot = light_ship_engine_2
+						fixed_ship_torpedo_slot = ship_torpedo_2
+						mid_1_custom_slot = ship_mine_layer_1
+						rear_1_custom_slot = ship_depth_charge_2
+						front_1_custom_slot = ship_light_battery_2
 					}
-				}
-				add_equipment_production = {
-					equipment = {
-						type = destroyer_3
-						creator = "ITA"
-						version_name = "Comandanti Medaglie d'Oro Class"
-					}
-					requested_factories = 2
-					progress = 0.35
-					amount = 3
 				}
 			}
-
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_coastal = yes
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_3
+					creator = "ITA"
+					version_name = "Comandanti Medaglie d'Oro Class"
 				}
-				prioritize = { 162 158 } ##TUSCANY (Livorno) / PIEDMONT (Genova) (First ones built in Genova, others in Livorno, but Genova already receives a bunch of buildings)
+				name = "Comandante Margottini"
+				requested_factories = 2
+				progress = 0.35
+				amount = 3
+			}
+
+			162 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -5968,118 +5895,76 @@ focus_tree = {
 			###########
 			### MTG ###
 			###########
-			if = { #MTG 
+			#Equipment Variant
+			if = {
 				limit = {
-					has_dlc = "Man the Guns"
-				}
-				#Equipment Variant
-				if = {
-					limit = {
-						has_tech = improved_sonar
-					}
-					create_equipment_variant = {
-						name = "Gabbiano Class"
-						type = ship_hull_light_1
-						name_group = ITA_DD_HISTORICAL
-						parent_version = 0
-						allow_without_tech = yes #Makes no difference since ITA already has tech, but in order to keep it consistent
-						modules = {
-							fixed_ship_battery_slot = ship_light_battery_1
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_fire_control_system_slot = ship_sonar_2
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = light_ship_engine_1
-							fixed_ship_torpedo_slot = ship_torpedo_1
-							mid_1_custom_slot = ship_depth_charge_2
-							rear_1_custom_slot = ship_depth_charge_2
-							#front_1_custom_slot = ship_light_battery_2
-						}
-					}
-				}
-				else = {
-					create_equipment_variant = {
-						name = "Gabbiano Class"
-						type = ship_hull_light_1
-						name_group = ITA_DD_HISTORICAL #TODO_Manu: Name List
-						parent_version = 0
-						allow_without_tech = yes #Makes no difference since ITA already has tech, but in order to keep it consistent
-						modules = {
-							fixed_ship_battery_slot = ship_light_battery_1
-							fixed_ship_anti_air_slot = ship_anti_air_2
-							fixed_ship_fire_control_system_slot = ship_sonar_1
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = light_ship_engine_1
-							fixed_ship_torpedo_slot = ship_torpedo_1
-							mid_1_custom_slot = ship_depth_charge_2
-							rear_1_custom_slot = ship_depth_charge_2
-							#front_1_custom_slot = ship_light_battery_2
-						}
-					}
-				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_light_1
-						creator = "ITA"
-						version_name = "Gabbiano Class"
-					}
-					name = "Antilope"
-					requested_factories = 1
-					progress = 0.35
-					amount = 3
-				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_light_1
-						creator = "ITA"
-						version_name = "Gabbiano Class"
-					}
-					name = "Camoscio"
-					requested_factories = 1
-					progress = 0.35
-					amount = 3
-				}
-			}
-
-			##############
-			### NO MTG ###
-			##############
-			else = {
-				if = {
-					limit = {
-						NOT = { has_tech = improved_destroyer }
-					}
-					set_technology = { improved_destroyer = 1 }
+					has_tech = improved_sonar
 				}
 				create_equipment_variant = {
 					name = "Gabbiano Class"
-					type = destroyer_1
-					upgrades = {
-						ship_torpedo_upgrade = 1
-						destroyer_engine_upgrade = 1
-						ship_ASW_upgrade = 3
-						ship_anti_air_upgrade = 2
+					type = ship_hull_light_1
+					name_group = ITA_DD_HISTORICAL
+					parent_version = 0
+					allow_without_tech = yes #Makes no difference since ITA already has tech, but in order to keep it consistent
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_sonar_2
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = light_ship_engine_1
+						fixed_ship_torpedo_slot = ship_torpedo_1
+						mid_1_custom_slot = ship_depth_charge_2
+						rear_1_custom_slot = ship_depth_charge_2
+						#front_1_custom_slot = ship_light_battery_2
 					}
-				}
-				add_equipment_production = {
-					equipment = {
-						type = destroyer_1
-						creator = "ITA"
-						version_name = "Gabbiano Class"
-					}
-					requested_factories = 2
-					progress = 0.35
-					amount = 3
 				}
 			}
-
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_coastal = yes
+			else = {
+				create_equipment_variant = {
+					name = "Gabbiano Class"
+					type = ship_hull_light_1
+					name_group = ITA_DD_HISTORICAL #TODO_Manu: Name List
+					parent_version = 0
+					allow_without_tech = yes #Makes no difference since ITA already has tech, but in order to keep it consistent
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_sonar_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = light_ship_engine_1
+						fixed_ship_torpedo_slot = ship_torpedo_1
+						mid_1_custom_slot = ship_depth_charge_2
+						rear_1_custom_slot = ship_depth_charge_2
+						#front_1_custom_slot = ship_light_battery_2
+					}
 				}
-				prioritize = { 162 117 } ##TUSCANY (La Spezia) / CAMPANIA (Napoli) (Napoli just to split it up a little bit)
+			}
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					creator = "ITA"
+					version_name = "Gabbiano Class"
+				}
+				name = "Antilope"
+				requested_factories = 1
+				progress = 0.35
+				amount = 3
+			}
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_1
+					creator = "ITA"
+					version_name = "Gabbiano Class"
+				}
+				name = "Camoscio"
+				requested_factories = 1
+				progress = 0.35
+				amount = 3
+			}
+
+			162 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -6123,69 +6008,31 @@ focus_tree = {
 			###########
 			### MTG ###
 			###########
-			if = { #MTG 
-				limit = {
-					has_dlc = "Man the Guns"
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_2
+					creator = "ITA"
+					version_name = "Littorio Class"
 				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_heavy_2
-						creator = "ITA"
-						version_name = "Littorio Class"
-					}
-					name = "Roma"
-					requested_factories = 1
-					progress = 0.45
-					amount = 1
+				name = "Roma"
+				requested_factories = 1
+				progress = 0.45
+				amount = 1
+			}
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_2
+					creator = "ITA"
+					version_name = "Littorio Class"
 				}
-
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_heavy_2
-						creator = "ITA"
-						version_name = "Littorio Class"
-					}
-					name = "Impero"
-					requested_factories = 1
-					progress = 0.45
-					amount = 1
-				}
+				name = "Impero"
+				requested_factories = 1
+				progress = 0.45
+				amount = 1
 			}
 
-			##############
-			### NO MTG ###
-			##############
-			else = {
-				add_equipment_production = {
-					equipment = {
-						type = battleship_2
-						creator = "ITA"
-						version_name = "Littorio Class"
-					}
-					requested_factories = 1
-					progress = 0.45
-					amount = 1
-				}
-				add_equipment_production = {
-					equipment = {
-						type = battleship_2
-						creator = "ITA"
-						version_name = "Littorio Class"
-					}
-					requested_factories = 1
-					progress = 0.45
-					amount = 1
-				}
-			}
-
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_coastal = yes
-				}
-				prioritize = { 736 158 } ##LITORALE (Trieste) / PIEDMONT (Genova)
+			158 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -6206,15 +6053,7 @@ focus_tree = {
 		relative_position_id = ITA_incrociatori_pesanti
 		cost = 10
 		available = {
-			if = { # MTG tech
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				has_tech = early_ship_hull_carrier
-			}
-			else = { #Non-MTG tech
-				has_tech = early_carrier
-			}
+			has_tech = early_ship_hull_carrier
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
@@ -6231,87 +6070,43 @@ focus_tree = {
 			###########
 			### MTG ###
 			###########
-			if = { #MTG 
+			if = {
 				limit = {
-					has_dlc = "Man the Guns"
+					NOT = { has_tech = basic_ship_hull_carrier }
 				}
-				if = {
-					limit = {
-						NOT = { has_tech = basic_ship_hull_carrier }
-					}
-					set_technology = { basic_ship_hull_carrier = 1 }
-				}
-
-				#Equipment Variant
-				create_equipment_variant = {
-					name = "Aquila Class"
-					type = ship_hull_carrier_1
-					name_group = ITA_CV_HISTORICAL
-					parent_version = 0
-					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
-					modules = {
-						fixed_ship_deck_slot_1 = ship_deck_space
-						fixed_ship_deck_slot_2 = ship_deck_space
-						fixed_ship_anti_air_slot = ship_anti_air_2
-						fixed_ship_radar_slot = empty
-						fixed_ship_engine_slot = carrier_ship_engine_2
-						fixed_ship_secondaries_slot = ship_secondaries_2
-						front_1_custom_slot = ship_deck_space
-					}
-				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_carrier_1
-						creator = "ITA"
-						version_name = "Aquila Class"
-					}
-					name = "Aquila"
-					requested_factories = 2
-					progress = 0.45
-					amount = 1
+				set_technology = { basic_ship_hull_carrier = 1 }
+			}
+			#Equipment Variant
+			create_equipment_variant = {
+				name = "Aquila Class"
+				type = ship_hull_carrier_1
+				name_group = ITA_CV_HISTORICAL
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = carrier_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					front_1_custom_slot = ship_deck_space
 				}
 			}
-
-			##############
-			### NO MTG ###
-			##############
-			else = {
-				if = {
-					limit = {
-						NOT = { has_tech = basic_carrier }
-					}
-					set_technology = { basic_carrier = 1 }
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_1
+					creator = "ITA"
+					version_name = "Aquila Class"
 				}
-				create_equipment_variant = {
-					name = "Aquila Class"
-					type = carrier_2
-					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
-					upgrades = {
-						ship_deckspace_upgrade = 3
-						carrier_armor_upgrade = 2
-						ship_engine_upgrade = 2
-						ship_reliability_upgrade = 2
-					}
-				}
-				add_equipment_production = {
-					equipment = {
-						type = carrier_2
-						creator = "ITA"
-						version_name = "Aquila Class"
-					}
-					requested_factories = 2
-					progress = 0.45
-					amount = 1
-				}
+				name = "Aquila"
+				requested_factories = 2
+				progress = 0.45
+				amount = 1
 			}
 			
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_coastal = yes
-				}
-				prioritize = { 158 } #PIEDMONT (Genoa)
+			158 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -6331,8 +6126,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_incrociatori_pesanti
 		cost = 10
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
 
@@ -6347,107 +6140,54 @@ focus_tree = {
 			###########
 			### MTG ###
 			###########
-			if = { #MTG
+			if = {
 				limit = {
-					has_dlc = "Man the Guns"
+					NOT = { has_tech = early_ship_hull_carrier }
 				}
-				if = {
-					limit = {
-						NOT = { has_tech = early_ship_hull_carrier }
-					}
-					set_technology = { early_ship_hull_carrier = 1 }
-				}
-				#Equipment Variant
-				create_equipment_variant = {
-					name = "Conte di Savoia Class - Converted Liner"
-					type = ship_hull_carrier_conversion_ca
-					name_group = ITA_CV_HISTORICAL #TODO_Manu: Namelist (Conte di Savoia, Rex, Neptunia, Oceania, Conte Rosso, Conte Grande, Saturnia, Vulcania, Conte Biancamo, Duilio, Conte verde, Giulio Cesare, Colombo, Tel Aviv) Excluded Roma (Aquila) and Augustus (Sparviero)
-					parent_version = 0
-					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
-					modules = {
-						fixed_ship_deck_slot_1 = ship_deck_space
-						fixed_ship_deck_slot_2 = ship_deck_space
-						fixed_ship_anti_air_slot = ship_anti_air_2
-						fixed_ship_radar_slot = empty
-						fixed_ship_engine_slot = carrier_ship_engine_1
-						fixed_ship_secondaries_slot = ship_secondaries_1
-					}
-				}
-
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_carrier_conversion_ca
-						creator = "ITA"
-						version_name = "Conte di Savoia Class - Converted Liner"
-					}
-					name = "Conte di Savoia"
-					requested_factories = 1
-					progress = 0.65
-					amount = 1
-				}
-				#Line Production
-				add_equipment_production = {
-					equipment = {
-						type = ship_hull_carrier_conversion_ca
-						creator = "ITA"
-						version_name = "Conte di Savoia Class - Converted Liner"
-					}
-					name = "Rex"
-					requested_factories = 1
-					progress = 0.65
-					amount = 1
+				set_technology = { early_ship_hull_carrier = 1 }
+			}
+			#Equipment Variant
+			create_equipment_variant = {
+				name = "Conte di Savoia Class - Converted Liner"
+				type = ship_hull_carrier_conversion_ca
+				name_group = ITA_CV_HISTORICAL #TODO_Manu: Namelist (Conte di Savoia, Rex, Neptunia, Oceania, Conte Rosso, Conte Grande,Saturnia, Vulcania, Conte Biancamo, Duilio, Conte verde, Giulio Cesare, Colombo, Tel Aviv) Excluded Roma (Aquila) andAugustus (Sparviero)
+				parent_version = 0
+				allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = carrier_ship_engine_1
+					fixed_ship_secondaries_slot = ship_secondaries_1
 				}
 			}
-			##############
-			### NO MTG ###
-			##############
-			else = {
-				if = {
-					limit = {
-						NOT = { has_tech = early_carrier }
-					}
-					set_technology = { early_carrier = 1 }
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_conversion_ca
+					creator = "ITA"
+					version_name = "Conte di Savoia Class - Converted Liner"
 				}
-				create_equipment_variant = {
-					name = "Conte di Savoia Class - Converted Liner"
-					type = carrier_1
-					allow_without_tech = yes #Makes no difference since focus grants appropriate tech (above), but it improves tooltip
-					upgrades = {
-						ship_deckspace_upgrade = 2
-						carrier_armor_upgrade = 1
-						ship_engine_upgrade = 2
-						ship_reliability_upgrade = 2
-					}
+				name = "Conte di Savoia"
+				requested_factories = 1
+				progress = 0.65
+				amount = 1
+			}
+			#Line Production
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_conversion_ca
+					creator = "ITA"
+					version_name = "Conte di Savoia Class - Converted Liner"
 				}
-				add_equipment_production = {
-					equipment = {
-						type = carrier_1
-						creator = "ITA"
-						version_name = "Conte di Savoia Class - Converted Liner"
-					}
-					requested_factories = 1
-					progress = 0.65
-					amount = 1
-				}
-				add_equipment_production = {
-					equipment = {
-						type = carrier_1
-						creator = "ITA"
-						version_name = "Conte di Savoia Class - Converted Liner"
-					}
-					requested_factories = 1
-					progress = 0.65
-					amount = 1
-				}
+				name = "Rex"
+				requested_factories = 1
+				progress = 0.65
+				amount = 1
 			}
 			
-			random_owned_controlled_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_coastal = yes
-				}
-				prioritize = { 158 } #PIEDMONT (Genoa)
+			158 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -6467,53 +6207,16 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_ispettorato_dei_mezzi_antisommergibili
 		cost = 10
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
 
 		completion_reward = {
+			ITA_alberto_da_zara = {
+				add_unit_leader_trait = bold
+			}
 			custom_effect_tooltip = ITA_flotta_d_evasione_admiral_traits_tt
 			#Stupid tooltips oh my god I hate this game
 			hidden_effect = {
-				#First admiral trait
-				if = { #Try to select high level admirals
-					limit = {
-						any_navy_leader = {
-							NOT = {
-								has_trait = bold
-							}
-							skill > 3
-						}
-					}
-					random_navy_leader = {
-						limit = {
-							NOT = {
-								has_trait = bold
-							}
-							skill > 3
-						}
-						add_unit_leader_trait = bold
-					}
-				}
-				else_if = {
-					limit = {
-						any_navy_leader = {
-							NOT = {
-								has_trait = bold
-							}
-						}
-					}
-					random_navy_leader = {
-						limit = {
-							NOT = {
-								has_trait = bold
-							}
-						}
-						add_unit_leader_trait = bold
-					}
-				}
-
 				#Second admiral trait
 				if = { #Try to select high level admirals
 					limit = {
@@ -6558,287 +6261,188 @@ focus_tree = {
 			###########
 			### MTG ###
 			###########
-			if = { #MTG
+			if = { #CRUISER HULL III
 				limit = {
-					has_dlc = "Man the Guns"
+					has_tech = improved_ship_hull_cruiser
 				}
-				if = { #CRUISER HULL III
-					limit = {
-						has_tech = improved_ship_hull_cruiser
-					}
-					if = {
-						limit = {
-							has_tech = basic_dp_light_battery
-						}
-						#Equipment Variant
-						create_equipment_variant = {
-							name = "Costanzo Ciano Class"
-							type = ship_hull_cruiser_3
-							name_group = ITA_CL_HISTORICAL
-							parent_version = 0
-							allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-							modules = {
-								front_1_custom_slot = ship_light_medium_battery_3
-								mid_1_custom_slot = ship_torpedo_2
-								mid_2_custom_slot = dp_ship_secondaries_2
-								rear_1_custom_slot = ship_anti_air_3
-								rear_2_custom_slot = ship_airplane_launcher_2
-								fixed_ship_battery_slot = ship_light_medium_battery_3
-								fixed_ship_anti_air_slot = ship_anti_air_3
-								fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-								fixed_ship_radar_slot = ship_sonar_1
-								fixed_ship_engine_slot = cruiser_ship_engine_3
-								fixed_ship_secondaries_slot = dp_ship_secondaries_2
-								fixed_ship_armor_slot = ship_armor_cruiser_3
-							}
-						}
-					}
-					else = {
-						#Equipment Variant
-						create_equipment_variant = {
-							name = "Costanzo Ciano Class"
-							type = ship_hull_cruiser_3
-							name_group = ITA_CL_HISTORICAL
-							parent_version = 0
-							allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-							modules = {
-								front_1_custom_slot = ship_light_medium_battery_3
-								mid_1_custom_slot = ship_torpedo_2
-								mid_2_custom_slot = ship_secondaries_2
-								rear_1_custom_slot = ship_anti_air_3
-								rear_2_custom_slot = ship_airplane_launcher_2
-								fixed_ship_battery_slot = ship_light_medium_battery_3
-								fixed_ship_anti_air_slot = ship_anti_air_3
-								fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-								fixed_ship_radar_slot = ship_sonar_1
-								fixed_ship_engine_slot = cruiser_ship_engine_3
-								fixed_ship_secondaries_slot = ship_secondaries_2
-								fixed_ship_armor_slot = ship_armor_cruiser_3
-							}
-						}
-					}
-
-					#Line Production
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_cruiser_3
-							creator = "ITA"
-							version_name = "Costanzo Ciano Class"
-						}
-						name = "Constanzo Ciano"
-						requested_factories = 1
-						progress = 0.5
-						amount = 1
-					}
-					#Line Production
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_cruiser_3
-							creator = "ITA"
-							version_name = "Costanzo Ciano Class"
-						}
-						name = "Luigi Rizzo"
-						requested_factories = 1
-						progress = 0.35
-						amount = 1
-					}
-				}
-				else = { #CRUISER HULL II
-					if = {
-						limit = {
-							has_tech = basic_dp_light_battery
-						}
-						#Equipment Variant
-						create_equipment_variant = {
-							name = "Costanzo Ciano Class"
-							type = ship_hull_cruiser_2
-							name_group = ITA_CL_HISTORICAL #TODO_Manu: Namelist (Conte di Savoia, Rex, Neptunia, Oceania, Conte Rosso, Conte Grande, Saturnia, Vulcania, Conte Biancamo, Duilio, Conte verde, Giulio Cesare, Colombo, Tel Aviv) Excluded Roma (Aquila) and Augustus (Sparviero)
-							parent_version = 0
-							allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-							modules = {
-								front_1_custom_slot = ship_anti_air_2
-								mid_1_custom_slot = ship_torpedo_1
-								mid_2_custom_slot = ship_airplane_launcher_2
-								rear_1_custom_slot = ship_light_medium_battery_2
-								fixed_ship_battery_slot = ship_light_medium_battery_2
-								fixed_ship_anti_air_slot = ship_anti_air_2
-								fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-								fixed_ship_radar_slot = empty
-								fixed_ship_engine_slot = cruiser_ship_engine_2
-								fixed_ship_secondaries_slot = dp_ship_secondaries_2
-								fixed_ship_armor_slot = ship_armor_cruiser_2
-							}
-						}
-					}
-					else = {
-						#Equipment Variant
-						create_equipment_variant = {
-							name = "Costanzo Ciano Class"
-							type = ship_hull_cruiser_2
-							name_group = ITA_CL_HISTORICAL #TODO_Manu: Namelist (Conte di Savoia, Rex, Neptunia, Oceania, Conte Rosso, Conte Grande, Saturnia, Vulcania, Conte Biancamo, Duilio, Conte verde, Giulio Cesare, Colombo, Tel Aviv) Excluded Roma (Aquila) and Augustus (Sparviero)
-							parent_version = 0
-							allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-							modules = {
-								front_1_custom_slot = ship_anti_air_2
-								mid_1_custom_slot = ship_torpedo_1
-								mid_2_custom_slot = ship_airplane_launcher_2
-								rear_1_custom_slot = ship_light_medium_battery_2
-								fixed_ship_battery_slot = ship_light_medium_battery_2
-								fixed_ship_anti_air_slot = ship_anti_air_2
-								fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-								fixed_ship_radar_slot = empty
-								fixed_ship_engine_slot = cruiser_ship_engine_2
-								fixed_ship_secondaries_slot = ship_secondaries_2
-								fixed_ship_armor_slot = ship_armor_cruiser_2
-							}
-						}
-					}
-
-					#Line Production
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_cruiser_2
-							creator = "ITA"
-							version_name = "Costanzo Ciano Class"
-						}
-						name = "Constanzo Ciano"
-						requested_factories = 1
-						progress = 0.5
-						amount = 1
-					}
-					#Line Production
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_cruiser_2
-							creator = "ITA"
-							version_name = "Costanzo Ciano Class"
-						}
-						name = "Luigi Rizzo"
-						requested_factories = 1
-						progress = 0.35
-						amount = 1
-					}
-				}
-			}
-			##############
-			### NO MTG ###
-			##############
-			else = {
 				if = {
 					limit = {
-						NOT = { has_tech = improved_light_cruiser }
+						has_tech = basic_dp_light_battery
 					}
+					#Equipment Variant
 					create_equipment_variant = {
 						name = "Costanzo Ciano Class"
-						type = light_cruiser_3
+						type = ship_hull_cruiser_3
+						name_group = ITA_CL_HISTORICAL
+						parent_version = 0
 						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-						upgrades = {
-							ship_reliability_upgrade = 2
-							ship_engine_upgrade = 3
-							ship_anti_air_upgrade = 3
-							ship_gun_upgrade = 3
+						modules = {
+							front_1_custom_slot = ship_light_medium_battery_3
+							mid_1_custom_slot = ship_torpedo_2
+							mid_2_custom_slot = dp_ship_secondaries_2
+							rear_1_custom_slot = ship_anti_air_3
+							rear_2_custom_slot = ship_airplane_launcher_2
+							fixed_ship_battery_slot = ship_light_medium_battery_3
+							fixed_ship_anti_air_slot = ship_anti_air_3
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+							fixed_ship_radar_slot = ship_sonar_1
+							fixed_ship_engine_slot = cruiser_ship_engine_3
+							fixed_ship_secondaries_slot = dp_ship_secondaries_2
+							fixed_ship_armor_slot = ship_armor_cruiser_3
 						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = light_cruiser_3
-							creator = "ITA"
-							version_name = "Costanzo Ciano Class"
-						}
-						requested_factories = 1
-						progress = 0.5
-						amount = 1
-					}
-					add_equipment_production = {
-						equipment = {
-							type = light_cruiser_3
-							creator = "ITA"
-							version_name = "Costanzo Ciano Class"
-						}
-						requested_factories = 1
-						progress = 0.35
-						amount = 1
 					}
 				}
 				else = {
+					#Equipment Variant
 					create_equipment_variant = {
 						name = "Costanzo Ciano Class"
-						type = light_cruiser_2
+						type = ship_hull_cruiser_3
+						name_group = ITA_CL_HISTORICAL
+						parent_version = 0
 						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
-						upgrades = {
-							ship_reliability_upgrade = 2
-							ship_engine_upgrade = 2
-							ship_anti_air_upgrade = 2
-							ship_gun_upgrade = 2
+						modules = {
+							front_1_custom_slot = ship_light_medium_battery_3
+							mid_1_custom_slot = ship_torpedo_2
+							mid_2_custom_slot = ship_secondaries_2
+							rear_1_custom_slot = ship_anti_air_3
+							rear_2_custom_slot = ship_airplane_launcher_2
+							fixed_ship_battery_slot = ship_light_medium_battery_3
+							fixed_ship_anti_air_slot = ship_anti_air_3
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+							fixed_ship_radar_slot = ship_sonar_1
+							fixed_ship_engine_slot = cruiser_ship_engine_3
+							fixed_ship_secondaries_slot = ship_secondaries_2
+							fixed_ship_armor_slot = ship_armor_cruiser_3
 						}
 					}
-					add_equipment_production = {
-						equipment = {
-							type = light_cruiser_2
-							creator = "ITA"
-							version_name = "Costanzo Ciano Class"
-						}
-						requested_factories = 1
-						progress = 0.5
-						amount = 1
+				}
+				#Line Production
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_3
+						creator = "ITA"
+						version_name = "Costanzo Ciano Class"
 					}
-					add_equipment_production = {
-						equipment = {
-							type = light_cruiser_2
-							creator = "ITA"
-							version_name = "Costanzo Ciano Class"
-						}
-						requested_factories = 1
-						progress = 0.35
-						amount = 1
+					name = "Constanzo Ciano"
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+				#Line Production
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_3
+						creator = "ITA"
+						version_name = "Costanzo Ciano Class"
 					}
+					name = "Luigi Rizzo"
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+			}
+			else = { #CRUISER HULL II
+				if = {
+					limit = {
+						has_tech = basic_dp_light_battery
+					}
+					#Equipment Variant
+					create_equipment_variant = {
+						name = "Costanzo Ciano Class"
+						type = ship_hull_cruiser_2
+						name_group = ITA_CL_HISTORICAL #TODO_Manu: Namelist (Conte di Savoia, Rex, Neptunia, Oceania, Conte Rosso, ConteGrande, Saturnia, Vulcania, Conte Biancamo, Duilio, Conte verde, Giulio Cesare, Colombo, Tel Aviv) Excluded Roma Aquila) and Augustus (Sparviero)
+						parent_version = 0
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
+						modules = {
+							front_1_custom_slot = ship_anti_air_2
+							mid_1_custom_slot = ship_torpedo_1
+							mid_2_custom_slot = ship_airplane_launcher_2
+							rear_1_custom_slot = ship_light_medium_battery_2
+							fixed_ship_battery_slot = ship_light_medium_battery_2
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = cruiser_ship_engine_2
+							fixed_ship_secondaries_slot = dp_ship_secondaries_2
+							fixed_ship_armor_slot = ship_armor_cruiser_2
+						}
+					}
+				}
+				else = {
+					#Equipment Variant
+					create_equipment_variant = {
+						name = "Costanzo Ciano Class"
+						type = ship_hull_cruiser_2
+						name_group = ITA_CL_HISTORICAL #TODO_Manu: Namelist (Conte di Savoia, Rex, Neptunia, Oceania, Conte Rosso, ConteGrande, Saturnia, Vulcania, Conte Biancamo, Duilio, Conte verde, Giulio Cesare, Colombo, Tel Aviv) Excluded Roma Aquila) and Augustus (Sparviero)
+						parent_version = 0
+						allow_without_tech = yes #Makes no difference since focus requires appropriate tech (above), but it improves tooltip
+						modules = {
+							front_1_custom_slot = ship_anti_air_2
+							mid_1_custom_slot = ship_torpedo_1
+							mid_2_custom_slot = ship_airplane_launcher_2
+							rear_1_custom_slot = ship_light_medium_battery_2
+							fixed_ship_battery_slot = ship_light_medium_battery_2
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = cruiser_ship_engine_2
+							fixed_ship_secondaries_slot = ship_secondaries_2
+							fixed_ship_armor_slot = ship_armor_cruiser_2
+						}
+					}
+				}
+				#Line Production
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_2
+						creator = "ITA"
+						version_name = "Costanzo Ciano Class"
+					}
+					name = "Constanzo Ciano"
+					requested_factories = 1
+					progress = 0.5
+					amount = 1
+				}
+				#Line Production
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_cruiser_2
+						creator = "ITA"
+						version_name = "Costanzo Ciano Class"
+					}
+					name = "Luigi Rizzo"
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
 				}
 			}
 
 			### CORES
 			#ROME
-			if = {
-				limit = {
-					has_full_control_of_state = 2
-				}
-				2 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+			2 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
-			#PUGLIA
-			if = {
-				limit = {
-					has_full_control_of_state = 849
-				}
-				849 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+			849 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
-			#SICILIA
-			if = {
-				limit = {
-					has_full_control_of_state = 115
-				}
-				115 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+			115 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
-
 			### COLONIES
 			#TRIPOLI
 			if = {
@@ -6940,10 +6544,10 @@ focus_tree = {
 					}
 				}
 			}
-			#LISBON
+			#CASABLANCA
 			if = {
 				limit = {
-					has_full_control_of_state = 112
+					has_full_control_of_state = 461
 				}
 				112 = {
 					add_extra_state_shared_building_slots = 1
@@ -7016,18 +6620,7 @@ focus_tree = {
 		icon = GFX_focus_generic_attack_ethiopia
 		x = 50
 		y = 0
-		offset = {
-			x = -20
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-		}
 		cost = 1
-
-		available = {
-			
-		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
 
@@ -7049,17 +6642,8 @@ focus_tree = {
 
 		x = 0
 		y = 1
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-		}
 		relative_position_id = ITA_solid_progress
 		cost = 10
-		available = {
-		}
 
 		search_filters = {}
 
