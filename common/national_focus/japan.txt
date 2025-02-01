@@ -23,7 +23,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 8
+			factor = 9
 		}
 
 		cancel_if_invalid = yes
