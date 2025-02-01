@@ -142,6 +142,10 @@ operations = {
 		cost = 0
 		ai_will_do = {
 			factor = 0
+			modifier = {
+				factor = 1
+				MAN = { has_completed_focus = MAN_expand_the_textile_industry }
+			}
 		}
 		visible = {
 			tag = JAP
