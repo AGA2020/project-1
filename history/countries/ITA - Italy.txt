@@ -688,7 +688,6 @@ ITA_roberto_farinacci = { set_character_flag = ITA_character_can_be_purged }
 ITA_alberto_beneduce = { set_character_flag = ITA_character_can_be_purged }
 ITA_carlo_favagrossa = { set_character_flag = ITA_character_can_be_purged }
 ITA_giacomo_acerbo = { set_character_flag = ITA_character_can_be_purged }
-ITA_guido_jung = { set_character_flag = ITA_character_can_be_purged }
 ITA_serafino_mazzolini = { set_character_flag = ITA_character_can_be_purged }
 ITA_rodolfo_graziani = { set_character_flag = ITA_character_can_be_purged }
 ITA_ubaldo_soddu = { set_character_flag = ITA_character_can_be_purged }
