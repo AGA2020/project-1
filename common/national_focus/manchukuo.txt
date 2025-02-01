@@ -159,7 +159,6 @@
 		}
 
 		available = {
-			NOT = { has_idea = MAN_banditry }
 		}
 
 		cancel_if_invalid = yes
