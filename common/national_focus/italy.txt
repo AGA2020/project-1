@@ -6650,28 +6650,12 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_dlc = "By Blood Alone"
+					has_intelligence_agency = no
 				}
-				ETH_deescalate_the_war_effect = yes
+				create_intelligence_agency = yes
 			}
-			
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				if = {
-					limit = {
-						has_intelligence_agency = no
-					}
-					create_intelligence_agency = yes
-				}
-				add_ideas = ITA_servizio_informazione_militare_ns
-
-				ITA_create_rosa_dainelli_operative = yes
-			}
-			else = {
-				add_ideas = ITA_servizio_informazione_militare_ns_vanilla
-			}
+			add_ideas = ITA_servizio_informazione_militare_ns
+			ITA_create_rosa_dainelli_operative = yes
 		}
 	}
 
@@ -6684,10 +6668,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_servizio_informazione_militare
 		cost = 1
-
-		available = {
-
-		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
 
@@ -6743,8 +6723,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
 
@@ -6964,7 +6942,6 @@ focus_tree = {
 				}
 				has_completed_focus = ITA_capo_supremo
 			}
-			is_subject = no
 		}
 
 		search_filters = {FOCUS_FILTER_STABILITY}
@@ -7000,15 +6977,6 @@ focus_tree = {
 			}
 			unlock_decision_tooltip = ITA_discredit_haile_selassie
 
-			if = {
-				limit = {
-					country_exists = ETH
-				}
-				ETH = {
-					add_legitimacy = -10
-				}
-			}
-
 			every_controlled_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -7028,13 +6996,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 10
-		available = {
-			has_country_leader = {
-				character = ITA_benito_mussolini
-				ruling_only = yes
-			}
-		}
-
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_BALANCE_OF_POWER}
 
 		completion_reward = {
@@ -7054,10 +7015,6 @@ focus_tree = {
 		relative_position_id = ITA_culto_del_duce
 		cost = 5
 		available = {
-			has_country_leader = {
-				character = ITA_benito_mussolini
-				ruling_only = yes
-			}
 			power_balance_value = {
 				id = ITA_power_balance
 				value > 0.499
@@ -7101,8 +7058,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_the_man_of_providence
 		cost = 5
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH}
 
@@ -7157,10 +7112,6 @@ focus_tree = {
 		relative_position_id = ITA_boost_the_grand_council_of_fascism
 		cost = 5
 		available = {
-			has_country_leader = {
-				character = ITA_benito_mussolini
-				ruling_only = yes
-			}
 			power_balance_value = {
 				id = ITA_power_balance
 				value > 0.649
@@ -7213,54 +7164,17 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_culto_del_duce
 		cost = 10
-		available = {
-		}
-
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			if = { #Latium
-				limit = {
-					2 = {
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						} 
-					}
-				}
-				2 = {
-					add_extra_state_shared_building_slots = 2
-				}
+			2 = {
+				add_extra_state_shared_building_slots = 2
 			}
-			if = { #Campania
-				limit = {
-					117 = {
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						} 
-					}
-				}
-				117 = {
-					add_extra_state_shared_building_slots = 2
-				}
+			117 = {
+				add_extra_state_shared_building_slots = 2
 			}
-
-			if = { #Tuscany
-				limit = {
-					162 = {
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						} 
-					}
-				}
-				162 = {
-					add_extra_state_shared_building_slots = 2
-				}
+			162 = {
+				add_extra_state_shared_building_slots = 2
 			}
 
 			add_timed_idea = { idea = ITA_battaglia_per_la_terra days = 730 }
@@ -7276,8 +7190,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_la_battaglia_del_grano
 		cost = 5
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
@@ -7296,12 +7208,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_la_battaglia_per_le_nascite
 		cost = 10
-		available = {
-			has_country_leader = {
-				character = ITA_benito_mussolini
-				ruling_only = yes
-			}
-		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
 
@@ -7339,10 +7245,6 @@ focus_tree = {
 		relative_position_id = ITA_strengthen_the_regime
 		cost = 5
 		available = {
-			has_country_leader = {
-				character = ITA_benito_mussolini
-				ruling_only = yes
-			}
 			power_balance_value = {
 				id = ITA_power_balance
 				value > 0.799
@@ -7372,9 +7274,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_culto_del_duce
 		cost = 5
-		available = {
-			has_government = fascism
-		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_BALANCE_OF_POWER}
 
@@ -7399,9 +7298,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_ministero_della_cultura_popolare
 		cost = 5
-		available = {
-			has_government = fascism
-		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
 
@@ -7442,13 +7338,6 @@ focus_tree = {
 		relative_position_id = ITA_believe_obey_fight
 		cost = 10
 
-		allow_branch = {
-			OR = {
-				has_dlc = "La Resistance"
-				has_dlc = "Waking the Tiger"
-			}
-		}
-
 		available = {
 			IF = {
 				limit = {
@@ -7461,23 +7350,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = { 
-			IF = {
-				limit = { has_dlc = "La Resistance" }
-				swap_ideas = {
-					remove_idea = ITA_servizio_informazione_militare_ns
-					add_idea = ITA_servizio_informazione_militare_banda_carita
-				}
-				ITA_create_padre_ildefonso_operative = yes
+			swap_ideas = {
+				remove_idea = ITA_servizio_informazione_militare_ns
+				add_idea = ITA_servizio_informazione_militare_banda_carita
 			}
-			IF = {
-				limit = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-				}
-				add_ideas = ITA_banda_carita_non_la_resistance
-			}
-			 
+			ITA_create_padre_ildefonso_operative = yes
 
 			custom_effect_tooltip = banda_carita_tt
 			
@@ -7494,10 +7371,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_banda_carita
 		cost = 10
-
-		allow_branch = {
-			has_dlc = "La Resistance"
-		}
 
 		available = {
 			agency_upgrade_number > 9
@@ -7524,9 +7397,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_culto_del_duce
 		cost = 5
-		available = {
-			has_government = fascism
-		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
 
@@ -7552,9 +7422,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_security_militias
 		cost = 10
-		available = {
-			has_government = fascism
-		}
 
 		search_filters = {}
 
@@ -7575,13 +7442,6 @@ focus_tree = {
 		y = 0
 		relative_position_id = ITA_battaglioni_d_assalto
 		cost = 10
-		available = {
-			has_government = fascism
-			any_owned_state = {
-				is_core_of = ROOT
-				is_fully_controlled_by = ROOT
-			}
-		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER}
 
@@ -7630,9 +7490,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_battaglioni_d_assalto
 		cost = 10
-		available = {
-			has_government = fascism
-		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER}
 
@@ -7677,10 +7534,6 @@ focus_tree = {
 			105 = { is_claimed_by = ROOT }
 			44 = { is_claimed_by = ROOT }
 			805 = { is_claimed_by = ROOT }
-		}
-
-		available = {
-			is_subject = no
 		}
 
 		search_filters = {}
@@ -7902,8 +7755,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_towards_a_greater_italy
 		cost = 10
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_AIR_XP FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_WAR_SUPPORT}
 
@@ -8129,8 +7980,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_towards_a_greater_italy
 		cost = 5
-		available = {
-		}
 
 		search_filters = {}
 
@@ -8320,8 +8169,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_bend_the_bars
 		cost = 5
-		available = {
-		}
 
 		search_filters = {}
 
@@ -8403,8 +8250,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_subdue_the_sentinels
 		cost = 10
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER}
 
@@ -8470,8 +8315,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_a_colonial_empire
 		cost = 10
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT}
 
@@ -8510,8 +8353,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_bend_the_bars
 		cost = 10
-		available = {
-		}
 
 		search_filters = {}
 
@@ -8540,8 +8381,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_masters_of_the_aegean
 		cost = 10
-		available = {
-		}
 
 		search_filters = {}
 
@@ -8577,18 +8416,8 @@ focus_tree = {
 
 		x = 18
 		y = 1
-		offset = {
-			x = -29
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "By Blood Alone" }
-			}
-		}
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
-		available = {
-
-		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
@@ -8596,13 +8425,6 @@ focus_tree = {
 			add_political_power = 50
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ITA_gian_galeazzo_ciano
-
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				custom_effect_tooltip = ITA_foreign_affairs_focus_lock_tt
-			}
 		}
 	}
 
@@ -8615,8 +8437,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_foreign_affairs
 		cost = 5
-		available = {
-		}
 
 		search_filters = {}
 
@@ -8626,26 +8446,6 @@ focus_tree = {
 			add_state_claim = 103 #DALMATIA
 			add_state_claim = 105 #MONTENEGRO
 
-			if = {
-				limit = {
-					country_exists = CRO
-					OR = {
-						103 = { is_fully_controlled_by = CRO }
-						105 = { is_fully_controlled_by = CRO }
-					}
-				}
-				activate_targeted_decision = { target = CRO decision = ITA_send_ultimatum_to_country_balkan }
-			}
-			if = {
-				limit = {
-					country_exists = MNT
-					OR = {
-						103 = { is_fully_controlled_by = MNT }
-						105 = { is_fully_controlled_by = MNT }
-					}
-				}
-				activate_targeted_decision = { target = MNT decision = ITA_send_ultimatum_to_country_balkan }
-			}
 			if = {
 				limit = {
 					country_exists = YUG
@@ -8668,8 +8468,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_balkan_ambition
 		cost = 10
-		available = {
-		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -8688,9 +8486,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_balkan_ambition
 		cost = 5
-		available = {
-		}
-
 		bypass = {
 			44 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
 		}
@@ -8934,15 +8729,6 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = ITA_germ_italy_same_tt
-				GER = { has_government = ROOT }
-			}
-			GER = {
-				is_faction_leader = yes
-				is_subject = no
-			}
-			is_subject = no
 			NOT = { has_country_flag = ENG_ditched_by_the_germans_flag }
 		}
 
@@ -8971,10 +8757,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_pact_of_steel
 		cost = 5
-		available = {
-			NOT = { has_war_with = GER }
-			NOT = { has_country_flag = ENG_ditched_by_the_germans_flag }
-		}
 
 		search_filters = {FOCUS_FILTER_AIR_XP FOCUS_FILTER_ARMY_XP}
 
@@ -8992,9 +8774,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_german_military_cooperation
 		cost = 5
-		available = {
-			NOT = { has_country_flag = ENG_ditched_by_the_germans_flag }
-		}
 		
 		search_filters = {FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
 
@@ -9024,9 +8803,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_german_military_cooperation
 		cost = 5
-		available = {
-			NOT = { has_country_flag = ENG_ditched_by_the_germans_flag }
-		}
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
@@ -9044,32 +8820,36 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_pact_of_steel
 		cost = 5
-		available = {
-			NOT = { has_country_flag = ENG_ditched_by_the_germans_flag }
-		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
 			GER = {
-				country_event = { id = italy.5 days = 1 }
-				custom_effect_tooltip = needs_approval
-			}
-			# Actual reward effects added in event if Soviets approve
-			effect_tooltip = {
 				add_tech_bonus = {
-					name = synth_bonus
 					bonus = 1.0
 					uses = 1
-					category = synth_resources
+					technology = tech_mountaineers2
 				}
-				# Balance research bonus to 2 techs in armor, also in event
-				add_tech_bonus = {
-					name = armor_bonus
-					bonus = 0.5
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.35
 					uses = 2
-					category = armor
+					category = naval_doctrine
 				}
+			}
+			add_tech_bonus = {
+				name = synth_bonus
+				bonus = 1.0
+				uses = 1
+				category = synth_resources
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+			ITA = {
+				add_opinion_modifier = { target = GER modifier = ger_ita_tech_treaty }
 			}
 		}
 	}
