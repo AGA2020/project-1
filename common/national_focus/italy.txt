@@ -8866,11 +8866,9 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			is_puppet = no
 			is_in_faction_with = GER
 			GER = { 
-				controls_state = 16 				
-				GER = { is_faction_leader = yes }
+				controls_state = 16
 			}
 			custom_trigger_tooltip = {
 			 tooltip = ITA_claims_on_france_tt
@@ -8923,10 +8921,6 @@ focus_tree = {
 		relative_position_id = ITA_pact_of_steel
 		cost = 10
 
-		available = {
-			country_exists = JAP
-		}
-
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
@@ -8954,9 +8948,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_pact_of_steel
 		cost = 10
-		available = {
-			is_subject = no
-		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT}
 
@@ -8995,12 +8986,7 @@ focus_tree = {
 			add_state_claim = 116 #MALTA
 			add_state_claim = 846 #TICINO
 
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				ITA_create_carmelo_borg_pisani_operative = yes
-			}
+			ITA_create_carmelo_borg_pisani_operative = yes
 
 			if = {
 				limit = {
@@ -9034,12 +9020,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_italian_irredentism
 		cost = 10
-		available = {
-			is_subject = no
-			NOT = { is_in_faction_with = FRA }
-			NOT = { has_guaranteed = FRA }
-			NOT = { has_non_aggression_pact_with = FRA }
-		}
 		bypass = { 
 			ITA = { has_war_with = FRA } 
 		}
@@ -9224,24 +9204,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_AIR_XP}
 
 		completion_reward = { #Changing stuff here will require changing stuff in History file for 1939 bookmark
-			if = {
-				limit = {
-					NOT = { has_dlc = "La Resistance" }
-				}
-				random_other_country = {
-					limit = {
-						original_tag = SPR
-						has_government = fascism
-					}
-					add_opinion_modifier = { target = ITA modifier = ita_supported_spain_civil_war }
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				SPA = { add_opinion_modifier = { target = ITA modifier = ita_supported_spain_civil_war } }
-			}
+			SPA = { add_opinion_modifier = { target = ITA modifier = ita_supported_spain_civil_war } }
 
 			add_timed_idea = {
 				idea = ITA_aviazione_legionaria
@@ -9280,46 +9243,8 @@ focus_tree = {
 		relative_position_id = ITA_corpo_di_truppe_volontarie
 		cost = 5
 		available = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "La Resistance" }
-				}
-				any_other_country = {
-					original_tag = SPR
-					has_government = fascism
-					has_war = no
-					owns_state = 177
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				SPA = {
-					has_war = no
-					owns_state = 177
-				}
-			}
-			is_puppet = no
-		}
-		cancel = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "La Resistance" }
-				}
-				any_other_country = {
-					original_tag = SPR
-					has_government = fascism
-					has_war_with = ROOT
-					owns_state = 177
-				}
-			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				has_war_with = ROOT
-				owns_state = 177
+			SPA = {
+				has_war = no
 			}
 		}
 
