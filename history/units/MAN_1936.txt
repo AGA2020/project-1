@@ -105,14 +105,6 @@ division_template = {
 }
 
 ##### OOB #####
-units = {
-	division= {
-		location = 4572
-		division_template = "40W"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.01
-	}
-}
 
 ########## STARTING PRODUCTION ##########
 instant_effect = {
