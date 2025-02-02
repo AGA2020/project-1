@@ -2676,12 +2676,15 @@ focus_tree = {
 		relative_position_id = ITA_steel_industry_in_terni
 		cost = 5
 		available = {
-			has_tech = synth_oil_experiments
+			num_of_owned_factories > 80
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
+			set_technology = {
+			    synth_oil_experiments = 1
+			}
 			add_tech_bonus = {
 				name = ITA_industria_della_gomma_sintetica
 				bonus = 0.5
@@ -2922,7 +2925,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = ITA_italian_highways_bba
-		cost = 10
+		cost = 5
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -2957,6 +2960,10 @@ focus_tree = {
 			#Roma - Napoli
 			build_railway = {
 				path = { 9904 11846 923 9826 819 }
+			}
+
+			build_railway = {
+				path = { 9990 4159 }
 			}
 		}
 	}
@@ -7993,6 +8000,8 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
+		custom_effect_tooltip = ITA_increase_production_aga_tt
+		add_to_variable = { ITA_military_industry_dm_factory_max_efficiency_factor = 0.05 }
 			#CLAIM IN CORSICA
 			if = {
 				limit = {
