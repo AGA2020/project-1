@@ -6655,7 +6655,10 @@ focus_tree = {
 				create_intelligence_agency = yes
 			}
 			add_ideas = ITA_servizio_informazione_militare_ns
+			custom_effect_tooltip = generic_skip_one_line_tt
 			ITA_create_rosa_dainelli_operative = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_country_leader_trait = Supremo_Collaboratore
 		}
 	}
 

@@ -146,6 +146,8 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = 100
 				conversion_cost_mil_to_civ_factor = 100
 				enemy_operative_detection_chance = -200
+				enemy_operative_harmed_time_factor = -1
+				enemy_operative_forced_into_hiding_time_factor = -1
 			}
 		}
 	}
