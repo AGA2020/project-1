@@ -2965,7 +2965,7 @@ focus_tree = {
 	focus = {
 		id = BRA_support_rural_folk
 		icon = GFX_focus_BRA_father_of_the_poor
-		prerequisite = { focus = BRA_reward_army_loyalty focus = BRA_reinvigorate_the_navy }
+		prerequisite = { focus = BRA_reward_army_loyalty }
 		mutually_exclusive = { focus = BRA_support_the_landowners }
 		x = 2
 		y = 0
