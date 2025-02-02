@@ -2119,15 +2119,6 @@ characters = {
 				planning_skill = 3
 				logistics_skill = 2
 				legacy_id = -1
-				visible = {
-					OR = {
-						original_tag = AUS
-						AND = {
-							original_tag = GER
-							has_country_flag = AUS_annexed 
-						}
-					}
-				}
 			}
 		}
 

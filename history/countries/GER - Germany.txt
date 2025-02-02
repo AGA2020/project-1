@@ -592,6 +592,7 @@ recruit_character = GER_paul_von_lettow_vorbeck # He is "new"
 recruit_character = GER_carl_friedrich_goerdeler
 recruit_character = GER_wilhelm_iv
 recruit_character = GER_eva_braun
+recruit_character = AUS_eugen_beyer
 
 #SCIENTISTS
 recruit_character = GER_peter_adolf_thiessen
