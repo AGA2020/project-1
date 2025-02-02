@@ -894,8 +894,7 @@ ideas = {
 			}
 					
 			modifier = {
-				foreign_subversive_activites = -0.25
-				subversive_activites_upkeep = -0.25
+				operative_slot = 1
 			}
 		}
 

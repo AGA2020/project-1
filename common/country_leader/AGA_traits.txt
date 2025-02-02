@@ -1,7 +1,6 @@
 leader_traits = {
 	Supremo_Collaboratore = {
-		operation_collaboration_government_outcome = 0.25
-		operation_collaboration_government_cost = 0.25
+		operation_collaboration_government_cost = -0.5
 	}
 	nikonun_erkegi = {
 		random = no
