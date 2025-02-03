@@ -1,4 +1,5 @@
 ﻿l_english:
+  MAN_peaceful_development_tt:0 "Unlocks §YSecure Occupation§! decisions, allowing to ask for control over neighboring Chinese states occupied by our Japanese ally."
   ITA_increase_production_aga_tt:2 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+5.00%§! \n\n"
   Supremo_Collaboratore:0 "Supremo Collaboratore"
    GER_unlock_price_controls_decision_aga: "Unlocks Decision: §Y$haciyi_evinden_aldir$§!"
