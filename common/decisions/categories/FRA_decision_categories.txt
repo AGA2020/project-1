@@ -19,15 +19,6 @@ FRA_spanish_intervention_category = {
 	}
 }
 
-FRA_intervention_in_overseas_territories = {
-	allowed = {
-		original_tag = FRA
-	}
-	visible = {
-		has_completed_focus = FRA_appeal_to_overseas_territories
-	}
-}
-
 FRA_weapons_purchases_category = {
 	allowed = {
 		original_tag = FRA
