@@ -3877,13 +3877,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -3927,10 +3920,6 @@ focus_tree = {
 			NOT = {
 				has_idea = HUN_promises_of_peace
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -4029,10 +4018,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -4075,10 +4060,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -4094,17 +4075,7 @@ focus_tree = {
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = HUN_ferenc_szombathelyi
 			show_ideas_tooltip = HUN_vilmos_roder
-			IF = {
-				limit = {
-					NOT = {
-						OR = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
-				}
-				show_ideas_tooltip = HUN_karoly_beregfy
-			}
+			show_ideas_tooltip = HUN_karoly_beregfy
 
 		}
 	}
@@ -4128,14 +4099,6 @@ focus_tree = {
 
 		available = {
 			wuw_HUN_does_not_have_trianon = yes
-			AND = {
-				155 = {
-					is_owned_and_controlled_by = ROOT
-				}
-				43 = {
-					is_owned_and_controlled_by = ROOT
-				}
-			}
 		}
 
 		bypass = {
@@ -4158,43 +4121,12 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
-				limit = {
-					43 = {
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-				43 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-
-			IF = {
-				limit = {
-					155 = {
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-				155 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+			43 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
 				}
 			}
 
@@ -4220,13 +4152,6 @@ focus_tree = {
 
 		available = {
 			wuw_HUN_does_not_have_trianon = yes
-			43 = {
-				is_owned_and_controlled_by = ROOT
-			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -4235,16 +4160,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 2
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				prioritize = { 43 }
+			43 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -4286,10 +4202,6 @@ focus_tree = {
 			num_of_factories > 30
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -4326,47 +4238,22 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-			155 = {
-				is_owned_and_controlled_by = ROOT
-			}
-		}
-
-		bypass = {
-			NOT = {
-				155 = {
-					is_owned_and_controlled_by = ROOT
-				}
-			}
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
 
-			IF = {
-				limit = {
-					155 = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 2
-							include_locked = yes
-						}
-					}
+			155 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
-				155 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
-					add_resource = {
-						type = steel
-						amount = 2
-					}
+				add_resource = {
+					type = steel
+					amount = 2
 				}
 			}
 
@@ -4391,17 +4278,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		available = {
-			AND = {
-				ROOT = {
-					has_full_control_of_state = 155
-				}
-				ROOT = {
-					has_full_control_of_state = 974
-				}
-				ROOT = {
-					has_full_control_of_state = 973
-				}
-			}
 			has_tech = excavation3
 		}
 
@@ -4474,15 +4350,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-			#has_country_flag = HUN_activated_huba_ii_flag
-			has_capitulated = no
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -4522,13 +4389,6 @@ focus_tree = {
 			NOT = {
 				has_idea = HUN_revaluing_the_pengo
 			}
-			any_country = {
-				is_major = yes
-				has_opinion = {
-					target = ROOT
-					value > 59
-				}
-			}
 		}
 
 		bypass = {
@@ -4563,14 +4423,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -4597,39 +4449,18 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-			43 = {
-				is_owned_and_controlled_by = ROOT
-			}
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
 
-			IF = {
-				limit = {
-					43 = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-				43 = {
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+			43 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
 
@@ -4655,14 +4486,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-		}
-
-		available = {
-			ROOT = { has_full_control_of_state = 43 }
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -4700,10 +4523,6 @@ focus_tree = {
 			num_of_factories > 50
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -4730,18 +4549,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-			any_state = {
-				is_owned_by = ROOT
-				is_core_of = ROOT
-			}
-			#has_country_flag = HUN_activated_huba_1_flag
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -4752,15 +4559,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+			154 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -4809,14 +4608,6 @@ focus_tree = {
 			factor = 3
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -4847,14 +4638,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -4898,14 +4681,6 @@ focus_tree = {
 			factor = 3
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -4943,33 +4718,13 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-			any_state = {
-				is_owned_by = ROOT
-				is_core_of = ROOT
-			}
-			#has_country_flag = HUN_activated_huba_1_flag
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
 
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+			973 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -4980,22 +4735,10 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = HUN_mavag_aircraft_organization
-
-				mio:HUN_mavag_aircraft_organization = {
-					add_mio_size = 3
-				}
-
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = mavag_aircraft
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = HUN_mavag_aircraft_organization
+			mio:HUN_mavag_aircraft_organization = {
+				add_mio_size = 3
 			}
 
 		}
@@ -5016,14 +4759,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -5064,14 +4799,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -5096,14 +4823,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -5131,63 +4850,6 @@ focus_tree = {
 		}
 	}
 
-	#focus = {
-	#	id = wuw_HUN_the_szekesfehervar_sosto_plant
-	#	icon = GFX_focus_generic_reorient_production
-	#	prerequisite = { focus = wuw_HUN_repulo_muszaki_intezet }
-	#	#mutually_exclusive = { focus = wuw_HUN_the_mavag_heja }
-	#	x = 1
-	#	y = 2
-	#	relative_position_id = wuw_HUN_repulo_muszaki_intezet
-#
-	#	search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY }
-#
-	#	cost = 10
-#
-	#	ai_will_do = {
-	#		factor = 1
-	#	}
-#
-	#	available = {
-	#		any_state = {
-	#			is_owned_by = ROOT
-	#			is_core_of = ROOT
-	#		}
-	#		has_country_flag = HUN_activated_huba_1_flag
-	#	}
-	#
-	#	bypass = {
-#
-	#	}
-#
-	#	cancel_if_invalid = no
-	#	continue_if_invalid = yes
-	#	available_if_capitulated = no
-#
-	#	completion_reward = {
-#
-	#		air_experience = 25
-#
-	#		random_owned_controlled_state = {
-	#			limit = {
-	#				is_core_of = ROOT
-	#				free_building_slots = {
-	#					building = arms_factory
-	#					size > 1
-	#					include_locked = yes
-	#				}
-	#			}
-	#			add_extra_state_shared_building_slots = 1
-	#			add_building_construction = {
-	#				type = arms_factory
-	#				level = 1
-	#				instant_build = yes
-	#			}
-	#		}
-#
-	#	}
-	#}
-
 	focus = {
 		id = wuw_HUN_joint_air_development
 		icon = GFX_goal_generic_air_production
@@ -5207,10 +4869,6 @@ focus_tree = {
 
 		available = {
 			is_in_faction = yes
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -5258,14 +4916,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -5410,11 +5060,6 @@ focus_tree = {
 
 		available = {
 			is_in_faction = yes
-			is_faction_leader = no
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -5447,14 +5092,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 2
-						include_locked = yes
-					}
-				}
+			974 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -5483,14 +5121,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -5506,22 +5136,10 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = HUN_danuvia_inf_organization
-
-				mio:HUN_danuvia_inf_organization = {
-					add_mio_size = 2
-				}
-
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = HUN_danuvia_inf
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = HUN_danuvia_inf_organization
+			mio:HUN_danuvia_inf_organization = {
+				add_mio_size = 2
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -5546,14 +5164,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -5735,25 +5345,13 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		completion_reward = {
 
-			random_owned_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_core_of = ROOT
-				}
+			973 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -5763,23 +5361,10 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = HUN_mavag_assault_guns_organization
-
-				mio:HUN_mavag_assault_guns_organization = {
-					add_mio_size = 3
-				}
-
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = HUN_mavag_assault_guns
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = HUN_mavag_assault_guns_organization
+			mio:HUN_mavag_assault_guns_organization = {
+				add_mio_size = 3
 			}
 
 		}
@@ -5800,14 +5385,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -5865,14 +5442,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -5937,10 +5506,6 @@ focus_tree = {
 			has_war_support > 0.84
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -5967,10 +5532,6 @@ focus_tree = {
 
 		available = {
 			has_war = yes
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -6002,14 +5563,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -6104,10 +5657,6 @@ focus_tree = {
 
 		available = {
 			has_war = yes
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -6205,10 +5754,6 @@ focus_tree = {
 			num_of_factories > 29
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -6253,10 +5798,6 @@ focus_tree = {
 			has_war_support > 0.84
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -6283,14 +5824,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -6306,18 +5839,9 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				mio:HUN_mwg_raba_organization = {
-					add_mio_funds = 1500
-					add_mio_research_bonus = 0.05
-				}
-			}
-			ELSE = {
-				custom_effect_tooltip = available_industrial_concern
-				show_ideas_tooltip = HUN_mwg_raba
+			mio:HUN_mwg_raba_organization = {
+				add_mio_funds = 1500
+				add_mio_research_bonus = 0.05
 			}
 
 		}
@@ -6520,14 +6044,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-			#has_country_flag = HUN_activated_huba_ii_flag
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -6670,14 +6186,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -6772,14 +6280,6 @@ focus_tree = {
 			factor = 3
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -6800,17 +6300,12 @@ focus_tree = {
 				category = para_tech
 			}
 
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				add_doctrine_cost_reduction = {
-					name = wuw_HUN_invest_in_the_special_forces
-					cost_reduction = 0.5
-					uses = 2
-					category = special_forces_doctrine
-				}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_doctrine_cost_reduction = {
+				name = wuw_HUN_invest_in_the_special_forces
+				cost_reduction = 0.5
+				uses = 2
+				category = special_forces_doctrine
 			}
 
 		}
@@ -6835,16 +6330,6 @@ focus_tree = {
 
 		available = {
 			has_war = yes
-			73 = {
-				is_fully_controlled_by = ROOT
-			}
-			76 = {
-				is_fully_controlled_by = ROOT
-			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -7539,10 +7024,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -7619,10 +7100,6 @@ focus_tree = {
 				is_coastal = yes
 				is_controlled_by = ROOT
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -7710,14 +7187,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -7753,14 +7222,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -7792,14 +7253,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -7835,14 +7288,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -7881,14 +7326,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -7922,14 +7359,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -7967,14 +7396,6 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -8009,20 +7430,12 @@ focus_tree = {
 			factor = 1
 		}
 
-		allow_branch = {
-			has_dlc = "Man the Guns"
-		}
-
 		available = {
 			has_tech = basic_ship_hull_heavy
 			any_state = {
 				is_coastal = yes
 				is_controlled_by = ROOT
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -8086,14 +7499,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
