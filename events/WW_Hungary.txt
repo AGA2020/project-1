@@ -38,45 +38,6 @@ country_event = {
 }
 
 
-# Hungarian Weapon Shipments Arrive - event for FIN
-country_event = {
-	id = WW_hungary.2
-	title = WW_hungary.2.t
-	desc = WW_hungary.2.desc
-	picture = GFX_report_event_merchant_ship_01
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	# Great!
-	option = { 
-		name = WW_hungary.2.a
-		ai_chance = {
-			factor = 100
-		}
-
-		add_equipment_to_stockpile = { 
-			type = infantry_equipment
-			amount = 500
-			producer = HUN
-		}	
-
-		add_equipment_to_stockpile = { 
-			type = support_equipment
-			amount = 250
-			producer = HUN
-		}
-		
-		add_offsite_building = {
-			type = arms_factory 
-			level = 1
-		}	
-
-	}
-}
-
-
 # PM Gyula Gömbös Dies - event for HUN
 country_event = {
 	id = WW_hungary.3
