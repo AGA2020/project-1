@@ -659,14 +659,6 @@ focus_tree = {
 			factor = 15
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -680,11 +672,6 @@ focus_tree = {
 			add_ideas = HUN_power_to_the_regent_idea
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			#custom_effect_tooltip = wuw_HUN_horthy_field_marshal_tt
-#
-			#custom_effect_tooltip = generic_skip_one_line_tt
-
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = HUN_magdolna_purgly
 		}
@@ -703,17 +690,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-		}
-
-		available = {
-			OR = {
-				has_government = neutrality
-				has_government = fascism
-			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -754,14 +730,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -810,10 +778,6 @@ focus_tree = {
 			has_country_flag = HUN_gombos_has_died_flag
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -855,22 +819,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-		}
-
-		available = {
-			has_country_leader = {
-				ruling_only = yes
-				character = HUN_miklos_horthy
-			}
-		}
-
-		bypass = {
-			NOT = {
-				has_country_leader = {
-					ruling_only = yes
-					character = HUN_miklos_horthy
-				}
-			}
 		}
 
 		cancel_if_invalid = no
@@ -964,14 +912,6 @@ focus_tree = {
 			factor = 15
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -1016,14 +956,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -1079,21 +1011,6 @@ focus_tree = {
 			factor = 15
 		}
 
-		available = {
-		}
-
-		bypass = {
-			OR = {
-				has_government = fascism
-				NOT = {
-					has_country_leader = {
-						ruling_only = yes
-						character = HUN_miklos_horthy
-					}
-				}
-			}
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -1103,18 +1020,11 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = HUN_volksbund_good
 
-			IF = {
-				limit = {
-					GER = {
-						has_government = fascism
-					}
-				}
-				GER = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = medium_increase
-					}	
-				}
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = medium_increase
+				}	
 			}
 		}
 	}
@@ -1132,22 +1042,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-			OR = {
-				has_government = fascism
-				NOT = {
-					has_country_leader = {
-						ruling_only = yes
-						character = HUN_miklos_horthy
-					}
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -1186,17 +1080,6 @@ focus_tree = {
 			factor = 15
 		}
 
-		available = {
-			NOT = {
-				has_government = fascism
-			}
-			is_subject = no
-		}
-
-		bypass = {
-			has_government = fascism
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -1227,19 +1110,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 25
 		}
-
-		available = {
-			OR = {
-				has_government = neutrality
-				has_government = fascism
-			}
-			is_subject = no
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -1337,13 +1207,6 @@ focus_tree = {
 			factor = 2
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -1370,13 +1233,6 @@ focus_tree = {
 			factor = 15
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -1393,42 +1249,22 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-					is_fully_controlled_by = ROOT
-				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 1
+			155 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_core_of = ROOT
-					is_fully_controlled_by = ROOT
-				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 1
+			43 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1449,13 +1285,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -1482,13 +1311,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -1523,13 +1345,6 @@ focus_tree = {
 			factor = 5
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -1552,14 +1367,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -1639,13 +1446,6 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -1681,33 +1481,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 2
-		}
-
-		select_effect = {
-			every_country = {
-				limit = {
-					has_government = communism
-					NOT = { is_in_faction_with = ROOT }
-					OR = {
-						is_major = yes
-						is_neighbor_of = ROOT
-					}
-				}
-				ROOT = {
-					add_ai_strategy = {
-						type = prepare_for_war
-						id = PREV
-						value = 100
-					}
-				}
-			}
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -1839,11 +1612,6 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-
-			hidden_effect = {
-				mark_focus_tree_layout_dirty = yes
-			}
-
 		}
 	}
 
@@ -1863,17 +1631,9 @@ focus_tree = {
 			factor = 5
 		}
 
-		allow_branch = {
-			has_dlc = "Gotterdammerung"
+		available = {
 			has_completed_focus = wuw_HUN_wherever_the_cross_points
 			has_completed_focus = wuw_HUN_strengthen_the_turani_vadaszok
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -1954,10 +1714,6 @@ focus_tree = {
 			has_war_support > 0.7
 		}
 
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -2023,14 +1779,7 @@ focus_tree = {
 					owns_state = 109
 					owns_state = 103
 				}
-				NOT = {
-					has_war_with = ROOT
-				}
 			}
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = no
@@ -2737,14 +2486,6 @@ focus_tree = {
 			factor = 40
 		}
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -2930,22 +2671,10 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = HUN_fiat_tankettes_organization
-
-				mio:HUN_fiat_tankettes_organization = {
-					add_mio_size = 1
-				}
-
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = HUN_fiat
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = HUN_fiat_tankettes_organization
+			mio:HUN_fiat_tankettes_organization = {
+				add_mio_size = 1
 			}
 
 		}
@@ -2979,11 +2708,6 @@ focus_tree = {
 			}
 			
 		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3045,13 +2769,6 @@ focus_tree = {
 			factor = 15
 		}
 
-		available = {
-		}
-
-		bypass = {
-
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -3067,35 +2784,13 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_state = {
-				limit = {
-					is_owned_and_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
+			973 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
-			}
-
-			random_state = {
-				limit = {
-					is_owned_and_controlled_by = ROOT
-					is_core_of = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -3106,7 +2801,6 @@ focus_tree = {
 					amount = 4
 				}
 			}
-
 		}
 	}
 
@@ -3123,13 +2817,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-		}
-
-		available = {
-		}
-
-		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
@@ -3179,35 +2866,13 @@ focus_tree = {
 
 		available = {
 			NOT = { 
-				has_war_with = GER 
 				has_country_flag = HUN_can_not_trust_germany_again_flag
 			}
-			is_subject = no
 			is_in_faction = no
-			NOT = {
-				any_other_country = {
-					is_in_faction_with = GER
-					has_war_with = HUN
-				}
-			}
-			GER = {
-				is_faction_leader = yes
-				has_government = fascism
-				is_subject = no
-			}
 		}
 
 		bypass = {
-			AND = {
-				is_in_faction_with = GER
-				GER = {
-					is_faction_leader = yes
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}
-				}
-			}
+			is_in_faction_with = GER
 		}
 
 		cancel_if_invalid = yes
@@ -3224,1066 +2889,6 @@ focus_tree = {
 					days = 2
 					random_days = 3
 				}
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_protect_austria
-		icon = GFX_focus_AUS_for_a_better_future
-		prerequisite = { focus = wuw_HUN_renew_the_rome_protocols }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_renew_the_rome_protocols
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 20
-		}
-
-		available = {
-			975 = {
-				is_owned_by = AUS
-			}
-			AUS = {
-				NOT = {
-					OR = {
-						is_guaranteed_by = ROOT
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		bypass = {
-			OR = {
-				AND = {
-					975 = {
-						NOT = { is_owned_by = AUS }
-					}
-					4 = {
-						NOT = { is_owned_by = AUS }
-					}
-					152 = {
-						NOT = { is_owned_by = AUS }
-					}
-					153 = {
-						NOT = { is_owned_by = AUS }
-					}
-					848 = {
-						NOT = { is_owned_by = AUS }
-					}
-					976 = {
-						NOT = { is_owned_by = AUS }
-					}
-				}
-				AUS = {
-					is_guaranteed_by = ROOT
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-
-			AUS = {
-				country_event = {
-					id = WW_hungary.8
-					days = 2
-					random_days = 3
-				}
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_an_alliance_with_italy
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = wuw_HUN_protect_austria }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_protect_austria
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-			is_in_faction = no
-			ITA = {
-				OR = {
-					is_in_faction = no
-					is_faction_leader = yes
-				}
-				is_subject = no
-				ITA_is_kinda_fascist = yes
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			IF = {
-				limit = {
-					ITA = { is_in_faction = no }
-				}
-				ROOT = {
-					set_rule = { can_create_factions = yes }
-					create_faction = HUN_PACT_OF_ROME_FACTION
-					ITA = {
-						country_event = generic.5
-						add_ai_strategy = {
-							type = alliance
-							id = "HUN"
-							value = 200
-						}
-					}
-					IF = {
-						limit = {
-							country_exists = AUS
-							AUS = {
-								is_subject = no
-							}
-						}
-						AUS = {
-							country_event = generic.5
-						}
-					}
-				}
-			}
-			IF = {
-				limit = {
-					ITA = { is_faction_leader = yes }
-				}
-				ITA = {
-					country_event = generic.2
-				}
-			}
-			IF = {
-				limit = {
-					ITA = { is_in_faction_with = FRA }
-				}
-				FRA = {
-					country_event = generic.2
-				}
-			}
-			hidden_effect = {
-				IF = {
-					limit = {
-						has_country_leader = {
-							ruling_only = yes
-							character = HUN_miklos_horthy
-						}
-					}
-					news_event = { id = news.313 }
-				}
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_parade_istvan_bethlens_platform
-		icon = GFX_focus_generic_workers
-		prerequisite = { focus = wuw_HUN_end_the_white_terror }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_end_the_white_terror
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_political_power = 50
-
-			#custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.1
-			}
-
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.15
-			}
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_salami_slicing_tactics
-		icon = GFX_focus_generic_infiltration
-		prerequisite = { focus = wuw_HUN_parade_istvan_bethlens_platform }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			add_timed_idea = {
-				idea = HUN_salami_slicing_tactics_idea
-				days = 360
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = wuw_HUN_salami_slicing_tactics_tt
-
-			hidden_effect = {
-				set_country_flag = HUN_revolutinaries_sliced_some_salami_flag
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_politicize_the_levente_associations
-		icon = GFX_focus_por_workers_of_iberia
-		prerequisite = { focus = wuw_HUN_parade_istvan_bethlens_platform }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = -2
-		y = 1
-		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-
-			custom_effect_tooltip = wuw_HUN_politicize_the_levente_associations_tt
-
-			hidden_effect = {
-				set_country_flag = HUN_revolutinaries_secured_levente_loyalty_flag
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_undermine_the_volksbund
-		icon = GFX_focus_HUN_dissolve_the_volksbund
-		prerequisite = { focus = wuw_HUN_parade_istvan_bethlens_platform }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = 2
-		y = 1
-		relative_position_id = wuw_HUN_parade_istvan_bethlens_platform
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-
-			custom_effect_tooltip = wuw_HUN_undermine_the_volksbund_tt
-
-			hidden_effect = {
-				set_country_flag = HUN_revolutinaries_undermined_the_volksbund_flag
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_reviving_the_spirit_of_1848
-		icon = GFX_focus_generic_workers_and_farmers_rise
-		prerequisite = { focus = wuw_HUN_politicize_the_levente_associations focus = wuw_HUN_undermine_the_volksbund focus = wuw_HUN_salami_slicing_tactics }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_salami_slicing_tactics
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available = {
-			has_war = no
-			custom_trigger_tooltip = {
-				tooltip = wuw_HUN_reviving_the_spirit_of_1848_requirements_tt
-				OR = {
-					AND = {
-						democratic > party_popularity@neutrality
-						democratic > party_popularity@fascism
-					}
-					AND = {
-						communism > party_popularity@neutrality
-						communism > party_popularity@fascism
-					}
-				}
-			}
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-
-				custom_effect_tooltip = wuw_HUN_reviving_the_spirit_of_1848_tt
-				hidden_effect = {
-
-					IF = {
-						limit = {
-							has_idea = HUN_gombos_trade_treaty
-						}
-						remove_ideas = HUN_gombos_trade_treaty
-					}
-
-					start_civil_war = {
-					    ideology = neutrality
-					    ruling_party = democratic
-					    size = 0.5
-					    army_ratio = 0.4
-					    navy_ratio = 0.5
-					    air_ratio = 0.5
-					    keep_all_characters = yes
-					    states = all
-					    states_filter = {
-					        OR = {
-					        	state = 43
-					        	state = 154
-					        }
-					        is_controlled_by = ROOT
-					    }
-
-				    	PREV = {  # Original country
-				            HUN_miklos_horthy_jr = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_miklos_horthy = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_istvan_horthy = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_magdolna_purgly = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_dezso_laszlo = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_ferenc_feketehalmyczeydner = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_jeno_oszkar_ruszkay = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_karoly_beregfy = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_dome_sztojay = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_gyula_gombos_de_jakfa = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_jusztinian_seredi = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_fidel_palffy = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-				            HUN_kalman_daranyi = { # Character
-				                set_nationality = PREV.PREV
-				                # Transfers to breakaway
-				            }
-			        	}
-			        	IF = {
-			        		limit = {
-			        			PREV.PREV = {
-			        				NOT = {
-			        					has_country_leader = {
-			        						ruling_only = yes
-			        						character = HUN_miklos_horthy
-			        					}
-			        				}
-			        				has_civil_war = yes
-			        			}
-			        		}
-			        		PREV.PREV = {
-			        			promote_character = {
-			        				character = HUN_miklos_horthy
-			        				ideology = oligarchism
-			        			}
-			        		}
-			        	}
-
-				        IF = {
-				        	limit = {
-				        		NOT = {
-				        			ROOT = {
-				        				has_country_flag = HUN_revolutinaries_undermined_the_volksbund_flag
-				        			}
-				        		}
-				        	}
-				        	PREV.PREV = {
-
-				        		delete_unit_template_and_units = {
-				        			division_template = "Volksbund Militia"
-				        			disband = yes #if yes, will refund equipment/manpower.
-				        		}
-
-				        		division_template = {
-				        		    name = "Volksbund Militia"
-				        		    is_locked = yes
-				        		    division_names_group = GER_INF_01
-									role = garrison
-				        		    priority = 0
-				        		    regiments = {
-				        		        militia = { x = 0 y = 0 }
-				        		        militia = { x = 0 y = 1 }
-				        		        militia = { x = 0 y = 2 }
-				        		        militia = { x = 0 y = 3 }
-				        		        militia = { x = 1 y = 0 }
-				        		        militia = { x = 1 y = 1 }
-				        		        militia = { x = 1 y = 2 }
-				        		        militia = { x = 1 y = 3 }
-				        		    }
-				        		}
-				        		random_state = {
-				        			limit = {
-				        				OR = {
-				        					state = 43
-				        					state = 154
-				        				}
-				        			}
-				        			create_unit = {
-				        			    division = "name = \"Erste Volksbundmiliz\" division_template = \"Volksbund Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.7"
-				        			    owner = PREV
-				        			}
-				        			create_unit = {
-				        			    division = "name = \"Zweite Volksbundmiliz\" division_template = \"Volksbund Militia\" start_experience_factor = 0.5 start_equipment_factor = 0.7"
-				        			    owner = PREV
-				        			}
-				        		}
-				        	}
-				        }
-
-				        IF = {
-				        	limit = {
-				        		NOT = {
-				        			ROOT = {
-				        				has_country_flag = HUN_revolutinaries_sliced_some_salami_flag
-				        			}
-				        		}
-				        	}
-				        	PREV.PREV = {
-
-				        		delete_unit_template_and_units = {
-				        			division_template = "Horthysta Gyalogdándar"
-				        			disband = yes #if yes, will refund equipment/manpower.
-				        		}
-
-				        		division_template = {
-				        		    name = "Horthysta Gyalogdándar"
-				        		    is_locked = yes
-				        		    division_names_group = HUN_INF_01
-									role = infantry
-				        		    priority = 0
-				        		    regiments = {
-				        		        infantry = { x = 0 y = 0 }
-				        		        infantry = { x = 0 y = 1 }
-				        		        infantry = { x = 0 y = 2 }
-				        		        infantry = { x = 0 y = 3 }
-				        		        infantry = { x = 1 y = 0 }
-				        		        infantry = { x = 1 y = 1 }
-				        		    }
-				        		    support = {
-				        		    	engineer = { x = 0 y = 0 }
-				        		    	artillery = { x = 0 y = 1 }
-				        		    }
-				        		}
-				        		random_state = {
-				        			limit = {
-				        				state = 43
-				        			}
-				        			create_unit = {
-				        			    division = "name = \"Horthysta Gyalogdándar\" division_template = \"Horthysta Gyalogdándar\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-				        			    owner = PREV
-				        			}
-				        		}
-				        	}
-				        }
-
-				        PREV.PREV = {
-
-				        	delete_unit_template_and_units = {
-				        		division_template = "Fasiszta Milícia"
-				        		disband = yes #if yes, will refund equipment/manpower.
-				        	}
-
-				        	division_template = {
-				        	    name = "Fasiszta Milícia"
-				        	    is_locked = yes
-				        	    division_names_group = HUN_INF_01
-								role = garrison
-				        	    priority = 0
-				        	    regiments = {
-				        	        militia = { x = 0 y = 0 }
-				        	        militia = { x = 0 y = 1 }
-				        	        militia = { x = 0 y = 2 }
-				        	        militia = { x = 0 y = 3 }
-				        	        militia = { x = 1 y = 0 }
-				        	        militia = { x = 1 y = 1 }
-				        	        militia = { x = 1 y = 2 }
-				        	        militia = { x = 1 y = 3 }
-				        	    }
-				        	}
-				        	random_state = {
-				        		limit = {
-				        			state = 43
-				        		}
-				        		create_unit = {
-				        		    division = "name = \"Fasiszta Milícia\" division_template = \"Fasiszta Milícia\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
-				        		    owner = PREV
-				        		}
-				        	}
-
-				        	delete_unit_template_and_units = {
-				        		division_template = "Monarchista Milícia"
-				        		disband = yes #if yes, will refund equipment/manpower.
-				        	}
-
-				        	division_template = {
-				        	    name = "Monarchista Milícia"
-				        	    is_locked = yes
-				        	    division_names_group = HUN_INF_01
-								role = garrison
-				        	    priority = 0
-				        	    regiments = {
-				        	        militia = { x = 0 y = 0 }
-				        	        militia = { x = 0 y = 1 }
-				        	        militia = { x = 0 y = 2 }
-				        	        militia = { x = 0 y = 3 }
-				        	        militia = { x = 1 y = 0 }
-				        	        militia = { x = 1 y = 1 }
-				        	        militia = { x = 1 y = 2 }
-				        	        militia = { x = 1 y = 3 }
-				        	    }
-				        	}
-				        	random_state = {
-				        		limit = {
-				        			state = 43
-				        		}
-				        		create_unit = {
-				        		    division = "name = \"Monarchista Milícia\" division_template = \"Monarchista Milícia\" start_experience_factor = 0.5 start_equipment_factor = 0.5"
-				        		    owner = PREV
-				        		}
-				        	}
-				        }
-
-				        IF = {
-				        	limit = {
-				        		ROOT = {
-				        			NOT = {
-				        				has_country_flag = HUN_revolutinaries_secured_levente_loyalty_flag
-				        			}
-				        			has_idea = HUN_levente_associations
-				        		}
-				        	}
-				        	PREV.PREV = {
-				        		add_ideas = HUN_levente_associations
-				        	}
-				        	ROOT = {
-				        		remove_ideas = HUN_levente_associations
-				        	}
-				        }
-				        ELSE_IF = {
-				        	limit = {
-				        		ROOT = {
-				        			NOT = {
-				        				has_country_flag = HUN_revolutinaries_secured_levente_loyalty_flag
-				        			}
-				        			has_idea = HUN_levente_associations_secret_rearmament
-				        		}
-				        	}
-				        	PREV.PREV = {
-				        		add_ideas = HUN_levente_associations_secret_rearmament
-				        	}
-				        	ROOT = {
-				        		remove_ideas = HUN_levente_associations_secret_rearmament
-				        	}
-				        }
-				        ELSE_IF = {
-				        	limit = {
-				        		ROOT = {
-				        			has_country_flag = HUN_revolutinaries_secured_levente_loyalty_flag
-				        			has_idea = HUN_levente_associations
-				        		}
-				        	}
-				        	PREV.PREV = {
-				        		remove_ideas = HUN_levente_associations
-				        	}
-				        }
-				        ELSE_IF = {
-				        	limit = {
-				        		ROOT = {
-				        			has_country_flag = HUN_revolutinaries_secured_levente_loyalty_flag
-				        			has_idea = HUN_levente_associations_secret_rearmament
-				        		}
-				        	}
-				        	PREV.PREV = {
-				        		remove_ideas = HUN_levente_associations_secret_rearmament
-				        	}
-				        }
-
-				        PREV.PREV = {
-				        	add_ideas = HUN_hungarian_national_defense_association
-				        }
-
-				        IF = {
-				        	limit = {
-				        		ROOT = {
-				        			is_ai = yes 
-				        		}
-				        	}
-				        	PREV.PREV = {
-				        		add_ideas = HUN_low_popular_support
-				        	}
-				        }
-
-
-					}
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				add_country_leader_role = {
-				    character = HUN_mihaly_karolyi
-				    promote_leader = yes
-				    country_leader = {
-				        ideology = conservatism
-				        expire = "1965.1.1.1"
-				        traits = { HUN_veteran_president }
-				    }
-				}
-
-				set_party_name = {
-				    ideology = democratic
-				    long_name = HUN_48part_democratic_party_long
-				    name = HUN_48part_democratic_party
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				IF = {
-					limit = {
-						has_country_flag = HUN_revolutinaries_undermined_the_volksbund_flag
-					}
-					add_war_support = 0.15
-					add_political_power = 75
-					custom_effect_tooltip = generic_skip_one_line_tt
-				}
-
-				IF = {
-					limit = {
-						has_country_flag = HUN_revolutinaries_secured_levente_loyalty_flag
-					}
-					add_manpower = 8000
-				}
-
-				hidden_effect = {
-					delete_unit_template_and_units = {
-						division_template = "Kommunista Milícia"
-						disband = yes #if yes, will refund equipment/manpower.
-					}
-
-					division_template = {
-					    name = "Kommunista Milícia"
-					    is_locked = no
-					    division_names_group = HUN_INF_01
-						role = garrison
-					    priority = 0
-					    regiments = {
-					        militia = { x = 0 y = 0 }
-					        militia = { x = 0 y = 1 }
-					        militia = { x = 0 y = 2 }
-					        militia = { x = 0 y = 3 }
-					        militia = { x = 1 y = 0 }
-					        militia = { x = 1 y = 1 }
-					    }
-					    support = {
-					    }
-					}
-					random_state = {
-						limit = {
-							state = 973
-						}
-						create_unit = {
-						    division = "name = \"Kommunista Milícia\" division_template = \"Kommunista Milícia\" start_experience_factor = 0.5 start_equipment_factor = 0.6"
-						    owner = PREV
-						}
-					}
-
-					delete_unit_template_and_units = {
-						division_template = "Szocialista Milícia"
-						disband = yes #if yes, will refund equipment/manpower.
-					}
-
-					division_template = {
-					    name = "Szocialista Milícia"
-					    is_locked = no
-					    division_names_group = HUN_INF_01
-						role = garrison
-					    priority = 0
-					    regiments = {
-					        militia = { x = 0 y = 0 }
-					        militia = { x = 0 y = 1 }
-					        militia = { x = 0 y = 2 }
-					        militia = { x = 0 y = 3 }
-					        militia = { x = 1 y = 0 }
-					    }
-					    support = {
-					    }
-					}
-					random_state = {
-						limit = {
-							state = 155
-						}
-						create_unit = {
-						    division = "name = \"Szocialista Milícia\" division_template = \"Szocialista Milícia\" start_experience_factor = 0.5 start_equipment_factor = 0.6"
-						    owner = PREV
-						}
-					}
-				}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_officialize_the_rakosi_battalion
-		icon = GFX_focus_HUN_officialize_the_rakosi_battalion
-		prerequisite = { focus = wuw_HUN_reviving_the_spirit_of_1848 }
-		
-		x = 2
-		y = 1
-		relative_position_id = wuw_HUN_reviving_the_spirit_of_1848
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = HUN_the_rakosi_battalion_idea
-			set_rule = { can_send_volunteers = yes }
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_elections_in_the_revolutionary_council
-		icon = GFX_focus_ETH_re-convene_the_parliament
-		prerequisite = { focus = wuw_HUN_reviving_the_spirit_of_1848 }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_reviving_the_spirit_of_1848
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 25
-		}
-
-		available = {
-			has_civil_war = no
-			OR = {
-				AND = {
-					is_subject = yes
-					any_country = {
-						has_subject = ROOT
-						has_government = democratic
-					}
-				}
-				AND = {
-					is_subject = yes
-					any_country = {
-						has_subject = ROOT
-						has_government = communism
-					}
-				}
-				is_subject = no
-			}
-			OR = {
-				has_government = democratic
-				has_government = communism
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
-
-		completion_reward = {
-
-			country_event = {
-				id = WW_hungary.94
-				hours = 0
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_join_the_comintern
-		icon = GFX_focus_generic_join_comintern
-		prerequisite = { focus = wuw_HUN_elections_in_the_revolutionary_council }
-		mutually_exclusive = { focus = wuw_HUN_restore_the_socialist_federative_republic focus = wuw_HUN_establish_the_second_republic }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_elections_in_the_revolutionary_council
-		allow_branch = { always = no }
-		cost = 5
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				SOV = { has_capitulated = yes }
-			}
-		}
-
-		available = {
-			ANY_comintern_joinable = yes
-			is_in_faction = no
-			IF = {
-				limit = { SOV = { has_government = communism }}
-				NOT = {
-					any_other_country = {
-						is_in_faction_with = SOV
-						has_war_with = HUN
-					}
-				}
-			}
-			is_subject = no
-			communism > 0.4
-			has_country_leader = {
-				ruling_only = yes
-				character = HUN_matyas_rakosi
-			}
-		}
-
-		bypass = {
-			OR = {
-				is_subject_of = SOV
-				is_in_faction_with = SOV
-			}
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			add_political_power = 75
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					SOV = {
-						has_government = communism
-						is_faction_leader = yes
-					}
-				}
-				SOV = {
-					country_event = generic.2
-				}
-			}
-			ELSE = {
-				get_best_alliance_match_communism_effect = yes
-				var:best_leader = {
-					country_event = generic.2
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = HUN_erno_gero
-
-			hidden_effect = {
-
-				news_event = { id = wuw_HUN_news_events.8 }
-
-			}
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_restore_the_socialist_federative_republic
-		icon = GFX_focus_SWE_refuge_for_revolutionaries
-		prerequisite = { focus = wuw_HUN_elections_in_the_revolutionary_council }
-		mutually_exclusive = { focus = wuw_HUN_join_the_comintern focus = wuw_HUN_establish_the_second_republic }
-		x = 6
-		y = 1
-		relative_position_id = wuw_HUN_elections_in_the_revolutionary_council
-		allow_branch = { always = no }
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-
-			add_political_power = 50
-			add_stability = 0.05
-			add_war_support = 0.05
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			set_rule = {
-				can_create_factions = yes
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = HUN_janos_kadar
-
-			hidden_effect = {
-				news_event = { id = wuw_HUN_news_events.7 }
-
 			}
 
 		}
