@@ -350,7 +350,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_agrarian_reform
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_generic_farmland
 		prerequisite = { focus = ROM_civil_works }
 		x = 0
 		y = 1
