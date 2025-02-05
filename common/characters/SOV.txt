@@ -225,7 +225,7 @@ characters = {
 			attack_skill = 7
 			defense_skill = 10
 			planning_skill = 6
-			logistics_skill = 6
+			logistics_skill = 10
 			legacy_id = 402
 			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
@@ -672,7 +672,7 @@ characters = {
 			attack_skill = 8
 			defense_skill = 10
 			planning_skill = 7
-			logistics_skill = 6
+			logistics_skill = 10
 			legacy_id = 0
 			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
