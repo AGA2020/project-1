@@ -1614,10 +1614,7 @@ HUN_territorial_revision_category = {
 
 		visible = { 
 			original_tag = HUN
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			NOT = { has_country_flag = HUN_reintigrated_north_transylvania_flag }
 			76 = {
 				NOT = {
@@ -1627,10 +1624,7 @@ HUN_territorial_revision_category = {
 		} 
 
 		available = {
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			controls_state = 76
 		}
 
@@ -1701,10 +1695,7 @@ HUN_territorial_revision_category = {
 
 		visible = { 
 			original_tag = HUN
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			NOT = { has_country_flag = HUN_reintigrated_south_transylvania_flag }
 			84 = {
 				NOT = {
@@ -1714,10 +1705,7 @@ HUN_territorial_revision_category = {
 		} 
 
 		available = {
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			controls_state = 84
 		}
 
@@ -1788,10 +1776,7 @@ HUN_territorial_revision_category = {
 
 		visible = { 
 			original_tag = HUN
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			NOT = { has_country_flag = HUN_reintigrated_crisana_flag }
 			83 = {
 				NOT = {
@@ -1801,10 +1786,7 @@ HUN_territorial_revision_category = {
 		} 
 
 		available = {
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			controls_state = 83
 		}
 
@@ -1875,10 +1857,7 @@ HUN_territorial_revision_category = {
 
 		visible = { 
 			original_tag = HUN
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			NOT = { has_country_flag = HUN_reintigrated_banat_flag }
 			82 = {
 				NOT = {
@@ -1888,10 +1867,7 @@ HUN_territorial_revision_category = {
 		} 
 
 		available = {
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			controls_state = 82
 		}
 
