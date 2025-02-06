@@ -5032,98 +5032,14 @@ country_event = {
 
 	is_triggered_only = yes
 
-	trigger = {
-		NOT = { has_war_with = GER }
-	}
-
-	option = {
-		name = germany.86.a
-		ai_chance = {
-			base = 20
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		GER = { country_event = { id = germany.87 days = 1 } }
-		effect_tooltip = {
-			GER = {
-				transfer_state = 85
-				add_state_core = 85
-				transfer_state = 807
-				add_state_core = 807
-				remove_state_claim = 86
-				remove_state_claim = 762
-			}
-		}
-		country_event = { id = poland.1 days = 7 }
-		hidden_effect = {
-			news_event = { id = news.203 hours = 6 }
-		}
-	}
-
 	option = {
 		name = germany.86.b
 		ai_chance = {
 			base = 80
-			modifier = {
-				factor = 3
-				strength_ratio = {
-					tag = GER
-					ratio > 0.7
-				}
-			}
-			modifier = {
-				factor = 10
-				any_other_country = {
-					is_major = yes
-					is_in_faction_with = POL
-				}
-			}
 		}
 		GER = {
 			country_event = { id = germany.88 days = 1 }
-			if = {
-				limit = {
-					is_in_faction_with = POL
-					is_faction_leader = yes
-				}
-				remove_from_faction = POL
-			}
-			if = {
-				limit = {
-					is_in_faction_with = POL
-					is_faction_leader = no
-				}
-				random_other_country = {
-					limit = {
-						is_in_faction_with = GER
-						is_faction_leader = yes
-					}
-					remove_from_faction = GER
-				}
-			}
 		}
-
-		if = {
-			limit = {
-				has_guaranteed = LIT
-				is_guaranteed_by = LIT
-			}
-			diplomatic_relation = {
-				country = LIT
-				relation = guarantee
-				active = no
-			}
-			LIT = {
-				diplomatic_relation = {
-					country = POL
-					relation = guarantee
-					active = no
-				}
-			}
-		}
-
 		hidden_effect = {
 			news_event = { hours = 1 id = news.204 }
 		}
@@ -5134,50 +5050,6 @@ country_event = {
 					type = take_state
 					generator = { 85 }
 				}
-			}
-		}
-	}
-}
-
-# Poland Cedes Danzig (Danzig or War)
-country_event = {
-	id = germany.87
-	title = germany.87.t
-	desc = germany.87.d
-	picture = GFX_report_event_german_polish_border
-
-	is_triggered_only = yes
-
-	option = {
-		name = germany.87.a
-		transfer_state = 85
-		add_state_core = 85
-		transfer_state = 807
-		add_state_core = 807
-		remove_state_claim = 86
-		remove_state_claim = 762
-		if = {
-			limit = {
-				ENG = {
-					NOT = {
-						is_in_faction_with = GER
-					}
-				}
-			}
-			ENG = {
-				add_war_support = -0.1 #dodged a bullet there
-			}
-		}
-		if = {
-			limit = {
-				FRA = {
-					NOT = {
-						is_in_faction_with = GER
-					}
-				}
-			}
-			FRA = {
-				add_war_support = -0.1 #dodged a bullet there
 			}
 		}
 	}
@@ -5194,48 +5066,6 @@ country_event = {
 
 	option = {
 		name = germany.88.a
-		if = {
-			limit = {
-				POL = {
-					is_subject = yes
-					OVERLORD = {
-						has_non_aggression_pact_with = GER
-					}
-				}
-			}
-			POL = {
-				OVERLORD = {
-					diplomatic_relation = {
-						country = GER
-						relation = non_aggression_pact
-						active = no
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				POL = {
-					has_non_aggression_pact_with = GER
-				}
-			}
-			POL = {
-				diplomatic_relation = {
-					country = GER
-					relation = non_aggression_pact
-					active = no
-				}
-			}
-			every_other_country = {
-				limit = {
-					has_non_aggression_pact_with = GER
-				}
-				add_opinion_modifier = {
-					target = GER
-   					modifier = protest_action_strong
-				}
-			}
-		}
 		create_wargoal = {
 			type = take_state
 			generator = { 85 807 }
@@ -5243,51 +5073,11 @@ country_event = {
 		}
 		add_state_core = 85
 		add_state_core = 807
-		if = {
-			limit = {
-				ENG = {
-					NOT = {
-						is_in_faction_with = GER
-					}
-				}
-			}
-			ENG = {
-				add_war_support = 0.1 #just not cricket
-			}
+		ENG = {
+			add_war_support = 0.1 #just not cricket
 		}
-		if = {
-			limit = {
-				FRA = {
-					NOT = {
-						is_in_faction_with = GER
-					}
-				}
-			}
-			FRA = {
-				add_war_support = 0.1
-			}
-		}
-		if = {
-			limit = {
-				CZE = {
-					exists = yes
-					is_subject = no
-					has_government = democratic
-					NOT = { is_in_faction_with = GER }
-				}
-			}
-			CZE = {
-				add_ai_strategy = {
-					type = conquer
-					id = "GER"
-					value = 200
-				}
-				add_ai_strategy = {
-					type = alliance
-					id = "POL"
-					value = 200
-				}
-			}
+		FRA = {
+			add_war_support = 0.1
 		}
 	}
 }
