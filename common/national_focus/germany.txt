@@ -203,20 +203,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			every_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 1
+			58 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -257,15 +248,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
+			51 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -301,15 +284,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
+			55 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -364,30 +339,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = {
-				limit = {
-					763 = { #Köningsberg
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				763 = { set_state_category = large_city }
-			}
-			if = {
-				limit = {
-					56 = { #Weser-Ems
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				56 = { set_state_category = large_city }
-			}
+			763 = { set_state_category = large_city }
+			56 = { set_state_category = large_city }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			every_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-				}
-				random_select_amount = 2
+			67 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			978 = {
 				add_extra_state_shared_building_slots = 1
 			}
 
@@ -456,15 +416,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
+			57 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -472,15 +424,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
+			57 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -562,29 +506,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			if = {	
-				limit = {
-					42 = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-					}
+			42 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
-				42 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
 			}
 
@@ -643,46 +575,11 @@ focus_tree = {
 
 		completion_reward = {
 
-			if = {
-				limit = {
-					909 = {
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				909 = { add_extra_state_shared_building_slots = 1 }
-			}
-			if = {
-				limit = {
-					61 = {
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				61 = { add_extra_state_shared_building_slots = 1 }
-			}
-			if = {
-				limit = {
-					62 = {
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				62 = { add_extra_state_shared_building_slots = 1 }
-			}
-			if = {
-				limit = {
-					63 = {
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				63 = { add_extra_state_shared_building_slots = 1 }
-			}
-			if = {
-				limit = {
-					5 = {
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				5 = { add_extra_state_shared_building_slots = 1 }
-			}
+			909 = { add_extra_state_shared_building_slots = 1 }
+			61 = { add_extra_state_shared_building_slots = 1 }
+			62 = { add_extra_state_shared_building_slots = 1 }
+			63 = { add_extra_state_shared_building_slots = 1 }
+			5 = { add_extra_state_shared_building_slots = 1 }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -704,37 +601,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_agricultural_reforms
 		cost = 10
-		available = {
-			OR ={
-				59 = { #Hannover
-					is_owned_and_controlled_by = ROOT
-				}
-				978 = { #Baden
-					is_owned_and_controlled_by = ROOT
-				}
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			
-			if = {
-				limit = {
-					59 = { #Hannover
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				59 = { set_state_category = metropolis }
-			}
-			if = {
-				limit = {
-					978 = { #Baden
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				978 = { set_state_category = metropolis }
-			}
+			59 = { set_state_category = metropolis }
+			978 = { set_state_category = metropolis }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -767,20 +640,11 @@ focus_tree = {
 
 		completion_reward = {
 
-			every_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 1
+			68 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -824,25 +688,14 @@ focus_tree = {
 		relative_position_id = GER_wirtschaftswunder
 		cost = 10
 		available = {
-			OR = {
-				has_war = yes
-				threat > 0.15
-			}
+			threat > 0.15
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+			978 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -880,24 +733,13 @@ focus_tree = {
 		relative_position_id = GER_wirtschaftswunder
 		cost = 10
 		available = {
-			OR = {
-				has_war = yes
-				threat > 0.3
-			}
+			threat > 0.3
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+			56 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -946,15 +788,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+			42 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -1008,21 +842,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_prioritize_economic_growth
 		cost = 5
-		available = {
-			OR = {
-				has_full_control_of_state = 64 #Brandenburg
-				has_full_control_of_state = 59 #Hannover
-				has_full_control_of_state = 60 #Thüringen
-				has_full_control_of_state = 54 #Franken
-			}
-		}
-		bypass = {
-			has_civil_war = no
-			NOT = { has_full_control_of_state = 64 }
-			NOT = {	has_full_control_of_state = 59 }
-			NOT = {	has_full_control_of_state = 60 }
-			NOT = {	has_full_control_of_state = 54 }
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
@@ -1030,44 +849,31 @@ focus_tree = {
 			custom_effect_tooltip = GER_autobahn_tt
 			hidden_effect = {
 				64 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-						add_building_construction = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
 					}
 				}
 				59 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-
-						add_building_construction = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
 					}
 				}
 				60 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-						add_building_construction = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
 					}
 				}
 				54 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-						add_building_construction = {
-							type = infrastructure
-							level = 5
-							instant_build = yes
-						}
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
 					}
 				}
 			}		
@@ -1085,7 +891,6 @@ focus_tree = {
 		cost = 10
 		available = {
 			51 = { 
-				is_fully_controlled_by = ROOT
 				is_demilitarized_zone = no 
 			}
 		}
@@ -1093,23 +898,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			if = {
-				limit = {
-					51 = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				51 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
+			51 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -1172,94 +966,16 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_construct_the_reichsautobahn
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			
-			if = {
-				limit = {
-					has_war = yes
-				}
-				if = {
-					limit = {
-						59 = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-					}
-					59 = { #Hannover
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = arms_factory
-							level = 3
-							instant_build = yes
-						}
-					}
-				}
-				else = {
-					random_owned_state = {
-						limit = {
-							is_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 3
-						add_building_construction = {
-							type = arms_factory
-							level = 3
-							instant_build = yes
-						}
-					}
-				}
-			}
-			else_if = { #if at peace
-				if = {
-					limit = {
-						59 = {
-							is_fully_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 2
-								include_locked = yes
-							}
-						}
-					}
-					59 = { #Hannover
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					}
-				}
-				else = {
-					random_owned_state = {
-						limit = {
-							is_controlled_by = ROOT
-							free_building_slots = {
-								building = industrial_complex
-								size > 1
-								include_locked = yes
-							}
-						}
-						add_extra_state_shared_building_slots = 2
-						add_building_construction = {
-							type = industrial_complex
-							level = 2
-							instant_build = yes
-						}
-					}
+			59 = { #Hannover
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -1274,35 +990,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_kdf_wagen_factories
 		cost = 5
-		available = {
-			OR = {
-				53 = { #Niederbayern
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				52 = { #Oberbayern
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				152 = { #Upper Austria
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				4 = { #Lower Austria
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-			}
-		}
-		bypass = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			custom_effect_tooltip = GER_expand_the_reichsautobahn_south_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					53 = { #Niederbayern
 						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				53 = { 
@@ -1317,7 +1012,6 @@ focus_tree = {
 				limit = {
 					52 = { #Oberbayern
 						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				52 = { 
@@ -1332,7 +1026,6 @@ focus_tree = {
 				limit = {
 					152 = { #Upper Austria
 						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				152 = { 
@@ -1347,7 +1040,6 @@ focus_tree = {
 				limit = {
 					4 = { #Lower Austria
 						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				4 = { 
@@ -1358,23 +1050,10 @@ focus_tree = {
 					}
 				}
 			}
-
-			if = {
-				limit = {
-					52 = { #Oberbayern
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-					152 = { #Upper Austria
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-					4 = { #Lower Austria
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				#Regensburg - Wien
-				build_railway = {
-					path = { 9515 9681 3703 9665 11651 704 11666 }
-				}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			#Regensburg - Wien
+			build_railway = {
+				path = { 9515 9681 3703 9665 11651 704 11666 }
 			}
 		}
 	}
@@ -1388,35 +1067,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_kdf_wagen_factories
 		cost = 5
-		available = {
-			OR = {
-				68 = { #Ostmark
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				63 = { #Hinterpommern
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				807 = { #Gdynia
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				85 = { #Danzig
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-			}
-		}
-		bypass = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			custom_effect_tooltip = GER_expand_the_reichsautobahn_east_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					68 = { #Ostmark
 						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				68 = { 
@@ -1431,7 +1089,6 @@ focus_tree = {
 				limit = {
 					63 = { #Hinterpommern
 						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				63 = { 
@@ -1446,7 +1103,6 @@ focus_tree = {
 				limit = {
 					807 = { #Gdynia
 						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				807 = { 
@@ -1461,7 +1117,6 @@ focus_tree = {
 				limit = {
 					85 = { #Danzig
 						infrastructure < 5
-						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 				}
 				85 = { 
@@ -1472,23 +1127,10 @@ focus_tree = {
 					}
 				}
 			}
-
-			if = {
-				limit = {
-					63 = { #Hinterpommern
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-					807 = { #Gdynia
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-					85 = { #Danzig
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-				}
-				#Köslin - Danzig
-				build_railway = {
-					path = { 11372 11343 9263 362 }
-				}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			#Köslin - Danzig
+			build_railway = {
+				path = { 11372 11343 9263 362 }
 			}
 		}
 	}
@@ -1514,11 +1156,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-				}
-				prioritize = { 56 }
+			56 = {
 				add_resource = {
 					type = tungsten
 					amount = 2
@@ -1554,22 +1192,15 @@ focus_tree = {
 		y = 0
 		relative_position_id = GER_prioritize_economic_growth
 		cost = 5
-		available = {
-
-		}
 		
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			every_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 1
+			65 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1596,16 +1227,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_the_four_year_plan
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-				}
+			53 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -1728,16 +1354,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				prioritize = { 59 }
+			59 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -2019,16 +1636,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = synthetic_refinery
-						size > 0
-						include_locked = yes
-					}
-				}
-				prioritize = { 65 }
+			65 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = synthetic_refinery
@@ -2135,16 +1743,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = synthetic_refinery
-						size > 0
-						include_locked = yes
-					}
-				}
-				prioritize = { 57 }
+			57 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = synthetic_refinery
@@ -2229,16 +1828,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-        	random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = synthetic_refinery
-						size > 0
-						include_locked = yes
-					}
-				}
-				prioritize = { 65 }
+        	65 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = synthetic_refinery
@@ -2423,26 +2013,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_the_four_year_plan
 		cost = 5
-		available = {
-		}
-
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			every_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
+			59 = {
 				random_select_amount = 2
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2465,16 +2044,11 @@ focus_tree = {
 		id = GER_concentrated_armament_program
 		icon = GFX_focus_generic_reorient_production
 		prerequisite = { focus = GER_accelerate_the_rearmament_program }
-
 		x = -1
 		y = 1
 		relative_position_id = GER_accelerate_the_rearmament_program
 		cost = 5
-		available = {
-		}
-
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
-
 		completion_reward = {
 			every_core_state = {
 				limit = {

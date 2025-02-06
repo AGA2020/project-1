@@ -1380,7 +1380,6 @@ characters = {
 			visible = {
 				OR = {
 					has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
-					has_completed_focus = wuw_HUN_stage_an_uprising_in_leitha
 				}
 			}
 		}
@@ -1409,7 +1408,6 @@ characters = {
 			visible = {
 				OR = {
 					has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
-					has_completed_focus = wuw_HUN_stage_an_uprising_in_leitha
 				}
 			}
 		}
