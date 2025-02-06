@@ -32,7 +32,7 @@ focus_tree = {
 		icon = GFX_focus_hun_elect_a_king
 		#prerequisite = { focus = }
 		mutually_exclusive = { focus = wuw_HUN_continue_the_regency focus = wuw_HUN_end_the_white_terror }
-		x = 12
+		x = 2
 		y = 0
 		#relative_position_id =
 

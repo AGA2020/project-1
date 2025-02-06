@@ -576,15 +576,9 @@ characters = {
 			}
 			visible = {
 				has_government = neutrality
-				OR = {
-					has_completed_focus = wuw_HUN_renovato_imperii
-				}
 			}
 			available = {
 				has_government = neutrality
-				OR = {
-					has_completed_focus = wuw_HUN_renovato_imperii
-				}
 			}
 			
 			traits = { 
@@ -606,9 +600,6 @@ characters = {
 
 		navy_leader = {
 			visible = { 
-				OR = {
-					has_completed_focus = wuw_HUN_renovato_imperii
-				}
 				NOT = {
 					original_tag = GER
 				}
@@ -639,15 +630,9 @@ characters = {
 			}
 			visible = {
 				has_government = neutrality
-				OR = {
-					has_completed_focus = wuw_HUN_renovato_imperii
-				}
 			}
 			available = {
 				has_government = neutrality
-				OR = {
-					has_completed_focus = wuw_HUN_renovato_imperii
-				}
 			}
 			traits = { 
 				AUS_older_prince_of_liechtenstein
