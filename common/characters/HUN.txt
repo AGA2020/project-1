@@ -3749,7 +3749,6 @@ characters = {
 				owner = {
 					OR = {
 						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-						has_completed_focus = wuw_HUN_reverse_the_brain_drain
 					}
 				}
 			}
@@ -3774,7 +3773,6 @@ characters = {
 				owner = {
 					OR = {
 						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-						has_completed_focus = wuw_HUN_reverse_the_brain_drain
 					}
 				}
 			}
@@ -3799,7 +3797,6 @@ characters = {
 				owner = {
 					OR = {
 						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-						has_completed_focus = wuw_HUN_reverse_the_brain_drain
 					}
 				}
 			}
