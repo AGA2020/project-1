@@ -1938,10 +1938,7 @@ HUN_territorial_revision_category = {
 
 		visible = { 
 			original_tag = HUN
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			NOT = { has_country_flag = HUN_reintigrated_west_banat_flag }
 			764 = {
 				NOT = {
@@ -1951,10 +1948,7 @@ HUN_territorial_revision_category = {
 		} 
 
 		available = {
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			controls_state = 764
 		}
 
@@ -2025,10 +2019,7 @@ HUN_territorial_revision_category = {
 
 		visible = { 
 			original_tag = HUN
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			NOT = { has_country_flag = HUN_reintigrated_vojvodina_flag }
 			45 = {
 				NOT = {
@@ -2038,10 +2029,7 @@ HUN_territorial_revision_category = {
 		} 
 
 		available = {
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			controls_state = 45
 		}
 
@@ -2454,10 +2442,7 @@ HUN_territorial_revision_category = {
 
 		visible = { 
 			original_tag = HUN
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			NOT = { has_country_flag = HUN_reintigrated_croatia_flag }
 			109 = {
 				NOT = {
@@ -2467,10 +2452,7 @@ HUN_territorial_revision_category = {
 		} 
 
 		available = {
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			controls_state = 109
 		}
 
@@ -2541,10 +2523,7 @@ HUN_territorial_revision_category = {
 
 		visible = { 
 			original_tag = HUN
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			NOT = { has_country_flag = HUN_reintigrated_dalmatia_flag }
 			103 = {
 				NOT = {
@@ -2554,10 +2533,7 @@ HUN_territorial_revision_category = {
 		} 
 
 		available = {
-			OR = {
-				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
-			}
+			has_completed_focus = wuw_HUN_reaffirm_territorial_claims
 			controls_state = 103
 		}
 
