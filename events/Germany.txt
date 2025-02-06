@@ -23,40 +23,22 @@ country_event = {
 	option = {
 		name = germany.4.a
 		4 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
+			add_core_of = GER
 		}
 		152 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
+			add_core_of = GER
 		}
 		153 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
+			add_core_of = GER
 		}
 		848 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
+			add_core_of = GER
 		}
 		975 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
+			add_core_of = GER
 		}
 		976 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = GER
-			}
+			add_core_of = GER
 		}
 		add_political_power = 75
 		add_war_support = 0.1

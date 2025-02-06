@@ -1276,7 +1276,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			NOT = { has_country_flag = HUN_reintigrated_south_slovakia_flag }
 			664 = {
@@ -1289,7 +1288,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			controls_state = 664
 		}
@@ -1363,7 +1361,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			NOT = { has_country_flag = HUN_reintigrated_west_slovakia_flag }
 			70 = {
@@ -1376,7 +1373,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			controls_state = 70
 		}
@@ -1450,7 +1446,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			NOT = { has_country_flag = HUN_reintigrated_east_slovakia_flag }
 			71 = {
@@ -1463,7 +1458,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			controls_state = 71
 		}
@@ -1537,7 +1531,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			NOT = { has_country_flag = HUN_reintigrated_carpathia_flag }
 			73 = {
@@ -1550,7 +1543,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			controls_state = 73
 		}
