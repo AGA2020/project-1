@@ -9151,11 +9151,6 @@ country_event = {
 					has_completed_focus = GER_reorganize_the_wehrmacht
 				}
 			}
-			ELSE_IF = {
-				limit = {
-					has_completed_focus = GER_heed_von_neuraths_concerns
-				}
-			}
 		}
 	}
 
@@ -9204,11 +9199,6 @@ country_event = {
 			IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
 				limit = {
 					has_completed_focus = GER_reorganize_the_wehrmacht
-				}
-			}
-			ELSE_IF = { # The IF is left here so that it doesn't try to transfer a character back if it hasn' been moved here to begin with
-				limit = {
-					has_completed_focus = GER_heed_von_neuraths_concerns
 				}
 			}
 		}
