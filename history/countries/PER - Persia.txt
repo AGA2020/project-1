@@ -22,7 +22,7 @@ set_technology = {
 	gw_artillery = 1
 }
 
-
+recruit_character = PER_reza_shah_pahlavi
 
 1939.1.1 = {
 
