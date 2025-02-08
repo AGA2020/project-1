@@ -50,19 +50,19 @@ focus_tree = {
 			890 = {
 				add_resource = {
 					type = rubber
-					amount = 15
+					amount = 8
 				}	
 			}
 			718 = {
 				add_resource = {
 					type = rubber
-					amount = 23
+					amount = 12
 				}	
 			}
 			538 = {
 				add_resource = {
 					type = rubber
-					amount = 16
+					amount = 8
 				}	
 			}
 		}
@@ -97,19 +97,19 @@ focus_tree = {
 			890 = {
 				add_resource = {
 					type = rubber
-					amount = -15
+					amount = -8
 				}	
 			}
 			718 = {
 				add_resource = {
 					type = rubber
-					amount = -23
+					amount = -12
 				}	
 			}
 			538 = {
 				add_resource = {
 					type = rubber
-					amount = -16
+					amount = -8
 				}	
 			}
 		}
