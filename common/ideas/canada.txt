@@ -718,10 +718,8 @@ ideas = {
 			picture = ast_volunteer_defence_corps
 
 			modifier = {
-				
-				training_time_factor = -0.15
+				training_time_factor = -0.10
 				experience_gain_army_factor = 0.05
-				
 			}
 
 			equipment_bonus = {
