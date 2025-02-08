@@ -3746,11 +3746,7 @@ characters = {
 			}
 
 			visible = {
-				owner = {
-					OR = {
-						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-					}
-				}
+				always = no
 			}
 		}
 	}
@@ -3770,11 +3766,7 @@ characters = {
 			}
 
 			visible = {
-				owner = {
-					OR = {
-						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-					}
-				}
+				always = no
 			}
 		}
 	}
@@ -3794,11 +3786,7 @@ characters = {
 			}
 
 			visible = {
-				owner = {
-					OR = {
-						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-					}
-				}
+				always = no
 			}
 		}
 	}
