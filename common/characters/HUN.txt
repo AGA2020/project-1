@@ -297,7 +297,6 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = wuw_HUN_end_the_regency
-						has_completed_focus = wuw_HUN_end_the_white_terror
 						has_completed_focus = wuw_HUN_undermine_the_admiral
 					}
 				}
@@ -2699,7 +2698,6 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_white_terror
 					}
 				}
 				NOT = {
@@ -2801,7 +2799,6 @@ characters = {
 					NOT = {
 						OR = {
 							has_completed_focus = wuw_HUN_end_the_regency
-							has_completed_focus = wuw_HUN_end_the_white_terror
 							has_completed_focus = wuw_HUN_undermine_the_admiral
 						}
 					}
