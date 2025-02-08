@@ -1460,7 +1460,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		allow_branch = { 
-			always = no
+			has_global_flag = chaplin_seized
 		}		
 		recon = {
 			battalion_mult = {
