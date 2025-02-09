@@ -826,7 +826,6 @@ GER_alkett_organization = {
 			FROM = {
 				OR = {
 					has_completed_focus = GER_fate_of_czechoslovakia
-					has_completed_focus = GER_integrate_czechoslovakia
 					has_completed_focus = GER_carve_up_czechoslovakia
 				}
 			}
