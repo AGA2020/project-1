@@ -257,7 +257,6 @@ characters = {
 			legacy_id = -1
 			visible = {
 				OR = {
-					has_completed_focus = wuw_HUN_invite_otto_to_the_throne
 					has_completed_focus = wuw_HUN_the_old_habsburg_king
 				}
 			}
@@ -1317,7 +1316,6 @@ characters = {
 			legacy_id = -1
 			visible = {
 				OR = {
-					has_completed_focus = wuw_HUN_invite_otto_to_the_throne
 					has_completed_focus = wuw_HUN_the_old_habsburg_king
 				}
 			}
@@ -1349,7 +1347,6 @@ characters = {
 			legacy_id = -1
 			visible = {
 				OR = {
-					has_completed_focus = wuw_HUN_reenlist_the_sich_riflemen
 					has_completed_focus = wuw_HUN_revenge_for_the_brusilov_offensive
 				}
 			}

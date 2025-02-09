@@ -2213,11 +2213,6 @@ characters = {
 			allowed = {
 				original_tag = GER
 			}
-			visible = {
-				NOT = {
-					has_completed_focus = GER_heed_von_neuraths_concerns
-				}
-			}
 			available = {
 				has_completed_focus = GER_reorganize_the_wehrmacht
 			}
@@ -2248,12 +2243,7 @@ characters = {
 				original_tag = GER
 			}
 			visible = {
-				NOT = {
-					has_completed_focus = GER_reorganize_the_wehrmacht
-				}
-			}
-			available = {
-				has_completed_focus = GER_heed_von_neuraths_concerns
+				always = no
 			}
 			cost = 50
 			traits = {
