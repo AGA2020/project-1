@@ -120,8 +120,19 @@ on_actions = {
 			        }
 			    }
 			}
-		}
-		effect = {
+			if = {
+			    limit = {
+			        any_country = { axis = yes has_tech = antitank2 }
+			    }
+			    every_country = {
+			        limit = {
+			            axis = yes
+			        }
+			        set_technology = {
+			            give_me_at2_module = 1 popup = no
+			        }
+			    }
+			}
 			if = {
 			    limit = {
 			        any_country = { allies = yes has_tech = survivability_studies }
@@ -171,6 +182,19 @@ on_actions = {
 			        }
 			        set_technology = {
 			            photo_reconnaisance = 1
+			        }
+			    }
+			}
+			if = {
+			    limit = {
+			        any_country = { allies = yes has_tech = antitank2 }
+			    }
+			    every_country = {
+			        limit = {
+			            allies = yes
+			        }
+			        set_technology = {
+			            give_me_at2_module = 1 popup = no
 			        }
 			    }
 			}

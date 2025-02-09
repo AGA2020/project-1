@@ -1,4 +1,12 @@
 technologies = {
+	give_me_at2_module = {
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = {
+			tank_buster_2
+		}				
+	}
 	give_my_iniative_paradoxxxxxx = {
 		allow = {
 			always = no
