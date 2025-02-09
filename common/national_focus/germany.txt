@@ -7016,8 +7016,6 @@ focus_tree = {
 
 		prerequisite = { focus = GER_anschluss }
 
-		mutually_exclusive = { focus = GER_befriend_czechoslovakia }
-
 		x = -4
 		y = 1
 		relative_position_id = GER_anschluss
@@ -7835,7 +7833,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_operation_wesserubung_historical
 
 		prerequisite = { focus = GER_danzig_or_war }
-		mutually_exclusive = { focus = GER_utilize_the_nordliche_gesellschaft }
 		x = 1
 		y = 2
 		relative_position_id = GER_danzig_or_war
@@ -8096,7 +8093,7 @@ focus_tree = {
 	focus = {
 		id = GER_operation_sea_lion
 		icon = GFX_focus_generic_naval_invasion
-		prerequisite = { focus = GER_war_with_france focus = GER_invade_italy }
+		prerequisite = { focus = GER_war_with_france }
 		x = -1
 		y = 1
 		relative_position_id = GER_war_with_france
@@ -8126,7 +8123,7 @@ focus_tree = {
 		prerequisite = { focus = GER_operation_sea_lion }
 
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = GER_operation_sea_lion
 		cost = 10
 
