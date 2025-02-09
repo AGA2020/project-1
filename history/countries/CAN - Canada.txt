@@ -32,6 +32,7 @@ if = {
 			bba_early_transport_plane = 1
 			early_bombs = 1
 			air_torpedoe_1 = 1
+			basic_small_airframe = 1
 		}
 	else = {
 		set_air_oob = "CAN_1936_air_legacy"
