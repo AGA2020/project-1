@@ -4,6 +4,24 @@ leader_traits = {
 ##################################
 # Common Traits
 ##################################
+	forceattack_aga = { 
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		modifier = {
+			offence = 0.2
+			breakthrough_factor = 0.25		
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
 	GER_kriegaga = { 
 		type = all
 		trait_type = personality_trait

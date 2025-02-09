@@ -37,9 +37,11 @@ ability = {
 		duration = 168
 		
 		one_time_effect = {
+			add_timed_unit_leader_trait = {
+				trait = forceattack_aga
+				days = 7
+			}
 			add_temporary_buff_to_units = {
-				combat_offense = 0.2
-				combat_breakthrough = 0.25
 				org_damage_multiplier = -1.0
 				str_damage_multiplier = 0.6
 				war_support_reduction_on_damage = 0.2
