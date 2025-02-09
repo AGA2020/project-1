@@ -1990,53 +1990,6 @@ ITA_balance_of_power_category = {
 		}
 	}
 
-	ITA_bop_resign_ministry_of_foreign_affairs_position = {
-		priority = 100
-		icon = GFX_decision_generic_political_discourse
-
-		visible = {
-			has_country_leader = {
-				character = ITA_benito_mussolini
-				ruling_only = yes
-			}
-			has_country_leader_with_trait = mussolini_minister_of_foreign_affairs
-		}
-
-		available = {
-			if = {
-				limit = {
-					has_country_flag = ITA_mussolini_took_over_minister_of_foreign_affairs_flag
-					NOT = { has_country_flag = ITA_debug_bop_decisions_faster_and_free_flag } #Debug
-				}
-				custom_trigger_tooltip = {
-					tooltip = ITA_mussolini_took_over_minister_of_foreign_affairs_flag
-					NOT = { has_country_flag = ITA_mussolini_took_over_minister_of_foreign_affairs_flag }
-				}
-			}
-		}
-
-		cost = ITA_bop_resign_ministry_cost
-
-		complete_effect = {
-			set_country_flag = { flag = ITA_mussolini_resigned_minister_of_foreign_affairs_position_flag value = 1 days = 365 }
-			remove_country_leader_trait = mussolini_minister_of_foreign_affairs
-			ITA_bop_medium_decrease_effect = yes
-
-			hidden_effect = { #In order to work with debug decisions
-				if = {
-					limit = {
-						has_country_flag = ITA_mussolini_took_over_minister_of_foreign_affairs_flag
-					}
-					clr_country_flag = ITA_mussolini_took_over_minister_of_foreign_affairs_flag
-				}
-			}
-		}
-
-		ai_will_do = { #Never
-			base = 0
-		}
-	}
-
 	ITA_bop_take_over_ministry_of_justice = {
 		priority = 99
 		icon = GFX_decision_eng_trade_unions_demand
@@ -2114,53 +2067,6 @@ ITA_balance_of_power_category = {
 		}
 	}
 
-	ITA_bop_resign_ministry_of_justice_position = {
-		priority = 99
-		icon = GFX_decision_generic_political_discourse
-
-		visible = {
-			has_country_leader = {
-				character = ITA_benito_mussolini
-				ruling_only = yes
-			}
-			has_country_leader_with_trait = mussolini_minister_of_justice
-		}
-
-		available = {
-			if = {
-				limit = {
-					has_country_flag = ITA_mussolini_took_over_minister_of_justice_flag
-					NOT = { has_country_flag = ITA_debug_bop_decisions_faster_and_free_flag } #Debug
-				}
-				custom_trigger_tooltip = {
-					tooltip = ITA_mussolini_took_over_minister_of_justice_flag
-					NOT = { has_country_flag = ITA_mussolini_took_over_minister_of_justice_flag }
-				}
-			}
-		}
-
-		cost = ITA_bop_resign_ministry_cost
-
-		complete_effect = {
-			set_country_flag = { flag = ITA_mussolini_resigned_minister_of_justice_position_flag value = 1 days = 365 }
-			remove_country_leader_trait = mussolini_minister_of_justice
-			ITA_bop_medium_decrease_effect = yes
-
-			hidden_effect = { #In order to work with debug decisions
-				if = {
-					limit = {
-						has_country_flag = ITA_mussolini_took_over_minister_of_justice_flag
-					}
-					clr_country_flag = ITA_mussolini_took_over_minister_of_justice_flag
-				}
-			}
-		}
-
-		ai_will_do = { #Never
-			base = 0
-		}
-	}
-
 	ITA_bop_take_over_ministry_of_education = {
 		priority = 98
 		icon = GFX_decision_eng_trade_unions_demand
@@ -2235,53 +2141,6 @@ ITA_balance_of_power_category = {
 				factor = 0
 				ITA_is_historical_ai = no
 			}
-		}
-	}
-
-	ITA_bop_resign_ministry_of_education_position = {
-		priority = 98
-		icon = GFX_decision_generic_political_discourse
-
-		visible = {
-			has_country_leader = {
-				character = ITA_benito_mussolini
-				ruling_only = yes
-			}
-			has_country_leader_with_trait = mussolini_minister_of_education
-		}
-
-		available = {
-			if = {
-				limit = {
-					has_country_flag = ITA_mussolini_took_over_minister_of_education_flag
-					NOT = { has_country_flag = ITA_debug_bop_decisions_faster_and_free_flag } #Debug
-				}
-				custom_trigger_tooltip = {
-					tooltip = ITA_mussolini_took_over_minister_of_education_flag
-					NOT = { has_country_flag = ITA_mussolini_took_over_minister_of_education_flag }
-				}
-			}
-		}
-
-		cost = ITA_bop_resign_ministry_cost
-
-		complete_effect = {
-			set_country_flag = { flag = ITA_mussolini_resigned_minister_of_education_position_flag value = 1 days = 365 }
-			remove_country_leader_trait = mussolini_minister_of_education
-			ITA_bop_medium_decrease_effect = yes
-
-			hidden_effect = { #In order to work with debug decisions
-				if = {
-					limit = {
-						has_country_flag = ITA_mussolini_took_over_minister_of_education_flag
-					}
-					clr_country_flag = ITA_mussolini_took_over_minister_of_education_flag
-				}
-			}
-		}
-
-		ai_will_do = { #Never
-			base = 0
 		}
 	}
 
