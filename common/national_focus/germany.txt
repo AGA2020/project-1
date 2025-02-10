@@ -9841,8 +9841,11 @@ focus_tree = {
 			SOV = {
 				country_event = { id = germany.11 days = 1 }
 				custom_effect_tooltip = GER_mol_rib_pact_tt
-				custom_effect_tooltip = needs_approval
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			effect_tooltip = {
+				add_timed_idea = { idea = SOV_soviet_german_trade_agreement days = 800 } 
+			}		
 		}
 	}
 

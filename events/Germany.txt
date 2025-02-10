@@ -205,7 +205,19 @@ country_event = {
 	picture = GFX_report_event_molotov_ribentrop_handshake
 
 	is_triggered_only = yes
-
+	immediate = {
+		hidden_effect = {
+			GER = {
+				country_event = { days = 1 id = germany.12 }
+				add_timed_idea = { idea = SOV_soviet_german_trade_agreement days = 800 } 			
+				effect_tooltip = {
+					add_opinion_modifier = { target = SOV modifier = MR_pact }# pact
+				}
+			}
+			set_global_flag = sov_yes_pact
+			news_event = { id = nsb_news.103 days = 3 }
+		}
+	}
 	option = {
 		name = germany.11.a	#sounds good
 		ai_chance = {
@@ -229,20 +241,8 @@ country_event = {
 			limit = {
 				NOT = { owns_state = 146 }
 			}
-			add_state_claim = 146 #KARELIA (FIN)
+			
 		}
-		#if = { #Removed with AAT (Makes no sense really)
-		#	limit = {
-		#		NOT = { owns_state = 147 }
-		#	}
-		#	add_state_claim = 147 #SALLA (FIN)
-		#}
-		#if = {
-		#	limit = {
-		#		NOT = { owns_state = 722 }
-		#	}
-		#	add_state_claim = 722 #PETSAMO (FIN)
-		#}
 		if = {
 			limit = {
 				NOT = { owns_state = 13 }
@@ -333,48 +333,13 @@ country_event = {
 			}
 			add_state_claim = 815 #AUKSTAITIJA (LIT)
 		}
-		if = {
-			limit = {
-				NOT = { owns_state = 89 }
-			}
-			add_state_claim = 89 #STANISLAWOW (POL)
-		}
-		if = {
-			limit = {
-				NOT = { owns_state = 91 }
-			}
-			add_state_claim = 91 #LWOW (POL)
-		}
-		if = {
-			limit = {
-				NOT = { owns_state = 93 }
-			}
-			add_state_claim = 93 #WOLYN (POL)
-		}
-		if = {
-			limit = {
-				NOT = { owns_state = 94 }
-			}
-			add_state_claim = 94 #POLESIE (POL)
-		}
-		if = {
-			limit = {
-				NOT = { owns_state = 95 }
-			}
-			add_state_claim = 95 #NOWOGRODEK (POL)
-		}
-		if = {
-			limit = {
-				NOT = { owns_state = 96 }
-			}
-			add_state_claim = 96 #WILEJKA (POL)
-		}
-		if = {
-			limit = {
-				NOT = { owns_state = 97 }
-			}
-			add_state_claim = 97 #BIALYSTOK (POL)
-		}
+		add_state_claim = 89 #STANISLAWOW (POL)
+		add_state_claim = 91 #LWOW (POL)
+		add_state_claim = 93 #WOLYN (POL)
+		add_state_claim = 94 #POLESIE (POL)
+		add_state_claim = 95 #NOWOGRODEK (POL)
+		add_state_claim = 96 #WILEJKA (POL)
+		add_state_claim = 97 #BIALYSTOK (POL)
 		if = {
 			limit = {
 				NOT = { owns_state = 78 }
@@ -482,16 +447,7 @@ country_event = {
 			category = air_equipment
 		}
 
-		random_owned_controlled_state = {
-			limit = {
-				is_core_of = ROOT
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
-				}	
-			}
-			prioritize = { 217 202 195 }
+		217 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
@@ -499,15 +455,6 @@ country_event = {
 				instant_build = yes
 			}	
 		}
-		GER = {
-			country_event = { days = 1 id = germany.12 }
-			add_timed_idea = { idea = SOV_soviet_german_trade_agreement days = 800 } 			
-			effect_tooltip = {
-				add_opinion_modifier = { target = SOV modifier = MR_pact }# pact
-			}
-		}
-		set_global_flag = sov_yes_pact
-		hidden_effect = { news_event = { id = nsb_news.103 days = 1 } }
 	}
 }
 
@@ -519,7 +466,11 @@ country_event = {
 	picture = GFX_report_event_molotov_signing_pact
 
 	is_triggered_only = yes
-
+	immediate = {
+		hidden_effect = {
+			country_event = { hours = 6 id = news.32 }
+		}
+	}
 	option = {
 		name = germany.12.a	#neat
 		every_other_country = {
@@ -534,9 +485,7 @@ country_event = {
 		USA = {
 			set_country_flag = { flag = USA_MR_window days = 60 value = 1 }
 		}
-		hidden_effect = {
-			country_event = { hours = 6 id = news.32 }
-		}
+
 	}
 }
 
