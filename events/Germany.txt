@@ -501,7 +501,6 @@ country_event = {
 		}
 		GER = {
 			country_event = { days = 1 id = germany.12 }
-			country_event = { id = NSB_soviet_soviet_german_trade_agreement.1 hours = 1 } 
 			add_timed_idea = { idea = SOV_soviet_german_trade_agreement days = 800 } 			
 			effect_tooltip = {
 				add_opinion_modifier = { target = SOV modifier = MR_pact }# pact

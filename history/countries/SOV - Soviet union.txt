@@ -27,7 +27,7 @@ if = {
 	recruit_character = SOV_provisional_government # United Exiles
 	set_country_flag = vlasov_owner_flag
 }
-
+set_country_flag = SOV_high_yield_propaganda_cooldown
 #POLITICAL ADVISORS
 recruit_character = SOV_mikhail_kalinin
 recruit_character = SOV_nikita_khrushchyov

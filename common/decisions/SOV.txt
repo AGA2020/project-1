@@ -2448,11 +2448,20 @@ SOV_propaganda_campaigns = {
 			SOV_propaganda_poster_slot_available = yes
 			has_completed_focus = SOV_expand_the_agitprop
 			surrender_progress < 0.15
+			has_country_flag = {
+				flag = SOV_high_yield_propaganda_cooldown
+				days > 89
+			}
+			custom_trigger_tooltip = {
+				tooltip = soviet_propaganda_cooldown_tt
+				has_country_flag = {
+					flag = SOV_high_yield_propaganda_cooldown
+					days > 89
+				}
+			}
 		}
 
 		days_remove = SOV_default_propaganda_campaign_duration
-
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
 
 		cost = SOV_propaganda_high_yield_cost
 
@@ -2464,12 +2473,13 @@ SOV_propaganda_campaigns = {
 			set_variable = { SOV_new_propaganda_campaign = 11 }
 			SOV_pick_propaganda_campaign_slot_effect = yes
 			SOV_achievement_propaganda_counter_effect = yes
+			clr_country_flag = SOV_high_yield_propaganda_cooldown
 		}
 
 		remove_effect = {
 			set_variable = { SOV_propaganda_campaign_to_remove = 11 }
 			SOV_reset_propaganda_campaign_slot_effect = yes
-
+			set_country_flag = SOV_high_yield_propaganda_cooldown
 			set_variable = { SOV_propaganda_cost = SOV_propaganda_high_yield_cost }
 			SOV_increase_propaganda_campaign_cost_effect = yes
 			set_variable = { SOV_propaganda_high_yield_cost = SOV_propaganda_cost }
