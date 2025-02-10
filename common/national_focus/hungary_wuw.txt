@@ -204,7 +204,6 @@ focus_tree = {
 		id = wuw_HUN_abide_by_the_little_ententes_stipulations
 		icon = GFX_focus_generic_little_entente
 		prerequisite = { focus = wuw_HUN_reach_out_to_candidates }
-		mutually_exclusive = { focus = wuw_HUN_reinstate_the_pragmatic_sanction }
 		x = 0
 		y = 1
 		relative_position_id = wuw_HUN_reach_out_to_candidates
