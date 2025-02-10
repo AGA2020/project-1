@@ -2287,8 +2287,7 @@ ITA_balance_of_power_category = {
 		}
 
 		cost = ITA_bop_generic_council_cost
-
-		days_re_enable = 365
+		days_remove = 365
 
 		complete_effect = {
 			ITA_bop_very_low_increase_effect = yes
@@ -2481,7 +2480,7 @@ ITA_balance_of_power_category = {
 
 		cost = ITA_bop_generic_council_cost
 
-		days_re_enable = 365
+		days_remove = 365
 
 		complete_effect = {
 			ITA_bop_very_low_increase_effect = yes
@@ -2544,7 +2543,7 @@ ITA_balance_of_power_category = {
 
 		cost = ITA_bop_generic_council_cost
 
-		days_re_enable = 365
+		days_remove = 365
 
 		complete_effect = {
 			ITA_bop_very_low_increase_effect = yes
@@ -2607,7 +2606,7 @@ ITA_balance_of_power_category = {
 
 		cost = ITA_bop_generic_council_cost
 
-		days_re_enable = 365
+		days_remove = 365
 
 		complete_effect = {
 			ITA_bop_very_low_increase_effect = yes
