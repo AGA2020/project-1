@@ -95,6 +95,22 @@ political_actions = {
 					has_idea = SPR_political_violence
 				}
 			}
+			OR = {
+				has_country_flag = {
+					flag = improved_worker_cooldown
+					days > 539
+				}
+				custom_trigger_tooltip = {
+					tooltip = improved_worker_cooldown_tt
+					has_country_flag = {
+						flag = improved_worker_cooldown
+						days > 539
+					}
+				}
+				hidden_trigger = { 
+					NOT = { has_country_flag = first_time_improved }
+				}
+			}
 		}
 
 		visible = {
@@ -110,12 +126,16 @@ political_actions = {
 		}
 
 		days_remove = 180
-		days_re_enable = 540
 
 		cost = 100
 
 		complete_effect = {
+			clr_country_flag = improved_worker_cooldown
+			set_country_flag = first_time_improved
+		}
 
+		remove_effect = {
+			set_country_flag = improved_worker_cooldown
 		}
 
 		ai_will_do = {

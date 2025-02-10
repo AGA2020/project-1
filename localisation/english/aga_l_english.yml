@@ -1,4 +1,5 @@
 ﻿l_english:
+  improved_worker_cooldown:0 "Cooldown"
   SOV_high_yield_propaganda_cooldown:0 "Propaganda Cooldown"
   MAN_peaceful_development_tt:0 "Unlocks §YSecure Occupation§! decisions, allowing to ask for control over neighboring Chinese states occupied by our Japanese ally."
   ITA_increase_production_aga_tt:2 "$ITA_modify_military_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY$: §G+5.00%§! \n\n"
@@ -107,6 +108,7 @@ annex_Mexiko:0 "Annex Mexico"
  desperate_resilience:0 "Desperate Resilience"
  USA_great_depression_cooldown_2:0 "New Legislation is still being drafted"
  USA_great_depression_cooldown_2_tt:0 "After this law is passed, it will take §Y230 days§! until further New Deal legislation is drafted and ready to be signed.\n\n"
+ improved_worker_cooldown_tt:0 "Current days are: [?improved_worker_cooldown:days|Y0]"
  soviet_propaganda_cooldown_tt:0 "Current days are: [?SOV_high_yield_propaganda_cooldown:days|Y0]"
  USA_great_depression_cooldown_days_tt:0 "Current days are: [?USA_great_depression_cooldown:days|Y0]"
  USA_great_depression_cooldown_2_days_tt:0 "Current days are: [?USA_great_depression_cooldown_2:days|Y0]"
