@@ -3937,49 +3937,27 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					NOT = {
-						has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-					}
-				}
-				add_ace = {
-					name = Istvan
-					surname = Horthy
-					callsign = Nagybánya
-					type = fighter_genius
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
+			add_ace = {
+				name = Istvan
+				surname = Horthy
+				callsign = Nagybánya
+				type = fighter_genius
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					43 = {
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				43 = {
-					add_building_construction = {
-						type = air_base
-						level = 1
-						instant_build = yes
-					}
+			43 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
 				}
 			}
 
-			IF = {
-				limit = {
-					154 = {
-						is_owned_and_controlled_by = ROOT
-					}
-				}
-				154 = {
-					add_building_construction = {
-						type = air_base
-						level = 1
-						instant_build = yes
-					}
+			154 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
 				}
 			}
 
