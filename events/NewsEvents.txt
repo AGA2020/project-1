@@ -9379,7 +9379,6 @@ news_event = {
 
 	trigger = {
 		tag = GER
-		has_government = fascism
 		has_war_with = SOV
 		divisions_in_state = {
 			state = 229

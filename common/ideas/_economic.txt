@@ -994,6 +994,7 @@ ideas = {
 		closed_economy = {
 			visible = {
 				NOT = { original_tag = JAP }
+				NOT = { original_tag = MAN }
 			}
 
 			available = {
@@ -1074,10 +1075,21 @@ ideas = {
 		banzai_economy = {
 
 			visible = {
-				original_tag = JAP
+				OR = {
+					tag = JAP
+					tag = MAN
+				}
 			}
 			available = {
-				has_completed_focus = JAP_guide_the_zaibatsus
+				if = {
+					limit = {
+						tag = JAP
+					}
+					has_completed_focus = JAP_guide_the_zaibatsus
+				}
+				else = {
+					JAP = { has_completed_focus = JAP_guide_the_zaibatsus }
+				}
 				OR = {
 					has_war = yes
 					CHI = { has_capitulated = yes }
