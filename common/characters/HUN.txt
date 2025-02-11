@@ -1342,9 +1342,7 @@ characters = {
 			logistics_skill = 4
 			legacy_id = -1
 			visible = {
-				OR = {
-					has_completed_focus = wuw_HUN_revenge_for_the_brusilov_offensive
-				}
+				always = no
 			}
 		}
 		

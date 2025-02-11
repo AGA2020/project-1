@@ -614,7 +614,6 @@ on_actions = {
 					NOT = { has_country_flag = GER_has_war_preparations_flag }
 					OR = {
 						has_completed_focus = GER_prepare_for_the_next_naval_blockade
-						has_completed_focus = GER_war_preparations
 					}
 				}
 				add_timed_idea = {
