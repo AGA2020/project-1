@@ -183,8 +183,6 @@ GER_influence_countries_cat = {
 
 	visible = {
 		OR = {
-			has_completed_focus = GER_influence_the_baltics
-			has_completed_focus = GER_influence_the_benelux
 			has_completed_focus = GER_influence_the_middle_east
 			has_completed_focus = GER_german_hegemony_in_the_middle_east
 			has_completed_focus = GER_sway_the_balkans
@@ -204,8 +202,6 @@ GER_invite_to_faction_cat = {
 
 	visible = {
 		OR = {
-			has_completed_focus = GER_influence_the_baltics
-			has_completed_focus = GER_influence_the_benelux
 			has_completed_focus = GER_influence_the_middle_east
 			has_completed_focus = GER_german_hegemony_in_the_middle_east
 			has_completed_focus = GER_sway_the_balkans
