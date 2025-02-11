@@ -83,12 +83,16 @@ focus_tree = {
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			create_faction = JAP_greater_east_asian_co_prosperity_sphere
-			IF = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			JAP_create_ignatius_lincoln_operative = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
 				limit = {
-					has_dlc = "La Resistance"
+					has_intelligence_agency = no
 				}
-				JAP_create_ignatius_lincoln_operative = yes
+				create_intelligence_agency = yes
 			}
+			add_ideas = MAN_hoankyoku_idea
 		}
 	}
 
@@ -525,46 +529,18 @@ focus_tree = {
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = JAP_zaibatsus_factories
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			swap_ideas = {
-				remove_idea = JAP_zaibatsus
-				add_idea = JAP_guide_the_zaibatsus				
-			}
-		}
 
 		completion_reward = {
 		custom_effect_tooltip = available_trade_law
 		show_ideas_tooltip = banzai_economy
 		custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_controlled_state = {
-				limit = {
-					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT
-					not = {
-						OR = {
-							state = 646
-							state = 645
-							state = 555
-						}
-					}
-				}
+			532 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = JAP_zaibatsus_factories
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
