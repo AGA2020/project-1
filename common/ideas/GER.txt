@@ -5423,7 +5423,6 @@ ideas = {
 			visible = {
 				NOT = {
 					has_completed_focus = GER_employ_philipp_holzmann
-					has_completed_focus = GER_revitalize_the_nation
 				}
 			}
 			
@@ -5450,12 +5449,9 @@ ideas = {
 			}
 
 			visible = {
-				OR = {
-					AND = {
-						has_completed_focus = GER_employ_philipp_holzmann
-						NOT = { has_completed_focus = GER_plenipotentiary_of_armaments }
-					}
-					has_completed_focus = GER_revitalize_the_nation
+				AND = {
+					has_completed_focus = GER_employ_philipp_holzmann
+					NOT = { has_completed_focus = GER_plenipotentiary_of_armaments }
 				}
 			}
 			
@@ -5593,11 +5589,7 @@ ideas = {
 
 			visible = {
 				NOT = { 
-					OR = {
-						has_completed_focus = GER_prioritize_the_four_year_plan 
-						has_completed_focus = GER_prepare_for_the_next_naval_blockade 
-						has_completed_focus = GER_effectivize_the_volkswerke 
-					}
+					has_completed_focus = GER_prioritize_the_four_year_plan
 				}
 			}
 
@@ -5628,11 +5620,7 @@ ideas = {
 			}
 
 			visible = {	
-				OR = {
-					has_completed_focus = GER_prioritize_the_four_year_plan
-					has_completed_focus = GER_prepare_for_the_next_naval_blockade
-					has_completed_focus = GER_effectivize_the_volkswerke
-				}
+				has_completed_focus = GER_prioritize_the_four_year_plan
 				NOT = {
 					has_completed_focus = GER_plenipotentiary_of_the_four_year_plan
 				}
