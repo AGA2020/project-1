@@ -7475,30 +7475,13 @@ focus_tree = {
 		cost = 5
 
 		bypass = {
-			OR = {
-				is_in_faction_with = ITA
-				has_war_with = ITA
-				NOT = { country_exists = ITA }
-				ITA = {
-					OR = {
-						NOT = { has_government = fascism }
-						is_subject = yes
-					}
-				}
-			}
+			is_in_faction_with = ITA
 		}
 
 		available_if_capitulated = yes
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
@@ -7692,13 +7675,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_danzig_or_war
 		cost = 5
-		available = {
-			ROM = {
-				has_full_control_of_state = 46
-				threat > 0.3
-			}
-
-		}
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			ROM = {
@@ -8356,14 +8332,6 @@ focus_tree = {
 				has_war_with = USA
 				is_in_faction_with = USA
 			}
-			is_subject = no
-			has_government = fascism
-			USA = {
-				NOT = {
-					has_government = fascism
-					has_government = neutrality 
-				}
-			}
 
 			custom_trigger_tooltip = {
 				tooltip = GER_challenge_the_monroe_doctrine_tt_2
@@ -8374,13 +8342,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -8448,7 +8409,6 @@ focus_tree = {
 		relative_position_id = GER_crossing_the_atlantic
 		cost = 5
 		available = {
-			is_subject = no
 			OR = {
 				has_wargoal_against = USA
 				has_war_with = USA
@@ -8463,12 +8423,6 @@ focus_tree = {
 					has_government = democratic
 					has_government = communism
 				}
-			}
-		}
-
-		bypass = {
-			USA = {
-				exists = no
 			}
 		}
 
@@ -8493,8 +8447,6 @@ focus_tree = {
 		relative_position_id = GER_challenge_the_monroe_doctrine
 		cost = 10
 		available = {
-			is_subject = no
-			has_government = fascism
 			has_completed_focus = GER_uplift_the_rosenberg_office
 			any_controlled_state = {
 				OR = {
@@ -8595,21 +8547,8 @@ focus_tree = {
 
 		cancel_if_invalid = yes
 
-		available = {
-			is_subject = no
-			controls_state = 4
-			controls_state = 152
-		}
-
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}	
 
 		will_lead_to_war_with = YUG
@@ -8749,10 +8688,8 @@ focus_tree = {
 		cost = 5
 		
 		bypass = {
-			OR = {	
-				is_in_faction_with = YUG
+			OR = {
 				has_war_with = YUG
-				YUG = { has_non_aggression_pact_with = GER }
 				YUG = { has_opinion_modifier = tripartite_pact_opinion }
 				NOT = { country_exists = YUG }
 				NOT = {
@@ -8777,9 +8714,6 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
-			NOT = { is_in_faction_with = YUG }
-			NOT = { YUG = { has_non_aggression_pact_with = GER } }
 			NOT = { YUG = { has_opinion_modifier = tripartite_pact_opinion } }
 			OR = {
 				AND = {
@@ -8851,13 +8785,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -9056,9 +8983,7 @@ focus_tree = {
 		will_lead_to_war_with = YUG
 		
 		available = {
-			is_subject = no
 			NOT = { has_war_with = YUG }
-			NOT = { is_in_faction_with = YUG }
 			all_allied_country = {
 				NOT = {
 					has_war_with = YUG
@@ -9160,7 +9085,6 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
 			GRE = { 
 				has_war = no 
 				is_subject = no
@@ -9216,13 +9140,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 
 		will_lead_to_war_with = GRE
@@ -9411,7 +9328,6 @@ focus_tree = {
 		cost = 10
 		
 		available = {
-			is_subject = no
 			NOT = { has_wargoal_against = GRE }
 			GRE = {
 				exists = yes
@@ -9424,13 +9340,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}	
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -9458,24 +9367,15 @@ focus_tree = {
 		will_lead_to_war_with = GRE
 		
 		available = {
-			is_subject = no
 			GRE = { 
 				exists = yes
 				has_war = yes
 			}
-			NOT = { is_in_faction_with = GRE }
 			NOT = { has_war_with = GRE }
 		}
 
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -9500,8 +9400,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_remilitarize_the_rhineland
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
 
@@ -9601,33 +9499,9 @@ focus_tree = {
 		y = 0
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
-		
-		bypass = {
-			SOU = {
-				OR = {
-					NOT = {
-						has_government = communism
-					}
-					exists = no
-				}
-			}
-		}
-
-		available = {
-			is_subject = no
-			NOT = { has_government = communism }
-			NOT = { is_in_faction_with = SOU }
-		}
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -9658,99 +9532,10 @@ focus_tree = {
 						}
 					}
 				}
-				country_event = germany.5
-			}
-		}
-	}
-
-	focus = {
-		id = GER_anti_soviet_pact
-		icon = GFX_focus_ger_bulwark_against_bolshevism
-		prerequisite = { focus = GER_anti_comintern_pact }
-		mutually_exclusive = { focus = GER_molotov_ribbentrop_pact }
-		x = -1
-		y = 1
-		relative_position_id = GER_anti_comintern_pact
-		cost = 10
-		allow_branch = { always = no }	
-		available = {
-			has_army_manpower = { size > 849999 } #ca 90 div
-		}
-
-		ai_will_do = {
-			factor = 2.5
-			modifier = {
-				factor = 0.1
-				has_idea = SOV_soviet_german_trade_agreement
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-		}
-		
-		search_filters = {}
-		
-		completion_reward = {
-			hidden_effect = {
-				SOV = { remove_opinion_modifier = { target = ROOT modifier = pact_against_us } }
-				add_ideas = anti_soviet_pact
-			}
-			SOU = { add_opinion_modifier = { target = ROOT modifier = worse_pact_against_us } }
-			custom_effect_tooltip = GER_anti_soviet_pact_tt_3
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = GER_anti_soviet_pact_tt
-			custom_effect_tooltip = GER_anti_soviet_pact_tt_2
-			every_other_country = {
-				limit = {
-					has_opinion_modifier = anti_comintern_pact_opinion
-					OR = {
-						NOT = { is_in_faction = yes }
-						is_in_faction_with = GER
-					}
-					NOT = { tag = GER }
-					NOT = { has_war_with = GER }
-				}
-				country_event = germany.83
-			}
-			hidden_effect = {
-				news_event = { hours = 12 id = news.215 }
-			}
-		}
-	}
-
-	focus = {
-		id = GER_support_finland
-		icon = GFX_focus_FIN_right_wing_policies
-		prerequisite = { focus = GER_anti_soviet_pact }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_anti_soviet_pact
-		cost = 5
-		available = {
-			is_subject = no
-			NOT = { is_ally_with = SOV }
-			NOT = {
-				has_war_with = FIN
-			}
-			FIN = {
-				exists = yes
-				has_war_with = SOV
-			}
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = GER_nordische_legion_ns
-				days = 545
+				set_country_flag = anti_comintern_member
+				GER = { add_opinion_modifier = { target = ROOT modifier = anti_comintern_pact_opinion } }
+				add_opinion_modifier = { target = GER modifier = anti_comintern_pact_opinion }
+				SOV  = { add_opinion_modifier = { target = ROOT modifier = pact_against_us } }
 			}
 		}
 	}
@@ -9964,100 +9749,6 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
-		id = GER_alliance_with_the_ussr
-		icon = GFX_focus_GER_alliance_with_the_ussr
-		prerequisite = { focus = GER_treaty_with_the_ussr }
-		mutually_exclusive = { focus = GER_war_with_the_ussr }
-		x = 0
-		y = 1
-		relative_position_id = GER_treaty_with_the_ussr
-		cost = 10
-		
-		allow_branch = { always = no }
-
-		available = {
-			is_subject = no
-			has_government = fascism
-			has_war = no
-			SOV = {
-				has_war = no
-				NOT = { has_war_with = GER }
-				is_subject = no
-			}
-		}
-
-		ai_will_do = {
-			factor = 0.01
-			modifier = {
-				factor = 0
-				NOT = { is_in_faction_with = POL }
-				country_exists = POL
-			}			
-			modifier = {
-				factor = 0
-				OR = {
-					has_war_with = POL
-					has_war_with = FRA
-				}
-			}				
-		}	
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			if = {
-				limit = { is_faction_leader = yes }
-				custom_effect_tooltip = ger_sov_buddies_tooltip_2
-			}
-			custom_effect_tooltip = ger_sov_buddies_tooltip
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				if = {
-					limit = {
-						is_faction_leader = yes
-					}
-					dismantle_faction = yes
-				}
-				else_if = {
-					limit = {
-						is_in_faction  = yes
-					}
-					remove_from_faction = GER
-				}
-				create_faction = the_berlin_moscow_axis
-				add_timed_idea = {
-					idea = soviet_german_friendship
-					days = 730
-				}
-			}
-			SOV = {
-				add_opinion_modifier = { target = GER modifier = ger_sov_alliance_focus }
-				country_event = germany.89
-			}
-		}
-	}
-
-	focus = {
-		id = GER_puppet_turkey
-		icon = GFX_focus_generic_attack_turkey
-		prerequisite = { focus = GER_alliance_with_the_ussr }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_alliance_with_the_ussr
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		ai_will_do = {
-			factor = 1
-		}	
-
-		completion_reward = {
-		}
-	}
 	
 	focus = {
 		id = GER_befriend_turkey
@@ -10071,18 +9762,8 @@ focus_tree = {
 
 		available_if_capitulated = no
 
-		available = { 
-		}
-
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -10101,9 +9782,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_befriend_turkey
 		cost = 5
-		available = {
-			is_subject = no
-		}
 
 		ai_will_do = {
 			factor = 2
@@ -10153,45 +9831,15 @@ focus_tree = {
 	}
 
 	focus = {
-		id = GER_befriend_china
-		icon = GFX_focus_chi_cooperation_with_the_nationalists
-		prerequisite = { focus = GER_anti_comintern_pact }
-		mutually_exclusive = { focus = GER_befriend_japan }
-		x = 3
-		y = 1
-		relative_position_id = GER_anti_comintern_pact
-		cost = 5
-
-		available_if_capitulated = yes
-		allow_branch = { always = no }
-
-		ai_will_do = {
-			factor = 0.5
-			modifier = {
-				is_in_faction_with = JAP
-				factor = 0
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-		}
-
-	}
-
-	focus = {
 		id = GER_befriend_japan
 
 		icon = GFX_focus_chi_collaboration_with_the_japanese
 		alternate_icon = GFX_focus_GER_befriend_japan
 
 		prerequisite = { focus = GER_anti_comintern_pact }
-		mutually_exclusive = { focus = GER_befriend_china }
-		x = 2
-		y = 0
-		relative_position_id = GER_befriend_china
+		x = 5
+		y = 1
+		relative_position_id = GER_anti_comintern_pact
 		cost = 5
 		
 		available_if_capitulated = yes
@@ -10229,12 +9877,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = GER_japan_friend_tt
 			set_global_flag = falkenhausen_recalled
-			if = {
-				limit = {
-					has_dlc = "Waking the Tiger"
-				}
-				show_unit_leaders_tooltip = GER_alexander_von_falkenhausen
-			}
+			show_unit_leaders_tooltip = GER_alexander_von_falkenhausen
 
 			hidden_effect = {
 				delete_unit_template_and_units = {
@@ -10316,10 +9959,6 @@ focus_tree = {
 		relative_position_id = GER_befriend_japan
 
 		cost = 5
-
-		available = {
-			is_subject = no
-		}
 
 		bypass = {
 			GER = {
@@ -10945,8 +10584,6 @@ focus_tree = {
 		relative_position_id = GER_reclaim_former_african_colonies
 		cost = 10
 		available = {
-			is_subject = no
-			has_government = fascism
 			has_completed_focus = GER_uplift_the_rosenberg_office
 			any_controlled_state = {
 				is_on_continent = africa
@@ -11185,852 +10822,6 @@ focus_tree = {
 
 		}
 	}
-		
-	focus = {
-		id = GER_re_establish_german_control_over_qingdao
-		icon = GFX_focus_GER_re_establish_german_control_over_qingdao 
-		prerequisite = { focus = GER_befriend_china }
-
-		x = -2
-		y = 1
-		relative_position_id = GER_befriend_china
-		cost = 5
-		available = {
-			is_subject = no
-			743 = {
-				is_fully_controlled_by = CHI
-			}
-		}
-
-		bypass = {
-			743 = {
-				is_owned_by = GER
-			}
-		}
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-
-			CHI = {
-				country_event = {
-					id = wuw_GER_diplomacy.32
-					hours = 12
-				}
-			}
-			
-
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-
-				add_opinion_modifier = {
-					target = CHI
-					modifier = medium_increase
-				}
-
-				give_guarantee = CHI
-
-				CHI = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = medium_increase
-					}
-					give_guarantee = ROOT
-				}
-				743 = {
-					transfer_state_to = ROOT
-					add_dynamic_modifier = {
-						modifier = GER_qingdao_reintegrated_modifier
-						days = 360
-					}
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = GER_claim_old_colonies_in_the_east
-		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = GER_befriend_china }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_befriend_china
-		cost = 5
-		available = {
-			is_subject = no
-		}
-
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-
-			custom_effect_tooltip = GER_claim_old_colonies_in_the_east_tt
-
-			hidden_effect = {
-				IF = {
-					limit = {
-						OR = {
-							333 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-								
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 333
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					333 = { #North Borneo
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 333 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 333
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							334 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 334
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					334 = { #Kalimantan
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 334 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 334
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							335 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-								
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 335
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					335 = { #Java
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 335 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 335
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							336 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 336
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					336 = { #Singapore
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 336 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 336
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							667 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 667
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					667 = { #Lesser Sunda Islands
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 667 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 667
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							668 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 668
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					668 = { #Moluccas
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 668 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 668
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							672 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 672
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					672 = { # Sumatra
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 672 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 672
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							673 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-								
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 673
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					673 = { #Sulawesi
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 673 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 673
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							721 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 721
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					721 = { #Portugese Timor 
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 721 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 721
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							738 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 738
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					738 = { #Aru Islands
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 738 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 738
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							684 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 684
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					684 = { #Caroline Islands
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 684 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 684
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							647 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 647
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					647 = { #Palau
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 647 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 647
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							646 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}	
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 646
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					646 = { #Saipan
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 646 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 646
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							633 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 633
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					633 = { #Marshall Islands
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 633 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 633
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							979 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 979
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					979 = { #Kaiser-Wilhelmsland
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 979 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 979
-				}
-
-				IF = {
-					limit = {
-						OR = {
-							737 = {
-								is_fully_controlled_by = CHI
-								controller = {
-									NOT = {
-										has_country_flag = {
-											flag = GER_se_asia_colony_demand_sent_flag
-										}
-										has_war_with = ROOT
-									}
-								}
-							}
-							any_other_country = {
-								is_in_faction_with = ROOT
-								controls_state = 737
-								NOT = {
-									has_country_flag = {
-										flag = GER_se_asia_colony_demand_sent_flag
-									}
-								}
-							}
-						}
-					}
-					737 = { #Bismarck
-						controller = {
-							country_event = {
-								id = wuw_GER_diplomacy.35
-								hours = 6
-							}
-							set_country_flag = GER_se_asia_colony_demand_sent_flag
-						}
-					}
-				}
-
-				ELSE_IF = {
-					limit = { 737 = { NOT = { is_fully_controlled_by = ROOT}}}
-					add_state_claim = 737
-				}
-			}
-
-			
-		}
-	}
-	
-	focus = {
-		id = GER_ally_chiang_kai_shek
-		icon = GFX_focus_GER_ally_chiang_kai_shek
-		prerequisite = { focus = GER_re_establish_german_control_over_qingdao }
-		prerequisite = { focus = GER_claim_old_colonies_in_the_east }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_re_establish_german_control_over_qingdao
-		cost = 10
-
-		bypass = {
-			NOT = { country_exists = CHI }
-		}
-
-		available = {
-			is_faction_leader = yes
-			is_subject = no
-			NOT = { has_war_with = CHI }
-			CHI = {
-				OR = {
-					is_subject = no
-					is_subject_of = ROOT
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-
-			IF = {
-				limit = {
-					CHI = {
-						has_country_leader = {
-							ruling_only = yes
-							character = CHI_chiang_kaishek
-						}
-					}
-				}
-
-				add_ai_strategy = { 
-					type = alliance
-					id = CHI
-					value = 100
-				}
-
-				CHI = {
-					add_ai_strategy = { 
-						type = alliance
-						id = GER
-						value = 100
-					}
-				}
-
-				CHI = { 
-					country_event = {
-						id = generic.5
-						hours = 12
-					}
-				}
-			}
-
-			326 = { #Hong-Kong
-				add_claim_by = ROOT
-			}
-			729 = { #Macau
-				add_claim_by = ROOT
-			}
-			728 = { #Guangzhouwan
-				add_claim_by = ROOT
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = GER_asia_revive_the_schutztruppe_tt
-		}
-	}
 
 	focus = {
 		id = GER_japanese_naval_cooperation
@@ -12043,21 +10834,6 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			is_subject = no
-			NOT = { has_war_with = JAP }
-			has_government = fascism
-			JAP = {
-				is_subject = no
-				OR = {
-					is_in_faction = no
-					has_government = fascism
-					NOT = {
-						any_allied_country = {
-							has_war_with = ROOT
-						}
-					}
-				}
-			}
 			any_controlled_state = {
 				OR = {
 					is_on_continent = asia
@@ -12120,36 +10896,8 @@ focus_tree = {
 		relative_position_id = GER_befriend_japan
 		cost = 5
 
-		available = {
-			is_subject = no
-			NOT = { has_war_with = JAP }
-			JAP = {
-				exists = yes
-				is_subject = no
-				OR = {
-					is_in_faction = no
-					NOT = {
-						any_allied_country = {
-							has_war_with = ROOT
-						}
-					}
-				}
-			}
-		}
-
-		bypass = {
-			NOT = { country_exists = JAP }
-		}
-
 		ai_will_do = {
 			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -12368,12 +11116,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = GER_japan_friend_tt
 				set_global_flag = falkenhausen_recalled
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-					}
-					show_unit_leaders_tooltip = GER_alexander_von_falkenhausen
-				}
+				show_unit_leaders_tooltip = GER_alexander_von_falkenhausen
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -12393,9 +11136,6 @@ focus_tree = {
 		y = 0
 		relative_position_id = GER_create_asian_reichskommissariat
 		cost = 10
-		available = {
-			is_subject = no
-		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
@@ -12422,62 +11162,6 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = GER_the_proud_eagle_and_the_resurgent_dragon 
-		icon = GFX_focus_GER_the_proud_eagle_and_the_rising_dragon
-
-		prerequisite = { focus = GER_ally_chiang_kai_shek }
-		prerequisite = { focus = GER_create_asian_reichskommissariat }
-
-		x = 0
-		y = 2
-		relative_position_id = GER_ally_chiang_kai_shek
-		cost = 10
-
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-		}
-
-		available = {
-			is_subject = no
-			is_in_faction_with = CHI
-			JAP = {
-				exists = yes
-				NOT = {
-					is_in_faction_with = ROOT
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = GER_proud_eagle_that_ate_the_sun_ns
-				days = 365
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			create_wargoal = {
-				type = annex_everything
-				target = JAP 
-			}
-
-			add_named_threat = { 
-				threat = 3
-				name = GER_the_proud_eagle_and_the_resurgent_dragon
-			}
-		}
-	}
-	
-	focus = {
 		id = GER_blitzkrieg_across_the_pacific
 		icon = GFX_focus_generic_naval_invasion_tank
 		prerequisite = { focus = GER_sentinels_of_the_pacific }
@@ -12487,19 +11171,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_sentinels_of_the_pacific
 		cost = 10
-		available = {
-			is_subject = no
-		}
 
 		ai_will_do = {
 			factor = 5
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ANNEXATION }
@@ -12520,16 +11194,11 @@ focus_tree = {
 				category = tp_tech
 				name = GER_blitzkrieg_across_the_pacific
 			}
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				add_doctrine_cost_reduction = {
-					cost_reduction = 0.5
-					uses = 2
-					category = cat_marines_doctrine
-					name = GER_blitzkrieg_across_the_pacific
-				}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_marines_doctrine
+				name = GER_blitzkrieg_across_the_pacific
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -12637,9 +11306,6 @@ focus_tree = {
 		y = 8
 		relative_position_id = GER_remilitarize_the_rhineland
 		cost = 5
-		available = {
-			has_government = fascism
-		}
 
 		search_filters = { FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
