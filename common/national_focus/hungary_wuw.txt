@@ -31,7 +31,7 @@ focus_tree = {
 		id = wuw_HUN_end_the_regency
 		icon = GFX_focus_hun_elect_a_king
 		#prerequisite = { focus = }
-		mutually_exclusive = { focus = wuw_HUN_continue_the_regency focus = wuw_HUN_end_the_white_terror }
+		mutually_exclusive = { focus = wuw_HUN_continue_the_regency }
 		x = 2
 		y = 0
 		#relative_position_id =
@@ -74,7 +74,7 @@ focus_tree = {
 		id = wuw_HUN_continue_the_regency
 		icon = GFX_focus_rom_handle_king
 		#prerequisite = { focus = }
-		mutually_exclusive = { focus = wuw_HUN_end_the_regency focus = wuw_HUN_end_the_white_terror }
+		mutually_exclusive = { focus = wuw_HUN_end_the_regency }
 		x = 7
 		y = 0
 		relative_position_id = wuw_HUN_end_the_regency
