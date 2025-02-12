@@ -2069,7 +2069,6 @@ focus_tree = {
 		id = ROM_reserve_divisions
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = ROM_royal_guards_divisions }
-		mutually_exclusive = { focus = ROM_the_armored_division }
 		x = 0
 		y = 1
 		relative_position_id = ROM_royal_guards_divisions
@@ -2093,7 +2092,6 @@ focus_tree = {
 		id = ROM_the_armored_division
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = ROM_royal_guards_divisions }
-		mutually_exclusive = { focus = ROM_reserve_divisions }
 		x = 2
 		y = 1
 		relative_position_id = ROM_royal_guards_divisions

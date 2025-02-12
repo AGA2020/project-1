@@ -278,6 +278,7 @@ GER_henschel_organization = {
 			original_tag = MAN
 			original_tag = BUL
 			original_tag = FIN
+			original_tag = ROM
 		} 
 	}
 
@@ -350,7 +351,8 @@ GER_henschel_organization = {
 				FROM = { original_tag = HUN }
 				FROM = { original_tag = MAN }
 				FROM = { original_tag = BUL }	
-				FROM = { original_tag = FIN }						
+				FROM = { original_tag = FIN }	
+				FROM = { original_tag = ROM }						
 			}
 		}
 
@@ -392,7 +394,8 @@ GER_henschel_organization = {
 				FROM = { original_tag = HUN }
 				FROM = { original_tag = MAN }
 				FROM = { original_tag = BUL }
-				FROM = { original_tag = FIN }							
+				FROM = { original_tag = FIN }
+				FROM = { original_tag = ROM }							
 			}
 		}
 
@@ -437,7 +440,8 @@ GER_henschel_organization = {
 				FROM = { original_tag = HUN }
 				FROM = { original_tag = MAN }
 				FROM = { original_tag = BUL }
-				FROM = { original_tag = FIN }							
+				FROM = { original_tag = FIN }	
+				FROM = { original_tag = ROM }						
 			}
 		}
 
@@ -473,7 +477,8 @@ GER_henschel_organization = {
 				FROM = { original_tag = HUN }
 				FROM = { original_tag = MAN }
 				FROM = { original_tag = BUL }
-				FROM = { original_tag = FIN }							
+				FROM = { original_tag = FIN }	
+				FROM = { original_tag = ROM }						
 			}
 		}
 
@@ -507,7 +512,8 @@ GER_henschel_organization = {
 				FROM = { original_tag = HUN }
 				FROM = { original_tag = MAN }
 				FROM = { original_tag = BUL }
-				FROM = { original_tag = FIN }							
+				FROM = { original_tag = FIN }		
+				FROM = { original_tag = ROM }					
 			}
 		}
 
