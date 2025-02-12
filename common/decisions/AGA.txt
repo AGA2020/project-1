@@ -9,6 +9,9 @@ MAN_request_china = {
         target_root_trigger = {
            has_completed_focus = MAN_national_cooperation_government 
         }
+        allowed = {
+            original_tag = MAN
+        }
         target_trigger = {
             OR = {
                 FROM = {

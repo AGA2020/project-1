@@ -473,19 +473,3 @@ operations = {
 		}
 	}
 }
-
-SOV_spain = {
-	SOV_assist_republican_spain = {
-		icon = GFX_decision_SOV_secure_the_administration
-		fire_only_once = yes
-		cost = 0
-		available = {
-			has_global_flag = spanish_civil_war
-		}
-		complete_effect = {
-			SOV = {
-				army_experience = 300
-			}
-		}
-	}
-}

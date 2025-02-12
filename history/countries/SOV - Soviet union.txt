@@ -170,7 +170,7 @@ create_equipment_variant = {
 	parent_version = 0
 	design_team = mio:SOV_tula_arms_plant_organization
 }
-
+army_experience = 300
 #Initialize character flags Part I (aka who's safe)
 SOV_mikhail_kalinin = {
 	set_character_flag = SOV_safe_from_purge_flag
