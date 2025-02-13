@@ -666,7 +666,7 @@ characters = {
 			}
 		}
 		field_marshal = {
-			traits = { skilled_staffer commando cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist organizer offn
+			traits = { skilled_staffer commando cavalry_leader armor_officer panzer_leader trickster trait_engineer urban_assault_specialist ranger winter_specialist organizer
 		 }
 			skill = 8
 			attack_skill = 8
