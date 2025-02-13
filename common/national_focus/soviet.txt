@@ -5901,8 +5901,6 @@ focus_tree = {
 		relative_position_id = SOV_strengthen_the_mobilization_plan
 		cost = 5
 
-		mutually_exclusive = { focus = SOV_cohesion_first }
-
 		available = {
 
 		}
@@ -5971,8 +5969,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_strengthen_the_mobilization_plan
 		cost = 5
-
-		mutually_exclusive = { focus = SOV_restore_cossack_units }
 
 		available = {
 		}
