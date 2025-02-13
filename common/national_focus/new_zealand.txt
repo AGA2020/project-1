@@ -1442,7 +1442,7 @@
 		y = 3
 		relative_position_id = NZL_ratana_alliance
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -1454,12 +1454,11 @@
 
 		completion_reward = {
 			284 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 			}
 			723 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 			}
-			add_stability = -0.05
 		}
 	}
 
