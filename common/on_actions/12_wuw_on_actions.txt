@@ -471,68 +471,6 @@ on_actions = {
 			IF = {
 				limit = {
 					FROM = {
-						OR = {
-							original_tag = GER
-							original_tag = SOV
-						}
-	
-					}
-					GER = {
-						has_completed_focus = GER_spheres_of_influence
-						has_country_flag = GER_SOV_agreed_sphere_of_influence
-					}
-	
-					ROOT = {
-						original_tag = POL
-					}
-				}
-
-				FROM = {
-					set_country_flag = capitulated_POL_flag
-
-					country_event = {
-						id = wuw_GER_diplomacy.87
-						hours = 12
-					}
-				}
-			}
-		}
-
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						OR = {
-							original_tag = GER
-							original_tag = SOV
-						}
-		
-					}
-					GER = {
-						has_completed_focus = GER_spheres_of_influence
-						has_country_flag = GER_SOV_agreed_sphere_of_influence
-					}
-		
-					ROOT = {
-						original_tag = CZE
-					}
-				}
-
-				FROM = {
-					set_country_flag = capitulated_CZE_flag
-
-					country_event = {
-						id = wuw_GER_diplomacy.87
-						hours = 12
-					}
-				}
-			}
-		}
-
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
 						AND = {
 							GER = {
 								has_country_leader = {
