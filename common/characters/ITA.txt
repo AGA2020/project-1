@@ -1016,12 +1016,12 @@ characters = {
 		}
 		
 		navy_leader={
-			traits={ gentlemanly superior_tactician fleet_protector ironside }
+			traits={ gentlemanly superior_tactician fleet_protector ironside spotter blockade_runner }
 			skill=4
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=3
-			coordination_skill=2
+			attack_skill=5
+			defense_skill=5
+			maneuvering_skill=5
+			coordination_skill=5
 			legacy_id=0
 		}
 	}
