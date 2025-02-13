@@ -1087,32 +1087,6 @@ on_actions = {
 						}
 					}
 				}
-				if = { #Invite European Commies to Germany's faction
-					limit = {
-						GER = {
-							NOT = { 
-								has_completed_focus = GER_root_out_imperialism
-							}
-						}
-						ROOT = {
-							capital_scope = { is_on_continent = europe}
-						}
-					}
-					ROOT = {
-						country_event = {
-							id = wuw_GER_diplomacy.83
-							hours = 6
-						}
-					}
-				}
-				else = { #Invite every Commie to Germany's faction
-					ROOT = {
-						country_event = {
-							id = wuw_GER_diplomacy.83
-							hours = 6
-						}
-					}
-				}
 			}
 		}
 
