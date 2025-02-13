@@ -3,20 +3,6 @@ on_actions = {
 	# FROM is the faction Leader, ROOT is the country leaving the faction 
 	on_leave_faction = {
 
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = GER
-						has_completed_focus = GER_shared_rd_programs_ww
-					}
-				}
-				FROM = {
-					GER_one_less_member_decrease_rnd_program_strength = yes
-				}
-			}
-		}
-
 		effect = { # Removing Joint Focus Tree modifiers 
 			#German Autarky Trade Influence Stuff
 			if = {
@@ -90,21 +76,6 @@ on_actions = {
 
 	#FROM is faction leader on join faction requests. THIS DOES NOT FIRE ON ADD_TO_FACTION EFFECT! USE ON_OFFER_JOIN_FACTION!
 	on_join_faction = { 
-
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = GER
-						has_completed_focus = GER_shared_rd_programs_ww
-					}
-				}
-				FROM = {
-					GER_one_more_member_increase_rnd_program_strength = yes
-				}
-				
-			}
-		}
 
 		effect = { # Adding the correct stuff for faction joiners for the AH joint focus tree
 
@@ -184,21 +155,6 @@ on_actions = {
 
 	# FROM is the country invited, THIS and ROOT are the faction leader.
 	on_offer_join_faction = { 
-
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = GER
-						has_completed_focus = GER_shared_rd_programs_ww
-					}
-				}
-				ROOT = {
-					GER_one_more_member_increase_rnd_program_strength = yes
-				}
-				
-			}
-		}
 
 		effect = { # Adding the correct stuff for faction joiners for the AH joint focus tree
 			#German Autarky Trade Influence Stuff
@@ -286,20 +242,6 @@ on_actions = {
 				}
 				101 = {
 					set_state_controller_to = GRN 
-				}
-			}
-		}
-
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = GER
-						has_completed_focus = GER_shared_rd_programs_ww
-					}
-				}
-				FROM = {
-					GER_one_more_member_increase_rnd_program_strength = yes
 				}
 			}
 		}
