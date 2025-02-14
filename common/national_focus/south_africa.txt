@@ -486,7 +486,7 @@
 		y = 4
 		relative_position_id = SAF_support_the_policy_of_appeasement
 
-		cost = 10
+		cost = 3.5
 
 		ai_will_do = {
 			factor = 1
@@ -502,6 +502,29 @@
 				remove_idea = SAF_cheap_labor_1
 				add_idea = SAF_cheap_labor_2
 			}
+		}
+	}
+
+	focus = {
+		id = SAF_voortrekker_monument
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = SAF_native_laws_amendment_act }
+		x = 1
+		y = 1
+		relative_position_id = SAF_native_laws_amendment_act
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_TFV_AUTONOMY}
+		completion_reward = {
+			add_ideas = SAF_voortrekker_monument
 		}
 	}
 

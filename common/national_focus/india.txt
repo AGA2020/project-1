@@ -270,7 +270,7 @@ focus = {
 		y = 1
 		relative_position_id = RAJ_indian_national_congress
 
-		cost = 3
+		cost = 3.5
 
 		ai_will_do = {
 			factor = 25
