@@ -205,6 +205,11 @@ create_equipment_variant = {
 	parent_version = 0
 	design_team = mio:ROM_cugir_organization
 }
+diplomatic_relation = {
+	country = ITA
+	relation = military_access
+	active = yes
+}
 
 1939.1.1 = {
 }

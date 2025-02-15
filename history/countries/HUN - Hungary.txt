@@ -146,6 +146,11 @@ create_equipment_variant = {
 	parent_version = 0
 	design_team = mio:HUN_femaru_fegyver_es_gepgyar_organization
 }
+diplomatic_relation = {
+	country = ITA
+	relation = military_access
+	active = yes
+}
 ### SETUP HUNGARO-GERMAN RELATIONS AND NATIONAL SPIRITS ###
 IF = {
 	limit = {
