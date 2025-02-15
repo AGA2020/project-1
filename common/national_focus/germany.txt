@@ -7357,13 +7357,10 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 10	
+			factor = 0	
 			modifier = {
-				factor = 0
-				date < 1939.1.1
-			}
-			modifier = {
-				factor = 0
+				factor = 100
+				date > 1939.1.1
 			}
 		}
 
