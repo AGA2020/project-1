@@ -466,7 +466,16 @@ if = {
 	add_ideas = MTG_naval_treaty_adherent
 }
 
-
+diplomatic_relation = {
+	country = HUN
+	relation = military_access
+	active = yes
+}
+diplomatic_relation = {
+	country = ROM
+	relation = military_access
+	active = yes
+}
 ### STOCKPILE ###
 add_equipment_to_stockpile = {
 	type = motorized_equipment_1
