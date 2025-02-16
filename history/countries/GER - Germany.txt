@@ -194,7 +194,7 @@ diplomatic_relation = {
 }
 
 set_variable = { X_GER_propaganda_3_cost = 15 }
-set_variable = { X_GER_propaganda_4_cost = 15 }
+set_variable = { X_GER_propaganda_4_cost = 100 }
 set_variable = { X_GER_propaganda_5_cost = 15 }
 set_variable = { X_GER_propaganda_6_cost = 15 }
 set_variable = { X_GER_propaganda_7_cost = 15 }
