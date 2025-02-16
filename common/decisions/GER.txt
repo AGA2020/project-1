@@ -324,8 +324,8 @@ GER_seize_gold_reserves_cat = {
 
 		state_target = yes
 
-		targets = { 195 219 217 242 218 206 202 137 }
-		#States being targeted: Leningrad, Moscow, Stalingrad, Smolensk, Rostov, Minsk, Kyiv, Crimea
+		targets = { 195 219 217 242 218 206 202 137 229 }
+		#States being targeted: Leningrad, Moscow, Stalingrad, Smolensk, Rostov, Minsk, Kyiv, Crimea, Baku
 
 		target_trigger = {
 			FROM = {
