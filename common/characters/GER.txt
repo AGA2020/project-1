@@ -448,7 +448,6 @@ characters = {
 				NOT = {
 					has_completed_focus = GER_remilitarize_the_rhineland
 					has_completed_focus = GER_the_monarchy_compromise_ww
-					has_completed_focus = GER_start_the_proletarian_revolution
 				}
 			}
 			available = {
@@ -2666,12 +2665,6 @@ characters = {
 			}
 			available = {
 				has_intelligence_agency = yes
-				NOT = {
-					has_completed_focus = GER_start_the_proletarian_revolution
-				}
-			}
-			visible = {
-				NOT = { has_completed_focus = GER_start_the_proletarian_revolution }
 			}
 			traits = {
 				head_of_the_abwehr
