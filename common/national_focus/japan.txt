@@ -1147,7 +1147,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = JAP_expand_manchurian_railways
 
-		cost = 10
+		cost = 3.5
 
 		ai_will_do = {
 			factor = 1
@@ -1159,9 +1159,9 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			715 = { add_extra_state_shared_building_slots = 1 }
-			610 = { add_extra_state_shared_building_slots = 1 }
-			328 = { add_extra_state_shared_building_slots = 1 }
+			715 = { add_extra_state_shared_building_slots = 2 }
+			610 = { add_extra_state_shared_building_slots = 2 }
+			328 = { add_extra_state_shared_building_slots = 2 }
 		}
 	}
 
