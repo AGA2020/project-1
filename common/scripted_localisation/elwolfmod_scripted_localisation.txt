@@ -1,47 +1,4 @@
 defined_text = {
-	name = GetSovBoostStatus
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = sov_boost
-				option = sixteen
-			}
-		}
-		localization_key = check_gamerules_sixteen
-	}
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = sov_boost
-				option = twelve
-			}
-		}
-		localization_key = check_gamerules_twelve
-	}
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = sov_boost
-				option = eight
-			}
-		}
-		localization_key = check_gamerules_eight
-	}
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = sov_boost
-				option = four
-			}
-		}
-		localization_key = check_gamerules_four
-	}
-	text = {
-		localization_key = check_gamerules_zero
-	}
-}
-
-defined_text = {
 	name = GetGerBoostStatus
 	text = {
 		trigger = {

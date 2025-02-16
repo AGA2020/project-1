@@ -901,67 +901,6 @@ on_actions = {
 					# from ai trade in vanilla
 				}
 			}
-			# Soviet boost
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = sov_boost
-						option = sixteen
-					}
-				}
-				SOV = {
-					add_offsite_building = {
-						type = industrial_complex
-						level = 16
-					}
-					# from ai trade in vanilla
-				}
-			}
-			else_if = {
-				limit = {
-					has_game_rule = {
-						rule = sov_boost
-						option = twelve
-					}
-				}
-				SOV = {
-					add_offsite_building = {
-						type = industrial_complex
-						level = 12
-					}
-					# from ai trade in vanilla
-				}
-			}
-			else_if = {
-				limit = {
-					has_game_rule = {
-						rule = sov_boost
-						option = eight
-					}
-				}
-				SOV = {
-					add_offsite_building = {
-						type = industrial_complex
-						level = 8
-					}
-					# from ai trade in vanilla
-				}
-			}
-			else_if = {
-				limit = {
-					has_game_rule = {
-						rule = sov_boost
-						option = four
-					}
-				}
-				SOV = {
-					add_offsite_building = {
-						type = industrial_complex
-						level = 4
-					}
-					# from ai trade in vanilla
-				}
-			}
 			107 = {
 				add_building_construction = {
 					type = industrial_complex
@@ -1166,18 +1105,6 @@ on_actions = {
 						}
 					}
 					add_ideas = no_tradebacks
-				}
-			}
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = sov_no_tradebacks
-						option = on
-					}
-				}
-
-				SOV = {
-					add_ideas = sov_no_tradebacks
 				}
 			}
 			if = {
