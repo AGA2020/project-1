@@ -404,65 +404,6 @@ characters = {
 			}
 		}
 
-		advisor = {
-			slot = high_command
-			idea_token = werner_von_fritsch_high_command
-			ledger = army
-			allowed = {
-				original_tag = GER
-			}
-			visible = {
-				NOT = {
-					has_completed_focus = GER_reorganize_the_wehrmacht
-				}
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Gotterdammerung"
-					}
-					not_already_hired_except_as = high_command
-					NOT = {
-						has_completed_focus = GER_reorganize_the_wehrmacht
-					}
-				}
-			}
-			traits = {
-				army_logistics_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.500
-			}
-		}
-
-		advisor = {
-			slot = army_chief
-			idea_token = werner_von_fritsch_army_chief
-			ledger = army
-			allowed = {
-				original_tag = GER
-				has_dlc = "Gotterdammerung"
-			}
-			visible = {
-				NOT = {
-					has_completed_focus = GER_remilitarize_the_rhineland
-					has_completed_focus = GER_the_monarchy_compromise_ww
-				}
-			}
-			available = {
-				not_already_hired_except_as = army_chief
-				has_completed_focus = GER_prussian_artillery
-			}
-			traits = {
-				army_chief_army_high_command
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.500
-			}
-		}
-
 		corps_commander = {
 			traits = { trait_cautious old_guard }
 			skill = 3
@@ -471,9 +412,7 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 3
 			visible = {
-				NOT = {
-					has_completed_focus = GER_reorganize_the_wehrmacht
-				}
+				always = no
 			}
 		}
 	}
