@@ -48,6 +48,30 @@ X_GER_propaganda_campaigns = {
 			custom_effect_tooltip = propaganda_no_multiply
 		}
 	}
+	X_GER_propaganda_19 = { # ID = 19 # BU TAMAM MODERNİZE EDİLDİ war_propaganda_sink_convoys aynısı
+		priority = 2
+		icon = eng_propaganda_campaigns
+		ai_will_do = { base = 0 }
+		allowed = { original_tag = GER }
+		available = {
+			X_GER_propaganda_poster_slot_available = yes
+			has_convoys_war_support < 0
+		}
+		days_remove = 180
+		cost = X_GER_propaganda_19_cost
+		modifier = {
+			weekly_convoys_war_support = 0.006
+		}
+		complete_effect = {
+			set_variable = { X_GER_new_propaganda_campaign = 19 }
+			X_GER_pick_propaganda_campaign_slot_effect = yes
+		}
+		remove_effect = {
+			set_variable = { X_GER_propaganda_campaign_to_remove = 19 }
+			X_GER_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = propaganda_no_multiply
+		}
+	}
 	X_GER_propaganda_5 = { # ID = 5
 		priority = 2
 		icon = eng_propaganda_campaigns
@@ -612,30 +636,6 @@ X_GER_propaganda_campaigns = {
 			set_variable = { X_GER_propaganda_campaign_to_remove = 18 }
 			X_GER_reset_propaganda_campaign_slot_effect = yes
 			multiply_variable = { X_GER_propaganda_18_cost = 2 }
-		}
-	}
-	X_GER_propaganda_19 = { # ID = 19 # BU TAMAM MODERNİZE EDİLDİ war_propaganda_sink_convoys aynısı
-		priority = 2
-		icon = eng_propaganda_campaigns
-		ai_will_do = { base = 0 }
-		allowed = { original_tag = GER }
-		available = {
-			X_GER_propaganda_poster_slot_available = yes
-			has_convoys_war_support < 0
-		}
-		days_remove = 180
-		cost = X_GER_propaganda_19_cost
-		modifier = {
-			weekly_convoys_war_support = 0.006
-		}
-		complete_effect = {
-			set_variable = { X_GER_new_propaganda_campaign = 19 }
-			X_GER_pick_propaganda_campaign_slot_effect = yes
-		}
-		remove_effect = {
-			set_variable = { X_GER_propaganda_campaign_to_remove = 19 }
-			X_GER_reset_propaganda_campaign_slot_effect = yes
-			custom_effect_tooltip = propaganda_no_multiply
 		}
 	}
 	X_GER_propaganda_20 = { # ID = 20
