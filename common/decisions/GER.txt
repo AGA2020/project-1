@@ -13565,7 +13565,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_mittelafrika
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
@@ -13621,7 +13620,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_mittelafrika
 			}
 			NOT = { has_country_flag = GER_improved_african_schutztruppe_flag }
@@ -13692,7 +13690,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
@@ -13772,7 +13769,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_mittelafrika
 			}
 			777 = {
@@ -13850,7 +13846,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_mittelafrika
 			}
 			773 = {
@@ -13928,7 +13923,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_mittelafrika
 			}
 			546 = {
@@ -14006,7 +14000,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_mittelafrika
 			}
 			768 = {
@@ -14084,7 +14077,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_mittelafrika
 			}
 			769 = {
@@ -14162,7 +14154,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_mittelafrika
 			}
 			895 = {
@@ -14240,7 +14231,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_mittelafrika
 			}
 			894 = {
@@ -14318,7 +14308,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_mittelafrika
 			}
 			541 = {
@@ -14396,7 +14385,6 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
 				has_completed_focus = GER_mittelafrika
 			}
 			893 = {
@@ -14478,7 +14466,7 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
+ 
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
@@ -14557,7 +14545,7 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
+ 
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
@@ -14632,7 +14620,7 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
+ 
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
@@ -14707,7 +14695,7 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
+ 
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
@@ -14786,7 +14774,7 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
+ 
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
@@ -14865,7 +14853,7 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
+ 
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
@@ -14940,7 +14928,7 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
+ 
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
@@ -15015,7 +15003,7 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
+ 
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
@@ -15094,7 +15082,7 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
+ 
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
@@ -15173,7 +15161,7 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
-				has_completed_focus = GER_weltpolitik
+ 
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
 				has_completed_focus = GER_ally_chiang_kai_shek
 			}
