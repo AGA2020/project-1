@@ -1,4 +1,5 @@
 ﻿l_english:
+  propaganda_no_multiply:0 "The cost of this propaganda will §YNOT§! increase after you use it"
   no_garrison_SPR:0 "No Garrison(Spain Use This One)"
   improved_worker_cooldown:0 "Cooldown"
   SOV_high_yield_propaganda_cooldown:0 "Propaganda Cooldown"

@@ -481,8 +481,10 @@ propaganda_efforts = {
 		}
 
 		visible = {
-			# has_war = yes
-			has_war_with_non_exiled_country = yes
+			AND = { 
+				not = { tag = GER }
+				has_war_with_non_exiled_country = yes
+			}
 		}
 
 		fire_only_once = no
