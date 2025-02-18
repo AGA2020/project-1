@@ -1310,7 +1310,10 @@ shared_focus = {
 	cost = 10
 
 	available = {
-		date > 1941.1.1
+		OR = {
+			SOV = { has_war = yes }
+			JAP = { has_war = yes }
+		}
 	}
 
 	ai_will_do = {
@@ -1340,7 +1343,10 @@ shared_focus = {
 		}
 
 	available = {
-		date > 1941.1.1
+		OR = {
+			SOV = { has_war = yes }
+			JAP = { has_war = yes }
+		}
 	}
 
 	completion_reward = {
@@ -1362,7 +1368,10 @@ shared_focus = {
 	cost = 10
 
 	available = {
-		date > 1941.1.1
+		OR = {
+			SOV = { has_war = yes }
+			JAP = { has_war = yes }
+		}
 	}
 
 	ai_will_do = {
