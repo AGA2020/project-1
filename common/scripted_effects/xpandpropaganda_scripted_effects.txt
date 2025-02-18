@@ -14,8 +14,9 @@ X_GER_pick_propaganda_campaign_slot_effect = {
 					limit = {
 						has_country_flag = X_GER_debug_fast_propaganda_campaigns_flag
 					}
-					set_country_flag = { flag = X_GER_propaganda_left_days_remaining_flag days = 5 }
+					set_country_flag = { flag = X_GER_propaganda_left_days_remaining_flag days = 90 }
 				}
+				else_if = {
 				else = { #Regular time
 					set_country_flag = { flag = X_GER_propaganda_left_days_remaining_flag days = 180 } #Need code support to use a var here
 				}
@@ -35,7 +36,7 @@ X_GER_pick_propaganda_campaign_slot_effect = {
 					limit = {
 						has_country_flag = X_GER_debug_fast_propaganda_campaigns_flag
 					}
-					set_country_flag = { flag = X_GER_propaganda_center_days_remaining_flag days = 5 }
+					set_country_flag = { flag = X_GER_propaganda_center_days_remaining_flag days = 90 }
 				}
 				else = { #Regular time
 					set_country_flag = { flag = X_GER_propaganda_center_days_remaining_flag days = 180 } #Need code support to use a var here
@@ -56,7 +57,7 @@ X_GER_pick_propaganda_campaign_slot_effect = {
 					limit = {
 						has_country_flag = X_GER_debug_fast_propaganda_campaigns_flag
 					}
-					set_country_flag = { flag = X_GER_propaganda_right_days_remaining_flag days = 5 }
+					set_country_flag = { flag = X_GER_propaganda_right_days_remaining_flag days = 90 }
 				}
 				else = { #Regular time
 					set_country_flag = { flag = X_GER_propaganda_right_days_remaining_flag days = 180 } #Need code support to use a var here
