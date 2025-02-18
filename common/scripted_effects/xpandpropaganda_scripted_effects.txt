@@ -16,7 +16,6 @@ X_GER_pick_propaganda_campaign_slot_effect = {
 					}
 					set_country_flag = { flag = X_GER_propaganda_left_days_remaining_flag days = 90 }
 				}
-				else_if = {
 				else = { #Regular time
 					set_country_flag = { flag = X_GER_propaganda_left_days_remaining_flag days = 180 } #Need code support to use a var here
 				}
