@@ -13292,137 +13292,6 @@ GER_monroe_doctrine_cat = {
 
 #### THE GERMAN CIVIL WAR ####
 
-# A Fourth Silesian Uprising
-GER_a_fourth_silesian_uprising_cat = {
-	
-	GER_fourth_silesian_uprising_mission = {
-
-		priority = 100
-
-		allowed = { always = no }
-
-		icon = GFX_decision_generic_ignite_civil_war
-
-		available = {
-			hidden_trigger = { always = no }
-		}
-
-		days_mission_timeout = 210
-		is_good = no
-		fire_only_once = yes
-
-		cancel_trigger = {
-			OR = {
-				has_completed_focus = GER_tend_to_the_future_of_germany
-			}
-		}
-
-		remove_effect = {
-		}
-
-		complete_effect = {
-		}
-
-		timeout_effect = {
-
-			add_political_power = -50
-			add_stability = -0.05
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			country_event = { 
-				id = wuw_GER_civil_war.5
-			}
-
-		}
-
-		ai_will_do = {
-			base = 250
-		}
-	}
-
-	GER_reestablish_the_black_reichswehr = {
-
-		priority = 90
-
-		icon = GFX_decision_generic_army_support
-
-		ai_will_do = {
-			base = 200
-		}
-
-		visible = {
-			has_active_mission = GER_fourth_silesian_uprising_mission
-		}
-
-		available = {
-		}
-
-		days_remove = 14
-
-		cost = 25
-
-		fire_only_once = yes
-
-		complete_effect = {
-			
-			add_stability = -0.04
-
-		}
-
-		remove_effect = {
-
-			GER_fedor_von_bock = {
-				add_logistics = 1 
-				add_planning = 1
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_days_mission_timeout = {
-				mission = GER_fourth_silesian_uprising_mission
-				days = 35
-			}
-
-		}
-	}
-
-	GER_mobilize_the_selbschutz = {
-
-		priority = 80
-
-		icon = GFX_decision_oppression
-
-		ai_will_do = {
-			base = 200
-		}
-
-		visible = {
-			has_active_mission = GER_fourth_silesian_uprising_mission
-		}
-
-		available = {
-		}
-
-		cost = 15
-
-		fire_only_once = yes
-
-		complete_effect = {
-
-			add_manpower = 150
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_days_mission_timeout = {
-				mission = GER_fourth_silesian_uprising_mission
-				days = 14
-			}
-
-		}
-	}
-}
-
 # Waning Patience within the Kriegsmarine
 GER_waning_patience_within_the_kriegsmarine_cat = {
 
@@ -13567,7 +13436,6 @@ GER_weltpolitik_cat = {
 			OR = {
 				has_completed_focus = GER_mittelafrika
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			any_state = {
 				OR = {
@@ -13691,7 +13559,6 @@ GER_weltpolitik_cat = {
 		visible = {
 			OR = {
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			NOT = { has_country_flag = GER_improved_asian_schutztruppe_flag }
 		}
@@ -14466,9 +14333,7 @@ GER_weltpolitik_cat = {
 
 		visible = {
 			OR = {
- 
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			743 = {
 				is_controlled_by_ROOT_or_subject = yes
@@ -14547,7 +14412,6 @@ GER_weltpolitik_cat = {
 			OR = {
  
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			646 = {
 				is_controlled_by_ROOT_or_subject = yes
@@ -14622,7 +14486,6 @@ GER_weltpolitik_cat = {
 			OR = {
  
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
 			}
 			647 = {
 				is_controlled_by_ROOT_or_subject = yes
@@ -14697,7 +14560,7 @@ GER_weltpolitik_cat = {
 			OR = {
  
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
+ 
 			}
 			684 = {
 				is_controlled_by_ROOT_or_subject = yes
@@ -14776,7 +14639,7 @@ GER_weltpolitik_cat = {
 			OR = {
  
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
+ 
 			}
 			633 = {
 				is_controlled_by_ROOT_or_subject = yes
@@ -14855,7 +14718,7 @@ GER_weltpolitik_cat = {
 			OR = {
  
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
+ 
 			}
 			725 = {
 				is_controlled_by_ROOT_or_subject = yes
@@ -14930,7 +14793,7 @@ GER_weltpolitik_cat = {
 			OR = {
  
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
+ 
 			}
 			726 = {
 				is_controlled_by_ROOT_or_subject = yes
@@ -15005,7 +14868,7 @@ GER_weltpolitik_cat = {
 			OR = {
  
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
+ 
 			}
 			634 = {
 				is_controlled_by_ROOT_or_subject = yes
@@ -15084,7 +14947,7 @@ GER_weltpolitik_cat = {
 			OR = {
  
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
+ 
 			}
 			737 = {
 				is_controlled_by_ROOT_or_subject = yes
@@ -15163,7 +15026,7 @@ GER_weltpolitik_cat = {
 			OR = {
  
 				has_completed_focus = GER_negotiate_old_colonies_in_the_east
-				has_completed_focus = GER_ally_chiang_kai_shek
+ 
 			}
 			979 = {
 				is_controlled_by_ROOT_or_subject = yes
