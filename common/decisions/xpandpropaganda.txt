@@ -76,19 +76,45 @@ X_GER_propaganda_campaigns = {
 			custom_effect_tooltip = propaganda_no_multiply
 		}
 	}
-	X_GER_propaganda_9 = { # ID = 9 # BU TAMAM MODERNİZE EDİLDİ war_propaganda_bombing aynısı
+	X_GER_propaganda_11 = { #  # BU TAMAM MODERNİZE EDİLDİ war_propaganda_bombing aynısı
 		priority = 2
 		icon = eng_propaganda_campaigns
 		ai_will_do = { base = 0 }
 		allowed = { original_tag = GER }
+		available = { X_GER_propaganda_poster_slot_available = yes threat > 0.2 }
 		available = {
 			X_GER_propaganda_poster_slot_available = yes
 			has_bombing_war_support < 0
 		}
 		days_remove = 180
-		cost = X_GER_propaganda_9_cost
+		cost = X_GER_propaganda_11_cost
 		modifier = {
 			weekly_bombing_war_support = 0.006
+		}
+		complete_effect = {
+			set_variable = { X_GER_new_propaganda_campaign = 11 }
+			X_GER_pick_propaganda_campaign_slot_effect = yes
+		}
+		remove_effect = {
+			set_variable = { X_GER_propaganda_campaign_to_remove = 11 }
+			X_GER_reset_propaganda_campaign_slot_effect = yes
+			multiply_variable = { X_GER_propaganda_11_cost = 2 }
+		}
+	}
+	X_GER_propaganda_9 = { # ID = 9 
+		priority = 2
+		icon = eng_propaganda_campaigns
+		ai_will_do = { base = 0 }
+		allowed = { original_tag = GER }
+		visible = { always = no }
+		available = {
+			X_GER_propaganda_poster_slot_available = yes
+		}
+		days_remove = 180
+		days_re_enable = 100
+		cost = X_GER_propaganda_9_cost
+		modifier = {
+			
 		}
 		complete_effect = {
 			set_variable = { X_GER_new_propaganda_campaign = 9 }
@@ -251,33 +277,6 @@ X_GER_propaganda_campaigns = {
 			set_variable = { X_GER_propaganda_campaign_to_remove = 10 }
 			X_GER_reset_propaganda_campaign_slot_effect = yes
 			multiply_variable = { X_GER_propaganda_10_cost = 2 }
-		}
-	}
-	X_GER_propaganda_11 = { # ID = 11
-		priority = 2
-		icon = eng_propaganda_campaigns
-		ai_will_do = { base = 0 }
-		allowed = { original_tag = GER }
-		available = { X_GER_propaganda_poster_slot_available = yes threat > 0.2 }
-		visible = {
-			always = no
-		}
-		days_remove = 180
-		days_re_enable = 100
-		cost = X_GER_propaganda_11_cost
-		modifier = {
-			dig_in_speed_factor = 0.8
-			production_speed_bunker_factor = 0.2
-			production_speed_coastal_bunker_factor = 0.2
-		}
-		complete_effect = {
-			set_variable = { X_GER_new_propaganda_campaign = 11 }
-			X_GER_pick_propaganda_campaign_slot_effect = yes
-		}
-		remove_effect = {
-			set_variable = { X_GER_propaganda_campaign_to_remove = 11 }
-			X_GER_reset_propaganda_campaign_slot_effect = yes
-			multiply_variable = { X_GER_propaganda_11_cost = 2 }
 		}
 	}
 	X_GER_propaganda_12 = { # ID = 12
