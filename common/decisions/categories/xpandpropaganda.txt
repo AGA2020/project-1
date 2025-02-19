@@ -6,7 +6,4 @@ X_GER_propaganda_campaigns = {
 	allowed = {
 		original_tag = GER
 	}
-	visible = {
-		has_war_with_non_exiled_country = yes
-	}
 }

@@ -401,10 +401,8 @@ propaganda_efforts = {
 		}
 
 		visible = {
-			AND = { 
-				not = { tag = GER }
-				has_war_with_non_exiled_country = yes
-			}
+			not = { tag = GER }
+			has_war_with_non_exiled_country = yes
 		}
 
 		fire_only_once = no
@@ -473,10 +471,8 @@ propaganda_efforts = {
 		}
 
 		visible = {
-			AND = { 
-				not = { tag = GER }
-				has_war_with_non_exiled_country = yes
-			}
+			not = { tag = GER }
+			has_war_with_non_exiled_country = yes
 		}
 
 		fire_only_once = no
@@ -530,7 +526,7 @@ propaganda_efforts = {
 		}
 
 		visible = {
-			# has_war = yes
+			not = { tag = GER }
 			has_war_with_non_exiled_country = yes
 		}
 

@@ -76,6 +76,30 @@ X_GER_propaganda_campaigns = {
 			custom_effect_tooltip = propaganda_no_multiply
 		}
 	}
+	X_GER_propaganda_9 = { # ID = 9 # BU TAMAM MODERNİZE EDİLDİ war_propaganda_bombing aynısı
+		priority = 2
+		icon = eng_propaganda_campaigns
+		ai_will_do = { base = 0 }
+		allowed = { original_tag = GER }
+		available = {
+			X_GER_propaganda_poster_slot_available = yes
+			has_bombing_war_support < 0
+		}
+		days_remove = 180
+		cost = X_GER_propaganda_9_cost
+		modifier = {
+			weekly_bombing_war_support = 0.006
+		}
+		complete_effect = {
+			set_variable = { X_GER_new_propaganda_campaign = 9 }
+			X_GER_pick_propaganda_campaign_slot_effect = yes
+		}
+		remove_effect = {
+			set_variable = { X_GER_propaganda_campaign_to_remove = 9 }
+			X_GER_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = propaganda_no_multiply
+		}
+	}
 	X_GER_propaganda_5 = { # ID = 5
 		priority = 2
 		icon = eng_propaganda_campaigns
@@ -199,40 +223,6 @@ X_GER_propaganda_campaigns = {
 			set_variable = { X_GER_propaganda_campaign_to_remove = 8 }
 			X_GER_reset_propaganda_campaign_slot_effect = yes
 			multiply_variable = { X_GER_propaganda_8_cost = 2 }
-		}
-	}
-	X_GER_propaganda_9 = { # ID = 9
-		priority = 2
-		icon = eng_propaganda_campaigns
-		ai_will_do = { base = 0 }
-		allowed = { original_tag = GER }
-		available = {
-			X_GER_propaganda_poster_slot_available = yes
-			custom_trigger_tooltip = {
-				tooltip = "Year is 1939"
-				date > 1939.1.1
-				date < 1940.1.1
-			}
-			has_war = no
-		}
-		visible = {
-			always = no
-		}
-		days_remove = 180
-		days_re_enable = 100
-		cost = X_GER_propaganda_9_cost
-		modifier = {
-			fascism_drift = 0.05
-			industrial_capacity_factory = 0.1
-		}
-		complete_effect = {
-			set_variable = { X_GER_new_propaganda_campaign = 9 }
-			X_GER_pick_propaganda_campaign_slot_effect = yes
-		}
-		remove_effect = {
-			set_variable = { X_GER_propaganda_campaign_to_remove = 9 }
-			X_GER_reset_propaganda_campaign_slot_effect = yes
-			multiply_variable = { X_GER_propaganda_9_cost = 2 }
 		}
 	}
 	X_GER_propaganda_10 = { # ID = 10

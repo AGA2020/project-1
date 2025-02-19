@@ -199,7 +199,7 @@ set_variable = { X_GER_propaganda_5_cost = 15 }
 set_variable = { X_GER_propaganda_6_cost = 15 }
 set_variable = { X_GER_propaganda_7_cost = 15 }
 set_variable = { X_GER_propaganda_8_cost = 15 }
-set_variable = { X_GER_propaganda_9_cost = 15 }
+set_variable = { X_GER_propaganda_9_cost = 100 }
 set_variable = { X_GER_propaganda_10_cost = 15 }
 set_variable = { X_GER_propaganda_11_cost = 15 }
 set_variable = { X_GER_propaganda_12_cost = 15 }
