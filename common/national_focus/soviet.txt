@@ -602,17 +602,11 @@ focus_tree = {
 				idea = SOV_restoration_and_development_idea
 				days = 365
 			}
-
-			if = {
-				limit = {
-					has_government = communism
-				}
-				custom_effect_tooltip = unlock_propaganda_campaign_tt
-				unlock_decision_tooltip = SOV_propaganda_rebuild_to_glory
-				unlock_decision_tooltip = SOV_propaganda_peace
-				unlock_decision_tooltip = SOV_propaganda_happy_life
-				custom_effect_tooltip = propaganda_campaign_requirement_tt
-			}
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = SOV_propaganda_rebuild_to_glory
+			unlock_decision_tooltip = SOV_propaganda_peace
+			unlock_decision_tooltip = SOV_propaganda_happy_life
+			custom_effect_tooltip = propaganda_campaign_requirement_tt
 		}
 	}
 
@@ -639,53 +633,26 @@ focus_tree = {
 			hidden_effect = {
 				add_to_variable = { SOV_fyp_consumer_goods_factor = -0.05 } #Bonus to CG
 				add_to_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.05 } #Bonus to max efficicency
+				#Swap dynamic modifier to change icon
 				if = {
 					limit = {
-						has_government = communism
+						has_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier }
 					}
-					#Swap dynamic modifier to change icon
-					if = {
-						limit = {
-							has_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier }
-						}
-						remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier }
-					}
-					else_if = {
-						limit = {
-							has_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier }
-						}
-						remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier }
-					}
-					else_if = {
-						limit = {
-							has_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
-						}
-						remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
-					}
-					add_dynamic_modifier = { modifier = SOV_fourth_five_year_plan_dynamic_modifier }
+					remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier }
 				}
-				else = {
-					#Swap dynamic modifier to change icon
-					if = {
-						limit = {
-							has_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier_alt }
-						}
-						remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_civilian_dynamic_modifier_alt }
+				else_if = {
+					limit = {
+						has_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier }
 					}
-					else_if = {
-						limit = {
-							has_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier_alt }
-						}
-						remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier_alt }
-					}
-					else_if = {
-						limit = {
-							has_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier_alt }
-						}
-						remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier_alt }
-					}
-					add_dynamic_modifier = { modifier = SOV_fourth_five_year_plan_dynamic_modifier_alt }
+					remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_military_dynamic_modifier }
 				}
+				else_if = {
+					limit = {
+						has_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
+					}
+					remove_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
+				}
+				add_dynamic_modifier = { modifier = SOV_fourth_five_year_plan_dynamic_modifier }
 			}
 			custom_effect_tooltip = SOV_fourth_five_year_plan_ns_tt
 		}
@@ -700,14 +667,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_fourth_five_year_plan
 		cost = 10
-
-		allow_branch = {
-			has_government = communism
-		}
-
-		available = {
-			num_subjects > 0
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -752,66 +711,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_the_common_economic_space_initiative
-
-		icon = GFX_goal_anschluss
-		prerequisite = { focus = SOV_fourth_five_year_plan }
-		x = 0
-		y = 1
-		relative_position_id = SOV_fourth_five_year_plan
-		cost = 10
-
-		allow_branch = {
-			NOT = { has_government = communism }
-		}
-
-		available = {
-			num_subjects > 0
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			if = {
-				limit = {
-					num_subjects > 0
-				}
-				add_ideas = SOV_common_economic_space_sov_default
-				custom_effect_tooltip = SOV_found_the_comecon_subjects_tt
-				every_other_country = {
-					limit = {
-						is_subject_of = ROOT
-					}
-					add_ideas = SOV_common_economic_space_puppet_default
-				}
-
-				custom_effect_tooltip = SOV_found_the_comecon_program_tt
-				hidden_effect = {
-					add_to_tech_sharing_group = SOV_common_economic_space
-					every_country = {
-						limit = {
-							is_subject_of = ROOT
-						}
-						add_to_tech_sharing_group = SOV_comecon
-					}
-				}
-			}
-			else = { #Early tooltip for when Soviets have no subjects
-				effect_tooltip = {
-					add_ideas = SOV_common_economic_space_sov_default
-				}
-				custom_effect_tooltip = SOV_found_the_comecon_subjects_tt
-				effect_tooltip = {
-					add_ideas = SOV_common_economic_space_puppet_default
-				}
-				custom_effect_tooltip = SOV_found_the_comecon_program_tt
-			}
-
-			unlock_decision_category_tooltip = SOV_comecon_dec_cat
-		}
-	}
-
-	focus = {
 		id = SOV_no_time_for_peace
 
 		icon = GFX_SOV_no_time_for_peace_ccp_2d_sov_compatibility
@@ -821,10 +720,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_fourth_five_year_plan
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -879,10 +774,6 @@ focus_tree = {
 		cost = 5
 
 		mutually_exclusive = { focus = SOV_foreign_experts }
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -908,10 +799,6 @@ focus_tree = {
 
 		mutually_exclusive = { focus = SOV_national_specialists }
 
-		available = {
-
-		}
-		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
@@ -929,185 +816,21 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_national_specialists
 		cost = 5
-
-		bypass = {
-			408 = { #VLADIVOSTOK
-				is_fully_controlled_by = ROOT
-				NOT = {
-					infrastructure < 5
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-			}
-			409 = { #KHABAROVSK
-				is_fully_controlled_by = ROOT
-				is_fully_controlled_by = ROOT
-				NOT = {
-					infrastructure < 5
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-			}
-			566 = { #IRKUTSK
-				is_fully_controlled_by = ROOT
-				is_fully_controlled_by = ROOT
-				NOT = {
-					infrastructure < 5
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-			}
-			564 = { #ULAN UDE
-				is_fully_controlled_by = ROOT
-				is_fully_controlled_by = ROOT
-				NOT = {
-					infrastructure < 5
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-			}
-		}
-
-		available = {
-			OR = {
-				408 = { #VLADIVOSTOK
-					is_fully_controlled_by = ROOT
-				}
-				409 = { #KHABAROVSK
-					is_fully_controlled_by = ROOT
-				}
-				566 = { #IRKUTSK
-					is_fully_controlled_by = ROOT
-				}
-				564 = { #ULAN UDE
-					is_fully_controlled_by = ROOT
-				}
-			}
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			set_temp_variable = { SOV_states_targeted_eastern_development = 0 } #Used this way to prioritize between desirable states
-			if = {
-				limit = {
-					408 = { #VLADIVOSTOK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
+			408 = { #VLADIVOSTOK
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
 				}
-				408 = { #VLADIVOSTOK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
-			}
-			else_if = { #Irkutsk replaces Vladivostok if necessary
-				limit = {
-					check_variable = { SOV_states_targeted_eastern_development = 2 compare = less_than_or_equals }
-					566 = { #IRKUTSK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				566 = { #IRKUTSK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					409 = { #KHABAROVSK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				409 = { #KHABAROVSK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
-			}
-			else_if = { #Ulan Ude replaces Khabarovsk if necessary
-				limit = {
-					check_variable = { SOV_states_targeted_eastern_development = 2 compare = less_than_or_equals }
-					564 = { #ULAN UDE
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				564 = { #ULAN UDE
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -1122,185 +845,21 @@ focus_tree = {
 		y = 0
 		relative_position_id = SOV_eastern_development
 		cost = 5
-
-		bypass = {
-			572 = { #CHELYABISNK
-				is_fully_controlled_by = ROOT
-				NOT = {
-					infrastructure < 5
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-			}
-			573 = { #ZLATOUST
-				is_fully_controlled_by = ROOT
-				is_fully_controlled_by = ROOT
-				NOT = {
-					infrastructure < 5
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-			}
-			582 = { #MAGNITOGORSK
-				is_fully_controlled_by = ROOT
-				is_fully_controlled_by = ROOT
-				NOT = {
-					infrastructure < 5
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-			}
-			653 = { #SVERDLOVSK
-				is_fully_controlled_by = ROOT
-				is_fully_controlled_by = ROOT
-				NOT = {
-					infrastructure < 5
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-			}
-		}
-
-		available = {
-			OR = {
-				572 = { #CHELYABISNK
-					is_fully_controlled_by = ROOT
-				}
-				573 = { #ZLATOUST
-					is_fully_controlled_by = ROOT
-				}
-				582 = { #MAGNITOGORSK
-					is_fully_controlled_by = ROOT
-				}
-				653 = { #SVERDLOVSK
-					is_fully_controlled_by = ROOT
-				}
-			}
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			set_temp_variable = { SOV_states_targeted_eastern_development = 0 } #Used this way to prioritize between desirable states
-			if = {
-				limit = {
-					572 = { #CHELYABISNK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
+			582 = { #MAGNITOGORSK
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
 				}
-				572 = { #CHELYABISNK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
-			}
-			else_if = { #Magnitogorsk replaces Chelyabinsk if necessary
-				limit = {
-					check_variable = { SOV_states_targeted_eastern_development = 2 compare = less_than_or_equals }
-					582 = { #MAGNITOGORSK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				582 = { #MAGNITOGORSK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					573 = { #ZLATOUST
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				573 = { #ZLATOUST
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
-				}
-				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
-			}
-			else_if = { #Sverdlovsk replaces Zlatoust if necessary
-				limit = {
-					check_variable = { SOV_states_targeted_eastern_development = 2 compare = less_than_or_equals }
-					653 = { #SVERDLOVSK
-						is_fully_controlled_by = ROOT
-						infrastructure < 5
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-				}
-				653 = { #SVERDLOVSK
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -1316,10 +875,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_eastern_development
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
@@ -1331,44 +886,19 @@ focus_tree = {
 						SOV_is_valid_academy_of_sciences_target = yes
 					}
 				}
-				if = { #ALT IDEOLOGY
+				add_to_tech_sharing_group = SOV_soviet_academies_of_sciences_joint_program
+				every_country = {
 					limit = {
-						NOT = { has_government = communism }
+						SOV_is_valid_academy_of_sciences_target = yes
 					}
-					add_to_tech_sharing_group = SOV_imperial_academies_of_sciences_joint_program
-					every_country = {
-						limit = {
-							SOV_is_valid_academy_of_sciences_target = yes
-						}
-						add_to_tech_sharing_group = SOV_imperial_academies_of_sciences_joint_program
-					}
-				}
-				else = { #DEFAULT COMMUNISM
 					add_to_tech_sharing_group = SOV_soviet_academies_of_sciences_joint_program
-					every_country = {
-						limit = {
-							SOV_is_valid_academy_of_sciences_target = yes
-						}
-						add_to_tech_sharing_group = SOV_soviet_academies_of_sciences_joint_program
-					}
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			if = { #ALT IDEOLOGY
-				limit = {
-					NOT = { has_government = communism }
-				}
-				hidden_effect = {
-					add_dynamic_modifier = { modifier = SOV_ussr_academy_of_sciences_dynamic_modifier_alt }
-				}
-				effect_tooltip = { add_ideas = SOV_national_academy_of_sciences_alt_fake }
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = SOV_ussr_academy_of_sciences_dynamic_modifier }
 			}
-			else = { #DEFAULT COMMUNISM
-				hidden_effect = {
-					add_dynamic_modifier = { modifier = SOV_ussr_academy_of_sciences_dynamic_modifier }
-				}
-				effect_tooltip = { add_ideas = SOV_national_academy_of_sciences_fake }
-			}
+			effect_tooltip = { add_ideas = SOV_national_academy_of_sciences_fake }
 		}
 	}
 
@@ -1381,10 +911,6 @@ focus_tree = {
 		y = 3
 		relative_position_id = SOV_the_ussr_academy_of_sciences
 		cost = 5
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
@@ -1403,33 +929,15 @@ focus_tree = {
 		y = 0
 		relative_position_id = SOV_no_time_for_peace
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
 
 			hidden_effect = {
-				IF = {
-					limit = {
-						has_country_leader = {
-							ruling_only = yes
-							character = SOV_iosif_stalin
-						}	
-					}
-					set_province_name = {
-						id = 3555
-						name = SOV_stalingrad_hydro_station
-					}
-				}
-				ELSE = {
-					set_province_name = {
-						id = 3555
-						name = SOV_volgograd_hydro_station
-					}
+				set_province_name = {
+					id = 3555
+					name = SOV_stalingrad_hydro_station
 				}
 				set_province_name = {
 					id = 6275
@@ -1507,32 +1015,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SOV_transformation_of_nature_alt
-
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = SOV_fourth_five_year_plan }
-		prerequisite = { focus = SOV_national_academies_of_sciences }
-		x = 2
-		y = 0
-		relative_position_id = SOV_no_time_for_peace
-		cost = 10
-
-		allow_branch = {
-			NOT = { has_government = communism }
-		}
-
-		available = {
-
-		}
-		
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-
-		completion_reward = {
-			add_ideas = SOV_transformation_of_nature
-		}
-	}
-
 
    ###    #### ########   ######  ########     ###    ######## ######## 
   ## ##    ##  ##     ## ##    ## ##     ##   ## ##   ##          ##    
@@ -1556,10 +1038,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
@@ -1577,17 +1055,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_transpolar_flights
 		cost = 10
-
-		available = {
-			any_owned_state = {
-				is_fully_controlled_by = ROOT
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
-				}
-			}
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -1595,14 +1062,7 @@ focus_tree = {
 			set_variable = { SOV_soviet_airforce_aircraft_manufacturer_cost_factor = -0.25 }
 			custom_effect_tooltip = SOV_expand_the_aircraft_industry_ns_tt
 
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+			829 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -1619,20 +1079,6 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
-				else = {
-					ROOT = {
-						random_owned_controlled_state = {
-							limit = {
-								air_base < 9
-							}
-							add_building_construction = {
-								type = air_base
-								level = 2
-								instant_build = yes
-							}
-						}
-					}
-				}
 			}
 		}
 	}
@@ -1646,10 +1092,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_expand_the_aircraft_industry
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {}
 
@@ -1723,10 +1165,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = SOV_merge_aircraft_plants
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
@@ -1795,10 +1233,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_transpolar_flights
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
@@ -1822,9 +1256,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_foster_flying_clubs
 		cost = 10
-
-		available = {
-		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
 
@@ -1856,7 +1287,6 @@ focus_tree = {
 			any_enemy_country = {
 				SOV_is_major_not_original_sov = yes
 			}
-			has_full_control_of_state = 219 #MOSCOW
 		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
@@ -1905,26 +1335,9 @@ focus_tree = {
 							special_type_slot_1 = non_strategic_materials_small
 						}
 					}
-					if = {
-						limit = {
-							NOT = { has_government = communism }
-						}
-						
-						load_oob = "SOV_night_witches_nsb_alt_bba"
-						else = {
-							load_oob = "SOV_night_witches_nsb_bba" #nested here because otherwise it is considered a nested else for the higher level if
-						}
-					}
+					load_oob = "SOV_night_witches_nsb_bba" #nested here because otherwise it is considered a nested else for the higher level if
 				}
-				else_if = { #ALT IDEOLOGY
-					limit = {
-						NOT = { has_government = communism }
-					}
-					load_oob = "SOV_night_witches_nsb_alt"
-				}
-				else = { #DEFAULT COMMUNISM
-					load_oob = "SOV_night_witches_nsb"
-				}
+				load_oob = "SOV_night_witches_nsb"
 			}
 		}
 	}
