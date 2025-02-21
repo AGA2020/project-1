@@ -5527,27 +5527,18 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = nsb_news.100 days = 100 }
 			}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				custom_effect_tooltip = SOV_behead_the_snake_lar_tt
-				create_operative_leader = {
-					name = "Ramón Mercader"
-					GFX = GFX_portrait_SOV_ramon_mercader
-					traits = { operative_tough operative_infiltrator }
-					bypass_recruitment = no
-					available_to_spy_master = yes
-					nationalities = { SOV SPR MEX }
-				}
-
-				#Extra operative slot
-				set_variable = { SOV_the_politburo_operative_slot = 1 }
-				custom_effect_tooltip = SOV_behead_the_snake_ns_tt
+			custom_effect_tooltip = SOV_behead_the_snake_lar_tt
+			create_operative_leader = {
+				name = "Ramón Mercader"
+				GFX = GFX_portrait_SOV_ramon_mercader
+				traits = { operative_tough operative_infiltrator }
+				bypass_recruitment = no
+				available_to_spy_master = yes
+				nationalities = { SOV SPR MEX }
 			}
-			else = {
-				custom_effect_tooltip = SOV_behead_the_snake_no_lar_tt
-			}
+			#Extra operative slot
+			set_variable = { SOV_the_politburo_operative_slot = 1 }
+			custom_effect_tooltip = SOV_behead_the_snake_ns_tt
 
 			SOV_paranoia_high_decrease_effect = yes
 		}
@@ -5978,10 +5969,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_stalins_cult_of_personality
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}
 
@@ -6085,10 +6072,6 @@ focus_tree = {
 
 		relative_position_id = SOV_the_path_of_marxism_leninism
 		cost = 5
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 
@@ -6106,10 +6089,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_addressing_internal_affairs
 		cost = 5
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
@@ -6127,10 +6106,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_addressing_internal_affairs
 		cost = 5
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 
@@ -6152,10 +6127,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_addressing_internal_affairs
 		cost = 5
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_PROPAGANDA}
 
@@ -6183,10 +6154,6 @@ focus_tree = {
 		cost = 10
 
 		mutually_exclusive = { focus = SOV_collectivist_propaganda }
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_PROPAGANDA}
 
@@ -6212,10 +6179,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_positive_heroism
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -6232,10 +6195,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_revive_the_stakhanovite_movement
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {}
 
@@ -6321,10 +6280,6 @@ focus_tree = {
 		cost = 10
 
 		mutually_exclusive = { focus = SOV_positive_heroism }
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_PROPAGANDA}
 
@@ -6347,10 +6302,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_collectivist_propaganda
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
@@ -6367,10 +6318,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_socialist_emulation
 		cost = 10
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
 
@@ -6390,10 +6337,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
 		cost = 5
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_PROPAGANDA}
 
@@ -6421,10 +6364,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_war_heroes
 		cost = 5
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_STABILITY}
 
@@ -6454,10 +6393,6 @@ focus_tree = {
 		y = 0
 		relative_position_id = SOV_addressing_internal_affairs
 		cost = 5
-
-		available = {
-
-		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
@@ -6485,10 +6420,6 @@ focus_tree = {
 				factor = 0
 				has_civil_war = yes
 			}	
-		}
-
-		available = {
-
 		}
 		
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -6770,13 +6701,12 @@ ai_will_do = {
 		}
 		
 		available = {
-			has_civil_war = no
 			has_completed_focus = SOV_the_centre
 			if = {
 				limit = {
 					has_dlc = "La Resistance"
 				}
-				SPR_scw_in_progress = yes
+				
 				if = {
 					limit = {
 						NOT = { has_global_flag = spanish_civil_war }
@@ -6802,8 +6732,6 @@ ai_will_do = {
 					}
 				}
 			}
-			has_government = communism
-			is_subject = no
 		}
 		
 		search_filters = {}
@@ -6894,7 +6822,6 @@ ai_will_do = {
 			OR = {
 				NOT = { has_country_flag = SOV_paranoia_system_active_flag }  #TODO_Manu: Change for the inverse, "Political Paranoia has subsided"
 			}
-			is_subject = no
 		}
 		
 		search_filters = {}
@@ -6982,7 +6909,6 @@ ai_will_do = {
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			is_subject = no
 		}
 
 		bypass = {
@@ -7076,7 +7002,6 @@ ai_will_do = {
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			is_subject = no
 		}
 
 		bypass = {
@@ -7306,9 +7231,6 @@ ai_will_do = {
 			}	
 		}
 		available = {
-			country_exists = PER
-			NOT = { has_war_with = PER }
-			is_subject = no
 			any_enemy_country = { is_major = yes }
 		}
 		
