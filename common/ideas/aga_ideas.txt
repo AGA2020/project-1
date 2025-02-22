@@ -1,5 +1,23 @@
 ideas = {
 	country = {
+		WAR_join = {
+			allowed = {
+				always = no
+			}
+			cancel = {
+			}
+			removal_cost = -1
+			picture = MEX_politicised_army
+			modifier = {
+			}
+			on_remove = {
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = ENG
+					hostility_reason = asked_to_join
+				}
+			}
+		}
 		alpacon_banged_storyline = {
 			removal_cost = -1
 			allowed = {

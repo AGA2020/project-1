@@ -22,7 +22,17 @@ european_axis = {
 		tag = SPR
 		tag = BUL
 		tag = FIN
-		tag = ARG
+	}
+}
+
+european_axis_withoutspain = {
+	OR = {
+		tag = GER
+		tag = ITA
+		tag = HUN
+		tag = ROM
+		tag = BUL
+		tag = FIN
 	}
 }
 

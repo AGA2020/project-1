@@ -31,6 +31,16 @@ elwolfmod_capitulations_on_actions = {
 			}
 		}
 		set_global_flag = fall_of_france
+		every_country = {
+			limit = { 
+				european_axis_withoutspain = yes
+				NOT = { has_war_with= ENG } 
+			}
+			add_timed_idea = {
+				idea = WAR_join
+				days = 90
+			}
+		}
 	}
 
 	# Fix netherlands transfer
