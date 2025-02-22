@@ -379,7 +379,7 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			visible = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
+				always = no
 			}
 		}
 	}
@@ -1222,7 +1222,7 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			visible = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
+				always = no
 			}
 		}
 	}
@@ -1243,7 +1243,7 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			visible = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
+				always = no
 			}
 		}
 	}
@@ -1264,7 +1264,7 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 2
 			visible = {
-				has_completed_focus = GER_reorganize_nationale_volksarmee
+				always = no
 			}
 		}
 	}
