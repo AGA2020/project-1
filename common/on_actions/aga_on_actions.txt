@@ -250,6 +250,24 @@ on_actions = {
 				start_province = 9508 
 				target_province = 6558
 			}
+			build_railway = {
+				path = { 438 3483 6557 11543 }
+			}
+			build_railway = {
+				path = { 11543 6520 11503 560 6280 11341 9304 }
+			}
+			build_railway = {
+				path = { 9236 277 }
+			}
+			build_railway = {
+				path = { 277 406 11391 11342 }
+			}
+			build_railway = {
+				path = { 11550 3562 438 }
+			}
+			build_railway = {
+				path = { 11357 11329 9316 9290 }
+			}
             ENG = { load_oob = "ENG_1936_air_bba_carrier" }
             JAP = { load_oob = "JAP_1936_air_bba_carrier" }
 			if = { 
