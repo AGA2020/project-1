@@ -246,6 +246,10 @@ on_actions = {
 	on_startup = {
 
 		effect = {
+			build_railway = {
+				start_province = 9508 
+				target_province = 6558
+			}
             ENG = { load_oob = "ENG_1936_air_bba_carrier" }
             JAP = { load_oob = "JAP_1936_air_bba_carrier" }
 			if = { 
