@@ -4568,63 +4568,6 @@ focus_tree = {
 			add_war_support = 0.1
 			add_stability = -0.1
 			add_ideas = BUL_total_war
-
-			#If ROM is not an ally, then Bulgaria can go for it
-			if = {
-				limit = {
-					ROM = {
-						NOT = { is_in_faction_with = ROOT }
-					}
-				}
-				#Romanian controlled states are claimed by Bulgaria
-				ROM = {
-					every_owned_state = {
-						limit = {
-							is_fully_controlled_by = ROM
-						}
-						add_claim_by = ROOT
-					}
-				}
-				if = {
-					limit = {
-						NOT = { has_war_with = ROM }
-					}
-					create_wargoal = {
-						type = annex_everything
-						target = ROM
-						expire = 180
-					}
-					custom_effect_tooltip = BUL_total_war_wargoal_expires_tt
-				}
-			}
-			
-			custom_effect_tooltip = BUL_total_war_join_wars_tt
-			#Join other wars except for the Soviets
-			random_country = {
-				limit = {
-					is_faction_leader = yes
-					is_in_faction_with = BUL
-				}
-				random_enemy_country = {
-					limit = {
-						NOT = { has_war_with = ROOT }
-						NOT = { tag = SOV }
-					}
-					ROOT = {
-						add_to_war = {
-							targeted_alliance = PREV.PREV
-							enemy = PREV
-							hostility_reason = asked_to_join
-						}
-					}
-				}
-			}
-
-			add_ai_strategy = {
-				type = conquer
-				id = ROM
-				value = 100
-			}
 		}
 	}
 
@@ -4663,24 +4606,7 @@ focus_tree = {
 
 			#Stability penalty based on Communism Supp
 			custom_effect_tooltip = BUL_the_eastern_front_stab_tt
-			if = {
-				limit = {
-					SOV = { has_government = communism }
-				}
-				set_temp_variable = { BUL_stab_penalty_from_ideology = party_popularity@communism }
-			}
-			else_if = {
-				limit = {
-					SOV = { has_government = democratic }
-				}
-				set_temp_variable = { BUL_stab_penalty_from_ideology = party_popularity@democratic }
-			}
-			else_if = {
-				limit = {
-					SOV = { has_government = neutrality }
-				}
-				set_temp_variable = { BUL_stab_penalty_from_ideology = party_popularity@neutrality }
-			}
+			set_temp_variable = { BUL_stab_penalty_from_ideology = party_popularity@communism }
 			divide_temp_variable = { BUL_stab_penalty_from_ideology = -2 }
 			add_stability = BUL_stab_penalty_from_ideology
 
@@ -4688,62 +4614,6 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = BUL_total_war
 				add_idea = BUL_total_war_02
-			}
-
-			#Join war against SOV
-			if = {
-				limit = {
-					any_allied_country = {
-						is_faction_leader = yes
-						has_war_with = SOV
-					}
-				}
-				random_other_country = {
-					limit = {
-						is_faction_leader = yes
-						is_in_faction_with = ROOT
-						has_war_with = SOV
-					}
-					ROOT = {
-						add_to_war = {
-							targeted_alliance = PREV
-							enemy = SOV
-							hostility_reason = asked_to_join
-						}
-					}
-				}
-			}
-			else = {
-				random_other_country = {
-					limit = {
-						is_in_faction_with = ROOT
-						has_war_with = SOV
-					}
-					ROOT = {
-						add_to_war = {
-							targeted_alliance = PREV
-							enemy = SOV
-							hostility_reason = asked_to_join
-						}
-					}
-				}
-			}
-			#Tooltip
-			if = {
-				limit = {
-					NOT = {
-						any_allied_country = {
-							has_war_with = SOV
-						}
-					}
-				}
-				custom_effect_tooltip = BUL_the_eastern_front_join_war_tt
-			}
-
-			add_ai_strategy = {
-				type = declare_war
-				id = SOV
-				value = 100
 			}
 		}
 	}
