@@ -16,6 +16,12 @@ state={
 			industrial_complex = 3
 			arms_factory = 2
 			air_base = 3
+			9539 = {
+				bunker = 5
+			}
+			9692 = {
+				bunker = 5
+			}
 		}
 		victory_points = {
 			9692 10 # Bratislava
