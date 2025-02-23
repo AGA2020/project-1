@@ -26,28 +26,28 @@ state=
 			industrial_complex = 2
 			anti_air_building = 1
 			424 = {
-				bunker = 5
+				bunker = 7
 			}
 			469 = {
-				bunker = 5
+				bunker = 7
 			}
 			3418 = {
-				bunker = 5
+				bunker = 7
 			}
 			3585 = {
-				bunker = 5
+				bunker = 7
 			}
 			6470 = {
-				bunker = 5
+				bunker = 7
 			}
 			9555 ={
-				bunker = 5
+				bunker = 7
 			}
 			11401 ={
-				bunker = 5
+				bunker = 7
 			}
 			11432 = {
-				bunker = 5
+				bunker = 7
 			}
 
 		}
