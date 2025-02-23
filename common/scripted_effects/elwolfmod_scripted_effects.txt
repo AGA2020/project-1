@@ -141,7 +141,6 @@ elwolfmod_capitulations_on_actions = {
 			}
 			
 			transfer_state = 103
-			transfer_state = 102
 			transfer_state = 104
 			transfer_state = 105
 			transfer_state = 109
@@ -185,6 +184,9 @@ elwolfmod_capitulations_on_actions = {
 				limit = { NOT = { has_idea = peace_training } }
 				add_ideas = peace_training
 			}
+		}
+		GER = {
+			transfer_state = 102
 		}
 	} 
 	# Albania
