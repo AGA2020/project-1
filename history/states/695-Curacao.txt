@@ -19,9 +19,11 @@ state={
 			fuel_silo = 1
 			infrastructure = 3
 			synthetic_refinery = 1
+			anti_air_building = 2
+			air_base = 2
 			153 = {
-				naval_base = 1
-				coastal_bunker = 2
+				naval_base = 3
+				coastal_bunker = 5
 			}
 		}
 		add_extra_state_shared_building_slots = 1
