@@ -5,7 +5,9 @@ state = {
 	state_category = pastoral
 
 	resources={
-		tungsten=2.000
+		tungsten = 7
+		aluminium = 6
+		chromium = 4
 	}
 
 	history = {
