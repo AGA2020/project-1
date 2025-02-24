@@ -23,9 +23,11 @@ state={
 			dockyard = 3
 			6336 = {
 				naval_base = 3
+			}
+			6241 = {
+				bunker = 1
 
 			}
-
 		}
 		add_extra_state_shared_building_slots = 2
 
