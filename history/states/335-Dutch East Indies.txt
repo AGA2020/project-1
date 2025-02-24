@@ -22,15 +22,20 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		}
 
 		buildings = {
-			infrastructure = 4 #was: 5
+			infrastructure = 5
 			industrial_complex = 1
 			dockyard = 1
 			air_base = 3
+			anti_air_building = 2
 			7381 = {
 				naval_base = 6
+				coastal_bunker = 3
+				bunker = 2
 			}
 			4608 = {
 				naval_base = 3
+				coastal_bunker = 3
+				bunker = 2
 			}
 		}
 	}
