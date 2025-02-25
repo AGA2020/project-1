@@ -1,38 +1,4 @@
 defined_text = {
-	name = GetGerBoostStatus
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = ger_boost
-				option = twelve
-			}
-		}
-		localization_key = check_gamerules_twelve
-	}
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = ger_boost
-				option = eight
-			}
-		}
-		localization_key = check_gamerules_eight
-	}
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = ger_boost
-				option = four
-			}
-		}
-		localization_key = check_gamerules_four
-	}
-	text = {
-		localization_key = check_gamerules_zero
-	}
-}
-
-defined_text = {
 	name = GetAlliedEngineBonusStatus
 	text = {
 		trigger = {
