@@ -4376,7 +4376,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
-		mutually_exclusive = { focus = BUL_total_war }
 
 		bypass = {
 			has_war = yes
@@ -4557,7 +4556,6 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 10
-		mutually_exclusive = { focus = BUL_peaceful_development }
 
 		available = {
 			has_government = fascism
