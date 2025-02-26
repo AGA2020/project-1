@@ -23,6 +23,7 @@ add_ideas = {
 	limited_conscription
 }
 
+recruit_character = LAT_karlis_ulmanis
 
 set_technology = {
 	infantry_weapons = 1
