@@ -2935,7 +2935,7 @@ focus_tree = {
 		y = 0
 		relative_position_id = wuw_HUN_end_the_regency
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 5
