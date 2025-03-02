@@ -4053,45 +4053,6 @@ country_event = {
 
 #Volkskommissariats
 
-country_event = { #Germany makes us a volkskommissariat
-	id = wuw_GER_diplomacy.71
-	title = wuw_GER_diplomacy.71.t
-	desc = wuw_GER_diplomacy.71.desc
-	picture = GFX_report_event_generic_communist_congress
-
-	is_triggered_only = yes
-
-	option = { #For the workers we will!
-		name = wuw_GER_diplomacy.71.a
-		ai_chance = {
-			base = 10
-		}
-
-		FROM = {
-			set_autonomy = {
-				target = ROOT
-				autonomy_state = autonomy_volkskommissariat
-				end_wars = no 
-				end_civil_wars = no 
-			}
-		}
-
-		IF = {
-			limit = {
-				FROM = {
-					has_completed_focus = GER_integrate_subjects_economies
-				}
-
-				NOT = {
-					has_idea = GER_volkskommissariat_economic_integration
-				}
-			}
-
-			add_ideas = GER_volkskommissariat_economic_integration
-		}
-	}
-}
-
 country_event = { #Germany informing someone they helped through a communist cw that they will be subjugated
 	id = wuw_GER_diplomacy.76
 	title = wuw_GER_diplomacy.76.t
