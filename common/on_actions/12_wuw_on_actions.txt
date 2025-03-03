@@ -487,23 +487,6 @@ on_actions = {
 			}
 		}
 
-		effect = {
-			if = { #If Germany has completed one of the necessary focuses, give them a timed National Spirit when the next war breaks out
-				limit = {
-					original_tag = GER
-					NOT = { has_country_flag = GER_has_war_preparations_flag }
-					OR = {
-						has_completed_focus = GER_prepare_for_the_next_naval_blockade
-					}
-				}
-				add_timed_idea = {
-					idea = GER_strengthened_supply_lines_ns
-					days = 730
-				}
-				set_country_flag = GER_has_war_preparations_flag
-			}
-		}
-
 	}
 
 	on_war_relation_added = {
