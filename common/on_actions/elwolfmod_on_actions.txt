@@ -1359,20 +1359,6 @@ on_actions = {
 					type = artillery_equipment_1
 					amount = 106
 				}
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = allied_engine_bonus
-							option = on
-						}
-					}
-					add_tech_bonus = {
-						name = elwolf_allied_engine_bonus_name
-						bonus = 1.0
-						uses = 1
-						technology = engines_4
-					}
-				}
 			}
 			HUN = {
 				add_equipment_to_stockpile = {
