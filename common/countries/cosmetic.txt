@@ -814,3 +814,36 @@ greater_italy = {
  color = rgb { 0 102 0 }
  color_ui = rgb { 0 51 0 }
 }
+RAJ_kalat = {
+	color = rgb { 0 171 0 }
+	color_ui = rgb { 0 171 0 }
+}
+
+RAJ_akhand_bharat_tag = {
+	color = rgb { 245 50 25 }
+	color_ui = rgb { 245 50 25 }
+}
+
+RAJ_eic_tag = {
+	color = rgb { 25 25 255 }
+	color_ui = rgb { 25 25 255  }	
+}
+
+RAJ_mughal_breakaway_state = {
+	color = rgb { 227 66 52 }
+	color_ui = rgb { 227 66 52 }
+}
+
+RAJ_mughal_empire = {
+	color = rgb { 48 96 48 }
+	color_ui = rgb { 48 96 48 }
+}
+
+RAJ_al_hind = {
+	color = rgb { 48 96 48 }
+	color_ui = rgb { 48 96 48 }
+}
+RAJ_azad_hind = {
+	color = rgb { 250 65 86 }
+	color_ui = rgb { 250 65 86 }
+}

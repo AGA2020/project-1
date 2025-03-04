@@ -77,7 +77,7 @@ characters={
 					original_tag = SIA
 				}
 				traits = {
-					army_armored_2
+					army_infantry_3
 				}
 				cost = 100
 				ai_will_do = {
@@ -353,7 +353,7 @@ characters={
 					original_tag = SIA
 				}
 				traits = {
-					army_chief_morale_2
+					army_chief_morale_3
 				}
 				cost = 100
 				ai_will_do = {
