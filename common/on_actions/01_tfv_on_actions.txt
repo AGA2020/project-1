@@ -64,43 +64,6 @@ on_actions = {
 				drop_cosmetic_tag = yes
 			}
 
-			if = {
-				limit = {
-					TAG = INS
-				}
-				retire_country_leader = yes
-			}
-			if = {
-				limit = {
-					TAG = MAL
-				}
-				retire_country_leader = yes
-			}
-
-			if = {
-				limit = {
-					has_idea = RAJ_marginalized_muslim_community_happy
-				}
-				RAJ = {
-					release = PAK
-				}
-			}
-
-			if = {
-				limit = {
-					original_tag = RAJ
-				}				
-				remove_ideas = {
-					RAJ_quit_india_movement
-					RAJ_marginalized_muslim_community
-					RAJ_marginalized_muslim_community_angry
-					RAJ_marginalized_muslim_community_happy
-					RAJ_princely_states
-					RAJ_princely_states_donations
-					RAJ_princely_states_donations_troops
-				}
-			}
-
 			#Achievement
 			if = {
 				limit = {
@@ -183,21 +146,6 @@ on_actions = {
 					OVERLORD = { is_in_tech_sharing_group = commonwealth_research }
 				}
 				add_to_tech_sharing_group = commonwealth_research				
-			}
-
-			if = {
-				limit = {
-					tag = RAJ
-					has_autonomy_state = autonomy_dominion
-				}
-				set_politics = {
-					ruling_party = democratic
-					elections_allowed = yes
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = -1
-				}
 			}
 		}
 	}

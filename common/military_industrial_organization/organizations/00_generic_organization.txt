@@ -66,6 +66,9 @@ generic_tank_organization = {
 				has_dlc = "Trial of Allegiance"
 			}
 		}
+		NOT = {
+			original_tag = RAJ 
+		}
 	}
 
 	equipment_type = { mio_cat_eq_all_light_tank mio_cat_eq_all_medium_tank }
@@ -2494,6 +2497,9 @@ generic_escort_ship_organization = {
 				}
 				has_dlc = "Trial of Allegiance"
 			}
+		}
+		NOT = {
+			original_tag = RAJ 
 		}
 	}
 
@@ -7765,6 +7771,9 @@ generic_motorized_mechanized_organization = {
 				original_tag = HUN			
 				has_dlc = "Gotterdammerung"
 			}
+		}
+		NOT = {
+			original_tag = RAJ		
 		}
 	}
 

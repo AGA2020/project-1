@@ -1921,6 +1921,9 @@ ideas = {
 						has_dlc = "Gotterdammerung"
 					}
 				}
+				NOT = {
+					original_tag = RAJ
+				}
 			}
 			
 			cost = 150
@@ -1993,6 +1996,9 @@ ideas = {
 						OR = { tag = HUN tag = AUS tag = BEL tag = COG }
 						has_dlc = "Gotterdammerung"
 					}
+				}
+				NOT = {
+					original_tag = RAJ
 				}
 			}
 			

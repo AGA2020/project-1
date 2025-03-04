@@ -101,10 +101,24 @@ resistance_90 = {
 	}
 	
 	on_enable = {
-		custom_effect_tooltip = resistance_90_effect_tooltip
-		hidden_effect = {
-			# avoid effects that can effect state controllers here
-			country_event = { id = occupied_countries.2 hours = 1 }
+		if = {
+			limit = {
+				RAJ = { 
+					has_completed_focus = RAJ_forward_bloc 
+					NOT = { 
+						has_dynamic_modifier = { modifier = idea_RAJ_famine_country }  
+					}
+				}
+				NOT = { var:occupied_country = { original_tag = DIP } }
+			}
+			#dont do anything
+		}
+		else = {
+			custom_effect_tooltip = resistance_90_effect_tooltip
+			hidden_effect = {
+				# avoid effects that can effect state controllers here
+				country_event = { id = occupied_countries.2 hours = 1 }
+			}
 		}
 	}
 }
