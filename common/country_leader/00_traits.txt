@@ -74,6 +74,7 @@ leader_traits = {
 
 	underage_monarch = {
 		random = no
+		sprite = 13
 		stability_factor = 0.10
 		political_advisor_cost_factor = 0.25
 		trade_laws_cost_factor = 0.25
@@ -456,6 +457,19 @@ leader_traits = {
 		ai_strategy = {
 			type = alliance
 			id = "GER"
+			value = 300
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	likes_mexico = {
+		random = no
+		ai_strategy = {
+			type = alliance
+			id = "MEX"
 			value = 300
 		}
 
@@ -4004,6 +4018,12 @@ leader_traits = {
 		production_lack_of_resource_penalty_factor = -0.1
 	}
 
+	islamic_scholar = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.05
+	}
+
 	################################
 	## Sweden TRAITS 			  ##
 	################################
@@ -6419,6 +6439,57 @@ leader_traits = {
 
 		non_core_manpower = 0.02
 		weekly_manpower = 250
+		communism_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	anti_colonialist = {
+		random = no
+		sprite = 13
+
+		stability_factor = 0.1
+		political_power_factor = 0.05
+		democratic_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	konbuang_dynasty_descendant = {
+		random = no
+		sprite = 13
+
+		justify_war_goal_time = -0.15
+		neutrality_drift = 0.05
+		political_power_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	mon_dynasty_descendant = {
+		random = no
+		sprite = 13
+
+		war_support_factor = 0.1
+		fascism_drift = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	burmese_way_to_socialism_trait = {
+		random = no
+		sprite = 13
+
+		war_support_factor = 0.05
+		conscription_factor = 0.1
 		communism_drift = 0.05
 
 		ai_will_do = {
