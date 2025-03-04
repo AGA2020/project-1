@@ -2672,6 +2672,11 @@ JUNO_promote_immigration_cat = {
 
 		state_target = yes
 
+		targets = {
+			500 501 499 # BRA
+		    278 956 512 # ARG
+		}
+
 		target_trigger = {
 			FROM = {
 				is_owned_and_controlled_by = ROOT
@@ -2785,6 +2790,7 @@ JUNO_promote_immigration_cat = {
 		on_map_mode = decision_view_only
 
 		state_target = yes
+		targets = { 500 501 499 }
 
 		target_trigger = {
 			FROM = {
@@ -2866,6 +2872,7 @@ JUNO_promote_immigration_cat = {
 		on_map_mode = decision_view_only
 
 		state_target = yes
+		targets = { 500 501 499 }
 
 		target_trigger = {
 			FROM = {
@@ -2886,302 +2893,6 @@ JUNO_promote_immigration_cat = {
 		complete_effect = {
 			set_country_flag = JUNO_promote_immigration_ongoing
 			set_country_flag = JUNO_POR_immigration_completed
-			custom_effect_tooltip = JUNO_promote_immigration_in_state_tt
-		}
-	
-		remove_effect = {
-			clr_country_flag = JUNO_promote_immigration_ongoing
-
-			FROM = {
-				add_dynamic_modifier = {
-					modifier = JUNO_immigration_promoted
-				}
-				set_state_flag = JUNO_promote_immigration_complete
-			}
-		}
-	}
-
-
-	
-
-	JUNO_promote_immigration_in_state_GER = {
-
-
-		icon = GFX_decision_SWI_support_humanitarian_efforts
-	
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 10
-				has_political_power > 300
-			}
-		}
-	
-		cost = 150
-		fire_only_once = yes
-	
-		allowed = {
-			AND = {
-				OR = {
-					original_tag = ARG
-					original_tag = CHL
-				}
-			}
-		}
-	
-		available = {
-			has_country_flag = JUNO_promote_immigration_flag
-			NOT = {
-				has_country_flag = JUNO_promote_immigration_ongoing
-				has_country_flag = JUNO_GER_immigration_completed
-			}
-		}
-	
-	
-		visible = {
-			has_country_flag = JUNO_promote_immigration_flag
-
-			NOT = {
-				has_country_flag = JUNO_GER_immigration_completed
-			}
-		}
-
-		on_map_mode = decision_view_only
-
-		state_target = yes
-
-		target_trigger = {
-			FROM = {
-				is_owned_and_controlled_by = ROOT
-				NOT = {
-					has_state_flag = JUNO_promote_immigration_complete
-				}
-
-				if = {
-					limit = {
-						ROOT = {
-							original_tag = ARG
-						}
-					}
-					OR = {
-						state = 278
-						state = 956
-						state = 512
-					}
-				}
-
-				else_if = {
-					limit = {
-						ROOT = {
-							original_tag = CHL
-						}
-					}
-					OR = {
-						state = 279
-						state = 950
-						state = 949
-					}
-				}
-			}
-		}
-
-		days_remove = 20
-
-		complete_effect = {
-			set_country_flag = JUNO_promote_immigration_ongoing
-			set_country_flag = JUNO_GER_immigration_completed
-			GER = {
-				add_opinion_modifier = {
-   					target = ROOT
-  					modifier = JUNO_promoted_immigration
-  				}	
-			}
-			custom_effect_tooltip = JUNO_promote_immigration_in_state_tt
-		}
-	
-		remove_effect = {
-			clr_country_flag = JUNO_promote_immigration_ongoing
-
-			FROM = {
-				add_dynamic_modifier = {
-					modifier = JUNO_immigration_promoted
-				}
-				set_state_flag = JUNO_promote_immigration_complete
-			}
-		}
-	}
-
-	JUNO_promote_immigration_in_state_SPR = {
-
-
-		icon = GFX_decision_SWI_support_humanitarian_efforts
-	
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 10
-				has_political_power > 300
-			}
-		}
-	
-		cost = 150
-		fire_only_once = yes
-	
-		allowed = {
-			AND = {
-				OR = {
-					original_tag = CHL
-				}
-			}
-		}
-	
-		available = {
-			has_country_flag = JUNO_promote_immigration_flag
-			NOT = {
-				has_country_flag = JUNO_promote_immigration_ongoing
-				has_country_flag = JUNO_SPR_immigration_completed
-			}
-		}
-	
-	
-		visible = {
-			has_country_flag = JUNO_promote_immigration_flag
-
-			NOT = {
-				has_country_flag = JUNO_SPR_immigration_completed
-			}
-		}
-
-		on_map_mode = decision_view_only
-
-		state_target = yes
-
-		target_trigger = {
-			FROM = {
-				is_owned_and_controlled_by = ROOT
-				NOT = {
-					has_state_flag = JUNO_promote_immigration_complete
-				}
-
-				if = {
-					limit = {
-						ROOT = {
-							original_tag = CHL
-						}
-					}
-					OR = {
-						state = 279
-						state = 949
-						state = 507
-					}
-				}
-			}
-		}
-
-		days_remove = 20
-
-		complete_effect = {
-			set_country_flag = JUNO_promote_immigration_ongoing
-			set_country_flag = JUNO_SPR_immigration_completed
-			SPR = {
-				add_opinion_modifier = {
-   					target = ROOT
-  					modifier = JUNO_promoted_immigration
-  				}	
-			}
-			custom_effect_tooltip = JUNO_promote_immigration_in_state_tt
-		}
-	
-		remove_effect = {
-			clr_country_flag = JUNO_promote_immigration_ongoing
-
-			FROM = {
-				add_dynamic_modifier = {
-					modifier = JUNO_immigration_promoted
-				}
-				set_state_flag = JUNO_promote_immigration_complete
-			}
-		}
-	}
-
-	JUNO_promote_immigration_in_state_ENG = {
-
-
-		icon = GFX_decision_SWI_support_humanitarian_efforts
-	
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 10
-				has_political_power > 300
-			}
-		}
-	
-		cost = 150
-		fire_only_once = yes
-	
-		allowed = {
-			AND = {
-				OR = {
-					original_tag = ARG
-				}
-			}
-		}
-	
-		available = {
-			has_country_flag = JUNO_promote_immigration_flag
-			NOT = {
-				has_country_flag = JUNO_promote_immigration_ongoing
-				has_country_flag = JUNO_ENG_immigration_completed
-			}
-		}
-	
-	
-		visible = {
-			has_country_flag = JUNO_promote_immigration_flag
-
-			NOT = {
-				has_country_flag = JUNO_ENG_immigration_completed
-			}
-		}
-
-		on_map_mode = decision_view_only
-
-		state_target = yes
-
-		target_trigger = {
-			FROM = {
-				is_owned_and_controlled_by = ROOT
-				NOT = {
-					has_state_flag = JUNO_promote_immigration_complete
-				}
-
-				if = {
-					limit = {
-						ROOT = {
-							original_tag = ARG
-						}
-					}
-					OR = {
-						state = 278
-						state = 956
-						state = 512
-					}
-				}
-			}
-		}
-
-		days_remove = 20
-
-		complete_effect = {
-			set_country_flag = JUNO_promote_immigration_ongoing
-			set_country_flag = JUNO_ENG_immigration_completed
-			ENG = {
-				add_opinion_modifier = {
-   					target = ROOT
-  					modifier = JUNO_promoted_immigration
-  				}	
-			}
 			custom_effect_tooltip = JUNO_promote_immigration_in_state_tt
 		}
 	

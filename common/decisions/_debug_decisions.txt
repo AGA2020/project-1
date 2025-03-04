@@ -539,6 +539,7 @@ debug_decisions = {
 		cost = 0
 
 		complete_effect = {
+			controlled_civilian_factories_excluding_trade = yes
 		}
 
 		ai_will_do = {
