@@ -15964,7 +15964,10 @@ country_event = {
 	option = { 
 		name = GER_operation_panzerfaust_events.03.a
 		
-		puppet = FROM
+		puppet = {
+		    target = FROM
+		    end_wars = no
+		}
 
 		IF = {
 			limit = {
@@ -16196,7 +16199,10 @@ country_event = {
 		}
 
 		FROM = {
-			puppet = ROOT
+			puppet = {
+			    target = ROOT
+			    end_wars = no
+			}
 		}
 
 		IF = {
@@ -19243,8 +19249,9 @@ country_event = { #[FROM.GetNameDefCap] Demands Our Subjugation
 			}
 		}
 		effect_tooltip = {
-			FROM = {
-				puppet = ROOT
+			puppet = {
+			    target = FROM
+			    end_wars = no
 			}
 		}
 
