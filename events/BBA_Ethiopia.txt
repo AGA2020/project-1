@@ -1069,45 +1069,6 @@ country_event = {
 	}
 }
 
-# Notification event to RAJ about Wingate being sent to Ethiopia
-#TODO_TA DO recall decision 
-country_event = {
-	id = BBA_ethiopia_exile_events.04
-	title = BBA_ethiopia_exile_events.04.t
-	desc = BBA_ethiopia_exile_events.04.desc
-	is_triggered_only = yes
-	picture = GFX_report_event_ETH_ethiopian_warriors
-
-	option = {
-		name = BBA_ethiopia_exile_events.04.a
-		ai_chance = {
-			base = 10
-		}
-		RAJ_orde_wingate = {
-			set_nationality = ETH
-		}
-	}
-}
-
-# Notification event to ETH about Wingate being sent to Burma
-country_event = {
-	id = BBA_ethiopia_exile_events.05
-	title = BBA_ethiopia_exile_events.05.t
-	desc = BBA_ethiopia_exile_events.05.desc
-	is_triggered_only = yes
-	picture = GFX_report_event_british_inspect_troops
-
-	option = {
-		name = BBA_ethiopia_exile_events.05.a
-		ai_chance = {
-			base = 10
-		}
-		RAJ_orde_wingate = {
-			set_nationality = RAJ
-		}
-	}
-}
-
 ### UNIFICATION OF THE HABESHA EVENT CHAIN
 # Event to the UK asking
 country_event = {

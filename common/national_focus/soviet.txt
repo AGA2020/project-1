@@ -7238,6 +7238,8 @@ ai_will_do = {
 				transfer_state = 420 #Gilan (AZB)
 				transfer_state = 416 #Tehran
 				transfer_state = 418 #Semnan
+				transfer_state = 1000 #East Azerbaijan
+				transfer_state = 1004 #North Khorasan
 			}
 			PER = {
 				give_resource_rights = { receiver = SOV state = 411 }
