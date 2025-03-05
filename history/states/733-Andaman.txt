@@ -13,7 +13,9 @@ state={
 
 			}
 		}
-
+		victory_points = {
+			12251 1 #Port Blair 
+		}
 	}
 	provinces={
 		10321 12251 

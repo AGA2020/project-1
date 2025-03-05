@@ -14,14 +14,19 @@ state={
 
 	history= {
         owner = WST
-
-
-
 		buildings = {
 			infrastructure = 3 #was: 5
 			air_base = 4
 			9833 = {
 				naval_base = 8
+			}
+			9833 = {
+                landmark_hagia_sophia = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Graveyard of Empires"
+                    }
+                }
 			}
 		}
 	}
