@@ -33,6 +33,8 @@ set_technology = {
 	fleet_in_being = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	basic_train = 1
+	gw_artillery = 1
 }
 
 recruit_character = RAJ_lord_linlithgow
@@ -67,49 +69,77 @@ recruit_character = RAJ_anyang_bhula
 recruit_character = RAJ_john_edward_golightly
 recruit_character = RAJ_bhimrao_ramji_ambedkar
 recruit_character = RAJ_chakravarti_rajagopalachari
-recruit_character = RAJ_karam_singh_mann
 recruit_character = RAJ_agha_khan_iii
 recruit_character = RAJ_subhas_chanda_bose
 recruit_character = RAJ_mahatma_mohandas_gandhi
 recruit_character = RAJ_sir_mohammed_iqbal
 recruit_character = RAJ_john_mathai
+recruit_character = RAJ_GOE_jawaharlal_nehru 
+recruit_character = RAJ_GOE_tara_singh
+recruit_character = RAJ_GOE_ishar_singh
+recruit_character = RAJ_GOE_parkash_singh
+recruit_character = RAJ_GOE_muhammad_ali_jinnah
+recruit_character = RAJ_GOE_arcot_doraiswamy_loganadan
+recruit_character = RAJ_GOE_shah_nawaz_khan
+recruit_character = RAJ_GOE_ukkirapandi_muthuramalinga_thevar
+recruit_character = RAJ_GOE_rash_behari_bose
+recruit_character = RAJ_GOE_rajendrasinhji_jadeja 
+recruit_character = RAJ_GOE_mohammad_usman
+recruit_character = RAJ_GOE_kodandera_subayya_thimayya
+recruit_character = RAJ_GOE_sam_manekshaw
+recruit_character = RAJ_GOE_muhammad_ayub_khan
+recruit_character = RAJ_GOE_yahya_khan
+recruit_character = RAJ_GOE_montagu_stopford
+recruit_character = RAJ_GOE_mohammed_zaman_kiani
+recruit_character = RAJ_GOE_subcontinent_chaos
+recruit_character = RAJ_GOE_the_board_of_directors
+recruit_character = RAJ_GOE_sarat_bose 
+recruit_character = RAJ_freeman_freeman_thomas
+recruit_character = RAJ_jim_corbett
+recruit_character = RAJ_puran_chand_joshi
+recruit_character = RAJ_bhalchandra_trimbak_ranadive
+recruit_character = RAJ_elamkulam_manakkal_sakaran_namboodiripad
+recruit_character = RAJ_shripad_amrit_dange
+recruit_character = RAJ_sahajanand_saraswati
+recruit_character = RAJ_GOE_g_d_birla
+recruit_character = RAJ_GOE_j_r_d_tata
+recruit_character = RAJ_GOE_william_rhodes_davis
+recruit_character = RAJ_GOE_prescott_bush
+recruit_character = RAJ_GOE_m_n_roy
+recruit_character = RAJ_mirza_khurshid_jah_bahadur
+recruit_character = RAJ_GOE_mughal_army_command_1
+recruit_character = RAJ_GOE_mughal_army_command_2
+recruit_character = RAJ_GOE_mughal_army_command_3
+recruit_character = RAJ_GOE_mughal_army_command_4
+recruit_character = RAJ_GOE_mughal_army_command_5
+recruit_character = RAJ_GOE_mughal_theorist
+recruit_character = RAJ_GOE_mughal_navy_guy
+recruit_character = RAJ_GOE_mughal_air_guy
+recruit_character = RAJ_intel_generic
+recruit_character = RAJ_cap_industry_mughal
+recruit_character = RAJ_mughal_industrialist
+recruit_character = RAJ_silent_mughal
+recruit_character = RAJ_backroom_mughal
+recruit_character = RAJ_lakshmi_sahgal
+recruit_character = RAJ_orde_wingate
+recruit_character = RAJ_kodandera_madappa_cariappa
+recruit_character = RAJ_kodandera_subayya_thimayya
+recruit_character = RAJ_jayanto_nath_chaudhuri
 
+set_variable = { RAJ_agrarian_society_increment = 0.05 }
+set_variable = { RAJ_war_support_increased = 0 }
+set_variable = { RAJ_hindu_mahasabha_released = 0.04 }
+set_variable = { RAJ_hindu_mahasabha_counter = 0 }
 
 create_equipment_variant = {
 	name = "No.4 MkI (RAJ)"
 	type = infantry_equipment_1
 	parent_version = 0
-	design_team = mio:RAJ_ishapore_rifle_factory_organization
+	design_team = mio:RAJ_ammunition_factory_khadki_organization
 }
 
-if = {
-	limit = {
-		has_dlc = "Together for Victory"
-	}
-	recruit_character = RAJ_lakshmi_sahgal
-	recruit_character = RAJ_orde_wingate
-	recruit_character = RAJ_kodandera_madappa_cariappa
-	recruit_character = RAJ_kodandera_subayya_thimayya
-	recruit_character = RAJ_jayanto_nath_chaudhuri
-}
-
-
-if = {
-	limit = {
-		not = { has_dlc =  "Man the Guns" }
-	}
-	set_technology = {
-		transport = 1
-	}
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		mtg_transport = 1
-	}
+set_technology = {
+	mtg_transport = 1
 }
 
 if = {
@@ -125,12 +155,18 @@ if = {
 	add_ideas = {
 		RAJ_princely_states
 		RAJ_marginalized_muslim_community
-		RAJ_agrarian_society
 		RAJ_risk_of_famine
 	}
 
 	add_to_tech_sharing_group = commonwealth_research
 }
+
+add_dynamic_modifier = { modifier = idea_RAJ_agrarian_society } 		
+set_variable = { RAJ_agrarian_society_conscription_factor = -0.72 } #3
+set_variable = { RAJ_agrarian_society_mobilization_laws_cost_factor = 2.16 } #9
+set_variable = { RAJ_agrarian_society_mobilization_speed = -0.72 } #3
+add_ideas = idea_RAJ_great_depression_1
+
 
 if = {
 	limit = {
@@ -202,3 +238,78 @@ if = {
 		nationalities = { RAJ }
 	}
 }
+
+every_owned_state = {
+	limit = { NOT = { state = 992 } } #province of Áden
+	ROOT = {
+		add_to_array = { array = owned_states_at_game_start value = PREV }
+	}
+}
+
+set_variable = { famine_reduction = 0 }
+set_variable = { RAJ_resistance_activity_independence_movement = 0.02 }
+set_variable = { RAJ_resistance_target_independence_movement = 0.02 }
+set_variable = { RAJ_autonomy_gain_independence_movement = 0.3 }
+
+#Tea exports
+set_variable = { RAJ_autonomy_gain_tea_exports = 0 }
+set_variable = { RAJ_building_speed_tea_exports = 0 }
+set_variable = { RAJ_times_expanded_tea_exports = 0 }
+
+
+
+set_variable = { RAJ_famine_spread_times_max = 30 } #months
+set_variable = { RAJ_famine_spread_times_min = 18 }
+
+
+set_variable = { RAJ_times_shield_has_blocked_spread = 0 }
+set_variable = { RAJ_famine_reduction_from_shield = 0 }
+set_variable = { RAJ_famine_political_power_factor = 0 }
+set_variable = { RAJ_famine_stability_factor = 0 }
+set_variable = { RAJ_famine_shield = 0 }
+set_variable = { RAJ_famine_spreads = 100 }
+
+
+set_variable = { RAJ_agrarian_society_experience_gain_army_factor_offices_max = -5  }
+set_variable = { RAJ_agrarian_society_conscription_factor_offices_max  = 6  }
+set_variable = { RAJ_agrarian_society_mobilization_speed_offices_max  = 15  }
+set_variable = { RAJ_agrarian_society_mobilization_laws_cost_factor_offices_max  = -15  }
+
+multiply_variable = { RAJ_agrarian_society_experience_gain_army_factor_offices_max = 4  }
+multiply_variable = { RAJ_agrarian_society_conscription_factor_offices_max  = 4  }
+multiply_variable = { RAJ_agrarian_society_mobilization_speed_offices_max  = 4 }
+multiply_variable = { RAJ_agrarian_society_mobilization_laws_cost_factor_offices_max  = 4  }
+
+set_variable = { RAJ_fyp_stability_factor = 0 }
+set_variable = { RAJ_fyp_production_speed_buildings_factor = 0 }
+set_variable = { RAJ_fyp_consumer_goods_factor = 0 }
+set_variable = { RAJ_fyp_research_speed_factor = 0 }
+set_variable = { RAJ_fyp_production_speed_industrial_complex_factor = 0 }
+set_variable = { RAJ_fyp_production_speed_arms_factory_factor = 0 }
+set_variable = { RAJ_fyp_production_speed_dockyard_factor = 0 }
+set_variable = { RAJ_fyp_production_factory_efficiency_gain_factor = 0 }
+set_variable = { RAJ_fyp_production_factory_max_efficiency_factor = 0 }
+
+430 = {
+ 	set_variable = { global.famine_state = THIS }
+}
+country_event = { id = GOE_RAJ_partition.1 days = 40 random_days = 25 }
+country_event = { id = GOE_RAJ.32 days = 30 random_days = 80 }
+
+set_variable = { RAJ_recruitment_offices_timeout_max = 12 } 
+set_variable = { RAJ_agrarian_society_conscription_factor_penalty_reduction = 0.03  } 
+set_variable = { RAJ_agrarian_society_conscription_factor_penalty_reduction_display = RAJ_agrarian_society_conscription_factor_penalty_reduction }
+multiply_variable = { RAJ_agrarian_society_conscription_factor_penalty_reduction_display = 100 }
+#multiply_variable = { RAJ_agrarian_society_conscription_factor_penalty_reduction_display = -1 }
+
+set_variable = { RAJ_agrarian_society_mobilization_speed_penalty_reduction = 0.03  }
+set_variable = { RAJ_agrarian_society_mobilization_speed_penalty_reduction_display = RAJ_agrarian_society_mobilization_speed_penalty_reduction  }
+multiply_variable = { RAJ_agrarian_society_mobilization_speed_penalty_reduction_display = 100 }
+#multiply_variable = { RAJ_agrarian_society_mobilization_speed_penalty_reduction_display = -1 }
+
+set_variable = { RAJ_agrarian_society_mobilization_laws_cost_factor_penalty_reduction = -0.09 }
+set_variable = { RAJ_agrarian_society_mobilization_laws_cost_factor_penalty_reduction_display = RAJ_agrarian_society_mobilization_laws_cost_factor_penalty_reduction }
+multiply_variable = { RAJ_agrarian_society_mobilization_laws_cost_factor_penalty_reduction_display = 100 }
+set_variable = { RAJ_railway_focuses = 0 }
+#multiply_variable = { RAJ_agrarian_society_mobilization_laws_cost_factor_penalty_reduction_display = -1 }
+

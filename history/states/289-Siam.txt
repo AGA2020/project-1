@@ -33,6 +33,6 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 	}
 	manpower=8422400
 	buildings_max_level_factor=1.000
-	state_category=city
-	local_supplies=0.000
+	state_category=metropolis
+	local_supplies=1
 }

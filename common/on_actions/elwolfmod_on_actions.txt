@@ -1518,7 +1518,13 @@ on_actions = {
 			RAJ = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_1
-					amount = 3600
+					amount = 3800
+				}
+			}
+			RAJ = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 13500
 				}
 			}
 			AST = {

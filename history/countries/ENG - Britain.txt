@@ -60,7 +60,7 @@ if = {
 
 set_occupation_law = autonomous_occupation
 
-load_oob = "ENG_Motorized"
+load_oob = "ENG_LAR_Motorized"
 
 
 
@@ -363,6 +363,7 @@ recruit_character = ENG_john_cockcroft
 recruit_character = ENG_charles_goodeve
 recruit_character = ENG_nevil_shute
 recruit_character = ENG_robert_watson_watt
+recruit_character = ENG_jack_churchill
 
 create_equipment_variant = {
 	name = "No.4 MkI (ENG)"
