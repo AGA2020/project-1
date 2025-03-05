@@ -89,6 +89,7 @@ focus_tree = {
         id = RAJ_great_depression_price_controls
         icon = GFX_focus_generic_price_controls
         #prerequisite = { focus = }
+        allow_branch = { always = no }
         mutually_exclusive = { focus = RAJ_provincial_autonomy }
         x = -55
         y = 0
@@ -106,48 +107,6 @@ focus_tree = {
         
         bypass = {
 
-        }
-
-        allow_branch = {
-            NOT = {
-                has_completed_focus = RAJ_provincial_autonomy
-            }
-        }
-
-        offset = {
-            x = 29
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_great_depression_price_controls
-            }
-        }
-
-        offset = {
-            x = 15
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_look_to_the_future
-            }
-        }
-
-        offset = {
-            x = 13
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_look_to_the_past
-            }
         }
 
         cancel_if_invalid = yes
@@ -176,18 +135,6 @@ focus_tree = {
                 }
             }
             add_political_power = 20
-
-            hidden_effect = {
-                if = {
-                    limit = {
-                        has_game_rule = {
-                            rule = obsolete_focus_branches_visibility
-                            option = HIDE
-                        }
-                    }
-                    mark_focus_tree_layout_dirty = yes
-                }
-            }
         } 
     }
 
@@ -195,7 +142,7 @@ focus_tree = {
         id = RAJ_look_to_the_past
         icon = GFX_focus_generic_monarchy_1
         prerequisite = { focus = RAJ_great_depression_price_controls }
-
+        allow_branch = { always = no }
         x = -9
         y = 2
         relative_position_id = RAJ_great_depression_price_controls
@@ -214,23 +161,6 @@ focus_tree = {
 
         }
 
-        allow_branch = {
-            NOT = { has_completed_focus = RAJ_look_to_the_future }
-            NOT = { has_completed_focus = RAJ_provincial_autonomy }
-        }
-
-        offset = {
-            x = 7
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_look_to_the_past
-            }
-        }
-
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
@@ -245,18 +175,6 @@ focus_tree = {
             add_stability = 0.05
             add_war_support = 0.05
             add_political_power = 80 
-
-            hidden_effect = {
-                if = {
-                    limit = {
-                        has_game_rule = {
-                            rule = obsolete_focus_branches_visibility
-                            option = HIDE
-                        }
-                    }
-                    mark_focus_tree_layout_dirty = yes
-                }
-            }
         } 
     }
 
@@ -269,7 +187,7 @@ focus_tree = {
         x = 22
         y = 0
         relative_position_id = RAJ_look_to_the_past
-
+        allow_branch = { always = no }
         cost = 5
 
         ai_will_do = {
@@ -282,23 +200,6 @@ focus_tree = {
         
         bypass = {
 
-        }
-
-        allow_branch = {
-            NOT = { has_completed_focus = RAJ_look_to_the_past }
-            NOT = { has_completed_focus = RAJ_provincial_autonomy }
-        }
-
-        offset = {
-            x = -17
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_look_to_the_future
-            }
         }
 
         cancel_if_invalid = yes
@@ -315,17 +216,6 @@ focus_tree = {
             swap_ideas = {
                 remove_idea = idea_RAJ_price_controls
                 add_idea = idea_RAJ_price_controls_2
-            }
-            hidden_effect = {
-                if = {
-                    limit = {
-                        has_game_rule = {
-                            rule = obsolete_focus_branches_visibility
-                            option = HIDE
-                        }
-                    }
-                    mark_focus_tree_layout_dirty = yes
-                }
             }
         } 
     }
@@ -6775,18 +6665,6 @@ focus_tree = {
                 country_event = { id = GOE_RAJ_partition.1 days = 80 } 
                 country_event = { id = GOE_RAJ.29 days = 38 }  #April 18ish
             }
-
-            hidden_effect = {
-                if = {
-                    limit = {
-                        has_game_rule = {
-                            rule = obsolete_focus_branches_visibility
-                            option = HIDE
-                        }
-                    }
-                    mark_focus_tree_layout_dirty = yes
-                }
-            }
             custom_effect_tooltip = RAJ_provincial_autonomy_tt
         }
     }
@@ -6994,33 +6872,6 @@ focus_tree = {
         x = 21
         y = 1
         relative_position_id = RAJ_great_depression_price_controls 
-
-        offset = {
-            x = -6
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_great_depression_price_controls
-            }
-        }
-
-        offset = {
-            x = -12
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                OR = {
-                    has_completed_focus = RAJ_look_to_the_past
-                    has_completed_focus = RAJ_look_to_the_future
-                }
-            }
-        }
 
         cost = 5
 
@@ -7261,18 +7112,6 @@ focus_tree = {
                 show_effect_tooltip = yes # default is no
                 show_modifiers = yes # default is no
             }
-
-            hidden_effect = {
-                if = {
-                    limit = {
-                        has_game_rule = {
-                            rule = obsolete_focus_branches_visibility
-                            option = HIDE
-                        }
-                    }
-                    mark_focus_tree_layout_dirty = yes
-                }
-            }
         }
     }
 
@@ -7285,7 +7124,7 @@ focus_tree = {
         relative_position_id = RAJ_mahatma
         mutually_exclusive = { focus = RAJ_mahatma }
         cost = 10
-
+        allow_branch = { always = no }
         ai_will_do = {
             factor = 1
         }
@@ -7315,18 +7154,6 @@ focus_tree = {
             }
 
             custom_effect_tooltip = RAJ_league_against_gandhism_tt
-
-            hidden_effect = {
-                if = {
-                    limit = {
-                        has_game_rule = {
-                            rule = obsolete_focus_branches_visibility
-                            option = HIDE
-                        }
-                    }
-                    mark_focus_tree_layout_dirty = yes
-                }
-            }
         }
     }
 
@@ -8017,30 +7844,6 @@ focus_tree = {
 
         }
 
-        offset = {
-            x = -13
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_red_in_the_shadows
-            }
-        }
-
-        offset = {
-            x = -10
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = RAJ_forward_bloc
-            }
-        }
-
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
@@ -8544,7 +8347,7 @@ focus_tree = {
         relative_position_id = RAJ_league_against_gandhism
         mutually_exclusive = { focus = RAJ_red_in_the_shadows }
         cost = 10
-
+        allow_branch = { always = no }
         ai_will_do = {
             factor = 1
         }
@@ -8590,18 +8393,6 @@ focus_tree = {
             RAJ_subhas_chanda_bose = { custom_effect_tooltip = unlock_general_tt }
             custom_effect_tooltip = available_political_advisor
             show_ideas_tooltip = RAJ_subhas_chanda_bose
-
-            hidden_effect = {
-                if = {
-                    limit = {
-                        has_game_rule = {
-                            rule = obsolete_focus_branches_visibility
-                            option = HIDE
-                        }
-                    }
-                    mark_focus_tree_layout_dirty = yes
-                }
-            }
         }
     }
 
@@ -8748,7 +8539,7 @@ focus_tree = {
         relative_position_id = RAJ_all_india_kisan_sabha
         mutually_exclusive = { focus = RAJ_forward_bloc }
         cost = 10
-
+        allow_branch = { always = no }
         ai_will_do = {
             factor = 1
         }
@@ -8779,18 +8570,6 @@ focus_tree = {
 
 
             set_country_flag = stop_unrest_events
-            
-            hidden_effect = {
-                if = {
-                    limit = {
-                        has_game_rule = {
-                            rule = obsolete_focus_branches_visibility
-                            option = HIDE
-                        }
-                    }
-                    mark_focus_tree_layout_dirty = yes
-                }
-            }
         }
     }
 
