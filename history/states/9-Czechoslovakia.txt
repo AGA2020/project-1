@@ -20,7 +20,7 @@ state={
 			anti_air_building = 5
 			air_base = 5
 			445 = {
-				bunker = 7
+				bunker = 5
 			}
 			494 = {
 				bunker = 7
