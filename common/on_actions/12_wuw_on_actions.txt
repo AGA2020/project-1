@@ -907,25 +907,6 @@ on_actions = {
 	on_ruling_party_change = {
 
 		effect = {
-			IF = { #Check if Germany helped a country to the warm embrace of socialism
-				limit = {
-					GER = {
-						has_completed_focus = GER_strengthen_the_proletarian_international
-					}
-					ROOT = {
-						is_in_array = {
-							array = GER.started_communist_cw_here
-							value = THIS
-						}
-						NOt = {
-							is_in_faction_with = GER
-						}
-					}
-				}
-			}
-		}
-
-		effect = {
 			IF = {
 				limit = {
 					ROOT = {
