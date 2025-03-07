@@ -1167,18 +1167,10 @@ on_actions = {
 					ai_limiter
 				}
 			}
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = sov_boost
-						option = zero
-					}
-				}
-				SOV = { 
-					country_event = {
-						id = mexico.21 # Mexico returns trotsky
-						days = 396 # Feb 37
-					}
+			SOV = { 
+				country_event = {
+					id = mexico.21 # Mexico returns trotsky
+					days = 396 # Feb 37
 				}
 			}
 			##### Turning King Edward's abdication into an on_startup event instead of MTTH to help performance####
