@@ -173,7 +173,6 @@ bookmarks = {
 			focuses = {
 				RAJ_provincial_elections
 				RAJ_indian_gurkhas
-				RAJ_the_smiling_buddha
 			}
 		}
 
