@@ -4153,13 +4153,6 @@ country_event = { #Germany insists Austria hold a referendum to join them
 			}
 			modifier = {
 				factor = 2
-				has_government = communism
-				FROM = {
-					has_completed_focus = GER_proletarian_dictatorship
-				}
-			}
-			modifier = {
-				factor = 2
 				has_government = democratic
 				FROM = {
 					has_government = democratic #Just in case the player has done something wacky
