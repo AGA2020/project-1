@@ -3319,21 +3319,6 @@ country_event = {
 	#Gandhi
 	option = {
 		name =  GOE_RAJ_partition.7.b
-		if = {
-			limit = {
-				has_completed_focus = RAJ_viceroys_body_guard
-				divisions_in_state = {
-					state = 439
-					size > 0 # use < or >
-					unit = cavalry # optional. specific unit eg. mountaineers, light_tank
-				}
-			}
-			country_event = {	#Gandhi survives
-				id = GOE_RAJ_partition.8
-				days = 10
-				random_days = 5
-			}
-		}
 
 		if = {
 			limit = {
@@ -3462,25 +3447,6 @@ country_event = {
 	}
 }
 
-#Gandhi survives assasination attempt
-country_event = {
-	id = GOE_RAJ_partition.8
-	title = GOE_RAJ_partition.8.t	
-	desc = GOE_RAJ_partition.8.desc	
-	picture = GFX_report_event_generic_sign_treaty2
-	is_triggered_only = yes
-	immediate = {
-		hidden_effect = {
-			set_country_flag = gandhi_survives_assasination_attempt
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-
-	option = {
-		name = GOE_RAJ_partition.8.a
-	}
-}
-
 #Gandthi dies
 country_event = {
 	id = GOE_RAJ_partition.9
@@ -3492,7 +3458,7 @@ country_event = {
 	trigger = {
 		date > 1948.1.29
 		has_global_flag = RAJ_GOE_partition_has_happened
-		NOT = { has_country_flag = gandhi_survives_assasination_attempt }
+		NOT = { has_completed_focus = RAJ_viceroys_body_guard }
 	}
 
 	option = {
