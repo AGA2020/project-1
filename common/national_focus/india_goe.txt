@@ -174,7 +174,7 @@ focus_tree = {
         id = RAJ_trade_port
         icon = GFX_focus_POL_develop_polish_shipbuilding
         prerequisite = { focus = RAJ_provincial_autonomy }
-        x = -12
+        x = -10
         y = 1
         relative_position_id = RAJ_provincial_autonomy 
 
@@ -318,7 +318,7 @@ focus_tree = {
         id = RAJ_mahatma
         icon = GFX_focus_RAJ_mahatma
         prerequisite = { focus = RAJ_purna_swaraj }
-        x = -9
+        x = -7
         y = 1
         relative_position_id = RAJ_purna_swaraj
         cost = 10
@@ -1258,7 +1258,7 @@ focus_tree = {
         id = RAJ_india_united
         icon = GFX_focus_RAJ_seek_allies_with_the_muslim_league
         prerequisite = { focus = RAJ_a_congress_resurgent }
-        x = 3
+        x = 2
         y = 1
         relative_position_id = RAJ_a_congress_resurgent
         mutually_exclusive = { focus = RAJ_two_nation_theory_dlc }
@@ -1287,9 +1287,9 @@ focus_tree = {
         id = RAJ_two_nation_theory_dlc
         icon = GFX_focus_RAJ_two_nation_theory
         prerequisite = { focus = RAJ_a_congress_resurgent }
-        x = -6
-        y = 0
-        relative_position_id = RAJ_india_united
+        x = -2
+        y = 1
+        relative_position_id = RAJ_a_congress_resurgent
         mutually_exclusive = { focus = RAJ_india_united }
         cost = 10
 
@@ -1499,7 +1499,7 @@ focus_tree = {
         id = RAJ_a_permanent_muslim_governmental_seat
         icon = GFX_focus_TUR_turanist_ambition
         prerequisite = { focus = RAJ_power_sharing_agreement }
-        x = 2
+        x = 1
         y = 1
         relative_position_id = RAJ_power_sharing_agreement
         
@@ -1538,7 +1538,7 @@ focus_tree = {
         id = RAJ_cabinet_mission_plan
         icon = GFX_focus_ARG_cut_ties_with_britain
         prerequisite = { focus = RAJ_power_sharing_agreement }
-        x = 0
+        x = -1
         y = 1
         relative_position_id = RAJ_power_sharing_agreement
         
@@ -1676,7 +1676,7 @@ focus_tree = {
         icon = GFX_goal_tfv_saf_anti_colonialist_crusade
         prerequisite = { focus = RAJ_cabinet_mission_plan }
         prerequisite = { focus = RAJ_a_permanent_muslim_governmental_seat }
-        x = 0
+        x = 1
         y = 1
         relative_position_id = RAJ_cabinet_mission_plan
         
@@ -1864,7 +1864,7 @@ focus_tree = {
         id = RAJ_tryst_with_destiny
         icon = GFX_focus_RAJ_tryst_with_destiny
         prerequisite = { focus = RAJ_united_bengal focus = RAJ_eastern_pakistan focus = RAJ_a_secular_state }
-        x = 3
+        x = 1
         y = 1
         relative_position_id = RAJ_hedgemony_of_the_subcontinent
         
@@ -2087,7 +2087,7 @@ focus_tree = {
         id = RAJ_ban_untouchability_once_and_for_all
         icon = GFX_focus_PER_abolish_feudalism
         prerequisite = { focus = RAJ_pledge_for_the_allies }
-        x = -3
+        x = 0
         y = 1
         relative_position_id = RAJ_pledge_for_the_allies
         
