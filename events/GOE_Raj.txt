@@ -1536,17 +1536,6 @@ country_event = {
 			check_painful_memory = yes
 		}
 		custom_effect_tooltip = GOE_RAJ_partition_become_free_to_stop_the_chaos_tt
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				if = {
-					limit = { check_variable = { RAJ_war_support_increased < 51 } }
-				}
-				add_war_support = 0.05
-				add_to_variable = { var = RAJ_war_support_increased value = 5}
-				custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-			}
-		}
 	}
 
 	option = {
@@ -1597,14 +1586,6 @@ country_event = {
 		clear_variable = RAJ.unrest_target_state
 		hidden_effect = {
 			check_painful_memory = yes
-		}
-
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
 		}
 		custom_effect_tooltip = GOE_RAJ_partition_become_free_to_stop_the_chaos_tt
 		
@@ -1669,14 +1650,6 @@ country_event = {
 		hidden_effect = {
 			check_painful_memory = yes
 		}
-
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-		}
 		custom_effect_tooltip = GOE_RAJ_partition_become_free_to_stop_the_chaos_tt
 	}
 }
@@ -1698,14 +1671,6 @@ country_event = {
 		clear_variable = RAJ.unrest_target_state
 		hidden_effect = {
 			check_painful_memory = yes
-		}
-
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
 		}
 		custom_effect_tooltip = GOE_RAJ_partition_become_free_to_stop_the_chaos_tt
 	}
@@ -1759,14 +1724,6 @@ country_event = {
 		hidden_effect = {
 			check_painful_memory = yes
 		}
-
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-		}
 		custom_effect_tooltip = GOE_RAJ_partition_become_free_to_stop_the_chaos_tt
 
 	}
@@ -1796,27 +1753,11 @@ country_event = {
 			add_resistance = 5
 			
 		}
-
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-		}
 	}
 
 	option = { #intervene
 		name =  GOE_RAJ_partition.5.b
 		add_political_power = -40
-
-		if = {
-			limit = { has_completed_focus = RAJ_league_against_gandhism }
-			hidden_effect = {
-				add_war_support = 0.05
-			}
-			custom_effect_tooltip = RAJ_league_against_gandhism_tt_event
-		}
 	}
 	
 }
