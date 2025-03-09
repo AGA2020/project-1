@@ -4111,14 +4111,30 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER}
 
         completion_reward = {
-            random_army_leader = {
-                limit = {
-                    NOT = { has_trait = panzer_leader }
+            if = {
+                limit = { 
+                    RAJ_noel_beresfordpeirse = { 
+                        NOT = { has_trait = panzer_leader } 
+                    } 
                 }
-                add_trait = {
-                    trait = panzer_leader
-                }
+                RAJ_noel_beresfordpeirse = { 
+                    add_trait = {
+                        trait = panzer_leader
+                    }
+                } 
+
             }
+            else = {
+                random_army_leader = {
+                    limit = {
+                        NOT = { has_trait = panzer_leader }
+                    }
+                    add_trait = {
+                        trait = panzer_leader
+                    }
+                }
+            } 
+
             add_tech_bonus = {
                 name = RAJ_armoured_corps_center_and_school
                 bonus = 0.3
