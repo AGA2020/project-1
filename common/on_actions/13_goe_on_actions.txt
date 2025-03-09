@@ -268,14 +268,6 @@ on_actions = {
 						NOT = { has_global_flag = RAJ_GOE_partition_has_happened }
 					}
 					FROM = { original_tag = ENG }
-					NOT = {
-						OR = {
-							has_completed_focus = RAJ_red_in_the_shadows
-							has_completed_focus = RAJ_great_depression_price_controls
-							has_completed_focus = RAJ_forward_bloc
-						}
-					}
-
 				}
 
 				RAJ = { 
