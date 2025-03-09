@@ -4113,11 +4113,11 @@ focus_tree = {
         completion_reward = {
             if = {
                 limit = { 
-                    RAJ_noel_beresfordpeirse = { 
+                    RAJ_GOE_montagu_stopford = { 
                         NOT = { has_trait = panzer_leader } 
                     } 
                 }
-                RAJ_noel_beresfordpeirse = { 
+                RAJ_GOE_montagu_stopford = { 
                     add_trait = {
                         trait = panzer_leader
                     }
