@@ -2963,7 +2963,6 @@ country_event = {
 				ROOT = {
 					original_tag = RAJ
 					NOT = {
-						has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
 						has_completed_focus = RAJ_a_secular_state
 					}
 				}
