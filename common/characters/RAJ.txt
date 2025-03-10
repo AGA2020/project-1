@@ -1779,10 +1779,6 @@ characters={
 			idea_token = RAJ_GOE_tara_singh
 			allowed = {
 				original_tag = RAJ
-				has_dlc = "Graveyard of Empires"
-			}
-			visible = {
-				has_completed_focus = RAJ_sikh_religious_guarantees
 			}
 			available = {
 				has_completed_focus = RAJ_sikh_religious_guarantees
