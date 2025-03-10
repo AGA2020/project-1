@@ -9540,8 +9540,6 @@ focus_tree = {
 		icon = GFX_goal_molotov_ribbentrop_pact
 		alternate_icon = GFX_focus_GER_molotov_ribbentrop_pact
 		prerequisite = { focus = GER_reorganize_the_wehrmacht }
-
-		mutually_exclusive = { focus = GER_anti_soviet_pact }
 		x = 1
 		y = 1
 		relative_position_id = GER_reorganize_the_wehrmacht
