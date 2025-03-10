@@ -1,4 +1,6 @@
 ﻿l_english:
+  imperial_japanese_army:0 "Imperial Japanese Army"
+  imperial_japanese_navy:0 "Imperial Japanese Navy"
   brave:0 "Brave"
   brave_desc:1 "§LLess likely to falter in the face of adversity, this leader stands firm even when the odds are dire.§!"
   WAR_join:0 "3 Month Rule Enforcer"

@@ -23,6 +23,16 @@ add_ideas = {
 
 }
 
+set_power_balance = {	
+		id = JAP_interservice_rivalry	
+					
+		left_side = imperial_japanese_army	
+					
+		right_side = imperial_japanese_navy	
+					
+		set_value = 0	
+}
+
 IF = {
 	limit = { has_dlc = "Waking the Tiger" }
 	add_ideas = {

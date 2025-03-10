@@ -1805,10 +1805,10 @@ characters={
 				has_dlc = "Graveyard of Empires"
 			}
 			visible = {
-				has_completed_focus = RAJ_seek_japanese_support
+				always = no
 			}
 			available = {
-				has_completed_focus = RAJ_seek_japanese_support
+				always = no
 			}
 			traits = {
 				exiled_dissident 
