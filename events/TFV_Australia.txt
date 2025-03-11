@@ -389,28 +389,6 @@ country_event = {
 	}
 }
 
-#AST_support_indonesian_uprising - End the civil war in INS and puppet fascist side if they won
-country_event = {
-	id = tfv_australia.41
-	title = tfv_australia.41.t
-	desc = tfv_australia.41.d
-	picture = GFX_report_event_ast_troops_landing
-	
-	is_triggered_only = yes
-
-	option = {
-		name = tfv_australia.41.a
-		random_country = {
-			limit = {
-				original_tag = INS
-				has_government = fascism
-			}
-			white_peace = HOL
-		}
-		puppet = INS
-	}
-}
-
 # Completed AST_join_comintern.
 # Australian national focus.
 country_event = {

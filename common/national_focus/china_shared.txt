@@ -1241,8 +1241,6 @@ shared_focus = {
 	}
 
 	available = {
-		all_other_country = { NOT = { has_completed_focus = CHI_guarantee_the_hanoi_route } }
-		FRA_will_support = yes
 		325 = { #Yunnan
 			CONTROLLER = {
 				OR = {
@@ -1252,19 +1250,6 @@ shared_focus = {
 				}
 			}
 		}
-		671 = { #Tonkin
-			CONTROLLER = {
-				NOT = { has_war_with = ROOT }
-				OR = {
-					original_tag = FRA
-					is_subject_of = FRA
-				}
-			}
-		}
-	}
-
-	bypass = {
-
 	}
 
 	cancel_if_invalid = yes
@@ -1272,13 +1257,6 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		671 = { #Tonkin
-			set_state_flag = CHI_needed_for_hanoi_route
-		}
-		325 = { #Yunnan
-			set_state_flag = CHI_needed_for_hanoi_route
-		}	
-		set_variable = { CHI_hanoi_route_current_level = 3 }
 		add_offsite_building = { type = arms_factory level = 3 }
 	}
 }
@@ -2090,43 +2068,15 @@ shared_focus = {
 	}
 
 	available = {
-		OR = {
-			is_subject = no
-			is_subject_of = ENG
-		}
-		all_other_country = { NOT = { has_completed_focus = CHI_the_hump } }
+		is_subject = no
 		OR = {
 			AND = {
 				has_completed_focus = CHI_british_cooperation
-				ENG_will_support = yes
 			}
 			AND = {
 				has_completed_focus = CHI_mission_to_the_us
-				USA_will_support = yes
 			}
 		}
-		601 = { #Xikang
-			CONTROLLER = {
-				OR = {
-					tag = ROOT
-					is_subject_of = ROOT
-					is_in_faction_with = ROOT
-				}
-			}
-		}
-		434 = { #Arunachal Pradesh
-			CONTROLLER = {
-				NOT = { has_war_with = ROOT }
-				OR = {
-					original_tag = ENG
-					is_subject_of = ENG
-				}				
-			}
-		}
-	}
-
-	bypass = {
-
 	}
 
 	cancel_if_invalid = yes
@@ -2134,13 +2084,6 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {		
-		434 = { #Arunachal Pradesh
-			set_state_flag = CHI_needed_for_the_hump
-		}
-		601 = { #Xikang
-			set_state_flag = CHI_needed_for_the_hump
-		}	
-		set_variable = { CHI_the_hump_current_level = 1 }
 		add_offsite_building = { type = arms_factory level = 1 }
 	}
 }
