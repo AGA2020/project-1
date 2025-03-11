@@ -1587,12 +1587,7 @@ shared_focus = {
 	}
 
 	available = {
-		OR = {
-			is_subject = no
-			is_subject_of = ENG
-		}
-		all_other_country = { NOT = { has_completed_focus = CHI_burma_road } }
-		ENG_will_support = yes
+		is_subject = no
 		325 = { #Yunnan
 			CONTROLLER = {
 				OR = {
@@ -1611,19 +1606,6 @@ shared_focus = {
 				}				
 			}
 		}
-		640 = { #Mandalay
-			CONTROLLER = {
-				NOT = { has_war_with = ROOT }
-				OR = {
-					original_tag = ENG
-					is_subject_of = ENG
-				}				
-			}
-		}
-	}
-
-	bypass = {
-
 	}
 
 	cancel_if_invalid = yes
@@ -1631,16 +1613,6 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		288 = { #Burma
-			set_state_flag = CHI_needed_for_burma_road
-		}
-		325 = { #Yunnan
-			set_state_flag = CHI_needed_for_burma_road
-		}
-		640 = { #Mandalay
-			set_state_flag = CHI_needed_for_burma_road
-		}
-		set_variable = { CHI_burma_road_current_level = 2 }
 		add_offsite_building = { type = arms_factory level = 2 }
 	}
 }
@@ -1674,12 +1646,7 @@ shared_focus = {
 	}
 
 	available = {
-		OR = {
-			is_subject = no
-			is_subject_of = ENG
-		}
-		all_other_country = { NOT = { has_completed_focus = CHI_ledo_road } }
-		ENG_will_support = yes
+		is_subject = no
 		325 = { #Yunnan
 			CONTROLLER = {
 				OR = {
@@ -1689,28 +1656,6 @@ shared_focus = {
 				}
 			}
 		}
-		432 = { #Assam
-			CONTROLLER = {
-				NOT = { has_war_with = ROOT }
-				OR = {
-					original_tag = ENG
-					is_subject_of = ENG
-				}				
-			}
-		}
-		640 = { #Mandalay
-			CONTROLLER = {
-				NOT = { has_war_with = ROOT }
-				OR = {
-					original_tag = ENG
-					is_subject_of = ENG
-				}				
-			}
-		}
-	}
-
-	bypass = {
-
 	}
 
 	cancel_if_invalid = yes
@@ -1718,16 +1663,6 @@ shared_focus = {
 	available_if_capitulated = no
 
 	completion_reward = {
-		432 = { #Assam
-			set_state_flag = CHI_needed_for_ledo_road
-		}
-		325 = { #Yunnan
-			set_state_flag = CHI_needed_for_ledo_road
-		}
-		640 = { #Mandalay
-			set_state_flag = CHI_needed_for_ledo_road
-		}
-		set_variable = { CHI_ledo_road_current_level = 1 }
 		add_offsite_building = { type = arms_factory level = 1 }
 	}
 }

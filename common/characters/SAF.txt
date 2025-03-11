@@ -23,6 +23,14 @@ characters={
 				small=GFX_portrait_SAF_d_f_malan_small
 			}
 		}
+		corps_commander={
+			traits = { brilliant_strategist engineer_officer war_hero }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+		}
 		advisor={
 			slot = political_advisor
 			idea_token = SAF_d_f_malan
@@ -156,6 +164,14 @@ characters={
 				small="GFX_idea_SAF_j_f_van_rensburg" #small="GFX_idea_generic_political_advisor_europe_4"
 			}
 		}
+		corps_commander = { 
+			traits = { politically_connected cavalry_officer old_guard }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
 		advisor={
 			cost = 100
 			slot = theorist
@@ -176,6 +192,14 @@ characters={
 			army={
 				small="GFX_idea_SAF_s_p_le_roux" #small="GFX_idea_generic_air_europe_1"
 			}
+		}
+		corps_commander = { 
+			traits = { armor_officer reckless media_personality }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
 		}
 		advisor={
 			cost = 100
@@ -201,6 +225,14 @@ characters={
 				small="GFX_idea_SAF_james_mitchell_baker" #small="GFX_idea_generic_army_europe_3"
 			}
 		}
+		corps_commander = { 
+			traits = { politically_connected cautious infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
 		advisor={
 			slot = army_chief
 			idea_token = SAF_james_mitchell_baker
@@ -223,6 +255,14 @@ characters={
 			army={
 				small="GFX_idea_SAF_leonard_beyers" #small="GFX_idea_generic_army_europe_4"
 			}
+		}
+		corps_commander = { 
+			traits = { inflexible_strategist career_officer harsh_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
 		}
 		advisor={
 			slot = army_chief
@@ -250,6 +290,14 @@ characters={
 				small="GFX_idea_SAF_pierre_oliver_knoll" #small="GFX_idea_generic_navy_europe_2"
 			}
 		}
+		navy_leader={
+			traits = { bold naval_lineage superior_tactician }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=3
+		}
 		advisor={
 			slot = navy_chief
 			idea_token = SAF_pierre_oliver_knoll
@@ -272,6 +320,14 @@ characters={
 			army={
 				small="GFX_idea_generic_navy_europe_1"
 			}
+		}
+		navy_leader={
+			traits = { battleship_adherent caustic_personality ironside }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
 		}
 		advisor={
 			slot = navy_chief
@@ -396,6 +452,14 @@ characters={
 				small="GFX_idea_SAF_marinus_van_osterkamp" #small="GFX_idea_generic_air_europe_3"
 			}
 		}
+		corps_commander = { 
+			traits = { cavalry_officer reckless substance_abuser }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
 		advisor={	
 			slot = high_command
 			idea_token = SAF_marinus_van_osterkamp
@@ -419,6 +483,14 @@ characters={
 			army={
 				small="GFX_idea_SAF_jeannot_de_la_tourier" #small="GFX_idea_generic_navy_europe_2"
 			}
+		}
+		navy_leader={
+			traits = { sea_wolf blockade_runner lone_wolf }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=2
 		}
 		advisor={
 			slot = high_command
@@ -493,6 +565,14 @@ characters={
 			army={
 				small="GFX_idea_SAF_abram_fischer" #small="GFX_idea_generic_communist_revolutionary_western_european_2d"
 			}
+		}
+		corps_commander = { 
+			traits = { old_guard media_personality charismatic }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
 		}		
 	}
 
