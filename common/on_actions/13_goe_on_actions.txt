@@ -1137,36 +1137,6 @@ on_actions = {
 		}
 	}
 
-	#ROOT is sender, FROM is receiver.
-	on_send_volunteers = {
-		effect = {
-			if = {
-				limit = {
-					ROOT = { 
-						has_completed_focus = RAJ_a_private_military 
-						NOT = { 
-							is_in_array = {
-							 	array = pmc_recievers
-							 	value = FROM
-							 } 
-						}
-					}
-					
-				}
-
-				ROOT = { 
-					add_to_array = { pmc_recievers = FROM }
-					log = "[FROM.GetName]"
-					add_to_array = { pmc_timer = 77 } #in weeks 
-					add_offsite_building = {
-						type = industrial_complex
-						level = 1
-					}
-				}
-			}
-		}
-	}
-
 	on_monthly_PAL = {
 		effect = {
 			IF = {
