@@ -14,7 +14,9 @@ state = {
 		add_core_of = NOR
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 2
 		}
+		add_extra_state_shared_building_slots = 2
 	}
 	
 	provinces = {

@@ -15,18 +15,18 @@ state={
 		owner = NOR
 		buildings = {
 			infrastructure = 3 #was: 5
-			industrial_complex = 2
+			industrial_complex = 4
 			air_base = 1
 			53 = {
 				naval_base = 1
 				coastal_bunker = 1
 			}
 			122 = {
-				naval_base = 3
+				naval_base = 7
 				coastal_bunker = 2
 			}
 		}
-		
+		add_extra_state_shared_building_slots = 2
 		victory_points = {
 			53 3
 		}

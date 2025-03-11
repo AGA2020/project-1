@@ -246,6 +246,61 @@ on_actions = {
 	on_startup = {
 
 		effect = {
+			NOR = {
+				every_owned_state = {
+					limit = {
+						is_controlled_by = ROOT 
+						NOT = { 
+							OR = {
+								state = 110
+								state = 144
+							}
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes  
+						province = {
+							all_provinces = yes
+							limit_to_victory_point = yes 
+						}
+					}
+				}
+				110 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes  
+						province = {
+							all_provinces = yes
+							limit_to_victory_point = yes 
+						}
+					}
+				}
+				144 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						instant_build = yes  
+						province = {
+							all_provinces = yes 
+							limit_to_victory_point = yes 
+						}
+					}
+				}
+				110 = { # Oslofjord
+					add_building_construction = {
+						type = coastal_bunker 
+						level = 3
+						instant_build = yes
+						province =  {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+					}
+				}	
+			}
 			build_railway = {
 				start_province = 9508 
 				target_province = 6558
