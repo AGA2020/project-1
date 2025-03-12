@@ -81,21 +81,6 @@ on_actions = {
 	#ROOT is winner #FROM gets annexed - This will also fire on_annex
 	on_civil_war_end = {
 		effect = {
-			#End of British Fascist Civil War
-			#End of British Fascist Civil War - Democrats won
-			# Give back ENG focus tree to Communist ENG if they win a civil war.
-			if = {
-				limit = {
-					original_tag = ENG
-					has_government = communism
-					has_focus_tree = generic_focus
-					FROM = {
-						original_tag = ENG
-						has_government = communism
-					}
-				}
-				load_focus_tree = { tree = british_focus keep_completed = yes }
-			}
 			# Give back MEX focus tree to rebel MEX if they win a civil war.
 			if = {
 				limit = {
@@ -108,40 +93,10 @@ on_actions = {
 				}
 				load_focus_tree = { tree = mexico_focus_tree keep_completed = yes }
 			}
-			# Give back USA focus tree to CSA if they win a civil war.
-			if = {
-				limit = {
-					original_tag = USA
-					has_government = democratic
-					FROM = {
-						original_tag = USA
-						OR = {
-							has_government = neutrality
-							has_government = fascism
-						}
-					}
-				}
-				drop_cosmetic_tag = yes # we are done here
-				set_country_flag = democratic_usa_won_civil_war
-			}
-			if = {
-				limit = {
-					has_template = "Silver Legion"
-				}
-				delete_unit_template_and_units = { division_template = "Silver Legion" }
-			}
 			# Cleaning up anti-exploiter divisions
 			delete_unit_template_and_units = { division_template = "Anti-Exploit Punitive Brigade" }
 		}
 	}
-
-	#ROOT is winner #FROM gets annexed - This fires just before FROM gets annexed, meaning the country and everything it owns still exists. It will also fire on_annex and on_civil_war_end
-	on_civil_war_end_before_annexation = {
-		effect = {
-			#End of British Fascist Civil War - moving the fleet back to the Fascists because they won
-		}
-	}
-
 	#FROM is war target
 	on_declare_war = {
 		effect = {
@@ -327,30 +282,6 @@ on_actions = {
 				}
 				hidden_effect = { FROM = { add_timed_idea = { idea = HOL_staff_plan_ger days = 180 } } }
 			}
-			# In case of Turkish civil war with field marshal Ataturk out on the field
-			if = { 
-        	    limit = { 
-        	        original_tag = TUR
-        	        has_civil_war = yes
-        	        FROM = {
-        	            original_tag = TUR
-        	            has_civil_war = yes
-        	        }
-        	    }
-        	    hidden_effect = { 
-        	        if = { 
-        	            limit = {
-        	            	FROM = { has_government = neutrality } 
-        	            }
-        	            every_unit_leader = {
-        	                limit = { 
-        	                    has_id = 59
-        	                }
-        	                set_nationality = FROM
-        	            }
-        	        }
-        	    }
-        	}
 		}
 	}	
 
@@ -363,68 +294,6 @@ on_actions = {
 				}
 				country_event = { id = mtg_netherlands.63 days = 1 }
 			}
-		}
-	}
-
-	#ROOT = nation being puppeted, FROM = overlord
-	on_puppet = {
-		effect = {
-			#if = { #-------------------------------------> No longer happening (NSB)
-			#	limit = {
-			#		original_tag = SOV
-			#		has_government = communism
-			#		has_country_leader = { character = SOV_iosif_stalin }
-			#		is_puppet_of = MEX
-			#		MEX = {
-			#			OR = {
-			#				has_country_leader = { ruling_only = yes character = MEX_hernan_laborde }
-			#				has_country_leader = { ruling_only = yes character = MEX_leon_trotsky }
-			#				has_country_leader = { ruling_only = yes character = MEX_valentin_campa }
-			#			}
-			#		}
-			#	}
-			#	SOV = { #TODO william check if works as intended or recreate Trotsky independently, also remove Trotsky from Mexico? What about puppet relationship? Look for another Soviet Trotskyist?
-			#		country_event = soviet.28
-			#	}
-			#}
-			if = {
-				limit = {
-					original_tag = MEX
-					has_government = communism
-					OR = {
-						has_country_leader = { ruling_only = yes character = MEX_hernan_laborde }
-						has_country_leader = { ruling_only = yes character = MEX_leon_trotsky }
-						has_country_leader = { ruling_only = yes character = MEX_valentin_campa }
-					}					
-					is_puppet_of = SOV
-					SOV = {
-						has_country_leader_ideology = stalinism 
-					}
-				}
-				MEX = { 
-					add_country_leader_role = {
-						character = MEX_dionisio_encina
-						country_leader ={
-							expire = "1965.1.1"
-							ideology = stalinism
-							traits = {
-								staunch_stalinist
-							}
-						}
-						promote_leader = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					FROM = {
-						original_tag = ENG
-						NOT = { has_government = communism }
-					}
-					has_completed_focus = MEX_focus_nationalize_the_oil_fields
-				}
-				set_cosmetic_tag = ENG_MEX_dominion
-			}	
 		}
 	}
 
@@ -487,40 +356,6 @@ on_actions = {
 					remove_idea = HOL_de_crisisjaren_5
 					add_idea = HOL_de_crisisjaren_2
 				}
-			}
-		}
-	}
-
-	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
-	on_state_control_changed = {
-		effect = {
-			if = {
-				limit = {
-					FROM.FROM = {
-						OR = {
-							state = 7
-							state = 35
-							state = 36
-						}
-					}
-				}
-				FROM = {
-					set_country_flag = HOL_lost_starting_state
-				}
-			}
-		}
-	}
-
-	on_nuke_drop = {
-		effect = {			
-			if = {
-				limit = {
-					tag = USA
-					FROM = {
-						state = 16
-					}
-				}
-				set_country_flag = achievement_team_america
 			}
 		}
 	}

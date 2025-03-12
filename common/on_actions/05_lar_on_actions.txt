@@ -646,57 +646,6 @@ on_actions = {
 		}
 	}
 
-	#ROOT is winner #FROM gets annexed - This will also fire on_annex
-	on_civil_war_end = {
-		effect = {
-			# give French focus tree to French communists if they win one of their civil wars (we have several now)
-			if = {
-				limit = {
-					original_tag = FRA
-					has_government = communism
-					has_focus_tree = generic_focus
-					FROM = {
-						original_tag = FRA
-						NOT = { has_government = communism }
-					}
-				}
-				load_focus_tree = { tree = french_focus keep_completed = no }
-				complete_national_focus = FRA_form_the_popular_front
-				if = {
-					limit = {
-						has_dlc = "La Resistance"
-					}
-					complete_national_focus = FRA_invite_communist_ministers
-					else = {
-						complete_national_focus = FRA_leftist_rhetoric
-					}
-				}
-			}
-			if = {
-				limit = {
-					original_tag = FRA
-					has_government = fascism
-					has_focus_tree = generic_focus
-					FROM = {
-						original_tag = FRA
-						NOT = { has_government = fascism }
-					}
-				}
-				load_focus_tree = { tree = french_focus keep_completed = no }
-				complete_national_focus = FRA_revive_the_national_bloc
-				if = {
-					limit = {
-						has_dlc = "La Resistance"
-					}
-					complete_national_focus = FRA_utilize_the_leagues
-					else = {
-						complete_national_focus = FRA_right_wing_rhetoric
-					}
-				}
-			}
-		}
-	}
-
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation = {
 		effect = {
@@ -1206,23 +1155,6 @@ on_actions = {
 		}
 	}
 
-	#THIS is country that has just gotten into a war
-	on_war = {
-		effect = {
-			if = {
-				limit = {
-					tag = VIC
-				}
-				set_rule = { 
-					can_join_factions = yes
-					can_create_factions = yes
-					can_not_declare_war = no #I hate this thing so much
-				}
-			}
-			
-		}
-	}
-
 	on_weekly = {
 		effect = {
 			if = {
@@ -1238,33 +1170,6 @@ on_actions = {
 	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
 	on_annex = {
 		effect = {
-			# Portuguese Anarchism
-			if = {
-				limit = {
-					original_tag = POR
-					has_government = neutrality
-					has_country_flag = SPR_portuguese_anarchism_flag
-					FROM = {
-						original_tag = POR
-					}
-					SPC = {
-						exists = yes
-					}
-				}
-				SPC = { country_event = lar_spain.50 }
-			}
-			if = {
-				limit = {
-					original_tag = POR
-					has_global_flag = SPR_portuguese_anarchism_flag
-					FROM = {
-						original_tag = POR
-						has_country_flag = SPR_portuguese_anarchism_flag
-					}
-				}
-				clr_global_flag = SPR_portuguese_anarchism_flag
-				set_rule = { can_join_factions = yes }
-			}
 			if = {
 				limit = {
 					has_global_flag = scw_over
@@ -1335,20 +1240,4 @@ on_actions = {
 			}
 		}
 	}
-	
-	# scope is operative
-	# from scope is the country 
-	#on_operative_recruited = {
-	#	effect = {
-	#	
-	#	}
-	#}
-	
-	# scope is operative
-	# from scope is the country 
-	#on_operative_created = {
-	#	effect = {
-	#	
-	#	}
-	#}
 }
