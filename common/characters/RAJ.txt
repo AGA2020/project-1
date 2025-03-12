@@ -478,7 +478,7 @@ characters={
 			planning_skill=1
 			logistics_skill=4
 
-			visible = {  has_completed_focus = RAJ_azad_hind_dlc }
+			visible = {  always = no }
 		}
 
 		advisor={
@@ -487,8 +487,8 @@ characters={
 			allowed = {
 				original_tag = RAJ
 			}
-			visible = {   has_completed_focus = RAJ_azad_hind_dlc } 
-			available = { has_completed_focus = RAJ_azad_hind_dlc }
+			visible = {   always = no } 
+			available = { always = no }
 			traits = {
 				governor_of_the_andaman_islands 
 			}
@@ -518,7 +518,7 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 
-			visible = { has_completed_focus = RAJ_azad_hind_dlc } 
+			visible = { always = no } 
 		}
 	
 	}
@@ -545,7 +545,7 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 
-			visible = { has_completed_focus = RAJ_azad_hind_dlc } 
+			visible = { always = no } 
 		}
 
 		advisor={
@@ -555,10 +555,10 @@ characters={
 			allowed = {
 				original_tag = RAJ
 			}
-			visible = { has_completed_focus = RAJ_azad_hind_dlc } 
+			visible = { always = no } 
 			available = {
 
-				has_completed_focus = RAJ_azad_hind_dlc
+				always = no
 				
 			}
 			traits = {
