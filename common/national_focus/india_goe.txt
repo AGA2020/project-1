@@ -1978,7 +1978,9 @@ focus_tree = {
         ai_will_do = {
             factor = 1
         }
-
+        bypass = {
+            is_in_faction_with = ENG
+        }
         search_filters = {FOCUS_FILTER_POLITICAL}
 
         cancel_if_invalid = yes
@@ -2514,6 +2516,7 @@ focus_tree = {
 
         completion_reward = {
             add_tech_bonus = {
+                name = RAJ_fight_malnutrition
                 bonus = 0.5
                 uses = 2
                 category = support_tech # optional 
@@ -3431,7 +3434,7 @@ focus_tree = {
     focus = {
         id = RAJ_east_india_railways_dlc
         icon = GFX_goal_generic_construct_infrastructure
-        x = 8
+        x = -35
         y = 0
         relative_position_id = RAJ_indianize_the_army
         
@@ -3887,7 +3890,7 @@ focus_tree = {
         id = RAJ_ammunition_factory_khadki
         icon = GFX_goal_generic_construct_mil_factory
         #prerequisite = { focus =  }
-        x = 6
+        x = 39
         y = 0
         relative_position_id = RAJ_bombay_baroda_and_central_india_railway
         
@@ -6098,8 +6101,8 @@ focus_tree = {
         icon = GFX_goal_generic_navy_doctrines_tactics
         #prerequisite = { focus = RAJ_expand_mazagon_dock_dlc
         #focus = RAJ_found_scindia_shipyard_dlc }
-        x = 9
-        y = 0
+        x = -45
+        y = 5
         relative_position_id = RAJ_indian_air_force
 
         cost = 5

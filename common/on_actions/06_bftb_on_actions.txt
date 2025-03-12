@@ -126,26 +126,6 @@ on_actions = {
 		}
 	}
 
-	on_startup = {
-		effect = {
-			#Greek faction set-up
-			if = {
-				limit = {
-					has_dlc = "Battle for the Bosporus"
-					has_start_date < 1936.1.2
-				}
-				GRE = { 
-					set_country_flag = GRE_factions_unlocked
-					set_variable = { var  = GRE_monarchist_loyalty value = 2 }
-					set_variable = { var  = GRE_republican_loyalty value = -1 }
-					set_variable = { var  = GRE_communist_loyalty value = -1 }
-					set_variable = { var  = GRE_fascist_loyalty value = -2 }
-					GRE_political_instability_update_effect = yes
-				}
-			}
-		}
-	}
-
 	#ROOT is winner #FROM gets annexed - This will also fire on_annex
 	on_civil_war_end = {
 		effect = {
@@ -490,194 +470,6 @@ on_actions = {
 					}
 				}
 			}
-			else_if = {
-				limit = {
-					original_tag = GRE
-				}
-				if = { #GRE - BYZ_UNIFIED
-					limit = {
-						has_country_flag = GRE_byz_unified_flag
-					}
-					if = {
-						limit = {
-							has_government = communism
-						}
-						set_cosmetic_tag = BYZ_UNIFIED_communism
-					}
-					else_if = {
-						limit = {
-							has_government = democratic
-						}
-						set_cosmetic_tag = BYZ_UNIFIED_democratic
-					}
-					else_if = {
-						limit = {
-							has_government = fascism
-						}
-						set_cosmetic_tag = BYZ_UNIFIED_fascism
-					}
-					else = {
-						limit = {
-							has_government = neutrality
-						}
-						set_cosmetic_tag = BYZ_UNIFIED_neutrality
-					}
-				}
-				else_if = { #GRE BYZANTINE REPUBLIC
-					limit = {
-						has_cosmetic_tag = GRE_byz_republic
-					}
-					#DO NOTHING, this cosmetic does not have dynamic models
-				}
-				else_if = { #GRE - GRE_GREATER_GREECE
-					limit = {
-						has_country_flag = GRE_GREATER_GREECE_flag
-					}
-					if = {
-						limit = {
-							has_government = communism
-						}
-						set_cosmetic_tag = GRE_GREATER_GREECE_communism
-					}
-					else_if = {
-						limit = {
-							has_government = democratic
-						}
-						set_cosmetic_tag = GRE_GREATER_GREECE_democratic
-					}
-					else_if = {
-						limit = {
-							has_government = fascism
-						}
-						set_cosmetic_tag = GRE_GREATER_GREECE_fascism
-					}
-					else = {
-						limit = {
-							has_government = neutrality
-						}
-						set_cosmetic_tag = GRE_GREATER_GREECE_neutrality
-					}
-				}
-				else_if = { #GRE - GRE_dem_monarchy
-					limit = {
-						has_country_flag = GRE_dem_monarchy_flag
-					}
-					if = {
-						limit = {
-							has_government = communism
-						}
-						set_cosmetic_tag = GRE_dem_monarchy_communism
-					}
-					else_if = {
-						limit = {
-							has_government = democratic
-						}
-						set_cosmetic_tag = GRE_dem_monarchy_democratic
-					}
-					else_if = {
-						limit = {
-							has_government = fascism
-						}
-						set_cosmetic_tag = GRE_dem_monarchy_fascism
-					}
-					else = {
-						limit = {
-							has_government = neutrality
-						}
-						set_cosmetic_tag = GRE_dem_monarchy_neutrality
-					}
-				}
-				else_if = { #GRE - Stalinist
-					limit = {
-						has_cosmetic_tag = GRE_stalinist
-					}
-					#DO NOTHING, this cosmetic does not have dynamic models
-				}
-				else_if = { #GRE - GRE_com_independent
-					limit = {
-						has_country_flag = GRE_com_independent_flag
-					}
-					if = {
-						limit = {
-							has_government = communism
-						}
-						set_cosmetic_tag = GRE_com_independent_communism
-					}
-					else_if = {
-						limit = {
-							has_government = democratic
-						}
-						set_cosmetic_tag = GRE_com_independent_democratic
-					}
-					else_if = {
-						limit = {
-							has_government = fascism
-						}
-						set_cosmetic_tag = GRE_com_independent_fascism
-					}
-					else = {
-						limit = {
-							has_government = neutrality
-						}
-						set_cosmetic_tag = GRE_com_independent_neutrality
-					}
-				}
-				else_if = { #GRE - MAE
-					limit = {
-						has_country_flag = GRE_mae_flag
-					}
-					if = {
-						limit = {
-							has_government = communism
-						}
-						set_cosmetic_tag = MAE_communism
-					}
-					else_if = {
-						limit = {
-							has_government = democratic
-						}
-						set_cosmetic_tag = MAE_democratic
-					}
-					else_if = {
-						limit = {
-							has_government = fascism
-						}
-						set_cosmetic_tag = MAE_fascism
-					}
-					else = {
-						limit = {
-							has_government = neutrality
-						}
-						set_cosmetic_tag = MAE_neutrality
-					}
-				}
-				else = { #GRE - The one and only
-					if = {
-						limit = {
-							has_government = communism
-						}
-						set_cosmetic_tag = GRE_communism
-					}
-					else_if = {
-						limit = {
-							has_government = democratic
-						}
-						set_cosmetic_tag = GRE_democratic
-					}
-					else_if = {
-						limit = {
-							has_government = fascism
-						}
-						set_cosmetic_tag = GRE_fascism
-					}
-					else = {
-						limit = {
-							has_government = neutrality
-						}
-						set_cosmetic_tag = GRE_neutrality
-					}
-				}
-			}
 		}
 		effect = {
 			if = {
@@ -686,66 +478,19 @@ on_actions = {
 				}
 				if = {
 					limit = {
-						has_government = communism
-						has_country_flag = BUL_player_formed_fatherland_front_flag
-					}
-					add_ideas = BUL_fatherland_front_positive
-					clr_country_flag = BUL_player_formed_fatherland_front_flag
-				}
-				else_if = {
-					limit = {
 						has_government = fascism
 						has_idea = BUL_bogdan_filov
 					}
 					remove_ideas = BUL_bogdan_filov
 					add_ideas = BUL_bogdan_filov_fascism
 				}
-				else_if = {
+				else = {
 					limit = {
 						has_government = neutrality
 						has_idea = BUL_bogdan_filov_fascism
 					}
 					remove_ideas = BUL_bogdan_filov_fascism
 					add_ideas = BUL_bogdan_filov
-				}
-			}
-		}
-		effect = {
-			if = {
-				limit = {
-					original_tag = BUL
-					has_country_leader = {
-						character = BUL_ferdinand_i 
-						ruling_only = yes
-					}
-					num_subjects > 0
-				}
-				every_other_country = {
-					limit = {
-						is_subject_of = BUL
-						NOT = { has_idea = BUL_ferdinands_puppet }
-					}
-					add_ideas = BUL_ferdinands_puppet
-				}
-			}
-			else_if = {
-				limit = {
-					original_tag = BUL
-					has_country_flag = BUL_the_return_of_ferdinand_flag
-					NOT = {
-						has_country_leader = {
-							character = BUL_ferdinand_i 
-							ruling_only = yes
-						}
-					}
-					num_subjects > 0
-				}
-				every_other_country = {
-					limit = {
-						is_subject_of = BUL
-						has_idea = BUL_ferdinands_puppet
-					}
-					remove_ideas = BUL_ferdinands_puppet
 				}
 			}
 		}
@@ -977,61 +722,6 @@ on_actions = {
 				}
 				GRE = {
 					clr_country_flag = GRE_italy_attending_convention
-				}
-			}
-		}
-	}
-
-	#used when puppeting in a peace conference
-	#ROOT = nation being puppeted, FROM = overlord
-	on_puppet = {
-		effect = { #Add Ferdinand's puppet NS
-			if = {
-				limit = {
-					FROM = {
-						original_tag = BUL
-						has_country_leader = {
-							character = BUL_ferdinand_i 
-							ruling_only = yes
-						}
-					}
-					NOT = { has_idea = BUL_ferdinands_puppet }
-				}
-				add_ideas = BUL_ferdinands_puppet
-			}
-		}
-		effect = { #Remove bad opinion modifiers when puppetting
-			if = { #If puppeted by Bulgaria, remove bad opinion modifiers
-				limit = {
-					BUL_is_balkan_nation_no_bulgaria = yes
-					FROM = { original_tag = BUL }
-				}
-				BUL_remove_balkan_opinion_modifiers = yes
-			}
-			else_if = { #Bulgaria puppeted by a Balkan nation
-				limit = {
-					original_tag = BUL
-					FROM = { BUL_is_balkan_nation_no_bulgaria = yes }
-				}
-				FROM = { BUL_remove_balkan_opinion_modifiers = yes }
-			}
-		}
-	}
-
-	on_leave_faction = {
-		effect = {
-			if = {
-				limit = { 
-					FROM = {
-						original_tag = BUL
-						has_completed_focus = BUL_the_fate_of_the_balkans
-					}
-				}
-				FROM = {
-					create_wargoal = {
-						type = puppet_wargoal_focus
-						target = ROOT
-					}
 				}
 			}
 		}
