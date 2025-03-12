@@ -3029,24 +3029,4 @@ on_actions = {
 			}
 		}
 	}
-	# FROM is the faction Leader, ROOT is the country leaving the faction 
-	on_leave_faction = {
-		effect = { # Removing Joint Focus Tree flags 
-			if = {
-				limit = {
-					NORDIC_is_nordic = yes
-					OR = {
-						has_country_flag = NORDIC_council_leader 
-						has_country_flag = NORDIC_league_leader
-						has_country_flag = NORDIC_union_leader
-						has_country_flag = NORDIC_alliance_member
-					} 
-				}
-				clr_country_flag = NORDIC_council_leader
-				clr_country_flag = NORDIC_league_leader
-				clr_country_flag = NORDIC_union_leader
-				clr_country_flag = NORDIC_alliance_member
-			}
-		}
-	}
 }
