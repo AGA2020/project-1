@@ -2255,7 +2255,7 @@ characters={
 				original_tag = RAJ
 			}
 			visible = {
-				has_completed_focus = RAJ_lobby_parliment
+				always = no
 			}
 			traits = {
 				RAJ_conservationalist
