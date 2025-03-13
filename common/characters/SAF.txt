@@ -11,6 +11,14 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+		corps_commander = { 
+			traits = { cavalry_officer reckless substance_abuser }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
 	}
 
 	SAF_d_f_malan={
@@ -64,6 +72,14 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+		corps_commander = { 
+			traits = { old_guard media_personality charismatic }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
 	}
 
 	SAF_pixley_ka_isaka_seme={
@@ -99,6 +115,14 @@ characters={
 			ideology=conservatism
 			expire="1965.1.1.1"
 			id=-1
+		}
+		corps_commander = { 
+			traits = { inflexible_strategist career_officer harsh_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
 		}
 	}
 
@@ -255,14 +279,6 @@ characters={
 			army={
 				small="GFX_idea_SAF_leonard_beyers" #small="GFX_idea_generic_army_europe_4"
 			}
-		}
-		corps_commander = { 
-			traits = { inflexible_strategist career_officer harsh_leader }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 1
 		}
 		advisor={
 			slot = army_chief
@@ -452,14 +468,6 @@ characters={
 				small="GFX_idea_SAF_marinus_van_osterkamp" #small="GFX_idea_generic_air_europe_3"
 			}
 		}
-		corps_commander = { 
-			traits = { cavalry_officer reckless substance_abuser }
-			skill = 2
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 1
-		}
 		advisor={	
 			slot = high_command
 			idea_token = SAF_marinus_van_osterkamp
@@ -565,14 +573,6 @@ characters={
 			army={
 				small="GFX_idea_SAF_abram_fischer" #small="GFX_idea_generic_communist_revolutionary_western_european_2d"
 			}
-		}
-		corps_commander = { 
-			traits = { old_guard media_personality charismatic }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 2
 		}		
 	}
 

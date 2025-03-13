@@ -215,6 +215,7 @@ recruit_character = SAF_nicolaas_havenga
 recruit_character = SAF_sir_patrick_duncan
 recruit_character = SAF_abram_fischer
 recruit_character = SAF_william_poole
+recruit_character = SAF_jan_smuts
 
 create_equipment_variant = {
 	name = "No.4 MkI (SAF)"
@@ -224,19 +225,4 @@ create_equipment_variant = {
 }
 
 1939.1.1 = {
-	set_politics = {
-		ruling_party = democratic
-		last_election = "1938.5.18"
-		election_frequency = 60
-		elections_allowed = yes
-	}
-	set_popularities = {
-		democratic = 100
-	}
-
-	#retire_character = SAF_j_b_m_hertzog
-	# Took office 5 days after this date
-	recruit_character = SAF_jan_smuts
-	promote_character = SAF_jan_smuts
-	retire_character = SAF_j_b_m_hertzog
 }

@@ -83,14 +83,12 @@ characters={
 	}
 
 	RAJ_lord_linlithgow = {
-		instance = {
 			name = RAJ_lord_linlithgow
 			portraits = {
 				civilian = {
 					large=  GFX_portrait_RAJ_lord_linlithgow
 				}
 			}
-		}
 	}
 
 	RAJ_v_d_savarkar={
@@ -1763,9 +1761,6 @@ characters={
 				allowed = {
 					original_tag = RAJ
 				}
-				visible = {
-					NOT = { has_character_flag = is_mughal_emperor }
-				}
 				traits = {
 					RAJ_GOE_cautious_investor
 				}
@@ -1797,9 +1792,6 @@ characters={
 				idea_token = RAJ_ahmad_yar_khan
 				allowed = {
 					original_tag = RAJ
-				}
-				visible = {
-					NOT = { has_character_flag = is_mughal_emperor }
 				}
 				traits = {
 					RAJ_GOE_anti_socialist
@@ -1922,9 +1914,6 @@ characters={
 				allowed = {
 					original_tag = RAJ
 				}
-				visible = {
-					NOT = { has_character_flag = is_mughal_emperor }
-				}
 				traits = {
 					RAJ_GOE_cautious_strategist
 				}
@@ -1956,9 +1945,6 @@ characters={
 				idea_token = RAJ_umed_singh
 				allowed = {
 					original_tag = RAJ
-				}
-				visible = {
-					NOT = { has_character_flag = is_mughal_emperor }
 				}
 				traits = {
 					RAJ_GOE_a_way_with_words
@@ -1992,9 +1978,6 @@ characters={
 				allowed = {
 					original_tag = RAJ
 				}
-				visible = {
-					NOT = { has_character_flag = is_mughal_emperor }
-				}
 				traits = {
 					RAJ_GOE_costly_reformer
 				}
@@ -2026,9 +2009,6 @@ characters={
 				idea_token = RAJ_maharaja_jayachamarajendra_wadiyar
 				allowed = {
 					original_tag = RAJ
-				}
-				visible = {
-					NOT = { has_character_flag = is_mughal_emperor }
 				}
 				traits = {
 					RAJ_GOE_cultural_icon
