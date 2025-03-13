@@ -1,161 +1,75 @@
 characters={
 	RAJ_mahatma_mohandas_gandhi={
-		instance = {
-			allowed = { NOT = { has_dlc = "Graveyard of Empires" } }
-			name=RAJ_mahatma_mohandas_gandhi
-			portraits={
-				army={
-					small="GFX_idea_RAJ_mahatma_mohandas_gandhi" #small="GFX_idea_generic_political_advisor_arab_3"
-				}
+		name=RAJ_mahatma_mohandas_gandhi
+		portraits={
+			civilian = {
+				small = GFX_portrait_RAJ_mohandas_gandi_small 
+				large = GFX_portrait_RAJ_mohandas_gandi
+				# Also GFX_portrait_RAJ_mohandas_gandi_nuclear_small
+				# Also GFX_portrait_RAJ_mohandas_gandi_nuclear
 			}
-			advisor={
-				slot = political_advisor
-				idea_token = RAJ_mahatma_mohandas_gandhi
-				allowed = {
-					original_tag = RAJ
-				}
-				traits = {
-					independence_activist 
-				}
-			}	
 		}
-
-		instance = {
-			allowed = { has_dlc = "Graveyard of Empires" } 
-			name=RAJ_mahatma_mohandas_gandhi
-			portraits={
-				civilian = {
-					small = GFX_portrait_RAJ_mohandas_gandi_small 
-					large = GFX_portrait_RAJ_mohandas_gandi
-					# Also GFX_portrait_RAJ_mohandas_gandi_nuclear_small
-					# Also GFX_portrait_RAJ_mohandas_gandi_nuclear
-				}
-			}
-
-			country_leader={
-				ideology=liberalism
-				expire="1965.1.1.1"
-				id=-1
-			}
-			
-			advisor={
-				slot = political_advisor
-				idea_token = RAJ_mahatma_mohandas_gandhi
-				allowed = {
-					original_tag = RAJ
-				}
-				visible = {
-					NOT = { has_completed_focus = RAJ_incorporation_of_the_east_india_company }
-					has_completed_focus = RAJ_mahatma
-				}
-				available = {
-					has_completed_focus = RAJ_mahatma
-				}
-				traits = {
-					independence_activist 
-				}
-			}	
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
 		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_mahatma_mohandas_gandhi
+			allowed = {
+				original_tag = RAJ
+			}
+			available = {
+				has_completed_focus = RAJ_mahatma
+			}
+			traits = {
+				independence_activist 
+			}
+		}	
 	}
 
 	RAJ_subhas_chanda_bose = {
-		instance = {
-			allowed = { NOT = { has_dlc = "Graveyard of Empires" } }
-			name = RAJ_subhas_chanda_bose
-			portraits = {
-				army = {
-					small = "GFX_idea_RAJ_subhas_chanda_bose" #small="GFX_idea_generic_political_advisor_india_1"
-				}
-				civilian = {
-					large = "GFX_RAJ_subhas_chandra_bose" #Can become country leader (Communism -> Stalinism) (Fascism -> Nazism)
-				}
+		name = RAJ_subhas_chanda_bose
+		portraits = {
+			army = {
+				small = GFX_portrait_RAJ_subhas_chandra_bose_military_small #small="GFX_idea_generic_political_advisor_india_1"
 			}
-			advisor = {
-				slot = political_advisor
-				idea_token = RAJ_subhas_chanda_bose
-				allowed = {
-					original_tag = RAJ
-				}
-				available = {
-					if = {
-						limit = {
-							has_dlc = "Together for Victory"
-						}
-						has_completed_focus = RAJ_all_india_forward_bloc 
-					}
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-				}
-				traits = {
-					fascist_demagogue 
-				}
-
-				ai_will_do = {
-					factor = 0.000
-				}
+			civilian ={
+				large = GFX_portrait_RAJ_subhas_chandra_bose #Can become country leader (Communism -> Stalinism) (Fascism -> Nazism) Neutrality -> Centrism)
+				small = GFX_portrait_RAJ_subhas_chandra_bose_civilian_small
 			}
 		}
-
-		instance = {
-			allowed = { has_dlc = "Graveyard of Empires" } 
-			name = RAJ_subhas_chanda_bose
-		
-
-			portraits = {
-				army = {
-					small = GFX_portrait_RAJ_subhas_chandra_bose_military_small #small="GFX_idea_generic_political_advisor_india_1"
-				}
-				civilian ={
-					large = GFX_portrait_RAJ_subhas_chandra_bose #Can become country leader (Communism -> Stalinism) (Fascism -> Nazism) (Neutrality -> Centrism)
-					small = GFX_portrait_RAJ_subhas_chandra_bose_civilian_small
-				}
+		corps_commander = { 
+			traits = { media_personality harsh_leader inspirational_leader politically_connected }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {  
+				always = no
 			}
-
-			corps_commander = { 
-				traits = { media_personality harsh_leader inspirational_leader politically_connected }
-				skill = 2
-				attack_skill = 3
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 2
-				visible = {  
-					has_completed_focus = RAJ_forward_bloc 
-					NOT = { has_country_flag = has_arrested_bose }
-				}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = RAJ_subhas_chanda_bose
+			allowed = {
+				original_tag = RAJ
 			}
-			advisor = {
-				slot = political_advisor
-				idea_token = RAJ_subhas_chanda_bose
-				allowed = {
-					original_tag = RAJ
-				}
-				available = {
-					ROOT = { 
-						has_completed_focus = RAJ_forward_bloc 
-						NOT = { has_country_flag = has_arrested_bose }
-					}
-				}
-
-				visible = {  
-					has_completed_focus = RAJ_forward_bloc 
-					NOT = { has_country_flag = has_arrested_bose }
-				}
-				traits = {
-					pragmatic_authoritarian 
-				}
-
-				ai_will_do = {
-					factor = 0.000
-				}
+			available = {
+				always = no
 			}
-
-
+			visible = {  
+				always = no
+			}
+			traits = {
+				pragmatic_authoritarian 
+			}
+			ai_will_do = {
+				factor = 0.000
+			}
 		}
 	}
 
@@ -170,35 +84,13 @@ characters={
 
 	RAJ_lord_linlithgow = {
 		instance = {
-			allowed = { NOT = { has_dlc = "Graveyard of Empires" } }
-
 			name = RAJ_lord_linlithgow
 			portraits = {
 				civilian = {
 					large=  GFX_portrait_RAJ_lord_linlithgow
 				}
 			}
-			
-			country_leader = {
-				ideology = despotism
-				expire = "1965.1.1.1"
-				id = -1
-			}
-
 		}
-
-		instance = {
-			allowed = { has_dlc = "Graveyard of Empires" } 
-			
-			name = RAJ_lord_linlithgow
-			portraits = {
-				civilian = {
-					large=  GFX_portrait_RAJ_lord_linlithgow
-				}
-			}
-			
-		}
-
 	}
 
 	RAJ_v_d_savarkar={
@@ -274,31 +166,12 @@ characters={
 	}
 
 	RAJ_b_p_sitaramayya={
-		instance = {
-			allowed = { NOT = { has_dlc = "Graveyard of Empires" } }
-			name=RAJ_b_p_sitaramayya
-			portraits={
-				civilian={
-					large="GFX_RAJ_pattabhi_sitaramayya"
-				}
-			}
-			country_leader={
-				ideology=socialism
-				expire="1965.1.1.1"
-				id=-1
+		name=RAJ_b_p_sitaramayya
+		portraits={
+			civilian={
+				large="GFX_RAJ_pattabhi_sitaramayya"
 			}
 		}
-
-		instance = {
-			allowed = { has_dlc = "Graveyard of Empires" }
-			name=RAJ_b_p_sitaramayya
-			portraits={
-				civilian={
-					large="GFX_RAJ_pattabhi_sitaramayya"
-				}
-			}
-		}
-
 	}
 
 	RAJ_noel_beresfordpeirse={
@@ -605,10 +478,6 @@ characters={
 			available = { has_completed_focus = RAJ_chindits_dlc }
 			traits = {
 				special_operations_specialist 
-			}
-
-			visible = {
-				has_completed_focus = RAJ_chindits_dlc
 			}
 
 			ai_will_do = {
