@@ -126,6 +126,17 @@ recruit_character = RAJ_kodandera_madappa_cariappa
 recruit_character = RAJ_kodandera_subayya_thimayya
 recruit_character = RAJ_jayanto_nath_chaudhuri
 
+recruit_character = RAJ_mir_osman_ali_khan
+recruit_character = RAJ_chithira_thirunal_balarma_varma
+recruit_character = RAJ_ahmad_yar_khan
+recruit_character = RAJ_huseyn_shaheed_suhrawardy
+recruit_character = RAJ_maharaja_hari_singh
+recruit_character = RAJ_bodh_chandra_singh
+recruit_character = RAJ_umed_singh
+recruit_character = RAJ_pratap_singh_rao_gaekwad
+recruit_character = RAJ_maharaja_jayachamarajendra_wadiyar
+
+
 set_variable = { RAJ_agrarian_society_increment = 0.05 }
 set_variable = { RAJ_war_support_increased = 0 }
 set_variable = { RAJ_hindu_mahasabha_released = 0.04 }
