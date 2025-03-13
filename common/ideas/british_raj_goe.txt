@@ -1675,78 +1675,6 @@ ideas = {
 			}
 		}
 
-		idea_RAJ_bose_submarine = {
-			picture = generic_sea_focused_navy
-			allowed = {
-				original_tag = RAJ
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-
-			on_add = {
-				add_doctrine_cost_reduction = {
-					cost_reduction = 0.1
-					uses = 1
-					category = ss_tech
-				}
-			}
-			cancel = {
-				has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
-			}
-
-			on_remove = {
-				if = {
-					limit = {
-						NOT = {
-							has_idea = idea_RAJ_bose_jap
-							has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom 
-						}
-					}
-					add_ideas = idea_RAJ_bose_jap
-				}
-			}
-
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = 0.001
-				resistance_damage_to_garrison = -1
-				experience_gain_navy = 0.01
-			}
-		}
-
-		idea_RAJ_bose_jap = {
-			picture = jap_zaibatsu_ally
-			allowed = {
-				original_tag = RAJ
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-
-			cancel = {
-				has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
-			}
-			on_add = {
-				add_doctrine_cost_reduction = {
-					cost_reduction = 0.4
-					uses = 1
-					category = cat_grand_battle_plan
-				}
-			}
-
-			cancel = {
-				has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
-			}
-
-			removal_cost = -1
-			modifier = {
-				fascism_drift = 0.03
-				experience_gain_army = 0.1
-
-			}
-		}
-
 		idea_RAJ_booming_industry = {
 			picture = generic_exploit_mines
 			allowed = {
@@ -2595,33 +2523,6 @@ ideas = {
 
 
 	industrial_concern = {
-		idea_RAJ_azad_hind_bank = { 
-			name = idea_RAJ_azad_hind_bank
-			picture = tur_balkan_central_bank_wealthy_greece
-			allowed = {
-				has_dlc = "Graveyard of Empires"
-				original_tag = RAJ
-			}
-			available = {
-				has_completed_focus = RAJ_azad_hind_dlc_bank
-			}
-			visible = {
-				
-			}
-			cost = 100
-			removal_cost = 10
-			research_bonus = {
-			}
-			traits = {  } 
-			modifier = {
-				production_speed_arms_factory_factor = 0.1
-				war_support_factor = 0.05	
-			}
-
-			research_bonus = {
-				industry = 0.15
-			}
-		}
 
 		idea_RAJ_the_reserve_bank_of_india = { 
 			picture = raj_reserve_bank_of_india
