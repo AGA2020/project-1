@@ -27,6 +27,14 @@ characters={
 			traits = { CAN_canadian_fuhrer }
 			id=-1
 		}
+		corps_commander={
+			traits = { trait_reckless media_personality }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+		}
 	}
 
 	CAN_tim_buck={
@@ -41,6 +49,14 @@ characters={
 			expire="1965.1.1.1"
 			traits = { veteran_communist }
 			id=-1
+		}
+		corps_commander={
+			traits = { inflexible_strategist substance_abuser }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
 		}
 	}
 
