@@ -40,7 +40,6 @@ focus_tree = {
 	focus = {
 		id = BRA_tribunal_de_seguranca_nacional
 		icon = GFX_focus_BRA_tribunal
-		#prerequisite = { focus = }
 		x = 0
 		y = 0
 		#relative_position_id =
@@ -48,8 +47,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 10
-		}
-		available = {
 		}
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
@@ -84,14 +81,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 15
 		}
-		available = {
-			NOT = {
-				OR = {
-					has_completed_focus = BRA_estado_novo
-				}
-			}
-		}
-
 		search_filters = { }
 
 		completion_reward = {
@@ -116,9 +105,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
@@ -203,11 +189,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_estado_novo
 		cost = 10
-		available = {
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
-
 		completion_reward = {
 			custom_effect_tooltip = BRA_modify_estado_novo_ns_intro
 			add_to_variable = { BRA_estado_novo_neutrality_factor = 0.1 tooltip = neutrality_drift_factor_tt }
@@ -231,7 +213,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			#add_ideas = GER_autarky_idea
 			IF = {
 				limit = { has_dynamic_modifier = { modifier = BRA_estado_novo_modifier } }
 				custom_effect_tooltip = BRA_modify_estado_novo_ns_intro
@@ -327,9 +308,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_autarky
 		cost = 5
-		available = {
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
@@ -348,27 +326,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
-
 		completion_reward = {
-		
-			IF = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				#create_intelligence_agency = yes
-				create_intelligence_agency = { 
-					name = "Departamento de Ordem"
-					icon = GFX_intelligence_agency_logo_BRA_neutrality
-				}
-				upgrade_intelligence_agency = upgrade_passive_defense 
+			create_intelligence_agency = { 
+				name = "Departamento de Ordem"
+				icon = GFX_intelligence_agency_logo_BRA_neutrality
 			}
-			ELSE = {
-				add_ideas = BRA_departamento_de_political_e_social_no_lar
-			}
+			upgrade_intelligence_agency = upgrade_passive_defense 
 		}
 	}
 
@@ -383,9 +347,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-		available = {
-		}
-
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
@@ -489,9 +450,7 @@ focus_tree = {
 		available = {
 			num_of_factories > 25
 		}
-
 		search_filters = { FOCUS_FILTER_HISTORICAL }
-
 		completion_reward = {
 			add_ideas = BRA_psad_idea
 		}
@@ -511,7 +470,6 @@ focus_tree = {
 		available = {
 			has_civil_war = no
 		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
@@ -542,27 +500,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = BRA_modify_estado_novo_ns_intro
 			add_to_variable = { BRA_estado_novo_recruitable_population_factor = -0.02 tooltip = conscription_factor_tt}
-			random_core_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_owned_and_controlled_by = ROOT
-					NOT = {
-						OR = {
-							state = 961
-							state = 962
-							state = 963
-							state = 964
-							state = 965
-							state = 966
-							state = 967
-							state = 968
-						}
-					}
-				}
+			937 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -573,25 +511,6 @@ focus_tree = {
 		}
 	}
 
-	#focus = {
-	#	id = BRA_placeholder_1
-	#	#icon = 
-	#	prerequisite = { focus = BRA_decree_no_37 focus = BRA_federal_employment_plan }
-	#	x = 1
-	#	y = 1
-	#	relative_position_id = BRA_decree_no_37
-	#	cost = 10
-	#	available = {
-	#	}
-	#	bypass = {
-	#		# Place holder just to keep the tree playable for now
-	#		original_tag = BRA
-	#	}
-	#	search_filters = { }
-	#	completion_reward = {
-	#	}
-	#}
-
 	focus = {
 		id = BRA_reward_army_loyalty
 		icon = GFX_goal_generic_military_sphere
@@ -600,11 +519,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = BRA_decree_no_37
 		cost = 10
-		available = {
-		}
-
-		search_filters = { }
-
 		completion_reward = {
 			add_timed_idea = {
 				idea = BRA_army_reward
@@ -624,9 +538,7 @@ focus_tree = {
 		available = {
 			has_stability > 0.7
 		}
-
 		search_filters = { FOCUS_FILTER_HISTORICAL }
-
 		completion_reward = {
 			#retire_country_leader = yes
 			BRA_eurico_gaspar_dutra = {
@@ -674,28 +586,6 @@ focus_tree = {
 		}
 	}
 
-
-	#focus = {
-	#	id = BRA_internal_revolution
-	#	#icon = 
-	#	prerequisite = { focus = BRA_brazil_integral }
-	#	x = 1
-	#	y = 1
-	#	relative_position_id = BRA_brazil_integral
-	#	cost = 10
-	#	ai_will_do = {
-	#		factor = 10
-	#	}
-	#	available = {
-	#	}
-#
-	#	search_filters = { }
-#
-	#	completion_reward = {
-	#		
-	#	}
-	#}
-
 	##################################
 
 	##### Industrial Branch ##### 
@@ -703,15 +593,12 @@ focus_tree = {
 	focus = {
 		id = BRA_coffee_crisis_aftermath
 		icon = GFX_focus_BRA_coffee_crisis
-		#prerequisite = { focus =  }
 		x = 9
 		y = 0
 		relative_position_id = BRA_tribunal_de_seguranca_nacional
 		cost = 5
 		ai_will_do = {
 			factor = 150
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -746,8 +633,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL}
 
@@ -770,8 +655,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 10
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -804,8 +687,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_radio_nacional
 		cost = 10
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -845,8 +726,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
@@ -878,31 +757,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 18
 		}
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			random_core_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					is_owned_and_controlled_by = ROOT
-					NOT = {
-						state = 961
-						state = 962
-						state = 963
-						state = 964
-						state = 965
-						state = 966
-						state = 967
-						state = 968
-					}
-				}
+			501 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -930,31 +789,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 16
 		}
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			random_core_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_owned_and_controlled_by = ROOT
-					NOT = {
-						state = 961
-						state = 962
-						state = 963
-						state = 964
-						state = 965
-						state = 966
-						state = 967
-						state = 968
-					}
-				}
+			936 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -976,8 +815,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 15
 		}
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -988,25 +825,7 @@ focus_tree = {
 				tooltip = industrial_capacity_factory_tt
 			}	
 			BRA_remove_economy_modifier = yes
-			random_core_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_owned_and_controlled_by = ROOT
-					NOT = {
-						state = 961
-						state = 962
-						state = 963
-						state = 964
-						state = 965
-						state = 966
-						state = 967
-						state = 968
-					}
-				}
+			500 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -1025,8 +844,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_promote_resource_extraction
 		cost = 5
-		available = {
-		}
 
 		ai_will_do = {
 			factor = 10
@@ -1047,9 +864,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_radio_nacional
 		cost = 5
-		available = {
-
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
@@ -1069,10 +883,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-		available = {
-		}
-
-		search_filters = { }
 
 		completion_reward = {
 			set_country_flag = JUNO_promote_immigration_flag
@@ -1090,8 +900,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 10
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1126,25 +934,20 @@ focus_tree = {
 				idea = BRA_rail_investment
 				days = 730
 			}
-			IF = {
-				limit = {
-					495 = { is_owned_and_controlled_by = ROOT }
-				}
-				495 = {
-					add_building_construction = {
-						type = supply_node
-						province = 1979
-						level = 1
-						instant_build = yes
-					}
-				}
-				build_railway = {
+			495 = {
+				add_building_construction = {
+					type = supply_node
+					province = 1979
 					level = 1
-					build_only_on_allied = yes
-					fallback = yes
-					start_province = 8189
-					target_province = 1979
+					instant_build = yes
 				}
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				start_province = 8189
+				target_province = 1979
 			}
 		}
 	}
@@ -1159,11 +962,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 19
-		}
-		available = {
-			499 = {
-				is_owned_and_controlled_by = ROOT
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -1202,19 +1000,27 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_companhia_siderurgica_nacional
 		cost = 10
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			every_owned_state = {
-				limit = {
-					OR = {
-						state = 497
-						state = 495						
-					}	
+			497 = {
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = rubber
+					amount = 10
 				}
+				add_to_variable = {
+					BRA_state_development_local_building_slots_factor = 0.2
+					tooltip = MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt
+				}
+				add_to_variable = {
+					BRA_state_development_state_resources_factor = 0.2
+					tooltip = MODIFIER_STATE_RESOURCES_FACTOR_tt
+				}
+				set_state_flag = BRA_resource_boost
+			}
+			495 = {
 				add_extra_state_shared_building_slots = 1
 				add_resource = {
 					type = rubber
@@ -1246,9 +1052,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 8
 		}
-		available = {
-		}
-
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
@@ -1289,8 +1092,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 9
 		}
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1329,12 +1130,9 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = BRA_invest_in_road_infrastructure
-		mutually_exclusive = { focus = BRA_expand_fordlandia }
 		cost = 10
 		ai_will_do = {
 			factor = 0
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -1374,23 +1172,9 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = BRA_invest_in_road_infrastructure
-		mutually_exclusive = { focus = BRA_fabrica_nacional_de_motores }
 		cost = 10
 		ai_will_do = {
 			factor = 4
-		}
-		available = {
-			USA = {
-				NOT = { 
-					has_government = communism
-				}
-			}
-			NOT = {
-				#OR = {
-					has_government = communism
-					has_war_with = USA
-				#}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1445,9 +1229,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 4
 		}
-		available = {
-			#num_of_factories > 50
-		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			add_research_slot = 1
@@ -1465,8 +1246,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 7
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1498,10 +1277,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRA_banco_do_brasil
-		#mutually_exclusive = { focus = BRA_centralize_development }
 		cost = 5
-		available = {
-		}
 		ai_will_do = {
 			factor = 5
 		}
@@ -1546,12 +1322,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRA_banco_do_brasil
-		#mutually_exclusive = { focus = BRA_federal_development }
 		cost = 5
 		ai_will_do = {
 			factor = 4
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -1585,12 +1358,6 @@ focus_tree = {
 			hidden_effect = {
 				set_province_name = { id = 8140 name = BRA_new_capital }
 			}
-			#500 = {
-			#	add_victory_points = {
-			#		province = 10980
-			#		value = -5
-			#	}
-			#}
 		}
 	}
 
@@ -1602,8 +1369,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = BRA_banco_do_brasil
 		cost = 5
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1689,27 +1454,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			random_core_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0 
-						include_locked = yes
-					}
-					is_owned_and_controlled_by = ROOT
-					NOT = {
-						OR = {
-							state = 961
-							state = 962
-							state = 963
-							state = 964
-							state = 965
-							state = 966
-							state = 967
-							state = 968
-						}
-					}
-				}
+			501 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -1717,28 +1462,7 @@ focus_tree = {
 					instant_build = yes
 				} 
 			}
-			random_core_state = {
-				limit = {
-					free_building_slots = {
-						building = dockyard
-						size > 0 
-						include_locked = yes
-					}
-					is_owned_and_controlled_by = ROOT
-					is_coastal = yes
-					NOT = {
-						OR = {
-							state = 961
-							state = 962
-							state = 963
-							state = 964
-							state = 965
-							state = 966
-							state = 967
-							state = 968
-						}
-					}
-				}
+			497 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -1755,68 +1479,6 @@ focus_tree = {
 		}
 	}
 
-	#focus = {
-	#	id = BRA_rio_conference
-	#	#icon = 
-	#	prerequisite = { 
-	#		focus = BRA_reach_out_to_our_neighbors 
-	#		#focus = BRA_the_international_crisis
-	#	}
-	#	x = 0
-	#	y = 1
-	#	relative_position_id = BRA_reach_out_to_our_neighbors
-	#	cost = 5
-	#	ai_will_do = {
-	#		factor = 5
-	#	}
-	#	available = {
-	#	}
-	#	search_filters = { }
-	#	completion_reward = {
-	#		every_other_country	= {
-	#			limit = {
-	#				capital_scope = {
-	#					is_on_continent = south_america
-	#					is_core_of = PREV
-	#				}
-	#				NOT = {
-	#					has_war_with = FROM
-	#				}
-	#			}
-	#			country_event = {
-	#				id = JUNO_brazil_events.80
-	#				hours = 1
-	#			}
-	#		}
-	#	}
-	#}
-
-	#focus = {
-	#	id = BRA_organization_of_american_unity
-	#	#icon = 
-	#	prerequisite = { 
-	#		focus = BRA_cooperation_in_the_americas 
-	#		#focus = BRA_the_international_crisis
-	#	}
-	#	x = 6
-	#	y = 1
-	#	relative_position_id = BRA_cooperation_in_the_americas
-	#	cost = 5
-	#	ai_will_do = {
-	#		factor = 5
-	#	}
-	#	available = {
-	#		is_in_faction = no
-	#	}
-	#	search_filters = { }
-	#	completion_reward = {
-	#		custom_effect_tooltip = BRA_organization_of_american_unity_tt
-	#		custom_effect_tooltip = BRA_org_american_unity_warning_tt
-	#		add_ideas = SMB_organization_of_american_states_member
-	#	}
-	#}
-
-
 	focus = {
 		id = BRA_washington_accords
 		icon = GFX_focus_chi_mission_to_the_us
@@ -1830,15 +1492,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 20
 		}
-		available = {	
-			any_other_country = {
-				original_tag = USA
-				has_war_with_major = yes
-				has_government = democratic
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
+		available = {
 			NOT = {
 				is_in_faction = yes
 			}
@@ -1852,19 +1506,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					original_tag = USA
-					has_war_with_major = yes
-					has_government = democratic
-				}
-				country_event = {
-					id = JUNO_brazil_events.15
-					hours = 1
+			USA = {
+				add_opinion_modifier = {
+					modifier = BRA_accepted_washington_accords
+					target = BRA
 				}
 			}
-			custom_effect_tooltip = BRA_washington_accords_tt
-			event_option_tooltip = JUNO_brazil_events.16.a
+			add_timed_idea = {
+				idea = BRA_washington_accords_idea
+				days = 730
+			}
 		}
 	}
 
@@ -1880,27 +1531,13 @@ focus_tree = {
 		
 		cost = 10
 		available = {
-			any_country = {
-				original_tag = GER
-				NOT = {
-					has_government = BRA
-				}
-			}
 			has_intelligence_agency = yes
 		}
 
 		search_filters = { }
 
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				add_ideas = BRA_disrupt_bolivar_LaR
-			}
-			ELSE = {
-				add_ideas = BRA_disrupt_bolivar_no_lar
-			}
+			add_ideas = BRA_disrupt_bolivar_LaR
 			GER = {
 				country_event = {
 					id = JUNO_brazil_events.13
@@ -1984,14 +1621,6 @@ focus_tree = {
 			factor = 15
 		}
 		available = {
-
-			USA = {
-				exists = yes 
-			}
-
-			NOT = {
-				has_war_with = USA
-			}
 
 			USA = {
 				has_war = yes
@@ -2330,8 +1959,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
@@ -2339,28 +1966,6 @@ focus_tree = {
 			add_ideas = BRA_federal_republic
 		}
 	}
-
-
-	#focus = {
-	#	id = BRA_democratic_socialism
-	#	#icon = 
-	#	x = -4
-	#	y = 4
-	#	relative_position_id = BRA_greater_federalism
-	#	prerequisite = { focus = BRA_end_military_interference }
-	#	cost = 10
-	#	ai_will_do = {
-	#		factor = 5
-	#	}
-	#	available = {
-	#	}
-#
-	#	search_filters = { FOCUS_FILTER_POLITICAL }
-#
-	#	completion_reward = {
-	#		custom_effect_tooltip = "TODO: Unlock some socialist advisors"
-	#	}
-	#}
 
 	focus = {
 		id = BRA_continue_centralization
@@ -2373,8 +1978,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 10
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -2395,8 +1998,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
 
@@ -2416,8 +2017,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 10
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2499,8 +2098,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 15
 		}
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
@@ -2516,17 +2113,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRA_court_the_military
 		prerequisite = { 
-			focus = BRA_court_the_military 
-		#	focus = BRA_constitutional_monarchy
+			focus = BRA_court_the_military
 		}
 		#mutually_exclusive = { focus = BRA_nationalize_the_banks }
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-		}
-
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
@@ -2544,8 +2137,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 10
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -2566,8 +2157,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 15
 		}
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
@@ -2586,8 +2175,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 20
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -2654,8 +2241,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER}
 
@@ -2700,9 +2285,6 @@ focus_tree = {
 		relative_position_id = BRA_implement_a_national_guard
 		prerequisite = { focus = BRA_implement_a_national_guard }
 		cost = 10
-		available = {
-			#neutrality < 0.21
-		}
 		cancel_if_invalid = no
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
@@ -2711,27 +2293,6 @@ focus_tree = {
 			remove_dynamic_modifier = {
 				modifier = BRA_weak_government
 			}
-			#hidden_effect = {
-			#	set_temp_variable = {
-			#		var = ban_ideology_var
-			#		value = party_popularity@neutrality
-			#	}
-			#	multiply_temp_variable = {
-			#		var = ban_ideology_var
-			#		value = -1
-			#	}
-			#	add_popularity = {
-			#		ideology = neutrality
-			#		popularity = ban_ideology_var
-			#	}
-			#	multiply_temp_variable = {
-			#		var = ban_ideology_var
-			#		value = 0.66
-			#	}
-			#	set_country_flag = banned_neutrality_flag
-			#}
-			#custom_effect_tooltip = BRA_end_military_interference_tt
-			#add_stability = ban_ideology_var
 		}
 	}
 
@@ -2743,8 +2304,6 @@ focus_tree = {
 		relative_position_id = BRA_end_military_interference
 		prerequisite = { focus = BRA_end_military_interference }
 		cost = 10
-		available = {
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER}
 
@@ -2855,9 +2414,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-		#available = {
-		#	has_idea = BRA_separatism_idea
-		#}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2876,8 +2432,6 @@ focus_tree = {
 		cost = 5
 		ai_will_do = {
 			factor = 5
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2930,9 +2484,6 @@ focus_tree = {
 			set_rule = {
 				can_send_volunteers = yes
 			}
-			#set_rule = {
-			#	can_join_factions = yes 
-			#}
 		}
 	}
 	focus = {
@@ -2947,10 +2498,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-		available = {
-		}
-
-		search_filters = { }
 
 		completion_reward = {
 			add_country_leader_trait = { 
@@ -2973,8 +2520,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 10
-		}
-		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -3023,46 +2568,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-		available = {
-		}
-
-		search_filters = { }
 
 		completion_reward = {
-			random_core_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_owned_and_controlled_by = ROOT
-					NOT = { 
-						OR = {
-							has_dynamic_modifier = {
-								modifier = BRA_neglected_state_dynamic_modifier
-							}
-							state = 961
-							state = 962
-							state = 963
-							state = 964
-							state = 965
-							state = 966
-							state = 967
-							state = 968
-						}
-						OR = {
-							state = 961
-							state = 962
-							state = 963
-							state = 964
-							state = 965
-							state = 966
-							state = 967
-							state = 968
-						}
-					}
-				}
+			936 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -3084,8 +2592,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 10
-		}
-		available = {
 		}
 	
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -3160,8 +2666,6 @@ focus_tree = {
 		prerequisite = { focus = BRA_promote_resource_extraction focus = BRA_companhia_siderurgica_nacional }
 		relative_position_id = BRA_promote_resource_extraction
 		cost = 5
-		available = {
-		}
 	
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 	
