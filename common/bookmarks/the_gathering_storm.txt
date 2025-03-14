@@ -172,7 +172,6 @@ bookmarks = {
 			}
 			focuses = {
 				RAJ_provincial_elections
-				RAJ_indian_gurkhas
 			}
 		}
 
