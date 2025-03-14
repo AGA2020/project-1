@@ -48,7 +48,7 @@ characters={
 		name=CAN_j_s_woodsworth
 		portraits={
 			civilian={
-				large=GFX_portrait_CAN_j_s_woodsworth
+				large=GFX_portrait_CAN_j_s_woodsworth #portraiti generic
 			}
 		}
 		country_leader={
@@ -68,6 +68,14 @@ characters={
 				#small = GFX_portrait_AFA_mohamed_yayyo_small
 			}
 			
+		}
+		corps_commander={
+			traits = { trait_cautious cavalry_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
 		}
 		
 	}
