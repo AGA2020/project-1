@@ -1325,25 +1325,8 @@ characters={
 				original_tag = RAJ
 			}
 			available = {
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Graveyard of Empires"
-						}
-					}
-					has_completed_focus = RAJ_indian_national_congress 
-				}
-				else = {
-					has_completed_focus = RAJ_a_congress_resurgent
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				has_completed_focus = RAJ_a_congress_resurgent
+				NOT = { has_autonomy_state = autonomy_supervised_state }
 			}
 			traits = {
 				democratic_reformer 
@@ -1372,29 +1355,11 @@ characters={
 			allowed = {
 				original_tag = RAJ
 			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Together for Victory"
-					}
-					has_completed_focus = RAJ_all_india_forward_bloc 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+			visible = {
+				always = no
 			}
 			traits = {
 				communist_revolutionary 
-			}
-			do_effect = {
-				NOT = {
-					has_government = communism 
-				}
 			}
 			ai_will_do = {
 				factor = 0.000
