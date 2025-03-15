@@ -8509,7 +8509,13 @@ focus_tree = {
 
 		completion_reward = {
 			annex_country = { target = ALB }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_named_threat = { threat = 2 name = ITA_albania_war_goal }
+			custom_effect_tooltip = generic_skip_one_line_tt
+			ALB = {
+				ALB_xhemal_aranitasi = { set_nationality = ITA }
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			# The king is an idea
 			if = { #TODO_Manu: Handle this via News Event?
 				limit = {
