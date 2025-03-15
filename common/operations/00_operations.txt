@@ -1589,7 +1589,7 @@ operation_collaboration_government = { ### 10 2/55
 	visible = {
 		network_strength = {
 			target = FROM
-			value > 25
+			value > 0
 		}
 	}
 
