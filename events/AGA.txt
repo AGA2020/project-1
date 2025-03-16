@@ -1,5 +1,18 @@
 ﻿add_namespace = aga
 
+
+country_event = {
+	id = aga.25
+	title = aga.25.t
+	desc = aga.25.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = aga.25.a
+	}
+}
 news_event = {
 	id = aga.1
 	title = aga.1.t

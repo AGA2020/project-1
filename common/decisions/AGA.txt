@@ -107,6 +107,46 @@ operations = {
    #         }
    #     }
    # }
+   autocollab = {
+        # icon = generic_operation
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        allowed = {
+            tag = ITA
+        }
+        available = {
+                               
+        }
+        visible = {
+            NOT = { has_country_flag = colabwarning_enabled }
+        }
+        complete_effect = {
+            set_country_flag = colabwarning_enabled
+        }
+    }
+   autocollab_disabler = {
+        # icon = generic_operation
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        allowed = {
+            tag = ITA
+        }
+        available = {
+                               
+        }
+        visible = {
+            has_country_flag = colabwarning_enabled
+        }
+        complete_effect = {
+            clr_country_flag = colabwarning_enabled
+        }
+    }
    help_rp_usa = {
         # icon = generic_operation
         fire_only_once = no

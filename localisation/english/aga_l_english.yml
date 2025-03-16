@@ -1,4 +1,9 @@
 ﻿l_english:
+  autocollab_disabler:0 "Disable Collab Warning"
+  autocollab:0 "Enable Collab Warning"
+  aga.25.t:0 "Yugoslavia Collab Ready"
+  aga.25.d:0 "Yugoslavia Collab Ready"
+  aga.25.a:0 "Yugoslavia Collab Ready"
   imperial_japanese_army:0 "Imperial Japanese Army"
   imperial_japanese_navy:0 "Imperial Japanese Navy"
   brave:0 "Brave"

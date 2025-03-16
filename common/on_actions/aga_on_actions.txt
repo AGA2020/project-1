@@ -57,6 +57,9 @@ on_actions = {
 					}
 				}
 			}
+			ITA = {
+				remove_country_flag = aga_25_cooldown
+			}
 		}
 	}
 	on_capitulation = {
@@ -94,6 +97,22 @@ on_actions = {
 	}
 	on_weekly = {
 		effect = {
+			if = {
+				limit = {
+					ITA = {
+						network_strength = {
+						    target = YUG
+						    value > 49
+						}
+						has_country_flag = colabwarning_enabled
+						NOT = { has_country_flag = aga_25_cooldown }
+					}
+				}
+				ITA = {
+					country_event = { id = aga.25 }
+					set_country_flag = aga_25_cooldown
+				}
+			}
 			if = {
 			    limit = {
 			        any_country = { axis = yes has_tech = survivability_studies }
