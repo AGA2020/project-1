@@ -1390,9 +1390,7 @@ characters = {
 				
 			}
 			available = {
-				OR = {
-					has_completed_focus = GER_the_austrian_question
-				}
+				always = no
 				
 			}
 			traits = {
