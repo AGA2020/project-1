@@ -112,6 +112,7 @@ on_actions = {
 							    target = YUG
 							    value > 49
 							}
+							NOT = { has_country_flag = yugo_colab_warning }
 						}
 						ITA = {
 							network_strength = {

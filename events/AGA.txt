@@ -11,6 +11,17 @@ country_event = {
 
 	option = {
 		name = aga.25.a
+		if = {
+			limit = {
+				ITA = {
+					network_strength = {
+					    target = YUG
+					    value > 49
+					}
+				}
+			}
+			set_country_flag = yugo_colab_warning
+		}
 	}
 }
 news_event = {
