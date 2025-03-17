@@ -57,9 +57,6 @@ on_actions = {
 					}
 				}
 			}
-			ITA = {
-				remove_country_flag = aga_25_cooldown
-			}
 		}
 	}
 	on_capitulation = {
@@ -95,15 +92,35 @@ on_actions = {
 			}
 		}
 	}
+	on_operation_completed = {			
+		effect = {
+			if = {
+				limit = {
+					ITA = { has_country_flag = aga_25_cooldown }
+				}
+				ITA = { clr_country_flag = aga_25_cooldown }
+			}
+		}
+	}
 	on_weekly = {
 		effect = {
 			if = {
 				limit = {
-					ITA = {
-						network_strength = {
-						    target = YUG
-						    value > 49
+					OR = {
+						ITA = {
+							network_strength = {
+							    target = YUG
+							    value > 49
+							}
 						}
+						ITA = {
+							network_strength = {
+							    target = GRE
+							    value > 49
+							}
+						}
+					}
+					ITA = {
 						has_country_flag = colabwarning_enabled
 						NOT = { has_country_flag = aga_25_cooldown }
 					}
