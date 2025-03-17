@@ -1283,10 +1283,6 @@ ideas = {
 				consumer_goods_factor = 0.001
 				resistance_damage_to_garrison = -1
 			}
-
-			cancel = {
-				has_completed_focus = RAJ_give_me_blood_and_i_will_grant_you_freedom
-			}
 			on_remove = {
 				if = {
 					limit = {
