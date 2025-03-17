@@ -143,7 +143,6 @@ focus_tree = {
 		relative_position_id = ITA_ministry_of_italian_africa
 		cost = 5
 		available = {
-		has_country_flag = aga_25_cooldown
 			OR = {
 				any_controlled_state = {
 					is_core_of = ETH
