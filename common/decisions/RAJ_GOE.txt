@@ -71,9 +71,6 @@ RAJ_GOE_independence_movement = {
 	    		always = no
 	    	}
 	    }
-	    cancel_trigger = {
-	    	has_completed_focus = RAJ_go_into_hiding
-	    }
 	    #icon = mission_icon     # For GFX_decision_mission_icon
 	    is_good = no
 	    days_mission_timeout = 120
