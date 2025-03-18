@@ -18,9 +18,7 @@ RAJ_GOE_independence_movement = {
 	visible = {
 		OR = {
 			has_dynamic_modifier = { modifier = idea_RAJ_independence_movement }
-
 			has_completed_focus = RAJ_a_congress_resurgent	
-			has_completed_focus = RAJ_promote_violence_against_the_british
 		}
 	}
 
