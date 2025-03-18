@@ -23,6 +23,8 @@ add_ideas = {
 
 }
 
+set_country_flag = colabwarning_enabled
+
 set_power_balance = {	
 		id = JAP_interservice_rivalry	
 					

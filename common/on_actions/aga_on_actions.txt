@@ -100,6 +100,12 @@ on_actions = {
 				}
 				ITA = { clr_country_flag = aga_25_cooldown }
 			}
+			else_if = {
+				limit = {
+					JAP = { has_country_flag = aga_25_cooldown }
+				}
+				JAP = { clr_country_flag = aga_25_cooldown }
+			}	
 		}
 	}
 	on_weekly = {
@@ -131,6 +137,25 @@ on_actions = {
 					set_country_flag = aga_25_cooldown
 				}
 			}
+			else_if = {
+				limit = {
+					JAP = {
+						network_strength = {
+						    target = CHI
+						    value > 49
+						}
+						NOT = { has_country_flag = chi_colab_warning }
+					}
+					JAP = {
+						has_country_flag = colabwarning_enabled
+						NOT = { has_country_flag = aga_25_cooldown }
+					}
+				}
+				JAP = {
+					country_event = { id = aga.25 }
+					set_country_flag = aga_25_cooldown
+				}
+			}			
 			if = {
 			    limit = {
 			        any_country = { axis = yes has_tech = survivability_studies }
