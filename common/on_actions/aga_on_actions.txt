@@ -144,7 +144,6 @@ on_actions = {
 						    target = CHI
 						    value > 49
 						}
-						NOT = { has_country_flag = chi_colab_warning }
 					}
 					JAP = {
 						has_country_flag = colabwarning_enabled

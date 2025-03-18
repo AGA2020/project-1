@@ -22,17 +22,6 @@ country_event = {
 			}
 			set_country_flag = yugo_colab_warning
 		}
-		else_if = {
-			limit = {
-				JAP = {
-					network_strength = {
-					    target = CHI
-					    value > 49
-					}
-				}
-			}
-			set_country_flag = chi_colab_warning
-		}	
 	}
 }
 news_event = {
