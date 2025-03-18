@@ -115,7 +115,10 @@ operations = {
             factor = 0
         }
         allowed = {
-            tag = ITA
+            OR = {
+                tag = ITA
+                tag = JAP
+            }
         }
         available = {
                                
@@ -135,7 +138,10 @@ operations = {
             factor = 0
         }
         allowed = {
-            tag = ITA
+            OR = {
+                tag = ITA
+                tag = JAP
+            }
         }
         available = {
                                
