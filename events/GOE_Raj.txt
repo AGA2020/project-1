@@ -5038,13 +5038,6 @@ country_event = {
 	picture = GFX_report_event_indian_soldiers
 	option = {
 		name = GOE_RAJ_princely.1.a
-		HYD = {
-			RAJ_mir_osman_ali_khan = {
-				set_nationality = RAJ
-				set_character_flag = is_mughal_emperor
-			}
-			promote_character = RAJ_mir_osman_ali_khan
-		}	
 	}
 	option = {
 		name = GOE_RAJ_princely.1.b
