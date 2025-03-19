@@ -60,7 +60,6 @@ autonomy_state = {
 				has_completed_focus = RAJ_a_secular_state
 				has_completed_focus = RAJ_united_bengal
 				has_completed_focus = RAJ_eastern_pakistan
-				has_completed_focus = RAJ_red_in_the_shadows
 			}
 		}
 	}
