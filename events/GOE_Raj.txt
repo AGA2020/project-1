@@ -5067,13 +5067,6 @@ country_event = {
 	}
 	option = {
 		name = GOE_RAJ_princely.1.d
-		BAN = {
-			RAJ_huseyn_shaheed_suhrawardy = {
-				set_nationality = RAJ
-				set_character_flag = is_mughal_emperor
-			}
-			promote_character = RAJ_huseyn_shaheed_suhrawardy
-		}	
 	}
 }
 
@@ -5084,14 +5077,7 @@ country_event = {
 	is_triggered_only = yes
 	picture = GFX_report_event_indian_soldiers
 	option = {
-		name = GOE_RAJ_princely.2.a
-		BAN = {
-			RAJ_huseyn_shaheed_suhrawardy = {
-				set_nationality = RAJ
-				set_character_flag = is_mughal_emperor
-			}
-			promote_character = RAJ_huseyn_shaheed_suhrawardy
-		}	
+		name = GOE_RAJ_princely.2.a	
 	}
 	#option = {
 	#	name = GOE_RAJ_princely.2.b
