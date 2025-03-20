@@ -6517,10 +6517,6 @@ focus_tree = {
 
         cost = 5
 
-        available = {
-            is_in_faction_with = ENG
-        }
-
         mutually_exclusive = { focus = RAJ_found_scindia_shipyard_dlc }
 
         cancel_if_invalid = yes
@@ -6543,7 +6539,10 @@ focus_tree = {
                         fixed_ship_fire_control_system_slot=ship_fire_control_system_1
                     }
                 }
+                add_ideas = RAJ_british_naval_agreement
             }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            add_ideas = RAJ_british_naval_agreement
             custom_effect_tooltip = generic_skip_one_line_tt
             create_ship = {
                 type = ship_hull_cruiser_2
@@ -6616,10 +6615,6 @@ focus_tree = {
 
         cost = 5
 
-        available = {
-            has_idea = RAJ_british_naval_agreement
-        }
-
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
@@ -6629,6 +6624,22 @@ focus_tree = {
         completion_reward = {
             ENG = {
                 country_event = { id = GOE_RAJ_navy.4 days = 1 }
+            }
+            custom_effect_tooltip = if_they_accept_tt
+            effect_tooltip = { 
+                ENG = { 
+                    random_navy_leader = {
+                        limit = {
+                            skill < 4
+                        }
+                        set_nationality = RAJ
+                        set_character_flag = transfered_commander_raj_navy
+                    }
+                } 
+                RAJ = { 
+                    add_political_power = 200
+                    add_cic = 1500  
+                } 
             }
         }
     }
