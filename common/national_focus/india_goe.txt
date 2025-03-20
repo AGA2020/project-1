@@ -3185,28 +3185,27 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_INTERNATIONAL_TRADE}
 
         completion_reward = {
-            ENG = {
-                country_event = { id = GOE_RAJ_generals.7 days = 1 }
-            }
-            custom_effect_tooltip = if_they_accept_tt
-            effect_tooltip = {
-                RAJ = {
-                    add_equipment_to_stockpile = { 
-                        type = motorized_equipment_1
-                        amount = 1600
-                        producer = ENG
-                    }
-                    add_equipment_to_stockpile = { 
-                        type = train_equipment
-                        amount = 10
-                        producer = ENG
-                    }
-                    add_equipment_to_stockpile = { 
-                        type = support_equipment
-                        amount = 500
-                        producer = ENG
-                    }
+            RAJ = {
+                add_equipment_to_stockpile = { 
+                    type = motorized_equipment_1
+                    amount = 1600
+                    producer = ENG
                 }
+                add_equipment_to_stockpile = { 
+                    type = train_equipment
+                    amount = 10
+                    producer = ENG
+                }
+                add_equipment_to_stockpile = { 
+                    type = support_equipment
+                    amount = 500
+                    producer = ENG
+                }
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            ENG = {
+                add_political_power = 150
+                add_cic = 5000
             }
         }
     }
