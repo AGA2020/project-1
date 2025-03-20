@@ -5057,13 +5057,6 @@ country_event = {
 	}
 	option = {
 		name = GOE_RAJ_princely.1.c
-		KLT = {
-			RAJ_ahmad_yar_khan = {
-				set_nationality = RAJ
-				set_character_flag = is_mughal_emperor
-			}
-			promote_character = RAJ_ahmad_yar_khan
-		}	
 	}
 	option = {
 		name = GOE_RAJ_princely.1.d
