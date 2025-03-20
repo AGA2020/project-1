@@ -1991,58 +1991,19 @@ focus_tree = {
             if = {
                 limit = {
                     ENG = {
-                        is_faction_leader = yes
+                        NOT = { is_in_faction_with = RAJ }
                     }
                 }
-
                 ENG = {
-                    country_event = { id = generic.2 hours = 2 }
-                }
-            }
-            else_if = {
-                limit = {
-                    USA = {
-                        is_faction_leader = yes
-                    }
-                }
-
-                USA = {
-                    country_event = { id = generic.2 hours = 2 }
-                }
-            }
-
-            else_if = {
-                limit = {
-                    FRA = {
-                        is_faction_leader = yes
-                        has_government = democratic
-                    }
-                }
-
-                FRA = {
-                    country_event = { id = generic.2 hours = 2 }
-                }
-            }
-            else_if = {
-                limit = {
-                    any_other_country = {
-                        is_faction_leader = yes
-                        has_government = democratic
-                    }
-                }
-                random_other_country = {
-                    limit = {
-                        is_faction_leader = yes
-                        has_government = democratic
-                    }
-                    country_event = { id = generic.2 hours = 2 }   
+                    add_to_faction = RAJ
                 }
             }
             else = {
-                create_faction = "Indian-Prosperity-Sphere"
-            }
-            set_rule = { 
-                can_create_factions  = yes #
+                effect_tooltip = { 
+                    ENG = {
+                        add_to_faction = RAJ
+                    }
+                }
             }
         }
     }
