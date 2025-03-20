@@ -118,6 +118,7 @@ operations = {
             OR = {
                 tag = ITA
                 tag = JAP
+                tag = GER
             }
         }
         available = {
@@ -141,6 +142,7 @@ operations = {
             OR = {
                 tag = ITA
                 tag = JAP
+                tag = GER
             }
         }
         available = {

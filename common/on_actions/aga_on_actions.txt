@@ -105,6 +105,12 @@ on_actions = {
 					JAP = { has_country_flag = aga_25_cooldown }
 				}
 				JAP = { clr_country_flag = aga_25_cooldown }
+			}
+			else_if = {
+				limit = {
+					GER = { has_country_flag = aga_25_cooldown }
+				}
+				GER = { clr_country_flag = aga_25_cooldown }
 			}	
 		}
 	}
@@ -151,6 +157,24 @@ on_actions = {
 					}
 				}
 				JAP = {
+					country_event = { id = aga.25 }
+					set_country_flag = aga_25_cooldown
+				}
+			}
+			else_if = {
+				limit = {
+					GER = {
+						network_strength = {
+						    target = FRA
+						    value > 49
+						}
+					}
+					GER = {
+						has_country_flag = colabwarning_enabled
+						NOT = { has_country_flag = aga_25_cooldown }
+					}
+				}
+				GER = {
 					country_event = { id = aga.25 }
 					set_country_flag = aga_25_cooldown
 				}

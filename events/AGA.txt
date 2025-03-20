@@ -13,10 +13,13 @@ country_event = {
 		name = aga.25.a
 		if = {
 			limit = {
-				ITA = {
-					network_strength = {
-					    target = YUG
-					    value > 49
+				AND = {
+					tag = ITA
+					ITA = {
+						network_strength = {
+						    target = YUG
+						    value > 49
+						}
 					}
 				}
 			}

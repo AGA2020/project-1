@@ -8901,6 +8901,27 @@ has_completed_focus = GER_reorganize_the_wehrmacht
 				294 = {
 				    is_controlled_by_ROOT_or_subject = yes
 				}
+				1010 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1011 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1013 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1014 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1015 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1016 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				992 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
 			}
 		}
 
