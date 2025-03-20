@@ -1992,7 +1992,6 @@ focus_tree = {
                 limit = {
                     ENG = {
                         is_faction_leader = yes
-                        has_government = democratic
                     }
                 }
 
@@ -2004,7 +2003,6 @@ focus_tree = {
                 limit = {
                     USA = {
                         is_faction_leader = yes
-                        has_government = democratic
                     }
                 }
 
