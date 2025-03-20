@@ -8953,6 +8953,13 @@ has_completed_focus = GER_reorganize_the_wehrmacht
 				state = 659
 				state = 293
 				state = 294
+				state = 1010
+				state = 1011
+				state = 1013
+				state = 1014
+				state = 1015
+				state = 1016
+				state = 992
 			}
 		}
 
@@ -9234,6 +9241,21 @@ has_completed_focus = GER_reorganize_the_wehrmacht
 				410 = {
 					is_controlled_by_ROOT_or_subject = yes
 				}
+				1000 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1001 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1004 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1002 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
+				1003 = {
+				    is_controlled_by_ROOT_or_subject = yes
+				}
 			}
 		}
 
@@ -9251,6 +9273,11 @@ has_completed_focus = GER_reorganize_the_wehrmacht
 				state = 416
 				state = 414
 				state = 410
+				state = 1000
+				state = 1001
+				state = 1004
+				state = 1002
+				state = 1003
 			}
 		}
 
