@@ -6115,57 +6115,21 @@ focus_tree = {
         available_if_capitulated = no
 
         search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
-        complete_tooltip = {
-            random_state = {
-                limit = {
-                    has_state_flag = RAJ_expand_mazagon_dock_dlc
-                }
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = dockyard
-                    level = 2
-                    instant_build = yes
-                }
-                if = {
-                    limit = { has_state_flag = RAJ_expand_mazagon_dock_dlc_NB }
-                    add_building_construction = {
-                        type = naval_base
-                        level = 2
-                        instant_build = yes
-                        province = 1349
-                    }
-                }
-            }
-        }
 
         completion_reward = {
             navy_experience = 50
-            random_owned_controlled_state = {
-                prioritize = { 429 }
-                limit = {
-                    is_coastal = yes
-                    free_building_slots = {
-                        building = dockyard
-                        size > 0
-                        include_locked = yes
-                    }
-                }
+            429 = {
                 add_extra_state_shared_building_slots = 2
                 add_building_construction = {
                     type = dockyard
                     level = 2
                     instant_build = yes
                 }
-                set_state_flag = RAJ_expand_mazagon_dock_dlc
-                if = {
-                    limit = { state = 429 }
-                    add_building_construction = {
-                        type = naval_base
-                        level = 2
-                        instant_build = yes
-                        province = 1349
-                    }
-                    set_state_flag = RAJ_expand_mazagon_dock_dlc_NB
+                add_building_construction = {
+                    type = naval_base
+                    level = 2
+                    instant_build = yes
+                    province = 1349
                 }
             }
         }
@@ -6302,11 +6266,7 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_INDUSTRY}
 
         completion_reward = {
-            random_owned_controlled_state = {
-                prioritize = { 423 }
-                limit = {
-                    is_coastal = yes
-                }
+            423 = {
                 add_extra_state_shared_building_slots = 1
                 add_building_construction = {
                     type = dockyard
@@ -6338,57 +6298,21 @@ focus_tree = {
         available_if_capitulated = no
 
         search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
-        complete_tooltip = {
-            random_state = {
-                limit = {
-                    has_state_flag = RAJ_found_scindia_shipyard_dlc
-                }
-                add_extra_state_shared_building_slots = 2
-                add_building_construction = {
-                    type = dockyard
-                    level = 2
-                    instant_build = yes
-                }
-                if = {
-                    limit = { has_state_flag = RAJ_found_scindia_shipyard_dlc_NB }
-                    add_building_construction = {
-                        type = naval_base
-                        level = 2
-                        instant_build = yes
-                        province = 10255
-                    }
-                }
-            }
-        }
 
         completion_reward = {
             navy_experience = 25
-            random_owned_controlled_state = {
-                prioritize = { 426 }
-                limit = {
-                    is_coastal = yes
-                    free_building_slots = {
-                        building = dockyard
-                        size > 0
-                        include_locked = yes
-                    }
-                }
+            426 = {
                 add_extra_state_shared_building_slots = 2
                 add_building_construction = {
                     type = dockyard
                     level = 2
                     instant_build = yes
                 }
-                set_state_flag = RAJ_found_scindia_shipyard_dlc
-                if = {
-                    limit = { state = 426 }
-                    add_building_construction = {
-                        type = naval_base
-                        level = 2
-                        instant_build = yes
-                        province = 10255
-                    }
-                    set_state_flag = RAJ_found_scindia_shipyard_dlc_NB
+                add_building_construction = {
+                    type = naval_base
+                    level = 2
+                    instant_build = yes
+                    province = 10255
                 }
             }
         }
@@ -6491,11 +6415,7 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_INDUSTRY}
 
         completion_reward = {
-            random_owned_controlled_state = {
-                prioritize = { 431 }
-                limit = {
-                    is_coastal = yes
-                }
+            431 = {
                 add_extra_state_shared_building_slots = 3
                 add_building_construction = {
                     type = dockyard
@@ -6588,10 +6508,6 @@ focus_tree = {
 
         cost = 10
 
-        available = {
-            has_idea = RAJ_british_naval_agreement
-        }
-
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
@@ -6600,7 +6516,42 @@ focus_tree = {
 
         completion_reward = {
             ENG = {
-                country_event = { id = GOE_RAJ_navy.7 days = 1 }
+                add_cic = 2000
+                create_equipment_variant = {
+                    name="C Class Calcutta"
+                    type = ship_hull_cruiser_1
+                    modules={
+                        fixed_ship_engine_slot=cruiser_ship_engine_1
+                        mid_1_custom_slot=ship_light_medium_battery_1
+                        fixed_ship_battery_slot=ship_light_battery_1
+                        fixed_ship_fire_control_system_slot=ship_fire_control_system_1
+                    }
+                }
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            create_ship = {
+                type = ship_hull_cruiser_1
+                equipment_variant = "C Class Calcutta"
+                creator = ENG
+                name = "C Class Bengal"
+            }
+            create_ship = {
+                type = ship_hull_cruiser_1
+                equipment_variant = "C Class Calcutta"
+                creator = ENG
+                name = "C Class Ahmadabad"
+            }
+            create_ship = {
+                type = ship_hull_cruiser_1
+                equipment_variant = "C Class Calcutta"
+                creator = ENG
+                name = "C Class Madras"
+            }
+            create_ship = {
+                type = ship_hull_cruiser_1
+                equipment_variant = "C Class Calcutta"
+                creator = ENG
+                name = "C Class Kochin"
             }
         }
     }
@@ -6654,33 +6605,6 @@ focus_tree = {
 
         cost = 10
 
-        available = {
-            has_idea = RAJ_british_naval_agreement 
-            ENG = {
-                if = {
-                    limit = { has_dlc = "Man the Guns" }
-                    has_tech = basic_ship_hull_cruiser
-                }
-                else = {
-                    has_tech = basic_light_cruiser
-                }
-            }
-        }
-
-        bypass = {
-            ENG = {
-                NOT = {
-                    if = {
-                        limit = { has_dlc = "Man the Guns" }
-                        has_tech = basic_ship_hull_cruiser
-                    }
-                    else = {
-                        has_tech = basic_light_cruiser
-                    }
-                }
-            }
-        }
-
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
@@ -6689,7 +6613,49 @@ focus_tree = {
 
         completion_reward = {
             ENG = {
-                country_event = { id = GOE_RAJ_navy.10 days = 1 }
+                add_cic = 3000
+                create_equipment_variant = {
+                    name="S Class Calcutta"
+                    type = ship_hull_cruiser_2
+                    modules={
+                        fixed_ship_engine_slot=cruiser_ship_engine_2
+                        front_1_custom_slot=ship_light_medium_battery_1
+                        mid_1_custom_slot=ship_light_battery_1
+                        fixed_ship_battery_slot=ship_light_medium_battery_1
+                        fixed_ship_fire_control_system_slot=ship_fire_control_system_1
+                    }
+                }
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            create_ship = {
+                type = ship_hull_cruiser_2
+                equipment_variant = "S Class Calcutta"
+                creator = ENG
+                name = "S Class Lucknow"
+            }
+            create_ship = {
+                type = ship_hull_cruiser_2
+                equipment_variant = "S Class Calcutta"
+                creator = ENG
+                name = "S Class Lahore"
+            }
+            create_ship = {
+                type = ship_hull_cruiser_2
+                equipment_variant = "S Class Calcutta"
+                creator = ENG
+                name = "S Class Jaipur"
+            }
+            create_ship = {
+                type = ship_hull_cruiser_2
+                equipment_variant = "S Class Calcutta"
+                creator = ENG
+                name = "S Class Imphal"
+            }
+            create_ship = {
+                type = ship_hull_cruiser_2
+                equipment_variant = "S Class Calcutta"
+                creator = ENG
+                name = "S Class Mandalay"
             }
         }
     }
