@@ -3093,51 +3093,48 @@ focus_tree = {
         available_if_capitulated = no
 
         completion_reward = {
+            add_manpower = -100000
+            add_timed_idea = {
+                idea = idea_RAJ_soldiers_training_in_britain
+                days = 365
+             }
+            custom_effect_tooltip = generic_skip_one_line_tt
             ENG = {
-                country_event = { id = GOE_RAJ_generals.1 days = 1}
+                add_political_power = 200
             }
-            custom_effect_tooltip = if_they_accept_tt
-            effect_tooltip = {
-                add_manpower = -100000
-                add_timed_idea = {
-                     idea = idea_RAJ_soldiers_training_in_britain
-                     days = 365
-                }
-            }
-            custom_effect_tooltip = RAJ_colonial_cadet_exchange_tt
-            effect_tooltip = {
-                RAJ = {
-                    division_template = {
-                        name = "Royal Indian Infantry"
-                        is_locked = yes
-                        support={
-                            artillery={ x=0 y=0 }
-                            recon={ x=0 y=1 }
-                        }
-                        regiments={
-                            infantry={ x=0 y=0 }
-                            infantry={ x=0 y=1 }
-                            infantry={ x=0 y=2 }
-                            infantry={ x=1 y=0 }
-                            infantry={ x=1 y=1 }
-                            infantry={ x=1 y=2 }
-                            infantry={ x=2 y=0 }
-                            infantry={ x=2 y=1 }
-                            infantry={ x=2 y=2 }
-                        }
-                    }
+            custom_effect_tooltip = generic_skip_one_line_tt
 
-                    random_core_state = {
-                        prioritize = { 439 }
-                        create_unit = {
-                            division = "name = \"Royal Indian Infantry\" division_template = \"Royal Indian Infantry\" start_experience_factor = 0.8 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
-                            owner = RAJ
-                            allow_spawning_on_enemy_provs = no 
-                            count = 10
-                        }
-                    }
-                }
-            }
+            custom_effect_tooltip = RAJ_colonial_cadet_exchange_tt
+               RAJ = {
+                   division_template = {
+                       name = "Royal Indian Infantry"
+                       is_locked = yes
+                       support={
+                           artillery={ x=0 y=0 }
+                           recon={ x=0 y=1 }
+                       }
+                       regiments={
+                           infantry={ x=0 y=0 }
+                           infantry={ x=0 y=1 }
+                           infantry={ x=0 y=2 }
+                           infantry={ x=1 y=0 }
+                           infantry={ x=1 y=1 }
+                           infantry={ x=1 y=2 }
+                           infantry={ x=2 y=0 }
+                           infantry={ x=2 y=1 }
+                           infantry={ x=2 y=2 }
+                       }
+                   }
+                   random_core_state = {
+                       prioritize = { 439 }
+                       create_unit = {
+                           division = "name = \"Royal Indian Infantry\" division_template = \"Royal Indian Infantry\" start_experience_factor =0.8 start_equipment_factor = 1.0 start_manpower_factor = 1.0"
+                           owner = RAJ
+                           allow_spawning_on_enemy_provs = no 
+                           count = 10
+                       }
+                   }
+               }
         }
     }
 
@@ -3944,8 +3941,7 @@ focus_tree = {
         continue_if_invalid = no
         available_if_capitulated = no
 
-        search_filters = {FOCUS_FILTER_WAR_SUPPORT}
-        search_filters = {FOCUS_FILTER_POLITICAL}
+        search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY}
 
         completion_reward = {
             add_timed_idea = { idea = idea_RAJ_military_pensions days = 400 }
@@ -4140,7 +4136,7 @@ focus_tree = {
         bypass = {
             NOT = { has_dynamic_modifier = { modifier = idea_RAJ_agrarian_society } }
         }
-        search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_MANPOWER }
+        search_filters = { FOCUS_FILTER_MANPOWER }
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
@@ -4290,8 +4286,6 @@ focus_tree = {
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_MANPOWER}
 
         completion_reward = {
             custom_effect_tooltip = RAJ_relax_agrarian_society_criteria_tt
@@ -4524,8 +4518,6 @@ focus_tree = {
         continue_if_invalid = no
         available_if_capitulated = no
 
-        search_filters = {FOCUS_FILTER_MANPOWER}
-
         completion_reward = {
             custom_effect_tooltip = RAJ_relax_agrarian_society_criteria_tt
             
@@ -4690,7 +4682,7 @@ focus_tree = {
         continue_if_invalid = no
         available_if_capitulated = no
 
-        search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
+        search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP FOCUS_FILTER_WAR_SUPPORT }
         completion_reward = {
             add_ideas = idea_RAJ_lions_of_the_great_war
             army_experience = 30
@@ -5247,7 +5239,7 @@ focus_tree = {
         continue_if_invalid = no
         available_if_capitulated = no
 
-
+        search_filters = { FOCUS_FILTER_INDUSTRY }
 
         completion_reward = {
             mio:RAJ_ammunition_factory_khadki_organization = {
@@ -5280,7 +5272,7 @@ focus_tree = {
         continue_if_invalid = no
         available_if_capitulated = no
 
-
+        search_filters = {FOCUS_FILTER_INDUSTRY}
 
         completion_reward = {
             
@@ -5319,7 +5311,7 @@ focus_tree = {
         continue_if_invalid = no
         available_if_capitulated = no
 
-        search_filters = { FOCUS_FILTER_RESEARCH }
+        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
 
         completion_reward = {
             mio:RAJ_ordnance_factory_medak_organization = {
@@ -5351,7 +5343,7 @@ focus_tree = {
         continue_if_invalid = no
         available_if_capitulated = no
 
-        search_filters = {FOCUS_FILTER_RESEARCH}
+        search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY}
 
         completion_reward = {
             add_tech_bonus = {
@@ -5527,6 +5519,8 @@ focus_tree = {
         cancel_if_invalid = yes
         continue_if_invalid = no
         available_if_capitulated = no
+
+        search_filters = {FOCUS_FILTER_AIR_XP}
 
         completion_reward = {
             custom_effect_tooltip = idea_RAJ_indian_air_force_modify_tt
@@ -5928,7 +5922,7 @@ focus_tree = {
         continue_if_invalid = no
         available_if_capitulated = no
 
-
+        search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
 
         completion_reward = {
             if = {
@@ -6537,7 +6531,49 @@ focus_tree = {
 
         completion_reward = {
             ENG = {
-                country_event = { id = GOE_RAJ_navy.1 days = 1 }
+                add_cic = 3000
+                create_equipment_variant = {
+                    name="S Class Calcutta"
+                    type = ship_hull_cruiser_2
+                    modules={
+                        fixed_ship_engine_slot=cruiser_ship_engine_2
+                        front_1_custom_slot=ship_light_medium_battery_1
+                        mid_1_custom_slot=ship_light_battery_1
+                        fixed_ship_battery_slot=ship_light_medium_battery_1
+                        fixed_ship_fire_control_system_slot=ship_fire_control_system_1
+                    }
+                }
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            create_ship = {
+                type = ship_hull_cruiser_2
+                equipment_variant = "S Class Calcutta"
+                creator = ENG
+                name = "S Class Bombay"
+            }
+            create_ship = {
+                type = ship_hull_cruiser_2
+                equipment_variant = "S Class Calcutta"
+                creator = ENG
+                name = "S Class Delhi"
+            }
+            create_ship = {
+                type = ship_hull_cruiser_2
+                equipment_variant = "S Class Calcutta"
+                creator = ENG
+                name = "S Class Madras"
+            }
+            create_ship = {
+                type = ship_hull_cruiser_2
+                equipment_variant = "S Class Calcutta"
+                creator = ENG
+                name = "S Class Hyderabad"
+            }
+            create_ship = {
+                type = ship_hull_cruiser_2
+                equipment_variant = "S Class Calcutta"
+                creator = ENG
+                name = "S Class Calcutta"
             }
         }
 
