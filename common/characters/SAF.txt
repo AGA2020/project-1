@@ -11,14 +11,6 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-		corps_commander = { 
-			traits = { cavalry_officer reckless substance_abuser }
-			skill = 2
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 1
-		}
 	}
 
 	SAF_d_f_malan={
@@ -36,7 +28,7 @@ characters={
 			skill=2
 			attack_skill=2
 			defense_skill=2
-			planning_skill=2
+			planning_skill=1
 			logistics_skill=2
 		}
 		advisor={
@@ -78,7 +70,7 @@ characters={
 			attack_skill = 2
 			defense_skill = 2
 			planning_skill = 2
-			logistics_skill = 2
+			logistics_skill = 1
 		}
 	}
 
@@ -98,7 +90,7 @@ characters={
 			traits = { politically_connected cavalry_officer old_guard }
 			skill = 2
 			attack_skill = 2
-			defense_skill = 3
+			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 1
 		}
