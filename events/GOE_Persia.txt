@@ -3171,7 +3171,6 @@ country_event = {
 				}
 			}
 			clr_country_flag = PER_communist_naval_tech_delivered
-			create_soviet_iranian_joint_submarine = yes
 		}
 		ELSE_IF = {
 			limit = {
