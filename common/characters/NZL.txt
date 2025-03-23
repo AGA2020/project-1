@@ -24,6 +24,15 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+		corps_commander={
+			traits={ engineer_officer career_officer trait_cautious }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
 	}
 
 	NZL_john_ormond={
@@ -37,6 +46,15 @@ characters={
 			ideology=fascism_ideology
 			expire="1965.1.1.1"
 			id=-1
+		}
+		corps_commander={
+			traits={ infantry_officer trait_reckless harsh_leader }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
 		}
 	}
 
@@ -53,6 +71,15 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+		corps_commander={
+			traits={ engineer_officer old_guard brilliant_strategist }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
 	}
 
 	NZL_peter_fraser={
@@ -66,6 +93,15 @@ characters={
 			ideology=socialism
 			expire="1965.1.1.1"
 			id=-1
+		}
+		corps_commander={
+			traits={ cavalry_officer }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
 		}
 	}
 

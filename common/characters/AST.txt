@@ -262,6 +262,15 @@ characters={
 				small=GFX_portrait_AST_iven_mackay_small
 			}
 		}
+		corps_commander={
+			traits={ generalundertraining_aga }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
 	}
 
 

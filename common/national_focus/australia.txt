@@ -107,17 +107,10 @@
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = AST_new_general_tt
-			hidden_effect = {
-				add_corps_commander_role = {
-					character = AST_iven_mackay
-					traits = { }
-					skill = 3
-					attack_skill = 2
-					defense_skill = 2
-					planning_skill = 3
-					logistics_skill = 3
-				}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			remove_trait = {
+			    character = AST_iven_mackay
+			    trait = generalundertraining_aga
 			}
 		}
 	}

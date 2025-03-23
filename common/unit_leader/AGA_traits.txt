@@ -4,6 +4,24 @@ leader_traits = {
 ##################################
 # Common Traits
 ##################################
+	generalundertraining_aga = { 
+		type = all
+		trait_type = status_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		attack_skill = -2
+		defense_skill = -2
+		logistics_skill = -2
+		planning_skill = -2
+		
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
 	forceattack_aga = { 
 		type = all
 		trait_type = personality_trait
