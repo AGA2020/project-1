@@ -72,6 +72,7 @@ unit_medals = {
 	order_of_the_white_rose = { #Historical
 		
 		available = {
+			original_tag = FIN
 		}
 		frame = 4
 		icon = "GFX_medal_icon_fin"
