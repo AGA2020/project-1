@@ -32,6 +32,7 @@ unit_medals = {
 	mannerheim_cross = { #Historical
 		
 		available = {
+			original_tag = FIN
 		}
 		frame = 1
 		icon = "GFX_medal_icon_fin"
