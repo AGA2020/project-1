@@ -52,7 +52,7 @@ unit_medals = {
 	cross_of_liberty = {
 		
 		available = {
-
+			original_tag = FIN
 		}
 		frame = 3
 		icon = "GFX_medal_icon_fin"
