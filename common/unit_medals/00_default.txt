@@ -91,8 +91,9 @@ unit_medals = {
 
 	order_of_the_lion = { #Historical
 		
+		
 		available = {
-
+			original_tag = FIN
 		}
 		frame = 5
 		icon = "GFX_medal_icon_fin"
