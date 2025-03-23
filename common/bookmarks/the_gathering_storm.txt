@@ -171,7 +171,6 @@ bookmarks = {
 				RAJ_princely_states
 			}
 			focuses = {
-				RAJ_provincial_elections
 			}
 		}
 
