@@ -1219,7 +1219,7 @@
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = NZL_big_bob_tank }
 		prerequisite = { focus = NZL_think_big }
-		x = -1
+		x = -3
 		y = 5
 		relative_position_id = NZL_army_reforms
 

@@ -82,7 +82,7 @@
 
 	focus = {
 		id = AST_promote_reservists
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_focus_generic_limited_social_mobilization
 		prerequisite = { focus = AST_additional_militia_training }
 		x = 1
 		y = 1
@@ -216,7 +216,7 @@
 
 	focus = {
 		id = AST_australian_womens_army_service
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_focus_generic_women_in_military
 		prerequisite = { focus = AST_hmas_assault }
 		x = -1
 		y = 3
@@ -342,7 +342,7 @@
 
 	focus = {
 		id = AST_airborne_defence
-		icon = GFX_goal_generic_special_forces
+		icon = GFX_focus_generic_paratrooper
 		prerequisite = { focus = AST_specialize_equipment }
 		prerequisite = { focus = AST_volunteer_air_observers_corps }
 		x = 2
@@ -377,7 +377,7 @@
 
 	focus = {
 		id = AST_introduce_unconventional_warfare
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_focus_eng_special_air_service
 		prerequisite = { focus = AST_sentinel_tank_project focus = AST_airborne_defence }
 		x = 0
 		y = 5
@@ -483,7 +483,7 @@
 	
 	focus = {
 		id = AST_central_bureau
-		icon = GFX_goal_generic_radar
+		icon = GFX_focus_AFG_work_with_german_inteligence
 		prerequisite = { focus = AST_introduce_unconventional_warfare }
 		x = 0
 		y = 1
@@ -1130,7 +1130,7 @@
 
 	focus = {
 		id = AST_womens_auxilliary_australian_air_force
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_focus_SOV_women_in_aviation
 		prerequisite = { focus = AST_volunteer_air_observers_corps focus = AST_naval_bombers }
 		x = 0
 		y = 4
@@ -1157,7 +1157,7 @@
 
 	focus = {
 		id = AST_dominate_the_skies
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_focus_generic_air_bases
 		prerequisite = { focus = AST_womens_auxilliary_australian_air_force }
 		x = 1
 		y = 5
@@ -1259,7 +1259,7 @@
 	
 	focus = {
 		id = AST_kangaroo_point_shipyards
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_POL_develop_polish_shipbuilding 
 		x = 2
 		y = 0
 		relative_position_id = AST_cockatoo_island_shipyards
@@ -1466,7 +1466,7 @@
 
 	focus = {
 		id = AST_pacific_area_navy
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_focus_SMB_blue_water_fleet
 		prerequisite = { focus = AST_naval_auxiliary_patrol }
 		x = 2
 		y = 4
@@ -2312,7 +2312,7 @@
 
 	focus = {
 		id = AST_fund_australian_defense_research
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_university_3
 		prerequisite = { focus = AST_rationing_and_recycling }
 		prerequisite = { focus = AST_classify_aliens }
 		x = 1
@@ -2408,12 +2408,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			if = { 
-				limit = {
-					ENG = { has_idea = ENG_george_vi }
-				}
-				country_event = { id = tfv_australia.90 }
-			}
+			country_event = { id = tfv_australia.90 }
 		}
 	}
 
@@ -2488,7 +2483,7 @@
 
 	focus = {
 		id = AST_swpa_protector
-		icon = GFX_goal_generic_defence
+		icon = GFX_focus_generic_coastal_fort
 		prerequisite = { focus = AST_adopt_westminster }
 		x = 1
 		y = 3
@@ -2649,7 +2644,7 @@
 
 	focus = {
 		id = AST_commonwealth_aircraft_corporation
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_focus_generic_aircraft_production
 		prerequisite = { focus = AST_CSIR focus = AST_swpa_protector }
 		x = 1
 		y = 4
