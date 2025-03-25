@@ -32,7 +32,7 @@ unit_medals = {
 	mannerheim_cross = { #Historical
 		
 		available = {
-			original_tag = FIN
+			should_have_finnish_medals_trigger = yes
 		}
 		frame = 1
 		icon = "GFX_medal_icon_fin"
@@ -52,7 +52,7 @@ unit_medals = {
 	cross_of_liberty = {
 		
 		available = {
-			original_tag = FIN
+			should_have_finnish_medals_trigger = yes
 		}
 		frame = 3
 		icon = "GFX_medal_icon_fin"
@@ -72,7 +72,7 @@ unit_medals = {
 	order_of_the_white_rose = { #Historical
 		
 		available = {
-			original_tag = FIN
+			should_have_finnish_medals_trigger = yes
 		}
 		frame = 4
 		icon = "GFX_medal_icon_fin"
@@ -93,7 +93,7 @@ unit_medals = {
 		
 		
 		available = {
-			original_tag = FIN
+			should_have_finnish_medals_trigger = yes
 		}
 		frame = 5
 		icon = "GFX_medal_icon_fin"
