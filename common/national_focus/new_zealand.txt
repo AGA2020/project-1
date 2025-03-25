@@ -710,7 +710,7 @@
 
 	focus = {
 		id = NZL_wairarapa_sheep_farms
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_generic_sheep
 		prerequisite = { focus = NZL_national_roads_board }
 		x = 2
 		y = 1

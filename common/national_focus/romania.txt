@@ -1883,7 +1883,7 @@ focus_tree = {
 
 	focus = {		
 		id = ROM_vanatori_de_munte
-		icon = GFX_focus_GRE_a_land_of_mountains
+		icon = GFX_focus_AFG_mountain_training
 		prerequisite = { focus = ROM_the_zb_53 }
 		x = -1
 		y = 1
@@ -2004,7 +2004,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_mountain_artillery
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_GRE_a_land_of_mountains
 		prerequisite = { focus = ROM_artillery_modernization }
 		prerequisite = { focus = ROM_vanatori_de_munte }
 		x = -1
