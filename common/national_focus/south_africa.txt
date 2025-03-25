@@ -998,6 +998,11 @@
 				uses = 1
 				category = infantry_weapons
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
 		}
 	}
 
@@ -1090,6 +1095,11 @@
 				uses = 1
 				category = artillery
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
 		}
 	}
 
@@ -1118,6 +1128,11 @@
 				bonus = 1.0
 				uses = 1
 				category = support_tech
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
 			}
 		}
 	}
@@ -1148,6 +1163,11 @@
 				uses = 1
 				category = infantry_weapons
 				category = artillery
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
 			}
 		}
 	}
