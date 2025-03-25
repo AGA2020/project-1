@@ -830,10 +830,7 @@ GER_alkett_organization = {
 		available = {
 			#TODO_Danne fix this with a flag or something! GER should integrate CZE industries or something before doing this
 			FROM = {
-				OR = {
-					has_completed_focus = GER_fate_of_czechoslovakia
-					has_completed_focus = GER_carve_up_czechoslovakia
-				}
+				has_completed_focus = GER_fate_of_czechoslovakia
 			}
 		}
 
