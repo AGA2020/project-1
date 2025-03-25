@@ -42,31 +42,6 @@ on_actions = {
 				}
 			}
 		}
-		#SET UP MIO SIZE IN 1939 BOOKMARK
-		effect = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-					date > 1939.01.01 #1939 Bookmark
-				}
-				every_country = {
-					limit = {
-						is_major = yes
-					}
-					every_military_industrial_organization = {
-						add_mio_size = 4
-					}
-				}
-				every_country = {
-					limit = {
-						is_major = no
-					}
-					every_military_industrial_organization = {
-						add_mio_size = 3
-					}
-				}
-			}
-		}
 
 		effect = { # Setting up Nordic Cooperation system 
 			NOR = {
@@ -2929,21 +2904,6 @@ on_actions = {
 
   	#FROM is faction leader on join faction requests. THIS DOES NOT FIRE ON ADD_TO_FACTION EFFECT! USE ON_OFFER_JOIN_FACTION!
 	on_join_faction = { 
-		effect = { # Adding the correct flags for the Joint Focus Alliance
-			if = {
-				limit = {
-					FROM = { 
-						OR = {
-							has_country_flag = NORDIC_council_leader 
-							has_country_flag = NORDIC_league_leader
-							has_country_flag = NORDIC_union_leader
-						}
-					}
-					NORDIC_is_nordic = yes
-				}
-				set_country_flag = NORDIC_alliance_member
-			}
-		}
 
 		#FROM is faction leader on join faction requests. THIS DOES NOT FIRE ON ADD_TO_FACTION EFFECT! USE ON_OFFER_JOIN_FACTION!
 		effect = { # FINNISH - Kuusinen becomes country leader and Finland becomes the Finnish Democratic Republic if Commie Finland joins Comintern
@@ -2963,51 +2923,10 @@ on_actions = {
 				FIN_form_finnish_democratic_republic = yes
 			}
 		}
-
-		effect = { #Lone Wolf Achievement
-			if = {
-				limit = {
-					ROOT = {
-						original_tag = FIN
-					}
-				}
-				set_global_flag = achievement_FIN_has_joined_a_faction
-			}
-		}
 	}
 
 	#FROM is country getting invited. THIS GETS TRIGGERED WHEN THE COUNTRY BEING OFFERED ACTUALLY JOINS THE FACTION (AND ALSO TRIGGERED ON ADD_TO_ACTION EFFECT TACK SÅ MYCKET)
 	on_offer_join_faction = {
-		effect = { # Adding the correct flags for the Joint Focus Alliance
-			if = {
-				limit = {
-					OR = {
-						has_country_flag = NORDIC_council_leader 
-						has_country_flag = NORDIC_league_leader
-						has_country_flag = NORDIC_union_leader
-					}
-					FROM = { 
-						NORDIC_is_nordic = yes
-					}
-				}
-				FROM = {
-					set_country_flag = NORDIC_alliance_member
-				}
-			}
-		}
-
-		effect = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-					FROM = {
-						original_tag = FIN
-					}
-				}
-				set_global_flag = achievement_FIN_has_joined_a_faction
-			}
-		}
-
 		#FROM is country getting invited.
 		effect = { # FINNISH - Kuusinen becomes country leader and Finland becomes the Finnish Democratic Republic if Commie Finland joins Comintern
 			if = {
