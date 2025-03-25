@@ -193,7 +193,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_join_axis
-		icon = GFX_goal_support_fascism
+		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = ROM_invite_german_advisors }
 		x = 0
 		y = 2
@@ -229,7 +229,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_german_romanian_oil_exploitation_company
-		icon = GFX_goal_generic_oil_refinery
+		icon = GFX_focus_PER_donate_oil_fields
 		prerequisite = { focus = ROM_join_axis }
 		x = -1
 		y = 1
@@ -701,7 +701,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_expand_the_university_of_bucharest
-		icon = GFX_focus_research
+		icon = GFX_focus_generic_university_1
 		prerequisite = { focus = ROM_expand_ploiesti_oil_production }
 		x = 0
 		y = 6
@@ -800,7 +800,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_fortify_the_borders
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = ROM_institute_royal_dictatorship }
 		x = -2
 		y = 1
@@ -1239,7 +1239,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_expand_the_air_force
-		icon = GFX_goal_generic_build_airforce
+		icon = GFX_focus_generic_long_range_aircraft
 		x = 20
 		y = 0
 
@@ -1424,7 +1424,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_medium_bombers
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = ROM_ground_support }
 		x = 0
 		y = 2
@@ -1582,7 +1582,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_cas
-		icon = GFX_goal_generic_CAS
+		icon = GFX_focus_generic_cas_aircraft
 		prerequisite = { focus = ROM_air_superiority }
 		x = 1
 		y = 1
@@ -1831,17 +1831,18 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = ROM_army_war_college
-			custom_effect_tooltip = ROM_war_college_tt
-			hidden_effect = {
-				create_corps_commander = { 
-					name = "Barbu Paraianu"
-					gfx = GFX_Portrait_romania_barbu_paraianu
-					traits = { infantry_officer }
-					skill = 2
-					attack_skill = 1
-					defense_skill = 1
-					planning_skill = 3
-					logistics_skill = 2
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					any_unit_leader = {
+						has_trait = generalundertraining_aga_rom
+					}
+				}
+				every_unit_leader = {
+					limit = {
+						has_trait = generalundertraining_aga_rom
+					}
+					remove_unit_leader_trait = generalundertraining_aga_rom
 				}
 			}
 		}
@@ -1872,12 +1873,17 @@ focus_tree = {
 				uses = 1
 				category = infantry_weapons
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.1
+			}
 		}
 	}
 
 	focus = {		
 		id = ROM_vanatori_de_munte
-		icon = GFX_goal_generic_special_forces
+		icon = GFX_focus_GRE_a_land_of_mountains
 		prerequisite = { focus = ROM_the_zb_53 }
 		x = -1
 		y = 1
@@ -2106,7 +2112,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_reserve_divisions
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_fascist_troops
 		prerequisite = { focus = ROM_royal_guards_divisions }
 		x = 0
 		y = 1
@@ -2357,7 +2363,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_the_maresal
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_generic_heavy_tank
 		prerequisite = { focus = ROM_mobile_tank_destroyers }
 		x = 1
 		y = 3
@@ -2515,7 +2521,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_torpedo_boats
-		icon = GFX_goal_generic_occupy_start_war
+		icon = GFX_focus_generic_torpedo_production
 		prerequisite = { focus = ROM_coastal_defense_ships }
 		x = -2
 		y = 2

@@ -1669,7 +1669,7 @@
 
 	focus = {
 		id = AST_expand_lithgow_small_arms_factory
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_military_industry
 		prerequisite = { focus = AST_south_australian_housing_trust }
 		x = 0
 		y = 3
@@ -1700,7 +1700,7 @@
 
 	focus = {
 		id = AST_allied_works_council
-		icon = GFX_goal_generic_production2
+		icon = GFX_focus_generic_mass_production
 		prerequisite = { focus = AST_department_of_supply_and_development }
 		prerequisite = { focus = AST_civil_construction_corps }
 		x = 2
@@ -1769,7 +1769,7 @@
 
 	focus = {
 		id = AST_australian_arms_production
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_reorient_production
 		prerequisite = { focus = AST_allied_works_council }
 		x = 2
 		y = 4

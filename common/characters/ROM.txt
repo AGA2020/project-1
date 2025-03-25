@@ -25,6 +25,14 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+		corps_commander={
+			traits={ politically_connected old_guard }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+		}
 	}
 
 	ROM_king_michael={
@@ -43,6 +51,14 @@ characters={
 			ideology=despotism
 			expire="1965.1.1.1"
 			id=-1
+		}
+		corps_commander={
+			traits={ politically_connected trait_cautious }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
 		}
 	}
 
@@ -71,6 +87,14 @@ characters={
 			ideology=centrism
 			expire="1965.1.1.1"
 			id=-1
+		}
+		corps_commander={
+			traits={ harsh_leader media_personality }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
 		}
 	}
 

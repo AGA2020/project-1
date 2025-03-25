@@ -331,6 +331,18 @@ on_actions = {
 	on_startup = {
 
 		effect = {
+			ROM = {
+				create_corps_commander = { 
+					name = "Barbu Paraianu"
+					gfx = GFX_Portrait_romania_barbu_paraianu
+					traits = { infantry_officer generalundertraining_aga_rom }
+					skill = 2
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 3
+					logistics_skill = 2
+				}
+			}
 			NOR = {
 				every_owned_state = {
 					limit = {
