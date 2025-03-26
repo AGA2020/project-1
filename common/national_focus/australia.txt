@@ -2668,6 +2668,7 @@
 		completion_reward = {
 			mio:AST_com_aircraft_corporation_organization = {
 				add_mio_size = 2
+				add_mio_research_bonus = 0.05
 			}
 		}
 	}
