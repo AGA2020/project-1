@@ -73,9 +73,11 @@ AST_com_aircraft_corporation_organization = {
 		has_dlc = "Together for Victory"
 	}
 	available = {
-		owner = {
-			has_completed_focus = AST_commonwealth_aircraft_corporation
-			is_subject_of = ENG 
+	}
+	initial_trait = {
+		name = generic_mio_initial_trait_light_aircraft_designer
+		organization_modifier = {
+			military_industrial_organization_research_bonus = -0.05
 		}
 	}
 }
