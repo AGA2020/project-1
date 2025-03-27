@@ -1575,7 +1575,6 @@ GER_fortify_the_vaterland_cat = {
 							any_province_building_level = {
 								province = {
 									id = 3530
-									id = 6568
 									id = 6542
 									id = 6712
 									id = 11640

@@ -554,7 +554,6 @@ GER_MEC_01 =  {
 
 	# Names with numbers (only one number per entry)
 	ordered = {
-		932 = { "Panzer-Grenadier-Division Großdeutschland" }
 		10 = { "%d. Panzer-Grenadier-Division" }
 		60 = { "Panzer-Grenadier-Division Feldherrnhalle" }
 		3 = { "%d. Panzer-Grenadier-Division" }

@@ -1565,36 +1565,6 @@ GER_setup_CHI_sphere_of_influence_array = {
 	}
 }
 
-GER_one_more_member_increase_rnd_program_strength = {
-		
-	IF = {
-		limit = {
-			check_variable = {
-				var = GER_rnd_programs_modifier_allies_count
-				value = 10
-				compare = less_than
-			}	
-		}
-
-		add_to_variable = { 
-			GER_rnd_programs_modifier_research_speed_factor = 0.01
-		}
-
-		add_to_variable = { 
-			GER_rnd_programs_modifier_allies_count = 1
-		}
-	}
-
-}
-
-GER_one_less_member_decrease_rnd_program_strength = {
-		
-	add_to_variable = { 
-		GER_rnd_programs_modifier_research_speed_factor = -0.01
-	}
-
-}
-
 
 ########################
 ### SPECIAL PROJECTS ###

@@ -884,6 +884,8 @@ political_actions = {
 		}
 
 		cost = 50
+
+		fire_only_once = yes
 		
 		visible = {
 			tag = ENG

@@ -1200,7 +1200,7 @@ focus_tree = {
 				category = tactical_bomber
 			}
 			add_doctrine_cost_reduction = {
-				name = ENG_bomber_command_focus					#land_doc_bonus
+				name = bomber_command_focus
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine

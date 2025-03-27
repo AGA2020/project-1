@@ -50,7 +50,14 @@ ITA_power_balance = {
 				war_support_factor = -0.05
 			}
 			on_activate = {
-				
+				hidden_effect = {
+					IF = {
+						limit = {
+							has_completed_focus = ITA_culto_del_duce
+						}
+						country_event = BBA_italy_council_deposes_duce.2
+					}
+				}				
 			}
 			on_deactivate = {
 				

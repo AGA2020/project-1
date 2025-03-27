@@ -1430,46 +1430,35 @@ country_event = {
 	}
 }
 
+#Fires off when Mexico starts to send National Spirits to change countries to Fascism
+country_event = {
+	id = south_american_events.63
+	title = south_american_events.63.t
+	desc = south_american_events.63.desc
+	picture = GFX_report_event_eng_blackshirt_march
 
+	is_triggered_only = yes
 
-# Carnival is cancelled - disabling for now, may move to Brazil only event
-#news_event = {
-#	id = south_american_news.52
-#	title = south_american_news.52.t
-#	desc = south_american_news.52.desc
-#	picture = GFX_news_event_BRA_carnival
-#	
-#	major = yes
-#	mean_time_to_happen = {
-#		days = 10
-#	}
-#	trigger = {
-#		any_country = {
-#			is_major = yes
-#			has_war_with_major = yes
-#		}
-#	}
-#
-#	#is_triggered_only = yes
-#	#fire_only_once = yes
-#
-#	option = {
-#		name = south_american_news.52.a
-#		trigger = {
-#			
-#			OR = {
-#				has_government = democratic
-#				has_government = communism
-#			}
-#		}
-#	}
-#	option = {
-#		name = south_american_news.52.b
-#		trigger = {
-#			OR = {
-#				has_government = fascism
-#				has_government = neutrality
-#			}
-#		}
-#	}
-#} 
+	option = { #Accept Fascism
+		ai_chance = {
+			base = 100
+		}
+		name = south_american_events.63.a
+
+		add_timed_idea = {
+				idea = MEX_synarchist_influence
+				days = 720
+			}
+		set_country_flag = received_MEX_bolivarian_agitation
+	}
+
+	option = { #Clamp Down on Fascism
+		ai_chance = {
+			base = 0
+		}
+		name = south_american_events.63.b
+		
+		add_political_power = -20
+		add_stability = 0.1
+	}
+}
