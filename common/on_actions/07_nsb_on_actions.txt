@@ -914,46 +914,6 @@ on_actions = {
 		}
 	}
 
-	on_monthly_SOV = { 
-		effect = { 
-			# Check for leader desertions
-			IF = {
-				limit = {
-					ROOT = { has_global_flag = SOV_soviet_civil_war }
-
-					SOS = {
-						any_unit_leader = {
-							has_trait = trait_SOV_cowed_by_stalin_army
-							NOT = { has_trait = trait_SOV_stalinist }
-						}
-					}
-				}
-				SOS = {
-					random_unit_leader = {
-						limit = {
-							has_trait = trait_SOV_cowed_by_stalin_army
-							NOT = { has_trait = trait_SOV_stalinist }
-						}
-						set_variable = { SOS.SOV_general_to_desert = THIS }
-					}
-					
-				}
-				random_list = {
-					25 = {
-				        # defections
-				        country_event = {
-				        	id = NSB_soviet_communist_civil_war.010
-				        	hours = 1
-				        }
-				    }
-					75 = {
-				        # Nothing happens
-				    }
-				}
-			}
-		} 
-	}
-
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation = {
 		#Spanish general from SPD/SPC exile in SOV -> NSB
