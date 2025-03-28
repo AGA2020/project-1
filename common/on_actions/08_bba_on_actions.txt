@@ -181,18 +181,6 @@ on_actions = {
 				}
 			}
 		}
-		effect = {
-			if = {
-				limit = {
-					tag = ETH
-					FROM = {
-						original_tag = ITA
-					}
-					is_in_faction = no
-				}
-				set_country_flag = ETH_forced_ITA_peace_achievement
-			}
-		}
 
 		effect = { #Achievement This Time it will Stick
 			if = {
