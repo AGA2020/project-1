@@ -187,7 +187,6 @@ on_actions = {
 				limit = {
 					has_government = democratic
 					is_in_faction_with = ENG
-					ENG = { has_government = democratic }
 					has_global_flag = rhineland_remilitarized #so it was remilitarized once
 					42 = {
 						pc_does_state_stack_demilitarized = yes
@@ -197,37 +196,6 @@ on_actions = {
 					}
 				}
 				set_global_flag = disarmed_and_demilitarized_rhineland_flag
-			}
-		}
-	}
-	#FROM is war target
-  	#ROOT is country declaring war
-	on_declare_war = {
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						NOT = { has_dynamic_modifier = {modifier = african_union_defense_agreement_modifier} }
-					}
-					FROM = { has_dynamic_modifier =  {modifier = african_union_defense_agreement_modifier }}
-				}
-				set_variable = {
-					var = global.org_africa_attacked_country
-					value = FROM
-				}
-				every_other_country = {
-					limit = {
-						has_dynamic_modifier = {
-							modifier = african_union_defense_agreement_modifier
-						}
-						NOT = { has_war_with = FROM }
-						NOT = { tag = FROM }
-					}
-					country_event = {
-						id = BBA_african_union_events.18
-						hours = 1
-					}
-				}
 			}
 		}
 	}
