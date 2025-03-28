@@ -2429,7 +2429,6 @@ focus_tree = {
 		id = ROM_coastal_defense_navy
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = ROM_expand_the_galati_shipyards }
-		mutually_exclusive = { focus = ROM_black_sea_dominance }
 		x = -1
 		y = 1
 		relative_position_id = ROM_expand_the_galati_shipyards
@@ -2577,7 +2576,6 @@ focus_tree = {
 		id = ROM_black_sea_dominance
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = ROM_expand_the_galati_shipyards }
-		mutually_exclusive = { focus = ROM_coastal_defense_navy }
 		x = 1
 		y = 1
 		relative_position_id = ROM_expand_the_galati_shipyards
