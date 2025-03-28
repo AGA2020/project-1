@@ -310,37 +310,6 @@ on_actions = {
 			IF = {
 				limit = {
 					original_tag = KOR
-					has_government = democratic
-					NOT = { 
-						has_country_leader = {
-							name = "Syngman Rhee"
-							ruling_only = no
-						}
-					}
-				}
-				
-				random_other_country = {
-					limit = {
-						original_tag = KOR
-						has_country_leader = {
-							name = "Syngman Rhee"
-							ruling_only = no
-						}
-						NOT = { has_government = democratic }
-					}
-					every_character = {
-						limit = {
-							has_ideology_group = democratic
-						}
-						set_nationality =  ROOT
-					}	
-				}
-				retire_country_leader = yes
-				
-			}
-			IF = {
-				limit = {
-					original_tag = KOR
 					has_government = communism
 					NOT = { 
 						has_country_leader = {
