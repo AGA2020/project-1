@@ -165,36 +165,6 @@ on_actions = {
 			}
 		}
 	}
-
-	on_weekly_ETH = {
-		effect = {
-			IF = {
-				limit = {
-					ETH = {
-						exists = yes 
-						has_war = yes 
-					}
-				}
-				for_each_scope_loop = {
-					array = ETH_promised_states_array
-					IF = { 
-						limit = {
-							controller = {
-								NOT = { original_tag = ETH }
-								has_full_control_of_state = PREV
-								is_in_faction_with = ETH
-								has_war_with = PREV.owner 		
-							}
-							owner = {
-								has_war_with = ETH
-							}
-						}
-						set_state_controller_to = ETH 
-					}
-				}
-			}
-		}
-	}
 	#ROOT is winner #FROM is loser
 	on_peaceconference_ended = {
 		effect = {
