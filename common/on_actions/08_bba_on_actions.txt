@@ -167,22 +167,6 @@ on_actions = {
 	}
 	#ROOT is winner #FROM is loser
 	on_peaceconference_ended = {
-		effect = {
-			IF = {
-				limit = { 
-					OR = {
-						check_variable = { ETH.host_nation = ROOT }
-						ROOT = { 
-							OR = {
-								tag = ETH
-								is_in_faction_with = ETH  			
-							}
-						} 
-					}					
-				}
-				ETH_transfer_promised_states = yes 
-			}
-		}
 		# Drop AOI cosmetic tag to set correct flag
 		effect = {
 			IF = {
