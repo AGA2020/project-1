@@ -1,19 +1,4 @@
 defined_text = {
-	name = GetAlliedEngineBonusStatus
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = allied_engine_bonus
-				option = on
-			}
-		}
-		localization_key = check_gamerules_on
-	}
-	text = {
-		localization_key = check_gamerules_off
-	}
-}
-defined_text = {
 	name = GetTechStealingStatus
 	text = {
 		trigger = {
