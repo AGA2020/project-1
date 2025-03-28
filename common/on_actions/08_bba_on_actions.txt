@@ -279,51 +279,6 @@ on_actions = {
 				#log = "Reducing BoP modifier penalty due to getting back core [FROM.FROM.GetName]"
 			}
 		}
-		effect = {
-			if = {
-				limit = {
-					FROM = { tag = ITA }
-					tag = BRA
-					FROM.FROM = { state = 2 }
-					divisions_in_state = {
-						unit = paratrooper
-						size > 1
-						state = 2
-					}
-				}
-				set_country_flag = BRA_snakes_on_a_plane_achievement
-			}
-		}
-		
-	}
-	#used when puppeting in a peace conference
-  	#ROOT = nation being puppeted, FROM = overlord
-	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
-	#ROOT = nation being released, FROM = overlord
-
-	on_release_as_puppet = {
-
-	}
-	#FROM is country getting invited. ROOT is the faction leader
-	on_offer_join_faction = {
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						AND = {
-							tag = ITA
-							FROM = { tag = GER has_government = fascism }
-						}
-						AND = {
-							tag = GER
-							has_government = fascism
-							FROM = { tag = ITA }
-						}
-					}
-				}
-				ITA = { set_country_flag = ITA_joined_faction_with_literally_hitler_achievement_flag }
-			}
-		}
 	}
 }
 
