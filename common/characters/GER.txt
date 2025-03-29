@@ -133,10 +133,7 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 3
 			visible = {
-				has_government = neutrality
-				NOT = {
-					has_country_flag = GER_mackensen_went_into_retirement
-				}
+				always = no
 			}
 		}
 	}
@@ -253,9 +250,7 @@ characters = {
 			planning_skill = 3
 			logistics_skill = 2
 			visible = {
-				NOT = {
-					has_completed_focus = GER_reorganize_the_wehrmacht
-				}
+				always = no
 			}
 		}
 
@@ -346,19 +341,13 @@ characters = {
 			}
 		}
 		corps_commander = { 
-			traits = { harsh_leader politically_connected inflexible_strategist }
+			traits = { generalundertraining_aga_ger_walter harsh_leader politically_connected inflexible_strategist }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = 10
-			visible = {
-				OR = {
-					has_completed_focus = GER_bribe_senior_officers
-					has_global_flag = GER_civil_war_has_started
-				}
-			}
 		}
 	}
 
