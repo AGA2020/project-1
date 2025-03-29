@@ -1264,21 +1264,6 @@ characters={
 			traits = {
 				devoted_communist
 			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = BRA_domingos_bras
-			allowed = {
-				original_tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-			available  = {
-				has_government = communism
-				is_country_leader = no
-			}
-			traits  = {
-				devoted_communist
-			}
 		}		
 	}
 
