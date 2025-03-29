@@ -942,11 +942,6 @@ characters={
 			allowed  = {
 				original_tag  = BRA
 			}
-			available  = {
-				NOT = {
-					has_government = communism
-				}
-			}
 			traits  = {
 				BRA_minister_of_transport
 			}
@@ -965,11 +960,6 @@ characters={
 			idea_token = BRA_francisco_campos
 			allowed  = {
 				original_tag  = BRA
-			}
-			available  = {
-				NOT = {
-					has_government = communism
-				}
 			}
 			traits  = {
 				BRA_right_wing_ideologue
@@ -991,9 +981,6 @@ characters={
 				original_tag = BRA
 			}
 			available  = {
-				NOT = {
-					has_government = communism
-				}
 				has_intelligence_agency = yes
 			}
 			traits  = {
@@ -1144,56 +1131,6 @@ characters={
 			}
 			ai_will_do = {
 				factor = 1
-			}
-		}		
-	}
-
-	BRA_olga_benario_prestes = {
-		name=BRA_olga_benario_prestes
-		portraits={
-			army={
-				large="GFX_portrait_BRA_olga_benario_prestes-export"
-				small="GFX_portrait_BRA_olga_benario_prestes_small"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = BRA_olga_benario_prestes
-			allowed = {
-				original_tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-			available  = {
-				has_government = communism
-				#has_completed_focus = BRA_free_prestes
-			}
-			traits  = {
-				SWI_soviet_spy
-			}
-		}	
-	}
-
-	BRA_apolonio_de_carvalho = {
-		name=BRA_apolonio_de_carvalho
-		portraits={
-			army={
-				small="GFX_portrait_BRA_apolinio_de_carvalho_small"
-				large="GFX_portrait_BRA_apolinio_de_carvalho"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = BRA_apolonio_de_carvalho
-			allowed = {
-				original_tag = BRA
-				has_dlc = "Trial of Allegiance"
-			}
-			available  = {
-				has_government = communism
-				#has_completed_focus = BRA_revive_the_anl
-			}
-			traits  = {
-				BRA_militant_communist
 			}
 		}		
 	}
