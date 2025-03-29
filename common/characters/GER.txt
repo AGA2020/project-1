@@ -2374,10 +2374,6 @@ characters = {
 			}
 			visible = {
 				always = no #TODO_Manu: Part of Inner Circle. REMOVE COMPLETELY IF NOT USED BY ALT-HIST
-				has_government = fascism
-				NOT = {
-					has_completed_focus = GER_oppose_hitler_ww
-				}
 			}
 			traits = {
 				GER_first_among_equals #TODO_Manu: Maybe change trait
