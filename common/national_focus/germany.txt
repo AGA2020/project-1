@@ -6412,7 +6412,7 @@ focus_tree = {
 
 		prerequisite = { focus = GER_reorganize_the_wehrmacht }
 
-		x = -10
+		x = -7
 		y = 1
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 10
@@ -6545,7 +6545,6 @@ focus_tree = {
 					}
 				}
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
 			remove_trait = {
 			    character = GER_walter_model
 			    trait = generalundertraining_aga_ger_walter
@@ -6855,7 +6854,7 @@ focus_tree = {
 		alternate_icon = GFX_focus_ger_reichskommisariats_historical
 		prerequisite = { focus = GER_reorganize_the_wehrmacht }
 
-		x = -1
+		x = 2
 		y = 1
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
@@ -9346,7 +9345,7 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_reorganize_the_wehrmacht_historical
 
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
-		x = 6
+		x = 2
 		y = 1
 		relative_position_id = GER_remilitarize_the_rhineland
 		cost = 5
@@ -9379,19 +9378,7 @@ focus_tree = {
 			
 			custom_effect_tooltip = {
 				localization_key = remove_character_as_tt
-				CHARACTER = GER_werner_von_blomberg
-				ROLE = fm_leader
-			}
-
-			custom_effect_tooltip = {
-				localization_key = remove_character_as_tt
 				CHARACTER = GER_werner_von_fritsch
-				ROLE = cc_leader
-			}
-
-			custom_effect_tooltip = {
-				localization_key = remove_character_as_tt
-				CHARACTER = GER_oswald_lutz
 				ROLE = cc_leader
 			}
 
@@ -9445,7 +9432,7 @@ focus_tree = {
 
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
 
-		x = 4
+		x = 7
 		y = 0
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
@@ -9544,7 +9531,7 @@ focus_tree = {
 		icon = GFX_goal_molotov_ribbentrop_pact
 		alternate_icon = GFX_focus_GER_molotov_ribbentrop_pact
 		prerequisite = { focus = GER_reorganize_the_wehrmacht }
-		x = 1
+		x = 4
 		y = 1
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
