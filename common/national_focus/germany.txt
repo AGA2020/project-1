@@ -11064,7 +11064,7 @@ focus_tree = {
 	focus = {
 		id = GER_south_east_asian_natural_wealth
 		icon = GFX_focus_GER_south_east_asian_natural_wealth
-		prerequisite = { focus = GER_ally_chiang_kai_shek focus = GER_negotiate_old_colonies_in_the_east }
+		prerequisite = { focus = GER_negotiate_old_colonies_in_the_east }
 
 		x = 2
 		y = 0
