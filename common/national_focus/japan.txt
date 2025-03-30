@@ -1482,6 +1482,7 @@ focus_tree = {
 
 
 		completion_reward = {
+			show_mio_tooltip = JAP_aichi_organization
 			mio:JAP_aichi_organization = {
 				add_mio_size = 2
 			}
@@ -1508,6 +1509,7 @@ focus_tree = {
 
 
 		completion_reward = {
+			show_mio_tooltip = JAP_mitsubishi_organization
 			mio:JAP_mitsubishi_organization = {
 				add_mio_size = 2
 			}

@@ -177,38 +177,6 @@ JAP_nakajima_organization = {
 	allowed = {	
 		tag = JAP
 	}
-	add_trait = { 
-		token = JAP_optimized_control_surfaces
-		name = JAP_optimized_control_surfaces
-		icon = GFX_generic_mio_trait_icon_air_agility
-		special_trait_background = yes
-
-		position = { x=0 y=0 }
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-
-		available = { 
-			FROM = {
-				has_completed_focus = JAP_agility_focus
-			}
-			FROM = {
-				NOT = { has_country_flag = JAP_agility_focus_completed }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = JAP_agility_focus_completed
-			}
-		}
-
-		equipment_bonus = {
-			air_agility = 0.07
-		}
-	}
 }
 
 JAP_yokosuka_organization = {
