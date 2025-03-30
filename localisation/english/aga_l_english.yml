@@ -1,4 +1,7 @@
 ﻿l_english:
+  JAP_warrior_code_faction:0 "§RX§! Can join factions"
+   JAP_agility_focus_completed: "$generic_has_already_completed_this_trait$"
+  JAP_optimized_control_surfaces:0 "Optimized Control Surfaces"
   generalundertraining_aga_ger_walter:0 "Complete Bribe Senior Officers Focus To Remove Stat Debuff"
   generalundertraining_aga_ger_walter_desc:0 ""
   cheapscientist_soviet:0 "Cheap Land Scientist"

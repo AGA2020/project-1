@@ -1482,18 +1482,8 @@ focus_tree = {
 
 
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}	
-				show_mio_tooltip = JAP_aichi_organization
-				mio:JAP_aichi_organization = {
-					add_mio_size = 2
-				}
-			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = aichi
+			mio:JAP_aichi_organization = {
+				add_mio_size = 2
 			}
 		}
 	}
@@ -1518,18 +1508,15 @@ focus_tree = {
 
 
 		completion_reward = {
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}	
-				show_mio_tooltip = JAP_mitsubishi_organization
-				mio:JAP_mitsubishi_organization = {
-					add_mio_size = 2
-				}
+			mio:JAP_mitsubishi_organization = {
+				add_mio_size = 2
 			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = mitsubishi
+			custom_effect_tooltip = generic_skip_one_line_tt
+			every_military_industrial_organization = {
+				limit = {
+					has_mio_trait = JAP_optimized_control_surfaces
+				}
+				unlock_mio_trait_tooltip = JAP_optimized_control_surfaces
 			}
 		}
 	}

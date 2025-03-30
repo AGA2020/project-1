@@ -20,9 +20,6 @@ ideas = {
 				industry_air_damage_factor = -0.1
 				army_morale_factor = 0.1
 			}
-			rule = {
-				can_join_factions = no
-			}
 		}
 	
 		JAP_public_awareness_of_war_ns = {

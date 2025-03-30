@@ -41,11 +41,10 @@ IF = {
 		JAP_interservice_rivalry_balanced		
 	}
 }
-IF = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	add_ideas = MTG_naval_treaty_adherent
+add_ideas = MTG_naval_treaty_adherent
+
+rule = {
+	can_join_factions = no
 }
 
 # Setup Reisstance and Compliance

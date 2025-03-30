@@ -76,22 +76,6 @@ on_actions = {
 			}
 		}
 	}
-	on_join_faction = {
-		effect = {
-			if = {
-			    limit = {
-					ROOT = { tag = JAP } 
-					FROM = { tag = GER }
-			    }
-			    SOV = {
-					annex_country = {
-					    target = JAP
-					    transfer_troops = yes
-					}
-				}
-			}
-		}
-	}
 	on_operation_completed = {			
 		effect = {
 			if = {
