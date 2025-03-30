@@ -1268,37 +1268,6 @@ ideas = {
 			}
 		}
 
-		idea_RAJ_bose_hiding_raj = {
-			picture = prc_the_long_march
-			allowed = {
-				original_tag = RAJ
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-
-
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = 0.001
-				resistance_damage_to_garrison = -1
-			}
-			on_remove = {
-				if = {
-					limit = {
-						NOT = {
-							has_idea = idea_RAJ_bose_hiding_afghanistan
-						}
-					}
-					add_timed_idea = {
-						idea = idea_RAJ_bose_hiding_afghanistan
-						days = 40
-					}
-				}
-				
-			}
-		}
-
 		idea_RAJ_great_depression_1 = {
 
 			allowed = {
@@ -1432,41 +1401,6 @@ ideas = {
 				industrial_capacity_dockyard = -0.05
 				stability_factor = -0.05
 			}
-		}
-
-		idea_RAJ_bose_hiding_afghanistan = {
-			picture = prc_the_long_march
-			allowed = {
-				original_tag = RAJ
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			modifier = {
-				consumer_goods_factor = 0.001
-				resistance_damage_to_garrison = -1
-				unit_mountaineers_design_cost_factor = -0.15
-			}
-			on_add = {
-				
-			}
-
-			on_remove = {
-				if = {
-					limit = {
-						NOT = {
-							has_idea = idea_RAJ_bose_hiding_ussr
-						}
-					}
-					add_timed_idea = {
-						idea = idea_RAJ_bose_hiding_ussr
-						days = 70
-					}
-				}
-			}
-			
 		}
 
 		idea_RAJ_underground_communists = {
