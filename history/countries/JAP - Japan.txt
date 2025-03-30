@@ -43,7 +43,7 @@ IF = {
 }
 add_ideas = MTG_naval_treaty_adherent
 
-rule = {
+set_rule = {
 	can_join_factions = no
 }
 
