@@ -1902,7 +1902,7 @@ focus_tree = {
         x = 4
         y = 1
         relative_position_id = RAJ_tryst_with_destiny
-        mutually_exclusive = { focus = RAJ_sideline_the_conflict focus = RAJ_pledge_for_the_allies }
+        mutually_exclusive = { focus = RAJ_pledge_for_the_allies }
         cost = 10
 
         ai_will_do = {
