@@ -742,213 +742,98 @@ characters = {
 	}
 
 	HUN_karoly_beregfy = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_karoly_beregfy
+		portraits = {
+			army = {
+				large = "GFX_Portrait_hungary_karoly_beregfy"
+				small = "GFX_idea_HUN_karoly_beregfy"
 			}
-
-			name = HUN_karoly_beregfy
-
-			portraits = {
-				army = {
-					large = "GFX_Portrait_hungary_karoly_beregfy"
-					small = "GFX_idea_HUN_karoly_beregfy"
-				}
-			}
-
-			corps_commander={
-				traits = { infantry_officer infantry_leader trickster trait_engineer swamp_fox }
-				skill = 4
-				attack_skill = 4
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 3
-				legacy_id=-1
-			}
-
 		}
-		instance = {
+		
+		corps_commander = {
+			traits = { trait_HUN_fascist_sympathies infantry_officer infantry_leader trickster trait_engineer swamp_fox }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = HUN_karoly_beregfy
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_karoly_beregfy
-
-			portraits = {
-				army = {
-					large = "GFX_Portrait_hungary_karoly_beregfy"
-					small = "GFX_idea_HUN_karoly_beregfy"
-				}
+			available = {
+				has_completed_focus = wuw_HUN_invest_in_ludovica_academy
 			}
-			
-			corps_commander = {
-				traits = { trait_HUN_fascist_sympathies infantry_officer infantry_leader trickster trait_engineer swamp_fox }
-				skill = 4
-				attack_skill = 4
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 3
-				legacy_id = -1
+			traits = {
+				army_chief_drill_2
 			}
-
-			advisor = {
-				slot = army_chief
-				idea_token = HUN_karoly_beregfy
-				allowed = {
-					original_tag = HUN
-				}
-				available = {
-					has_completed_focus = wuw_HUN_invest_in_ludovica_academy
-				}
-				traits = {
-					army_chief_drill_2
-				}
-				cost =  100
-				ai_will_do = {
-					base = 1
-				}
+			cost =  100
+			ai_will_do = {
+				base = 1
 			}
-
 		}
 	}
 
 	HUN_lajos_veress = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_lajos_veress
+		portraits = {
+			army = {
+				large = "GFX_Portrait_hungary_lajos_veress"
+				small = "GFX_idea_HUN_lajos_veress"
 			}
-
-			name = HUN_lajos_veress
-
-			portraits = {
-				army = {
-					large = "GFX_Portrait_hungary_lajos_veress"
-					small = "GFX_idea_HUN_lajos_veress"
-				}
-			}
-
-			corps_commander={
-				traits = { panzer_leader cavalry_leader trickster trait_engineer }
-				skill = 4
-				attack_skill = 4
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 3
-				legacy_id=-1
-			}
-
 		}
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			name = HUN_lajos_veress
-
-			portraits = {
-				army = {
-					large = "GFX_Portrait_hungary_lajos_veress"
-					small = "GFX_idea_HUN_lajos_veress"
-				}
-			}
-			
-			corps_commander={
-				traits = { panzer_leader cavalry_leader trickster trait_engineer }
-				skill = 4
-				attack_skill = 4
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 3
-				legacy_id=-1
-			}
-
+		
+		corps_commander={
+			traits = { panzer_leader cavalry_leader trickster trait_engineer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id=-1
 		}
 
 	}
 
 	HUN_ferenc_feketehalmyczeydner = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_ferenc_feketehalmyczeydner
+		portraits = {
+			army = {
+				large = "GFX_Portrait_hungary_ferenc_feketehalmy_czeydner"
+				small = "GFX_idea_HUN_ferenc_feketehalmy_czeydner"
 			}
-
-			name = HUN_ferenc_feketehalmyczeydner
-
-			portraits = {
-				army = {
-					large = "GFX_Portrait_hungary_ferenc_feketehalmy_czeydner"
-					small = "GFX_idea_HUN_ferenc_feketehalmy_czeydner"
-				}
-			}
-
-			field_marshal={
-				traits = { offensive_doctrine panzer_leader cavalry_leader trickster trait_engineer}
-				skill = 4
-				attack_skill = 5
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 3
-				legacy_id=-1
-			}
-
 		}
-		instance = {
+		
+		# Can become a field marshal through the military promotions focus
+		field_marshal={
+			traits = { trait_HUN_vitez trait_HUN_fascist_sympathies offensive_doctrine panzer_leader cavalry_leader trickster trait_engineer}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id=-1
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = HUN_ferenc_feketehalmyczeydner
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_ferenc_feketehalmyczeydner
-
-			portraits = {
-				army = {
-					large = "GFX_Portrait_hungary_ferenc_feketehalmy_czeydner"
-					small = "GFX_idea_HUN_ferenc_feketehalmy_czeydner"
-				}
+			available = {
+				has_completed_focus = wuw_HUN_make_the_magyar_legiero_known
 			}
-			
-			# Can become a field marshal through the military promotions focus
-			field_marshal={
-				traits = { trait_HUN_vitez trait_HUN_fascist_sympathies offensive_doctrine panzer_leader cavalry_leader trickster trait_engineer}
-				skill = 4
-				attack_skill = 5
-				defense_skill = 4
-				planning_skill = 3
-				logistics_skill = 3
-				legacy_id=-1
+			traits = {
+				air_chief_ground_support_2
 			}
-
-			advisor = {
-
-				slot = air_chief
-
-				idea_token = HUN_ferenc_feketehalmyczeydner
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					has_completed_focus = wuw_HUN_make_the_magyar_legiero_known
-				}
-
-				traits = {
-					air_chief_ground_support_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					base = 1
-				}
-
+			cost = 100
+			ai_will_do = {
+				base = 1
 			}
-
 		}
 	}
 
@@ -1073,14 +958,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = -1
-			visible = {
-				NOT = {
-					OR = {
-						has_government = communism
-						has_government = democratic
-					}
-				}
-			}
 		}
 		
 	}
@@ -1104,14 +981,6 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = -1
-			visible = {
-				NOT = {
-					OR = {
-						has_government = communism
-						has_government = democratic
-					}
-				}
-			}
 		}
 		
 	}
@@ -1135,8 +1004,6 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = -1
-			visible = {
-			}
 		}
 		
 	}
@@ -1160,8 +1027,6 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = -1
-			visible = {
-			}
 		}
 		
 	}
@@ -1185,8 +1050,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = -1
-			visible = {
-			}
 		}
 		
 	}
@@ -1211,8 +1074,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = -1
-			visible = {
-			}
 		}
 		
 	}
@@ -1236,8 +1097,6 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = -1
-			visible = {
-			}
 		}
 		
 	}
@@ -1261,8 +1120,6 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = -1
-			visible = {
-			}
 		}
 		
 	}
@@ -1368,9 +1225,7 @@ characters = {
 			logistics_skill = 1
 			legacy_id = -1
 			visible = {
-				OR = {
-					has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
-				}
+				has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
 			}
 		}
 		
@@ -1396,9 +1251,7 @@ characters = {
 			logistics_skill = 2
 			legacy_id = -1
 			visible = {
-				OR = {
-					has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
-				}
+				has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
 			}
 		}
 		
@@ -1408,80 +1261,33 @@ characters = {
 	### THEORISTS ###
 
 	HUN_shvoy_kalman = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_shvoy_kalman
+		portraits = {
+			army = {
+				small = "GFX_idea_HUN_shvoy_kalman"
 			}
-
-			name = HUN_shvoy_kalman
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_shvoy_kalman"
-				}
-			}
-
-			advisor = {
-				cost = 100
-				slot = theorist
-				idea_token = HUN_shvoy_kalman
-				ledger = army
-				allowed = {
-					original_tag = HUN
-				}
-				
-				traits = {
-					military_theorist
-				}
-			}
-
 		}
-		instance = {
+		advisor = {
+			cost = 100
+			slot = theorist
+			idea_token = HUN_shvoy_kalman
+			ledger = army
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_shvoy_kalman
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_shvoy_kalman"
+			available = {
+				OR = {
+					has_completed_focus = wuw_HUN_hold_war_games
+					wuw_HUN_does_not_have_trianon = yes
 				}
 			}
-
-			advisor = {
-
-				cost = 100
-
-				slot = theorist
-
-				idea_token = HUN_shvoy_kalman
-
-				ledger = army
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					OR = {
-						has_completed_focus = wuw_HUN_hold_war_games
-						wuw_HUN_does_not_have_trianon = yes
-					}
-				}
-				
-				traits = {
-					military_theorist
-				}
-
-				ai_will_do = {
-					base = 3
-				}
-
+			
+			traits = {
+				military_theorist
 			}
-
+			ai_will_do = {
+				base = 3
+			}
 		}
 	}
 
@@ -1511,14 +1317,9 @@ characters = {
 				original_tag = HUN
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Gotterdammerung"
-					}
-					OR = {
-						has_completed_focus = wuw_HUN_undercover_air_maneuvers
-						wuw_HUN_does_not_have_trianon = yes
-					}
+				OR = {
+					has_completed_focus = wuw_HUN_undercover_air_maneuvers
+					wuw_HUN_does_not_have_trianon = yes
 				}
 			}
 			traits = {
@@ -1534,185 +1335,79 @@ characters = {
 	### ARMY CHIEFS ###
 
 	HUN_ferenc_szombathelyi = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_ferenc_szombathelyi
+		portraits = {
+			army = {
+				large = GFX_portrait_HUN_ferenc_szombathelyi
+				small = GFX_portrait_HUN_ferenc_szombathelyi_small
 			}
-
-			name = HUN_ferenc_szombathelyi
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_ferenc_szombathelyi"
-				}
-			}
-
-			advisor = {
-				slot = army_chief
-				idea_token = HUN_ferenc_szombathelyi
-				allowed = {
-					original_tag = HUN
-				}
-				traits = {
-					army_chief_defensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-
 		}
-		instance = {
+		# Can become a general through the military promotions focus
+		corps_commander = {
+			traits = { hill_fighter }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+			visible = {
+				has_completed_focus = wuw_HUN_award_military_promotions
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = HUN_ferenc_szombathelyi
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_ferenc_szombathelyi
-
-			portraits = {
-				army = {
-					large = GFX_portrait_HUN_ferenc_szombathelyi
-					small = GFX_portrait_HUN_ferenc_szombathelyi_small
-				}
+			available = {
+				has_completed_focus = wuw_HUN_invest_in_ludovica_academy
 			}
-
-			# Can become a general through the military promotions focus
-			corps_commander = {
-				traits = { hill_fighter }
-				skill = 3
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 2
-				logistics_skill = 3
-				legacy_id = -1
-				visible = {
-					has_completed_focus = wuw_HUN_award_military_promotions
-				}
+			traits = {
+				army_chief_defensive_2
 			}
-
-			advisor = {
-
-				slot = army_chief
-
-				idea_token = HUN_ferenc_szombathelyi
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					has_completed_focus = wuw_HUN_invest_in_ludovica_academy
-				}
-
-				traits = {
-					army_chief_defensive_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					base = 1
-				}
-
+			cost = 100
+			ai_will_do = {
+				base = 1
 			}
-
 		}
 	}
 
 	HUN_hugo_sonyi = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_hugo_sonyi
+		portraits = {
+			army = {
+				large = GFX_portrait_HUN_hugo_sonyi
+				small = GFX_portrait_HUN_hugo_sonyi_small
 			}
-
-			name = HUN_hugo_sonyi
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_hugo_sonyi"
-				}
-			}
-
-			advisor = {
-
-				slot = army_chief
-
-				idea_token = HUN_hugo_sonyi
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				traits = {
-					army_chief_offensive_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					factor = 1.000
-				}
-
-			}
-
 		}
-		instance = {
+		corps_commander = {
+			traits = { trait_HUN_vitez trait_engineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = HUN_hugo_sonyi
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_hugo_sonyi
-
-			portraits = {
-				army = {
-					large = GFX_portrait_HUN_hugo_sonyi
-					small = GFX_portrait_HUN_hugo_sonyi_small
-				}
+			available = {
+				wuw_HUN_does_not_have_trianon = yes
 			}
-
-			corps_commander = {
-				traits = { trait_HUN_vitez trait_engineer }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 2
-				planning_skill = 2
-				logistics_skill = 1
-				legacy_id = -1
-				#visible = {
-				#}
+			traits = {
+				army_chief_offensive_2
 			}
-
-			advisor = {
-
-				slot = army_chief
-
-				idea_token = HUN_hugo_sonyi
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					wuw_HUN_does_not_have_trianon = yes
-				}
-
-				traits = {
-					army_chief_offensive_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					base = 3
-				}
-				
+			cost = 100
+			ai_will_do = {
+				base = 3
 			}
-
+			
 		}
 		
 	}
@@ -1888,542 +1583,219 @@ characters = {
 	### MILITARY HIGH COMMAND ###
 
 	HUN_sandor_magyarossy = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_sandor_magyarossy
+		portraits = {
+			army = {
+				small = "GFX_idea_HUN_sandor_magyarossy"
 			}
-
-			name = HUN_sandor_magyarossy
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_sandor_magyarossy"
-				}
-			}
-
-			advisor = {
-				slot = high_command
-				idea_token = HUN_sandor_magyarossy
-				allowed = {
-					original_tag = HUN
-				}
-				traits = {
-					air_air_combat_training_1
-				}
-				cost =  50
-				ai_will_do = {
-					base = 1
-				}
-			}
-
 		}
-		instance = {
+		
+		advisor = {
+			slot = high_command
+			idea_token = HUN_sandor_magyarossy
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_sandor_magyarossy
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_sandor_magyarossy"
+			available = {
+				OR = {
+					has_completed_focus = wuw_HUN_undercover_air_maneuvers
+					wuw_HUN_does_not_have_trianon = yes
 				}
 			}
-			
-			advisor = {
-
-				slot = high_command
-
-				idea_token = HUN_sandor_magyarossy
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					OR = {
-						has_completed_focus = wuw_HUN_undercover_air_maneuvers
-						wuw_HUN_does_not_have_trianon = yes
-					}
-				}
-
-				traits = {
-					air_air_combat_training_2
-				}
-
-				cost =  100
-
-				ai_will_do = {
-					base = 1
-				}
-
+			traits = {
+				air_air_combat_training_2
 			}
-
+			cost =  100
+			ai_will_do = {
+				base = 1
+			}
 		}
 	}
 
 	HUN_gusztav_jany = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_gusztav_jany
+		portraits = {
+			army = {
+				large = GFX_portrait_HUN_gusztav_jany
+				small = GFX_portrait_HUN_gusztav_jany_small
 			}
-
-			name = HUN_gusztav_jany
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_gusztav_jany"
-				}
-			}
-
-			advisor = {
-
-				slot = high_command
-
-				idea_token = HUN_gusztav_jany
-
-				ledger = army
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				traits = {
-					army_armored_1
-				}
-
-				cost =  50
-
-				ai_will_do = {
-					factor = 1.000
-				}
-
-			}
-
 		}
-		instance = {
+		corps_commander = {
+			traits = { trait_HUN_vitez infantry_leader armor_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = HUN_gusztav_jany
+			ledger = army
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_gusztav_jany
-
-			portraits = {
-				army = {
-					large = GFX_portrait_HUN_gusztav_jany
-					small = GFX_portrait_HUN_gusztav_jany_small
-				}
+			available = {
+				has_completed_focus = wuw_HUN_form_the_gyorshadtest
 			}
-
-			corps_commander = {
-				traits = { trait_HUN_vitez infantry_leader armor_officer }
-				skill = 2
-				attack_skill = 3
-				defense_skill = 1
-				planning_skill = 2
-				logistics_skill = 1
-				legacy_id = -1
-				#visible = {
-				#}
+			traits = {
+				army_armored_1
 			}
-
-			advisor = {
-
-				slot = high_command
-
-				idea_token = HUN_gusztav_jany
-
-				ledger = army
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					has_completed_focus = wuw_HUN_form_the_gyorshadtest
-				}
-
-				traits = {
-					army_armored_1
-				}
-
-				cost =  50
-
-				ai_will_do = {
-					base = 2
-				}
-				
+			cost =  50
+			ai_will_do = {
+				base = 2
 			}
-
+			
 		}
 	}
 
 	HUN_dezso_laszlo = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_dezso_laszlo
+		portraits = {
+			army = {
+				large = GFX_portrait_HUN_dezso_laszlo
+				small = GFX_portrait_HUN_dezso_laszlo_small
 			}
-
-			name = HUN_dezso_laszlo
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_dezso_laszlo"
-				}
-			}
-
-			advisor = {
-
-				slot = high_command
-
-				idea_token = HUN_dezso_laszlo
-
-				ledger = army
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				traits = {
-					army_regrouping_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					factor = 1.000
-				}
-
-			}
-
 		}
-		instance = {
+		corps_commander = {
+			traits = { trait_HUN_vitez trait_HUN_fascist_sympathies organizer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = HUN_dezso_laszlo
+			ledger = army
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_dezso_laszlo
-
-			portraits = {
-				army = {
-					large = GFX_portrait_HUN_dezso_laszlo
-					small = GFX_portrait_HUN_dezso_laszlo_small
-				}
+			available = {
+				has_completed_focus = wuw_HUN_award_military_promotions
 			}
-
-			corps_commander = {
-				traits = { trait_HUN_vitez trait_HUN_fascist_sympathies organizer }
-				skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
-				legacy_id = -1
-				#visible = {
-				#}
+			traits = {
+				army_regrouping_2
 			}
-
-			advisor = {
-
-				slot = high_command
-
-				idea_token = HUN_dezso_laszlo
-
-				ledger = army
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					has_completed_focus = wuw_HUN_award_military_promotions
-				}
-
-				traits = {
-					army_regrouping_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					base = 1
-				}
-				
+			cost = 100
+			ai_will_do = {
+				base = 1
 			}
-
+			
 		}
 	}
 
 	HUN_jeno_ratz = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_jeno_ratz
+		portraits = {
+			army = {
+				large = GFX_portrait_HUN_jeno_ratz
+				small = GFX_portrait_HUN_jeno_ratz_small
 			}
-
-			name = HUN_jeno_ratz
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_jeno_ratz"
-				}
-			}
-
-			advisor = {
-
-				slot = high_command
-
-				idea_token = HUN_jeno_ratz
-
-				ledger = air
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				traits = {
-					air_air_combat_training_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					factor = 1.000
-				}
-
-			}
-
 		}
-		instance = {
+		corps_commander = {
+			traits = { trait_HUN_vitez infantry_leader }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = HUN_jeno_ratz
+			ledger = army
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_jeno_ratz
-
-			portraits = {
-				army = {
-					large = GFX_portrait_HUN_jeno_ratz
-					small = GFX_portrait_HUN_jeno_ratz_small
-				}
+			available = {
+				has_completed_focus = wuw_HUN_light_infantry_divisions_doctrine
 			}
-
-			corps_commander = {
-				traits = { trait_HUN_vitez infantry_leader }
-				skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
-				legacy_id = -1
-				#visible = {
-				#}
+			traits = {
+				army_infantry_1
 			}
-
-			advisor = {
-
-				slot = high_command
-
-				idea_token = HUN_jeno_ratz
-
-				ledger = army
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					has_completed_focus = wuw_HUN_light_infantry_divisions_doctrine
-				}
-
-				traits = {
-					army_infantry_1
-				}
-
-				cost = 50
-
-				ai_will_do = {
-					base = 2
-				}
-				
+			cost = 50
+			ai_will_do = {
+				base = 2
 			}
-
+			
 		}
 	}
 
 	HUN_henrik_werth = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_henrik_werth
+		portraits = {
+			army = {
+				large = GFX_portrait_HUN_henrik_werth
+				small = GFX_portrait_HUN_henrik_werth_small
 			}
-
-			name = HUN_henrik_werth
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_henrik_werth"
-				}
-			}
-
-			advisor = {
-				slot = high_command
-
-				idea_token = HUN_henrik_werth
-
-				ledger = army
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				traits = {
-					army_cavalry_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					factor = 1.000
-				}
-
-			}
-
 		}
-		instance = {
+		field_marshal = {
+			traits = { trait_HUN_fascist_sympathies }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				OR = {
+					has_completed_focus = wuw_HUN_integrate_the_volksbund
+					has_completed_focus = wuw_HUN_invite_german_investors
+					has_completed_focus = wuw_HUN_volksbund_der_deutschen_in_ungarn
+				}
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = HUN_henrik_werth
+			ledger = army
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_henrik_werth
-
-			portraits = {
-				army = {
-					large = GFX_portrait_HUN_henrik_werth
-					small = GFX_portrait_HUN_henrik_werth_small
-				}
+			available = {
+				has_completed_focus = wuw_HUN_doctrinal_studies
 			}
-
-			field_marshal = {
-				traits = { trait_HUN_fascist_sympathies }
-				skill = 3
-				attack_skill = 3
-				defense_skill = 2
-				planning_skill = 3
-				logistics_skill = 2
-				legacy_id = -1
-				visible = {
-					OR = {
-						has_completed_focus = wuw_HUN_integrate_the_volksbund
-						has_completed_focus = wuw_HUN_invite_german_investors
-						has_completed_focus = wuw_HUN_volksbund_der_deutschen_in_ungarn
-					}
-				}
+			traits = {
+				army_entrenchment_2
 			}
-
-			advisor = {
-				slot = high_command
-
-				idea_token = HUN_henrik_werth
-
-				ledger = army
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					has_completed_focus = wuw_HUN_doctrinal_studies
-				}
-
-				traits = {
-					army_entrenchment_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					base = 1
-				}
-				
+			cost = 100
+			ai_will_do = {
+				base = 1
 			}
-
+			
 		}
 	}
 
 	HUN_franz_anton_bach = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_franz_anton_bach
+		portraits = {
+			army = {
+				large = GFX_portrait_HUN_franz_anton_bach
+				small = GFX_portrait_HUN_franz_anton_bach_small
 			}
-
-			name = HUN_franz_anton_bach
-
-			portraits = {
-				army = {
-					large = GFX_portrait_HUN_franz_anton_bach
-					small = GFX_portrait_HUN_franz_anton_bach_small
-				}
-			}
-
-			#country_leader = {
-			#	ideology = nazism
-			#	traits = { nazi_sympathizer volksgruppenfurher_der_volksbund }
-			#	expire = "1965.1.1.1"
-			#	id = -1
-			#}
-
 		}
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			name = HUN_franz_anton_bach
-
-			portraits = {
-				army = {
-					large = GFX_portrait_HUN_franz_anton_bach
-					small = GFX_portrait_HUN_franz_anton_bach_small
+		corps_commander = {
+			traits = { trait_HUN_fascist_sympathies militias_officer }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
+			visible = {
+				OR = {
+					has_country_leader = {
+						ruling_only = yes
+						character = HUN_franz_anton_bach
+					}	
+					has_completed_focus = wuw_HUN_volksbund_der_deutschen_in_ungarn
 				}
 			}
-
-			#country_leader = {
-			#	ideology = nazism
-			#	traits = { nazi_sympathizer volksgruppenfurher_der_volksbund }
-			#	expire = "1965.1.1.1"
-			#	id = -1
-			#}
-
-			corps_commander = {
-				traits = { trait_HUN_fascist_sympathies militias_officer }
-				skill = 2
-				attack_skill = 3
-				defense_skill = 1
-				planning_skill = 2
-				logistics_skill = 1
-				legacy_id = -1
-				visible = {
-					OR = {
-						has_country_leader = {
-							ruling_only = yes
-							character = HUN_franz_anton_bach
-						}	
-						has_completed_focus = wuw_HUN_volksbund_der_deutschen_in_ungarn
-					}
-				}
-			}
-
 		}
 	}
 
@@ -2431,236 +1803,84 @@ characters = {
 	### POLITICAL ADVISORS ###
 	
 	HUN_kalman_kanya = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_kalman_kanya
+		portraits = {
+			army = {
+				small = "GFX_idea_HUN_kalman_kanya"
 			}
-
-			name = HUN_kalman_kanya
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_kalman_kanya"
-				}
-			}
-
-			advisor = {
-
-				slot = political_advisor
-
-				idea_token = HUN_kalman_kanya
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				traits = {
-					compassionate_gentleman 
-				}
-
-			}
-
 		}
-		instance = {
+		advisor = {
+			slot = political_advisor
+			idea_token = HUN_kalman_kanya
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_kalman_kanya
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_kalman_kanya"
-				}
+			traits = {
+				HUN_irredentist_foreign_minister 
 			}
-
-			advisor = {
-
-				slot = political_advisor
-
-				idea_token = HUN_kalman_kanya
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					NOT = {
-						OR = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
-				}
-
-				traits = {
-					HUN_irredentist_foreign_minister 
-				}
-
-				ai_will_do = {
-					base = 1
-				}
-				
+			ai_will_do = {
+				base = 1
 			}
-
+			
 		}
 	}
 
 	HUN_lajos_remenyi_schneller = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_lajos_remenyi_schneller
+		portraits = {
+			army = {
+				small = "GFX_idea_HUN_lajos_remenyi_schneller"
 			}
-
-			name = HUN_lajos_remenyi_schneller
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_lajos_remenyi_schneller"
-				}
-			}
-
-			advisor = {
-				slot = political_advisor
-
-				idea_token = HUN_lajos_remenyi_schneller
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				traits = {
-					captain_of_industry 
-				}
-
-			}
-
 		}
-		instance = {
+		advisor = {
+			slot = political_advisor
+			idea_token = HUN_lajos_remenyi_schneller
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_lajos_remenyi_schneller
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_lajos_remenyi_schneller"
-				}
+			traits = {
+				financial_expert 
 			}
-
-			advisor = {
-				slot = political_advisor
-
-				idea_token = HUN_lajos_remenyi_schneller
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-				}
-
-				traits = {
-					financial_expert 
-				}
-
-				ai_will_do = {
-					base = 2
-				}
-				
+			ai_will_do = {
+				base = 2
 			}
-
+			
 		}
 	}
 
 	HUN_vilmos_roder = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_vilmos_roder
+		portraits = {
+			army = {
+				large = GFX_portrait_HUN_vilmos_roder
+				small = GFX_portrait_HUN_vilmos_roder_small
 			}
-
-			name = HUN_vilmos_roder
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_vilmos_roder"
-				}
-			}
-
-			advisor = {
-
-				slot = political_advisor
-
-				idea_token = HUN_vilmos_roder
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				traits = {
-					war_industrialist 
-				}
-
-			}
-
 		}
-		instance = {
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1 
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = HUN_vilmos_roder
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_vilmos_roder
-
-			portraits = {
-				army = {
-					large = GFX_portrait_HUN_vilmos_roder
-					small = GFX_portrait_HUN_vilmos_roder_small
-				}
+			available = {
+				has_completed_focus = wuw_HUN_invest_in_ludovica_academy
 			}
-
-			corps_commander = {
-				traits = { infantry_officer }
-				skill = 1
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 1
-				logistics_skill = 1
-				legacy_id = -1 
+			traits = {
+				army_chief_organizational_2
 			}
-
-			advisor = {
-			
-				slot = army_chief
-
-				idea_token = HUN_vilmos_roder
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					has_completed_focus = wuw_HUN_invest_in_ludovica_academy
-				}
-
-				traits = {
-					army_chief_organizational_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					base = 2
-				}
-
+			cost = 100
+			ai_will_do = {
+				base = 2
 			}
-
 		}
 	}
 
@@ -2682,14 +1902,11 @@ characters = {
 
 			allowed = {
 				original_tag = HUN
-				has_dlc = "Death or Dishonor"
 			}
 
 			visible = {
 				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_continue_the_regency
-					}
+					has_completed_focus = wuw_HUN_continue_the_regency
 				}
 				NOT = {
 					has_cosmetic_tag = vojvodina
@@ -2697,21 +1914,7 @@ characters = {
 			}
 
 			available = {
-				IF = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				IF = {
-					limit = {
-						# TODO:JA: Change this later!
-						has_dlc = "By Blood Alone"
-					}
-					has_completed_focus = wuw_HUN_end_the_regency
-				}
+				has_completed_focus = wuw_HUN_end_the_regency
 			}
 
 			traits = {
@@ -2727,174 +1930,37 @@ characters = {
 	}
 
 	HUN_kalman_daranyi = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
-			}
-
-			name = HUN_kalman_daranyi
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_kalman_daranyi"
-				}
-			}
-
-			advisor = {
-
-				slot = political_advisor
-
-				idea_token = HUN_kalman_daranyi
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				traits = {
-					smooth_talking_charmer 
-				}
-
-				ai_will_do = {
-					base = 1
-				}
-
-			}
-
-		}
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			name = HUN_kalman_daranyi
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_kalman_daranyi"
-				}
-			}
-
-			advisor = {
-
-				slot = political_advisor
-
-				idea_token = HUN_kalman_daranyi
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				visible = {
-					NOT = {
-						OR = {
-							has_completed_focus = wuw_HUN_end_the_regency
-							has_completed_focus = wuw_HUN_undermine_the_admiral
-						}
-					}
-				}
-
-				available = {
-					NOT = {
-						OR = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
-					has_completed_focus = wuw_HUN_strengthen_horthys_reign
-				}
-
-				traits = {
-					HUN_moderate_authoritarian 
-				}
-
-				ai_will_do = {
-					base = 1
-				}
-				
-			}
-
-		}
-	}
-
-	HUN_zoltan_tildy = {
-
-		name = HUN_zoltan_tildy
-
+		name = HUN_kalman_daranyi
 		portraits = {
 			army = {
-				small="GFX_idea_HUN_zoltan_tildy"
+				small = "GFX_idea_HUN_kalman_daranyi"
 			}
 		}
-	}
-
-	HUN_laszlo_rajk = {
-		instance = {
+		advisor = {
+			slot = political_advisor
+			idea_token = HUN_kalman_daranyi
 			allowed = {
+				original_tag = HUN
+			}
+			visible = {
 				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
-			}
-
-			name = HUN_laszlo_rajk
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_laszlo_rajk"
-				}
-			}
-
-			advisor = {
-
-				slot = political_advisor
-
-				idea_token = HUN_laszlo_rajk
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					IF = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
+					OR = {
+						has_completed_focus = wuw_HUN_end_the_regency
+						has_completed_focus = wuw_HUN_undermine_the_admiral
 					}
 				}
-
-				traits = {
-					communist_revolutionary 
-				}
-
-				ai_will_do = {
-					base = 0
-					modifier = {
-						add = 100
-					}
-				}
-
 			}
-
+			available = {
+				has_completed_focus = wuw_HUN_strengthen_horthys_reign
+			}
+			traits = {
+				HUN_moderate_authoritarian 
+			}
+			ai_will_do = {
+				base = 1
+			}
+			
 		}
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			name = HUN_laszlo_rajk
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_laszlo_rajk"
-				}
-			}
-
-		}
-
 	}
 
 	HUN_jozsef_szell = {
@@ -2915,12 +1981,6 @@ characters = {
 
 			allowed = {
 				original_tag = HUN
-			}
-
-			visible = {
-			}
-
-			available = {
 			}
 
 			traits = {
@@ -2956,12 +2016,6 @@ characters = {
 			}
 
 			available = {
-				NOT = {
-					OR = {
-						has_government = communism
-						has_government = democratic
-					}
-				}
 				has_completed_focus = wuw_HUN_devalue_the_pengo
 			}
 
@@ -2998,8 +2052,6 @@ characters = {
 			}
 
 			available = {
-				# This is replaced by an on_action
-				#has_war = no 
 				NOT = {
 					has_global_flag = HUN_entered_an_offensive_war_flag
 				}
@@ -3067,18 +2119,6 @@ characters = {
 
 	}
 
-	HUN_erno_gero = {
-
-		name = HUN_erno_gero
-
-		portraits = {
-			civilian = {
-				small = "GFX_portrait_HUN_erno_gero_small"
-			}
-		}
-
-	}
-
 	HUN_fidel_palffy = {
 
 		name = HUN_fidel_palffy
@@ -3133,9 +2173,6 @@ characters = {
 
 			allowed = {
 				original_tag = HUN
-			}
-
-			available = {
 			}
 
 			traits = {
@@ -3213,7 +2250,6 @@ characters = {
 
 			allowed = {
 				original_tag = HUN
-				has_dlc = "La Resistance"
 			}
 
 			available = {
@@ -3268,30 +2304,6 @@ characters = {
 				base = 3
 			}
 
-		}
-
-	}
-
-	HUN_sandor_garbai = {
-
-		name = HUN_sandor_garbai
-
-		portraits = {
-			civilian = {
-				small = "GFX_portrait_HUN_sandor_garbai_small"
-			}
-		}
-
-	}
-
-	HUN_jozsef_kelen = {
-
-		name = HUN_jozsef_kelen
-
-		portraits = {
-			civilian = {
-				small = "GFX_portrait_HUN_jozsef_kelen_small"
-			}
 		}
 
 	}
@@ -3352,7 +2364,6 @@ characters = {
 
 			allowed = {
 				original_tag = HUN
-				has_dlc = "La Resistance"
 			}
 
 			available = {
@@ -3371,18 +2382,6 @@ characters = {
 
 	}
 
-	HUN_imre_nagy = {
-
-		name = HUN_imre_nagy
-
-		portraits = {
-			civilian = {
-				small = "GFX_portrait_HUN_imre_nagy_small"
-			}
-		}
-
-	}
-
 	HUN_miklos_horthy_jr = {
 
 		name = HUN_miklos_horthy_jr
@@ -3394,7 +2393,6 @@ characters = {
 		}
 
 		advisor = {
-
 			slot = political_advisor
 
 			idea_token = HUN_miklos_horthy_jr
@@ -3402,23 +2400,18 @@ characters = {
 			allowed = {
 				original_tag = HUN
 			}
-
 			available = {
 				NOT = {
 					has_government = fascism
 				}
 			}
-
 			traits = {
 				modernizer_and_diplomat
 			}
-
 			ai_will_do = {
 				base = 1
 			}
-
 		}
-
 	}
 
 	HUN_pal_kiraly = {
@@ -3521,121 +2514,49 @@ characters = {
 	}
 	
 	HUN_gyula_gombos_de_jakfa = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		# Usually dies by event at the end of 1936
+		name = HUN_gyula_gombos_de_jakfa
+		portraits = {
+			army = {
+				large = GFX_portrait_HUN_gyula_gombos_de_jakfa
+				small = GFX_portrait_HUN_gyula_gombos_de_jakfa_small
 			}
-
-			name = HUN_gyula_gombos_de_jakfa_no_dlc_name
-
-			portraits = {
-				army = {
-					small = "GFX_idea_HUN_gyula_gombos_de_jakfa"
-				}
-			}
-
-			advisor = {
-
-				slot = political_advisor
-
-				idea_token = HUN_gyula_gombos_de_jakfa
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					IF = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-				}
-
-				traits = {
-					fascist_demagogue 
-				}
-
-				ai_will_do = {
-					base = 1
-				}
-
-			}
-
 		}
-		instance = {
+		# Should start as a locked advisor
+		advisor = {
+		
+			slot = political_advisor
+			can_be_fired = no
+			idea_token = HUN_gyula_gombos_de_jakfa
+			available = {
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = HUN_gyula_gombos_de_jakfa
+					}
+				}
+			}
+			visible = {
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = HUN_gyula_gombos_de_jakfa
+					}
+					has_country_leader = {
+						ruling_only = yes
+						character = HUN_ferenc_szalasi
+					}
+				}
+			}
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			# Usually dies by event at the end of 1936
-			name = HUN_gyula_gombos_de_jakfa
-
-			portraits = {
-				army = {
-					large = GFX_portrait_HUN_gyula_gombos_de_jakfa
-					small = GFX_portrait_HUN_gyula_gombos_de_jakfa_small
-				}
+			traits = {
+				HUN_fascist_prime_minister 
 			}
-
-			# Can become leader after the focus wuw_HUN_the_march_on_budapest
-			#country_leader = {
-			#	ideology = despotism
-			#	traits = { HUN_popular_among_paramilitaries }
-			#	expire = "1965.1.1.1"
-			#	id = -1
-			#}
-
-			# Should start as a locked advisor
-			advisor = {
-			
-				slot = political_advisor
-
-				can_be_fired = no
-
-				idea_token = HUN_gyula_gombos_de_jakfa
-
-				available = {
-					NOT = {
-						has_country_leader = {
-							ruling_only = yes
-							character = HUN_gyula_gombos_de_jakfa
-						}
-					}
-				}
-
-				visible = {
-					NOT = {
-						has_country_leader = {
-							ruling_only = yes
-							character = HUN_gyula_gombos_de_jakfa
-						}
-						has_country_leader = {
-							ruling_only = yes
-							character = HUN_ferenc_szalasi
-						}
-					}
-				}
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				traits = {
-					HUN_fascist_prime_minister 
-				}
-
-				ai_will_do = {
-					base = 1
-				}
-
+			ai_will_do = {
+				base = 1
 			}
-
 		}
 	}
 
