@@ -194,12 +194,7 @@ characters={
 				original_tag = MEX
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_heroic_military_college
-				}
+				has_completed_focus = MEX_focus_heroic_military_college
 			}
 			traits = {
 				superior_firepower_expert
@@ -276,12 +271,7 @@ characters={
 				original_tag = MEX
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_military_budget_review 
-				}
+				has_completed_focus = MEX_focus_military_budget_review 
 			}
 			traits = {
 				war_industrialist 
@@ -549,24 +539,10 @@ characters={
 			idea_token = MEX_leon_trotsky
 			cost = 75.000
 			visible = {
-				has_global_flag = flag_mexico_invited_trotsky_to_government
+				always = no
 			}
 			allowed = {
 				original_tag = MEX
-			}
-			available = {
-				OR = {
-					has_government = communism
-					has_government = neutrality
-				}
-				has_global_flag = flag_mexico_invited_trotsky_to_government
-				NOT = {
-					OR = {
-						has_global_flag = trotsky_not_welcome_in_mexico
-						has_global_flag = flag_trotsky_dead
-						has_global_flag = flag_trotsky_has_returned_to_ussr_from_mexico
-					}
-				}
 			}
 			traits = {
 				red_army_organizer
@@ -773,20 +749,7 @@ characters={
 				original_tag = MEX
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_confederation_of_mexican_workers 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				has_completed_focus = MEX_focus_confederation_of_mexican_workers
 			}
 			traits = {
 				ambitious_union_boss 
@@ -808,20 +771,7 @@ characters={
 				original_tag = MEX
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_the_gold_shirts 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				has_completed_focus = MEX_focus_the_gold_shirts
 			}
 			traits = {
 				syncretic_revanchist 
@@ -843,20 +793,7 @@ characters={
 				original_tag = MEX
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_exile_calles 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				has_completed_focus = MEX_focus_exile_calles
 			}
 			traits = {
 				social_reformer 
@@ -878,20 +815,7 @@ characters={
 				original_tag = MEX
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_jefe_maximo 
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
+				has_completed_focus = MEX_focus_jefe_maximo
 			}
 			traits = {
 				shadow_of_calles 
@@ -933,12 +857,7 @@ characters={
 				original_tag = MEX
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_liberalize_the_banking_sector 
-				}
+				has_completed_focus = MEX_focus_liberalize_the_banking_sector
 			}
 			traits = {
 				financial_expert 
@@ -961,12 +880,7 @@ characters={
 				original_tag = MEX
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_agricultural_credit_bank 
-				}
+				has_completed_focus = MEX_focus_agricultural_credit_bank
 			}
 			traits = {
 				captain_of_industry 
@@ -990,12 +904,7 @@ characters={
 				original_tag = MEX
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_triumph_over_the_cristeros 
-				}
+				has_completed_focus = MEX_focus_triumph_over_the_cristeros
 			}
 			traits = {
 				prince_of_terror 

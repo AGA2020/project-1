@@ -291,7 +291,6 @@ characters={
 			allowed = {
 				original_tag = AST
 			}
-			
 			traits = {
 				naval_theorist
 			}
@@ -313,7 +312,6 @@ characters={
 			allowed = {
 				original_tag = AST
 			}
-			
 			traits = {
 				air_warfare_theorist
 			}
@@ -624,7 +622,6 @@ characters={
 			ledger = army
 			allowed = {
 				original_tag = AST
-				has_dlc = "Together for Victory"
 			}
 			cost = 150.000
 			available = {
@@ -686,6 +683,19 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_AST_ben_chifley" #small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = AST_ben_chifley
+			allowed = {
+				original_tag = AST
+			}
+			cost = 100.000
+			traits = {
+				smooth_talking_charmer 
+			}
+			available = {
 			}
 		}		
 	}
