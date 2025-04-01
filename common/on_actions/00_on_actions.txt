@@ -207,17 +207,6 @@ on_actions = {
 				}
 				set_country_flag = achievement_med_plutonium
 			}
-
-			if = { #Med Plutonium 2 
-				limit = {
-					tag = DEN
-					FROM = {
-						is_owned_by = SWE
-						is_core_of = SWE
-					}
-				}
-				set_country_flag = achievement_med_plutonium_2
-			}
 			if = {
 				limit = {
 					FROM = {

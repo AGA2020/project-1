@@ -59,32 +59,18 @@ characters={
 			allowed  = {
 				original_tag  = USA
 			}
-			available  = {
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
+			available = {
+				has_completed_focus  = USA_suspend_the_presecution 
+				NOT  = {
+					focus_progress  = {
+						focus  = USA_neutrality_act 
+						progress > 0.000
 					}
-					has_completed_focus  = USA_suspend_the_presecution 
-					NOT  = {
-						focus_progress  = {
-							focus  = USA_neutrality_act 
-							progress > 0.000
-						}
-					}
-					NOT  = {
-						focus_progress  = {
-							focus  = USA_limited_intervention 
-							progress > 0.000
-						}
-					}
-					NOT  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-					NOT = {
-						has_country_leader = {
-							ruling_only = yes
-							character = USA_earl_browder
-						}
+				}
+				NOT  = {
+					focus_progress  = {
+						focus  = USA_limited_intervention 
+						progress > 0.000
 					}
 				}
 			}
@@ -130,13 +116,12 @@ characters={
 			slot = theorist
 			idea_token = george_patton
 			ledger = army
-				allowed = {
-					original_tag = USA
-				}
-				
-				traits = {
-					mobile_warfare_expert
-				}
+			allowed = {
+				original_tag = USA
+			}
+			traits = {
+				mobile_warfare_expert
+			}
 		}
 
 		corps_commander={
@@ -168,7 +153,6 @@ characters={
 			allowed = {
 				original_tag = USA
 			}
-			
 			traits = {
 				superior_firepower_expert
 			}
@@ -199,15 +183,15 @@ characters={
 			slot = army_chief
 			idea_token = dwight_eisenhower
 			allowed = {
-					original_tag = USA
-				}
-				traits = {
-					army_chief_offensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+				original_tag = USA
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 		
 		field_marshal={
@@ -273,16 +257,16 @@ characters={
 			slot = high_command
 			idea_token = mark_clark
 			ledger = army
-				allowed = {
-					original_tag = USA
-				}
-				traits = {
-					army_infantry_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			allowed = {
+				original_tag = USA
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 		
 		corps_commander={
@@ -311,14 +295,6 @@ characters={
 			idea_token = douglas_macarthur
 			allowed = {
 				original_tag = USA
-			}
-			available = {
-				NOT = {
-					has_country_leader = {
-						ruling_only = yes
-						character = USA_douglas_macarthur
-					}
-				}
 			}
 			traits = {
 				army_chief_morale_2

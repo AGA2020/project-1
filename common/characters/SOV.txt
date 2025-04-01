@@ -3515,14 +3515,6 @@ characters = {
 				available = {
 					if = {
 						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-					if = {
-						limit = {
 							has_character_flag = SOV_exiled_flag
 						}
 						NOT = { has_character_flag = SOV_exiled_flag }
@@ -3573,14 +3565,6 @@ characters = {
 				}
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
 				if = {
 					limit = {
 						has_character_flag = SOV_exiled_flag
