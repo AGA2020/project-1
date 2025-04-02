@@ -36,16 +36,6 @@ focus_tree = {
 		x = 76
 		y = 0
 	}
-	
-	#Focus Path shortcuts	
-	shortcut = {
-		name = GER_oppose_hitler_shortcut
-		target = GER_oppose_hitler_ww 
-		scroll_wheel_factor = 0.485
-		trigger = {
-			has_dlc = "Gotterdammerung"
-		}
-	}
 
 	shortcut = {
 		name = GER_historical_path_shortcut
