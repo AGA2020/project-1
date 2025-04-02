@@ -48,15 +48,6 @@ focus_tree = {
 	}
 
 	shortcut = {
-		name = GER_oppose_hitler_shortcut
-		target = GER_oppose_hitler
-		scroll_wheel_factor = 0.55
-		trigger = {
-			NOT = { has_dlc = "Gotterdammerung" }
-		}
-	}
-
-	shortcut = {
 		name = GER_historical_path_shortcut
 		target = GER_remilitarize_the_rhineland
 		scroll_wheel_factor = 0.469 #Optional parameter, if left unset will use existing zoomlevel. Warning: there's no good way for this to respect client resolution.
