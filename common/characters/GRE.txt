@@ -45,84 +45,67 @@ characters={
 	}
 
 	GRE_ioannis_metaxas={
-		instance={
-			allowed={ NOT = { has_dlc = "Battle for the Bosporus" } }
-			name=GRE_ioannis_metaxas
-			portraits={
-				civilian={
-					large=GFX_portrait_GRE_ioannis_metaxas
-				}
+		name=GRE_ioannis_metaxas
+		portraits={
+			army={
+				small="GFX_idea_gre_ioannis_metaxas"
 			}
-			country_leader={
-				ideology=despotism
-				expire="1965.1.1.1"
-				id=-1
+			civilian={
+				large=GFX_portrait_GRE_ioannis_metaxas
 			}
 		}
-		instance={
-			allowed = { has_dlc = "Battle for the Bosporus" }
-			name=GRE_ioannis_metaxas
-			portraits={
-				army={
-					small="GFX_idea_gre_ioannis_metaxas"
-				}
-				civilian={
-					large=GFX_portrait_GRE_ioannis_metaxas
-				}
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_ioannis_metaxas
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
 			}
-			advisor={
-				slot = political_advisor
-				idea_token = GRE_ioannis_metaxas
-				allowed = {
-					original_tag = GRE
-					has_dlc = "Battle for the Bosporus"
-				}
-				available = {
-					AND = {
-						OR = {
-							custom_trigger_tooltip = {
-								tooltip = GRE_monarchists_friendly_or_loyal
-								check_variable = {
-									var = GRE_monarchist_loyalty
-									value = 1.000
-									compare = greater_than_or_equals 
-								}
-							}
-							custom_trigger_tooltip = {
-								tooltip = GRE_fascists_friendly_or_loyal
-								check_variable = {
-									var = GRE_fascist_loyalty
-									value = 1.000
-									compare = greater_than_or_equals 
-								}
+			available = {
+				AND = {
+					OR = {
+						custom_trigger_tooltip = {
+							tooltip = GRE_monarchists_friendly_or_loyal
+							check_variable = {
+								var = GRE_monarchist_loyalty
+								value = 1.000
+								compare = greater_than_or_equals 
 							}
 						}
-						NOT = {
-							has_country_leader = {
-								character = GRE_ioannis_metaxas
-								ruling_only = yes 
+						custom_trigger_tooltip = {
+							tooltip = GRE_fascists_friendly_or_loyal
+							check_variable = {
+								var = GRE_fascist_loyalty
+								value = 1.000
+								compare = greater_than_or_equals 
 							}
-							has_country_flag = GRE_metaxas_is_dead_crab_rave_flag 
 						}
 					}
-				}
-				traits = {
-					devoted_corporatist 
-				}
-			}
-			country_leader = {
-				ideology = despotism
-				expire="1965.1.1.1"
-				traits = { 
-					arkhigos
+					NOT = {
+						has_country_leader = {
+							character = GRE_ioannis_metaxas
+							ruling_only = yes 
+						}
+						has_country_flag = GRE_metaxas_is_dead_crab_rave_flag 
+					}
 				}
 			}
-			country_leader = {
-				expire = "1965.1.1"
-				ideology = fascism_ideology
-				traits = {
-					arkhigos
-				}
+			traits = {
+				devoted_corporatist 
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire="1965.1.1.1"
+			traits = { 
+				arkhigos
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				arkhigos
 			}
 		}
 	}
@@ -324,7 +307,6 @@ characters={
 			name = GRE_napoleon_zervas
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
 				OR = {
@@ -462,7 +444,6 @@ characters={
 			name = GRE_alexandros_sakellariou
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
 				custom_trigger_tooltip = {
@@ -507,7 +488,6 @@ characters={
 			ledger = navy
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			traits = {
 				naval_theorist
@@ -622,7 +602,6 @@ characters={
 			name = "GRE_petros_voulgaris"
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
 				custom_trigger_tooltip = {
@@ -656,7 +635,6 @@ characters={
 			idea_token = GRE_georgios_tsolakoglou
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
 				custom_trigger_tooltip = {
@@ -679,60 +657,26 @@ characters={
 	}
 
 	GRE_vasilios_tsarpalis={
-		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
-			name=GRE_vasilios_tsarpalis
-			portraits={
-				army={
-					small="GFX_idea_gre_vasilios_tsarpalis"
-				}
-			}
-			advisor={
-				slot = air_chief
-				idea_token = GRE_vasilios_tsarpalis
-				name = "GRE_vasilios_tsarpalis"
-				allowed = {
-					original_tag = GRE
-					has_dlc = "Battle for the Bosporus"
-				}
-				traits = {
-					air_chief_safety_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+		name=GRE_vasilios_tsarpalis
+		portraits={
+			army={
+				small="GFX_idea_gre_vasilios_tsarpalis"
 			}
 		}
-		instance = {
+		advisor={
+			slot = air_chief
+			idea_token = GRE_vasilios_tsarpalis
+			name = "GRE_vasilios_tsarpalis"
 			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
+				original_tag = GRE
 			}
-			name=GRE_vasilios_tsarpalis
-			portraits={
-				army={
-					small="GFX_idea_generic_air_europe_2"
-				}
+			traits = {
+				air_chief_safety_2
 			}
-			advisor={
-				slot = air_chief
-				idea_token = GRE_vasilios_tsarpalis
-				allowed = {
-					original_tag = GRE
-					NOT = {
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				traits = {
-					air_chief_safety_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}			
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	GRE_epameinondas_kavvadias={
@@ -748,7 +692,6 @@ characters={
 			ledger = air
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			traits = {
 				navy_screen_2
@@ -774,7 +717,6 @@ characters={
 			ledger = air
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			traits = {
 				air_warfare_theorist
@@ -795,7 +737,6 @@ characters={
 			ledger = navy
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			traits = {
 				army_artillery_2
@@ -807,100 +748,38 @@ characters={
 		}
 	}
 
-	GRE_aristeidis_moraitinis={
-		name=GRE_aristeidis_moraitinis
+	GRE_aris_velouchiotis={
+		name=GRE_aris_velouchiotis
 		portraits={
 			army={
-				small="GFX_idea_generic_air_europe_2"
+				small="GFX_idea_gre_aris_velouchiotis"
+				large = "GFX_portrait_gre_aris_velouchiotis" #Can become unit leader later
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = GRE_aristeidis_moraitinis
-			ledger = air
+			slot = army_chief
+			idea_token = GRE_aris_velouchiotis
+			name = "GRE_aris_velouchiotis"
 			allowed = {
 				original_tag = GRE
-				NOT = {
-					has_dlc = "Battle for the Bosporus"
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = GRE_communists_friendly_or_loyal
+					check_variable = {
+						var = GRE_communist_loyalty
+						value = 1.000
+						compare = greater_than_or_equals
+					}
 				}
 			}
 			traits = {
-				air_bomber_interception_2
+				army_chief_defensive_2
 			}
-				cost = 100
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
-		}
-	}
-
-	GRE_aris_velouchiotis={
-		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
-			name=GRE_aris_velouchiotis
-			portraits={
-				army={
-					small="GFX_idea_gre_aris_velouchiotis"
-					large = "GFX_portrait_gre_aris_velouchiotis" #Can become unit leader later
-				}
-			}
-			advisor={
-				slot = army_chief
-				idea_token = GRE_aris_velouchiotis
-				name = "GRE_aris_velouchiotis"
-				allowed = {
-					original_tag = GRE
-					has_dlc = "Battle for the Bosporus"
-				}
-				available = {
-					custom_trigger_tooltip = {
-						tooltip = GRE_communists_friendly_or_loyal
-						check_variable = {
-							var = GRE_communist_loyalty
-							value = 1.000
-							compare = greater_than_or_equals
-						}
-					}
-				}
-				traits = {
-					army_chief_defensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}		
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
-			}
-			name=GRE_aris_velouchiotis
-			portraits={
-				army={
-					small="GFX_idea_generic_army_europe_1"
-				}
-			}
-			advisor={
-				slot = high_command
-				idea_token = GRE_aris_velouchiotis
-				ledger = army
-				allowed = {
-					original_tag = GRE
-					NOT = {
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				traits = {
-					army_artillery_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-			}			
 		}
 	}
 
@@ -916,7 +795,6 @@ characters={
 			idea_token = GRE_aristeidis_dimitratos
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
 				custom_trigger_tooltip = {
@@ -935,54 +813,24 @@ characters={
 	}
 
 	GRE_georgios_papandreou={
-		instance = {
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-			}
-			name=GRE_georgios_papandreou
-			portraits={
-				army={
-					small="GFX_idea_gre_george_papandreou"
-				}
-			}
-			advisor={
-				slot = political_advisor
-				idea_token = GRE_georgios_papandreou
-				name = GRE_georgios_papandreou
-				allowed = {
-					original_tag = GRE
-					has_dlc = "Battle for the Bosporus"
-				}
-				available = {
-					has_government = democratic 
-				}
-				traits = {
-					resolute_social_democrat 
-				}
+		name=GRE_georgios_papandreou
+		portraits={
+			army={
+				small="GFX_idea_gre_george_papandreou"
 			}
 		}
-		instance = {
+		advisor={
+			slot = political_advisor
+			idea_token = GRE_georgios_papandreou
+			name = GRE_georgios_papandreou
 			allowed = {
-				NOT = { has_dlc = "Battle for the Bosporus" }
+				original_tag = GRE
 			}
-			name=GRE_georgios_papandreou
-			portraits={
-				army={
-					small="GFX_idea_generic_political_advisor_europe_2"
-				}
+			available = {
+				has_government = democratic 
 			}
-			advisor={
-				slot = political_advisor
-				idea_token = GRE_georgios_papandreou
-				allowed = {
-					original_tag = GRE
-					NOT = {
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				traits = {
-					silent_workhorse 
-				}
+			traits = {
+				resolute_social_democrat 
 			}
 		}
 	}
@@ -999,10 +847,6 @@ characters={
 			idea_token = GRE_father_dimistrios
 			allowed = {
 				original_tag = GRE
-				AND = {
-					has_dlc = "La Resistance"
-					has_dlc = "Battle for the Bosporus"
-				}
 			}
 			available = {
 				has_intelligence_agency = yes 
@@ -1025,7 +869,6 @@ characters={
 			idea_token = GRE_sophoklis_venizelos
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
 				custom_trigger_tooltip = {
@@ -1039,51 +882,6 @@ characters={
 			}
 			traits = {
 				backroom_backstabber 
-			}
-		}
-	}
-
-	GRE_dimitris_glinos={
-		name=GRE_dimitris_glinos
-		portraits={
-			army={
-				small="GFX_idea_gre_dimitris_glinos"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_dimitris_glinos
-			allowed = {
-				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
-			}
-			available = {
-				has_government = communism 
-			}
-			traits = {
-				marxist_academic 
-			}
-		}		
-	}
-
-	GRE_evripidis_bakirtris={
-		name=GRE_evripidis_bakirtris
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_3"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_evripidis_bakirtris
-			allowed = {
-				original_tag = GRE
-				NOT = {
-					has_dlc = "Battle for the Bosporus"
-				}
-			}
-			traits = {
-				war_industrialist 
 			}
 		}
 	}
@@ -1103,7 +901,6 @@ characters={
 			idea_token = GRE_aristotle_onassis
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
 				has_country_flag = onassis_proposition_accepted 
@@ -1135,7 +932,6 @@ characters={
 			idea_token = GRE_dimitrios_holevas
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
 				custom_trigger_tooltip = {
@@ -1165,28 +961,6 @@ characters={
 		}
 	}
 
-	GRE_damaskinos={
-		name=GRE_damaskinos
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_5"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = GRE_damaskinos
-			allowed = {
-				original_tag = GRE
-				NOT = {
-					has_dlc = "Battle for the Bosporus"
-				}
-			}
-			traits = {
-				compassionate_gentleman 
-			}
-		}
-	}
-
 	GRE_konstantinos_maniadakis={
 		name=GRE_konstantinos_maniadakis
 		portraits={
@@ -1199,7 +973,6 @@ characters={
 			idea_token = GRE_konstantinos_maniadakis
 			allowed = {
 				original_tag = GRE
-				has_dlc = "Battle for the Bosporus"
 			}
 			available = {
 				OR = {

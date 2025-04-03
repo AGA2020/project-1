@@ -720,7 +720,6 @@ characters={
 			idea_token = CHI_lin_sen
 			allowed  = {
 				original_tag  = CHI
-				has_dlc = "Waking the Tiger"
 			}
 			traits  = {
 				popular_figurehead 
@@ -740,7 +739,6 @@ characters={
 			idea_token = CHI_chen_guofu
 			allowed  = {
 				original_tag  = CHI
-				has_dlc = "Waking the Tiger"
 			}
 			traits  = {
 				backroom_backstabber 
@@ -767,7 +765,6 @@ characters={
 			}
 			allowed  = {
 				original_tag  = CHI
-				has_dlc = "Waking the Tiger"
 			}
 			traits  = {
 				first_lady 

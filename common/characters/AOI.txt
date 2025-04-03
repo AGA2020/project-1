@@ -9,7 +9,6 @@ characters = {
 				small = GFX_portrait_AOI_amedeo_di_savoia_aosta_small
 			}
 		}
-
 		country_leader = {
 			ideology = fascism_ideology
 			traits = { duke_of_aosta iron_duke }
@@ -22,7 +21,6 @@ characters = {
 			expire = "1943.1.1.1"
 			id = -1
 		}
-
 		field_marshal = {
 			traits = { politically_connected inflexible_strategist }
 			skill = 2
@@ -31,12 +29,6 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = -1
-			visible = {
-				NOT = {
-					has_government = communism
-					has_government = democratic
-				}
-			}
 		}
 	}
 
@@ -57,18 +49,11 @@ characters = {
 			traits  = {
 				scholar_of_ethiopian_and_somali_studies
 			}
-			available = {
-				NOT = {
-					has_government = communism
-				}
-			}
 			ai_will_do = {
 				factor = 1.000
 			}			
 		}
 	}
-
-
 	# GUGLIELMO NASI
 	AOI_guglielmo_nasi = {
 		name = AOI_guglielmo_nasi
@@ -78,7 +63,6 @@ characters = {
 				small = GFX_idea_AOI_guglielmo_nasi_small
 			}
 		}
-
 		corps_commander = {
 			traits = { brilliant_strategist irregulars_officer }
 			skill = 2
@@ -87,15 +71,8 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = -1
-
-			visible = {
-				NOT = {
-					has_government = communism
-				}
-			}
 		}
 	}
-
 	# RUGGERO SANTINI
 	AOI_ruggero_santini = {
 		name = AOI_ruggero_santini
@@ -105,7 +82,6 @@ characters = {
 				small = GFX_idea_ITA_generic_land_7
 			}
 		}
-
 		corps_commander = {
 			traits = { trait_mountaineer hill_fighter adaptable }
 			skill = 1
@@ -114,15 +90,8 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = -1
-
-			visible = {
-				NOT = {
-					has_government = communism
-				}
-			}
 		}
 	}
-
 	# VINCENZO DE FEO
 	AOI_vincenzo_de_feo = {
 		name = AOI_vincenzo_de_feo
@@ -132,7 +101,6 @@ characters = {
 				small = "GFX_idea_ITA_generic_navy_3"
 			}
 		}
-
 		navy_leader = {
 			traits = { spotter }
 			skill = 1

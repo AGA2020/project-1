@@ -623,7 +623,6 @@ characters={
 				factor = 3.000
 			}
 		}
-		
 		corps_commander={
 			traits = {  commando naval_invader infantry_leader infantry_expert trait_engineer hill_fighter ranger trait_mountaineer }
 			skill=7
@@ -1537,29 +1536,12 @@ characters={
 				small = GFX_idea_hideo_itokawa
 			}
 		}
-
 		scientist = {
 			traits = { scientist_trait_rocketry_specialist }
 			skills = {
 				specialization_air = 2
 			}
 		}
-
-		#advisor = {
-		#	cost = 100
-		#	slot = theorist
-		#	idea_token = hideo_itokawa
-		#	ledger = air
-		#	allowed = {
-		#		original_tag = JAP
-		#	}
-		#	research_bonus = {
-		#		rocketry = 0.150
-		#	}
-		#	traits = {
-		#		rocket_scientist
-		#	}
-		#}
 	}
 
 	JAP_kijiro_nambu = {

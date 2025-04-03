@@ -77,11 +77,6 @@ on_actions = {
 			if = {
 				limit = {
 					has_dlc = "Trial of Allegiance"
-					NOT = {
-						USA = {
-							has_government = communism
-						}
-					}
 					capital_scope = {
 						is_core_of = ROOT
 						OR = {

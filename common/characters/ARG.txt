@@ -515,11 +515,6 @@ characters={
 	##########################
 
 	ARG_marcelo_t_de_alvear = {
-	instance = {
-		allowed = {
-			has_dlc = "Trial of Allegiance"
-		}
-
 		portraits = {
 			civilian = {
 				large=GFX_portrait_ARG_marcelo_t_de_alvear
@@ -559,25 +554,6 @@ characters={
 			}
 		}
 	}
-	instance = {
-		allowed = {
-			NOT = {
-				has_dlc = "Trial of Allegiance"
-			}		
-		}
-
-		portraits = {
-			civilian = {
-				large=GFX_portrait_Marcelo_T_de_Alvear
-			}
-		}
-		country_leader = {
-			ideology = socialism
-			expire = "1965.1.1.1"
-			id = -1
-		}
-	}
-}
 
 	ARG_enrique_mosca = {
 
@@ -626,11 +602,6 @@ characters={
 	#########################
 
 	ARG_victorio_codovilla = {
-	instance = {
-		allowed  = {
-			has_dlc = "Trial of Allegiance"
-		}
-
 		portraits = {
 			civilian = {
 				large = GFX_portrait_argentina_victorio_codovilla
@@ -665,30 +636,6 @@ characters={
 						ruling_only = yes
 						character = ARG_victorio_codovilla
 					}
-				}
-			}
-		}
-	}
-	instance = {
-		allowed = {
-			NOT = {
-				has_dlc = "Trial of Allegiance"
-			}		
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = ARG_victorio_codovilla
-			allowed  = {
-					original_tag  = ARG
-				}
-				traits  = {
-					communist_revolutionary
-				}
-			}
-
-			portraits = {
-				army = {
-					small="GFX_idea_generic_political_advisor_south_america_3"
 				}
 			}
 		}
