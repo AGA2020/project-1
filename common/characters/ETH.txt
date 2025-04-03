@@ -413,28 +413,6 @@ characters = {
 		}
 	}
 
-	ETH_mulugeta_yeggazu_of_illubabor = {
-		name = ETH_mulugeta_yeggazu_of_illubabor
-		allowed_civil_war = {
-			has_government = neutrality
-		}
-		portraits = {
-			army = {
-				large = GFX_portrait_ETH_mulugeta_yeggazu_of_illubabor
-				small = GFX_portrait_ETH_mulugeta_yeggazu_of_illubabor_small
-			}
-		}
-		corps_commander = {
-			traits = { politically_connected infantry_leader }
-			skill = 2
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = -1
-		}
-	}
-
 	ETH_ras_kassa = {
 		instance = {
 			allowed = {
