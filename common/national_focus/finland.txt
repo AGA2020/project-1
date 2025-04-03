@@ -1265,8 +1265,11 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = FIN_union_of_finnish_brothers_in_arms
-
-			show_unit_leaders_tooltip = FIN_paavo_talvela
+			custom_effect_tooltip = generic_skip_one_line_tt
+			remove_trait = {
+			    character = FIN_paavo_talvela
+			    trait = generalundertraining_aga_fin_paavo
+			}
 		}
 	}
 

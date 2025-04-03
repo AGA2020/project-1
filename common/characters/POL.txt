@@ -945,28 +945,10 @@ characters = {
 	}
 
 	POL_mieczyslaw_michalowicz={
-		instance = {
-			allowed = {
-				has_dlc = "No Step Back"
-			}
-			name=POL_mieczyslaw_michalowicz
-			portraits={
-				army={
-					small="GFX_idea_POL_mieczyslaw_michalowicz"
-				}
-			}		
-		}
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "No Step Back"
-				}
-			}
-			name=POL_mieczyslaw_michalowicz
-			portraits={
-				army={
-					small="GFX_idea_POL_mieczyslaw_michalowicz"
-				}
+		name=POL_mieczyslaw_michalowicz
+		portraits={
+			army={
+				small="GFX_idea_POL_mieczyslaw_michalowicz"
 			}
 		}
 	}

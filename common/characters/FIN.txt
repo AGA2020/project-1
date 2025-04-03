@@ -308,14 +308,13 @@ characters = {
 			}
 		}
 		corps_commander = {
-			traits = { inflexible_strategist infantry_officer jaeger }
+			traits = { inflexible_strategist infantry_officer jaeger generalundertraining_aga_fin_paavo }
 			skill = 2
 			attack_skill = 3
 			defense_skill = 1
 			planning_skill = 2
 			logistics_skill = 1
 			legacy_id = -1
-			visible = { has_completed_focus = FIN_union_of_finnish_brothers_in_arms }
 		}
 	}
 
