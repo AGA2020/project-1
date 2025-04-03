@@ -117,7 +117,6 @@ recruit_character = HOL_nico_van_straten
 recruit_character = HOL_hein_ter_poorten
 recruit_character = HOL_adrianus_rudolphus_van_den_bent
 recruit_character = HOL_hendrik_van_oyen
-recruit_character = HOL_hendrik_seyffardt
 recruit_character = HOL_henri_winkelman
 recruit_character = HOL_maarten_belzer
 recruit_character = HOL_marius_raaijmakers

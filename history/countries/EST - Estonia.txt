@@ -16,13 +16,8 @@ set_research_slots = 3
 
 add_ideas = {
 	limited_conscription
-}
-IF = {
-	limit = { has_dlc = "No Step Back" }
-	add_ideas = {
-		democratic_opposition
-		EST_vaps_idea_1
-	}
+	democratic_opposition
+	EST_vaps_idea_1
 }
 
 recruit_character = EST_konstantin_pats
@@ -36,7 +31,6 @@ recruit_character = EST_richard_veermaa
 recruit_character = EST_alex_nirk
 recruit_character = EST_richard_tomberg
 recruit_character = EST_alfred_vendt
-recruit_character = EST_juhan_tuuling
 recruit_character = EST_nikolay_g_karotamm
 recruit_character = EST_voldemar_mere
 recruit_character = EST_alfons_rebane

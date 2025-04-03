@@ -65,7 +65,6 @@ recruit_character = CZE_karel_janousek
 recruit_character = CZE_ludvik_krejci
 recruit_character = CZE_karel_vaclav_petrik
 recruit_character = CZE_karel_kuttelwascher
-recruit_character = CZE_ludvik_svoboda
 recruit_character = CZE_frantisek_havel
 recruit_character = CZE_stefan_osusky
 recruit_character = CZE_ferdinand_catlos
@@ -75,25 +74,10 @@ recruit_character = CZE_konrad_henlein
 recruit_character = CZE_gustav_husak
 
 
-if = {
-	limit = {
-		NOT = { has_dlc = "No Step Back" }
-	}
-	set_technology = {
-		gwtank = 1
-		basic_light_tank = 1
-		improved_light_tank = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_technology = {
-		gwtank_chassis = 1
-		basic_light_tank_chassis = 1
-		improved_light_tank_chassis = 1
-	}
+set_technology = {
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	improved_light_tank_chassis = 1
 }
 
 set_research_slots = 3
@@ -112,14 +96,9 @@ set_popularities = {
 	communism = 10
 }
 
-if = {
-	limit = {
-		has_dlc = "Death or Dishonor"
-	}
-	add_ideas = {
-		CZE_skoda_works
-		CZE_divided_nation
-}
+add_ideas = {
+	CZE_skoda_works
+	CZE_divided_nation
 }
 
 if = {

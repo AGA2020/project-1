@@ -255,29 +255,6 @@ characters={
 		}
 	}
 
-	CZE_ludvik_svoboda={
-		name=CZE_ludvik_svoboda
-		portraits={
-			army={
-				small="GFX_idea_CZE_ludvik_svoboda"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = CZE_ludvik_svoboda
-			allowed = {
-				original_tag = CZE
-			}
-			traits = {
-				army_chief_morale_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}		
-	}
-
 
 	### NAVY CHIEFS ###
 

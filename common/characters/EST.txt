@@ -224,28 +224,6 @@ characters={
 
 	### THEORISTS ###
 
-	EST_juhan_tuuling={
-		name=EST_juhan_tuuling
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_1" #No portrait
-			}
-		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = EST_juhan_tuuling
-			ledger = army
-			allowed = {
-				original_tag = EST
-			}
-			
-			traits = {
-				military_theorist
-			}
-		}
-	}
-
 	EST_alex_nirk={
 		name=EST_alex_nirk
 		portraits={

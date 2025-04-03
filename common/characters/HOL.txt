@@ -417,32 +417,6 @@ characters={
 			}
 		}
 	}
-	HOL_hendrik_seyffardt={
-		advisor={
-			slot = army_chief
-			idea_token = HOL_hendrik_seyffardt
-			allowed = {
-					original_tag = HOL
-					has_dlc = "Man the Guns"
-				}
-				available = {
-					has_government = fascism
-				}
-				traits = {
-					army_chief_offensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name=HOL_hendrik_seyffardt
-		portraits={
-			army={
-				small="GFX_idea_HOL_hendrik_seyffardt"
-			}
-		}
-	}
 	HOL_henri_winkelman={
 		name=HOL_henri_winkelman
 		portraits={
