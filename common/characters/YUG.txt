@@ -518,22 +518,12 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = YUG_milovan_djilas
-			available  = {
-					if  = {
-						limit  = {
-							has_dlc = "Man the Guns"
-						}
-						not  = {
-							has_autonomy_state  = autonomy_supervised_state
-						}
-					}
-				}
-				allowed  = {
-					original_tag  = YUG
-				}
-				traits  = {
-					democratic_firebrand 
-				}
+			allowed  = {
+				original_tag  = YUG
+			}
+			traits  = {
+				democratic_firebrand 
+			}
 		}
 		name=YUG_milovan_djilas
 		portraits={
