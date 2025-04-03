@@ -308,7 +308,6 @@ characters={
 			available = {
 				has_completed_focus = FRA_battle_of_maneuver
 			}
-			
 			traits = {
 				blitzkrieg_theorist
 			}
@@ -323,7 +322,6 @@ characters={
 				}
 			}
 		}
-		
 		corps_commander={
 			traits={ media_personality harsh_leader armor_officer }
 			skill=4
@@ -360,7 +358,6 @@ characters={
 				factor = 1.000
 			}
 		}
-		
 		corps_commander={
 			traits={ career_officer trait_reckless armor_officer }
 			skill=3
@@ -581,7 +578,6 @@ characters={
 			legacy_id=0
 		}
 	}
-
 	FRA_rene_emile_godfroy={
 		name=FRA_rene_emile_godfroy
 		portraits={
@@ -608,7 +604,6 @@ characters={
 				factor = 1.000
 			}
 		}
-		
 		navy_leader={
 			traits={ old_guard_navy gentlemanly battleship_adherent spotter }
 			skill=2
@@ -645,7 +640,6 @@ characters={
 				factor = 1.000
 			}
 		}
-		
 		navy_leader={
 			traits={ aviation_enthusiast naval_lineage }
 			skill=1
@@ -656,8 +650,6 @@ characters={
 			legacy_id=0
 		}
 	}
-
-
 	### THEORISTS ###
 
 	# De Gaulle up there
@@ -705,7 +697,6 @@ characters={
 			traits = { naval_theorist }
 		}		
 	}
-
 	FRA_jean_marie_bergeret={
 		name=FRA_jean_marie_bergeret
 		portraits={
@@ -724,7 +715,6 @@ characters={
 			traits = { air_warfare_theorist }
 		}
 	}
-
 	FRA_louis_kahn={
 		name=FRA_louis_kahn
 		portraits={
@@ -740,14 +730,11 @@ characters={
 			allowed = {
 				original_tag = FRA
 			}
-			
 			traits = {
 				grand_fleet_proponent
 			}
 		}
 	}
-
-
 	### ARMY CHIEFS ###
 
 	# Gamelin up there
@@ -778,7 +765,6 @@ characters={
 			}
 		}		
 	}
-
 	FRA_pierre_alombert_goget={
 		name=FRA_pierre_alombert_goget
 		portraits={
@@ -801,8 +787,6 @@ characters={
 			}
 		}
 	}
-
-
 	### NAVY CHIEFS ###
 
 	# Darlan Up there
@@ -829,7 +813,6 @@ characters={
 			}
 		}
 	}
-	
 	FRA_jean_marie_abrial={
 		name=FRA_jean_marie_abrial
 		portraits={
@@ -852,8 +835,6 @@ characters={
 			}
 		}
 	}
-
-
 	### AIR CHIEFS ###
 
 	FRA_joseph_vuillemin={
@@ -878,7 +859,6 @@ characters={
 			}
 		}
 	}
-
 	FRA_robert_odic={
 		name=FRA_robert_odic
 		portraits={
@@ -901,7 +881,6 @@ characters={
 			}
 		}
 	}
-
 	FRA_philippe_fequant={
 		name=FRA_philippe_fequant
 		portraits={
@@ -1084,14 +1063,6 @@ characters={
 						ruling_only  = yes 
 					}
 				}
-				if  = {
-					limit  = {
-						has_dlc = "Man the Guns"
-					}
-					NOT  = {
-						has_autonomy_state  = autonomy_supervised_state
-					}
-				}
 			}
 			traits  = {
 				democratic_reformer 
@@ -1153,8 +1124,7 @@ characters={
 				always = no
 			}
 			visible  = {
-			always = no
-				has_dlc = "La Resistance"
+				always = no
 			}
 			cost  = 75.000
 			traits  = {
@@ -1180,11 +1150,6 @@ characters={
 			idea_token = FRA_pierre_pucheu
 			allowed  = {
 				original_tag  = FRA
-			}
-			available  = {
-				not  = {
-					has_government  = communism 
-				}
 			}
 			cost  = 150.000
 			traits  = {
@@ -1453,7 +1418,6 @@ characters={
 			}
 			allowed  = {
 				original_tag  = FRA
-				has_dlc = "La Resistance"
 			}
 			traits  = {
 				head_of_intelligence 
@@ -1469,31 +1433,6 @@ characters={
        #  #       #  #       #  # #    #    #       #    #         # 
  #     #  #    #  #  #       #   ##    #    #  #    #    #    #    # 
   #####    ####   #  ######  #    #    #    #   ####     #     ####  
-
-	# OLD combo character theorist for both Curies, now each one is an independent person with their own dreams.
-	#FRA_frederic_irene_joliot_curie={
-	#	name=FRA_frederic_irene_joliot_curie
-	#	portraits={
-	#		army={
-	#			small="GFX_idea_frederic_irene_joliot_curie"
-	#		}
-	#	}
-	#	advisor={
-	#		cost = 100
-	#		slot = theorist
-	#		idea_token = frederic_irene_joliot_curie
-	#		ledger = army
-	#		allowed = {
-	#			original_tag = FRA
-	#		}
-	#		research_bonus = {
-	#			nuclear = 0.150
-	#		}
-	#		traits = {
-	#			nuclear_scientist
-	#		}
-	#	}
-	#}
 
 	FRA_irene_joliot_curie = {
 		name = FRA_irene_joliot_curie
