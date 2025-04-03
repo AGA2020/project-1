@@ -244,32 +244,6 @@ characters={
 			}
 		}
 	}
-	DEN_hjalmar_rechnitzer={
-		advisor={
-			
-			
-			slot = high_command
-			idea_token = DEN_hjalmar_rechnitzer
-			ledger = navy
-				allowed = {
-					original_tag = DEN
-				}
-				traits = {
-					navy_fleet_logistics_1
-				}
-				cost =  50
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
-		name="Hjalmar Rechnitzer"
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_europe_1"
-			}
-		}
-	}
 	DEN_poul_sommer={
 		advisor={
 			

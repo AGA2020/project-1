@@ -35,7 +35,6 @@ recruit_character = DEN_christian_frederik_von_schalburg
 recruit_character = DEN_hans_lunding
 recruit_character = DEN_ebbe_gortz
 recruit_character = DEN_paul_sommer
-recruit_character = DEN_hjalmar_rechnitzer
 recruit_character = DEN_poul_sommer
 recruit_character = DEN_william_wain_prior
 recruit_character = DEN_aage_vedel

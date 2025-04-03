@@ -2187,10 +2187,6 @@ characters = {
 				small = "GFX_idea_SOV_lazar_kaganovich"
 			}
 		}
-		allowed_civil_war = {
-				has_government = communism
-			}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_lazar_kaganovich
@@ -2257,19 +2253,6 @@ characters = {
 			army = {
 				small = "GFX_idea_SOV_nikolay_yezhov"
 			}
-		}
-
-		allowed_civil_war = {
-				AND = { #If not aligned by Right oppo, then stays with Stalin
-					original_tag = SOV
-					NOT = { tag = SOV }
-					NOT = {
-						any_other_country = {
-							original_tag = SOV
-						}
-					}
-				}
-			has_government = communism
 		}
 
 		advisor = {
@@ -2450,10 +2433,6 @@ characters = {
 				small = "GFX_idea_SOV_vyacheslav_molotov"
 			}
 		}
-		allowed_civil_war = {
-			has_government = communism
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_vyacheslav_molotov
@@ -2481,10 +2460,6 @@ characters = {
 				small = "GFX_idea_SOV_maksim_litvinov"
 			}
 		}
-		allowed_civil_war = {
-			has_government = communism
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_maksim_litvinov
@@ -2515,15 +2490,6 @@ characters = {
 				small = "GFX_idea_SOV_lev_trotsky"
 			}
 		}
-		allowed_civil_war = { 
-			OR = {
-				AND = {
-					tag = SOV 
-					has_government = communism
-				}
-			}
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_lev_trotsky
@@ -2562,15 +2528,6 @@ characters = {
 				small = "GFX_idea_SOV_ivan_smirnov_imprisoned"
 			}
 		}
-		allowed_civil_war = { 
-			OR = {
-				AND = {
-					tag = SOV 
-					has_government = communism
-				}
-			}
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_ivan_smirnov
@@ -2579,7 +2536,6 @@ characters = {
 			}
 			visible = {
 				NOT = { has_character_flag = SOV_character_purged_flag }
-				
 			}
 			available = {
 				OR = {
@@ -2613,15 +2569,6 @@ characters = {
 				small = "GFX_idea_SOV_ivar_smilga_imprisoned"
 			}
 		}
-		allowed_civil_war = { 
-			OR = {
-				AND = {
-					tag = SOV 
-					has_government = communism
-				}
-			}
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_ivar_smilga
@@ -2651,11 +2598,6 @@ characters = {
 				small = "GFX_idea_SOV_karl_radek"
 			}
 		}
-
-		allowed_civil_war = {
-
-		}
-
 		advisor = {
 			slot = political_advisor
 			idea_token = SOV_karl_radek

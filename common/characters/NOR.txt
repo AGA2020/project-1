@@ -338,10 +338,6 @@ characters={
 			}
 		}
 		corps_commander={
-			visible = {
-				NOT = { has_government = fascism }
-				NOT = { has_government = communism }				
-			}
 			traits={ trait_reckless trickster winter_specialist }
 			skill=4
 			attack_skill=4
@@ -355,10 +351,6 @@ characters={
 			idea_token = NOR_carl_gustav_fleischer
 			allowed = {
 				original_tag = NOR
-			}
-			available = {
-				NOT = {	has_government = fascism }
-				NOT = { has_government = communism }
 			}
 			traits = {
 				army_chief_offensive_3
@@ -415,14 +407,14 @@ characters={
 			idea_token = NOR_wilhelm_von_tangen_hansteen
 			allowed = {
 					original_tag = NOR
-				}
-				traits = {
-					army_chief_organizational_1
-				}
-				cost = 150
-				ai_will_do = {
-					factor = 1.000
-				}
+			}
+			traits = {
+				army_chief_organizational_1
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 		corps_commander={
 			traits={ politically_connected }
@@ -464,17 +456,15 @@ characters={
 		name=NOR_skule_storheil
 		advisor={
 			cost = 100
-			
 			slot = theorist
 			idea_token = NOR_skule_storheil
 			ledger = navy
-				allowed = {
-					original_tag = NOR
-				}
-				
-				traits = {
-					naval_theorist
-				}
+			allowed = {
+				original_tag = NOR
+			}
+			traits = {
+				naval_theorist
+			}
 		}
 		name="Skule Storheil"
 		portraits={
@@ -510,17 +500,16 @@ characters={
 		name=NOR_tryggve_gran
 		advisor={
 			cost = 100
-			
 			slot = theorist
 			idea_token = NOR_tryggve_gran
 			ledger = air
-				allowed = {
-					original_tag = NOR
-				}
-				
-				traits = {
-					air_warfare_theorist
-				}
+			allowed = {
+				original_tag = NOR
+			}
+			
+			traits = {
+				air_warfare_theorist
+			}
 		}
 		portraits={
 			army={
@@ -529,62 +518,30 @@ characters={
 		}
 	}
 	NOR_birger_ljungberg={
-		instance = { # AAT version (Theorist)
-			allowed = { 
-				has_aat = yes 
-			}
-			name=NOR_birger_ljungberg
-			advisor={
-				slot = theorist
-				idea_token = NOR_birger_ljungberg
-				ledger = army
-					allowed = {
-						original_tag = NOR
-					}
-					available = {
-						has_government = democratic
-						has_war = no  
-					}
-					traits = {
-						NOR_clueless_defense_minister
-					}
-					cost = 100
-					ai_will_do = {
-						factor = 1.000
-					}
-					removal_cost = 150
-					can_be_fired = no
-			}
-			portraits={
-				army={
-					small="GFX_portrait_NOR_birger_ljungberg_small"
-				}
-			}
-		}
-		instance = {
+		name=NOR_birger_ljungberg
+		advisor={
+			slot = theorist
+			idea_token = NOR_birger_ljungberg
+			ledger = army
 			allowed = {
-				has_aat = no
+				original_tag = NOR
 			}
-			name=NOR_birger_ljungberg
-			advisor={
-				slot = high_command
-				idea_token = NOR_birger_ljungberg
-				ledger = army
-					allowed = {
-						original_tag = NOR
-					}
-					traits = {
-						army_commando_2
-					}
-					cost = 100
-					ai_will_do = {
-						factor = 1.000
-					}
+			available = {
+				has_war = no  
 			}
-			portraits={
-				army={
-					small="GFX_idea_generic_army_europe_1"
-				}
+			traits = {
+				NOR_clueless_defense_minister
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			removal_cost = 150
+			can_be_fired = no
+		}
+		portraits={
+			army={
+				small="GFX_portrait_NOR_birger_ljungberg_small"
 			}
 		}
 	}
@@ -593,15 +550,15 @@ characters={
 			slot = navy_chief
 			idea_token = NOR_henry_diesen
 			allowed = {
-					original_tag = NOR
-				}
-				traits = {
-					navy_chief_decisive_battle_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+				original_tag = NOR
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 		name="Henry Diesen"
 		portraits={
@@ -623,21 +580,15 @@ characters={
 		name=NOR_birger_eriksen
 		advisor={
 			cost = 100
-			
 			slot = high_command
 			idea_token = NOR_birger_eriksen
-			available = {
-				NOT = { has_government = fascism } 
-			}
-
 			ledger = army
-				allowed = {
-					NOR_AAT = yes 
-				}
-				
-				traits = {
-					NOR_vigilant_fort_commander
-				}
+			allowed = {
+				NOR_AAT = yes 
+			}
+			traits = {
+				NOR_vigilant_fort_commander
+			}
 		}
 		portraits={
 			army={
@@ -648,118 +599,50 @@ characters={
 	}
 
 	NOR_alfred_roscher_lund={
-		instance = { # AAT version 
+		name=NOR_alfred_roscher_lund 
+		advisor={
+			slot = high_command
+			idea_token = NOR_alfred_roscher_lund
+			ledger = army
 			allowed = {
-				has_aat = yes 
+				original_tag = NOR
 			}
-			name=NOR_alfred_roscher_lund 
-			advisor={
-				slot = high_command
-				idea_token = NOR_alfred_roscher_lund
-				ledger = army
-					allowed = {
-						original_tag = NOR
-					}
-					traits = {
-						army_radio_intelligence_3
-					}
-					cost = 200
-					ai_will_do = {
-						factor = 1.000
-					}
+			traits = {
+				army_radio_intelligence_3
 			}
-			portraits={
-				army={
-					small="GFX_portrait_NOR_alfred_roscher_lund_small"
-				}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
-		instance = { # Vanilla
-			allowed = {
-				has_aat = no 
-			}
-			name=NOR_alfred_roscher_lund
-			advisor={
-				slot = high_command
-				idea_token = NOR_alfred_roscher_lund
-				ledger = army
-					allowed = {
-						original_tag = NOR
-					}
-					traits = {
-						army_concealment_3
-					}
-					cost = 200
-					ai_will_do = {
-						factor = 1.000
-					}
-			}
-			name="Alfred Roscher-Lund"
-			portraits={
-				army={
-					small="GFX_idea_generic_army_europe_2"
-				}
+		portraits={
+			army={
+				small="GFX_portrait_NOR_alfred_roscher_lund_small"
 			}
 		}
 	}
 	
 	NOR_konrad_sundlo={
-		instance = { # No AAT 
-			allowed = {
-				has_aat = no 
+		name=NOR_konrad_sundlo
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = NOR_konrad_sundlo
+			available = {
+				always = no 
 			}
-			name=NOR_konrad_sundlo
-			advisor={
-				cost = 100
-				
-				slot = theorist
-
-				idea_token = NOR_konrad_sundlo
-
-				ledger = army
-					allowed = {
-						original_tag = NOR
-					}
-					
-					traits = {
-						military_theorist
-					}
-			}
-			name="Konrad Sundlo"
-			portraits={
-				army={
-					small="GFX_idea_generic_army_europe_2"
+			ledger = army
+				allowed = {
+					original_tag = NOR
 				}
-			}
+				traits = {
+					NOR_oppportunistic_officer
+				}
 		}
-		instance = { #AAT
-			allowed = {
-				has_aat = yes 
-			}
-			name=NOR_konrad_sundlo
-			advisor={
-				cost = 100
-				
-				slot = theorist
-				idea_token = NOR_konrad_sundlo
-				available = {
-					has_government = fascism 
-				}
-
-				ledger = army
-					allowed = {
-						original_tag = NOR
-					}
-					
-					traits = {
-						NOR_oppportunistic_officer
-					}
-			}
-			name="Konrad Sundlo"
-			portraits={
-				army={
-					small="GFX_portrait_NOR_konrad_sundlo_small"
-				}
+		name="Konrad Sundlo"
+		portraits={
+			army={
+				small="GFX_portrait_NOR_konrad_sundlo_small"
 			}
 		}
 	}
@@ -769,21 +652,15 @@ characters={
 		name=NOR_oscar_torp
 		advisor={
 			cost = 100
-			
 			slot = theorist
-			idea_token = NOR_oscar_torp
-			available = {
-				NOT = { has_government = fascism } 
-			}
-
+			idea_token = NOR_oscar_torp	
 			ledger = army
-				allowed = {
-					original_tag = NOR
-				}
-				
-				traits = {
-					NOR_pragmatic_defense_minister
-				}
+			allowed = {
+				original_tag = NOR
+			}
+			traits = {
+				NOR_pragmatic_defense_minister
+			}
 		}
 		portraits={
 			army={
@@ -896,62 +773,28 @@ characters={
 		}
 	}
 	NOR_kristian_laake={ 
-		instance = { # AAT Version
+		name=NOR_kristian_laake
+		advisor={
+			slot = army_chief
+			idea_token = NOR_kristian_laake
 			allowed = {
-				has_aat = yes 
+				original_tag = NOR
 			}
-			name=NOR_kristian_laake
-			advisor={
-				slot = army_chief
-				idea_token = NOR_kristian_laake
-				allowed = {
-					original_tag = NOR
-				}
-				traits = {
-					NOR_defeatist_commander_in_chief
-				}
-				
-				cost = 50
-
-				ai_will_do = {
-					factor = 1.000
-				}
-				can_be_fired = no
+			traits = {
+				NOR_defeatist_commander_in_chief
 			}
-			name=NOR_kristian_laake
-			portraits={
-				army={
-					large="GFX_portrait_NOR_kristian_laake"
-					small="GFX_portrait_NOR_kristian_laake_small"
-				}
+			
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
 			}
+			can_be_fired = no
 		}
-		instance = { # Non-AAT
-			allowed = {
-				has_aat = no
-			}
-			name=NOR_kristian_laake
-			advisor={
-				slot = army_chief
-				idea_token = NOR_kristian_laake
-				allowed = {
-					original_tag = NOR
-				}
-				traits = {
-					army_chief_drill_1
-				}
-				
-				cost = 50
-
-				ai_will_do = {
-					factor = 1.000
-				}
-			}
-			portraits={
-				army={
-					large="GFX_portrait_NOR_kristian_laake"
-					small="GFX_portrait_NOR_kristian_laake_small"
-				}
+		name=NOR_kristian_laake
+		portraits={
+			army={
+				large="GFX_portrait_NOR_kristian_laake"
+				small="GFX_portrait_NOR_kristian_laake_small"
 			}
 		}
 	}
@@ -1042,81 +885,28 @@ characters={
 		}
 	}
 	NOR_halvdan_koht={
-		instance = { #AAT 
-			allowed = {
-				has_aat = yes 
-			}
-			name=NOR_halvdan_koht
-			portraits={
-				civilian={
-					small="GFX_portrait_NOR_halvdan_koht_small"
-				}
+		name=NOR_halvdan_koht
+		portraits={
+			civilian={
+				small="GFX_portrait_NOR_halvdan_koht_small"
 			}
 		}
-		instance = { # No AAT 
-			allowed = {
-				has_aat = no 
-			}
-			name=NOR_halvdan_koht
-			advisor={
-				slot = political_advisor
-				idea_token = NOR_halvdan_koht
-				allowed  = {
+	}
+	NOR_trygve_halvdan_lie={
+		name=NOR_trygve_halvdan_lie
+		advisor={
+			slot = political_advisor
+			idea_token = NOR_trygve_halvdan_lie
+			allowed  = {
 					original_tag = NOR
 				}
 				traits  = {
-					smooth_talking_charmer 
+					NOR_compliant_politician 
 				}
-			}
-			portraits={
-				civilian={
-					small="GFX_idea_generic_political_advisor_europe_1"
-				}
-			}
 		}
-
-	}
-	NOR_trygve_halvdan_lie={
-		instance = { #AAT 
-			allowed = {
-				has_aat = yes 
-			}
-			name=NOR_trygve_halvdan_lie
-			advisor={
-				slot = political_advisor
-				idea_token = NOR_trygve_halvdan_lie
-				allowed  = {
-						original_tag = NOR
-					}
-					traits  = {
-						NOR_compliant_politician 
-					}
-			}
-			portraits={
-				civilian={
-					small=GFX_portrait_NOR_trygve_halvdan_lie_small
-				}
-			}
-		}
-		instance = { # No AAT 
-			allowed = {
-				has_aat = no 
-			}
-			name=NOR_trygve_halvdan_lie
-			advisor={
-				slot = political_advisor
-				idea_token = NOR_trygve_halvdan_lie
-				allowed  = {
-						original_tag = NOR
-					}
-					traits  = {
-						popular_figurehead  
-					}
-			}
-			portraits={
-				civilian={
-					small=GFX_idea_generic_political_advisor_europe_3
-				}
+		portraits={
+			civilian={
+				small=GFX_portrait_NOR_trygve_halvdan_lie_small
 			}
 		}
 	}

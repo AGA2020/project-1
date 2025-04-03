@@ -141,7 +141,6 @@ characters={
 			allowed = {
 				original_tag = MAN
 			}
-			
 			traits = {
 				military_theorist
 			}
@@ -163,7 +162,6 @@ characters={
 			allowed = {
 				original_tag = MAN
 			}
-			
 			traits = {
 				naval_theorist
 			}
@@ -185,7 +183,6 @@ characters={
 			allowed = {
 				original_tag = MAN
 			}
-			
 			traits = {
 				air_warfare_theorist
 			}
@@ -377,8 +374,7 @@ characters={
 			civilian={
 				small="GFX_idea_generic_political_advisor_asia_1"
 			}
-		}	
-
+		}
 		advisor = {
 			slot = political_advisor
 			idea_token = MAN_songgotu_zhanshan

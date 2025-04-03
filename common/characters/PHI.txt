@@ -177,31 +177,6 @@ characters={
 			}
 		}
 	}
-	PHI_basilio_j_valdez={
-		advisor={
-			
-			
-			slot = army_chief
-			idea_token = PHI_basilio_j_valdez
-			allowed = {
-					original_tag = phi
-				}
-				traits = {
-					army_chief_defensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-# TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
-		name="Basilio J. Valdez"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_asia_4"
-			}
-		}
-	}
 	PHI_santiago_nuval={
 		advisor={
 			
