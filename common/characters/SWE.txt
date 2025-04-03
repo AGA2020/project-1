@@ -69,24 +69,6 @@ characters={
 			legacy_id=0
 		}
 	}
-	SWE_erik_af_edholm={
-		name=SWE_erik_af_edholm
-		portraits={
-			army={
-				large=GFX_portrait_SWE_erik_af_edholm
-				small=GFX_portrait_SWE_erik_af_edholm_small
-			}
-		}
-		corps_commander={
-			traits={ hill_fighter }
-			skill=4
-			attack_skill=4
-			defense_skill=1
-			planning_skill=4
-			logistics_skill=4
-			legacy_id=0
-		}
-	}
 	SWE_claes_lindstrom={
 		name=SWE_claes_lindstrom
 		portraits={

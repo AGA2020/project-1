@@ -381,8 +381,6 @@ characters={
 	}
 	LUX_nicholas_diedrich={
 		advisor={
-			
-			
 			slot = air_chief
 			idea_token = LUX_nicholas_diedrich
 			allowed = {
