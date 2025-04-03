@@ -236,15 +236,6 @@ characters = {
 			ledger = army
 			allowed = {
 				original_tag = SOV
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 403.000
-						}
-					}
-				}
 			}
 			available = {
 				has_completed_focus = SOV_positive_heroism
@@ -292,15 +283,6 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 407.000
-						}
-					}
-				}
 				if = {
 					limit = {
 						has_character_flag = SOV_exiled_flag
@@ -406,16 +388,6 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				custom_trigger_tooltip = {
-					tooltip = SOV_konev_civil_war
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 408.000
-						}
-					}
-				}
 				if = {
 					limit = {
 						has_character_flag = SOV_exiled_flag
@@ -459,15 +431,6 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				hidden_trigger = {
-					NOT = {
-						any_other_country = {
-							has_war_with = SOV
-							original_tag = SOV
-							has_unit_leader = 404.000
-						}
-					}
-				}
 				if = {
 					limit = {
 						has_character_flag = SOV_exiled_flag
