@@ -961,41 +961,12 @@ characters = {
 		}
 	}
 
-	BUL_ferdinand_kozovski = {
-		advisor = {
-			slot = high_command
-			idea_token = BUL_ferdinand_kozovski
-			ledger = army
-			allowed = {
-				has_dlc = "Battle for the Bosporus"
-				original_tag = BUL
-			}
-			available = {
-				has_government = communism
-			}
-			traits = {
-				army_entrenchment_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		name = BUL_ferdinand_kozovski
-		portraits = {
-			army = {
-				small = "GFX_idea_bul_ferdinand_kozovski"
-			}
-		}
-	}
-
 	BUL_stoyan_trendafilov = {
 		advisor = {
 			slot = high_command
 			idea_token = BUL_stoyan_trendafilov
 			ledger = army
 			allowed = {
-				has_dlc = "Battle for the Bosporus"
 				original_tag = BUL
 			}
 			available = {
