@@ -17,9 +17,7 @@ improving_our_army_category = {
 		}
  
 		allowed = {  
-			OR = {
-				original_tag = BRA
-			}
+			original_tag = BRA
 		}
 
 		available = {
@@ -81,14 +79,7 @@ improving_our_army_category = {
 		}
 	
 		allowed = {  
-			OR = {
-				original_tag = URG
-				original_tag = PAR
-				original_tag = BOL
-				original_tag = BRA
-				original_tag = ARG
-				original_tag = CHL
-			}
+			original_tag = BRA
 		}
  
 		available = {
@@ -123,35 +114,9 @@ improving_our_army_category = {
 
 		remove_effect = {
 			
-			IF = {
-				limit = {
-					original_tag = CHL
-				}
-				custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_armor_attack_factor = 0.035 tooltip = army_armor_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = BRA
-				}
-				custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_armor_attack_factor = 0.035 tooltip = army_armor_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = ARG
-				}
-				custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_armor_attack_factor = 0.035 tooltip = army_armor_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-			}
-			ELSE = {
-				custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_armor_attack_factor = 0.035 tooltip = army_armor_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-			}
+			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
+			add_to_variable = { JUNO_army_modifier_army_armor_attack_factor = 0.035 tooltip = army_armor_attack_factor_tt }
+			add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
 
 			hidden_effect = {
 				set_country_flag = JUNO_already_specialized_in_tanks
@@ -171,21 +136,12 @@ improving_our_army_category = {
 		}
 	
 		allowed = {  
-			OR = {
-				original_tag = URG
-				original_tag = PAR 
-				original_tag = BOL
-				original_tag = BRA
-				original_tag = ARG
-				original_tag = CHL 
-			}
+			original_tag = BRA
 		}
 	
 		available = {
 			has_completed_focus = SMB_foreign_advisors
-			any_country = {
-				original_tag = JAP
-				exists = yes
+			JAP = {
 				NOT = {
 					has_war_with = ROOT
 				}
@@ -197,47 +153,6 @@ improving_our_army_category = {
 					has_country_flag = JUNO_already_invited_soviet_advisors_completed
 				}
 			} 
-			custom_trigger_tooltip = {
-				tooltip = has_japanese_ideology
-				OR = {
-					AND = {
-						JAP = {
-							has_government = fascism
-						}
-						ROOT = {
-							NOT = {
-								has_government = communism
-							}
-						}
-					}
-					AND = {
-						JAP = {
-							has_government = democratic
-						}
-						NOT = {
-							has_government = communism
-							has_government = fascism
-						}
-					}
-					AND = {
-						JAP = {
-							has_government = communism
-						}
-						NOT = {
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-					AND = {
-						JAP = {
-							has_government = neutrality
-						}
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
-			}
 		}
 
 		visible = { 
@@ -262,43 +177,14 @@ improving_our_army_category = {
 		}
 
 		remove_effect = {
-			
-			IF = {
-				limit = {
-					original_tag = CHL
-				}
-				custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_org_factor = 0.05 tooltip = army_org_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = BRA
-				}
-				custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_org_factor = 0.05 tooltip = army_org_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = ARG
-				}
-				custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_org_factor = 0.05 tooltip = army_org_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-			}
-			ELSE = {
-				custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_org_factor = 0.05 tooltip = army_org_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-			}
-
+			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
+			add_to_variable = { JUNO_army_modifier_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.75
 				uses = 1
 				category = cat_grand_battle_plan
 			}
-
 			hidden_effect = {
 				set_country_flag = JUNO_already_invited_japanese_advisors_removed
 			}
@@ -317,25 +203,11 @@ improving_our_army_category = {
 		}
 	
 		allowed = {  
-			OR = {
-				original_tag = URG
-				original_tag = PAR 
-				original_tag = BOL
-				original_tag = BRA
-				original_tag = ARG
-				original_tag = CHL 
-			}
+			original_tag = BRA
 		}
 	
 		available = {
 			has_completed_focus = SMB_foreign_advisors
-			any_country = {
-				original_tag = USA
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_american_advisors_completed
@@ -343,45 +215,8 @@ improving_our_army_category = {
 					has_country_flag = JUNO_already_invited_japanese_advisors_completed
 				}
 			} 
-			custom_trigger_tooltip = {
-				tooltip = has_american_ideology
-				OR = {
-					AND = {
-						USA = {
-							has_government = fascism
-						}
-						NOT = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
-					AND = {
-						USA = {
-							has_government = democratic
-						}
-						NOT = {
-							has_government = communism
-							has_government = neutrality
-						}
-					}
-					AND = {
-						USA = {
-							has_government = communism
-						}
-						NOT = {
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-					AND = {
-						USA = {
-							has_government = neutrality
-						}
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
+			NOT = {
+				has_government = neutrality
 			}
 		}
 
@@ -395,48 +230,17 @@ improving_our_army_category = {
 				}
 			}
 		}
-
 		days_remove = 70
-
 		cost = 75
-
 		complete_effect = { 
 			hidden_effect = {
 				set_country_flag = JUNO_already_invited_american_advisors_completed
 			}
 		}
-
 		remove_effect = {
-			
-			IF = {
-				limit = {
-					original_tag = CHL
-				}
-				custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = artillery_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.05 tooltip = special_forces_cap_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = BRA
-				}
-				custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = artillery_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.05 tooltip = special_forces_cap_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = ARG
-				}
-				custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = artillery_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.05 tooltip = special_forces_cap_tt }
-			}
-			ELSE = {
-				custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = artillery_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.05 tooltip = special_forces_cap_tt }
-			}
+			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
+			add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = artillery_attack_factor_tt }
+			add_to_variable = { JUNO_army_modifier_special_forces_cap = 0.05 tooltip = special_forces_cap_tt }
 
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.75
@@ -462,25 +266,11 @@ improving_our_army_category = {
 		}
 	
 		allowed = {  
-			OR = {
-				original_tag = URG
-				original_tag = PAR 
-				original_tag = BOL
-				original_tag = BRA
-				original_tag = ARG
-				original_tag = CHL 
-			}
+			original_tag = BRA
 		}
 	
 		available = {
 			has_completed_focus = SMB_foreign_advisors
-			any_country = {
-				original_tag = SOV
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_soviet_advisors_completed
@@ -488,48 +278,8 @@ improving_our_army_category = {
 					has_country_flag = JUNO_already_invited_japanese_advisors_completed
 				}
 			} 
-			custom_trigger_tooltip = {
-				tooltip = has_soviet_ideology
-				OR = {
-					AND = {
-						SOV = {
-							has_government = fascism
-						}
-						NOT = {
-							has_government = communism
-							has_government = democratic
-							has_government = neutrality
-						}
-					}
-					AND = {
-						SOV = {
-							has_government = democratic
-						}
-						NOT = {
-							has_government = communism
-							has_government = neutrality
-							has_government = fascism
-						}
-					}
-					AND = {
-						SOV = {
-							has_government = communism
-						}
-						NOT = {
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-					AND = {
-						SOV = {
-							has_government = neutrality
-						}
-						NOT = {
-							has_government = communism
-							has_government = fascism
-						}
-					}
-				}
+			NOT = {
+				has_government = neutrality
 			}
 		}
 
@@ -555,36 +305,9 @@ improving_our_army_category = {
 		}
 
 		remove_effect = {
-			
-			IF = {
-				limit = {
-					original_tag = CHL
-				}
-				custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-				add_to_variable = { JUNO_supply_combat_penalties_on_core_factor = -0.05 tooltip = supply_combat_penalties_on_core_factor_tt }
-				add_to_variable = { JUNO_army_modifier_conscription = 0.01 tooltip = conscription_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = BRA
-				}
-				custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-				add_to_variable = { JUNO_supply_combat_penalties_on_core_factor = -0.05 tooltip = supply_combat_penalties_on_core_factor_tt }
-				add_to_variable = { JUNO_army_modifier_conscription = 0.01 tooltip = conscription_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = ARG
-				}
-				custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-				add_to_variable = { JUNO_supply_combat_penalties_on_core_factor = -0.05 tooltip = supply_combat_penalties_on_core_factor_tt }
-				add_to_variable = { JUNO_army_modifier_conscription = 0.01 tooltip = conscription_tt }
-			}
-			ELSE = {
-				custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-				add_to_variable = { JUNO_supply_combat_penalties_on_core_factor = -0.05 tooltip = supply_combat_penalties_on_core_factor_tt }
-				add_to_variable = { JUNO_army_modifier_conscription = 0.01 tooltip = conscription_tt }
-			}
+			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
+			add_to_variable = { JUNO_supply_combat_penalties_on_core_factor = -0.05 tooltip = supply_combat_penalties_on_core_factor_tt }
+			add_to_variable = { JUNO_army_modifier_conscription = 0.01 tooltip = conscription_tt }
 
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.75
@@ -610,23 +333,14 @@ improving_our_army_category = {
 		}
 	
 		allowed = {  
-			OR = {
-				original_tag = URG
-				original_tag = PAR 
-				original_tag = BOL
-				original_tag = BRA
-				original_tag = ARG
-				original_tag = CHL 
-			}
+			original_tag = BRA
 		}
 	
 		available = {
 			has_completed_focus = SMB_foreign_advisors
-			any_country = {
-				original_tag = GER
-				exists = yes
+			GER = {
 				NOT = {
-					has_war_with = ROOT
+					has_war_with = BRA
 				}
 			}
 			NOT = {
@@ -634,47 +348,6 @@ improving_our_army_category = {
 					has_country_flag = JUNO_already_invited_german_advisors_completed
 					has_country_flag = JUNO_already_invited_british_advisors_completed
 					has_country_flag = JUNO_already_invited_soviet_advisors_completed
-				}
-			} 
-			custom_trigger_tooltip = {
-				tooltip = has_german_ideology
-				OR = {
-					AND = {
-						GER = {
-							has_government = fascism
-						}
-						NOT = {
-							has_government = communism
-						}
-					}
-					AND = {
-						GER = {
-							has_government = democratic
-						}
-						NOT = {
-							has_government = communism
-							has_government = fascism
-						}
-					}
-					AND = {
-						GER = {
-							has_government = communism
-						}
-						NOT = {
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-					AND = {
-						GER = {
-							has_government = neutrality
-						}
-						NOT = {
-							has_government = communism
-							has_government = fascism
-							has_government = democratic
-						}
-					}
 				}
 			}
 		}
@@ -701,36 +374,9 @@ improving_our_army_category = {
 		}
 
 		remove_effect = {
-			
-			IF = {
-				limit = {
-					original_tag = CHL
-				}
-				custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_armor_defence_factor = 0.05 tooltip = army_armor_defence_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_armor_attack_factor = 0.05 tooltip = army_armor_attack_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = BRA
-				}
-				custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_armor_defence_factor = 0.05 tooltip = army_armor_defence_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_armor_attack_factor = 0.05 tooltip = army_armor_attack_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = ARG
-				}
-				custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_armor_defence_factor = 0.05 tooltip = army_armor_defence_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_armor_attack_factor = 0.05 tooltip = army_armor_attack_factor_tt }
-			}
-			ELSE = {
-				custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_armor_defence_factor = 0.05 tooltip = army_armor_defence_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_armor_attack_factor = 0.05 tooltip = army_armor_attack_factor_tt }
-			}
+			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
+			add_to_variable = { JUNO_army_modifier_army_armor_defence_factor = 0.05 tooltip = army_armor_defence_factor_tt }
+			add_to_variable = { JUNO_army_modifier_army_armor_attack_factor = 0.05 tooltip = army_armor_attack_factor_tt }
 
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.75
@@ -756,21 +402,12 @@ improving_our_army_category = {
 		}
 	
 		allowed = {  
-			OR = {
-				original_tag = URG
-				original_tag = PAR 
-				original_tag = BOL
-				original_tag = BRA
-				original_tag = ARG
-				original_tag = CHL 
-			}
+			original_tag = BRA
 		}
 	
 		available = {
 			has_completed_focus = SMB_foreign_advisors
-			any_country = {
-				original_tag = ITA
-				exists = yes
+			ITA = {
 				NOT = {
 					has_war_with = ROOT
 				}
@@ -782,45 +419,8 @@ improving_our_army_category = {
 					has_country_flag = JUNO_already_invited_british_advisors_completed
 				}
 			} 
-			custom_trigger_tooltip = {
-				tooltip = has_italian_ideology
-				OR = {
-					AND = {
-						ITA = {
-							has_government = fascism
-						}
-						NOT = {
-							has_government = communism
-							has_government = neutrality
-						}
-					}
-					AND = {
-						ITA = {
-							has_government = democratic
-						}
-						NOT = {
-							has_government = fascism
-						}
-					}
-					AND = {
-						ITA = {
-							has_government = communism
-						}
-						NOT = {
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-					AND = {
-						ITA = {
-							has_government = neutrality
-						}
-						NOT = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
-				}
+			NOT = {
+				has_government = neutrality
 			}
 		}
 
@@ -846,36 +446,9 @@ improving_our_army_category = {
 		}
 
 		remove_effect = {
-			
-			IF = {
-				limit = {
-					original_tag = CHL
-				}
-				custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_core_defence_factor = 0.1 tooltip = army_core_defence_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = BRA
-				}
-				custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_core_defence_factor = 0.1 tooltip = army_core_defence_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = ARG
-				}
-				custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_core_defence_factor = 0.1 tooltip = army_core_defence_factor_tt }
-			}
-			ELSE = {
-				custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_core_defence_factor = 0.1 tooltip = army_core_defence_factor_tt }
-			}
+			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
+			add_to_variable = { JUNO_army_modifier_army_attack_speed_factor = 0.05 tooltip = army_attack_speed_factor_tt }
+			add_to_variable = { JUNO_army_modifier_army_core_defence_factor = 0.1 tooltip = army_core_defence_factor_tt }
 
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.75
@@ -901,72 +474,16 @@ improving_our_army_category = {
 		}
 	
 		allowed = {  
-			OR = {
-				original_tag = URG
-				original_tag = PAR 
-				original_tag = BOL
-				original_tag = BRA
-				original_tag = ARG
-				original_tag = CHL 
-			}
+			original_tag = BRA
 		}
 	
 		available = {
 			has_completed_focus = SMB_foreign_advisors
-			any_country = {
-				original_tag = ENG
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_british_advisors_completed
 					has_country_flag = JUNO_already_invited_italian_advisors_completed
 					has_country_flag = JUNO_already_invited_german_advisors_completed
-				}
-			} 
-			custom_trigger_tooltip = {
-				tooltip = has_british_ideology
-				OR = {
-					AND = {
-						ENG = {
-							has_government = fascism
-						}
-						NOT = {
-							has_government = communism
-							has_government = neutrality
-							has_government = democratic
-						}
-					}
-					AND = {
-						ENG = {
-							has_government = democratic
-						}
-						NOT = {
-							has_government = fascism
-							has_government = communism
-						}
-					}
-					AND = {
-						ENG = {
-							has_government = communism
-						}
-						NOT = {
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-					AND = {
-						ENG = {
-							has_government = neutrality
-						}
-						NOT = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
 				}
 			}
 		}
@@ -993,36 +510,9 @@ improving_our_army_category = {
 		}
 
 		remove_effect = {
-			
-			IF = {
-				limit = {
-					original_tag = CHL
-				}
-				custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_experience_gain_army_factor = 0.1 tooltip = experience_gain_army_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_factor = 0.03 tooltip = army_attack_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = BRA
-				}
-				custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_experience_gain_army_factor = 0.1 tooltip = experience_gain_army_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_factor = 0.03 tooltip = army_attack_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = ARG
-				}
-				custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_experience_gain_army_factor = 0.1 tooltip = experience_gain_army_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_factor = 0.03 tooltip = army_attack_factor_tt }
-			}
-			ELSE = {
-				custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_experience_gain_army_factor = 0.1 tooltip = experience_gain_army_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_attack_factor = 0.03 tooltip = army_attack_factor_tt }
-			}
+			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
+			add_to_variable = { JUNO_army_modifier_experience_gain_army_factor = 0.1 tooltip = experience_gain_army_factor_tt }
+			add_to_variable = { JUNO_army_modifier_army_attack_factor = 0.03 tooltip = army_attack_factor_tt }
 
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.75
@@ -1048,71 +538,16 @@ improving_our_army_category = {
 		}
 	
 		allowed = {  
-			OR = {
-				original_tag = URG
-				original_tag = PAR 
-				original_tag = BOL
-				original_tag = BRA
-				original_tag = ARG
-				original_tag = CHL 
-			}
+			original_tag = BRA
 		}
 	
 		available = {
 			has_completed_focus = SMB_foreign_advisors
-			any_country = {
-				original_tag = FRA
-				exists = yes
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
 			NOT = {
 				OR = {
 					has_country_flag = JUNO_already_invited_french_advisors_completed
 					has_country_flag = JUNO_already_invited_italian_advisors_completed
 					has_country_flag = JUNO_already_invited_german_advisors_completed
-				}
-			} 
-			custom_trigger_tooltip = {
-				tooltip = has_french_ideology
-				OR = {
-					AND = {
-						FRA = {
-							has_government = fascism
-						}
-						NOT = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
-					AND = {
-						FRA = {
-							has_government = democratic
-						}
-						NOT = {
-							has_government = fascism
-						}
-					}
-					AND = {
-						FRA = {
-							has_government = communism
-						}
-						NOT = {
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-					AND = {
-						FRA = {
-							has_government = neutrality
-						}
-						NOT = {
-							has_government = communism
-							has_government = democratic
-							has_government = fascism
-						}
-					}
 				}
 			}
 		}
@@ -1139,36 +574,9 @@ improving_our_army_category = {
 		}
 
 		remove_effect = {
-			
-			IF = {
-				limit = {
-					original_tag = CHL
-				}
-				custom_effect_tooltip = CHL_modify_chilean_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = artillery_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 tooltip = army_artillery_defence_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = BRA
-				}
-				custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = artillery_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 tooltip = army_artillery_defence_factor_tt }
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = ARG
-				}
-				custom_effect_tooltip = ARG_modify_argentine_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = artillery_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 tooltip = army_artillery_defence_factor_tt }
-			}
-			ELSE = {
-				custom_effect_tooltip = JUNO_modify_south_american_army_ns_intro
-				add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = artillery_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 tooltip = army_artillery_defence_factor_tt }
-			}
+			custom_effect_tooltip = BRA_modify_brazilian_army_ns_intro
+			add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.05 tooltip = artillery_attack_factor_tt }
+			add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 tooltip = army_artillery_defence_factor_tt }
 
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.75
@@ -1190,14 +598,7 @@ improving_our_army_category = {
 		icon = generic_air
 
 		allowed = { 
-			OR = {
-				original_tag = URG
-				original_tag = PAR 
-				original_tag = BOL
-				original_tag = BRA
-				original_tag = ARG
-				original_tag = CHL 
-			}
+			original_tag = BRA
 		} 
 
 		available = {
@@ -1400,22 +801,6 @@ south_american_naval_arms_race_category = {
 					has_country_flag = negotiating_ship_purchase_flag@ROOT  
 				}
 			}
-			NOT = { has_war_with = USA}
-		}
-		available = {
-			NOT = {
-				USA = {
-					OR = {
-						has_civil_war = yes
-						has_capitulated = yes
-						has_opinion = {
-							target = FROM
-							value < 50
-						}
-					}					
-				}
-			}
-			
 		}
 		days_remove = 14
 		remove_effect = {
@@ -1441,21 +826,6 @@ south_american_naval_arms_race_category = {
 					has_country_flag = negotiating_ship_purchase_flag@ROOT  
 				}
 			}
-			NOT = { has_war_with = ENG}
-		}
-		available = {
-			NOT = {
-				ENG = {
-					OR = {
-						has_civil_war = yes
-						has_capitulated = yes
-						has_opinion = {
-							target = FROM
-							value < 50
-						}
-					}					
-				}
-			}			
 		}
 		days_remove = 14
 		remove_effect = {
@@ -1481,21 +851,6 @@ south_american_naval_arms_race_category = {
 					has_country_flag = negotiating_ship_purchase_flag@ROOT  
 				}
 			}
-			NOT = { has_war_with = FRA}
-		}
-		available = {
-			NOT = {
-				FRA = {
-					OR = {
-						has_civil_war = yes
-						has_capitulated = yes
-						has_opinion = {
-							target = FROM
-							value < 50
-						}
-					}					
-				}
-			}			
 		}
 		days_remove = 14
 		remove_effect = {
@@ -1527,7 +882,6 @@ south_american_naval_arms_race_category = {
 			NOT = {
 				ITA = {
 					OR = {
-						has_civil_war = yes
 						has_capitulated = yes
 						has_opinion = {
 							target = FROM
@@ -1567,7 +921,6 @@ south_american_naval_arms_race_category = {
 			NOT = {
 				GER = {
 					OR = {
-						has_civil_war = yes
 						has_capitulated = yes
 						has_opinion = {
 							target = FROM
@@ -1607,7 +960,6 @@ south_american_naval_arms_race_category = {
 			NOT = {
 				JAP = {
 					OR = {
-						has_civil_war = yes
 						has_capitulated = yes
 						has_opinion = {
 							target = FROM
@@ -1641,21 +993,12 @@ south_american_naval_arms_race_category = {
 		}
 	
 		allowed = {  
-			OR = {
-				original_tag = URG
-				original_tag = PAR 
-				original_tag = BOL
-				original_tag = BRA
-				original_tag = ARG
-				original_tag = CHL 
-			}
+			original_tag = BRA
 		}
 	
 		available = {
 			has_completed_focus = SMB_naval_foreign_advisors
-			any_country = {
-				original_tag = JAP
-				exists = yes
+			JAP = {
 				NOT = {
 					has_war_with = ROOT
 				}
@@ -1665,47 +1008,6 @@ south_american_naval_arms_race_category = {
 					has_country_flag = JUNO_already_invited_japanese_naval_advisors_completed
 					has_country_flag = JUNO_already_invited_american_naval_advisors_completed
 					has_country_flag = JUNO_already_invited_soviet_naval_advisors_completed
-				}
-			} 
-			custom_trigger_tooltip = {
-				tooltip = has_japanese_ideology
-				OR = {
-					AND = {
-						JAP = {
-							has_government = fascism
-						}
-						ROOT = {
-							NOT = {
-								has_government = communism
-							}
-						}
-					}
-					AND = {
-						JAP = {
-							has_government = democratic
-						}
-						NOT = {
-							has_government = communism
-							has_government = fascism
-						}
-					}
-					AND = {
-						JAP = {
-							has_government = communism
-						}
-						NOT = {
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-					AND = {
-						JAP = {
-							has_government = neutrality
-						}
-						NOT = {
-							has_government = communism
-						}
-					}
 				}
 			}
 		}
@@ -1732,32 +1034,8 @@ south_american_naval_arms_race_category = {
 		}
 
 		remove_effect = {
-			
-			IF = {
-				limit = {
-					original_tag = CHL
-				}
-				custom_effect_tooltip = CHL_modify_chilean_navy_ns_intro
-				SMB_naval_jap_advisors_effect = yes
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = BRA
-				}
-				custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
-				SMB_naval_jap_advisors_effect = yes
-			}
-			ELSE_IF = {
-				limit = {
-					original_tag = ARG
-				}
-				custom_effect_tooltip = ARG_modify_argentine_navy_ns_intro
-				SMB_naval_jap_advisors_effect = yes
-			}
-			ELSE = {
-				custom_effect_tooltip = JUNO_modify_south_american_navy_ns_intro
-				SMB_naval_jap_advisors_effect = yes
-			}
+			custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
+			SMB_naval_jap_advisors_effect = yes
 
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.75
@@ -1782,70 +1060,16 @@ south_american_naval_arms_race_category = {
 			}
 		
 			allowed = {  
-				OR = {
-					original_tag = URG
-					original_tag = PAR 
-					original_tag = BOL
-					original_tag = BRA
-					original_tag = ARG
-					original_tag = CHL 
-				}
+				Ooriginal_tag = BRA
 			}
 		
 			available = {
 				has_completed_focus = SMB_naval_foreign_advisors
-				any_country = {
-					original_tag = USA
-					exists = yes
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
 				NOT = {
 					OR = {
 						has_country_flag = JUNO_already_invited_american_naval_advisors_completed
 						has_country_flag = JUNO_already_invited_italian_naval_advisors_completed
 						has_country_flag = JUNO_already_invited_japanese_naval_advisors_completed
-					}
-				} 
-				custom_trigger_tooltip = {
-					tooltip = has_american_ideology
-					OR = {
-						AND = {
-							USA = {
-								has_government = fascism
-							}
-							NOT = {
-								has_government = communism
-								has_government = democratic
-							}
-						}
-						AND = {
-							USA = {
-								has_government = democratic
-							}
-							NOT = {
-								has_government = communism
-								has_government = fascism
-							}
-						}
-						AND = {
-							USA = {
-								has_government = communism
-							}
-							NOT = {
-								has_government = fascism
-								has_government = neutrality
-							}
-						}
-						AND = {
-							USA = {
-								has_government = neutrality
-							}
-							NOT = {
-								has_government = communism
-							}
-						}
 					}
 				}
 			}
@@ -1872,32 +1096,8 @@ south_american_naval_arms_race_category = {
 			}
 
 			remove_effect = {
-				
-				IF = {
-					limit = {
-						original_tag = CHL
-					}
-					custom_effect_tooltip = CHL_modify_chilean_navy_ns_intro
-					SMB_naval_usa_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = BRA
-					}
-					custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
-					SMB_naval_usa_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = ARG
-					}
-					custom_effect_tooltip = ARG_modify_argentine_navy_ns_intro
-					SMB_naval_usa_advisors_effect = yes
-				}
-				ELSE = {
-					custom_effect_tooltip = JUNO_modify_south_american_navy_ns_intro
-					SMB_naval_usa_advisors_effect = yes
-				}
+				custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
+				SMB_naval_usa_advisors_effect = yes
 
 				add_doctrine_cost_reduction = {
 					cost_reduction = 0.75
@@ -1923,25 +1123,11 @@ south_american_naval_arms_race_category = {
 			}
 		
 			allowed = {  
-				OR = {
-					original_tag = URG
-					original_tag = PAR 
-					original_tag = BOL
-					original_tag = BRA
-					original_tag = ARG
-					original_tag = CHL 
-				}
+				original_tag = BRA
 			}
 		
 			available = {
 				has_completed_focus = SMB_naval_foreign_advisors
-				any_country = {
-					original_tag = SOV
-					exists = yes
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
 				NOT = {
 					OR = {
 						has_country_flag = JUNO_already_invited_soviet_naval_advisors_completed
@@ -1949,48 +1135,8 @@ south_american_naval_arms_race_category = {
 						has_country_flag = JUNO_already_invited_japanese_naval_advisors_completed
 					}
 				} 
-				custom_trigger_tooltip = {
-					tooltip = has_soviet_ideology
-					OR = {
-						AND = {
-							SOV = {
-								has_government = fascism
-							}
-							NOT = {
-								has_government = communism
-								has_government = democratic
-								has_government = neutrality
-							}
-						}
-						AND = {
-							SOV = {
-								has_government = democratic
-							}
-							NOT = {
-								has_government = communism
-								has_government = neutrality
-								has_government = fascism
-							}
-						}
-						AND = {
-							SOV = {
-								has_government = communism
-							}
-							NOT = {
-								has_government = fascism
-								has_government = neutrality
-							}
-						}
-						AND = {
-							SOV = {
-								has_government = neutrality
-							}
-							NOT = {
-								has_government = communism
-								has_government = fascism
-							}
-						}
-					}
+				NOT = {
+					has_government = neutrality
 				}
 			}
 
