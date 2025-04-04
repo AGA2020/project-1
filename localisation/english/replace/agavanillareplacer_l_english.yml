@@ -1,5 +1,7 @@
 ﻿l_english:
-  USA_amend_the_budget:0 "Amend the Budget Cooldown Countdown: [?USA_amend_the_budget_cooldown:days|Y0"]/245"
+  USA_amend_the_budget:0 "Amend the Budget [GetCooldown]"
+  USA_amend_the_budget_cooldown:0 "Cooldown Countdown: [?USA_amend_the_budget_cooldown:days|Y0"]/245"
+  USA_amend_the_budget_cooldown_hidden:0 ""
  FRA_invest_in_indochina:0 "Invest In French Guiana"
  ITA_flotta_d_evasione_admiral_traits_tt:0 "Random Admiral will gain the trait §Y$bold$§!: \n- $MODIFIER_NAVAL_SPEED$: §G+10%§! \n- $MODIFIER_NAVAL_DAMAGE_FACTOR$: §G+5.00%§! \n\n"
  news.235.t:0 "Fear Bakü'de Yakalandı"

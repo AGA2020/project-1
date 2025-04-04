@@ -153,7 +153,12 @@ USA_congress = {
 			}
 		}
 		complete_effect = {
-			clr_country_flag = USA_amend_the_budget_cooldown
+			if = {
+				limit = {
+					NOT = { has_country_flag =amend_the_budget_first }
+				}
+				clr_country_flag = USA_amend_the_budget_cooldown
+			}
 			clr_country_flag = amend_the_budget_first
 		}
 		modifier = { consumer_goods_factor = -0.10 }

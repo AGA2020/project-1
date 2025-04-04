@@ -1,4 +1,19 @@
 defined_text = {
+    name = GetCooldown
+    text = {
+        trigger = {
+            has_country_flag = amend_the_budget_first
+        }
+        localization_key = USA_amend_the_budget_cooldown_hidden
+    }
+    text = {
+    	trigger = {
+            has_country_flag = USA_amend_the_budget_cooldown
+        }
+        localization_key = USA_amend_the_budget_cooldown
+    }
+}
+defined_text = {
 	name = GetTechStealingStatus
 	text = {
 		trigger = {
