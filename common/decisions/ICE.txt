@@ -1,8 +1,0 @@
-
-
-#Economic Policy
-economy_decisions = {
-
-	#Drilling for oil around Iceland
-
-}
