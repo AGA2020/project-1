@@ -1060,7 +1060,7 @@ south_american_naval_arms_race_category = {
 			}
 		
 			allowed = {  
-				Ooriginal_tag = BRA
+				original_tag = BRA
 			}
 		
 			available = {

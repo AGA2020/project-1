@@ -1009,7 +1009,6 @@ focus_tree = {
 			GER = { add_opinion_modifier = { modifier = ROM_appoint_german_friendly_government target = ROOT } }
 
 			custom_effect_tooltip = CHL_skip_one_line_tt
-
 			unlock_decision_category_tooltip = ROM_change_sides
 			unlock_decision_tooltip = ROM_change_sides_to_axis
 

@@ -86,16 +86,6 @@ SPR_civil_war_offensives = {
 	}
 }
 
-SPA_reassert_american_dominance = {
-
-	icon = spr_reassert_american_dominance
-	
-	allowed = {
-		original_tag = SPR
-		has_dlc = "La Resistance"
-	}
-}
-
 SPA_preparing_the_carlist_insurrection = {
 	priority = 7
 	icon = spr_preparing_the_carlist_insurrection

@@ -12765,10 +12765,6 @@ political_actions = {
 
 }
 
-SPA_reassert_american_dominance = {
-
-}
-
 SPR_expand_resource_extraction = {
 
 	expand_basque_steel_works = { #792

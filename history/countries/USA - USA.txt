@@ -87,7 +87,7 @@ add_breakthrough_progress = {
         specialization = specialization_air
         value = 0.4
 }
-
+set_country_flag = amend_the_budget_first
 if = {
 	limit = {
 		NOT = { has_dlc = "No Step Back" }
