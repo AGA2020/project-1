@@ -1162,32 +1162,8 @@ south_american_naval_arms_race_category = {
 			}
 
 			remove_effect = {
-				
-				IF = {
-					limit = {
-						original_tag = CHL
-					}
-					custom_effect_tooltip = CHL_modify_chilean_navy_ns_intro
-					SMB_naval_sov_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = BRA
-					}
-					custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
-					SMB_naval_sov_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = ARG
-					}
-					custom_effect_tooltip = ARG_modify_argentine_navy_ns_intro
-					SMB_naval_sov_advisors_effect = yes
-				}
-				ELSE = {
-					custom_effect_tooltip = JUNO_modify_south_american_navy_ns_intro
-					SMB_naval_sov_advisors_effect = yes
-				}
+				custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
+				SMB_naval_sov_advisors_effect = yes
 
 				add_doctrine_cost_reduction = {
 					cost_reduction = 0.75
@@ -1213,21 +1189,12 @@ south_american_naval_arms_race_category = {
 			}
 		
 			allowed = {  
-				OR = {
-					original_tag = URG
-					original_tag = PAR 
-					original_tag = BOL
-					original_tag = BRA
-					original_tag = ARG
-					original_tag = CHL 
-				}
+				original_tag = BRA
 			}
 		
 			available = {
 				has_completed_focus = SMB_naval_foreign_advisors
-				any_country = {
-					original_tag = GER
-					exists = yes
+				GER = {
 					NOT = {
 						has_war_with = ROOT
 					}
@@ -1237,47 +1204,6 @@ south_american_naval_arms_race_category = {
 						has_country_flag = JUNO_already_invited_german_naval_advisors_completed
 						has_country_flag = JUNO_already_invited_british_naval_advisors_completed
 						has_country_flag = JUNO_already_invited_soviet_naval_advisors_completed
-					}
-				} 
-				custom_trigger_tooltip = {
-					tooltip = has_german_ideology
-					OR = {
-						AND = {
-							GER = {
-								has_government = fascism
-							}
-							NOT = {
-								has_government = communism
-							}
-						}
-						AND = {
-							GER = {
-								has_government = democratic
-							}
-							NOT = {
-								has_government = communism
-								has_government = fascism
-							}
-						}
-						AND = {
-							GER = {
-								has_government = communism
-							}
-							NOT = {
-								has_government = fascism
-								has_government = neutrality
-							}
-						}
-						AND = {
-							GER = {
-								has_government = neutrality
-							}
-							NOT = {
-								has_government = communism
-								has_government = fascism
-								has_government = democratic
-							}
-						}
 					}
 				}
 			}
@@ -1304,32 +1230,8 @@ south_american_naval_arms_race_category = {
 			}
 
 			remove_effect = {
-				
-				IF = {
-					limit = {
-						original_tag = CHL
-					}
-					custom_effect_tooltip = CHL_modify_chilean_navy_ns_intro
-					SMB_naval_ger_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = BRA
-					}
-					custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
-					SMB_naval_ger_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = ARG
-					}
-					custom_effect_tooltip = ARG_modify_argentine_navy_ns_intro
-					SMB_naval_ger_advisors_effect = yes
-				}
-				ELSE = {
-					custom_effect_tooltip = JUNO_modify_south_american_navy_ns_intro
-					SMB_naval_ger_advisors_effect = yes
-				}
+				custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
+				SMB_naval_ger_advisors_effect = yes
 
 				add_doctrine_cost_reduction = {
 					cost_reduction = 0.75
@@ -1355,21 +1257,12 @@ south_american_naval_arms_race_category = {
 			}
 		
 			allowed = {  
-				OR = {
-					original_tag = URG
-					original_tag = PAR 
-					original_tag = BOL
-					original_tag = BRA
-					original_tag = ARG
-					original_tag = CHL 
-				}
+				original_tag = BRA
 			}
 		
 			available = {
 				has_completed_focus = SMB_naval_foreign_advisors
-				any_country = {
-					original_tag = ITA
-					exists = yes
+				ITA = {
 					NOT = {
 						has_war_with = ROOT
 					}
@@ -1381,45 +1274,8 @@ south_american_naval_arms_race_category = {
 						has_country_flag = JUNO_already_invited_british_naval_advisors_completed
 					}
 				} 
-				custom_trigger_tooltip = {
-					tooltip = has_italian_ideology
-					OR = {
-						AND = {
-							ITA = {
-								has_government = fascism
-							}
-							NOT = {
-								has_government = communism
-								has_government = neutrality
-							}
-						}
-						AND = {
-							ITA = {
-								has_government = democratic
-							}
-							NOT = {
-								has_government = fascism
-							}
-						}
-						AND = {
-							ITA = {
-								has_government = communism
-							}
-							NOT = {
-								has_government = fascism
-								has_government = neutrality
-							}
-						}
-						AND = {
-							ITA = {
-								has_government = neutrality
-							}
-							NOT = {
-								has_government = communism
-								has_government = democratic
-							}
-						}
-					}
+				NOT = {
+					has_government = neutrality
 				}
 			}
 
@@ -1445,32 +1301,8 @@ south_american_naval_arms_race_category = {
 			}
 
 			remove_effect = {
-				
-				IF = {
-					limit = {
-						original_tag = CHL
-					}
-					custom_effect_tooltip = CHL_modify_chilean_navy_ns_intro
-					SMB_naval_ita_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = BRA
-					}
-					custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
-					SMB_naval_ita_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = ARG
-					}
-					custom_effect_tooltip = ARG_modify_argentine_navy_ns_intro
-					SMB_naval_ita_advisors_effect = yes
-				}
-				ELSE = {
-					custom_effect_tooltip = JUNO_modify_south_american_navy_ns_intro
-					SMB_naval_ita_advisors_effect = yes
-				}
+				custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
+				SMB_naval_ita_advisors_effect = yes
 
 				add_doctrine_cost_reduction = {
 					cost_reduction = 0.75
@@ -1496,72 +1328,16 @@ south_american_naval_arms_race_category = {
 			}
 		
 			allowed = {  
-				OR = {
-					original_tag = URG
-					original_tag = PAR 
-					original_tag = BOL
-					original_tag = BRA
-					original_tag = ARG
-					original_tag = CHL 
-				}
+				original_tag = BRA
 			}
 		
 			available = {
 				has_completed_focus = SMB_naval_foreign_advisors
-				any_country = {
-					original_tag = ENG
-					exists = yes
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
 				NOT = {
 					OR = {
 						has_country_flag = JUNO_already_invited_british_naval_advisors_completed
 						has_country_flag = JUNO_already_invited_italian_naval_advisors_completed
 						has_country_flag = JUNO_already_invited_german_naval_advisors_completed
-					}
-				} 
-				custom_trigger_tooltip = {
-					tooltip = has_british_ideology
-					OR = {
-						AND = {
-							ENG = {
-								has_government = fascism
-							}
-							NOT = {
-								has_government = communism
-								has_government = neutrality
-								has_government = democratic
-							}
-						}
-						AND = {
-							ENG = {
-								has_government = democratic
-							}
-							NOT = {
-								has_government = fascism
-								has_government = communism
-							}
-						}
-						AND = {
-							ENG = {
-								has_government = communism
-							}
-							NOT = {
-								has_government = fascism
-								has_government = neutrality
-							}
-						}
-						AND = {
-							ENG = {
-								has_government = neutrality
-							}
-							NOT = {
-								has_government = communism
-								has_government = democratic
-							}
-						}
 					}
 				}
 			}
@@ -1588,32 +1364,8 @@ south_american_naval_arms_race_category = {
 			}
 
 			remove_effect = {
-				
-				IF = {
-					limit = {
-						original_tag = CHL
-					}
-					custom_effect_tooltip = CHL_modify_chilean_navy_ns_intro
-					SMB_naval_eng_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = BRA
-					}
-					custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
-					SMB_naval_eng_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = ARG
-					}
-					custom_effect_tooltip = ARG_modify_argentine_navy_ns_intro
-					SMB_naval_eng_advisors_effect = yes
-				}
-				ELSE = {
-					custom_effect_tooltip = JUNO_modify_south_american_navy_ns_intro
-					SMB_naval_eng_advisors_effect = yes
-				}
+				custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
+				SMB_naval_eng_advisors_effect = yes
 
 				add_doctrine_cost_reduction = {
 					cost_reduction = 0.75
@@ -1639,71 +1391,16 @@ south_american_naval_arms_race_category = {
 			}
 		
 			allowed = {  
-				OR = {
-					original_tag = URG
-					original_tag = PAR 
-					original_tag = BOL
-					original_tag = BRA
-					original_tag = ARG
-					original_tag = CHL 
-				}
+				original_tag = BRA
 			}
 		
 			available = {
 				has_completed_focus = SMB_naval_foreign_advisors
-				any_country = {
-					original_tag = FRA
-					exists = yes
-					NOT = {
-						has_war_with = ROOT
-					}
-				}
 				NOT = {
 					OR = {
 						has_country_flag = JUNO_already_invited_french_naval_advisors_completed
 						has_country_flag = JUNO_already_invited_italian_naval_advisors_completed
 						has_country_flag = JUNO_already_invited_german_naval_advisors_completed
-					}
-				} 
-				custom_trigger_tooltip = {
-					tooltip = has_french_ideology
-					OR = {
-						AND = {
-							FRA = {
-								has_government = fascism
-							}
-							NOT = {
-								has_government = communism
-								has_government = democratic
-							}
-						}
-						AND = {
-							FRA = {
-								has_government = democratic
-							}
-							NOT = {
-								has_government = fascism
-							}
-						}
-						AND = {
-							FRA = {
-								has_government = communism
-							}
-							NOT = {
-								has_government = fascism
-								has_government = neutrality
-							}
-						}
-						AND = {
-							FRA = {
-								has_government = neutrality
-							}
-							NOT = {
-								has_government = communism
-								has_government = democratic
-								has_government = fascism
-							}
-						}
 					}
 				}
 			}
@@ -1730,32 +1427,8 @@ south_american_naval_arms_race_category = {
 			}
 
 			remove_effect = {
-				
-				IF = {
-					limit = {
-						original_tag = CHL
-					}
-					custom_effect_tooltip = CHL_modify_chilean_navy_ns_intro
-					SMB_naval_fra_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = BRA
-					}
-					custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
-					SMB_naval_fra_advisors_effect = yes
-				}
-				ELSE_IF = {
-					limit = {
-						original_tag = ARG
-					}
-					custom_effect_tooltip = ARG_modify_argentine_navy_ns_intro
-					SMB_naval_fra_advisors_effect = yes
-				}
-				ELSE = {
-					custom_effect_tooltip = JUNO_modify_south_american_navy_ns_intro
-					SMB_naval_fra_advisors_effect = yes
-				}
+				custom_effect_tooltip = BRA_modify_brazilian_navy_ns_intro
+				SMB_naval_fra_advisors_effect = yes
 
 				add_doctrine_cost_reduction = {
 					cost_reduction = 0.75
@@ -1789,13 +1462,7 @@ JUNO_promote_immigration_cat = {
 		fire_only_once = yes
 	
 		allowed = {
-			AND = {
-				OR = {
-					original_tag = ARG
-					original_tag = BRA
-					original_tag = CHL
-				}
-			}
+			original_tag = BRA
 		}
 	
 		available = {
@@ -1839,32 +1506,6 @@ JUNO_promote_immigration_cat = {
 						state = 500
 						state = 501
 						state = 499
-					}
-				}
-
-				else_if = {
-					limit = {
-						ROOT = {
-							original_tag = ARG
-						}
-					}
-					OR = {
-						state = 278
-						state = 956
-						state = 512
-					}
-				}
-
-				else_if = {
-					limit = {
-						ROOT = {
-							original_tag = CHL
-						}
-					}
-					OR = {
-						state = 950
-						state = 949
-						state = 507
 					}
 				}
 			}
@@ -2180,138 +1821,3 @@ political_actions = {
 		}
 	}
 }
-
-
-				#if = {
-				#	limit = {
-				#		ROOT = {
-				#			has_war_with = GER   
-				#		}
-				#		GER = { NOT = { has_government = ROOT } }
-				#	}
-				#	VEN = { 
-				#		send_embargo = GER 
-				#		add_to_array = {
-				#			array = global.ven_countries_that_are_under_embargo
-				#			value = GER
-				#		}
-				#	}
-				#	if = {
-				#		limit = {
-				#			GER = { is_in_faction = yes }
-				#		}
-				#		every_country = {
-				#			limit = {
-				#				NOT = { is_embargoed_by = VEN }
-				#				OR = {
-				#					is_in_faction_with = GER
-				#					is_subject_of = GER
-				#				}
-				#			}
-				#			add_to_array = {
-				#				array = global.ven_countries_that_are_under_embargo
-				#				value = THIS
-				#			}
-#
-				#			VEN = { send_embargo = PREV }
-				#		}
-				#	}
-				#}
-#
-				#if = {
-				#	limit = {
-				#		ROOT = {
-				#			has_war_with = JAP   
-				#		}
-				#	}
-				#	VEN = { 
-				#		send_embargo = JAP 
-				#		add_to_array = {
-				#			array = global.ven_countries_that_are_under_embargo
-				#			value = JAP
-				#		}
-				#	}
-				#	if = {
-				#		limit = {
-				#			JAP = { is_in_faction = yes }
-				#		}
-				#		every_country = {
-				#			limit = {
-				#				NOT = { is_embargoed_by = VEN }
-				#				OR = {
-				#					is_in_faction_with = JAP
-				#					is_subject_of = JAP
-				#				}
-				#			}
-				#			add_to_array = {
-				#				array = global.ven_countries_that_are_under_embargo
-				#				value = THIS
-				#			}
-				#			VEN = { send_embargo = PREV }
-				#		}
-				#	}
-				#}
-#
-				#if = {
-				#	limit = {
-				#		ROOT = {
-				#			has_war_with = FRA   
-				#		}
-				#	}
-				#	VEN = { 
-				#		send_embargo = FRA 
-				#		add_to_array = {
-				#			array = global.ven_countries_that_are_under_embargo
-				#			value = FRA
-				#		}
-				#	}
-				#	if = {
-				#		limit = {
-				#			FRA = { is_in_faction = yes }
-				#		}
-				#		every_country = {
-				#			limit = {
-				#				NOT = { is_embargoed_by = VEN }
-				#				OR = {
-				#					is_in_faction_with = FRA
-				#					is_subject_of = FRA
-				#				}
-				#			}
-				#			add_to_array = {
-				#				array = global.ven_countries_that_are_under_embargo
-				#				value = THIS
-				#			}
-				#			VEN = { send_embargo = PREV }
-				#		}
-				#	}
-				#}
-#
-				#if = {
-				#	VEN = { 
-				#		send_embargo = ENG 
-				#		add_to_array = {
-				#			array = global.ven_countries_that_are_under_embargo
-				#			value = ENG
-				#		}
-				#	}
-				#	if = {
-				#		limit = {
-				#			ENG = { is_in_faction = yes }
-				#		}
-				#		every_country = {
-				#			limit = {
-				#				NOT = { is_embargoed_by = VEN }
-				#				OR = {
-				#					is_in_faction_with = ENG
-				#					is_subject_of = ENG
-				#				}
-				#			}
-				#			add_to_array = {
-				#				array = global.ven_countries_that_are_under_embargo
-				#				value = THIS
-				#			}
-				#			VEN = { send_embargo = PREV }
-				#		}
-				#	}
-				#}
-			#}

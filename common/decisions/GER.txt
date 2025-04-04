@@ -1,77 +1,6 @@
 #Category only allowed for GER
 GER_mefo_bills_category = {
 
-	GER_mefo_bills_mission = {
-
-		allowed = { always = no }
-
-		icon = ger_mefo_bills
-
-		available = {
-			#NOT = { has_government = democratic }
-			#GER_can_delay_mefo_payment = yes #TODO_DANNE Remove this trigger entirely
-			has_political_power > 0
-			hidden_trigger = { always = no }
-		}
-
-		#cost = GER_mefo_bill_counter?10
-
-		days_mission_timeout = 180
-		is_good = yes
-		fire_only_once = yes
-
-		cancel_trigger = {
-			hidden_trigger = {
-				OR = {
-					NOT = { has_dynamic_modifier = { modifier = GER_mefo_bills_modifier } }
-					has_idea = GER_mefo_bills_ended
-				}
-			}
-		}
-
-		days_remove = GER_extend_mefo_bills_days?0
-		remove_effect = {
-		}
-
-		complete_effect = {
-		}
-
-		timeout_effect = {
-			if = {
-				limit = {
-					has_country_flag = ger_has_cancelled_mefo
-				}
-				#GER_remove_mefo_bills = yes
-				#1
-				GER_pay_back_mefo_bills = yes
-			}
-			else = {
-				custom_effect_tooltip = GER_mefo_bills_mission_tt #TODO_Danne Re-write this to better fit the new circumstances!
-				custom_effect_tooltip = GER_mefo_bills_effect_in_days
-				hidden_effect = {
-					set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
-					set_country_flag = paid_for_mefo
-				}
-				#GER_mefo_bills_level_up = yes
-				if = {
-					limit = {
-						check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
-					}
-					hidden_effect = { set_variable = { var = GER_mefo_bill_counter value = 10 } }
-				}
-				add_to_variable = { var = GER_mefo_bill_counter value = 10 }
-
-				hidden_effect = {
-					activate_mission = GER_mefo_bills_mission
-				}
-			}
-		}
-
-		ai_will_do = {
-			base = 200
-		}
-	}
-
 	GER_cancel_mefos = {
 
 		icon = ger_mefo_bills
@@ -79,7 +8,9 @@ GER_mefo_bills_category = {
 		ai_will_do = {
 			base = 0
 		}
-
+		allowed = {
+			original_tag = GER
+		} 
 		available = {
 		}
 
@@ -89,12 +20,6 @@ GER_mefo_bills_category = {
 
 		visible = {
 			has_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
-			#hidden_trigger = { #These are showing up as triggers for cancelation
-			#	NOT = {
-			#		has_country_flag = ger_has_cancelled_mefo
-			#		has_idea = GER_mefo_bills_ended
-			#	}
-			#}
 		}
 
 		cancel_if_not_visible = yes
@@ -114,49 +39,6 @@ GER_mefo_bills_category = {
 			GER_stop_rearmament = yes
 		}
 	}
-
-	#GER_renew_mefos = {
-#
-	#	icon = ger_mefo_bills
-#
-	#	available = {
-	#		hidden_trigger = {
-	#			has_country_flag = ger_has_cancelled_mefo
-	#			NOT = {
-	#				OR = {
-	#					NOT = { GER_has_mefo_bills = yes }
-	#					has_idea = GER_mefo_bills_ended
-	#				}
-	#			}
-	#		}
-	#	}
-#
-	#	cost = 0
-#
-	#	fire_only_once = no
-#
-	#	visible = {
-	#		hidden_trigger = {
-	#			has_country_flag = ger_has_cancelled_mefo
-	#			NOT = {
-	#				OR = {
-	#					NOT = { GER_has_mefo_bills = yes }
-	#					has_idea = GER_mefo_bills_ended
-	#				}
-	#			}
-	#		}
-	#	}
-#
-	#	cancel_if_not_visible = yes
-#
-	#	remove_effect = {
-	#		clr_country_flag = ger_has_cancelled_mefo
-	#	}
-#
-	#	ai_will_do = {
-	#		factor = 200
-	#	}
-	#}
 }
 
 GER_seize_gold_reserves_cat = {
@@ -435,10 +317,6 @@ GER_operational_planning_category = {
 				}
 				has_completed_focus = GER_war_with_the_ussr
 			}
-			#modifier = {
-			#	factor = 1.5
-			#	has_wargoal_against = FROM
-			#}
 			modifier = {
 				factor = 10
 				FROM = {
@@ -577,8 +455,6 @@ GER_operational_planning_category = {
 				}
 			}
 		}
-
-	#	fire_only_once = yes
 		
 		complete_effect = {
 			hidden_effect = {
@@ -768,16 +644,6 @@ GER_operational_planning_category = {
 
 		ai_will_do = {
 			base = 0 #TODO_DANNE Don't do this for now, concentrate your efforts elsewhere
-			#modifier = {
-			#	factor = 5
-			#	has_war_with = FROM
-			#}
-			#modifier = {
-			#	factor = 2
-			#	FROM = {
-			#		is_major = yes
-			#	}
-			#}
 		}
 
 		allowed = {
@@ -1030,10 +896,7 @@ GER_price_controls_cat = {
 			}
 		}
 
-		available = {
-		}
-
-		visible = { #This decision is not available for the 1939 Start
+		visible = {
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
@@ -1076,10 +939,7 @@ GER_price_controls_cat = {
 			}
 		}
 
-		available = {
-		}
-
-		visible = { #This decision is not available for the 1939 Start
+		visible = {
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
@@ -1121,10 +981,7 @@ GER_price_controls_cat = {
 			}
 		}
 
-		available = {
-		}
-
-		visible = { #This decision is not available for the 1939 Start
+		visible = {
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
@@ -1214,10 +1071,7 @@ GER_price_controls_cat = {
 			}
 		}
 
-		available = {
-		}
-
-		visible = { #This decision is not available for the 1939 Start
+		visible = {
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
@@ -1266,7 +1120,7 @@ GER_price_controls_cat = {
 			has_stability > 0.2
 		}
 
-		visible = { #This decision is not available for the 1939 Start
+		visible = {
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
@@ -1312,7 +1166,7 @@ GER_price_controls_cat = {
 			has_stability > 0.2
 		}
 
-		visible = { #This decision is not available for the 1939 Start
+		visible = {
 			NOT = { has_country_flag = GER_inactivate_price_control_measures_flag }
 		}
 
@@ -1357,18 +1211,15 @@ GER_price_controls_cat = {
 				is_historical_focus_on = yes 
 			}
 		}
-
+		allowed = {
+			original_tag = GER
+		}
 		visible = {
-			has_dlc = "Gotterdammerung"
 			NOT = {
 				OR = {
 					is_in_faction_with = HUN
 					has_guaranteed = HUN
 				}
-			}
-			HUN = {
-				exists = yes
-				has_capitulated = no
 			}
 		}
 
@@ -1623,9 +1474,6 @@ GER_fortify_the_vaterland_cat = {
 				factor = 2
 				is_historical_focus_on = yes
 			}
-		}
-
-		visible = {
 		}
 
 		available = { 
@@ -2284,9 +2132,6 @@ GER_fortify_the_vaterland_cat = {
 			}
 		}
 
-		visible = {
-		}
-
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_controls_atlantic_coast_jylland_vlaanderen_tt
@@ -2484,9 +2329,6 @@ GER_fortify_the_vaterland_cat = {
 					has_completed_focus = GER_war_with_the_ussr
 				}
 			}
-		}
-
-		visible = {
 		}
 
 		available = {
@@ -2853,9 +2695,6 @@ GER_fortify_the_vaterland_cat = {
 			}
 		}
 
-		visible = {
-		}
-
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = GER_controls_the_alps_tt
@@ -3142,72 +2981,36 @@ GER_hilfskreuzer_cat = {
 	  		}
 		}
 		days_remove = 25
-
-		complete_effect = {
-			#add_equipment_to_stockpile = { 
-			#	type = convoy_1
-			#	amount = -20 
-			#}
-		}
 		remove_effect = {
 			if = {
 				limit = {
-					has_dlc = "Man the Guns"
+					NOT = { has_country_flag = GER_create_merchant_raider_variant }
 				}
-				if = {
-					limit = {
-						NOT = { has_country_flag = GER_create_merchant_raider_variant }
-					}
-					set_country_flag = GER_create_merchant_raider_variant
-					create_equipment_variant = {
-						name = "Hilfskreuzer"				
-						type = ship_hull_cruiser_1
-						name_group = GER_MR_HISTORICAL #Merchant Raider names
-						parent_version = 0
-						modules = {
-							fixed_ship_battery_slot = ship_light_battery_2
-							fixed_ship_anti_air_slot = empty
-							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-							fixed_ship_radar_slot = empty
-							fixed_ship_engine_slot = cruiser_ship_engine_1
-							fixed_ship_armor_slot = ship_armor_cruiser_1
-							fixed_ship_secondaries_slot = dp_ship_secondaries_1
-							mid_1_custom_slot = ship_torpedo_1
-							mid_2_custom_slot = empty
-							rear_1_custom_slot = ship_light_battery_1
-						}
-						obsolete = yes
-					}
-				}
-				create_ship = {
+				set_country_flag = GER_create_merchant_raider_variant
+				create_equipment_variant = {
+					name = "Hilfskreuzer"				
 					type = ship_hull_cruiser_1
-					equipment_variant = "Hilfskreuzer"
-					creator = ROOT
+					name_group = GER_MR_HISTORICAL #Merchant Raider names
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_light_battery_2
+						fixed_ship_anti_air_slot = empty
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = cruiser_ship_engine_1
+						fixed_ship_armor_slot = ship_armor_cruiser_1
+						fixed_ship_secondaries_slot = dp_ship_secondaries_1
+						mid_1_custom_slot = ship_torpedo_1
+						mid_2_custom_slot = empty
+						rear_1_custom_slot = ship_light_battery_1
+					}
+					obsolete = yes
 				}
 			}
-			else = {
-				if = {
-					limit = {
-						NOT = { has_country_flag = GER_create_merchant_raider_variant }
-					}
-					set_country_flag = GER_create_merchant_raider_variant
-					create_equipment_variant = {
-						name = "Hilfskreuzer"
-						type = light_cruiser_1
-						upgrades = {
-							ship_reliability_upgrade = 0
-							ship_engine_upgrade = 0
-							ship_gun_upgrade = 0
-							ship_anti_air_upgrade = 0
-						}
-						obsolete = yes
-					}
-				}
-				create_ship = {
-					type = light_cruiser_1
-					equipment_variant = "Hilfskreuzer"
-					creator = ROOT
-				}
+			create_ship = {
+				type = ship_hull_cruiser_1
+				equipment_variant = "Hilfskreuzer"
+				creator = ROOT
 			}
 		}
 	}
