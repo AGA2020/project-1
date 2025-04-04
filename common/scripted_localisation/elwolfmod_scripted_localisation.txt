@@ -1,4 +1,19 @@
 defined_text = {
+    name = GetResearchGrantsCooldown
+    text = {
+        trigger = {
+            has_country_flag = research_grants_first
+        }
+        localization_key = USA_amend_the_budget_cooldown_hidden
+    }
+    text = {
+    	trigger = {
+            has_country_flag = USA_research_grants_cooldown
+        }
+        localization_key = USA_research_grants_cooldown_title
+    }
+}
+defined_text = {
     name = GetCooldown
     text = {
         trigger = {
@@ -10,7 +25,7 @@ defined_text = {
     	trigger = {
             has_country_flag = USA_amend_the_budget_cooldown
         }
-        localization_key = USA_amend_the_budget_cooldown
+        localization_key = USA_amend_the_budget_cooldown_title
     }
 }
 defined_text = {

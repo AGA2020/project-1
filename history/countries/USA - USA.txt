@@ -88,6 +88,7 @@ add_breakthrough_progress = {
         value = 0.4
 }
 set_country_flag = amend_the_budget_first
+set_country_flag = research_grants_first
 if = {
 	limit = {
 		NOT = { has_dlc = "No Step Back" }
