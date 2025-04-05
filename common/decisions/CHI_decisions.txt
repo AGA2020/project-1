@@ -1,23 +1,4 @@
 
-
-
-#Category allowed for all potential nationalist china
-#Category visible when CHI_army_reform focus is completed
-CHI_army_reform = {
-
-}
-
-economy_decisions = {
-
-}
-
-
-### #  # ### ### #  ### ###   ##  ### ###  ##  #  #
- #  ## # #    #  #   #  #  # #  #  #   #  #  # ## #
- #  # ## ##   #  #   #  ###  ####  #   #  #  # # ##
- #  #  # #    #  #   #  #  # #  #  #   #  #  # #  #
-### #  # #   ### ### #  #  # #  #  #  ###  ##  #  #
-
 #Category allowed for all potential nationalist china
 #Visible when another country had completed focus 
 @REMOVE_INFILTRATION_PP_COST = 10

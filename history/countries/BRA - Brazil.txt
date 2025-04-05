@@ -233,6 +233,12 @@ create_equipment_variant = {
 	design_team = mio:BRA_rossi_organization
 }
 
+diplomatic_relation = {
+	country = ENG
+	relation = military_access
+	active = yes
+}
+
 IF = {
 	limit = {
 		NOT = {

@@ -85,8 +85,6 @@ MTG_naval_treaties = {
 	MTG_abandon_treaty_fascist = {
 
 		icon = generic
-			
-	
 		available = {
 			OR = {
 				threat > 0.2
@@ -320,12 +318,6 @@ MTG_naval_treaties = {
 	MTG_send_treaty_warning_to_FROM_previous_signatory = {
 
 		icon = generic_naval
-			
-	
-		available = {
-			
-		}
-
 		target_root_trigger = {
 			has_naval_treaty_trigger = yes
 		}
@@ -621,41 +613,6 @@ MTG_naval_treaties = {
 			}
 		}
 		is_good = no
-		#activation = {
-		#	if = {
-		#		limit = { ENG = { has_naval_treaty_trigger = yes } }
-		#		naval_strength_comparison = {
-		#			other = ENG
-		#			ratio > 1.1
-		#			sub_unit_def_weights = {
-		#				carrier = 0.5
-		#				battleship = 1
-		#				battle_cruiser = 0.8
-		#				heavy_cruiser = 0.5
-		#			}
-		#		}
-		#	}
-		#	else_if = {
-		#		limit = { USA = { has_naval_treaty_trigger = yes } }
-		#		naval_strength_comparison = {
-		#			other = USA
-		#			ratio > 1.1
-		#			sub_unit_def_weights = {
-		#				carrier = 0.5
-		#				battleship = 1
-		#				battle_cruiser = 0.8
-		#				heavy_cruiser = 0.5
-		#			}
-		#		}
-		#	}
-		#	else = {
-		#		has_navy_size = {
-		#			type = capital_ship
-		#			size > 50
-		#		}
-		#	}
-		#	has_naval_treaty_trigger = yes
-		#}
 		days_mission_timeout = 30
 	
 		visible = {

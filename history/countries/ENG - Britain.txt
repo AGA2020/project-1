@@ -104,6 +104,14 @@ add_breakthrough_progress = {
 	value = 0.5
 }
 
+diplomatic_relation = { country = BRA relation = non_aggression_pact }
+
+diplomatic_relation = {
+	country = BRA
+	relation = military_access
+	active = yes
+}
+
 if = {
 	limit = {
 		NOT = { has_dlc = "No Step Back" }

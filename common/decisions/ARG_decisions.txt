@@ -9,16 +9,11 @@ ARG_international_loan_decisions = {
 		}
 	
 		allowed = {
-			OR = {
-				original_tag = ARG
-				original_tag = BRA
-			}
+			original_tag = BRA
 		}
 
 		available = {
-			OR = {
-				has_completed_focus = BRA_reach_out_to_the_great_powers
-			}
+			has_completed_focus = BRA_reach_out_to_the_great_powers
 			ENG = {
 				has_opinion = {
 					target = ROOT
@@ -28,9 +23,7 @@ ARG_international_loan_decisions = {
 		} 
 
 		visible = { 
-			OR = {
-				has_completed_focus = BRA_reach_out_to_the_great_powers
-			}
+			has_completed_focus = BRA_reach_out_to_the_great_powers
 			NOT = {
 				has_country_flag = ARG_british_loan_flag
 			}
@@ -100,22 +93,11 @@ ARG_international_loan_decisions = {
 		}
 	
 		allowed = {
-			OR = {
-				original_tag = ARG
-				original_tag = BRA
-			}
+			original_tag = BRA
 		}
 
 		available = {
-			OR = {
-				has_completed_focus = BRA_reach_out_to_the_great_powers
-			}
-			#ENG = {
-			#	has_opinion = {
-			#		target = ROOT
-			#		value > 49
-			#	} 
-			#}
+			has_completed_focus = BRA_reach_out_to_the_great_powers
 		} 
 
 		visible = { 
@@ -169,16 +151,11 @@ ARG_international_loan_decisions = {
 		}
 	
 		allowed = {
-			OR = {
-				original_tag = ARG
-				original_tag = BRA
-			}
+			original_tag = BRA
 		}
 
 		available = {
-			OR = {
-				has_completed_focus = BRA_reach_out_to_the_great_powers
-			}
+			has_completed_focus = BRA_reach_out_to_the_great_powers
 			GER = {
 				has_opinion = {
 					target = ROOT
