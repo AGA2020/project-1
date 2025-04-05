@@ -22,7 +22,6 @@ foreign_influence = {
 				has_political_power > 60
 			}
 		}
-
 		visible = {
 			has_government = democratic
 			FROM = {

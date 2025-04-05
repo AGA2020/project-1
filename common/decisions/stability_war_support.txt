@@ -7,7 +7,6 @@ crisis = {
 		allowed = {
 			always = yes
 		}
-
 		available = {
 			OR = {
 				has_civil_war = yes

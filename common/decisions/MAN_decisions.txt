@@ -19,10 +19,10 @@ MAN_banditry_category = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
+ 			highlight_state_targets = {
 			state = 714
-		} 
-}
+			} 
+		}
 
 		cost = 0
 
