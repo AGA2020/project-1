@@ -54,15 +54,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_german_tank_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
+				801 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -124,7 +116,6 @@ foreign_mio_decisions_category = {
 					is_subject = no
 					is_subject_of = GER
 				}
-				#is_in_faction_with = GER
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
@@ -140,15 +131,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_german_aircraft_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
+				212 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -185,12 +168,7 @@ foreign_mio_decisions_category = {
 		targets = { GER }
 		
 		allowed = {
-			OR = {
-				AND = {
-					tag = BUL
-					has_dlc = "Battle for the Bosporus"
-				} 
-			}
+			tag = BUL
 		}
 
 		visible = {
@@ -233,15 +211,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_german_materiel_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
+				801 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -278,12 +248,7 @@ foreign_mio_decisions_category = {
 		targets = { SOV }
 		
 		allowed = {
-			OR = {
-				AND = {
-					tag = BUL
-					has_dlc = "Battle for the Bosporus"
-				}
-			}
+			tag = BUL
 		}
 
 		visible = {
@@ -310,7 +275,6 @@ foreign_mio_decisions_category = {
 					is_subject = no
 					is_subject_of = SOV
 				}
-				#is_in_faction_with = SOV
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
@@ -326,15 +290,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_soviet_tank_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
+				801 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -371,12 +327,7 @@ foreign_mio_decisions_category = {
 		targets = { SOV }
 		
 		allowed = {
-			OR = {
-				AND = {
-					tag = BUL
-					has_dlc = "Battle for the Bosporus"
-				}
-			}
+			tag = BUL
 		}
 
 		visible = {
@@ -423,16 +374,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_soviet_naval_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_coastal = yes 
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
+				211 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = dockyard
@@ -469,12 +411,7 @@ foreign_mio_decisions_category = {
 		targets = { SOV }
 		
 		allowed = {
-			OR = {
-				AND = {
-					tag = BUL
-					has_dlc = "Battle for the Bosporus"
-				}
-			}
+			tag = BUL
 		}
 
 		visible = {
@@ -517,15 +454,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_soviet_aircraft_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
+				212 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -562,12 +491,7 @@ foreign_mio_decisions_category = {
 		targets = { SOV }
 		
 		allowed = {
-			OR = {
-				AND = {
-					tag = BUL
-					has_dlc = "Battle for the Bosporus"
-				} 
-			}
+			tag = BUL
 		}
 
 		visible = {
@@ -610,15 +534,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_soviet_materiel_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
+				48 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -699,15 +615,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_british_tank_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
+				801 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -744,12 +652,7 @@ foreign_mio_decisions_category = {
 		targets = { ENG }
 		
 		allowed = {
-			OR = {
-				AND = {
-					tag = BUL
-					has_dlc = "Battle for the Bosporus"
-				}
-			}
+			tag = BUL
 		}
 
 		visible = {
@@ -779,7 +682,6 @@ foreign_mio_decisions_category = {
 					is_subject = no
 					is_subject_of = ENG
 				}
-				#is_in_faction_with = ENG
 				has_completed_focus = BUL_a_black_sea_fleet
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
@@ -796,16 +698,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_british_naval_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_coastal = yes 
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
+				211 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = dockyard
@@ -871,7 +764,6 @@ foreign_mio_decisions_category = {
 					is_subject = no
 					is_subject_of = ENG
 				}
-				#is_in_faction_with = ENG
 				has_completed_focus = BUL_a_black_sea_fleet
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
@@ -888,16 +780,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_british_naval_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_coastal = yes 
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
+				211 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = dockyard
@@ -960,7 +843,6 @@ foreign_mio_decisions_category = {
 					is_subject = no
 					is_subject_of = ENG
 				}
-				#is_in_faction_with = ENG
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
@@ -976,15 +858,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_british_aircraft_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
+				48 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -1064,15 +938,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_british_materiel_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
+				211 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -1110,12 +976,7 @@ foreign_mio_decisions_category = {
 		targets = { ITA }
 		
 		allowed = {
-			OR = {
-				AND = {
-					tag = BUL
-					has_dlc = "Battle for the Bosporus"
-				}
-			}
+			tag = BUL
 		}
 
 		visible = {
@@ -1142,7 +1003,6 @@ foreign_mio_decisions_category = {
 					is_subject = no
 					is_subject_of = ITA
 				}
-				#is_in_faction_with = ITA
 				NOT = { has_completed_focus = BUL_nationalization }
 			}
 		}
@@ -1158,15 +1018,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_italian_tank_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
+				801 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
@@ -1249,15 +1101,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_italian_naval_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = yes
-						}
-					}
+				211 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = dockyard
@@ -1293,12 +1137,7 @@ foreign_mio_decisions_category = {
 		targets = { ITA }
 		
 		allowed = {
-			OR = {
-				AND = {
-					tag = BUL
-					has_dlc = "Battle for the Bosporus"
-				}
-			}
+			tag = BUL
 		}
 
 		visible = {
@@ -1341,15 +1180,7 @@ foreign_mio_decisions_category = {
 					original_tag = BUL 
 					NOT = { has_country_flag = contract_with_italian_materiel_designer_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
+				48 = {
 					add_extra_state_shared_building_slots = 1
 					add_building_construction = {
 						type = arms_factory
