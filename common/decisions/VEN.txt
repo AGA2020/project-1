@@ -7,7 +7,6 @@ VEN_abc_islands = {
 		allowed = {
 			original_tag = VEN
 		}
-
 		available = {
 			NOT = { has_war_with = USA }
 			NOT = { has_war_with = ENG }

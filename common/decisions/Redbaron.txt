@@ -21,7 +21,6 @@ MOD_countdown_to_victory_cat = {
 				global.allies_score < 7
 			}
 		}
-
 		timeout_effect = {
 			GER = { news_event = { id = redbaron.2 } }
 		}

@@ -268,7 +268,6 @@ SS_recruitment = {
 		}
 	}
 	SS_recruitment_estonia = {
-
 		icon = generic_army_support
 
 		available = {
