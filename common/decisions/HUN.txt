@@ -2782,73 +2782,23 @@ political_actions = {
 				character = HUN_ferenc_szalasi
 			}
 
-		} 
-
-		#days_remove = 105 
+		}
 
 		cost = 50
 
 		complete_effect = {
 
-			IF = {
-				limit = {
-					GER = {
-						OR = {
-							exists = no
-							NOT = {
-								has_government = fascism
-							}
-						}
-					}
-				}
-				every_possible_country = {
-
-					limit = {
-						has_character = GER_hermann_goring
-					}
-
-					set_nationality = {
-					    target_country = ROOT
-					    character = GER_hermann_goring
-					}	
-
-				}
-
-				custom_effect_tooltip = goering_as_king_tt
-
-				hidden_effect = {
-					country_event = {
-						id = WW_hungary.107
-						hours = 0
-					}	
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					GER = {
-						has_government = fascism
-					}
-				} 
-				GER = {
-					country_event = {
-						id = WW_hungary.108
-						hours = 12
-						random_hours = 24
-					}	
-				}
+			GER = {
+				country_event = {
+					id = WW_hungary.108
+					hours = 12
+					random_hours = 24
+				}	
 			}
 
 			hidden_effect = {
 				set_country_flag = HUN_crowned_hermann_goering_king_flag
 			}
 		}
-
-		#modifier = {
-		#}
-
-		#remove_effect = {	
-		#}
-
 	}
-
 }

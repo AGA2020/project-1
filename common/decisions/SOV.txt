@@ -2974,11 +2974,8 @@ SOV_propaganda_campaigns = {
 			any_country = {
 				has_government = fascism
 				OR = {
-					tag = ENG
-					tag = FRA
 					tag = GER
 					tag = ITA
-					tag = USA
 					tag = JAP
 				}
 			}
