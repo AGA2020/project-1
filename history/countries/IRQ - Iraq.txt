@@ -45,10 +45,8 @@ IF = {
 	recruit_character = IRQ_muhammad_husayn_kashif_al_ghita
 	recruit_character = PAL_amin_al_husseini
 	recruit_character = IRQ_muhammad_amin_zaki
-	recruit_character = IRQ_salah_al_din_al_sabbagh
 	recruit_character = IRQ_jamil_abdul_wahab
 	recruit_character = IRQ_fawsi_al_kaukji
-	recruit_character = IRQ_mahmud_salman
 	recruit_character = IRQ_hikmat_suleiman
 	recruit_character = IRQ_tawfiq_al_suawaidi
 	recruit_character = IRQ_husain_al_rahhal
@@ -66,12 +64,6 @@ IF = {
 	recruit_character = IRQ_mustafa_barzani
 	recruit_character = IRQ_muhammad_ali_jawad
 
-	IRQ_salah_al_din_al_sabbagh = {
-		set_character_flag = IRQ_golden_square_char
-	}
-	IRQ_mahmud_salman = {
-		set_character_flag = IRQ_golden_square_char
-	}
 	IRQ_fahmi_said = {
 		set_character_flag = IRQ_golden_square_char
 	}
