@@ -116,7 +116,75 @@ on_actions = {
 		}
 	}
 	on_weekly = {
-		effect = {			
+		effect = {
+			if = {
+			    limit = {
+					tag = GER
+					OR = {
+						AND = {
+							GER = {
+								network_strength = {
+								    target = FRA
+								    value > 49
+								}
+								NOT = { has_country_flag = fra_colab_warning }
+							}
+						}
+						AND = {
+							GER = {
+								network_strength = {
+								    target = POL
+								    value > 49
+								}
+								NOT = { has_country_flag = pol_colab_warning }
+							}
+						}
+					}
+					has_country_flag = colabwarning_enabled
+			    }
+			    GER = { country_event = { id = aga.27 } }
+			}
+			else_if = {
+			    limit = {
+					tag = JAP
+					JAP = {
+						network_strength = {
+						    target = CHI
+						    value > 49
+						}
+						NOT = { has_country_flag = chi_colab_warning }
+					}
+					has_country_flag = colabwarning_enabled
+			    }
+			    JAP = { country_event = { id = aga.26 } }
+			}
+			else_if = {
+			    limit = {
+					tag = ITA
+					OR = {
+						AND = {
+							ITA = {
+								network_strength = {
+								    target = YUG
+								    value > 49
+								}
+								NOT = { has_country_flag = yugo_colab_warning }
+							}
+						}
+						AND = {
+							ITA = {
+								network_strength = {
+								    target = GRE
+								    value > 49
+								}
+								NOT = { has_country_flag = gre_colab_warning }
+							}
+						}
+					}
+					has_country_flag = colabwarning_enabled
+			    }
+			    ITA = { country_event = { id = aga.25 } }
+			}			
 			if = {
 			    limit = {
 			        any_country = { axis = yes has_tech = survivability_studies }

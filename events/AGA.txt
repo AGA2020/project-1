@@ -6,30 +6,7 @@ country_event = {
 	desc = aga.25.d
 	picture = GFX_report_event_generic_read_write
 	
-	trigger = {
-		tag = GER
-		OR = {
-			AND = {
-				GER = {
-					network_strength = {
-					    target = FRA
-					    value > 49
-					}
-					NOT = { has_country_flag = fra_colab_warning }
-				}
-			}
-			AND = {
-				GER = {
-					network_strength = {
-					    target = POL
-					    value > 49
-					}
-					NOT = { has_country_flag = pol_colab_warning }
-				}
-			}
-		}
-		has_country_flag = colabwarning_enabled
-	}
+	is_triggered_only = yes
     immediate = {
 		if = {
 			limit = {
@@ -57,17 +34,7 @@ country_event = {
 	desc = aga.25.d
 	picture = GFX_report_event_generic_read_write
 	
-	trigger = {
-		tag = JAP
-		JAP = {
-			network_strength = {
-			    target = CHI
-			    value > 49
-			}
-			NOT = { has_country_flag = chi_colab_warning }
-		}
-		has_country_flag = colabwarning_enabled
-	}
+	is_triggered_only = yes
     immediate = {
 		set_country_flag = chi_colab_warning
     }
@@ -82,30 +49,7 @@ country_event = {
 	desc = aga.25.d
 	picture = GFX_report_event_generic_read_write
 	
-	trigger = {
-		tag = ITA
-		OR = {
-			AND = {
-				ITA = {
-					network_strength = {
-					    target = YUG
-					    value > 49
-					}
-					NOT = { has_country_flag = yugo_colab_warning }
-				}
-			}
-			AND = {
-				ITA = {
-					network_strength = {
-					    target = GRE
-					    value > 49
-					}
-					NOT = { has_country_flag = gre_colab_warning }
-				}
-			}
-		}
-		has_country_flag = colabwarning_enabled
-	}
+	is_triggered_only = yes
     immediate = {
 		if = {
 			limit = {
