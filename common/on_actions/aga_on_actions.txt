@@ -80,89 +80,43 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					ITA = { has_country_flag = aga_25_cooldown }
+					ROOT = { tag = ITA }
+					FROM = { tag = YUG }
 				}
-				ITA = { clr_country_flag = aga_25_cooldown }
+				ITA = { clr_country_flag = yugo_colab_warning }
 			}
-			else_if = {
+			if = {
 				limit = {
-					JAP = { has_country_flag = aga_25_cooldown }
+					ROOT = { tag = ITA }
+					FROM = { tag = GRE }
 				}
-				JAP = { clr_country_flag = aga_25_cooldown }
+				ITA = { clr_country_flag = gre_colab_warning }
 			}
-			else_if = {
+			if = {
 				limit = {
-					GER = { has_country_flag = aga_25_cooldown }
+					ROOT = { tag = JAP }
+					FROM = { tag = CHI }
 				}
-				GER = { clr_country_flag = aga_25_cooldown }
-			}	
+				JAP = { clr_country_flag = chi_colab_warning }
+			}
+			if = {
+				limit = {
+					ROOT = { tag = GER }
+					FROM = { tag = FRA }
+				}
+				GER = { clr_country_flag = fra_colab_warning }
+			}
+			if = {
+				limit = {
+					ROOT = { tag = GER }
+					FROM = { tag = POL }
+				}
+				GER = { clr_country_flag = pol_colab_warning }
+			}
 		}
 	}
 	on_weekly = {
-		effect = {
-			if = {
-				limit = {
-					OR = {
-						ITA = {
-							network_strength = {
-							    target = YUG
-							    value > 49
-							}
-							NOT = { has_country_flag = yugo_colab_warning }
-						}
-						ITA = {
-							network_strength = {
-							    target = GRE
-							    value > 49
-							}
-						}
-					}
-					ITA = {
-						has_country_flag = colabwarning_enabled
-						NOT = { has_country_flag = aga_25_cooldown }
-					}
-				}
-				ITA = {
-					country_event = { id = aga.25 }
-					set_country_flag = aga_25_cooldown
-				}
-			}
-			else_if = {
-				limit = {
-					JAP = {
-						network_strength = {
-						    target = CHI
-						    value > 49
-						}
-					}
-					JAP = {
-						has_country_flag = colabwarning_enabled
-						NOT = { has_country_flag = aga_25_cooldown }
-					}
-				}
-				JAP = {
-					country_event = { id = aga.25 }
-					set_country_flag = aga_25_cooldown
-				}
-			}
-			else_if = {
-				limit = {
-					GER = {
-						network_strength = {
-						    target = FRA
-						    value > 49
-						}
-					}
-					GER = {
-						has_country_flag = colabwarning_enabled
-						NOT = { has_country_flag = aga_25_cooldown }
-					}
-				}
-				GER = {
-					country_event = { id = aga.25 }
-					set_country_flag = aga_25_cooldown
-				}
-			}			
+		effect = {			
 			if = {
 			    limit = {
 			        any_country = { axis = yes has_tech = survivability_studies }

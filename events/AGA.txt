@@ -1,5 +1,80 @@
 ﻿add_namespace = aga
 
+country_event = {
+	id = aga.27
+	title = aga.25.t
+	desc = aga.25.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = GER
+		OR = {
+			AND = {
+				GER = {
+					network_strength = {
+					    target = FRA
+					    value > 49
+					}
+					NOT = { has_country_flag = fra_colab_warning }
+				}
+			}
+			AND = {
+				GER = {
+					network_strength = {
+					    target = POL
+					    value > 49
+					}
+					NOT = { has_country_flag = pol_colab_warning }
+				}
+			}
+		}
+		has_country_flag = colabwarning_enabled
+	}
+    immediate = {
+		if = {
+			limit = {
+				GER = {
+					network_strength = {
+					    target = FRA
+					    value > 49
+					}
+				}
+			}
+			set_country_flag = fra_colab_warning
+		}
+		else = { 
+			set_country_flag = pol_colab_warning
+		}
+    }
+	option = {
+		name = aga.25.a
+	}
+}
+
+country_event = {
+	id = aga.26
+	title = aga.25.t
+	desc = aga.25.d
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		tag = JAP
+		JAP = {
+			network_strength = {
+			    target = CHI
+			    value > 49
+			}
+			NOT = { has_country_flag = chi_colab_warning }
+		}
+		has_country_flag = colabwarning_enabled
+	}
+    immediate = {
+		set_country_flag = chi_colab_warning
+    }
+	option = {
+		name = aga.25.a
+	}
+}
 
 country_event = {
 	id = aga.25
@@ -7,24 +82,48 @@ country_event = {
 	desc = aga.25.d
 	picture = GFX_report_event_generic_read_write
 	
-	is_triggered_only = yes
-
-	option = {
-		name = aga.25.a
+	trigger = {
+		tag = ITA
+		OR = {
+			AND = {
+				ITA = {
+					network_strength = {
+					    target = YUG
+					    value > 49
+					}
+					NOT = { has_country_flag = yugo_colab_warning }
+				}
+			}
+			AND = {
+				ITA = {
+					network_strength = {
+					    target = GRE
+					    value > 49
+					}
+					NOT = { has_country_flag = gre_colab_warning }
+				}
+			}
+		}
+		has_country_flag = colabwarning_enabled
+	}
+    immediate = {
 		if = {
 			limit = {
-				AND = {
-					tag = ITA
-					ITA = {
-						network_strength = {
-						    target = YUG
-						    value > 49
-						}
+				ITA = {
+					network_strength = {
+					    target = YUG
+					    value > 49
 					}
 				}
 			}
 			set_country_flag = yugo_colab_warning
 		}
+		else = { 
+			set_country_flag = gre_colab_warning
+		}
+    }
+	option = {
+		name = aga.25.a
 	}
 }
 news_event = {
