@@ -18,6 +18,7 @@ replace_path="common/ai_strategy_plans"
 replace_path="common/countries"
 replace_path="common/characters"
 replace_path="common/decisions" # Kontrol altına alınıyor
+replace_path="common/ideas" # Kontrol altına alınıyor
 replace_path="common/game_rules"
 replace_path="common/difficulty_settings"
 replace_path="common/bookmarks"
