@@ -53,7 +53,6 @@ country_event = {
 				not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
 				is_in_faction = no
 			}
-			unlock_decision_tooltip = { decision = USA_form_defensive_alliance_north_american_dominion show_effect_tooltip = yes}
 		}
 		else_if = {
 			limit = {
@@ -175,7 +174,6 @@ country_event = {
 				not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
 				is_in_faction = no
 			}
-			unlock_decision_tooltip = { decision = USA_form_defensive_alliance_north_american_dominion show_effect_tooltip = yes}
 		}
 		else_if = {
 			limit = {
@@ -291,7 +289,6 @@ country_event = {
 				not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
 				is_in_faction = no
 			}
-			unlock_decision_tooltip = { decision = USA_form_defensive_alliance_north_american_dominion show_effect_tooltip = yes}
 		}
 		else_if = {
 			limit = {
@@ -443,7 +440,7 @@ country_event = {
 				not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
 				is_in_faction = no
 			}
-			unlock_decision_tooltip = { decision = USA_form_defensive_alliance_north_american_dominion show_effect_tooltip = yes}
+			 }
 		}
 		else_if = {
 			limit = {
@@ -623,7 +620,7 @@ country_event = {
 				not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
 				is_in_faction = no
 			}
-			unlock_decision_tooltip = { decision = USA_form_defensive_alliance_north_american_dominion show_effect_tooltip = yes}
+			 }
 		}
 		else_if = {
 			limit = {
@@ -764,7 +761,7 @@ country_event = {
 				not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
 				is_in_faction = no
 			}
-			unlock_decision_tooltip = { decision = USA_form_defensive_alliance_north_american_dominion show_effect_tooltip = yes}
+			 }
 		}
 		else_if = {
 			limit = {
@@ -869,7 +866,7 @@ country_event = {
 				not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
 				is_in_faction = no
 			}
-			unlock_decision_tooltip = { decision = USA_form_defensive_alliance_north_american_dominion show_effect_tooltip = yes}
+			 }
 		}
 		else_if = {
 			limit = {
@@ -980,7 +977,7 @@ country_event = {
 				not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
 				is_in_faction = no
 			}
-			unlock_decision_tooltip = { decision = USA_form_defensive_alliance_north_american_dominion show_effect_tooltip = yes}
+			 }
 		}
 		else_if = {
 			limit = {
@@ -1116,7 +1113,7 @@ country_event = {
 				not = { has_global_flag = mtg_usa_north_american_dominion_refused_faction }
 				is_in_faction = no
 			}
-			unlock_decision_tooltip = { decision = USA_form_defensive_alliance_north_american_dominion show_effect_tooltip = yes}
+			 }
 		}
 		else_if = {
 			limit = {
