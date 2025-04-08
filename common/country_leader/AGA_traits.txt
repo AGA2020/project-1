@@ -2,6 +2,10 @@ leader_traits = {
 	Supremo_Collaboratore = {
 		operation_collaboration_government_cost = -0.5
 	}
+	Supremo_Collaboratore_extra = {
+		operation_collaboration_government_cost = -0.5
+		operative_slot = 1
+	}
 	nikonun_erkegi = {
 		random = no
 		custom_modifier_tooltip = nikonun_erkegi_tooltip

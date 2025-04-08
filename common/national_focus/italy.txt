@@ -6702,14 +6702,16 @@ focus_tree = {
 			add_ideas = ITA_servizio_informazione_militare_ns
 			if = {
 				limit = {
-					BUL = { is_ai = yes }
+					BUL = { is_ai = no }
 				}
-				add_ideas = ITA_servizio_informazione_militare_ns_vanilla
-			}	
+				add_ideas = add_country_leader_trait = Supremo_Collaboratore
+			}
+			else = {
+				add_country_leader_trait = Supremo_Collaboratore_extra	
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			ITA_create_rosa_dainelli_operative = yes
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_country_leader_trait = Supremo_Collaboratore
 		}
 	}
 
