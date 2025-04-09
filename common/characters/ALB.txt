@@ -58,8 +58,8 @@ characters = {
 		name = "Xhemal Aranitasi"
 		portraits = {
 			army = {
-				large=GFX_portrait_Xhemal_Aranitasi
-				small=GFX_portrait_Xhemal_Aranitasi_small
+				large = "gfx/leaders/ALB/r56_portrait_ALB_Xhemal_Aranitasi.dds"
+				small = "gfx/interface/ideas/alb/advisors/r56_advisor_ALB_Xhemal_Aranitasi.dds"
 			}
 		}
 		field_marshal = {
