@@ -512,10 +512,6 @@ ENG_imperial_conference_decision = {
 			tag = ENG
 		}
 
-		available = {
-			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
-		}
-
 		cost = 50
 
 		fire_only_once = yes
@@ -526,8 +522,75 @@ ENG_imperial_conference_decision = {
 		}
 
 		complete_effect = {
-			country_event = { id = mtg_britain.83 hours = 6 }
-			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		 	if = {
+		 		limit = {
+		 			country_exists = SAF
+		 		}
+				SAF = {
+					add_timed_idea = { 
+						idea = ENG_imperial_conference_defense_dominion days = 365
+					}
+					add_political_power = -25
+				}
+				ENG = {
+					ENG_imperial_conference_defense_level_up = yes
+				}
+			}
+			if = {
+		 		limit = {
+		 			country_exists = RAJ
+		 		}
+				RAJ = {
+					add_timed_idea = { 
+						idea = ENG_imperial_conference_defense_dominion days = 365
+					}
+					add_political_power = -25
+				}
+				ENG = {
+					ENG_imperial_conference_defense_level_up = yes
+				}
+			}
+			if = {
+		 		limit = {
+		 			country_exists = NZL
+		 		}
+				NZL = {
+					add_timed_idea = { 
+						idea = ENG_imperial_conference_defense_dominion days = 365
+					}
+					add_political_power = -25
+				}
+				ENG = {
+					ENG_imperial_conference_defense_level_up = yes
+				}
+			}
+			if = {
+		 		limit = {
+		 			country_exists = AST
+		 		}
+				AST = {
+					add_timed_idea = { 
+						idea = ENG_imperial_conference_defense_dominion days = 365
+					}
+					add_political_power = -25
+				}
+				ENG = {
+					ENG_imperial_conference_defense_level_up = yes
+				}
+			}
+			if = {
+		 		limit = {
+		 			country_exists = CAN
+		 		}
+				CAN = {
+					add_timed_idea = { idea = ENG_imperial_conference_defense_dominion days = 365
+					}
+					add_political_power = -25
+				}
+				ENG = {
+					ENG_imperial_conference_defense_level_up = yes
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -574,10 +637,6 @@ ENG_imperial_conference_decision = {
 			tag = ENG
 		}
 
-		available = {
-			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
-		}
-
 		cost = 50
 
 		fire_only_once = yes
@@ -588,8 +647,61 @@ ENG_imperial_conference_decision = {
 		}
 
 		complete_effect = {
-			country_event = { id = mtg_britain.91 hours = 6 }
-			set_country_flag = ENG_imperial_conference_discussion_in_progress
+			every_country = {
+				limit = {
+					OR = {
+						tag = CAN
+						tag = SAF
+						tag = RAJ
+						tag = AST
+						tag = NZL
+					}
+				}
+				add_timed_idea = { 
+					idea = ENG_imperial_conference_economy_dominion days = 365
+				}
+				add_political_power = -25
+			}
+		 	if = {
+		 		limit = {
+		 			country_exists = SAF
+		 		}
+				ENG = {
+					ENG_imperial_conference_economy_level_up = yes
+				}
+			}
+		 	if = {
+		 		limit = {
+		 			country_exists = RAJ
+		 		}
+				ENG = {
+					ENG_imperial_conference_economy_level_up = yes
+				}
+			}
+		 	if = {
+		 		limit = {
+		 			country_exists = AST
+		 		}
+				ENG = {
+					ENG_imperial_conference_economy_level_up = yes
+				}
+			}
+		 	if = {
+		 		limit = {
+		 			country_exists = NZL
+		 		}
+				ENG = {
+					ENG_imperial_conference_economy_level_up = yes
+				}
+			}
+		 	if = {
+		 		limit = {
+		 			country_exists = CAN
+		 		}
+				ENG = {
+					ENG_imperial_conference_economy_level_up = yes
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -606,7 +718,6 @@ ENG_imperial_conference_decision = {
 		}
 
 		available = {
-			NOT = { has_country_flag = ENG_imperial_conference_discussion_in_progress }
 			has_war = no
 		}
 
@@ -620,8 +731,66 @@ ENG_imperial_conference_decision = {
 		}
 
 		complete_effect = {
-			country_event = { id = mtg_britain.95 hours = 6 }
-			set_country_flag = ENG_imperial_conference_discussion_in_progress
+		 	if = {
+		 		limit = {
+		 			country_exists = SAF
+		 		}
+				SAF = {
+					add_war_support = 0.1
+					add_political_power = -25
+				}
+				ENG = {
+					add_war_support = 0.03
+				}
+			}
+		 	if = {
+		 		limit = {
+		 			country_exists = RAJ
+		 		}
+				RAJ = {
+					add_war_support = 0.1
+					add_political_power = -25
+				}
+				ENG = {
+					add_war_support = 0.03
+				}
+			}
+		 	if = {
+		 		limit = {
+		 			country_exists = NZL
+		 		}
+				NZL = {
+					add_war_support = 0.1
+					add_political_power = -25
+				}
+				ENG = {
+					add_war_support = 0.03
+				}
+			}
+		 	if = {
+		 		limit = {
+		 			country_exists = AST
+		 		}
+				AST = {
+					add_war_support = 0.1
+					add_political_power = -25
+				}
+				ENG = {
+					add_war_support = 0.03
+				}
+			}
+		 	if = {
+		 		limit = {
+		 			country_exists = CAN
+		 		}
+				CAN = {
+					add_war_support = 0.1
+					add_political_power = -25
+				}
+				ENG = {
+					add_war_support = 0.03
+				}
+			}
 		}
 
 		ai_will_do = {

@@ -3286,9 +3286,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
-			#modifier = {
-			#	factor = 0
-			#}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -3300,26 +3297,11 @@ focus_tree = {
 				limit = {
 					OR = {
 						tag = ENG
-						AND = {
-							is_subject_of = ENG
-							tag = CAN
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = SAF
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = RAJ
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = AST
-						}
-						AND = {
-							is_subject_of = ENG
-							tag = NZL
-						}
+						tag = CAN
+						tag = SAF
+						tag = RAJ
+						tag = AST
+						tag = NZL
 					}
 				}
 				country_event = {
