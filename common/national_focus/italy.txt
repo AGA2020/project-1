@@ -24,11 +24,7 @@ focus_tree = {
 		
 		modifier = {
 			add = 10
-			OR = {
-				tag = ITA
-				tag = RSI
-				tag = RDS
-			}
+			tag = ITA
 		}
 	}
 	
@@ -6704,7 +6700,7 @@ focus_tree = {
 				limit = {
 					BUL = { is_ai = no }
 				}
-				add_ideas = add_country_leader_trait = Supremo_Collaboratore
+				add_country_leader_trait = Supremo_Collaboratore
 			}
 			else = {
 				add_country_leader_trait = Supremo_Collaboratore_extra	
