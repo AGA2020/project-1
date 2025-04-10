@@ -82,7 +82,7 @@ characters={
 		}
 	}
 
-	NZL_peter_fraser={
+	NZL_peter_fraser={ # 1940 da eventle yeni ülke lideri oluyor bunu corps commander yapma
 		name=NZL_peter_fraser
 		portraits={
 			civilian={
@@ -93,15 +93,6 @@ characters={
 			ideology=socialism
 			expire="1965.1.1.1"
 			id=-1
-		}
-		corps_commander={
-			traits={ cavalry_officer }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
 		}
 	}
 

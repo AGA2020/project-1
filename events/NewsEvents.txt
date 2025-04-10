@@ -12570,22 +12570,6 @@ news_event = {
 	}
 }
 
-#Icelandic Independence
-news_event = {
-	id = news.331
-	title = news.331.t
-	desc = news.331.desc
-	picture = GFX_news_event_generic_sign_treaty3
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.331.a
-	}
-}
-
 #Mers-El-Kebir - French Surrender
 news_event = {
 	id = news.332

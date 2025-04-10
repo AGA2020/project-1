@@ -205,40 +205,6 @@ country_event = {
 	}
 }
 
-# Treaty of Craiova - Bulgaria Demands Territory
-country_event = {
-	id = romania.5
-	title = romania.5.t
-	desc = romania.5.d
-	picture = GFX_report_event_hitler_croatia_handshake
-	
-	is_triggered_only = yes
-	
-	option = { # Accept
-		name = romania.5.a
-		ai_chance = { factor = 90 }
-		effect_tooltip = {
-			BUL = { transfer_state = 77 }
-		}
-		BUL = {
-			country_event = { days = 1 id = bulgaria.1 }
-		}
-	}
-	option = { # Refuse
-		name = romania.5.b
-		ai_chance = { 
-			factor = 10
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			} 
-		}
-		BUL = {
-			country_event = { days = 1 id = bulgaria.2 }
-		}
-	}
-}
-
 # Seek an alliance - Since everyone is out to get us
 country_event = {
 	id = romania.6
