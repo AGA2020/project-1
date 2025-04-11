@@ -285,57 +285,6 @@ country_event = { # EVent to notify the defender doesn't need your help
 	}
 }
 
-country_event = { # Asking for investments   
-	id = AAT_nordic_cooperation.4
-	title = AAT_nordic_cooperation.4.t
-	desc = AAT_nordic_cooperation.4.desc
-	#TODO_Carlo picture = 
-
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-		}
-	}
-
-	option = { # Sure why not
-		name = AAT_nordic_cooperation.4.a
-		ai_chance = {
-			base = 10
-		}
-		trigger = {
-		}
-		add_timed_idea = {
-			idea = NORDIC_investing_in_neighbor_ns
-			days = 60
-		}
-		FROM = {
-			country_event = {
-				id = AAT_nordic_cooperation.5
-				hours = 5		
-			}
-			event_option_tooltip = AAT_nordic_cooperation.5.a
-		}
-	}
-
-	option = { # No 
-		name = AAT_nordic_cooperation.4.b
-		ai_chance = {
-			base = 10
-		}
-		trigger = {
-		}
-		FROM = {
-			country_event = {
-				id = AAT_nordic_cooperation.6
-				hours = 5		
-			}
-			event_option_tooltip = AAT_nordic_cooperation.6.a
-		}
-	}
-}
-
-
 country_event = { # They Accepted the proposition 
 	id = AAT_nordic_cooperation.5
 	title = AAT_nordic_cooperation.5.t
