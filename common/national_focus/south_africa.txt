@@ -397,42 +397,9 @@
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-		ENG = { custom_effect_tooltip = needs_approval 
+			ENG = { 
+				custom_effect_tooltip = needs_approval 
 				country_event = tfv_south_africa.1
-				}
-		}
-			SAF = {
-				transfer_state = 542
-				transfer_state = 545
-				transfer_state = 546
-				transfer_state = 547
-				transfer_state = 903
-				transfer_state = 904
-				transfer_state = 905
-				transfer_state = 548
-				transfer_state = 771
-				transfer_state = 770
-				transfer_state = 889
-				transfer_state = 888
-				transfer_state = 769
-				transfer_state = 891
-				transfer_state = 892
-				transfer_state = 544
-				transfer_state = 896
-				transfer_state = 897
-				transfer_state = 540
-				transfer_state = 796
-				transfer_state = 538
-				transfer_state = 897
-				transfer_state = 544
-				transfer_state = 295
-				transfer_state = 890
-				transfer_state = 718
-				transfer_state = 768
-				transfer_state = 981
-				every_owned_state = {
-					add_compliance = 100
-				}
 			}
 		}
 	}
