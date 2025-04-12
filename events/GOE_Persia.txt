@@ -2321,7 +2321,7 @@ country_event = {
 
 		set_global_flag = PER_british_invasion_of_iran_flag
 		
-		activate_mission = SOV_preparations_for_operation_countenance
+		 
 		custom_effect_tooltip = SOV_preparations_for_operation_countenance_tt
 
 		custom_effect_tooltip = SOV_operation_countenance_successful_tt
@@ -2389,8 +2389,8 @@ country_event = {
 
 		effect_tooltip = {
 			custom_effect_tooltip = if_they_accept_tt
-			activate_mission = SOV_preparations_for_operation_countenance
-			SOU = { activate_mission = SOV_preparations_for_operation_countenance }
+			 
+			SOU = {   }
 			custom_effect_tooltip = SOV_preparations_for_operation_countenance_tt
 
 			custom_effect_tooltip = SOV_operation_countenance_successful_tt
@@ -2412,7 +2412,7 @@ country_event = {
 			}
 
 			custom_effect_tooltip = if_they_refuse_tt
-			activate_mission = SOV_preparations_for_operation_countenance
+			 
 			custom_effect_tooltip = SOV_operation_countenance_successful_tt
 			puppet = PER
 			transfer_state = 419 #Tibriz (AZB)
@@ -2494,7 +2494,7 @@ country_event = {
 		set_global_flag = SOV_agreed_anglo_soviet_invasion_of_iran_flag
 
 		effect_tooltip = {
-			activate_mission = SOV_preparations_for_operation_countenance
+			 
 			custom_effect_tooltip = SOV_preparations_for_operation_countenance_tt
 
 			custom_effect_tooltip = SOV_operation_countenance_successful_tt
@@ -2544,8 +2544,8 @@ country_event = {
 	option = { #Good
 		name = PER_foreign_policy_events.4.a
 
-		activate_mission = SOV_preparations_for_operation_countenance		
-		SOU = { activate_mission = SOV_preparations_for_operation_countenance }
+		 		
+		SOU = {   }
 		custom_effect_tooltip = SOV_preparations_for_operation_countenance_tt
 
 		effect_tooltip = {
@@ -2580,7 +2580,7 @@ country_event = {
 	option = { #Ok
 		name = PER_foreign_policy_events.5.a
 
-		activate_mission = SOV_preparations_for_operation_countenance
+		 
 		custom_effect_tooltip = SOV_preparations_for_operation_countenance_tt
 
 		IF = {
