@@ -8704,99 +8704,12 @@ focus_tree = {
 		cost = 5
 		
 		bypass = {
-			OR = {
-				has_war_with = YUG
-				YUG = { has_opinion_modifier = tripartite_pact_opinion }
-				NOT = { country_exists = YUG }
-				NOT = {
-					OR = {
-						YUG = {
-							owns_state = 45
-						}
-						45 = { owner = { is_subject_of = YUG } }
-						
-						YUG = {
-							owns_state = 106
-						}
-						106 = { owner = { is_subject_of = YUG } }
-					}
-				}
-				AND = {
-					HUN = { is_friend_or_potential_friend_of_GER = no }
-					BUL = { is_friend_or_potential_friend_of_GER = no }
-					ITA = { is_friend_or_potential_friend_of_GER = no }
-				}
-			}
+			NOT = { country_exists = YUG }
 		}
 
 		available = {
 			NOT = { YUG = { has_opinion_modifier = tripartite_pact_opinion } }
-			OR = {
-				AND = {
-					country_exists = YUG
-					NOT = { has_war_with = YUG }
-					OR = {
-						owns_state = 102
-						102 = { owner = { is_subject_of = YUG } }
-						owns_state = 853
-						853 = { owner = { is_subject_of = YUG } }
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = GER_first_ljubljana_award_tt
-					AND = {
-						NOT = { country_exists = YUG }
-						OR = {
-							owns_state = 102
-							102 = { owner = { is_subject_of = YUG } }
-						}
-						OR = {
-							owns_state = 853
-							853 = { owner = { is_subject_of = YUG } }
-						}
-						OR = {
-							owns_state = 45
-							45 = { owner = { is_subject_of = YUG } }
-						}
-						OR = { #Macedonia
-							owns_state = 106
-							106 = { owner = { is_subject_of = YUG } }
-						}
-						OR = { #New Southern Serbia state
-							owns_state = 803
-							803 = { owner = { is_subject_of = YUG } }
-						}
-						OR = { #Herzegovina
-							owns_state = 804
-							804 = { owner = { is_subject_of = YUG } }
-						}
-						OR = { #Kosovo
-							owns_state = 802
-							802 = { owner = { is_subject_of = YUG } }
-						}
-						OR = {
-							owns_state = 103
-							103 = { owner = { is_subject_of = YUG } }
-						}
-						OR = {
-							owns_state = 105
-							105 = { owner = { is_subject_of = YUG } }
-						}
-						OR = {
-							owns_state = 970
-							970 = { owner = { is_subject_of = YUG } }
-						}
-					}
-				}
-			}
-			OR = {
-				YUG = {
-					is_subject = no
-				}
-				YUG = {
-					is_puppet_of = GER
-				}
-			}
+			country_exists = YUG
 		}
 
 		ai_will_do = {
@@ -8981,26 +8894,13 @@ focus_tree = {
 		cost = 10
 
 		bypass = {
-			OR = {
-				has_war_with = YUG
-				NOT = { country_exists = YUG }
-				any_other_country = {
-					is_in_faction_with = ROOT
-					OR = {
-						has_war_with = YUG
-						YUG = {
-							is_puppet_of = PREV
-						}
-					}
-				}
-			}
+			NOT = { country_exists = YUG }
 		}
 
 		will_lead_to_war_with = YUG
 		
 		available = {
-			NOT = { has_war_with = YUG }
-			all_allied_country = {
+			ITA = {
 				NOT = {
 					has_war_with = YUG
 				}
