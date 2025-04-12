@@ -34,16 +34,32 @@ country_event = {
 				transfer_state = 548
 				transfer_state = 771
 				transfer_state = 770
-				add_state_core = 542
-				add_state_core = 545
-				add_state_core = 546
-				add_state_core = 547
-				add_state_core = 903
-				add_state_core = 904
-				add_state_core = 905
-				add_state_core = 548
-				add_state_core = 771
-				add_state_core = 770
+				transfer_state = 889
+				transfer_state = 888
+				transfer_state = 769
+				transfer_state = 891
+				transfer_state = 892
+				transfer_state = 544
+				transfer_state = 896
+				transfer_state = 897
+				transfer_state = 540
+				transfer_state = 796
+				transfer_state = 538
+				transfer_state = 897
+				transfer_state = 544
+				transfer_state = 295
+				transfer_state = 890
+				transfer_state = 718
+				transfer_state = 768
+				transfer_state = 981
+				every_owned_state = {
+					add_compliance = 100
+				}
+			}
+		}
+		hidden_effect = {
+			SAF = {
+				country_event = { id = tfv_south_africa.2 }
 			}
 		}
 	}
@@ -62,6 +78,55 @@ country_event = {
 		}
 	}
 }
+#ENG transfers colonies
+country_event = {
+	id = tfv_south_africa.2
+	title = tfv_south_africa.2.t	#
+	desc = tfv_south_africa.2.d		#
+	picture = GFX_report_event_saf_soldiers_2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tfv_south_africa.2.a
+		transfer_state = 542
+		transfer_state = 545
+		transfer_state = 546
+		transfer_state = 547
+		transfer_state = 903
+		transfer_state = 904
+		transfer_state = 905
+		transfer_state = 548
+		transfer_state = 771
+		transfer_state = 770
+		transfer_state = 889
+		transfer_state = 888
+		transfer_state = 769
+		transfer_state = 891
+		transfer_state = 892
+		transfer_state = 544
+		transfer_state = 896
+		transfer_state = 897
+		transfer_state = 540
+		transfer_state = 796
+		transfer_state = 538
+		transfer_state = 897
+		transfer_state = 544
+		transfer_state = 295
+		transfer_state = 890
+		transfer_state = 718
+		transfer_state = 768
+		transfer_state = 981
+		every_owned_state = {
+			add_compliance = 100
+		}
+		hidden_effect = {
+			news_event = { id = news.260 hours = 6 }
+		}
+	}
+		
+	
+}
 #ENG refuses
 country_event = {
 	id = tfv_south_africa.3
@@ -73,27 +138,12 @@ country_event = {
 	
 	option = {
 		name = tfv_south_africa.3.a
+		uncomplete_national_focus = {
+		  focus = SAF_secure_interests_in_africa
+		}
 	}
 }
-#ENG compromises
-country_event = {
-	id = tfv_south_africa.4
-	title = tfv_south_africa.4.t	#
-	desc = tfv_south_africa.4.d		#
-	picture = GFX_report_event_saf_soldiers					#
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = tfv_south_africa.4.a
-		SAF = { transfer_state = 542 }
-		hidden_effect = {
-			news_event = { id = news.261 hours = 6 }
-			}
-		}
 
-		
-	}
 
 country_event = {
 	id = tfv_south_africa.13

@@ -357,6 +357,7 @@ focus_tree = {
 			#Modify Third Year Plan NS
 			set_variable = { SOV_fyp_local_resources_factor = 0.1 }
 			custom_effect_tooltip = SOV_increase_state_reserves_ns_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 			229 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
@@ -507,6 +508,7 @@ focus_tree = {
 			build_railway = {
 				path = { 6380 6414 9348 9282 11268 9330 3356 6279 6230 6398 6341 413 3527 }
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			223 = { #TULA
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -519,6 +521,7 @@ focus_tree = {
 			build_railway = {
 				path = { 6380 6414 9348 6290 6396 6262 }
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SOV_synthetic_rubber
 				bonus = 0.75
@@ -1166,6 +1169,7 @@ focus_tree = {
 				specialization = specialization_air
 				value = 0.75
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SOV_found_the_jet_institute
 				bonus = 0.5
@@ -1498,6 +1502,7 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			408 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -4902,6 +4907,7 @@ focus_tree = {
 
 			add_political_power = 25
 			add_stability = 0.05
+			custom_effect_tooltip = generic_skip_one_line_tt
 			set_division_template_lock = {
 				division_template = "NKVD Pogranichnaya Diviziya"
 				is_locked = no
@@ -4978,7 +4984,7 @@ focus_tree = {
 			set_country_flag = SOV_first_moscow_trial_flag #Used to unlock the next purge focus
 
 			add_political_power = 25
-
+			custom_effect_tooltip = generic_skip_one_line_tt
 			SOV_paranoia_high_increase_effect = yes
 			
 			#HISTORICAL
@@ -5146,7 +5152,7 @@ focus_tree = {
 			set_country_flag = SOV_second_moscow_trial_flag #Used to unlock the next purge focus
 
 			add_political_power = 25
-
+			custom_effect_tooltip = generic_skip_one_line_tt
 			SOV_paranoia_high_increase_effect = yes
 
 			#HISTORICAL
@@ -5344,7 +5350,7 @@ focus_tree = {
 			set_country_flag = SOV_trial_of_the_generals_flag #Used to unlock the next purge focus
 
 			add_political_power = 25
-
+			custom_effect_tooltip = generic_skip_one_line_tt
 			SOV_paranoia_high_increase_effect = yes
 
 			#Historical
@@ -5442,7 +5448,7 @@ focus_tree = {
 			set_country_flag = SOV_third_moscow_trial_flag #Used to unlock the next purge focus
 
 			add_political_power = 25
-
+			custom_effect_tooltip = generic_skip_one_line_tt
 			#HISTORICAL
 			#Bukharin
 			if = {
@@ -6133,6 +6139,7 @@ focus_tree = {
 			hidden_effect = {
 				SOV_unlock_propaganda_campaign_slot_effect = yes
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			unlock_decision_category_tooltip = SOV_propaganda_campaigns
 		}
 	}
@@ -6152,8 +6159,10 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = konstantin_rokossovsky 
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = georgy_zhukov
 
@@ -6278,6 +6287,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 25
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = SOV_collectivist_propaganda_ns
 
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
@@ -6666,6 +6676,7 @@ ai_will_do = {
 
 		completion_reward = {
 			add_timed_idea = { idea = SOV_face_western_fascism_ns days = 365 }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			SOV = {
 				add_to_war = {
 				    targeted_alliance = ENG
@@ -6868,6 +6879,7 @@ ai_will_do = {
 
 		completion_reward = {
 			army_experience = 50
+			custom_effect_tooltip = generic_skip_one_line_tt
 			transfer_state = 146
 			transfer_state = 147
 			
