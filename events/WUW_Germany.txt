@@ -225,27 +225,6 @@ country_event = { #Charlie Brown and Franz Stigler incident (GER)
 		}
 	}
 
-	option = { #A hero through and through
-		name = wuw_GER_military_events.2.a
-		ai_chance = {
-			base = 10
-		}	
-
-		add_ace = {
-			name = Franz
-			surname = Stigler
-			callsign = "Kugel" #Made up. means "bullet" in German... none of which flew :D
-			type = fighter_unique
-		}
-
-		add_war_support = 0.03
-
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.05
-		}	
-	}
-
 	option = { #Make an example of him for defying us
 		name = wuw_GER_military_events.2.b
 		ai_chance = {
@@ -258,17 +237,6 @@ country_event = { #Charlie Brown and Franz Stigler incident (GER)
 		}	
 
 		add_war_support = 0.03	
-	}
-
-	option = { #Silence this situation! The troops cannot know
-		name = wuw_GER_military_events.2.c
-		ai_chance = {
-			base = 10
-			modifier = { #historically this was silenced
-				factor = 10
-				is_historical_focus_on = yes
-			}
-		}		
 	}
 }
 
@@ -15471,26 +15439,13 @@ country_event = {
 
 	trigger = {
 		original_tag = GER
-		has_government = fascism
-		has_dlc = "Gotterdammerung"
 		FRA = { 
-			OR = {
-				has_capitulated = yes
-				exists = no
-			}
+			has_capitulated = yes
 		}
 		GER = {
 			has_idea = goering
 			has_war_with = ENG
 			NOT = { #No need to launch the Blitz if Germany already have boots on the ground in Britain
-				any_controlled_state = {
-					is_core_of = ENG
-				}
-			}
-		}
-		NOT = {
-			any_country = {
-				is_subject_of = GER
 				any_controlled_state = {
 					is_core_of = ENG
 				}
@@ -15514,12 +15469,6 @@ country_event = {
 			idea = GER_battle_for_air_superiority
 			days = 180
 		}
-	}
-	option = { #Göring is promising too much
-		name = wuw_GER_the_battle_of_britain.01.b
-				
-		add_political_power = -25
-		air_experience = -15
 	}
 }
 
@@ -15783,15 +15732,8 @@ country_event = {
 	picture = GFX_report_event_hungary_refused
 
 	trigger = {
-
-		# Probably for the best
-		has_dlc = "Gotterdammerung"
-
 		# Base Conditions for Germany, basically you must lead the Axis and be in WW2
 		original_tag = GER
-		is_subject = no
-		has_government = fascism
-		is_faction_leader = yes
 
 		# Base Conditions for Hungary, basically they must have Horthy as their leader and be "available" to be puppeted
 		HUN = {
@@ -15819,14 +15761,12 @@ country_event = {
 					}
 				}
 				GER = {
-					has_civil_war = no
 					has_war_with = SOV
 				}
 			}
 			# We are stalling while figthing against the Soviets, which scares the Hungarian leadership
 			AND = {
 				HUN = {
-					has_civil_war = no
 					has_war_with = SOV
 					has_country_flag = {
 						flag = HUN_time_at_war_together_with_germany
