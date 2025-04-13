@@ -4019,7 +4019,7 @@ news_event = {
 	}
 	
 	mean_time_to_happen = {
-		days = 4
+		days = 20
 	}
 	
 	option = {
