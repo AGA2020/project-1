@@ -3989,49 +3989,6 @@ news_event = {
 	}
 }
 
-# The Fall of Berlin (Poland)
-news_event = {
-	id = news.131
-	title = news.128.t
-	desc = news.131.d
-	picture = GFX_news_event_soldiers_marching
-	
-	major = yes
-	
-	trigger = {
-		64 = { is_controlled_by = POL }
-		64 = { is_owned_by = GER }
-		POL = { has_war_with = GER }
-		NOT = { has_global_flag = fall_of_berlin_pol }
-	}
-	
-	immediate = {
-		set_global_flag = fall_of_berlin_pol
-	}
-	
-	mean_time_to_happen = {
-		days = 4
-	}
-	
-	option = {
-		name = news.145.a
-		trigger = {
-			NOT = {
-				TAG = POL
-				TAG = GER
-			}
-		}
-	}
-	option = {
-		name = news.131.b
-		trigger = { TAG = POL }
-	}
-	option = {
-		name = news.100.c
-		trigger = { TAG = GER }
-	}
-}
-
 # The Fall of Rome (Allies)
 news_event = {
 	id = news.132
