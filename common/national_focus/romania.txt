@@ -1004,13 +1004,11 @@ focus_tree = {
 
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ROM_mihail_sturdza
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_stability = -0.05
+			custom_effect_tooltip = CHL_skip_one_line_tt
 			add_opinion_modifier = { modifier = ROM_appoint_german_friendly_government target = GER }
 			GER = { add_opinion_modifier = { modifier = ROM_appoint_german_friendly_government target = ROOT } }
-
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			unlock_decision_category_tooltip = ROM_change_sides
-			unlock_decision_tooltip = ROM_change_sides_to_axis
 
 			custom_effect_tooltip = CHL_skip_one_line_tt
 
