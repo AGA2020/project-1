@@ -31,86 +31,8 @@ add_namespace = AAT_norway_fascist
 add_namespace = AAT_norway_communist
 add_namespace = AAT_norway_monarchist
 
-#country_event = {
-#	id = BBA_switzerland.1
-#	title = BBA_switzerland.1.t
-#	desc = BBA_switzerland.1.desc
-#	picture = 
-#
-#	is_triggered_only = yes
-#
-#	immediate = {
-#		hidden_effect = {
-#		}
-#	}
-#
-#	option = {
-#		name = BBA_switzerland.1.a
-#		ai_chance = {
-#			base = 10
-#		}
-#		trigger = {
-#		}
-#	}
-#	option = {
-#		name = BBA_switzerland.1.b
-#		ai_chance = {
-#			base = 10
-#		}
-#		trigger = {
-#		}
-#     }
-#}
-
-country_event = { #  Nygaardsvold Government Continues
-	id = AAT_norway.9
-	title = AAT_norway.9.t
-	desc = AAT_norway.9.desc	
-	picture = GFX_report_event_NOR_nygaardsvold_cabinet
-
-	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = {
-		}
-	} 
-
-	option = {
-		name = AAT_norway.9.a
-		ai_chance = {
-			base = 10
-		}
-		trigger = {
-		}
-		add_stability = 0.05 
-		add_war_support = -0.05
-	}
-}
 
 
-country_event = { # Stumbling Storting
-	id = AAT_norway.10
-	title = AAT_norway.10.t
-	desc = AAT_norway.10.desc	
-
-	picture = GFX_report_event_NOR_storting
-
-	is_triggered_only = yes
-
-	option = {
-		name = AAT_norway.10.a
-		ai_chance = {
-			base = 10
-		}
-		trigger = {
-		}
-		add_stability = -0.2
-		add_popularity = {
-			ideology = democratic
-			popularity = -0.05
-		}
-	}
-}
 
 country_event = { # Resurgent Labor Movement  
 	id = AAT_norway.11

@@ -54,28 +54,6 @@ country_event = {
 	}
 }
 
-# Zog Rejects Ultimatum
-country_event = {
-	id = italy.2
-	title = italy.2.t
-	desc = italy.2.d
-	picture = GFX_report_event_albanian_partisans
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = italy.2.a
-		create_wargoal = {
-			type = take_state_focus
-			target = ALB
-			generator = { 44 805 }
-		}
-		hidden_effect = {
-			country_event = { days = 1 id = news.23 }
-		}
-	}
-}
-
 # Albania Receives Ultimatum
 country_event = {
 	id = italy.3
@@ -135,50 +113,6 @@ country_event = {
 			country_event = { days = 1 id = italy.1 }
 		}
 		custom_effect_tooltip = GAME_OVER_TT
-	}
-	option = { # Resist
-		name = italy.3.b
-		ai_chance = {
-			factor = 20 
-			modifier = {
-				factor = 0
-				OR = {
-					AND = {
-						is_in_faction_with = FROM
-						FROM = { is_faction_leader = yes }
-					}
-					AND = {
-						is_in_faction = no 
-						NOT = {
-							any_other_country = {
-								NOT = { tag = FROM }
-								has_guaranteed = ROOT
-							} 
-						}
-					}
-				}
-			}
-			modifier = {
-				add = 100
-				is_in_faction = yes
-				NOT = { is_in_faction_with = FROM }
-			}
-			modifier = {
-				add = 100
-				is_subject = yes
-				NOT = { is_subject_of = FROM }
-			}
-		}
-		FROM = {
-			effect_tooltip = {
-				create_wargoal = {
-					type = take_state_focus
-					target = ALB
-					generator = { 44 }
-				}
-			}
-			country_event = { days = 1 id = italy.2 }
-		}
 	}
 }
 
