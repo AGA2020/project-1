@@ -57,8 +57,7 @@ country_event = {
 		else_if = {
 			limit = {
 				is_in_faction = no
-			}
-			unlock_decision_tooltip = { decision = USA_join_defensive_alliance_north_american_dominion show_effect_tooltip = yes}	
+			}	
 		}
 		FROM = {
 			country_event = mtg_usa_canadian_corridor.3
@@ -179,7 +178,6 @@ country_event = {
 			limit = {
 				is_in_faction = no
 			}
-			unlock_decision_tooltip = { decision = USA_join_defensive_alliance_north_american_dominion show_effect_tooltip = yes}	
 		}
 		FROM = {
 			country_event = mtg_usa_southern_threat.3
@@ -294,7 +292,6 @@ country_event = {
 			limit = {
 				is_in_faction = no
 			}
-			unlock_decision_tooltip = { decision = USA_join_defensive_alliance_north_american_dominion show_effect_tooltip = yes}	
 		}
 		effect_tooltip = {
 			FROM = {
