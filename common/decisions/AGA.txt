@@ -1070,6 +1070,9 @@ operations = {
                         target = MEX
                         transfer_troops = yes
                     }
+                    MEX_lazaro_cardenas = {
+                        set_nationality = MEX
+                    }
                 }
                 every_state = {
                     limit = {
