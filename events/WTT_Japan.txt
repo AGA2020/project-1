@@ -5,66 +5,6 @@ add_namespace = goe_japan
 #Drikus ID 101-200
 #Gabriel ID 201-300
 
-### #   # ###  ### ###  ###  ##  #       ###  ##  #   # ### #   #   # 
- #  ## ## #  # #   #  #  #  #  # #       #   #  # ## ##  #  #    # #  
- #  # # # ###  ##  ###   #  #### #       ##  #### # # #  #  #     #   
- #  #   # #    #   #  #  #  #  # #       #   #  # #   #  #  #     #   
-### #   # #    ### #  # ### #  # ###     #   #  # #   # ### ###   #   
-
-#Event to JAP with choice of what to do
-country_event = {
-	id = wtt_japan.31
-	title = wtt_japan.31.t
-	desc = wtt_japan.31.desc
-	picture = GFX_report_event_jap_imperial_family
-
-	is_triggered_only = yes
-	
-	#Exile them
-	option = {
-		name = wtt_japan.31.a
-		trigger = {
-			country_exists = MAN
-		}
-		ai_chance = {
-			base = 5
-		}
-		MAN = {
-			country_event = { id = wtt_japan.32 }
-			effect_tooltip = {
-				add_ideas = MAN_exiled_imperial_family
-			}
-		}
-	}
-
-	#Execute them
-	option = {
-		name = wtt_japan.31.b
-		ai_chance = {
-			base = 5
-		}
-		add_stability = -0.1
-	}
-}
-
-#Event to MAN. Exiled imperial family comes knocking
-country_event = {
-	id = wtt_japan.32
-	title = wtt_japan.32.t
-	desc = wtt_japan.32.desc
-	picture = GFX_report_event_jap_imperial_family
-
-	is_triggered_only = yes
-	
-	option = {
-		name = wtt_japan.32.a
-		ai_chance = {
-			base = 10
-		}
-		add_ideas = MAN_exiled_imperial_family
-	}
-}
-
 #Event from Communist China: turn over Manchuria OR ELSE
 country_event = {
 	id = wtt_japan.40
