@@ -6,42 +6,6 @@
 add_namespace = ARG_news_events
 add_namespace = ARG_political_events
 
-# Argentina asks to join the Allies (Historical)
-
-country_event = {
-	id = ARG_political_events.3
-	title = ARG_political_events.3.t
-	desc = ARG_political_events.3.desc
-	picture = GFX_report_event_generic_read_write 
-	is_triggered_only = yes
-
-	option = {
-		name =  ARG_political_events.3.a
-		ai_chance = {
-			base = 10
-		}
-	}	
-}
-
-# Argentina tells Germany they have carried out the colonial plan
-country_event = {
-	id = ARG_political_events.22
-	title = ARG_political_events.22.t
-	desc = ARG_political_events.22.desc
-	picture = GFX_report_event_generic_handshake
-	is_triggered_only = yes
-	option = {
-		name = ARG_political_events.22.a
-		ai_chance = {
-			base = 10
-		}
-		add_opinion_modifier = {
-				target = FROM
-				modifier = large_increase 
-			}
-		add_political_power = 50
-	}	
-}
 
 # Argentina backs down
 country_event = {
