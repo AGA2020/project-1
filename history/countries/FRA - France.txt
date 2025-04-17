@@ -938,3 +938,13 @@ if = {
 # 1939 Start #
 1939.1.1 = {
 }
+
+create_production_license = {
+    target = SOV
+    equipment = {
+    	version_name = "Char B1"
+        type = heavy_tank_chassis_1
+        version = 0
+    }
+    cost_factor = 0
+}
