@@ -948,7 +948,7 @@ focus_tree = {
 		id = ROM_appoint_german_friendly_government
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = ROM_flexible_foreign_policy }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = ROM_flexible_foreign_policy
 
@@ -1228,7 +1228,168 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = ROM_appoint_allied_friendly_government
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = ROM_flexible_foreign_policy }
+		x = -2
+		y = 1
+		relative_position_id = ROM_flexible_foreign_policy
 
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war_with = ENG
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			#Remove ideas or display tooltip warning that it will happen
+			if = {
+				limit = {
+					has_idea = ROM_iron_guard
+				}
+				remove_ideas = ROM_iron_guard
+				else = {
+					if = {
+						limit = {
+							has_idea = ROM_securitate
+						}
+						remove_ideas = ROM_securitate
+						else = {
+							custom_effect_tooltip = ROM_appoint_allied_friendly_government_tooltip
+						}
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { has_idea = ROM_flexible_foreign_policy_2 } }
+				swap_ideas = {
+					remove_idea = ROM_flexible_foreign_policy
+					add_idea = ROM_flexible_foreign_policy_2
+				}
+			}
+			add_popularity = {
+				popularity = 0.35
+				ideology = democratic
+			}
+			hidden_effect = { set_country_flag = can_change_sides_dem }
+			unlock_decision_category_tooltip = ROM_change_sides
+			unlock_decision_tooltip = ROM_change_sides_to_allies
+			add_stability = -0.05
+
+			custom_effect_tooltip = CHL_skip_one_line_tt
+			
+			add_opinion_modifier = { modifier = ROM_appoint_allied_friendly_government target = ENG }
+			ENG = { add_opinion_modifier = { modifier = ROM_appoint_allied_friendly_government target = ROOT } }
+		}
+	}
+
+	focus = {
+		id = ROM_constitutional_guarantees
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = ROM_appoint_allied_friendly_government }
+		x = 0
+		y = 1
+		relative_position_id = ROM_appoint_allied_friendly_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = ROM_constitutional_guarantees
+			#Remove ideas or display tooltip warning that it will happen
+			if = {
+				limit = {
+					has_idea = ROM_iron_guard
+				}
+				remove_ideas = ROM_iron_guard
+				else = {
+					if = {
+						limit = {
+							has_idea = ROM_securitate
+						}
+						remove_ideas = ROM_securitate
+						else = {
+							custom_effect_tooltip = ROM_appoint_allied_friendly_government_tooltip
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				if = { 
+					limit = { has_idea = ROM_national_christian_party_in_power }
+					remove_ideas = ROM_national_christian_party_in_power
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ROM_handle_the_king
+		icon = GFX_focus_rom_handle_king
+		prerequisite = { focus = ROM_constitutional_guarantees }
+		mutually_exclusive = { focus = ROM_force_abdication }
+		x = 0
+		y = 2
+		relative_position_id = ROM_appoint_allied_friendly_government
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = ROM_carol_current_leader_trigger
+					has_country_leader = { id = 550 }
+				}
+				has_government = democratic
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_leader = { id = 550 }
+				}
+				retire_country_leader = yes
+			}
+			if = {
+				limit = {
+					NOT = { has_government = democratic }
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+			}
+			swap_ideas = {
+				add_idea = ROM_king_carol_ii_handled_2
+				remove_idea = ROM_king_carol_ii_hedonist
+			}
+		}
+	}	
 
 	############################
 	######## AIR BRANCH ########
