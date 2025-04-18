@@ -15,7 +15,6 @@ ROM_leonidas_works_organization = {
 	icon = GFX_idea_ROM_leonidas_works
 	allowed = { 
 		tag = ROM
-		has_dlc = "Death or Dishonor"
 	}
 	available = {
 		FROM = { has_completed_focus = ROM_mobile_tank_destroyers }
@@ -58,10 +57,6 @@ ROM_galati_shipyard_organization = {
 	icon = GFX_idea_generic_coastal_navy
 	allowed = { 
 		tag = ROM
-		has_dlc = "Death or Dishonor"
-	}
-	available = {
-		FROM = { has_completed_focus = ROM_coastal_defense_navy }
 	}
 	initial_trait = {
 		name = ROM_mio_trait_coastal_defense_production
@@ -81,10 +76,6 @@ ROM_Braila_organization = {
 	icon = GFX_idea_generic_sea_focused_navy
 	allowed = { 
 		tag = ROM
-		has_dlc = "Death or Dishonor"
-	}
-	available = {
-		FROM = { has_completed_focus = ROM_black_sea_dominance }
 	}
 }
 
@@ -104,9 +95,6 @@ ROM_iar_organization = {
 	allowed = { 
 		tag = ROM
 	}
-	available = {
-	}
-
 	add_trait = {
 		token = generic_mio_trait_heavily_armed_aircraft
 		name = generic_mio_trait_heavily_armed_aircraft
@@ -135,7 +123,6 @@ ROM_icar_organization = {
 	icon = GFX_idea_ROM_ICAR
 	allowed = { 
 		tag = ROM
-		has_dlc = "Death or Dishonor"
 	}
 }
 
@@ -144,7 +131,6 @@ ROM_set_organization = {
 	icon = GFX_idea_ROM_SET
 	allowed = { 
 		tag = ROM
-		has_dlc = "Death or Dishonor"
 	}
 }
 

@@ -515,7 +515,6 @@ focus_tree = {
 		id = ROM_malaxa
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = ROM_danubian_transport_network }
-		mutually_exclusive = { focus = ROM_invite_foreign_motor_companies }
 		x = 0
 		y = 3
 		relative_position_id = ROM_civil_works
@@ -547,7 +546,6 @@ focus_tree = {
 		id = ROM_invite_foreign_motor_companies
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = ROM_danubian_transport_network }
-		mutually_exclusive = { focus = ROM_malaxa }
 		x = 2
 		y = 3
 		relative_position_id = ROM_civil_works
@@ -2602,21 +2600,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = ROM_galati_shipyard_organization
-				mio:ROM_galati_shipyard_organization = {
-					add_mio_funds = 2500
-				}
-			}
-
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = ROM_coastal_defense_navy_designer
+			show_mio_tooltip = ROM_galati_shipyard_organization
+			mio:ROM_galati_shipyard_organization = {
+				add_mio_size = 2
 			}
 		}
 	}
@@ -2749,23 +2735,9 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {			
-
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = ROM_Braila_organization
-				mio:ROM_Braila_organization = {
-					add_mio_size = 1
-					add_mio_funds = 500
-				}
-
-			}
-
-			else = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = ROM_black_sea_dominance_designer
+			show_mio_tooltip = ROM_Braila_organization
+			mio:ROM_Braila_organization = {
+				add_mio_size = 2
 			}
 		}
 	}
