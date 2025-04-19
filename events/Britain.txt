@@ -1,63 +1,5 @@
 ﻿add_namespace = britain 
-
-# Tizard mission event for USA
-country_event = {
-	id = britain.1
-	title = britain.1.t
-	desc = britain.1.d
-	picture = GFX_report_event_physics_lab_01
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = britain.1.a	#sounds good
-		ai_chance = { factor = 90 }
-		add_political_power = -10
-		ENG = {
-			country_event = { days = 1 id = britain.2 }
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = tizard_relations
-			}
-		}
-		add_tech_bonus = {
-			name = tizard_mission_focus
-			uses = 1
-			bonus = 1.0
-			category = light_fighter
-		}
-		add_tech_bonus = {
-			name = tizard_mission_focus
-			bonus = 1.0
-			uses = 2
-			category = radar_tech
-		}
-	}
-	
-	option = {
-		name = britain.1.b	#no way 
-		ai_chance = { factor = 10 }
-		#add_opinion_modifier = { target = ENG modifier = tizard_refused }
-		ENG = {
-			country_event = { days = 1 id = britain.3 }
-		}
-	}
-
-	option = {
-		name = britain.1.c	#tech_sharing
-		trigger = { has_dlc = "Together for Victory"}
-		ai_chance = { factor = 90 }
-		add_political_power = -10
-		ENG = {
-			country_event = { days = 1 id = britain.21 }
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = tizard_relations
-			}
-		}
-		add_to_tech_sharing_group = tizard_mission
-	}
-}
+add_namespace = AAT_britain_narvik
 
 # USA helps
 country_event = {
@@ -233,8 +175,6 @@ country_event = {
 
 	trigger = {
 		tag = ENG
-		has_war = yes
-		has_government = democratic
 		POL = { has_capitulated = yes }
 		OR = {
 			has_global_flag = fall_of_france
@@ -257,7 +197,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		days = 4
+		days = 2
 	}
 
 	immediate = { set_country_flag = chamberlain_resigned }
@@ -269,63 +209,6 @@ country_event = {
 		add_stability = 0.1
 		add_war_support = 0.1
 
-	}
-}
-
-
-# Chamberlain Passes Away
-country_event = {
-	id = britain.10
-	title = britain.10.t
-	desc = britain.10.d
-	picture = GFX_report_event_chamberlain
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = ENG
-		has_government = democratic
-		date > 1940.9.11
-		NOT = { has_country_flag = chamberlain_resigned }
-		has_country_leader = {
-			character = ENG_neville_chamberlain
-			ruling_only = yes
-		}
-	}	
-
-	mean_time_to_happen = {
-		days = 30
-	}
-	
-	immediate = { set_country_flag = chamberlain_died }
-
-	option = {
-		name = britain.10.a
-		kill_country_leader = yes
-		create_country_leader = {
-			name = "Winston Churchill"
-			desc = "POLITICS_WINSTON_CHURCHILL_DESC"
-			picture = GFX_portrait_Winston_Churchill
-			expire = "1965.1.1"
-			ideology = conservatism
-			traits = {
-				british_bulldog
-			}
-		}
-	}
-	option = {
-		name = britain.10.b
-		kill_country_leader = yes
-		create_country_leader = {
-			name = "Lord Edward Halifax"
-			desc = "POLITICS_EDWARD_HALIFAX_DESC"
-			picture = GFX_portrait_Lord_Edward_Halifax
-			expire = "1965.1.1"
-			ideology = conservatism
-			traits = {
-				
-			}
-		}
 	}
 }
 
@@ -444,7 +327,7 @@ country_event = {
 	id = britain.14
 	title = britain.14.t
 	desc = britain.14.d
-	picture = GFX_report_event_hitler_croatia_handshake
+	picture = [GetHitlerCroatianHandshakeEventPicture]
 
 	is_triggered_only = yes
 	
@@ -544,7 +427,7 @@ country_event = {
 		YUG = {
 			add_ai_strategy = {
 				type = alliance
-				id = "ENG"
+				id = ENG
 				value = 200
 			}
 		}
@@ -586,16 +469,6 @@ country_event = {
 	title = britain.16.t
 	desc = britain.16.d
 	picture = GFX_report_event_europe_funeral
-	
-	# trigger = {
-	# 	tag = ENG
-	# 	date > 1936.1.19
-	# 	has_start_date < 1936.01.02
-	# }	
-
-	# fire_only_once = yes
-
-	# mean_time_to_happen = { days = 7 }
 
 	is_triggered_only = yes
 
@@ -818,21 +691,6 @@ country_event = {
     title = britain.22.t
     desc = britain.22.d
     picture = GFX_report_event_royal_parade
- 
-    # fire_only_once = yes
- 
-    # trigger = {
-    #     original_tag = ENG
-    #     has_government = democratic
-    #     has_idea = ENG_george_vi
-    #     date > 1937.5.27
-    #     has_start_date < 1936.01.02
-    #     NOT = { has_country_flag = baldwin_resigned }
-    # }
-
-    # mean_time_to_happen = {
-    #     days = 7
-    # }
 
 	is_triggered_only = yes
 
@@ -952,4 +810,127 @@ country_event = {
 			set_state_flag = shadow_scheme_2AF
 		}
     }
+}
+
+
+country_event = {
+	id = AAT_britain_narvik.1
+	title = AAT_britain_narvik.1.t
+	desc = AAT_britain_narvik.1.desc
+	picture = GFX_report_event_degaulle_churchill
+	
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			GER = {
+				set_variable = { GER_removing_narvik_offsite_civs = 0 }
+				subtract_from_variable = { GER_removing_narvik_offsite_civs =  GER_narvik_civs }
+			}
+		}
+	}
+	option = {
+		name = AAT_britain_narvik.1.a	#sounds good
+		ai_chance = { factor = 95 }
+		white_peace = { tag = SWE }
+
+		if = {
+			limit = {
+				ENG = { has_variable = ENG_narvik_controller }
+
+				var:ENG_narvik_controller = {
+					has_war_with = SWE 
+				}
+			}
+
+			var:ENG_narvik_controller = { white_peace = { tag = SWE } }
+		}
+
+		GER = {  
+			add_offsite_building = {
+				type = industrial_complex
+				level = var:GER_removing_narvik_offsite_civs
+			}
+
+			country_event = { id = AAT_britain_narvik.4 }
+		}
+	}
+	
+	option = {
+		name = AAT_britain_narvik.1.b	#no way 
+		ai_chance = { factor = 5 }
+		add_political_power = -150
+		add_stability = -0.35
+		add_war_support = -0.35
+
+		GER = {  
+			add_offsite_building = {
+				type = industrial_complex
+				level = var:GER_removing_narvik_offsite_civs
+			}
+		}
+	}
+}
+
+country_event = {
+	id = AAT_britain_narvik.2
+	title = AAT_britain_narvik.2.t
+	desc = AAT_britain_narvik.2.desc
+	picture = GFX_report_event_soldiers_marching
+	
+	is_triggered_only = yes
+
+	option = {
+		name = AAT_britain_narvik.2.a
+		trigger = {
+			original_tag = SWE
+		}
+	}
+	
+	option = {
+		name = AAT_britain_narvik.2.b	
+		trigger = {
+			original_tag = GER
+		}
+	}
+}
+
+country_event = {
+	id = AAT_britain_narvik.3
+	title = AAT_britain_narvik.3.t
+	desc = AAT_britain_narvik.3.desc
+	picture = GFX_report_event_lithuania_army
+	
+	is_triggered_only = yes
+
+	option = {
+		name = AAT_britain_narvik.3.a
+	}
+	
+}
+
+country_event = {
+	id = AAT_britain_narvik.4
+	title = AAT_britain_narvik.4.t
+	desc = AAT_britain_narvik.4.desc
+	picture = GFX_report_event_king_speech
+	
+	is_triggered_only = yes
+
+	option = {
+		name = AAT_britain_narvik.4.a
+
+		if = {
+			limit = { original_tag = GER }
+			effect_tooltip = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = var:GER_removing_narvik_offsite_civs
+				}
+			}
+
+			clear_variable = GER_removing_narvik_offsite_civs
+			clear_variable = GER_narvik_civs
+			clear_variable = GER_narvik_shipments
+		}
+	}
 }

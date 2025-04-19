@@ -76,41 +76,37 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			USA = {
-				country_event = {
-					id = britain.1
-					hours = 12
-				}	
+			add_opinion_modifier = {
+				target = USA
+				modifier = tizard_relations
 			}
-			custom_effect_tooltip = if_they_accept
-			effect_tooltip = {
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
+			}
+			add_tech_bonus = {
+				name = tizard_mission_focus
+				bonus = 0.5 # was 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = tizard_mission_focus
+				bonus = 0.5 # was 1
+				uses = 1 # was 2
+				category = radar_tech
+			}
+			custom_effect_tooltip =  generic_skip_one_line_tt
+			USA = {
+				add_opinion_modifier = { target = ENG modifier = tizard_relations }
 				add_breakthrough_progress = {
 					specialization = specialization_air
 					value = 0.75
 				}
 				add_tech_bonus = {
 					name = tizard_mission_focus
-					bonus = 0.5 # was 1
+					uses = 1
+					bonus = 1
 					category = light_fighter
-				}
-				add_tech_bonus = {
-					name = tizard_mission_focus
-					bonus = 0.5 # was 1
-					uses = 1 # was 2
-					category = radar_tech
-				}
-				custom_effect_tooltip =  generic_skip_one_line_tt
-				USA = {
-					add_breakthrough_progress = {
-						specialization = specialization_air
-						value = 0.75
-					}
-					add_tech_bonus = {
-						name = tizard_mission_focus
-						uses = 1
-						bonus = 1
-						category = light_fighter
-					}
 				}
 			}
 		}
