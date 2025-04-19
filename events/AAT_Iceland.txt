@@ -6,41 +6,6 @@
 
 add_namespace = iceland_events
 
-
-# Declare Independence
-country_event = { 
-	id = iceland_events.1
-	title = iceland_events.1.t
-	desc = iceland_events.1.desc
-	picture = GFX_report_event_generic_sign_treaty2
-
-	is_triggered_only = yes
-	immediate = {
-		
-	}
-
-	option = { 
-		name = iceland_events.1.a
-		ai_chance = {
-			base = 1
-		}
-		OVERLORD = { end_puppet = ICE }
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = yes
-		}
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.5
-		}	
-		hidden_effect = {
-			drop_cosmetic_tag = yes
-			news_event = { id = aat_news.1 days = 1 }
-		}
-	}
-}
-
-#
 # Request American Protection
 country_event = { 
 	id = iceland_events.2
