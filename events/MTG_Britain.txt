@@ -27,36 +27,6 @@ country_event = {
 	}
 }
 
-# Abdication Crisis Edward VIII - King's support coalesces
-country_event = {
-	id = mtg_britain.2
-	title = mtg_britain.2.t
-	desc = mtg_britain.2.d
-	picture = GFX_report_event_generic_rally
-
-	is_triggered_only = yes
-	
-	# Ok
-	option = {
-		name = mtg_britain.2.a
-		add_popularity = { ideology = neutrality popularity = 0.1 }
-		add_political_power = 100
-		add_timed_idea = { idea = ENG_support_for_the_king_idea days = 150 }
-		custom_effect_tooltip = mtg_britain.2_tt
-		hidden_effect = { country_event = { id = mtg_britain.3 days = 50 } }
-	}
-
-	# On second thought, maybe we shouldn't
-	option = {
-		name = mtg_britain.2.b
-		ai_chance = {
-			factor = 0
-		}
-		country_event = { id = mtg_britain.14 days = 40 random_days = 10 }
-		set_country_flag = ENG_abdication_crisis_changed_mind
-	}
-}
-
 # Abdication Crisis Edward VIII - Government falls
 country_event = {
 	id = mtg_britain.3

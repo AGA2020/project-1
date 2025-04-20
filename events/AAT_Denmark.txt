@@ -3,8 +3,6 @@
 #### AAT DENMARK EVENTS ####
 #############################
 #############################
-
-add_namespace = denmark_political_events
 add_namespace = denmark_occupation_event
 add_namespace = denmark_resistance_event
 add_namespace = denmark_overlord_events
@@ -14,85 +12,7 @@ add_namespace = denmark_expansion_event
 add_namespace = denmark_fascist_event
 add_namespace = denmark_events
 
-country_event = { #Political Opposition
-	id = denmark_political_events.10
-	title = denmark_political_events.10.t
-	desc = denmark_political_events.10.desc
-	picture = GFX_report_event_DEN_danish_politics
 
-	trigger = {
-		tag = DEN
-		has_elections = yes
-		OR = {
-			has_government = communism
-			has_government = fascism
-		}
-		NOT = { has_country_flag = DEN_opposition_propaganda_flag }
-	}
-
-	mean_time_to_happen = {
-		days = 180
-	}
-
-	option = { #fascist lies!
-		name = denmark_political_events.10.a
-		ai_chance = {
-			base = 2
-		}
-		trigger = {
-			has_government = communism
-		}
-		set_country_flag = DEN_opposition_propaganda_flag
-		add_timed_idea = {
-			idea = DEN_fascist_propaganda_ns
-			days = 180
-		}
-	}
-
-	option = { #commie lies!
-		name = denmark_political_events.10.b
-		ai_chance = {
-			base = 2
-		}	
-		trigger = {
-			has_government = fascism
-		}
-		set_country_flag = DEN_opposition_propaganda_flag
-		add_timed_idea = {
-			idea = DEN_communist_propaganda_ns
-			days = 180
-		}
-	}
-}
-
-country_event = { #Political Opposition
-	id = denmark_political_events.11
-	title = denmark_political_events.11.t
-	desc = denmark_political_events.11.desc
-	picture = GFX_report_event_DEN_exiled_king
-
-	trigger = {
-		tag = DEN
-		has_government = communism
-		NOT = { has_country_flag = DEN_exiled_royal_family }
-		NOT = { has_idea = DEN_monarchist_discontent_ns }
-	}
-
-	mean_time_to_happen = {
-		days = 180
-	}
-
-	option = { #fascist lies!
-		name = denmark_political_events.11.a
-		trigger = {
-			has_government = communism
-		}
-		add_timed_idea = {
-			idea = DEN_monarchist_discontent_ns
-			days = 365
-		}
-	}
-}
 
 ###########################
 ###########################
