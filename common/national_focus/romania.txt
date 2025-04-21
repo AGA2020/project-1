@@ -1160,7 +1160,7 @@ focus_tree = {
 		id = ROM_force_abdication
 		icon = GFX_focus_rom_abdicate
 		prerequisite = { focus = ROM_iron_guard  focus = ROM_national_christian_party }
-		mutually_exclusive = { focus = ROM_force_abdication }
+		mutually_exclusive = { focus = ROM_handle_the_king }
 		x = 1				
 		y = 1
 		relative_position_id = ROM_iron_guard
