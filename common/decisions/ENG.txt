@@ -368,12 +368,10 @@ ENG_homeland_defense_decision_cat = {
 		visible = {
 			has_war = yes
 		}
-
 		available = {
 			has_war = yes
 			any_owned_state = {
 				is_core_of = ROOT
-				#is_in_home_area = yes 	
 				NOT = {
 					is_controlled_by = ROOT
 				}

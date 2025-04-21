@@ -2641,6 +2641,16 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_london_ger
+		hidden_effect = { 
+			ENG = { 
+				if = { 
+					limit = {
+						NOT = { has_idea = ENG_desperate_defense_of_the_homeland }
+					} 
+					ENG = { activate_decision = ENG_the_homeland_defense_act add_political_power = -15 } 
+				} 
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -3281,6 +3291,16 @@ news_event = {
 	
 	immediate = {
 		set_global_flag = fall_of_london_ita
+		hidden_effect = { 
+			ENG = { 
+				if = { 
+					limit = {
+						NOT = { has_idea = ENG_desperate_defense_of_the_homeland }
+					} 
+					ENG = { activate_decision = ENG_the_homeland_defense_act add_political_power = -15 } 
+				} 
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
