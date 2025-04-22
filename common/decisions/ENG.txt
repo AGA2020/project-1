@@ -94,16 +94,6 @@ ENG_narvik_crisis_cat = {
 
 		ai_will_do = {
 			base = 0
-			modifier = {
-				is_historical_focus_on = no
-				OR = {
-					has_completed_focus = ENG_no_further_appeasement
-					has_completed_focus = uk_scandinavian_focus
-				}
-
-				NOR = { is_ai = yes }
-				add = 1
-			}
 		}
 	}
 
