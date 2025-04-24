@@ -15,7 +15,6 @@ state = {
         owner = WST
 		buildings = {
 			infrastructure = 3 #was: 5
-			dockyard = 1
 			air_base = 1
 			10362 = {
 				naval_base = 6

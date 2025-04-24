@@ -16,7 +16,6 @@ state = {
 
 		buildings = {
 			infrastructure = 2
-			dockyard = 1
 		}
 
 		victory_points = {
