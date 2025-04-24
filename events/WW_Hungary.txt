@@ -2189,34 +2189,6 @@ country_event = {
 	}
 }
 
-# Spain Rejects a Habsburg Monarch - event for HUN
-country_event = {
-	id = WW_hungary.53
-	title = WW_hungary.53.t
-	desc = WW_hungary.53.desc
-	picture = GFX_report_event_royal_visit
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	# They made the incorrect choice
-	option = { 
-		name = WW_hungary.53.a
-		ai_chance = {
-			factor = 100
-		}
-
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = FROM
-		}
-
-		unlock_decision_tooltip = HUN_place_a_habsburg_on_the_spanish_throne 
-
-	}
-}
-
 # A New Monarch - event for UKR
 country_event = {
 	id = WW_hungary.54
