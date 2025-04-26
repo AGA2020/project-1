@@ -63,6 +63,13 @@ every_owned_state = { #LIBYAN STATES
 	set_garrison_strength = 1.0
 }
 
+diplomatic_relation = { country = BUL relation = non_aggression_pact }
+
+diplomatic_relation = {
+	country = BUL
+	relation = military_access
+	active = yes
+}
 
 #######################################
 ############ MISSIOLINIS ##############
