@@ -1278,9 +1278,6 @@ focus_tree = {
 				popularity = 0.35
 				ideology = democratic
 			}
-			hidden_effect = { set_country_flag = can_change_sides_dem }
-			unlock_decision_category_tooltip = ROM_change_sides
-			unlock_decision_tooltip = ROM_change_sides_to_allies
 			add_stability = -0.05
 
 			custom_effect_tooltip = CHL_skip_one_line_tt
