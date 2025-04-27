@@ -30,6 +30,8 @@ bookmarks = {
 				undisturbed_isolation
 			}
 			focuses = {
+				USA_continue_the_new_deal
+				USA_the_giant_wakes
 				USA_war_plan_black
 			}
 		}
@@ -43,7 +45,9 @@ bookmarks = {
 				george_v
 			}
 			focuses = {
-				tizard_mission_focus
+				aircraft_production_focus
+				ENG_imperial_conference
+				ENG_home_defence
 			}
 		}
 
@@ -52,12 +56,14 @@ bookmarks = {
 			ideology = fascism
 
 			ideas = {
-				sour_loser
-				general_staff
+				GER_mefo_bills_1936_fake_ns
+				GER_army_1936_fake_ns
+				GER_airforce_fake_ns
 			}
 			focuses = {
-				GER_anschluss
-				GER_danzig_or_war
+				GER_fuhrerprinzip
+				GER_uralbomber_program
+				GER_the_final_blow_to_communism
 			}
 		}
 		"ITA"={
@@ -69,7 +75,9 @@ bookmarks = {
 				ITA_re_fake_ns
 			}	
 			focuses = {
-				ITA_a_colonial_empire
+				ITA_new_industrialization_program
+				ITA_bend_the_bars
+				ITA_citta_dell_aria
 			}		
 		}
 		"JAP"={
@@ -97,8 +105,9 @@ bookmarks = {
 				SOV_politicized_military
 			}
 			focuses = {
-				SOV_behead_the_snake
 				SOV_the_centre
+				SOV_eradicate_western_fascism
+				SOV_foreign_experts
 			}	
 		}
 
@@ -167,10 +176,14 @@ bookmarks = {
 			history = "RAJ_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				RAJ_agrarian_society
+				RAJ_marginalized_muslim_community
 				RAJ_princely_states
+				idea_RAJ_great_depression_1
 			}
 			focuses = {
+				RAJ_mahatma
+				RAJ_i_am_death
+				RAJ_model_after_soviet
 			}
 		}
 
@@ -180,9 +193,14 @@ bookmarks = {
 			history = "HUN_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				HUN_treaty_of_triannon
+				HUN_treaty_of_triannon_wuw
+				HUN_gombos_trade_treaty
+				HUN_hungarian_national_defense_association
 			}
 			focuses = {
+				wuw_HUN_strengthen_horthys_reign
+				wuw_HUN_renounce_the_treaty_of_trianon
+				wuw_HUN_proclaim_greater_hungary
 			}
 		}
 
@@ -191,10 +209,13 @@ bookmarks = {
 			history = "ROM_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
+				ROM_king_carol_ii_hedonist
 				neutrality_idea
 			}
 			focuses = {
 				ROM_institute_royal_dictatorship
+				ROM_preserve_greater_romania
+				ROM_urbanize_the_small_cities
 			}
 		}
 
@@ -229,6 +250,7 @@ bookmarks = {
 			focuses = {
 				MEX_focus_aztec_eagles
 				MEX_focus_nationalize_the_oil_fields
+				MEX_focus_heavy_artillery
 			}
 		}
 
@@ -243,6 +265,8 @@ bookmarks = {
 			}
 			focuses = {
 				SPA_caudillo_of_spain
+				SPA_stamp_out_the_maquis
+				SPA_save_the_alcazar
 			}
 		}
 
@@ -278,11 +302,7 @@ bookmarks = {
 			minor = yes
 			history = BRA_GATHERING_STORM_DESC
 			ideology = democratic
-			available = { has_dlc = "Trial of Allegiance" }
 			ideas = {
-				#BRA_undiversified_economy_modifier
-				#SMB_MTG_naval_arms_race_legacy
-				#BRA_aftermath_of_the_coup
 				BRA_undiversified_economy_modifier_dummy_idea
 				BRA_weak_government_dummy_idea
 				BRA_aftermath_of_the_coup_dummy_idea
