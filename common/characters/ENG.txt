@@ -9,7 +9,38 @@ characters={
 				small="GFX_idea_ENG_winston_churchill"
 			}
 		}
-
+		advisor={
+			slot = political_advisor
+			idea_token = ENG_winston_churchill
+			available = {
+				if = {
+					limit = {
+						original_tag = RAJ
+					}
+					OR = {
+						has_government = neutrality
+						has_government = democratic
+					}
+				}
+			}
+			allowed  = {
+				original_tag = RAJ
+			}
+			visible = {
+				if = {
+					limit = {
+						original_tag = RAJ
+					}
+					NOT = { has_character_flag = RAJ_churchill_as_country_leader_flag }
+				}
+			}
+			traits  = {
+				royalist_bulldog 
+			}
+			ai_will_do  = {
+				base = 1
+			}
+		}
 		country_leader={
 			ideology=conservatism
 			traits = {
