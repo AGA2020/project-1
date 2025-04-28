@@ -1,4 +1,12 @@
 technologies = {
+	ger_anticlosebug = {
+		allow = {
+			always = no
+		}
+		enable_equipment_modules = {
+			tank_close_support_gun
+		}				
+	}
 	give_me_at2_module = {
 		allow = {
 			always = no
