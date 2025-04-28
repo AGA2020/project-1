@@ -1803,7 +1803,13 @@ political_actions = {
     	icon = generic_civil_support
 
     	visible = {
-			NOT = { has_government = fascism }
+    		OR = {
+				NOT = { has_government = fascism }
+				AND = {
+					original_tag = RAJ
+					has_idea = idea_RAJ_kingmaker	
+				}
+			}
 		}
 
 		available = {
@@ -1869,7 +1875,13 @@ political_actions = {
     	icon = generic_civil_support
 
     	visible = {
-			NOT = { has_government = democratic }
+    		OR = {
+				NOT = { has_government = democratic }
+    			AND = {
+    				original_tag = RAJ
+    				has_idea = idea_RAJ_kingmaker	
+    			}
+			}
 		}
 
 		available = {
@@ -1909,7 +1921,13 @@ political_actions = {
     	icon = generic_civil_support
 
     	visible = {
-			NOT = { has_government = communism }
+    		OR = {
+				NOT = { has_government = communism }
+    			AND = {
+    				original_tag = RAJ
+    				has_idea = idea_RAJ_kingmaker	
+    			}
+			}
 		}
 
 		available = {
@@ -1943,6 +1961,46 @@ political_actions = {
 			factor = 0
 		}
     }
+
+     anti_neutrality_raids = {
+
+    	icon = generic_civil_support
+
+    	allowed = {
+    		original_tag = RAJ
+    	}
+
+    	visible = {
+    		has_idea = idea_RAJ_kingmaker
+    		OR = {
+				NOT = { has_government = neutrality }
+    			original_tag = RAJ
+			}
+		}
+
+		available = {
+            neutrality > 0.1
+        }
+	
+		modifier = {
+			neutrality_drift = -0.05
+			stability_weekly = 0.007
+		}
+	
+		days_remove = 120
+		cost = 50
+
+		complete_effect = {
+			add_stability = -0.1
+		}
+		
+		remove_effect = {
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+    }   
     
 	ban_fascist_party = {
 

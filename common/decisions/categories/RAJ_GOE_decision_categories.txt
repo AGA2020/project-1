@@ -48,7 +48,10 @@ RAJ_GOE_sikh_recruitment_cat = {
 	}
 
 	visible = {
-		has_completed_focus = RAJ_punjab_autonomy
+		OR = {
+			has_completed_focus = RAJ_punjab_autonomy
+			has_completed_focus = RAJ_the_punjab_accord
+		}
 	}
 }
 
@@ -139,4 +142,36 @@ RAJ_GOE_mughal_independence_category = {
 			tag = ENG
 		}
 	}	
+}
+
+### LOYALIST BRANCH
+RAJ_work_with_local_leaders_cat = {
+	icon = GFX_decision_category_generic_industry
+	priority = 110
+	allowed = {
+		has_dlc = "Graveyard of Empires"
+		original_tag = RAJ
+	}
+
+	visible = {
+		has_completed_focus = RAJ_work_with_local_leaders	
+	}
+
+	scripted_gui = raj_local_leaders_investments_decision_ui
+}
+
+RAJ_concessions_to_the_congress_cat = {
+	icon = eng_concessions_to_the_trade_unions
+	picture = GFX_decision_cat_picture_concessions_to_the_trade_unions
+	priority = 105
+
+	allowed = {
+		has_dlc = "Graveyard of Empires"
+		original_tag = RAJ
+	}
+
+	visible = {
+		has_completed_focus = RAJ_confer_with_the_congress
+		has_capitulated = no
+	}
 }

@@ -463,12 +463,7 @@ generic_refit_civilian_ships_category = {
 	picture = GFX_decision_cat_picture_generic_shipbuilding
 	
 	allowed = { #Add tags here with first an OR then an AND
-		OR = {
-			original_tag = DEN
-			original_tag = FIN
-			original_tag = ICE
-		}
-		has_dlc = "Arms Against Tyranny"
+		original_tag = RAJ
 	}
 	visible = {
 		has_country_flag = refit_convoy_ships_flag
