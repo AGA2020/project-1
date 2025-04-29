@@ -6668,8 +6668,14 @@ ai_will_do = {
 		}
 		
 		available = {
-			date > 1942.1.7
-			has_war = no
+			OR = {
+				ENG = { surrender_progress > 0.75 }
+				ENG = { has_capitulated = yes }
+				AND = {
+					date > 1942.1.7
+					has_war = no
+				}
+			}
 		}
 		
 		search_filters = {}
