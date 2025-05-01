@@ -5,6 +5,16 @@
 ### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 ### search_filters = {FOCUS_FILTER_MANPOWER}
 ### search_filters = {FOCUS_FILTER_ANNEXATION}
+### search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+### search_filters = {FOCUS_FILTER_ARMY_XP}
+### search_filters = {FOCUS_FILTER_NAVY_XP}
+### search_filters = {FOCUS_FILTER_AIR_XP}
+### search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
+### search_filters = {FOCUS_FILTER_POLITICAL_CHARACTER}
+### search_filters = {FOCUS_FILTER_MILITARY_CHARACTER}
+### search_filters = {FOCUS_FILTER_INTERNATIONAL_TRADE}
+### search_filters = {FOCUS_FILTER_HISTORICAL}
+### search_filters = {FOCUS_FILTER_TFV_AUTONOMY}
 
 focus_tree = {
     id = indian_focus_goe
@@ -26,7 +36,7 @@ focus_tree = {
         x = 0
         y = 0
         mutually_exclusive = { focus = RAJ_keep_british_generals }
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -75,7 +85,7 @@ focus_tree = {
         x = -18
         y = 0
         relative_position_id = RAJ_indianize_the_army 
-
+        mutually_exclusive = { focus = RAJ_his_majestys_loyal_government }
         cost = 5
 
         ai_will_do = {
@@ -354,8 +364,7 @@ focus_tree = {
         x = 6
         y = 1
         relative_position_id = RAJ_purna_swaraj
-        #mutually_exclusive = { focus = RAJ_league_against_gandhism }
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -507,7 +516,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_swadeshi_movement
        
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -535,7 +544,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_form_a_federal_court
        
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -637,7 +646,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_indo_centric_curriculum
        
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -652,10 +661,10 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_TFV_AUTONOMY}
 
         completion_reward = {
-            add_stability = 0.05
+            add_stability = 0.03
             add_tech_bonus = {
                 name = RAJ_enrollment_of_dali_children
-                bonus = 0.5
+                bonus = 0.35
                 uses = 1
                 category = electronics # optional 
                 # technology  = technology_id # optional
@@ -779,7 +788,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_uplifting_the_people_of_india
        
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -891,7 +900,7 @@ focus_tree = {
         y = 2
         relative_position_id = RAJ_tenancy_reforms
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -909,7 +918,7 @@ focus_tree = {
                 value = 0.05 
                 localization = RAJ_cottage_industries
             }
-            try_build_civ_in_core_otherwise_build_in_controlled_2_civs = yes
+            try_build_civ_in_core_otherwise_build_in_controlled = yes
         }
     }
 
@@ -1032,7 +1041,7 @@ focus_tree = {
         relative_position_id = RAJ_agricultural_cooperatives
 
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -1124,7 +1133,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_temple_entry_movements
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -1169,7 +1178,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_sikh_religious_guarantees
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
