@@ -5,6 +5,9 @@ state={
 	provinces={
 		2017 2062 2078 1948 2101
 	}
+	resources = {
+		chromium = 7
+	}
 	history={
 		owner = WST
 		add_core_of = WST
