@@ -189,16 +189,6 @@ country_event = { #Raj counter offer
 			PER = {
 				transfer_state = 988
 				transfer_state = 444
-				add_timed_idea = {
-					idea = PER_paying_for_baluchistan_idea
-					days = 365
-				}
-			}
-			RAJ = {
-				add_timed_idea = {
-					idea = PER_sold_baluchistan_idea
-					days = 365
-				}
 			}
 		}
 
@@ -212,16 +202,6 @@ country_event = { #Raj counter offer
 				988 = { set_state_flag = RAJ_resistance_already_squashed_flag}
 				transfer_state = 444
 				444 = { set_state_flag = RAJ_resistance_already_squashed_flag}
-				add_timed_idea = {
-					idea = PER_paying_for_baluchistan_idea
-					days = 365
-				}
-			}
-			RAJ = {
-				add_timed_idea = {
-					idea = PER_sold_baluchistan_idea
-					days = 365
-				}
 			}
 		}
 	}
