@@ -168,17 +168,7 @@ characters={
 			planning_skill=3
 			logistics_skill=1
 			legacy_id=-1
-			visible = {
-				OR = {
-					NOT = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
-					}
-					AND = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
-						has_completed_focus = RAJ_keep_british_generals
-					}
-				}
-			}
+ 
 		}
 	}
 
@@ -198,17 +188,7 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			legacy_id=-1
-			visible = {
-				OR = {
-					NOT = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
-					}
-					AND = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
-						has_completed_focus = RAJ_keep_british_generals
-					}
-				}
-			}
+ 
 		}
 	}
 
@@ -229,17 +209,7 @@ characters={
 			planning_skill=3
 			logistics_skill=3
 			legacy_id=-1
-			visible = {
-				OR = {
-					NOT = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
-					}
-					AND = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
-						has_completed_focus = RAJ_keep_british_generals
-					}
-				}
-			}
+ 
 		}
 	}
 
@@ -260,17 +230,7 @@ characters={
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=-1
-			visible = {
-				OR = {
-					NOT = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
-					}
-					AND = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
-						has_completed_focus = RAJ_keep_british_generals
-					}
-				}
-			}
+ 
 		}
 	}
 
@@ -290,17 +250,7 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			legacy_id=-1
-			visible = {
-				OR = {
-					NOT = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
-					}
-					AND = {
-						has_completed_focus = RAJ_royal_indian_navy_mutiny
-						has_completed_focus = RAJ_keep_british_generals
-					}
-				}
-			}
+ 
 		}
 	}
 
