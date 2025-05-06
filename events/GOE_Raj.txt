@@ -4675,15 +4675,7 @@ country_event = {
 					}
 					set_country_flag = RAJ_churchill_was_leading_before_transfer_to_raj_flag
 				}
-				if = { #DO not send event if UK is already in a path where Churchill is useless
-					limit = {
-						NOT = {
-							has_completed_focus = ENG_organize_the_blackshirts
-							has_completed_focus = ENG_concessions_to_the_trade_unions
-						}
-					}
-					country_event = GOE_RAJ_loyalist.12
-				}
+				country_event = GOE_RAJ_loyalist.12
 			}
 			ENG_winston_churchill = {
 				set_character_flag = RAJ_churchill_as_country_leader_flag
@@ -4712,15 +4704,7 @@ country_event = {
 					}
 					set_country_flag = RAJ_churchill_was_leading_before_transfer_to_raj_flag
 				}
-				if = { #DO not send event if UK is already in a path where Churchill is useless
-					limit = {
-						NOT = {
-							has_completed_focus = ENG_organize_the_blackshirts
-							has_completed_focus = ENG_concessions_to_the_trade_unions
-						}
-					}
-					country_event = GOE_RAJ_loyalist.12
-				}
+				country_event = GOE_RAJ_loyalist.12
 			}
 
 			ENG_winston_churchill = {
