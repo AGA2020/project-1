@@ -2930,33 +2930,6 @@ focus = {
 
     mutually_exclusive = { focus = RAJ_provincial_autonomy }
 
-    allow_branch = {
-        if = {
-            limit = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-            }
-            NOT = {
-                has_completed_focus = RAJ_provincial_autonomy
-                has_completed_focus = RAJ_great_depression_price_controls
-            }
-        }
-    }
-
-    offset = {
-        x = -40
-        y = 0
-        trigger = {
-            has_game_rule = {
-                rule = obsolete_focus_branches_visibility
-                option = HIDE
-            }
-            has_completed_focus = RAJ_great_depression_price_controls
-        }
-    }
-
     available = {
         is_subject_of = ENG
     }

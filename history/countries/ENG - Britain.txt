@@ -1264,6 +1264,14 @@ if = {
 }
 
 create_production_license = {
+    target = AST
+	equipment = {
+		type = motorized_equipment_1
+	}
+    cost_factor = 0
+}
+
+create_production_license = {
     target = CAN
     equipment = {
     	version_name = "Vickers Wellesley"
