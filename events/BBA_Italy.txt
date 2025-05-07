@@ -8690,64 +8690,6 @@ country_event = {
 	}
 }
 
-# Jerusalem or War - Event for Jerusalem controller (from Pope)
-country_event = {
-	id = BBA_italy_interaction_events.666
-	title = BBA_italy_interaction_events.666.t 
-	desc = BBA_italy_interaction_events.666.desc
-	picture = GFX_report_event_fascist_speech
-	
-	is_triggered_only = yes
- 
-	# Accept
-	option = { 
-		name = BBA_italy_interaction_events.666.a 
-
-		ai_chance = { 
-			base = 10
-		}
-
-		effect_tooltip = {
-			FROM = {
-				transfer_state = 454 #PALESTINE
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = ITA_complied_to_church_demands
-				}
-			}
-		}
-		hidden_effect = {
-			FROM = { country_event = { id = BBA_italy_interaction_events.667 hours = 6 random_hours = 2 } }
-		}
-	}
-	# Reject
-	option = { 
-		name = BBA_italy_interaction_events.666.b
-
-		trigger = {
-			NOT = { is_subject_of = FROM }
-		}
-
-		ai_chance = { 
-			base = 0
-		}
-
-		effect_tooltip = {
-			FROM = {
-				create_wargoal = {
-					type = take_state
-					target = ROOT
-					generator = { 454 } 
-				}
-			}
-		}
-
-		hidden_effect = {
-			FROM = { country_event = { id = BBA_italy_interaction_events.668 hours = 6 random_hours = 2 } }
-		}
-	}
-}
-
 #ITA asking to negotiate with ENG
 country_event = {  
 	id = BBA_italy_interaction_events.50
@@ -8841,74 +8783,6 @@ country_event = { #England receives the news that Italy signed a peace treaty wi
 				news_event = { hours = 6 id = BBA_italy_interaction_events_news.2 }
 			}
 			clr_country_flag = ITA_italy_asks_ehtiopian_host_for_help
-		}
-	}
-}
-
-# Jerusalem or War - Country accepts - Event for ITA (Pope)
-country_event = {
-	id = BBA_italy_interaction_events.667
-	title = BBA_italy_interaction_events.667.t 
-	desc = BBA_italy_interaction_events.667.desc
-	picture = GFX_report_event_fascist_speech
-	
-	is_triggered_only = yes
- 
-	# Ok
-	option = { 
-		name = BBA_italy_interaction_events.667.a 
-
-		transfer_state = 454 #PALESTINE
-		add_opinion_modifier = {
-			target = FROM
-			modifier = ITA_complied_to_church_demands
-		}
-		454 = {
-			set_state_category = town
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = bunker
-				level = 2
-				province = 4206
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = bunker
-				level = 2
-				province = 1086
-				instant_build = yes
-			}
-			if = {
-				limit = {
-					anti_air_building < 5
-				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-}
-
-# Jerusalem or War - Country Rejects - Event for ITA (Pope)
-country_event = {
-	id = BBA_italy_interaction_events.668
-	title = BBA_italy_interaction_events.668.t 
-	desc = BBA_italy_interaction_events.668.desc
-	picture = GFX_report_event_fascist_speech
-	
-	is_triggered_only = yes
- 
-	# Accept
-	option = { 
-		name = BBA_italy_interaction_events.668.a 
-
-		create_wargoal = {
-			type = take_state
-			target = FROM
-			generator = { 454 } 
 		}
 	}
 }
