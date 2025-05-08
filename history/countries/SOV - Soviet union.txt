@@ -871,7 +871,7 @@ add_ideas = {
 
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
 }
-
+set_country_flag = colabwarning_enabled
 diplomatic_relation = { country = USA relation = non_aggression_pact }
 
 diplomatic_relation = {

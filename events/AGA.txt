@@ -1,6 +1,21 @@
 ﻿add_namespace = aga
 
 country_event = {
+	id = aga.28
+	title = aga.25.t
+	desc = aga.25.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+    immediate = {
+		set_country_flag = lat_colab_warning
+    }
+	option = {
+		name = aga.25.a
+	}
+}
+
+country_event = {
 	id = aga.27
 	title = aga.25.t
 	desc = aga.25.d

@@ -147,6 +147,7 @@ operations = {
                 tag = ITA
                 tag = JAP
                 tag = GER
+                tag = SOV
             }
         }
         available = {

@@ -146,6 +146,20 @@ on_actions = {
 			}
 			else_if = {
 			    limit = {
+					tag = SOV
+					SOV = {
+						network_strength = {
+						    target = LAT
+						    value > 49
+						}
+						NOT = { has_country_flag = lat_colab_warning }
+					}
+					has_country_flag = colabwarning_enabled
+			    }
+			    SOV = { country_event = { id = aga.28 } }
+			}
+			else_if = {
+			    limit = {
 					tag = JAP
 					JAP = {
 						network_strength = {
