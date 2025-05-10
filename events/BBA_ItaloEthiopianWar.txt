@@ -1281,20 +1281,3 @@ country_event = {
 		}
 	}
 }
-
-#Event for Ethiopia after Italy finishes Topple Amhara Rule
-country_event = {  
-	id = BBA_italo_ethiopian_war_events.510
-	title = BBA_italo_ethiopian_war_events.510.t 
-	desc = BBA_italo_ethiopian_war_events.510.desc
-	picture = GFX_report_event_fascist_speech 
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
- 
-	option = { #Lying, thieving villians!
-		name = BBA_italo_ethiopian_war_events.510.a 
-		add_legitimacy = -10
-	}
-}

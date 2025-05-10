@@ -2718,10 +2718,6 @@ ETH_italian_occupation_category = {
 				add_legitimacy = -10
 			}
 
-			hidden_effect = {
-				ETH = { country_event = { id = BBA_italo_ethiopian_war_events.510 hours = 1 } }
-			}
-
 			every_controlled_state = {
 				limit = {
 					is_owned_by = ETH

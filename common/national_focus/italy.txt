@@ -6951,11 +6951,6 @@ focus_tree = {
 					ITA_haile_selassie_gugsa_doppleganger = { unit_leader_event = BBA_italy_local_rulers.1 }
 				}
 			}
-			hidden_effect = {
-				ETH = {
-					country_event = { id = BBA_italo_ethiopian_war_events.510 hours = 6 }
-				}
-			}
 
 		}
 	}
