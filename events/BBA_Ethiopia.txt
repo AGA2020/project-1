@@ -4044,44 +4044,6 @@ country_event = {
 
 ##########################################################################
 
-#Black Lions and Military coup against HS - form prov gov
-country_event = {
-	id = BBA_ethiopia_communist_events.05
-	title = BBA_ethiopia_communist_events.05.t
-	desc = BBA_ethiopia_communist_events.05.desc
-	picture = GFX_report_event_gre_city_devastated
-	is_triggered_only = yes
-	# Exile HS
-	option = {
-		name = BBA_ethiopia_communist_events.05.a
-		ai_chance = {
-			base = 10
-		}
-		add_popularity = {
-			ideology = communism
-			popularity = 0.05
-		}
-	}
-	# Imprison HS
-	option = {
-		name = BBA_ethiopia_communist_events.05.b
-		ai_chance = {
-			base = 5
-			modifier = {
-				factor = 0
-				has_stability < 0.3				
-			}
-		}
-		add_stability = -0.05
-		add_popularity = {
-			ideology = communism
-			popularity = 0.1
-		}
-		ETH_haile_selassie = {
-			set_character_flag = ETH_imprisoned_flag
-		}
-	}
-}
 
 #SOV back military coup against provisional gov
 country_event = {
