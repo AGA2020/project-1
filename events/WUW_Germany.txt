@@ -9,7 +9,6 @@ add_namespace = wuw_GER_military_events
 add_namespace = wuw_GER_diplomacy
 add_namespace = wuw_GER_news
 add_namespace = wuw_GER_releasable
-add_namespace = wuw_GER_civil_war
 add_namespace = wuw_GER_mutual_guarantees
 add_namespace = wuw_GER_weltpolitik
 add_namespace = wuw_GER_chinese_diplomacy
@@ -20,7 +19,6 @@ add_namespace = wuw_GER_legions
 add_namespace = wuw_GER_realpolitik
 add_namespace = GOT_GER_integrated_puppet_economies
 add_namespace = wuw_GER_the_battle_of_britain
-add_namespace = wuw_GER_uncertain_future
 add_namespace = wuw_GER_german_politics
 add_namespace = GER_operation_panzerfaust_events
 add_namespace = GOT_GER_amerikabomber
@@ -9613,30 +9611,6 @@ country_event = {
 	}
 }
 
-# August von Mackensen Retires from the Military - event for GER (after winning the civil war)
-country_event = {
-	id = wuw_GER_civil_war.9
-	title = wuw_GER_civil_war.9.t
-	desc = wuw_GER_civil_war.9.desc 
-	picture = GFX_report_event_lithuania_army
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = { # He has served us well
-		name = wuw_GER_civil_war.9.a
-
-		add_political_power = 25
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-		
-		custom_effect_tooltip = GER_mackensen_went_into_retirement_tt
-		set_country_flag = GER_mackensen_went_into_retirement
-		
-	}
-}
-
 
 ### GERMAN FOREIGN LEGIONS AND LEGIONARIES EVENTS ###
 
@@ -14992,23 +14966,6 @@ country_event = {
 			idea = GER_battle_for_air_superiority
 			days = 180
 		}
-	}
-}
-
-country_event = {
-	id = wuw_GER_uncertain_future.02
-	title = wuw_GER_uncertain_future.02.t
-	desc = wuw_GER_uncertain_future.02.desc
-	picture = GFX_report_event_gathering_protest
-
-	fire_only_once = yes
-
-	is_triggered_only = yes
-	
-	option = { #that's not great....
-		name = wuw_GER_uncertain_future.02.a
-				
-		add_ideas = GER_uncertain_future
 	}
 }
 
