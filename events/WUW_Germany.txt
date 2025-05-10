@@ -22,7 +22,6 @@ add_namespace = wuw_GER_the_battle_of_britain
 add_namespace = wuw_GER_german_politics
 add_namespace = GER_operation_panzerfaust_events
 add_namespace = GOT_GER_amerikabomber
-add_namespace = GOT_GER_fading_eagle
 
 #### INNER CIRCLE ###
 add_namespace = GER_inner_circle
@@ -18633,119 +18632,5 @@ country_event = {
 		else = { #Debug logs
 			#log = "SOMETHING WENT WRONG WITH BORMANN's FOCUS BRANCH - Cannot complete focus"
 		}
-	}
-}
-
-
-
-
-
-
-
-
-country_event = { #[FROM.GetNameDefCap] Demands Our Subjugation
-	id = GOT_GER_fading_eagle.01
-	title = GOT_GER_fading_eagle.01.t
-	desc = GOT_GER_fading_eagle.01.desc
-	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
-
-	fire_only_once = no
-
-	option = { #sounds good
-		name = GOT_GER_fading_eagle.01.a
-		ai_chance = {
-			base = 100
-		}
-
-		FROM = {
-			country_event = {
-				id = GOT_GER_fading_eagle.02
-				hours = 12
-			}
-		}
-		effect_tooltip = {
-			puppet = {
-			    target = FROM
-			    end_wars = no
-			}
-		}
-
-	}
-	option = { #no way
-		name = GOT_GER_fading_eagle.01.b
-		ai_chance = {
-			base = 0
-		}
-
-		FROM = {
-			country_event = {
-				id = GOT_GER_fading_eagle.03
-				hours = 12
-			}
-		}
-		effect_tooltip = {
-			FROM = {
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = ROOT 
-				}
-
-				remove_from_faction = ROOT
-			}
-		}
-
-	}
-}
-
-country_event = { #[FROM.GetNameDefCap] Accepts our Demands
-	id = GOT_GER_fading_eagle.02
-	title = GOT_GER_fading_eagle.02.t
-	desc = GOT_GER_fading_eagle.02.desc
-	picture = GFX_report_event_generic_handshake
-	is_triggered_only = yes
-
-	fire_only_once = no
-
-	option = { #great!
-		name = GOT_GER_fading_eagle.02.a
-
-		puppet = FROM 
-
-	}
-	
-}
-
-country_event = { #[FROM.GetNameDefCap] Rejects our Demands
-	id = GOT_GER_fading_eagle.03
-	title = GOT_GER_fading_eagle.03.t
-	desc = GOT_GER_fading_eagle.03.desc
-	picture = GFX_report_event_generic_riot
-	is_triggered_only = yes
-
-	fire_only_once = no
-
-	option = { #it was not a question!
-		name = GOT_GER_fading_eagle.03.a
-		ai_chance = {
-			base = 5
-		}
-
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = FROM 
-		}
-
-		remove_from_faction = FROM
-
-	}
-	option = { #was worth asking
-		name = GOT_GER_fading_eagle.03.b
-		ai_chance = {
-			base = 95 # We don't usually want the AI to escalate when they can't afford it
-		}
-
-		add_political_power = 50
-
 	}
 }
