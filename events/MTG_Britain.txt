@@ -27,32 +27,6 @@ country_event = {
 	}
 }
 
-# Abdication Crisis Edward VIII - Marriage happens
-country_event = {
-	id = mtg_britain.5
-	title = mtg_britain.5.t
-	desc = mtg_britain.5.d
-	picture = GFX_report_event_royal_parade
-
-	is_triggered_only = yes
-
-	trigger = { NOT = { has_country_flag = ENG_abdication_crisis_changed_mind } }
-
-	immediate = {
-		hidden_effect = {
-			set_country_flag = edward_viii_married_wallis_simpson
-		}
-	}
-	
-	# Ok
-	option = {
-		name = mtg_britain.5.a
-		add_popularity = { ideology = neutrality popularity = 0.05 }
-		add_stability = 0.05
-		add_political_power = 50
-	}
-}
-
 # Abdication Crisis Edward VIII - random event generator
 country_event = {
 	id = mtg_britain.6
