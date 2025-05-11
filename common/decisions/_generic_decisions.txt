@@ -1902,7 +1902,6 @@ war_measures = {
 		}
 
 		visible = {
-			has_dlc = "Arms Against Tyranny"
 			NOT = {
 				OR = {
 					tag = ENG #has a focus
