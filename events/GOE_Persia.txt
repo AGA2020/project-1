@@ -2237,16 +2237,6 @@ country_event = {
 			custom_effect_tooltip =	generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = PER_reza_shah_pahlavi
-			PER_mohammed_reza_pahlavi = {
-				remove_trait = {
-					trait = compassionate_gentleman
-					slot = political_advisor
-				}
-				add_trait = {
-					trait = PER_disinherited_heir_trait
-					slot = political_advisor
-				} 
-			}
 		}
 		PER = {
 			country_event = {
@@ -2291,17 +2281,6 @@ country_event = {
 			custom_effect_tooltip =	generic_skip_one_line_tt
 			PER_reza_shah_pahlavi = {
 				set_nationality = SAF
-			}
-			PER_mohammed_reza_pahlavi = {
-				set_nationality = SAF
-				remove_trait = {
-					trait = compassionate_gentleman
-					slot = political_advisor
-				}
-				add_trait = {
-					trait = PER_disinherited_heir_trait
-					slot = political_advisor
-				} 
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_autonomy_score = {
@@ -2351,16 +2330,6 @@ country_event = {
 			custom_effect_tooltip =	generic_skip_one_line_tt
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = PER_reza_shah_pahlavi
-			PER_mohammed_reza_pahlavi = {
-				remove_trait = {
-					trait = compassionate_gentleman
-					slot = political_advisor
-				}
-				add_trait = {
-					trait = PER_disinherited_heir_trait
-					slot = political_advisor
-				} 
-			}
 			PER = {
 				country_event = {
 					id = PER_imperial_events.233
@@ -2401,17 +2370,6 @@ country_event = {
 			custom_effect_tooltip =	generic_skip_one_line_tt
 			PER_reza_shah_pahlavi = {
 				set_nationality = SAF
-			}
-			PER_mohammed_reza_pahlavi = {
-				set_nationality = SAF
-				remove_trait = {
-					trait = compassionate_gentleman
-					slot = political_advisor
-				}
-				add_trait = {
-					trait = PER_disinherited_heir_trait
-					slot = political_advisor
-				} 
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_autonomy_score = {
