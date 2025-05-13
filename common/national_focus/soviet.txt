@@ -4593,10 +4593,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_desperate_measures
 		cost = 5
-
-		available = {
-			has_war = yes
-		}
 		
 		search_filters = {}
 
