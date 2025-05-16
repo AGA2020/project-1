@@ -4212,7 +4212,7 @@ country_event = { #Germany integrates us
 	picture = GFX_report_event_german_troops
 
 	is_triggered_only = yes
-
+	
 	option = { #we had a good run
 		name = wuw_GER_diplomacy.81.a
 
@@ -4222,13 +4222,27 @@ country_event = { #Germany integrates us
 				transfer_troops = yes
 			}
 		}
-
-		every_controlled_state = {
-			limit = {
-				is_core_of = ROOT
+		
+		effect_tooltip = {
+			every_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_compliance = 50
+				add_extra_state_shared_building_slots = 1
 			}
-			add_compliance = 50
-			add_extra_state_shared_building_slots = 1
+		}
+		
+		hidden_effect = {
+			FROM = {
+				every_controlled_state = {
+					limit = {
+						is_core_of = ROOT
+					}
+					add_compliance = 50
+					add_extra_state_shared_building_slots = 1
+				}
+			}
 		}
 
 		custom_effect_tooltip = GAME_OVER_TT
