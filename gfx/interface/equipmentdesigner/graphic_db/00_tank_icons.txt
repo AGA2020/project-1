@@ -683,6 +683,12 @@ GER = {
 				GFX_GER_improved_medium_spaa_medium
 			}
 		}
+		pool = {
+			weight = 0.9
+			models = {
+				GER_medium_armor_entity #Panzer IV (Improved Medium Tank) // Basic fallback model 
+			}
+		}
 	}
 	medium_tank_aa_chassis_0 = {
 		pool = {
@@ -1019,6 +1025,20 @@ GER = {
 		}
 	}
 
+	heavy_tank_artillery_chassis = {
+		pool = {
+			weight = 0.9
+			icons = { 
+				GFX_GER_basic_heavy_tank_medium #Grosstraktor (Basic Heavy Tank)
+				GFX_GER_improved_heavy_tank_medium #Panzer VI (Improved Heavy Tank)
+				GFX_GER_advanced_heavy_tank_medium # Panzer Tiger Ausf. B (Advanced Heavy Tank)
+			}
+			models = {
+				GER_heavy_armor_entity #Panzer VI (Improved Heavy Tank) // backup
+			}
+		}
+	}
+
 	super_heavy_tank_chassis = {
 		pool = {
 			weight = 1.2 #Maus should show up first - Then Panzer VII Löwe - Then generic (which is another Maus icon)
@@ -1234,6 +1254,20 @@ SOV = {
 		pool = {
 			icons = { 
 				GFX_SOV_light_AA_C # Advanced Light AA Tank
+			}
+		}
+	}
+
+	light_tank_destroyer_chassis = {
+		pool = {
+			weight = 0.9 
+			icons = { 
+				GFX_SOV_basic_light_tank_medium #T-26 (Basic Light Tank)
+				GFX_SOV_improved_light_tank_medium #BT-7 (Improved Light Tank)
+				GFX_SOV_advanced_light_tank_medium #T-60 Scout (Advanced Light Tank)
+			}
+			models = {
+				SOV_light_armor_entity #BT-7 (Improved Light Tank) // Basic Backup model 
 			}
 		}
 	}
@@ -1598,7 +1632,17 @@ SOV = {
 				GFX_SOV_main_battle_tank_medium #T-54 (Modern Tank)
 			}
 			models = {
+				SOV_medium_armor_entity #T-34 (Improved Medium Tank) // Basic Fallback Option 
 				SOV_modern_armor_entity #T-54 (Modern Tank)
+			}
+		}
+	}
+	modern_tank_artillery_chassis = {
+		pool = {
+			weight = 0.9 
+			models = {
+				SOV_medium_armor_entity #T-34 (Improved Medium Tank) // Basic Fallback Option 
+				SOV_modern_armor_entity #T-54 (Modern Tank) // Basic Fallback Option 
 			}
 		}
 	}
@@ -1721,6 +1765,15 @@ USA = {
 				GFX_USA_light_CAB
 				GFX_USA_light_CAA_camo
 				GFX_USA_light_CAA
+			}
+		}
+	}
+
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				USA_light_armor_entity #M3 Stuart (Improved light tank) // Basic Fallback Option 
 			}
 		}
 	}
@@ -1882,6 +1935,15 @@ USA = {
 		}
 	}
 
+	medium_tank_aa_chassis = {
+		pool = {
+			weight = 0.9 
+			models = {
+				USA_medium_armor_entity #M4 Sherman (Improved Medium Tank) // basic Fallback Option 
+			}
+		}
+	}
+
 	medium_tank_aa_chassis_0 = {
 		pool = {
 			weight = 0.5
@@ -1915,6 +1977,14 @@ USA = {
 		}
 	}
 
+	medium_tank_destroyer_chassis = {
+		pool = {
+			weight = 0.9 
+			models = {
+				USA_medium_armor_entity #M4 Sherman (Improved Medium Tank) // basic Fallback Option 
+			}
+		}
+	}
 
 	heavy_tank_chassis = {
 		pool = {
@@ -2193,6 +2263,24 @@ ENG = {
 				GFX_ENG_light_AAC
 				GFX_ENG_light_AAB_camo
 				GFX_ENG_light_AAB
+			}
+		}
+	}
+
+	light_tank_artillery_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				commonwealth_gfx_light_armor_entity #Vickers Medium MK II (Basic Light Tank) (Should actually be Vickers Mark V - The model is actually a Vickers MK V or VI) // Basic Fallback Option 
+			}
+		}
+	}
+
+	light_tank_aa_chassis = {
+		pool = {
+			weight = 0.9
+			models = {
+				commonwealth_gfx_light_armor_entity #Vickers Medium MK II (Basic Light Tank) (Should actually be Vickers Mark V - The model is actually a Vickers MK V or VI) // Basic Fallback Option 
 			}
 		}
 	}
@@ -2948,8 +3036,27 @@ FRA = {
 
 	super_heavy_tank_chassis = {
 		pool = {
+			weight = 0.75
 			icons = { 
 				GFX_FRA_super_heavy_tank_medium #FCM-F1 (SH Tank)
+			}
+			models = {
+				FRA_heavy_armor_entity # Fallback 
+			}
+		}
+	}
+
+	amphibious_tank_chassis = { 
+		pool = {
+			limit = { has_dlc = "Man the Guns"}
+			weight = 0.75
+			icons = {
+				GFX_FRA_advanced_light_tank_medium #AMX 12t
+				GFX_FRA_basic_light_tank_medium #Hotchkiss H35
+				GFX_FRA_improved_light_tank_medium #FCM 36
+			}
+			models = {
+				FRA_medium_armor_entity #Renault AMC 35 (Basic Medium Tank) // fallback option 
 			}
 		}
 	}
@@ -2959,11 +3066,32 @@ FRA = {
 			icons = { 
 				GFX_FRA_main_battle_tank_medium #AMX 50t (Modern Tank)
 			}
+			models = {
+				FRA_medium_armor_entity #Renault AMC 35 (Basic Medium Tank) // fallback option 
+			}
+		}
+	}
+	modern_tank_destroyer_chassis = {
+		pool = {
+			icons = { 
+				GFX_FRA_main_battle_tank_medium #AMX 50t (Modern Tank)
+			}
+			models = {
+				FRA_medium_armor_entity #Renault AMC 35 (Basic Medium Tank) // fallback option 
+			}
 		}
 	}
 }
 
 JAP = {
+	light_tank_chassis = {
+		pool = {
+
+			models = {
+				"JAP_light_armor_entity" # // Basic Fallback
+			}
+		}
+	}
 	light_tank_chassis_1 = {
 		pool = {
 			icons = { 
@@ -3055,6 +3183,32 @@ JAP = {
 			}
 			models = {
 				"JAP_light_armor_entity"
+			}
+		}
+	}
+	medium_tank_chassis = {
+		pool = {
+			icons = { 
+				GFX_JAP_basic_medium_tank_medium
+				GFX_JAP_medium_AAB
+				GFX_JAP_medium_AAB_camo
+				GFX_JAP_medium_AAC
+				GFX_JAP_medium_AAC_camo
+				GFX_JAP_medium_ABA
+				GFX_JAP_medium_ABA_camo
+				GFX_JAP_medium_ABB
+				GFX_JAP_medium_ABB_camo
+				GFX_JAP_medium_ABC
+				GFX_JAP_medium_ABC_camo
+				GFX_JAP_medium_ACA
+				GFX_JAP_medium_ACA_camo
+				GFX_JAP_medium_ACB
+				GFX_JAP_medium_ACB_camo
+				GFX_JAP_medium_ACC
+				GFX_JAP_medium_ACC_camo
+			}
+			models = {
+				"JAP_medium_armor_entity"
 			}
 		}
 	}
@@ -3731,6 +3885,20 @@ ITA = {
 			}
 		}
 	}
+	amphibious_tank_chassis = {
+		pool = {
+			limit = { has_dlc = "Man the Guns"}
+			weight = 0.75
+			icons = { 
+				GFX_ITA_basic_light_tank_medium
+				GFX_ITA_improved_light_tank_medium
+				GFX_ITA_advanced_light_tank_medium
+			}
+			models = {
+				ITA_light_armor_entity #L3/35 (Basic Light Tank) // Fallback Options 
+			}
+		}
+	}
 }
 
 ###TFV minors
@@ -4079,6 +4247,34 @@ AST = {
 				GFX_AST_basic_medium_tank_medium
 				GFX_AST_improved_medium_tank_medium
 				GFX_AST_advanced_medium_tank_medium
+			}
+		}
+	}
+
+	medium_tank_destroyer_chassis = {
+		pool = {
+			weight = 0.9
+			icons = { 
+				GFX_ENG_basic_medium_tank_medium
+				GFX_ENG_improved_medium_tank_medium
+				GFX_ENG_advanced_medium_tank_medium
+			}
+			models = {
+				commonwealth_gfx_medium_armor_entity #Crusader (Basic Medium Tank) // Basic Fallback Option 
+			}
+		}
+	}
+
+	medium_tank_aa_chassis = {
+		pool = {
+			weight = 0.9
+			icons = { 
+				GFX_ENG_basic_medium_tank_medium
+				GFX_ENG_improved_medium_tank_medium
+				GFX_ENG_advanced_medium_tank_medium
+			}
+			models = {
+				commonwealth_gfx_medium_armor_entity #Crusader (Basic Medium Tank) // Basic Fallback Option 
 			}
 		}
 	}
@@ -6853,6 +7049,12 @@ POL = {
 				GFX_POL_advanced_heavy_tank_medium
 			}
 		}
+		pool = {
+			weight = 0.9 
+			models = {
+				heavy_armor_entity
+			}
+		}
 	}
 
 	heavy_tank_chassis_1 = {
@@ -7098,6 +7300,12 @@ CZE = {
 				GFX_CZE_basic_medium_tank_medium
 				GFX_CZE_improved_medium_tank_medium
 				GFX_CZE_advanced_medium_tank_medium
+			}
+		}
+		pool = {
+			weight = 0.9
+			models = {
+				medium_armor_entity # // Basic Fallback Option 
 			}
 		}
 	}
@@ -7647,6 +7855,9 @@ HOL = {
 				GFX_HOL_basic_medium_tank_medium
 				GFX_HOL_improved_medium_tank_medium
 				GFX_HOL_advanced_medium_tank_medium
+			}
+			models = {
+				medium_armor_entity
 			}
 		}
 	}
@@ -9828,6 +10039,22 @@ BEL = {
 			}
 			icons = { 
 				GFX_BEL_advanced_light_tank_medium
+			}
+		}
+	}
+
+	light_tank_destroyer_chassis = {
+		pool = {
+			limit = {
+				has_dlc = "Gotterdammerung"
+			}
+			icons = { 
+				GFX_BEL_basic_light_tank_medium
+				GFX_BEL_improved_light_tank_medium
+				GFX_BEL_advanced_light_tank_medium
+			}
+			models = {
+				BEL_light_armor_0_entity #Vickers T15
 			}
 		}
 	}
