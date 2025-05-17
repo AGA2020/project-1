@@ -909,7 +909,6 @@ GER_operational_planning_category = {
 				add_timed_idea = {
 					idea = bulge
 					days = 80
-					}
 				}
 			}
 		}

@@ -62,7 +62,7 @@ X_GER_propaganda_campaigns = {
 			has_convoys_war_support < 0
 		}
 		days_remove = 180
-		cost = X_GER_propaganda_19_cost
+		cost = X_GER_propaganda_4_cost
 		modifier = {
 			weekly_convoys_war_support = 0.006
 		}
