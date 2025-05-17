@@ -84,7 +84,6 @@ IF = {
 	}
 }
 
-
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -92,14 +91,9 @@ set_technology = {
 	tech_recon = 1
 	tech_trucks = 1
 	gw_artillery = 1
-
+	gwtank_chassis = 1
 	fuel_silos = 1
 	basic_train = 1
-}
-
-
-set_technology = {
-	gwtank_chassis = 1
 }
 
 create_equipment_variant = {
