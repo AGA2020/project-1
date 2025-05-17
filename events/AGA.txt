@@ -1,5 +1,34 @@
 ﻿add_namespace = aga
 
+news_event = { #bulge
+	id = aga.29
+	title = aga.29.t
+	desc = aga.29.d
+	picture = GFX_news_event_ardennes_offensive
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = aga.29.a
+		trigger = {
+			NOT = { is_in_faction_with = GER }
+			NOT = { is_in_faction_with = USA }		
+			}
+		}
+	option = {
+		name = aga.29.b
+		trigger = {
+			is_in_faction_with = USA
+			}
+		}
+	option = {
+		name = aga.29.c
+		trigger = {
+			is_in_faction_with = GER
+			}		
+		}		
+}
+
 country_event = {
 	id = aga.28
 	title = aga.25.t
