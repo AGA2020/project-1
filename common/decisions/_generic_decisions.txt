@@ -193,7 +193,6 @@ economy_decisions = {
 					is_controlled_by = ROOT
 				}
 			}
-			NOT = { is_in_faction_with = FRA }
 		}
 
 		modifier = {
@@ -359,7 +358,6 @@ propaganda_efforts = {
 		}
 
 		visible = {
-			not = { tag = GER }
 			has_war_with_non_exiled_country = yes
 		}
 
@@ -401,7 +399,6 @@ propaganda_efforts = {
 		}
 
 		visible = {
-			not = { tag = GER }
 			has_war_with_non_exiled_country = yes
 		}
 
@@ -471,7 +468,6 @@ propaganda_efforts = {
 		}
 
 		visible = {
-			not = { tag = GER }
 			has_war_with_non_exiled_country = yes
 		}
 
@@ -526,7 +522,6 @@ propaganda_efforts = {
 		}
 
 		visible = {
-			not = { tag = GER }
 			has_war_with_non_exiled_country = yes
 		}
 

@@ -19,6 +19,9 @@ X_GER_propaganda_campaigns = {
 		modifier = {
 			war_support_weekly = 0.005
 		}
+		visible = {
+			always = no
+		}
 		complete_effect = {
 			set_country_flag = X_GER_debug_fast_propaganda_campaigns_flag
 			set_variable = { X_GER_new_propaganda_campaign = 3 }
@@ -42,6 +45,9 @@ X_GER_propaganda_campaigns = {
 		modifier = {
 			weekly_casualties_war_support = 0.006
 		}
+		visible = {
+			always = no
+		}
 		complete_effect = {
 			set_variable = { X_GER_new_propaganda_campaign = 4 }
 			X_GER_pick_propaganda_campaign_slot_effect = yes
@@ -60,6 +66,9 @@ X_GER_propaganda_campaigns = {
 		available = {
 			X_GER_propaganda_poster_slot_available = yes
 			has_convoys_war_support < 0
+		}
+		visible = {
+			always = no
 		}
 		days_remove = 180
 		cost = X_GER_propaganda_4_cost
@@ -85,6 +94,9 @@ X_GER_propaganda_campaigns = {
 		available = {
 			X_GER_propaganda_poster_slot_available = yes
 			has_bombing_war_support < 0
+		}
+		visible = {
+			always = no
 		}
 		days_remove = 180
 		cost = X_GER_propaganda_11_cost

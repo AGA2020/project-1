@@ -6,4 +6,7 @@ X_GER_propaganda_campaigns = {
 	allowed = {
 		original_tag = GER
 	}
+	visible = {
+		always = no
+	}
 }
