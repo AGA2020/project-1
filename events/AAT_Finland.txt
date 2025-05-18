@@ -4888,11 +4888,6 @@ country_event = {
 
 	trigger = {
 		tag = FIN
-		FIN = {
-			NOT = {
-				has_government = communism
-			}
-		}
 
 		has_defensive_war = yes
 		has_civil_war = no
@@ -4924,18 +4919,6 @@ country_event = {
 		add_political_power = 10
 
 		hidden_effect = {
-
-			#random_country = {
-			#	limit = {
-			#		has_war_with = ROOT
-			#		has_variable = FIN_white_death_target_country
-			#	}
-			#	country_event = {
-			#		id = AAT_finland_the_white_death.2
-			#		days = 3
-			#		random_days = 5
-			#	}	
-			#}
 
 			set_global_flag = FIN_snipers_active
 
@@ -4970,18 +4953,6 @@ country_event = {
 
 		hidden_effect = {
 
-			#random_country = {
-			#	limit = {
-			#		has_war_with = ROOT
-			#		has_variable = FIN_white_death_target_country
-			#	}
-			#	country_event = {
-			#		id = AAT_finland_the_white_death.2
-			#		days = 3
-			#		random_days = 5
-			#	}	
-			#}
-
 			set_global_flag = FIN_snipers_active_with_extra_arms
 
 			news_event = { id = aat_news.105 days = 12 }
@@ -5002,12 +4973,6 @@ country_event = {
 	trigger = {
 
 		has_variable = FIN_white_death_target_country
-
-		FIN = {
-			NOT = {
-				has_government = communism
-			}
-		}
 
 		has_offensive_war_with = FIN
 		
@@ -5086,14 +5051,6 @@ country_event = {
 					set_global_flag = FIN_simo_hayha_appears_and_is_wounded_flag
 				}
 			}
-
-			#FROM = {
-			#	country_event = {
-			#		id = AAT_finland_the_white_death.3
-			#		days = 5
-			#		random_days = 9
-			#	}	
-			#}
 			
 		}
 
@@ -5185,91 +5142,10 @@ country_event = {
 				}
 			}
 
-			#FROM = {
-			#	country_event = {
-			#		id = AAT_finland_the_white_death.3
-			#		days = 5
-			#		random_days = 9
-			#	}	
-			#}
-
 		}
 		
 	}
 }
-
-# Outcome for the Actual Simo Häyhä chain - Event for FIN
-#country_event = {
-#	id = AAT_finland_the_white_death.3
-#	title = AAT_finland_the_white_death.3.t 
-#	desc = AAT_finland_the_white_death.3.desc
-#	picture = GFX_report_event_FIN_camouflaged_white_death
-#	
-#	is_triggered_only = yes
-#
-#	fire_only_once = yes
-#
-#	# This decides which outcome will happen with Simo Häyhä 
-#	hidden = yes
-#
-#	immediate = {
-#		IF = {
-#			limit = {
-#				has_global_flag = FIN_simo_hayha_appears_flag
-#				FIN = {
-#					has_war = yes
-#				}
-#			}
-#			ROOT = {
-#				country_event = {
-#					id = AAT_finland_the_white_death.4
-#					hours = 12
-#					random_hours = 24
-#				}	
-#			}
-#			clr_global_flag = FIN_simo_hayha_appears_flag
-#		}
-#		ELSE_IF = {
-#			limit = {
-#				has_global_flag = FIN_simo_hayha_appears_and_is_wounded_flag
-#				FIN = {
-#					has_war = yes
-#				}
-#			}
-#			ROOT = {
-#				country_event = {
-#					id = AAT_finland_the_white_death.5
-#					hours = 12
-#					random_hours = 24
-#				}	
-#			}
-#			clr_global_flag = FIN_simo_hayha_appears_and_is_wounded_flag
-#		}
-#		ELSE_IF = {
-#			limit = {
-#				has_global_flag = FIN_simo_hayha_appears_and_is_killed_flag
-#				FIN = {
-#					has_war = yes
-#				}
-#			}
-#			ROOT = {
-#				country_event = {
-#					id = AAT_finland_the_white_death.6
-#					hours = 12
-#					random_hours = 24
-#				}	
-#			}
-#			clr_global_flag = FIN_simo_hayha_appears_and_is_killed_flag
-#		}
-#	}
-#	
-#	option = {
-#		name = AAT_finland_the_white_death.3.a
-#		ai_chance = {
-#			base = 100
-#		}
-#	}
-#}
 
 # Simo Häyhä acredited as the White Death (and will not get wounded later) - Event for FIN
 country_event = {
@@ -5283,11 +5159,6 @@ country_event = {
 	trigger = {
 
 		tag = FIN
-		FIN = {
-			NOT = {
-				has_government = communism
-			}
-		}
 
 		has_defensive_war = yes
 		has_civil_war = no
@@ -5323,29 +5194,6 @@ country_event = {
 		hidden_effect = {
 			set_global_flag = FIN_simo_hayha_has_appeared_flag
 		}
-		
-
-		#hidden_effect = {
-		#	IF = {
-		#		limit = {
-		#			FIN = {
-		#				has_war = yes
-		#			}
-		#		}
-		#		random_country = {
-		#			limit = {
-		#				has_war_with = ROOT
-		#				has_variable = FIN_white_death_target_country
-		#			}
-		#			# The White Death Embraces us
-		#			country_event = {
-		#				id = AAT_finland_the_white_death.7
-		#				days = 8
-		#				random_days = 22
-		#			}
-		#		}
-		#	}
-		#}
 
 	}
 
@@ -5367,29 +5215,6 @@ country_event = {
 			set_global_flag = FIN_simo_hayha_has_appeared_flag
 		}
 		
-
-		#hidden_effect = {
-		#	IF = {
-		#		limit = {
-		#			FIN = {
-		#				has_war = yes
-		#			}
-		#		}
-		#		random_country = {
-		#			limit = {
-		#				has_war_with = ROOT
-		#				has_variable = FIN_white_death_target_country
-		#			}
-		#			# The White Death Embraces us
-		#			country_event = {
-		#				id = AAT_finland_the_white_death.7
-		#				days = 8
-		#				random_days = 22
-		#			}
-		#		}
-		#	}
-		#}
-		
 	}
 }
 
@@ -5405,11 +5230,6 @@ country_event = {
 	trigger = {
 
 		tag = FIN
-		FIN = {
-			NOT = {
-				has_government = communism
-			}
-		}
 
 		has_defensive_war = yes
 		has_civil_war = no
@@ -5445,29 +5265,6 @@ country_event = {
 		hidden_effect = {
 			set_global_flag = FIN_simo_hayha_will_be_wounded_flag
 		}
-		
-		
-		#hidden_effect = {
-		#	IF = {
-		#		limit = {
-		#			FIN = {
-		#				has_war = yes
-		#			}
-		#		}
-		#		random_country = {
-		#			limit = {
-		#				has_war_with = ROOT
-		#				has_variable = FIN_white_death_target_country
-		#			}
-		#			# Our Soldiers successfully hunt The White Death
-		#			country_event = {
-		#				id = AAT_finland_the_white_death.8
-		#				days = 8
-		#				random_days = 22
-		#			}
-		#		}
-		#	}
-		#}
 
 	}
 
@@ -5489,29 +5286,6 @@ country_event = {
 			set_global_flag = FIN_simo_hayha_will_be_wounded_flag
 		}
 		
-
-		#hidden_effect = {
-		#	IF = {
-		#		limit = {
-		#			FIN = {
-		#				has_war = yes
-		#			}
-		#		}
-		#		random_country = {
-		#			limit = {
-		#				has_war_with = ROOT
-		#				has_variable = FIN_white_death_target_country
-		#			}
-		#			# Our Soldiers successfully hunt The White Death
-		#			country_event = {
-		#				id = AAT_finland_the_white_death.8
-		#				days = 8
-		#				random_days = 22
-		#			}
-		#		}
-		#	}
-		#}
-		
 	}
 }
 
@@ -5527,11 +5301,6 @@ country_event = {
 	trigger = {
 
 		tag = FIN
-		FIN = {
-			NOT = {
-				has_government = communism
-			}
-		}
 
 		has_defensive_war = yes
 		has_civil_war = no
@@ -5567,29 +5336,6 @@ country_event = {
 		hidden_effect = {
 			set_global_flag = FIN_simo_hayha_will_be_killed_flag
 		}
-		
-		
-		#hidden_effect = {
-		#	IF = {
-		#		limit = {
-		#			FIN = {
-		#				has_war = yes
-		#			}
-		#		}
-		#		random_country = {
-		#			limit = {
-		#				has_war_with = ROOT
-		#				has_variable = FIN_white_death_target_country
-		#			}
-		#			# The White Death is dead!
-		#			country_event = {
-		#				id = AAT_finland_the_white_death.9
-		#				days = 8
-		#				random_days = 22
-		#			}
-		#		}
-		#	}
-		#}
 
 	}
 
@@ -5611,29 +5357,6 @@ country_event = {
 			set_global_flag = FIN_simo_hayha_will_be_killed_flag
 		}
 		
-
-		#hidden_effect = {
-		#	IF = {
-		#		limit = {
-		#			FIN = {
-		#			 	has_war = yes
-		#			}
-		#		}
-		#		random_country = {
-		#			limit = {
-		#				has_war_with = ROOT
-		#				has_variable = FIN_white_death_target_country
-		#			}
-		#			# The White Death is dead!
-		#			country_event = {
-		#				id = AAT_finland_the_white_death.9
-		#				days = 8
-		#				random_days = 22
-		#			}
-		#		}
-		#	}
-		#}
-		
 	}
 }
 
@@ -5649,12 +5372,6 @@ country_event = {
 	trigger = {
 
 		has_variable = FIN_white_death_target_country
-
-		FIN = {
-			NOT = {
-				has_government = communism
-			}
-		}
 
 		has_offensive_war_with = FIN
 		
@@ -5723,24 +5440,6 @@ country_event = {
 			set_global_flag = FIN_simo_hayha_is_safe_flag
 		}
 
-		#hidden_effect = {
-		#	IF = {
-		#		limit = {
-		#			FIN = {
-		#				has_war = yes
-		#			}
-		#		}
-		#		FROM = {
-		#			# The White Death continues to stalk his prey
-		#			country_event = {
-		#				id = AAT_finland_the_white_death.10
-		#				days = 10
-		#				random_days = 15
-		#			}	
-		#		}
-		#	}
-		#}
-
 	}
 }
 
@@ -5756,12 +5455,6 @@ country_event = {
 	trigger = {
 
 		has_variable = FIN_white_death_target_country
-
-		FIN = {
-			NOT = {
-				has_government = communism
-			}
-		}
 
 		has_offensive_war_with = FIN
 		
@@ -5830,24 +5523,6 @@ country_event = {
 			set_global_flag = FIN_simo_hayha_has_been_inured_flag
 		}
 
-		#hidden_effect = {
-		#	IF = {
-		#		limit = {
-		#			FIN = {
-		#				has_war = yes
-		#			}
-		#		}
-		#		FROM = {
-		#			# Simo Häyhä is injured and brought off of the battlefield
-		#			country_event = {
-		#				id = AAT_finland_the_white_death.11
-		#				days = 10
-		#				random_days = 15
-		#			}	
-		#		}
-		#	}
-		#}
-
 	}
 }
 
@@ -5863,12 +5538,6 @@ country_event = {
 	trigger = {
 
 		has_variable = FIN_white_death_target_country
-
-		FIN = {
-			NOT = {
-				has_government = communism
-			}
-		}
 
 		has_offensive_war_with = FIN
 		
@@ -5937,24 +5606,6 @@ country_event = {
 			set_global_flag = FIN_simo_hayha_is_dead_flag
 		}
 
-		#hidden_effect = {
-		#	IF = {
-		#		limit = {
-		#			FIN = {
-		#				has_war = yes
-		#			}
-		#		}
-		#		FROM = {
-		#			# Simo Häyhä has been killed!
-		#			country_event = {
-		#				id = AAT_finland_the_white_death.12
-		#				days = 10
-		#				random_days = 15
-		#			}	
-		#		}
-		#	}
-		#}
-
 	}
 }
 
@@ -5968,11 +5619,6 @@ country_event = {
 	trigger = {
 
 		tag = FIN
-		FIN = {
-			NOT = {
-				has_government = communism
-			}
-		}
 
 		has_defensive_war = yes
 		has_civil_war = no
@@ -6027,11 +5673,6 @@ country_event = {
 	trigger = {
 
 		tag = FIN
-		FIN = {
-			NOT = {
-				has_government = communism
-			}
-		}
 
 		has_defensive_war = yes
 		has_civil_war = no
@@ -6075,11 +5716,6 @@ country_event = {
 	trigger = {
 
 		tag = FIN
-		FIN = {
-			NOT = {
-				has_government = communism
-			}
-		}
 
 		has_defensive_war = yes
 		has_civil_war = no
