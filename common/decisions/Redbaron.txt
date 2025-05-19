@@ -163,7 +163,6 @@ Technologies = {
             }
         }
     }
-    
     hosttool_gun2 = {
         # icon = generic_operation
         allowed = {
@@ -173,7 +172,6 @@ Technologies = {
         ai_will_do = {
             factor = 0
         }
-        
         available = {
             AND = {
                 date > 1938.02.1
@@ -185,12 +183,13 @@ Technologies = {
                 limit = {
                     tag = RAJ
                 }
-            create_equipment_variant = {
-                name = "Infantry Equipment 2"
-                type = infantry_equipment_2
-                allow_without_tech = yes
-                parent_version = 0
-                design_team = mio:RAJ_ammunition_factory_khadki_organization
+                create_equipment_variant = {
+                    name = "Infantry Equipment 2"
+                    type = infantry_equipment_2
+                    allow_without_tech = yes
+                    parent_version = 0
+                    design_team = mio:RAJ_ammunition_factory_khadki_organization
+                }
             }
             else = {
                 create_equipment_variant = {
@@ -288,10 +287,9 @@ Technologies = {
         ai_will_do = {
             factor = 0
         }
-        
         available = {
                 date > 1938.08.1
-            }
+        }
         complete_effect = {
             create_equipment_variant = {
                 name = "Anti Tank Equipment 2"
