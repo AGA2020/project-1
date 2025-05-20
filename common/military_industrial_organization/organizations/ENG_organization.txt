@@ -119,6 +119,7 @@ ENG_vauxhall_organization = {
 			tag = BRA
 			tag = BUL
 			tag = MEX
+			tag = USA
 		}
 	}
 
