@@ -5079,16 +5079,7 @@ focus = {
     cost = 10
 
     available = {
-        threat > 0.5
-        OR = {
-            is_subject = no
-            is_subject_of = ENG
-        }
-        NOT = {
-            is_in_faction_with = PER
-            has_guaranteed = PER
-            has_non_aggression_pact_with = PER
-        }
+        always = no
     }
 
     search_filters = {  }
