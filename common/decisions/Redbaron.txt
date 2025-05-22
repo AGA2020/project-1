@@ -81,15 +81,17 @@ Technologies = {
 	            date > 1937.08.01
 	        }
 	    complete_effect = {
-            create_equipment_variant = {
-                name = "Cheap Mechanized"
-                type = mechanized_equipment_1
-                upgrades = {
-                    mech_cost_upgrade = 5
-                }
-                allow_without_tech = yes
-                parent_version = 0
-            }
+	        SWE = {
+	            create_production_license = {
+	                target = ROOT
+	                equipment = {
+	                    type = mechanized_equipment_1
+	                    version = 1
+	                     
+	                }
+	                cost_factor = 0
+	            }
+	        }
 	    }
 	}
     auto_amtrak = {
@@ -105,63 +107,78 @@ Technologies = {
            date > 1939.12.31
         }
         complete_effect = {
-            create_equipment_variant = {
-                name = "Amphibious Mechanized"
-                type = amphibious_mechanized_equipment_1
-                allow_without_tech = yes
-                parent_version = 0
+            SWE = {
+                create_production_license = {
+                    target = ROOT
+                        equipment = {
+                            type = amphibious_mechanized_equipment_1
+                            version = 0
+                             
+                        }
+                    cost_factor = 0
+                }
             }
         }
     }
    hosttool_aa2 = {
-        # icon = generic_operation
-        allowed = {
-        }
-        fire_only_once = no
-        cost = 0
-        ai_will_do = {
-            factor = 0
-        }
-        
-        available = {
-            AND = {
-                date > 1938.08.01
-                
+            # icon = generic_operation
+            allowed = {
             }
-        }
-        complete_effect = {
-            create_equipment_variant = {
-                name = "Anti Air Equipment 2"
-                type = anti_air_equipment_2
-                allow_without_tech = yes
-                parent_version = 0
+            fire_only_once = no
+            cost = 0
+            ai_will_do = {
+                factor = 0
             }
-        }
+            
+            available = {
+                AND = {
+                    date > 1938.08.01
+                    
+                }
+            }
+            complete_effect = {
+                SWE = {
+                    create_production_license = {
+                        target = ROOT
+                        equipment = {
+                            type = anti_air_equipment_2
+                            version = 0
+                             
+                        }
+                        cost_factor = 0
+                    }
+                }
+            }
     }
     hosttool_aa3 = {
-        # icon = generic_operation
-        allowed = {
-        }
-        fire_only_once = no
-        cost = 0
-        ai_will_do = {
-            factor = 0
-        }
-        
-        available = {
-            AND = {
-                date > 1940.08.01
-                
+            # icon = generic_operation
+            allowed = {
             }
-        }
-        complete_effect = {
-            create_equipment_variant = {
-                name = "Anti Air Equipment 3"
-                type = anti_air_equipment_3
-                allow_without_tech = yes
-                parent_version = 0
+            fire_only_once = no
+            cost = 0
+            ai_will_do = {
+                factor = 0
             }
-        }
+            
+            available = {
+                AND = {
+                    date > 1940.08.01
+                    
+                }
+            }
+            complete_effect = {
+                SWE = {
+                    create_production_license = {
+                        target = ROOT
+                        equipment = {
+                            type = anti_air_equipment_3
+                            version = 0
+                             
+                        }
+                        cost_factor = 0
+                    }
+                }
+            }
     }
     
     hosttool_gun2 = {
@@ -181,25 +198,17 @@ Technologies = {
             }
         }
         complete_effect = {
-            if = {
-                limit = {
-                    tag = RAJ
+            SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = infantry_equipment_2
+                        version = 0
+                         
+                    }
+                    cost_factor = 0
                 }
-            create_equipment_variant = {
-                name = "Infantry Equipment 2"
-                type = infantry_equipment_2
-                allow_without_tech = yes
-                parent_version = 0
-                design_team = mio:RAJ_ammunition_factory_khadki_organization
             }
-            else = {
-                create_equipment_variant = {
-                    name = "Infantry Equipment 2"
-                    type = infantry_equipment_2
-                    allow_without_tech = yes
-                    parent_version = 0
-                }
-            }          
         }
     }         
     auto_gun3_allies = {
@@ -232,11 +241,16 @@ Technologies = {
                 date > 1939.12.01
             }
         complete_effect = {
-            create_equipment_variant = {
-                name = "Infantry Equipment 3"
-                type = infantry_equipment_3
-                allow_without_tech = yes
-                parent_version = 0
+            SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = infantry_equipment_3
+                        version = 0
+                         
+                    }
+                    cost_factor = 0
+                }
             }
         }
     }
@@ -271,11 +285,15 @@ Technologies = {
                 date > 1939.12.01
         }
         complete_effect = {
-            create_equipment_variant = {
-                name = "Infantry Equipment 3"
-                type = infantry_equipment_3
-                allow_without_tech = yes
-                parent_version = 0
+            SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = infantry_equipment_3
+                        version = 0
+                    }
+                    cost_factor = 0
+                }
             }
         }
     }
@@ -293,11 +311,16 @@ Technologies = {
                 date > 1938.08.1
             }
         complete_effect = {
-            create_equipment_variant = {
-                name = "Anti Tank Equipment 2"
-                type = anti_tank_equipment_2
-                allow_without_tech = yes
-                parent_version = 0
+            SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = anti_tank_equipment_2
+                        version = 0
+                         
+                    }
+                    cost_factor = 0
+                }
             }
         }
     }
@@ -315,11 +338,15 @@ Technologies = {
                 date > 1940.08.01
             }
         complete_effect = {
-            create_equipment_variant = {
-                name = "Anti Tank Equipment 3"
-                type = anti_tank_equipment_3
-                allow_without_tech = yes
-                parent_version = 0
+            SWE = {
+                create_production_license = {
+                    target = ROOT
+                    equipment = {
+                        type = anti_tank_equipment_3
+                        version = 0
+                    }
+                    cost_factor = 0
+                }
             }
         }
     }
@@ -336,11 +363,15 @@ Technologies = {
            date > 1938.03.30
         }
         complete_effect = {
-            create_equipment_variant = {
-                name = "Artillery Equipment 2"
-                type = artillery_equipment_2
-                allow_without_tech = yes
-                parent_version = 0
+            SWE = {
+                create_production_license = {
+                    target = ROOT
+                        equipment = {
+                            type = artillery_equipment_2
+                            version = 0
+                        }
+                    cost_factor = 0
+                }
             }
         }
     }
@@ -357,11 +388,15 @@ Technologies = {
            date > 1940.06.1
         }
         complete_effect = {
-            create_equipment_variant = {
-                name = "Artillery Equipment 3"
-                type = artillery_equipment_3
-                allow_without_tech = yes
-                parent_version = 0
+            SWE = {
+                create_production_license = {
+                    target = ROOT
+                        equipment = {
+                            type = artillery_equipment_3
+                            version = 0
+                        }
+                    cost_factor = 0
+                }
             }
         }
     }
