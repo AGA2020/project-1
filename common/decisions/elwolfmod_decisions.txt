@@ -329,7 +329,11 @@ operations = {
 	annex_south_africa = {
 		# icon = generic_operation
 		allowed = {
-			tag = ENG
+			OR = {
+				tag = ENG
+				tag = RAJ
+				tag = AST
+			}
 		}
 		fire_only_once = yes
 		cost = 0
@@ -347,7 +351,7 @@ operations = {
 		complete_effect = {
 			SAF = {
 				transfer_units_fraction = {
-					target = ENG
+					target = ROOT
 					size = 1
 					stockpile_ratio = 1
 					army_ratio = 1
@@ -358,7 +362,7 @@ operations = {
 					}
 				}
 			}
-			ENG = {
+			ROOT = {
 				annex_country = {
 					target = SAF
 					transfer_troops = yes
@@ -367,9 +371,9 @@ operations = {
 			every_state = {
 				limit = {
 					is_core_of = SAF
-					is_controlled_by = ENG
+					is_controlled_by = ROOT
 				}
-				add_core_of = ENG
+				add_core_of = ROOT
 			}
 		}
 
