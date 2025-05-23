@@ -238,5 +238,29 @@ focus_tree = {
 
 		}
 	}
+
+	focus = {
+		id = naval_effort_phi
+		name = naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 9
+		y = 0
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			327 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
 }
 
