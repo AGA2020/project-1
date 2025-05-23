@@ -3023,15 +3023,13 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		446 = { is_fully_controlled_by = GER }
+		446 = { is_controlled_by = GER }
 		446 = { is_owned_by = ENG }
-		GER = { has_war_with = ENG }
 		NOT = { has_global_flag = fall_of_cairo }
 	}
 	
 	immediate = {
 		set_global_flag = fall_of_cairo
-		sound_effect = "faso"
 	}
 	
 	mean_time_to_happen = {
@@ -3196,15 +3194,13 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		446 = { is_fully_controlled_by = ITA }
+		446 = { is_controlled_by = ITA }
 		446 = { is_owned_by = ENG }
-		ITA = { has_war_with = ENG }
 		NOT = { has_global_flag = fall_of_cairo_ita }
 	}
 	
 	immediate = {
 		set_global_flag = fall_of_cairo_ita
-		sound_effect = "faso"
 	}
 	
 	mean_time_to_happen = {
