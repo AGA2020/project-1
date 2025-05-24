@@ -241,7 +241,6 @@ focus_tree = {
 
 	focus = {
 		id = naval_effort_phi
-		name = naval_effort
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 9
 		y = 0
