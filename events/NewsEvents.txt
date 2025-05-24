@@ -9282,11 +9282,7 @@ news_event = {
 
 	trigger = {
 		tag = GER
-		has_war_with = SOV
-		divisions_in_state = {
-			state = 229
-			size > 3
-		}
+		GER = { controls_state = 229 }
 		NOT = {
 			OR = {
 				has_global_flag = chaplin_seized

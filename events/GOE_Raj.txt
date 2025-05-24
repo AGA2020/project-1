@@ -978,13 +978,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = GOE_RAJ.26.a
-		if = {
-			limit = { has_dlc = "Graveyard of Empires" }
-			RAJ_subhas_chanda_bose = {
-				swap_country_leader_traits = {
-					remove = in_prison 
-					add = nationalistic_freedom_fighter
-				}
+		RAJ_subhas_chanda_bose = {
+			swap_country_leader_traits = {
+				remove = in_prison 
+				add = nationalistic_freedom_fighter
 			}
 		}
 
@@ -4936,7 +4933,6 @@ country_event = {
 	}
 
 	trigger = {
-		has_dlc = "Graveyard of Empires"
 		has_idea = RAJ_risk_of_famine
 		original_tag = RAJ
 		any_of_scopes = {
