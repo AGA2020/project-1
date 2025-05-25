@@ -2629,10 +2629,16 @@ country_event = {
 				is_historical_focus_on = yes
 			}
 		}
-		if = {
-			limit = { country_exists = CZE }
-			annex_country = { target = CZE }
-			add_war_support = 0.1
+		annex_country = { target = CZE }
+		add_war_support = 0.1
+		CZE = {
+			every_core_state = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				add_claim_by = GER
+				set_compliance = 50
+			}
 		}
 		if = {
 			limit = { has_global_flag = GER_HUN_CZE_split }
