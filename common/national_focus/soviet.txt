@@ -6408,11 +6408,10 @@ focus_tree = {
 		id = SOV_policy_of_collective_security
 		icon = GFX_SOV_policy_of_collective_security_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_the_comintern }
-		x = -2
+		x = 1
 		y = 1
 		relative_position_id = SOV_the_comintern
 		cost = 5
-		allow_branch = { always = no }
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -6482,30 +6481,6 @@ ai_will_do = {
 	}
 
 	focus = {
-		id = SOV_the_allies
-		
-		x = 2
-		y = 2
-		cost = 0
-		
-		available_if_capitulated = yes
-		icon = GFX_focus_SOV_the_last_purge
-		
-		prerequisite = { focus = SOV_the_comintern }
-		relative_position_id = SOV_the_comintern
-	
-		available = {
-			ENG = { 
-				has_capitulated = yes
-			}
-		}
-		
-		completion_reward = {
-			add_country_leader_trait = GER_sword_of_islam_trait
-		}
-	}
-
-	focus = {
 		id = SOV_seek_a_defense_pact_with_the_allies
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = SOV_anti_fascist_policies }
@@ -6521,7 +6496,7 @@ ai_will_do = {
 				has_civil_war = yes
 			}	
 		}
-		
+		allow_branch = { always = no }
 		bypass = {
 			OR = {
 				NOT = { country_exists = FRA }
@@ -6650,8 +6625,8 @@ ai_will_do = {
 		id = SOV_eradicate_western_fascism
 		icon = GFX_focus_generic_strike_at_democracy1
 		prerequisite = { focus = SOV_the_comintern }
-		x = 1
-		y = 1
+		x = 0
+		y = 3
 		relative_position_id = SOV_the_comintern
 		cost = 0
 
@@ -6686,6 +6661,30 @@ ai_will_do = {
 				    hostility_reason = asked_to_join
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = SOV_the_allies
+		
+		x = 0
+		y = 1
+		cost = 0
+		
+		available_if_capitulated = yes
+		icon = GFX_focus_SOV_the_last_purge
+		
+		prerequisite = { focus = SOV_eradicate_western_fascism }
+		relative_position_id = SOV_eradicate_western_fascism
+	
+		available = {
+			ENG = { 
+				has_capitulated = yes
+			}
+		}
+		
+		completion_reward = {
+			add_country_leader_trait = GER_sword_of_islam_trait
 		}
 	}
 
