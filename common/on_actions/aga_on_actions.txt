@@ -80,6 +80,13 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					GER = { has_collaboration = { target = SOV value > 0.9 } } 
+					NOT = { SOV = { has_idea = Germany_broke_collab_rule } }
+				}
+				SOV = { add_ideas = Germany_broke_collab_rule }
+			}
+			if = {
+				limit = {
 					ROOT = { tag = ITA }
 					FROM = { tag = YUG }
 				}
