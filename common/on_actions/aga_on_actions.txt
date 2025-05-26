@@ -88,6 +88,13 @@ on_actions = {
 			if = {
 				limit = {
 					ROOT = { tag = ITA }
+					FROM = { tag = ALB }
+				}
+				ITA = { clr_country_flag = alb_colab_warning }
+			}
+			if = {
+				limit = {
+					ROOT = { tag = ITA }
 					FROM = { tag = YUG }
 				}
 				ITA = { clr_country_flag = yugo_colab_warning }
@@ -199,6 +206,15 @@ on_actions = {
 								    value > 49
 								}
 								NOT = { has_country_flag = gre_colab_warning }
+							}
+						}
+						AND = {
+							ITA = {
+								network_strength = {
+								    target = ALB
+								    value > 49
+								}
+								NOT = { has_country_flag = alb_colab_warning }
 							}
 						}
 					}

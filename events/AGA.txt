@@ -106,8 +106,19 @@ country_event = {
 			}
 			set_country_flag = yugo_colab_warning
 		}
-		else = { 
+		else_if = { 
+			limit = {
+				ITA = {
+					network_strength = {
+					    target = GRE
+					    value > 49
+					}
+				}
+			}
 			set_country_flag = gre_colab_warning
+		}
+		else = { 
+			set_country_flag = alb_colab_warning
 		}
     }
 	option = {
