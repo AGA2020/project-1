@@ -2981,10 +2981,6 @@ SOV_propaganda_campaigns = {
 			}
 		}
 
-		visible = {
-			has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
-		}
-
 		days_remove = SOV_default_propaganda_campaign_duration
 
 		days_re_enable = SOV_default_propaganda_campaign_cooldown
@@ -3001,7 +2997,7 @@ SOV_propaganda_campaigns = {
 			set_variable = { SOV_new_propaganda_campaign = 15 }
 			SOV_pick_propaganda_campaign_slot_effect = yes
 			SOV_achievement_propaganda_counter_effect = yes
-			custom_effect_tooltip = SOV_propaganda_anti_fascism_tt_effix
+			custom_effect_tooltip = SOV_propaganda_anti_fascism_tt
 			set_variable = { SOV_anti_fascist_target = 0 } #1=ENG / 2=FRA / 3=GER / 4=ITA / 5=USA / 6=JAP
 			#Choose the "most powerful" fascist country based on num of factories
 			if = {
@@ -3222,13 +3218,6 @@ SOV_propaganda_campaigns = {
 		available = {
 			SOV_propaganda_poster_slot_available = yes
 			has_completed_focus = SOV_smersh
-		}
-
-		visible = {
-			OR = {
-				
-				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
-			}
 		}
 
 		days_remove = SOV_default_propaganda_campaign_duration

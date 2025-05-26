@@ -649,8 +649,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = ENG
-				attack_bonus_against = 0.05
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 
@@ -671,8 +671,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = FRA
-				attack_bonus_against = 0.05
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 
@@ -693,8 +693,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = GER
-				attack_bonus_against = 0.05
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 
@@ -715,8 +715,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = ITA
-				attack_bonus_against = 0.05
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 
@@ -737,8 +737,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = USA
-				attack_bonus_against = 0.05
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 
@@ -759,8 +759,8 @@ ideas = {
 
 			targeted_modifier = {
 				tag = JAP
-				attack_bonus_against = 0.05
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 
