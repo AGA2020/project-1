@@ -517,6 +517,39 @@ on_actions = {
 				}
 				add_compliance = 100
 			}
+			RAJ = {
+				annex_country = {
+					target = BRM
+					transfer_troops = no
+				}
+				288 = {
+					add_compliance = 35
+				}
+				640 = {
+					add_compliance = 35
+				}
+				993 = {
+					add_compliance = 35
+				}
+				994 = {
+					add_compliance = 35
+				}
+				995 = {
+					add_compliance = 35
+				}
+				996 = {
+					add_compliance = 35
+				}
+				997 = {
+					add_compliance = 35
+				}
+				998 = {
+					add_compliance = 35
+				}
+				999 = {
+					add_compliance = 35
+				}
+			}
 			FIN = {
 				add_opinion_modifier = { target = YUG modifier = large_decrease }
 				add_opinion_modifier = { target = YUG modifier = hostile_status }
