@@ -905,10 +905,7 @@ GER_operational_planning_category = {
 				news_event = { id = mortis.2 hours = 6 }
 			}
 			every_country = {
-				limit = {
-					is_in_faction_with = GER
-					NOT = { tag = ROM }
-				}
+				limit = { is_in_faction_with = GER }
 				add_timed_idea = {
 					idea = bulge
 					days = 80
