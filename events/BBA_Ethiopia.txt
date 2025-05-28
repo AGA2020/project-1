@@ -2,7 +2,6 @@
 # BBA Events for Ethiopia
 ###########################
 
-add_namespace = BBA_ethiopia_balance_of_power_events
 add_namespace = BBA_ethiopia_communist_events
 add_namespace = BBA_ethiopia_exile_events
 add_namespace = BBA_ethiopia_imperial_events
@@ -11,115 +10,6 @@ add_namespace = BBA_ethiopia_industrial_financial_events
 add_namespace = BBA_ethiopia_anti_colonialism_events
 add_namespace = BBA_ethiopia_fascist_events
 add_namespace = BBA_generic_purchase_ships_events
-
-##########################################################################
-
-###   ##  #    ##  #  #  ##  ###      ##  ###     ###   ##  #   # ### ###  
-#  # #  # #   #  # ## # #  # #       #  # #       #  # #  # #   # #   #  # 
-###  #### #   #### # ## #    ##      #  # ##      ###  #  # # # # ##  ###  
-#  # #  # #   #  # #  # #  # #       #  # #       #    #  # # # # #   #  # 
-###  #  # ### #  # #  #  ##  ###      ##  #       #     ##   # #  ### #  # 
-
-# unfair treatment by local lords
-country_event = {
-	id = BBA_ethiopia_balance_of_power_events.55
-	title = BBA_ethiopia_balance_of_power_events.55.t
-	desc = BBA_ethiopia_balance_of_power_events.55.desc
-	is_triggered_only = yes
-	trigger = {
-		any_owned_state = {
-			is_capital = no
-			is_core_of = ROOT
-			state_is_fully_controlled_by_ROOT_or_subject = yes 
-		}
-	}
-	immediate = {
-		# get a random controlled state
-		hidden_effect = {
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT 
-					is_capital = no 
-					state_is_fully_controlled_by_ROOT_or_subject = yes 
-				}
-				set_variable = { ROOT.ETH_bop_state = THIS }
-			}
-		}
-	}
-	picture = GFX_report_event_generic_parliament
-	# We should make an example out of this
-	option = {
-		name = BBA_ethiopia_balance_of_power_events.55.a
-		ai_chance = {
-			base = 10
-		}
-		add_political_power = 50
-		add_stability = -0.02
-	}
-	# It is not our business to interfere
-	option = {
-		name = BBA_ethiopia_balance_of_power_events.55.b
-		ai_chance = {
-			base = 10
-		}
-		add_stability = 0.02
-		add_political_power = -50
-		var:ROOT.ETH_bop_state = {
-			add_to_variable = { ETH_state_independence = 1 } # for logging for now
-		}
-	}
-}
-
-# Centralization programme pays off
-country_event = {
-	id = BBA_ethiopia_balance_of_power_events.56
-	title = BBA_ethiopia_balance_of_power_events.56.t
-	desc = BBA_ethiopia_balance_of_power_events.56.desc
-	is_triggered_only = yes
-	trigger = {
-		any_owned_state = {
-			is_capital = no
-			is_core_of = ROOT
-			state_is_fully_controlled_by_ROOT_or_subject = yes 
-		}
-	}
-	immediate = {
-		# get a random controlled state
-		hidden_effect = {
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT 
-					is_capital = no 
-					state_is_fully_controlled_by_ROOT_or_subject = yes 
-				}
-				set_variable = { ROOT.ETH_bop_state = THIS }
-			}
-		}
-	}
-	picture = GFX_report_event_generic_train
-	# This proves that we are doing the right thing
-	option = {
-		name = BBA_ethiopia_balance_of_power_events.56.a
-		ai_chance = {
-			base = 10
-		}
-		add_political_power = 50
-		add_stability = 0.02
-	}
-	# Let's re-invest in the state
-	option = {
-		name = BBA_ethiopia_balance_of_power_events.56.b
-		ai_chance = {
-			base = 10
-		}
-		var:ROOT.ETH_bop_state = {
-			add_to_variable = { ETH_state_independence = -1 } # for logging for now
-			custom_effect_tooltip = ETH_investments_in_state_tt
-			add_to_variable = { ETH_state_independence = -1 } # for logging for now
-			add_to_variable = { ETH_state_development_production_speed = 0.05 }
-		}
-	}
-}
 
 ####################################################
 
