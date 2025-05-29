@@ -238,7 +238,7 @@ country_event = { #Charlie Brown and Franz Stigler incident (GER)
 #### DIPLOMACY AND TRADE EVENTS ####
 #German Trade Event
 country_event = { 
-	id = wuw_GER_diplomacy.1
+	id = wuw_GER_diplomacy.1  #hist
 	title = wuw_GER_diplomacy.1.t
 	desc = AAT_germany.1.desc #Intentional
 	picture = GFX_report_event_generic_factory
@@ -323,7 +323,7 @@ country_event = {
 	}
 }
 country_event = { #FROM accepts our trade deal
-	id = wuw_GER_diplomacy.2
+	id = wuw_GER_diplomacy.2  #hist
 	title = wuw_GER_diplomacy.2.t
 	desc = wuw_GER_diplomacy.2.desc 
 	picture = GFX_report_event_tank_factory
@@ -363,7 +363,7 @@ country_event = { #FROM accepts our trade deal
 	}
 }
 country_event = { #FROM rejects our trade deal
-	id = wuw_GER_diplomacy.3
+	id = wuw_GER_diplomacy.3  #hist
 	title = wuw_GER_diplomacy.3.t
 	desc = wuw_GER_diplomacy.3.desc 
 	picture = GFX_report_event_tank_factory
@@ -372,196 +372,6 @@ country_event = { #FROM rejects our trade deal
 
 	option = { #Too bad for them...
 		name = wuw_GER_diplomacy.3.a	
-	}
-}
-
-#Germany is influencing other countries
-country_event = {
-	id = wuw_GER_diplomacy.10
-	title = generic.1.t #Intentional
-	desc = { #Intentional
-		text = generic.1.d_neutral_good
-		trigger = {
-			has_government = FROM
-		}
-	}
-	desc = { #Intentional
-		text = generic.1.d_bad
-		trigger = {
-			NOT = { has_government = FROM }
-		}
-	}
-	picture = GFX_report_event_generic_read_write
-
-	is_triggered_only = yes
-
-	option = { #Very well....
-		name = wuw_GER_diplomacy.10.a
-		ai_chance = {
-			base = 20
-			modifier = {
-				factor = 1.5
-				has_opinion = {
-					target = FROM
-					value > 24
-				}
-			}
-			modifier = {
-				factor = 1.5
-				strength_ratio = {
-				    tag = FROM
-				    ratio < 0.75
-				}
-			}
-			modifier = {
-				factor = 2
-				strength_ratio = {
-				    tag = FROM
-				    ratio < 0.5
-				}
-			}
-			modifier = {
-				factor = 2
-				strength_ratio = {
-				    tag = FROM
-				    ratio < 1
-				}
-			}
-			modifier = {
-				factor = 0
-				is_major = yes
-			}
-		}
-
-		IF = {
-			limit = {
-				FROM = {
-					has_government = fascism
-				}
-			}
-			add_timed_idea = {
-				idea = GER_fascism_influence
-				days = 730
-			}
-		}		
-		ELSE_IF = {
-			limit = {
-				FROM = {
-					has_government = democratic
-				}
-			}
-			add_timed_idea = {
-				idea = GER_democratic_influence
-				days = 730
-			}
-		}
-		ELSE_IF = {
-			limit = {
-				FROM = {
-					has_government = neutrality
-				}
-			}
-			add_timed_idea = {
-				idea = GER_neutrality_influence
-				days = 730
-			}
-		}
-
-		if = {
-			limit = {
-				original_tag = CZE
-				has_country_flag = GER_influencing_CZE_flag
-			}
-			add_opinion_modifier = { target = GER modifier = ger_cze_diplomatic_focus }
-			clr_country_flag = GER_influencing_CZE_flag
-		}
-		else = {
-			add_opinion_modifier = { 
-				target = GER 
-				modifier = GER_german_influence
-			}
-		}
-
-	}
-
-	option = { #How dare they?!
-		name = wuw_GER_diplomacy.10.b
-		ai_chance = {
-			base = 1
-			modifier = {
-				add = 15
-				has_opinion = {
-					target = FROM
-					value < -29
-				}
-			}
-			modifier = {
-				add = 15
-				has_opinion = {
-					target = FROM
-					value < -49
-				}
-			}
-		}
-
-		add_political_power = -25
-		
-		FROM = {
-			country_event = { id = wuw_GER_diplomacy.11 hours = 5 random_hours = 5 }
-		}
-	}
-}
-country_event = { #FROM has foiled our influencing efforts
-	id = wuw_GER_diplomacy.11
-	title = wuw_GER_diplomacy.11.t
-	desc = wuw_GER_diplomacy.11.desc 
-	picture = GFX_report_event_tank_factory
-
-	is_triggered_only = yes
-
-	option = { #How dare they?!
-		name = wuw_GER_diplomacy.11.a 
-
-		effect_tooltip = {
-			FROM = {
-				IF = {
-					limit = {
-						ROOT = {
-							has_government = fascism
-						}
-					}
-					remove_ideas = {
-						idea = fascist_influence
-					}
-				}		
-				ELSE_IF = {
-					limit = {
-						ROOT = {
-							has_government = democratic
-						}
-					}
-					remove_ideas = {
-						idea = democratic_influence
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						ROOT = {
-							has_government = neutrality
-						}
-					}
-					remove_ideas = {
-						idea = neutrality_influence
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				remove_opinion_modifier = { 
-					target = GER 
-					modifier = GER_german_influence
-				}
-			}
-		}
-
 	}
 }
 
