@@ -560,6 +560,10 @@ on_actions = {
 				add_opinion_modifier = { target = ITA modifier = huge_increase  }
 				add_opinion_modifier = { target = BUL modifier = huge_increase  }
 				}
+			SAF = {
+				add_opinion_modifier = { target = ROM modifier = large_decrease }
+				add_opinion_modifier = { target = ROM modifier = hostile_status }
+				}
 			every_country = {
 				limit = {
 					is_playable_country = yes
