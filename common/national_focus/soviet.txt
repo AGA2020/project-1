@@ -6388,7 +6388,7 @@ focus_tree = {
 		id = SOV_the_comintern
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
-		x = 7
+		x = 8
 		y = 0
 		relative_position_id = SOV_addressing_internal_affairs
 		cost = 5
@@ -6667,19 +6667,25 @@ ai_will_do = {
 	focus = {
 		id = SOV_the_allies
 		
-		x = 0
-		y = 1
+		x = 2
+		y = 3
 		cost = 0
 		
 		available_if_capitulated = yes
 		icon = GFX_focus_SOV_the_last_purge
 		
-		prerequisite = { focus = SOV_eradicate_western_fascism }
-		relative_position_id = SOV_eradicate_western_fascism
+		prerequisite = { focus = SOV_the_comintern }
+		relative_position_id = SOV_the_comintern
 	
 		available = {
-			ENG = { 
-				has_capitulated = yes
+			OR = {
+				AND = {
+					ENG = { is_ai = yes }
+					USA = { is_ai = yes }
+				}
+				ENG = { 
+					has_capitulated = yes
+				}
 			}
 		}
 		
