@@ -4145,14 +4145,14 @@ focus = {
             limit = {
                 ENG = {
                     has_equipment = {
-                    infantry_equipment > 1999
+                    infantry_equipment > 999
                     }
                 }
             }
             ENG = {
                 send_equipment = {
                     equipment = infantry_equipment
-                    amount = 2000
+                    amount = 1000
                     target = RAJ
                 }
                 add_cic = 1000
@@ -4162,14 +4162,14 @@ focus = {
             limit = {
                 ENG = {
                     has_equipment = {
-                    motorized_equipment > 399
+                    motorized_equipment > 159
                     }
                 }
             }
             ENG = {
                 send_equipment = {
                     equipment = motorized_equipment
-                    amount = 400
+                    amount = 160
                     target = RAJ
                 }
                 add_cic = 1000
@@ -4179,14 +4179,14 @@ focus = {
             limit = {
                 ENG = {
                     has_equipment = {
-                    artillery_equipment > 299
+                    artillery_equipment > 114
                     }
                 }
             }
             ENG = {
                 send_equipment = {
                     equipment = artillery_equipment
-                    amount = 300
+                    amount = 115
                     target = RAJ
                 }
                 add_cic = 1000
@@ -4196,14 +4196,14 @@ focus = {
             limit = {
                 ENG = {
                     has_equipment = {
-                    light_tank_chassis > 199
+                    light_tank_chassis > 84
                     }
                 }
             }
             ENG = {
                 send_equipment = {
                     equipment = light_tank_chassis
-                    amount = 200
+                    amount = 85
                     target = RAJ
                 }
                 add_cic = 1000
