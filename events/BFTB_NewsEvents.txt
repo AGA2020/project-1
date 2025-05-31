@@ -604,32 +604,6 @@ news_event = {
 	}
 }
 
-#Approach Greece
-news_event = {
-	id = bftb_news.15
-	title = bftb_news.15.t
-	desc = bftb_news.15.desc
-	picture = GFX_news_event_the_megali_idea_succeeds
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = bftb_news.14.a
-		trigger = {
-			NOT = { has_war_with = BUL }
-		}
-	}
-
-	option = {
-		name = bftb_news.14.b
-		trigger = {
-			has_war_with = BUL
-		}
-	}
-}
-
 #Approach UK
 news_event = {
 	id = bftb_news.16
