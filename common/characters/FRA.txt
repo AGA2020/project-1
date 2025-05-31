@@ -142,7 +142,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer trait_cautious armor_officer panzer_leader }
+			traits={ career_officer trait_cautious armor_officer panzer_leader trait_engineer }
 			skill=4
 			attack_skill=3
 			defense_skill=2
