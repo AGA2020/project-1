@@ -26,7 +26,7 @@ tech_license = {
 	option = {
 		name = off
 		text = "ROff"
-		desc = "You cant be able to take tech licenses via decision (Not Recommmended)"
+		desc = "You cant be able to take tech licenses via decision (Not Recommended)"
 	}
 }
 
