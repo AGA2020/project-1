@@ -14,6 +14,22 @@ techstealing = {
 	}
 }
 
+tech_license = {
+	name = "Decision Tech License(Autorush)" 
+	group = "elwolfmod Rules"
+	icon = "GFX_decision_generic_tank"
+	default = {
+		name = on
+		text = "GOn"
+		desc = "You will be able to take tech licenses via decision so minors cant cuck you (Recommmended)"
+	}
+	option = {
+		name = off
+		text = "ROff"
+		desc = "You cant be able to take tech licenses via decision (Not Recommmended)"
+	}
+}
+
 max_submarine_tech = {
 	name = "Max Submarine Tech"
 	group = "elwolfmod Rules"
@@ -69,23 +85,6 @@ tradebacks = {
 		name = not_allies
 		text = "RNot Allies"
 		desc = "Everyone has no tradeback idea except for Allies (Not Reccomended)"
-	}
-}
-
-
-force_attack_last_stand = {
-	name = "Force Attack Last Stand"
-	group = "elwolfmod Rules"
-	icon = "GFX_decision_eng_trade_unions_support"
-	default = {
-		name = on
-		text = "GOn"
-		desc = "Normal like vanilla (Reccomended)"
-	}
-	option = {
-		name = off
-		text = "ROff"
-		desc = "Banned (Not Reccomended)"
 	}
 }
 

@@ -1,9 +1,11 @@
 Technologies = {
 	icon = generic_propaganda
-
-	visible = {
-        always = yes
-	}
+    visible = {
+        has_game_rule = {
+            rule = tech_license
+            option = on
+        }
+    }
 }
 MOD_countdown_to_victory_cat = {
 
