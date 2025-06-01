@@ -5479,47 +5479,6 @@ country_event = {
 			country_event = { id = wuw_GER_diplomacy.112 hours = 5 random_hours = 5 }
 		}
 	}
-
-	option = { #Reject the offer
-		name = wuw_GER_diplomacy.111.b
-		ai_chance = {
-			base = 1
-			modifier = {
-				add = 15
-				has_opinion = {
-					target = FROM
-					value < -29
-				}
-			}
-			modifier = {
-				add = 15
-				has_opinion = {
-					target = FROM
-					value < -49
-				}
-			}
-		}
-
-		add_ai_strategy = { 
-			type = befriend 
-			id = FROM
-			value = -50
-		}
-
-		custom_effect_tooltip = generic_could_lead_to_tt
-		effect_tooltip = {
-			FROM = {
-				create_wargoal = {
-					type = annex_everything
-					target = ROOT
-				}
-			}
-		}
-
-		FROM = {
-			country_event = { id = wuw_GER_diplomacy.113 hours = 5 random_hours = 5 }
-		}
-	}
 }
 country_event = { #FROM accepts our trade deal
 	id = wuw_GER_diplomacy.112
