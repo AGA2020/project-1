@@ -903,11 +903,6 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			visible = {
-				NOT = {
-					has_completed_focus = RAJ_royal_indian_navy_mutiny
-				}
-			}
 		}
 	}
 
@@ -945,11 +940,6 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			visible = {
-				NOT = {
-					has_completed_focus = RAJ_royal_indian_navy_mutiny
-				}
-			}
 		}
 	}
 
@@ -988,11 +978,6 @@ characters={
 			defense_skill=1
 			planning_skill=2
 			logistics_skill=3
-			visible = {
-				NOT = {
-					has_completed_focus = RAJ_royal_indian_navy_mutiny
-				}	
-			}
 		}
 	}
 	### NAVY CHIEFS ###
