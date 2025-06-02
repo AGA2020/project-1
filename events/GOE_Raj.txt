@@ -5320,45 +5320,6 @@ country_event = {
 	is_triggered_only = yes
 	#fire_only_once = yes
 
-	#no
-	option = {
-		name = GOE_RAJ_famine.9.a
-		FROM = {
-			country_event = { id = GOE_RAJ_famine.10 days = 5 random_days = 4 }
-
-			add_opinion_modifier = {
-				target = PREV
-				modifier = RAJ_did_not_help_famine
-			}
-			if = {
-				limit = { 
-					FROM = { 
-						is_subject = yes
-						is_subject_of = ROOT 
-					} 
-				}
-				effect_tooltip = { 
-					FROM = { 
-						add_autonomy_ratio = {  #UPDATE GOE_RAJ_famine.10 if changing
-						 	value = 0.1 
-						 } 
-					} 
-				}
-			}
-		}
-
-		ai_chance = {
-			base = 1
-			modifier = {
-				has_country_leader = {
-					character = ENG_winston_churchill 
-				}
-
-				factor = 6
-			}
-		}
-	}
-
 	#yes
 	option = {
 		name = GOE_RAJ_famine.9.b
