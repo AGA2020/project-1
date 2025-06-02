@@ -2656,16 +2656,23 @@ focus_tree = {
 				}
 			}
 
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				add_equipment_subsidy = {
-					cic = 2000
-					equipment_type = light_tank_chassis
-					seller_tags = { ITA }
-				}
-			}
+        	if = {
+        	    limit = {
+        	        ITA = {
+        	            has_equipment = {
+        	            light_tank_chassis > 169
+        	            }
+        	        }
+        	    }
+        	    ITA = {
+        	        send_equipment = {
+        	            equipment = light_tank_chassis
+        	            amount = 170
+        	            target = HUN
+        	        }
+        	        add_cic = 2000
+        	    }
+        	}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
