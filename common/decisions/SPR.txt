@@ -13088,10 +13088,10 @@ SPR_expand_resource_extraction = {
 		}
 
 		highlight_states = {
- highlight_state_targets = {
+ 			highlight_state_targets = {
 			state = 171
-		} 
-}
+			} 
+		}
 
 		visible = {
 			owns_state = 171
@@ -13118,11 +13118,6 @@ SPR_expand_resource_extraction = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				tag = ENG
-				has_war = no
-				factor = 0
-			}
 		}
 
 		remove_effect = {
