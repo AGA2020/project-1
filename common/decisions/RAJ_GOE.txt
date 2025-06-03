@@ -454,25 +454,15 @@ RAJ_GOE_famine_cat = {
 		visible = { 
 			has_country_flag = RAJ_famine_has_started
 		}
-		
-		available = {
-			divisions_in_state = {
-				state = FROM
-				size > 0
-			}
-		}
-
-		cancel_trigger = {
-			divisions_in_state = {
-				state = FROM
-				size < 1
-			}
-		}
 
 		days_remove = 950
 		complete_effect = {
 			custom_effect_tooltip = RAJ_black_markets_tt 
-
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -100
+				producer = RAJ
+			}
 			hidden_effect = { 
 				FROM = { 
 					set_state_flag = RAJ_has_crushed_black_market
