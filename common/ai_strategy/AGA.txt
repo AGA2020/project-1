@@ -16,6 +16,22 @@ be_useful_ai_please = {
 		value = 10
 	}
 }
+fk_off_spain = {
+	allowed = {
+		original_tag = SPR
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+	    type = consider_weak
+	    id = ENG
+	    value = -1000
+	}
+}
 ai_no_gar = {
 	enable = {
 		always = yes
