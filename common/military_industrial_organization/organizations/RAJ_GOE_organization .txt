@@ -377,7 +377,6 @@ RAJ_yarrow_shipbuilders_organization = {
 	icon = GFX_idea_yarrow_shipbuilders
 	
 	allowed = {	
-		has_dlc = "Graveyard of Empires"
 		original_tag = RAJ
 	}
 
@@ -433,16 +432,6 @@ RAJ_avro_organization = {
 		tag = RAJ
 	}
 }
-
-#RAJ_royal_arsenal_organization = {
-#	include = generic_artillery_organization
-#	icon = GFX_idea_royal_arsenal
-#	
-#	allowed = {	
-#		has_dlc = "Graveyard of Empires"
-#		original_tag = RAJ
-#	}
-#}
 
 RAJ_crossley_motors_organization = {
 	include = generic_armored_car_organization

@@ -2902,7 +2902,6 @@ ideas = {
 			name = RAJ_ammunition_factory_khadki 
 			allowed = {
 				is_raj_or_raj_inheritor = yes
-				has_dlc = "Graveyard of Empires"
 			}
 
 
@@ -2928,7 +2927,6 @@ ideas = {
 			name = RAJ_ammunition_factory_khadki 
 			allowed = {
 				is_raj_or_raj_inheritor = yes
-				has_dlc = "Graveyard of Empires"
 			}
 
 
@@ -2959,7 +2957,6 @@ ideas = {
 			name = RAJ_ammunition_factory_khadki 
 			allowed = {
 				is_raj_or_raj_inheritor = yes
-				has_dlc = "Graveyard of Empires"
 			}
 
 			visible = {
@@ -2993,7 +2990,7 @@ ideas = {
 			name = RAJ_ammunition_factory_khadki 
 			allowed = {
 				is_raj_or_raj_inheritor = yes
-				has_dlc = "Graveyard of Empires"
+				 
 			}
 
 			visible = {
@@ -3027,7 +3024,7 @@ ideas = {
 			picture = raj_gun_and_shell_factory_cossipore
 			allowed = {
 
-				has_dlc = "Graveyard of Empires" 
+				  
 				is_raj_or_raj_inheritor = yes
 			}
 			name = RAJ_gun_and_shell_factory_cossipore
@@ -3050,7 +3047,7 @@ ideas = {
 			picture = raj_gun_and_shell_factory_cossipore
 			allowed = {
 
-				has_dlc = "Graveyard of Empires" 
+				  
 				is_raj_or_raj_inheritor = yes
 			}
 			
@@ -3082,7 +3079,7 @@ ideas = {
 			picture = raj_gun_and_shell_factory_cossipore
 			allowed = {
 
-				has_dlc = "Graveyard of Empires" 
+				  
 				is_raj_or_raj_inheritor = yes
 			}
 
@@ -3118,7 +3115,7 @@ ideas = {
 			picture = raj_gun_and_shell_factory_cossipore
 			allowed = {
 
-				has_dlc = "Graveyard of Empires" 
+				  
 				is_raj_or_raj_inheritor = yes
 			}
 
@@ -3155,7 +3152,7 @@ ideas = {
 
 			allowed = {
 
-				has_dlc = "Graveyard of Empires" 
+				  
 				is_raj_or_raj_inheritor = yes
 			}
 
@@ -3210,7 +3207,7 @@ ideas = {
 		idea_RAJ_the_reserve_bank_of_india = { 
 			picture = raj_reserve_bank_of_india
 			allowed = {
-				has_dlc = "Graveyard of Empires"
+				 
 				original_tag = RAJ
 			}
 			available = {

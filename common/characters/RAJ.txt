@@ -1437,7 +1437,6 @@ characters={
 			idea_token = RAJ_GOE_jawaharlal_nehru
 			allowed = {
 				original_tag = RAJ
-				has_dlc = "Graveyard of Empires"
 			}
 			visible = {
 				has_completed_focus = RAJ_mahatma
@@ -1474,7 +1473,6 @@ characters={
 			idea_token = RAJ_GOE_muhammad_ali_jinnah
 			allowed = {
 				is_raj_or_raj_inheritor = yes
-				has_dlc = "Graveyard of Empires"
 			}
 			traits = {
 				all_india_muslim_league_leader 
@@ -1522,7 +1520,6 @@ characters={
 			idea_token = RAJ_GOE_rash_behari_bose
 			allowed = {
 				original_tag = RAJ
-				has_dlc = "Graveyard of Empires"
 			}
 			visible = {
 				always = no

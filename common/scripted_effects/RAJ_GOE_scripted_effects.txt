@@ -498,7 +498,6 @@ check_painful_memory = {
             NOT = {
                 has_global_flag = RAJ_GOE_partition_has_happened
             }
-            has_dlc = "Graveyard of Empires"
         }
 
         for_each_scope_loop = {
@@ -885,8 +884,6 @@ bathe_in_hellfire_nuclear = {
                 original_tag = RAJ
                 has_completed_focus = RAJ_bathe_in_hellfire
             }
-            has_dlc = "Graveyard of Empires"
-
         }
 
         clear_global_event_target = nuclear_gandhi_actor_country
@@ -923,8 +920,6 @@ bathe_in_hellfire_thermonuclear = {
                 original_tag = RAJ
                 has_completed_focus = RAJ_bathe_in_hellfire
             }
-            has_dlc = "Graveyard of Empires"
-
         }
 
         clear_global_event_target = nuclear_gandhi_actor_country
@@ -958,7 +953,6 @@ was_raj_a_subject = {
         limit = {
             RAJ = {
                 is_subject = yes
-                has_dlc = "Graveyard of Empires"
             }
         }
 

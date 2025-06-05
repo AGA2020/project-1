@@ -27,8 +27,5 @@ RAJ_population_decisions = {
 				NOT = { has_state_flag = RAJ_industrialized_this_state }
 			}
 		}
-		target_root_trigger = {
-			has_dlc = "Graveyard of Empires" #Don't show this for non-GoE since the decisions there are also displayed in the decisions list
-		}
 	}
 }

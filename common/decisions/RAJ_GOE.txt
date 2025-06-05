@@ -2156,7 +2156,6 @@ prospect_for_resources = {
 		icon = rubber
 
 		allowed = {
-			has_dlc = "Graveyard of Empires"
 			original_tag = RAJ
 		}
 
@@ -2233,7 +2232,6 @@ prospect_for_resources = {
 		icon = tungsten
 
 		allowed = {
-			has_dlc = "Graveyard of Empires"
 			original_tag = RAJ
 		}
 
@@ -2311,7 +2309,6 @@ prospect_for_resources = {
 		icon = tungsten
 
 		allowed = {
-			has_dlc = "Graveyard of Empires"
 			original_tag = RAJ
 		}
 
@@ -2389,7 +2386,6 @@ prospect_for_resources = {
 		icon = steel
 
 		allowed = {
-			has_dlc = "Graveyard of Empires"
 			original_tag = RAJ
 		}
 
@@ -2467,7 +2463,6 @@ prospect_for_resources = {
 		icon = steel
 
 		allowed = {
-			has_dlc = "Graveyard of Empires"
 			original_tag = RAJ
 		}
 
@@ -2559,7 +2554,6 @@ prospect_for_resources = {
 		icon = chromium
 
 		allowed = {
-			has_dlc = "Graveyard of Empires"
 			original_tag = RAJ
 		}
 

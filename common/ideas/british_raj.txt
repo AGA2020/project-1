@@ -609,9 +609,7 @@ ideas = {
 		ishapore_rifle_factory = {
 			
 			allowed = {
-				has_dlc = "Together for Victory"
-				NOT = { has_dlc = "Graveyard of Empires" }
-				original_TAG = RAJ
+				always = no
 			}
 
 			picture = generic_infantry_equipment_manufacturer_2
@@ -629,9 +627,7 @@ ideas = {
 		ordnance_factories_board = {
 			
 			allowed = {
-				has_dlc = "Together for Victory"
-				NOT = { has_dlc = "Graveyard of Empires" }
-				original_TAG = RAJ
+				always = no
 			}
 			
 			picture = generic_artillery_manufacturer_2

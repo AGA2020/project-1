@@ -221,7 +221,6 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					has_dlc = "Graveyard of Empires"
 					GER = {
 						exists = yes
 						is_subject = no
@@ -262,7 +261,6 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					has_dlc = "Graveyard of Empires"
 					ROOT = { 
 						original_tag = RAJ 
 						NOT = { has_global_flag = RAJ_GOE_partition_has_happened }
@@ -532,7 +530,6 @@ on_actions = {
 		effect = {
 			IF = {
 				limit = {
-					has_dlc = "Graveyard of Empires"
 					AND = {
 						OR = {
 							FROM = {
@@ -587,7 +584,6 @@ on_actions = {
 							has_country_flag = PER_has_been_invaded
 						}
 					}
-					has_dlc = "Graveyard of Empires"
 				}
 				ROOT = {
 					set_country_flag = PER_invading_country_flag
@@ -632,7 +628,6 @@ on_actions = {
 			if = {
 				limit = {
 					ROOT = {
-						has_dlc = "Graveyard of Empires"
 						has_dynamic_modifier = { modifier = idea_RAJ_tea_exports }
 					}
 				}
@@ -835,7 +830,6 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					has_dlc = "Graveyard of Empires"
 					FROM.FROM = { state = 733 }
 					ROOT = { 
 						OR = {
@@ -861,8 +855,6 @@ on_actions = {
 
 			if = {
 				limit = {
-					has_dlc = "Graveyard of Empires"
-
 					FROM = {
 						is_raj_or_raj_inheritor = yes
 					}
@@ -889,7 +881,6 @@ on_actions = {
 			}
 			else_if = {
 				limit = {
-					has_dlc = "Graveyard of Empires"
 					ROOT = {
 						is_raj_or_raj_inheritor = yes
 					}
@@ -901,7 +892,6 @@ on_actions = {
 
 			if = { #Free Bose
 				limit = {
-					has_dlc = "Graveyard of Empires"
 					RAJ = { has_country_flag = has_arrested_bose }
 					FROM.FROM = { state = var:global.bose_arrest_location }
 				}
@@ -942,7 +932,6 @@ on_actions = {
 		effect = { # Adding the correct stuff for faction joiners for the AH joint focus tree
 			IF = {
 				limit = {
-					has_dlc = "Graveyard of Empires"
 					FROM = {
 						original_tag = AFG
 						has_idea = neutrality_idea
