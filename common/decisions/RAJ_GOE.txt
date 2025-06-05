@@ -2114,10 +2114,6 @@ prospect_for_resources = {
 			288 = {
 				controller = {
 					is_ally_with = ROOT
-					OR = {
-						is_subject_of = ENG
-						is_subject = no
-					}
 				}
 			}
 		}
@@ -2137,18 +2133,7 @@ prospect_for_resources = {
 		fire_only_once = yes
 
 		complete_effect = {
-			#Send event to OVERLORD (if any), otherwise to controller
-			if = {
-				limit = {
-					var:288.controller = {
-						is_subject_of = ENG
-					}
-				}
-				ENG = { country_event = { id = GOE_RAJ_loyalist.14 hours = 4 random_hours = 2 } }
-			}
-			else = {
-				var:288.controller = { country_event = { id = GOE_RAJ_loyalist.14 hours = 4 random_hours = 2 } }
-			}
+			ENG = { remove_resource_rights = 288 }
 		}
 	}
 
