@@ -376,7 +376,7 @@ on_actions = {
 		effect = {
 			RAJ = {
 				give_resource_rights = {
-					receiver = FRA
+					receiver = ENG
 					state = 288
 				}
 			}
