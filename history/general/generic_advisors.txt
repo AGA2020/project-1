@@ -45,8 +45,8 @@ every_possible_country = {
 			ai_will_do = {
 				factor = 1
 				modifier = {
-					has_intelligence_agency = no
-					factor = 0
+					tag = JAP
+					factor = 2000
 				}
 			}
 		}

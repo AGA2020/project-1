@@ -1,44 +1,147 @@
-
-build_intelligence_agency_japan = {
+JAP_glorious_nippon_steel_has_triumphed = {
 	allowed = {
 		original_tag = JAP
 	}
 	enable = {
-		always = yes
+		has_equipment = { support_equipment > 200 }
 	}
-	abort = {
-		always = no
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 80
 	}
 
 	ai_strategy = {
-		type = intelligence_agency_usable_factories
+		type = role_ratio
+		id = marines
+		value = 1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = -80
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 1
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = armor
 		value = 5
 	}
 
-}
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = -80
+	}
 
+	ai_strategy = {
+		type = template_prio
+		id = mountaineers
+		value = -80
+	}
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = 100
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 30
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 4 #10 to 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -80
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 20 #From 40 to 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 5
+	}
+}
 clapthatchina_japan = {
 	allowed = {
 		original_tag = JAP
 	}
 	enable = {
-		always = yes
+		tag = JAP
+		num_finished_operations = {
+			operation = operation_collaboration_government
+			target = CHI
+			value < 4
+		}
 	}
-	abort = {
-		always = no
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 2000
+		mission_target = CHI
 	}
 	ai_strategy = {
 		type = operative_operation
 		operation = operation_collaboration_government
-		value = 1200
+		value = 4000
 		operation_target = CHI
 	}
-	
 	ai_strategy = {
-		type = operative_mission
-		mission = build_intel_network
-		value = 1000
-		mission_target = CHI
+		type = equipment_variant_production_factor
+		id = support_equipment
+		value = 10
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = -20
+	}	
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support
+		value = 1
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 1
+	}
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 50
 	}
 }
 
@@ -64,9 +167,7 @@ fk_off_spain = {
 	enable = {
 		always = yes
 	}
-	abort = {
-		always = no
-	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 	    type = consider_weak
 	    id = ENG
@@ -77,9 +178,7 @@ ai_no_gar = {
 	enable = {
 		always = yes
 	}
-	abort = {
-		always = no
-	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = pp_spend_priority
 		id = guarantee
