@@ -1,5 +1,46 @@
 
+build_intelligence_agency_japan = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
 
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 5
+	}
+
+}
+
+clapthatchina_japan = {
+	allowed = {
+		original_tag = JAP
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	ai_strategy = {
+		type = operative_operation
+		operation = operation_collaboration_government
+		value = 1200
+		operation_target = CHI
+	}
+	
+	ai_strategy = {
+		type = operative_mission
+		mission = build_intel_network
+		value = 1000
+		mission_target = CHI
+	}
+}
 
 be_useful_ai_please = {
 	allowed = {
