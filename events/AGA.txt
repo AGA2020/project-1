@@ -146,6 +146,32 @@ news_event = {
 			}
 	}
 }
+news_event = {
+	id = aga.5
+	title = aga.5.t
+	desc = aga.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = aga.5.a
+	}
+    immediate = {
+		RAJ = {
+			give_resource_rights = {
+				receiver = ENG
+				state = 288
+			}
+		}
+		RAJ = {
+			give_resource_rights = {
+				receiver = ENG
+				state = 640
+			}
+		}
+    }
+}
 country_event = {
 	id = aga.999
 	title = aga.999.t

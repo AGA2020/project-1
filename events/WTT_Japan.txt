@@ -1236,25 +1236,7 @@ country_event = {
 	picture = GFX_report_event_japanese_parade
 
 	fire_only_once = yes
-	trigger = {
-		original_tag = JAP
-		OR = {
-			AND = {
-				has_war_with = RAJ
-				OR = {
-					RAJ = { is_subject = yes }
-					RAJ = { is_in_faction_with = ENG }
-				}
-			}
-			AND = {
-				has_war_with = BRM
-				OR = {
-					BRM = { is_in_faction_with = ENG }
-					BRM = { is_subject_of = ENG }
-				}
-			}
-		}
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = goe_japan.1.a
@@ -1285,11 +1267,7 @@ country_event = {
 			}
 		}
 
-		random_core_state = {
-			limit = {
-				is_fully_controlled_by = ROOT
-			}
-			prioritize = { 282 } #optional: to pick those states first if they fulfill the limit
+		282 = {
 			create_unit = {
 				division = "name = \"Azad Hind Legion\" division_template = \"Azad Hind Legion\" start_experience_factor = 0.2 start_equipment_factor = 1 start_manpower_factor = 1"
 				owner = JAP
@@ -1299,15 +1277,5 @@ country_event = {
 				count = 6 
 			}
 		}
-
-
-	}
-
-	option = {
-		name = goe_japan.1.b
-		ai_chance = {
-			base = 0
-		}
-
 	}
 }
