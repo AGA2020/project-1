@@ -374,12 +374,6 @@ on_actions = {
 	on_startup = {
 
 		effect = {
-			RAJ = {
-				give_resource_rights = {
-					receiver = ENG
-					state = 288
-				}
-			}
 			ROM = {
 				create_corps_commander = { 
 					name = "Barbu Paraianu"
@@ -554,6 +548,12 @@ on_actions = {
 				}
 				999 = {
 					add_compliance = 35
+				}
+			}
+			RAJ = {
+				give_resource_rights = {
+					receiver = ENG
+					state = 288
 				}
 			}
 			FIN = {
