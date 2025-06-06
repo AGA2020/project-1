@@ -10,73 +10,10 @@ country_event = { #Guarantee Poland
 	picture = GFX_report_event_british_inspect_troops
 
 	trigger = {
-		OR = {
-			AND = {
-				original_tag = ENG
-				has_government = democratic
-				is_subject = no
-				NOT = { 
-					has_guaranteed = POL
-					is_in_faction_with = POL
-					has_war_with = POL
-					surrender_progress > 0.25
-					is_in_faction_with = GER
-					has_guaranteed = GER
-					has_war_with = GER
-				}
-				GER = {
-					has_added_tension_amount > 14
-					NOT = { #Don't guarantee Poland if they're budding up to the Germans
-						focus_progress = {
-						    focus = GER_danzig_for_slovakia
-						    progress > 0
-						}
-						is_in_faction_with = POL
-						has_subject = POL
-						has_war_with = POL
-					}
-					OR = {
-						has_completed_focus = GER_integrate_czechoslovakia
-						has_completed_focus = GER_fate_of_czechoslovakia
-						has_completed_focus = GER_reassert_eastern_claims
-					}
-				}
-			}
-			AND = {
-				NOT = {
-					ENG = { #France gotta step up if Britain faulters
-						has_government = democratic
-					}
-				}
-				original_tag = FRA
-				has_government = democratic
-				is_subject = no
-				NOT = { 
-					has_guaranteed = POL
-					is_in_faction_with = POL
-					has_war_with = POL
-					surrender_progress > 0.25
-					is_in_faction_with = GER
-					has_guaranteed = GER
-					has_war_with = GER
-				}
-				GER = {
-					has_added_tension_amount > 14
-					NOT = { #Don't guarantee Poland if they're budding up to the Germans
-						focus_progress = {
-						    focus = GER_danzig_for_slovakia
-						    progress > 0
-						}
-						is_in_faction_with = POL
-						has_subject = POL
-						has_war_with = POL
-					}
-					OR = {
-						has_completed_focus = GER_integrate_czechoslovakia
-						has_completed_focus = GER_fate_of_czechoslovakia
-						has_completed_focus = GER_reassert_eastern_claims
-					}
-				}
+		AND = {
+			original_tag = ENG
+			NOT = { 
+				has_guaranteed = POL
 			}
 		}
 	}
