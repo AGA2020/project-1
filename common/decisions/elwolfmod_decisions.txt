@@ -87,11 +87,7 @@ operations = {
 		fire_only_once = yes
 		cost = 0
 		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 1
-				SIA = { has_completed_focus = construction_effort_3 }
-			}
+			factor = 1
 		}
 		visible = {
 			tag = JAP
@@ -141,11 +137,7 @@ operations = {
 		fire_only_once = yes
 		cost = 0
 		ai_will_do = {
-			factor = 0
-			modifier = {
-				factor = 1
-				MAN = { has_completed_focus = MAN_expand_the_textile_industry }
-			}
+			factor = 1
 		}
 		visible = {
 			tag = JAP
