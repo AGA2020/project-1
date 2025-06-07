@@ -591,7 +591,7 @@ JAP_interservice_rivalry = {
 			}
 		}
 		cost = 30
-		fire_only_once = no
+		fire_only_once = yes
 		days_remove = -1
 		ai_will_do = {
 			factor = 1
@@ -654,7 +654,7 @@ JAP_interservice_rivalry = {
 			}
 		}
 		cost = 30
-		fire_only_once = no
+		fire_only_once = yes
 		days_remove = -1
 		ai_will_do = {
 			factor = 1
