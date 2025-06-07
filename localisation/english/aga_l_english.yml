@@ -1,5 +1,6 @@
 ﻿l_english:
-  quinine_advice:0 "§RYou can also use this if you’ve researched Field Hospital 1§!"
+  JAP_rivalry_cooldown:0 "The Imperial War Conference"
+  quinine_advice:0 "§RYou can also use this if you’ve researched Field Hospital§!"
   reset_allies_intel:0 "Reset Allies Intel"
   reset_axis_intel:0 "Reset Axis Intel"
   generalundertraining_aga_fin_paavo:0 "Complete Union Of Finnish Brothers In Arms Focus To Remove Stat Debuff"
