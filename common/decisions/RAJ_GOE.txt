@@ -454,7 +454,32 @@ RAJ_GOE_famine_cat = {
 		visible = { 
 			has_country_flag = RAJ_famine_has_started
 		}
-
+		available = {
+			OR = {
+				FROM = {
+					controller = {
+						tag = RAJ
+					}
+				}
+				divisions_in_state = {
+					state = FROM
+					size > 0
+				}
+			}
+		}
+		cancel_trigger = {
+			AND = {
+				FROM = {
+					controller = {
+						tag = RAJ
+					}
+				}
+				divisions_in_state = {
+					state = FROM
+					size < 1
+				}
+			}
+		}
 		days_remove = 950
 		complete_effect = {
 			custom_effect_tooltip = RAJ_black_markets_tt 
