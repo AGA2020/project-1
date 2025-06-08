@@ -808,7 +808,10 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
-			add_ideas = spiritual_mobilization_idea
+            swap_ideas = {
+                remove_idea = JAP_militarism
+                add_idea = JAP_militarism_shogunate
+            }
 			custom_effect_tooltip = peace_conference_spiritual_mob_modifier_japan
 		}
 	}
