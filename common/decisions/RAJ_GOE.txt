@@ -470,8 +470,10 @@ RAJ_GOE_famine_cat = {
 		cancel_trigger = {
 			AND = {
 				FROM = {
-					controller = {
-						tag = RAJ
+					NOT = {
+						controller = {
+							tag = RAJ
+						}
 					}
 				}
 				divisions_in_state = {
