@@ -6794,44 +6794,13 @@ focus_tree = {
 		relative_position_id = ITA_triumph_in_africa_bba
 		cost = 5
 
-		bypass = {
-			NOT = { has_country_flag = SUEZ_SANCTIONS_FLAG }
-			OR = {
-				NOT = { country_exists = ETH }
-				has_subject = ETH
-			}
-		} 
-
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = ITA_anglo_italian_agreements_suez_tt
-				OR = {
-					NOT = { has_country_flag = SUEZ_SANCTIONS_FLAG }
-					has_country_flag = { flag = SUEZ_SANCTIONS_FLAG days > 365 }
-				}
-			}
-
-			core_compliance = {
-				occupied_country_tag = ETH
-				value > 40
-			}
+			always = no
 		}
 
 		search_filters = {}
 
 		completion_reward = {
-			#Suez Canal access
-			if = {
-				limit = {
-					has_country_flag = SUEZ_SANCTIONS_FLAG
-				}
-				clr_country_flag = SUEZ_SANCTIONS_FLAG
-				custom_effect_tooltip = ITA_anglo_italian_agreements_suez_unlocked_tt
-			}
-
-			#Deescalation
-			add_to_variable = { ETH.ETH_war_escalation_level = -1 }
-			custom_effect_tooltip = ETH_war_deescalation_inc_tt
 		}
 	}
 
@@ -8916,24 +8885,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = ITA_pact_of_steel
 		cost = 5
-
-		available = {
-			is_in_faction_with = GER
-			GER = { 
-				controls_state = 16
-			}
-			custom_trigger_tooltip = {
-			 tooltip = ITA_claims_on_france_tt
-				any_other_country = {
-					original_tag = VIC
-					has_government = fascism
-					owns_state = 735
-					controls_state = 735
-					owns_state = 1
-					controls_state = 1
-				}
-			}
-		}
+		bypass= { always = yes }
 
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
