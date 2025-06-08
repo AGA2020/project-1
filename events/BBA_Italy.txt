@@ -16,7 +16,6 @@ add_namespace = BBA_italy_purge_the_party
 add_namespace = BBA_italy_recognize_the_empire
 add_namespace = BBA_italy_sends_military_support
 add_namespace = BBA_italy_democratic_events
-add_namespace = BBA_italy_anti_colonialism_events
 add_namespace = BBA_italy_interaction_events
 add_namespace = BBA_italy_interaction_events_news
 add_namespace = BBA_italy_council_deposes_duce
