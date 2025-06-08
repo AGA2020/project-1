@@ -7432,7 +7432,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_security_militias }
 		mutually_exclusive = { focus = ITA_strengthen_the_blackshirts }
 		x = -1
-		y = 2
+		y = 1
 		relative_position_id = ITA_security_militias
 		cost = 10
 
@@ -7500,7 +7500,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_battaglioni_d_assalto focus = ITA_strengthen_the_blackshirts }
 
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = ITA_battaglioni_d_assalto
 		cost = 10
 
@@ -8556,7 +8556,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_albanian_occupation }
 
 		x = -2
-		y = 1
+		y = 2
 		relative_position_id = ITA_albanian_occupation
 		cost = 5
 		available = {
