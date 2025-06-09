@@ -616,7 +616,7 @@ on_actions = {
                         is_in_faction_with = ENG
                     }
                 }
-                JAP = { country_event = { id = goe_japan.1 }
+                JAP = { country_event = { id = goe_japan.1 } }
                 every_country = {
                     limit = {
                         is_in_faction_with = ENG
@@ -706,7 +706,6 @@ on_actions = {
 				}
 			}
 		}
-
 	}	
 	on_naval_invasion = { 
 		effect ={  
