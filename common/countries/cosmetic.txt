@@ -847,3 +847,8 @@ RAJ_azad_hind = {
 	color = rgb { 250 65 86 }
 	color_ui = rgb { 250 65 86 }
 }
+
+BRM_british = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
