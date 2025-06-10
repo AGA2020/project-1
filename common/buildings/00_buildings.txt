@@ -235,6 +235,7 @@ buildings = {
 		#local_resources_oil = 1 # May use local_resources_ + any resource name
 		local_resources_rubber = 1 # May use local_resources_ + any resource name
 		refinery = yes
+		damage_factor = 0.01
 		value = 5
 		infrastructure_construction_effect = yes
 		
