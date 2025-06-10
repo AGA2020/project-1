@@ -2672,7 +2672,14 @@ focus_tree = {
 		relative_position_id = ITA_steel_industry_in_terni
 		cost = 5
 		available = {
-			num_of_owned_factories > 80
+			OR = {
+				AND = {
+					num_of_owned_factories > 80
+					YUG = { has_capitulated = yes }
+				}
+				num_of_owned_factories > 90
+				has_tech = synth_oil_experiments
+			}
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
