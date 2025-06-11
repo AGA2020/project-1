@@ -1332,7 +1332,7 @@ political_actions = {
 		available = {
 			has_war = yes
 			NOT = { NOR = { is_in_faction_with = ENG } }
-			date>1940.1.1
+			date>1940.7.1
 		}
 
 		cost = 0
