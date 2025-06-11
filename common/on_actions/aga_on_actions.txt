@@ -761,12 +761,12 @@ on_actions = {
 		effect ={  
 			if = { 
 				limit = {
-					AND = { 
-						state = 114
+					state = 114
+					OR = { 
+						ITA = { controls_state = 448 } 
 						ITA = { controls_state = 449 } 
 						ITA = { controls_state = 450 }
 						ITA = { controls_state = 451 }
-						ITA = { controls_state = 661 }  
 					}
 				} 
 				teleport_armies = {
