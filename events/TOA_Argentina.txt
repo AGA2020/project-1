@@ -7,21 +7,6 @@ add_namespace = ARG_news_events
 add_namespace = ARG_political_events
 
 
-# Argentina backs down
-country_event = {
-	id = ARG_political_events.23
-	title = ARG_political_events.23.t
-	desc = ARG_political_events.23.desc
-	picture = GFX_report_event_generic_read_write 
-	is_triggered_only = yes
-	option = {
-		name = ARG_political_events.23.a
-		ai_chance = {
-			base = 10
-		}
-	}	
-}
-
 # Reach Out To Chile
 country_event = {
 	id = ARG_political_events.24
