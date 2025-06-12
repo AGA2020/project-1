@@ -347,7 +347,6 @@ operations = {
 			RAJ
 		}
 		complete_effect = {
-               hidden_effect = { set_global_flag = { flag = annex value = 0 } }
 			RAJ = {
 				transfer_units_fraction = {
 					target = ENG
