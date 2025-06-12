@@ -180,7 +180,11 @@ operations = {
 	annex_new_zealand = {
 		# icon = generic_operation
 		allowed = {
-			tag = AST
+			OR = {
+				tag = AST
+				tag = RAJ
+				tag = ENG
+			}
 		}
 		fire_only_once = yes
 		cost = 0
@@ -198,7 +202,7 @@ operations = {
 		complete_effect = {
 			NZL = {
 				transfer_units_fraction = {
-					target = AST
+					target = ROOT
 					size = 1
 					stockpile_ratio = 1
 					army_ratio = 1
@@ -209,7 +213,7 @@ operations = {
 					}
 				}
 			}
-			AST = {
+			ROOT = {
 				annex_country = {
 					target = NZL
 					transfer_troops = yes
@@ -218,56 +222,9 @@ operations = {
 			every_state = {
 				limit = {
 					is_core_of = NZL
-					is_controlled_by = AST
+					is_controlled_by = ROOT
 				}
-				add_core_of = AST
-			}
-		}
-	}
-	annex_new_zealand_2 = {
-		# icon = generic_operation
-		allowed = {
-			tag = ENG
-		}
-		fire_only_once = yes
-		cost = 0
-		ai_will_do = {
-			factor = 0
-		}
-		available = {
-			AST = {
-				is_ai = yes
-			}
-		}
-		targets = {
-			NZL
-		}
-		complete_effect = {
-			NZL = {
-				transfer_units_fraction = {
-					target = ENG
-					size = 1
-					stockpile_ratio = 1
-					army_ratio = 1
-					navy_ratio = 1
-					air_ratio = 1
-					keep_unit_leaders_trigger = {
-						always = no
-					}
-				}
-			}
-			ENG = {
-				annex_country = {
-					target = NZL
-					transfer_troops = yes
-				}
-			}
-			every_state = {
-				limit = {
-					is_core_of = NZL
-					is_controlled_by = ENG
-				}
-				add_core_of = ENG
+				add_core_of = ROOT
 			}
 		}
 	}
@@ -423,7 +380,10 @@ operations = {
 	annex_australia = {
 		# icon = generic_operation
 		allowed = {
-			tag = ENG
+			OR = {
+				tag = ENG
+				tag = RAJ
+			}
 		}
 		fire_only_once = yes
 		cost = 0
@@ -439,10 +399,9 @@ operations = {
 			AST
 		}
 		complete_effect = {
-			set_global_flag = eng_annexed_ast
 			AST = {
 				transfer_units_fraction = {
-					target = ENG
+					target = ROOT
 					size = 1
 					stockpile_ratio = 1
 					army_ratio = 1
@@ -453,7 +412,7 @@ operations = {
 					}
 				}
 			}
-			ENG = {
+			ROOT = {
 				annex_country = {
 					target = AST
 					transfer_troops = yes
@@ -462,9 +421,9 @@ operations = {
 			every_state = {
 				limit = {
 					is_core_of = AST
-					is_controlled_by = ENG
+					is_controlled_by = ROOT
 				}
-				add_core_of = ENG
+				add_core_of = ROOT
 			}
 		}
 	}
