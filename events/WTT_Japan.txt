@@ -1248,7 +1248,33 @@ country_event = {
 			idea = idea_RAJ_azad_hind_fervor
 			days = 70
 		}
-
+		if = {
+			limit = {
+				275 = { is_core_of = RAJ }
+			}
+			modify_timed_idea = {
+		    idea = idea_RAJ_azad_hind_fervor
+		    days = 70
+			}
+		}
+		if = {
+			limit = {
+				285 = { is_core_of = RAJ }
+			}
+			modify_timed_idea = {
+		    idea = idea_RAJ_azad_hind_fervor
+		    days = 70
+			}
+		}
+		if = {
+			limit = {
+				284 = { is_core_of = RAJ }
+			}
+			modify_timed_idea = {
+		    idea = idea_RAJ_azad_hind_fervor
+		    days = 70
+			}
+		}
 		division_template = {
 			name = "Azad Hind Legion"
 			is_locked = no
