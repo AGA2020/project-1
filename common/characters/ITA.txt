@@ -2477,7 +2477,7 @@ characters = {
 		name = ITA_mario_ricci
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_mario_ricci
+				small = GFX_portrait_ITA_mario_ricci_small
 				large = GFX_portrait_ITA_mario_ricci
 			}
 		}
@@ -2507,7 +2507,7 @@ characters = {
 		name = ITA_norma_barbolini
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_norma_barbolini
+				small = GFX_portrait_ITA_norma_barbolini_small
 				large = GFX_portrait_ITA_norma_barbolini
 			}
 		}
@@ -2539,12 +2539,10 @@ characters = {
 		name = ITA_ada_gobetti
 		portraits = {
 			army = {
-				small = GFX_BBA_idea_ita_ada_gobetti
+				small = GFX_portrait_ITA_ada_gobetti_small
 				large = GFX_portrait_ITA_ada_gobetti
 			}
-		}
- 
-		
+		}	
 	}
 
 	ITA_pompeo_colajanni = {
