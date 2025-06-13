@@ -6692,6 +6692,7 @@ ai_will_do = {
 						NOT = { GER = { controls_state = 14 } }
 						NOT = { GER = { controls_state = 7 } }
 					}
+					ITA = { surrender_progress < 0.1 }
 				}
 				AND = {
 					ENG = { is_ai = yes }
