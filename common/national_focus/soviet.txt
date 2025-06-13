@@ -6706,6 +6706,11 @@ ai_will_do = {
 		
 		completion_reward = {
 			add_country_leader_trait = GER_sword_of_islam_trait
+			hidden_effect = { 
+				set_country_leader_portrait = {
+				portrait = GFX_muslim_stalin
+				}
+			}
 		}
 	}
 
