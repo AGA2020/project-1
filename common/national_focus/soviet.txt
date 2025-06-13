@@ -6680,6 +6680,20 @@ ai_will_do = {
 		available = {
 			OR = {
 				AND = {
+					has_war = yes
+					USA = { 
+						casualties_inflicted_by = {
+					    opponent = GER
+					    thousands > 1000
+						} 
+					}
+					OR = {
+						NOT = { GER = { controls_state = 16 } }
+						NOT = { GER = { controls_state = 14 } }
+						NOT = { GER = { controls_state = 7 } }
+					}
+				}
+				AND = {
 					ENG = { is_ai = yes }
 					USA = { is_ai = yes }
 				}
