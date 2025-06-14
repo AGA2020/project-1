@@ -1050,7 +1050,9 @@ characters={
 				original_tag = JAP
 			}
 			available = {
-				has_war = yes
+						custom_trigger_tooltip = {
+							tooltip = jap_deploy_warning
+						}
 				has_completed_focus = JAP_army_expansion
 			}
 			traits = {
