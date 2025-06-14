@@ -748,37 +748,6 @@ on_actions = {
 	            }
 	        }
 	    }
-
-	    # Launches an event for Germany that recalls their attaché to the Soviets
-	    effect = {
-	    	IF = { 
-	    		limit = {
-    				OR = {
-    					AND = {
-    						tag = GER
-    						FROM = { tag = SOV }
-    					}
-    					AND = {
-    						tag = SOV
-    						FROM = { tag = GER }
-    					}
-    				}
-    				GER = {
-    					has_government = fascism
-    					has_civil_war = no
-    				}
-	    		}
-	    		hidden_effect = {
-	    			GER = { 
-	    				country_event = {
-	    					id = wuw_GER_legions.2
-	    					hours = 4
-	    				}	
-	    			}
-	    		}
-	    	}
-	    }
-
 	}
 
 	on_startup = {
