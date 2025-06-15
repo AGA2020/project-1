@@ -133,3 +133,18 @@ DIPLOMACY_WAR_ENABLE_TRIGGER = {
 		} 
 	}
 }
+
+DIPLOMACY_GENERATE_WARGOAL_ENABLE_TRIGGER = {
+	custom_trigger_tooltip = {
+		tooltip = dont_rulebreakyoudumbass 
+		if = {
+			limit = {
+				AND = {
+					date<1942.1.1
+					tag = SOV
+				}
+			}
+			date>1942.1.1
+		}
+	}
+}
