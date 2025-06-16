@@ -880,14 +880,14 @@ GER_operational_planning_category = {
 				OR = {
 					ENG = { controls_state = 6 }
 					any_other_country = {
-						is_in_faction_with = GER
+						is_in_faction_with = ENG
 						controls_state = 6
 					}
 				}
 				OR = {
 					ENG = { controls_state = 7 }
 					any_other_country = {
-						is_in_faction_with = GER
+						is_in_faction_with = ENG
 						controls_state = 7
 					}
 				}
@@ -895,7 +895,7 @@ GER_operational_planning_category = {
 			OR = {
 				ENG = { controls_state = 16 }
 				any_other_country = {
-					is_in_faction_with = GER
+					is_in_faction_with = ENG
 					controls_state = 16
 				}
 			}
