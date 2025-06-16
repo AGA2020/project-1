@@ -277,6 +277,13 @@ create_equipment_variant = {
 	design_team = mio:USA_springfield_armory_organization
 }
 
+create_equipment_variant = {
+    name = "Heavy 1"
+    type = heavy_tank_chassis_1
+    allow_without_tech = yes
+    parent_version = 0
+}
+
 if = {
 	limit = { has_dlc = "La Resistance" }
 	create_operative_leader = {
