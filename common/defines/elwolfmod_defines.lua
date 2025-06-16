@@ -24,7 +24,7 @@ NDefines.NGame.MESSAGE_TIMEOUT_DAYS = 14					     	    -- WAS 60 | less messages
 NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP = "elwolfmod"
 NDefines_CareerProfile.NCareerProfile.MOD_STATISTICS_GROUP_NAME = "elwolfmod"
 
-NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 9000						    -- Unlimited special forces
+NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 9999						    -- Unlimited special forces
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.00                        -- Unlimited special forces
 NDefines.NCountry.AIR_SUPPLY_CONVERSION_SCALE = 0.03                    -- vanilla 0.01 3x more supply through air
 NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0.5			    -- Volunteer shit to prevent 2w spam
