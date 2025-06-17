@@ -689,10 +689,6 @@ unit_leader_event = {
 		hidden_effect = {
 			random_army_leader = {
 				limit = {
-					NOT = { is_character = SOV_georgy_zhukov }
-					NOT = { is_character = SOV_konstantin_rokossovsky }
-					NOT = { is_character = SOV_markian_popov }
-
 					has_character_flag = SOV_purge_accused_flag
 				}
 
