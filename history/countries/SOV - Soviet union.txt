@@ -1396,7 +1396,7 @@ SOV_konstantin_rokossovsky = {
 SOV_leonid_govorov = {
 	set_character_flag = SOV_safe_from_purge_flag
 }
-SOV_grigory_semyonov = {
+SOV_semyon_budyonny = {
 	set_character_flag = SOV_safe_from_purge_flag
 }
 # 1939 Start #
