@@ -276,7 +276,7 @@ country_event = {
 	id = aga.247
 	title = aga.247.t
 	desc = aga.247.d
-	picture = GFX_report_event_generic_read_write
+	picture = GFX_readnword
 	
 	trigger = {
 		tag = ROM

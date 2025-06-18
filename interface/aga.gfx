@@ -5,6 +5,10 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_ardennes_offensive.dds"
 	}
 	SpriteType = {
+		name = "GFX_readnword"
+		texturefile = "gfx/event_pictures/readnwordread.dds"
+	}
+	SpriteType = {
 		name = "GFX_muslim_stalin"
 		texturefile = "gfx/leaders/SOV/Portrait_muslim_stalin.dds"
 	}
