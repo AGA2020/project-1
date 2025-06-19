@@ -532,7 +532,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 9999
+			factor = 0
 		}
 
 		cancel_if_invalid = yes
@@ -710,7 +710,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 9999
+			factor = 0
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -965,7 +965,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 9999
+			factor = 0
 		}
 
 		cancel_if_invalid = yes
@@ -1534,7 +1534,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1571,7 +1571,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		cancel_if_invalid = yes
@@ -1615,7 +1615,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		cancel_if_invalid = yes
@@ -1646,7 +1646,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		cancel_if_invalid = yes
@@ -1677,7 +1677,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		cancel_if_invalid = yes
@@ -1709,7 +1709,7 @@
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		cancel_if_invalid = yes
