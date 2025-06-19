@@ -7296,7 +7296,10 @@ focus_tree = {
 					check_variable = { GER_occupied_states_europe > 49 }
 				}
 			}
-			SOV = { has_capitulated = yes }
+			custom_trigger_tooltip = { 
+				tooltip = GER_the_supreme_leader_trigger
+				check_variable = { GER_capitulated_major_countries > 2 }
+			}
 		}
 
 		search_filters = {}
