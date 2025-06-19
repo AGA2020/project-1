@@ -96,11 +96,17 @@ focus_tree = {
 				}
 			}
 
-			add_dynamic_modifier = {
-				modifier = ITA_italian_highways_modifier
-				scope = ITA
-				days = 365
-			}	
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+				}
+				add_dynamic_modifier = {
+					modifier = ITA_italian_highways_modifier
+					scope = ITA
+					days = 365
+				}
+			}
 		}
 	}
 
