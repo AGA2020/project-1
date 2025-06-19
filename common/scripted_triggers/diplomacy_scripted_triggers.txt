@@ -585,6 +585,10 @@ DIPLOMACY_MILACC_ENABLE_TRIGGER = {
 			always = no
 		}
 	}
+	custom_trigger_tooltip = {
+		tooltip = dont_rulebreakmilaccess 
+		NOT = { tag = SOV }
+	}
 }
 DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
 	if = {
@@ -619,6 +623,10 @@ DIPLOMACY_OFFER_MILACC_ENABLE_TRIGGER = {
 			tooltip = RULE_ALLOW_MILITARY_ACCESS_BLOCKED_TT
 			always = no
 		}
+	}
+	custom_trigger_tooltip = {
+		tooltip = dont_rulebreakmilaccess 
+		NOT = { tag = SOV }
 	}
 }
 DIPLOMACY_DOCKING_RIGHTS_ENABLE_TRIGGER = {
