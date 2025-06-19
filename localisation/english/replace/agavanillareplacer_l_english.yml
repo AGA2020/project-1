@@ -1,4 +1,5 @@
 ﻿l_english:
+  greater_italy_required_other_states:0 "Italy or Germany control \n§YTicino§! \n§YCorsica§! \n§YSavoy§! \n§YZara§! \n§YDalmatia§! \n§YLjubljana§! \n§YMalta§! \n§YCrete§! \n§YDodecaneso§!"
   USA_research_grants:0 "Research Grants [GetResearchGrantsCooldown]"
   USA_research_grants_cooldown:0 "Cooldown Countdown: [?USA_research_grants_cooldown:days|Y0"]"
   USA_research_grants_cooldown_title:0 "Cooldown Countdown: [?USA_research_grants_cooldown:days|Y0"]/245"

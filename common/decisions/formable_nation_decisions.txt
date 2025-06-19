@@ -18,11 +18,7 @@ form_greater_german_reich_category = {
 		}
 
 		visible = {
-			AND = {
-				original_tag = GER
-				has_government = fascism
-				has_country_leader = { ruling_only = yes character = GER_adolf_hitler }
-			}
+			original_tag = GER
 			NOT = { has_global_flag = form_greater_german_reich_flag }
 			OR = {
 				AND = {
@@ -90,100 +86,30 @@ greater_italy_category = {
 				tooltip = greater_italy_required_other_states 
 				AND = {
 					OR = {
-						ITA = { 
-						controls_state = 1 # Corsica 
-						}
-						any_country = {
-							is_subject_of = ITA
-							controls_state = 1 # Corsica
-						}
+						ITA = { controls_state = 1 }
+						GER = { controls_state = 1 }
 					}
+					ITA = { controls_state = 846 }
 					OR = {
-						ITA = { 
-						controls_state = 846 # Ticino 
-						}
-						any_country = {
-							is_subject_of = ITA
-							controls_state = 846 # Ticino
-						}
+						ITA = { controls_state = 735 }
+						GER = { controls_state = 735 }
 					}
+					ITA = { controls_state = 163 }
+					ITA = { controls_state = 103 }
+					ITA = { controls_state = 853 }
 					OR = {
-						ITA = { 
-						controls_state = 735 # Savoy 
-						}
-						any_country = {
-							is_subject_of = ITA
-							controls_state = 735 # Savoy
-						}
+						ITA = { controls_state = 116 }
+						GER = { controls_state = 116 }
 					}
-					OR = {
-						ITA = { 
-						controls_state = 163 # Zara 
-						}
-						any_country = {
-							is_subject_of = ITA
-							controls_state = 163 # Zara
-						}
-					}
-					OR = {
-						ITA = { 
-						controls_state = 103 # Dalmatia 
-						}
-						any_country = {
-							is_subject_of = ITA
-							controls_state = 103 # Dalmatia
-						}
-					}
-					OR = {
-						ITA = { 
-						controls_state = 853 # Ljubljana 
-						}
-						any_country = {
-							is_subject_of = ITA
-							controls_state = 853 # Ljubljana
-						}
-					}
-					OR = {
-						ITA = { 
-						controls_state = 116 # Malta 
-						}
-						any_country = {
-							is_subject_of = ITA
-							controls_state = 116 # Malta
-						}
-					}
-					OR = {
-						ITA = { 
-						controls_state = 182 # Crete 
-						}
-						any_country = {
-							is_subject_of = ITA
-							controls_state = 182 # Crete
-						}
-					}
-					OR = {
-						ITA = { 
-						controls_state = 164 # Dodecaneso 
-						}
-						any_country = {
-							is_subject_of = ITA
-							controls_state = 164 # Dodecaneso
-						}
-					}
+					ITA = { controls_state = 182 }
+					ITA = { controls_state = 164 }
 				}
 			}
-			
-			
-			
 		}
 
 		visible = {
-			OR = {
-				original_tag = ITA # Italy
-			}
-			
-			NOT = { has_global_flag = greater_italy_flag }
-			
+			original_tag = ITA
+			NOT = { has_global_flag = greater_italy_flag }	
 		}
 
 		complete_effect = {
