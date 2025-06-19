@@ -324,7 +324,7 @@
 	focus = {
 		id = NZL_expand_the_nzpaf
 		icon = GFX_goal_generic_air_doctrine
-		x = 18
+		x = 13
 		y = 0
 
 		cost = 10
@@ -338,52 +338,29 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				create_equipment_variant = {
-					name = "Bristol Blenheim"
-					type = medium_plane_airframe_1
-					allow_without_tech = yes #Allowing since it comes from the UK
-					modules = {
-						fixed_main_weapon_slot = medium_bomb_bay
-						fixed_auxiliary_weapon_slot_1 = torpedo_mounting
-						fixed_auxiliary_weapon_slot_2 = bomb_locks
-						engine_type_slot = engine_3_2x
-						special_type_slot_1 = empty
-					}
-					icon = "GFX_ENG_tactical_bomber1_medium"
+			create_equipment_variant = {
+				name = "Bristol Blenheim"
+				type = medium_plane_airframe_1
+				allow_without_tech = yes #Allowing since it comes from the UK
+				modules = {
+					fixed_main_weapon_slot = medium_bomb_bay
+					fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+					fixed_auxiliary_weapon_slot_2 = bomb_locks
+					engine_type_slot = engine_3_2x
+					special_type_slot_1 = empty
 				}
-				add_equipment_to_stockpile = {
-					type = medium_plane_airframe_1
-					producer = ENG
-					amount = 116
-					variant_name = "Bristol Blenheim"
-				}
+				icon = "GFX_ENG_tactical_bomber1_medium"
 			}
-			else = {
-				add_equipment_to_stockpile = {
-					type = nav_bomber_equipment_1
-					amount = 56
-					producer = ENG
-				}
-				
-				if = {
-					limit = {
-						ENG = { has_tech = tactical_bomber1 }
-					}
-					add_equipment_to_stockpile = {
-						type = tac_bomber_equipment_1
-						amount = 30
-						producer = ENG
-					}
-					else = {
-						add_equipment_to_stockpile = {
-							type = tac_bomber_equipment_0
-							amount = 30
-							producer = ENG
-						}	
-					}
-				}
+			add_equipment_to_stockpile = {
+				type = medium_plane_airframe_1
+				producer = ENG
+				amount = 116
+				variant_name = "Bristol Blenheim"
+			}
+			add_equipment_subsidy = {
+				cic = 1000
+				equipment_type = medium_plane_airframe
+				seller_tags = { ENG }
 			}
 		}
 	}
@@ -617,7 +594,7 @@
 	focus = {
 		id = NZL_national_roads_board
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 12
+		x = 17
 		y = 0
 
 		cost = 10
@@ -884,7 +861,7 @@
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = NZL_heavy_bombers focus = NZL_modern_fighters }
 		prerequisite = { focus = NZL_department_of_scientific_and_industrial_research }
-		x = 0
+		x = -2
 		y = 4
 		relative_position_id = NZL_national_roads_board
 
@@ -1224,7 +1201,7 @@
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = NZL_big_bob_tank }
 		prerequisite = { focus = NZL_think_big }
-		x = -3
+		x = -2
 		y = 5
 		relative_position_id = NZL_army_reforms
 
