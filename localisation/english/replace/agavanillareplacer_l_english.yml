@@ -1,4 +1,8 @@
 ﻿l_english:
+  AAT_norway_news.2.t: "Queen Fear of Azerbaijan has died"
+  AAT_norway_news.2.desc: "While on a visit to Turkey to see her sugar daddy, Queen Fear of Azerbaijan has died of viagra overdose. Annex Soviet Build seems to be the culprit.\n\nShe was a beloved figure in Azerbaijan, and will surely be missed by her sugar daddy and her husband Faso, the king of Safari."
+  AAT_norway_news.2.a: "Geber Mk Azerisi"
+  AAT_norway_news.2.b: "Sikemeden öldü"
   greater_italy_required_other_states:0 "Italy or Germany control \n§YTicino§! \n§YCorsica§! \n§YSavoy§! \n§YZara§! \n§YDalmatia§! \n§YLjubljana§! \n§YMalta§! \n§YCrete§! \n§YDodecaneso§!"
   USA_research_grants:0 "Research Grants [GetResearchGrantsCooldown]"
   USA_research_grants_cooldown:0 "Cooldown Countdown: [?USA_research_grants_cooldown:days|Y0"]"
