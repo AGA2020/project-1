@@ -4117,18 +4117,17 @@ operations = {
                         }
                     }
                 }
+                every_state = {
+                    limit = {
+                        is_core_of = BUL
+                    }
+                    add_core_of = GER
+                }
                 GER = {
                     annex_country = {
                         target = BUL
                         transfer_troops = yes
                     }
-                }
-                every_state = {
-                    limit = {
-                        is_core_of = BUL
-                        is_controlled_by = GER
-                    }
-                    add_core_of = GER
                 }
                 if = {
                     limit = {
