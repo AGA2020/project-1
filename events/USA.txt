@@ -219,11 +219,7 @@ country_event = {
 			factor = 75
 		}		
 		add_ideas = new_deal
-		set_variable_to_random = {
-		    var = election_factor
-		    min = 0.3
-		    max = 0.7
-		}
+		set_variable = { election_factor = 0.5 }
 		add_to_variable = { election_factor = -0.5 }
 		USA_election_senate = yes
 		USA_election_house = yes
@@ -237,11 +233,7 @@ country_event = {
 			factor = 0
 		}		
 		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
-		set_variable_to_random = {
-		    var = election_factor
-		    min = 0.3
-		    max = 0.7
-		}
+		set_variable = { election_factor = 0.6 }
 		add_to_variable = { election_factor = -0.6 }
 		USA_election_senate = yes
 		USA_election_house = yes
@@ -1050,22 +1042,14 @@ country_event = {
 	immediate = {
 		random_list = {
 			50 = {
-				set_variable_to_random = {
-				    var = election_factor
-				    min = 0.3
-				    max = 0.7
-				}
+				set_variable = { election_factor = 0.6 }
 				add_to_variable = { election_factor = -0.6 }
 				USA_election_senate = yes
 				USA_election_house = yes
 				country_event = usa.30
 			}
 			50 = {
-				set_variable_to_random = {
-				    var = election_factor
-				    min = 0.3
-				    max = 0.7
-				}
+				set_variable = { election_factor = 0.3 }
 				add_to_variable = { election_factor = -0.3 }
 				USA_election_senate = yes
 				USA_election_house = yes
