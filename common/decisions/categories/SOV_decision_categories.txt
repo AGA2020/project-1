@@ -177,20 +177,6 @@ SOV_national_academy_of_sciences_dec_cat = {
 	}
 }
 
-SOV_merge_designers_dec_cat = {
-	priority = 28
-
-	icon = SOV_merge_designers
-
-	allowed = {
-		original_tag = SOV
-	}
-
-	visible = {
-		has_civil_war = no
-	}
-}
-
 SOV_kill_trotsky_dec_cat = {
 	priority = 9
 
