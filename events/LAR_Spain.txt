@@ -7723,7 +7723,7 @@ country_event = {
 		custom_effect_tooltip = lar_spain.18.a_tt
 		hidden_effect = {			
 			add_days_remove  = {
-			    decision = SPR_military_plot_republicans
+			    decision = SPA_military_plot_nationalists
 			    days = -180
 			}
 		}
