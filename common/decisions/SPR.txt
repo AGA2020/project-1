@@ -137,6 +137,14 @@ SPR_the_inevitable_civil_war = {
 				}
 				set_country_flag = SPR_primo_de_rivera_first_speech
 			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = notcausing37incident }
+					}
+					set_country_flag = notcausing37incident
+				}
+			}
 		}
 
 	}
@@ -243,6 +251,14 @@ SPR_the_inevitable_civil_war = {
 			}
 			clr_country_flag = SPR_inevitable_civil_war_in_progress_flag
 			set_country_flag = SPA_political_assassination_flag
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_flag = notcausing37incident }
+					}
+					set_country_flag = notcausing37incident
+				}
+			}
 		}
 
 	}

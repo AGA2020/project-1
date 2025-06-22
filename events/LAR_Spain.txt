@@ -7720,8 +7720,16 @@ country_event = {
 	
 	option = {
 		name = lar_spain.18.a
+		add_ideas = SPA_awaiting_the_rebellion
 		custom_effect_tooltip = lar_spain.18.a_tt
-		hidden_effect = { country_event = { id = lar_spain.2 } }
+		hidden_effect = { 
+			if = {
+				limit = {
+					NOT = { has_country_flag = notcausing37incident }
+				}
+				country_event = { id = lar_spain.2 } 
+			}
+		}
 	}
 }
 # Portuguese Aid - Event for Portugal
