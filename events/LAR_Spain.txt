@@ -7722,8 +7722,8 @@ country_event = {
 		name = lar_spain.18.a
 		custom_effect_tooltip = lar_spain.18.a_tt
 		hidden_effect = {			
-			add_days_remove  = {
-			    decision = SPA_military_plot_nationalists
+			add_days_mission_timeout  = {
+			    mission = SPA_military_plot_nationalists
 			    days = -180
 			}
 		}
