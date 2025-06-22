@@ -3990,6 +3990,7 @@ country_event = {
 			add_country_leader_trait = socialist_modernizer
 			add_country_leader_trait = top_down_heavy_policies
 		}
+		hidden_effect = { set_occupation_law = autonomous_occupation }
 	}
 
 	#Gandhi
