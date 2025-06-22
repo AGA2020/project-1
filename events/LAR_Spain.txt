@@ -7721,7 +7721,12 @@ country_event = {
 	option = {
 		name = lar_spain.18.a
 		custom_effect_tooltip = lar_spain.18.a_tt
-		hidden_effect = { country_event = { id = lar_spain.2 } }
+		hidden_effect = {			
+			add_days_remove  = {
+			    decision = SPR_military_plot_republicans
+			    days = -180
+			}
+		}
 	}
 }
 # Portuguese Aid - Event for Portugal
