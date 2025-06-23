@@ -6419,7 +6419,12 @@ focus_tree = {
 				has_civil_war = yes
 			}	
 		}
-		
+		available = {        
+			has_game_rule = {
+            	rule = anti_fascist
+            	option = on
+        	}
+        }
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {

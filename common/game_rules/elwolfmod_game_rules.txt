@@ -51,19 +51,19 @@ max_submarine_tech = {
 	}
 }
 
-free_collabs = {
-	name = "Free Collabs"
+anti_fascist = {
+	name = "Anti Fascist(Soviet %10 Stat)"
 	group = "elwolfmod Rules"
 	icon = "GFX_decision_eng_trade_unions_support"
 	option = {
 		name = on
 		text = "ROn"
-		desc = "Italy free compliance on greece/yugo and Japan free compliance on China (Not Reccomended)"
+		desc = "Soviet Can Select Anti-Fascist Focuses (%10 Stat)"
 	}
 	default = {
 		name = off
 		text = "GOff"
-		desc = "Countries need to do their own collaboration governments (Reccomended)"
+		desc = "Soviet Can't Select Anti-Fascist Focuses (%10 Stat)"
 	}
 }
 
