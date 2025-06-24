@@ -16,7 +16,12 @@ country_event = { #Guarantee Poland
 				has_guaranteed = POL
 			}
 		}
-		GER = { has_war_with = POL }
+		GER = {
+			has_added_tension_amount > 14
+			NOT = { #Don't guarantee Poland if they're budding up to the Germans
+				has_war_with = POL
+			}
+		}
 	}
 
 	fire_only_once = yes
