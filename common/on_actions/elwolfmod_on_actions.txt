@@ -212,15 +212,6 @@ on_actions = {
 	}
 	on_capitulation = {
 		effect = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = free_collabs
-						option = on
-					}
-				}
-				elwolfmod_capitulations_on_actions_collab = yes
-			}
 			elwolfmod_capitulations_on_actions = yes
 		}
 	}

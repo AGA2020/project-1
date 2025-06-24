@@ -97,12 +97,6 @@ elwolfmod_capitulations_on_actions = {
 			ENG = {
 				has_idea = elwolfmod_noasia_research
 			}
-			NOT = {
-				has_game_rule = {
-					rule = free_collabs
-					option = on
-				}
-			}
 		}
 
 		WST = {
@@ -363,123 +357,6 @@ elwolfmod_capitulations_on_actions = {
 		}
 	}
 
-}
-elwolfmod_capitulations_on_actions_collab = {
-
-	# Yugoslavia
-	if = {
-		limit = { 
-			original_tag = YUG 
-			ITA = { has_war_with = YUG }
-		} 
-		YUG = {
-			transfer_navy = { target = ITA }
-		}
-		ITA = {
-			if = {
-				limit = {
-					ENG = {
-						has_idea = elwolfmod_noasia_research
-					}
-				}
-				WST = { add_threat = 40 }
-				add_named_threat = { 
-					threat = 6.3 
-					name = elwolf_yug
-				}
-			} 
-			else = {
-				add_named_threat = { 
-					threat = 6.3 
-					name = elwolf_yug
-				}
-			}
-			
-			transfer_state = 103
-			transfer_state = 102
-			transfer_state = 104
-			transfer_state = 105
-			transfer_state = 109
-			transfer_state = 107
-			transfer_state = 108
-			transfer_state = 802
-			transfer_state = 804
-            transfer_state = 853
-			every_state = {
-                limit = {
-                    is_core_of = YUG
-                    is_controlled_by = ITA
-                }
-                add_compliance = 100
-		    }
-		}
-		BUL = {
-			transfer_state = 106
-			add_state_core = 106
-			transfer_state = 803
-			add_state_core = 803
-			if = {
-				limit = { NOT = { has_idea = peace_training } }
-				add_ideas = peace_training
-			}
-		}
-		HUN = {
-			transfer_state = 764
-			add_state_core = 764
-			transfer_state = 45
-			add_state_core = 45
-			add_ideas = peace_training
-		}
-	} 
-	# Greece
-	if = {
-		limit = { 
-			original_tag = GRE 
-			ITA = { has_war_with = GRE }
-		} 
-		GRE = {
-			transfer_navy = { target = ITA }
-		}
-		BUL = {
-			add_named_threat = { 
-				threat = 3.7 
-				name = elwolf_gre
-			}
-			annex_country = {
-				target = GRE
-				transfer_troops = no
-			}
-		}
-	} 
-	# China
-	if = {
-		limit = { 
-			original_tag = CHI
-			JAP = { has_war_with = CHI }
-		} 
-		
-		CHI = {
-			transfer_navy = { target = JAP }
-		}
-
-		JAP = {
-			add_named_threat = { 
-				threat = 11.9
-				name = elwolf_chi
-			}
-			annex_country = {
-				target = CHI
-				transfer_troops = no
-			}
-            every_state = {
-                limit = {
-                    is_core_of = CHI
-                    is_controlled_by = JAP
-                }
-                add_compliance = 100
-		    }
-		}
-	}
 }
 
 generic_bonus_1 = {
