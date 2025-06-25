@@ -41,16 +41,6 @@ every_possible_country = {
 	limit = {
 		original_tag = MAN
 	}
-	generate_character = {
-		token_base = generic_war_industrialist # token will be TAG_token_base
-		advisor = {
-			slot = political_advisor
-			traits = { war_industrialist }
-		}
-		portraits = { 
-			army = { small = GFX_idea_generic_war_industrialist }
-		}
-	}
 	generate_character = { #Apparently MAN needs this to get an Illusive Gentleman with the new character sytem
 		token_base = generic_head_of_intelligence # token will be TAG_token_base
 		advisor = {

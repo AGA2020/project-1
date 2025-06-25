@@ -459,12 +459,27 @@ characters={
 		}
 	}
 
+	MAN_naoki_hoshino = {
+		name = MAN_naoki_hoshino
+		portraits={
+			civilian={
+				small = "gfx/interface/ideas/idea_generic_political_advisor_asia_3.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MAN_naoki_hoshino
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				war_industrialist
+			}
+		}
+	}
 	### POLITICAL ADVISORS ###
 
 	# Girgory Semyonov in Soviet file
-	# Generic Captain of Industry generated in generic_advisors file
-	# Generic Fortification Engineer generated in generic_advisors file
-	# Generic War Industrialist generated in generic_advisors file
 
 
 }
