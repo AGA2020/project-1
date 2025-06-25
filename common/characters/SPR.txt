@@ -134,28 +134,6 @@ characters={
 				small="GFX_idea_generic_air_europe_3"
 			}
 		}
-		advisor={
-			cost = 100
-			slot = theorist
-			idea_token = SPA_emilio_herrera
-			ledger = air
-			name = SPA_emilio_herrera
-			allowed = {
-				NOT = {
-					has_dlc = "La Resistance"
-				}
-				original_tag = SPR
-			}
-			visible = {
-				has_government = fascism
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = {
-				air_warfare_theorist
-			}
-		}
 	}
 
 	SPR_jose_asensio_torrado={
@@ -373,7 +351,6 @@ characters={
 			idea_token = SPA_emilio_mola
 			ledger = army
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 
@@ -429,11 +406,7 @@ characters={
 			idea_token = SPA_juan_yague
 			ledger = army
 			allowed = {
-				has_dlc = "La Resistance"
-				OR = {
-					original_tag = SPR
-					original_tag = CHL
-				}
+				original_tag = SPR
 			}
 			visible = {
 				NOT = {
@@ -479,31 +452,6 @@ characters={
 				small="GFX_idea_generic_army_europe_5"
 			}
 		}
-		advisor={
-			slot = high_command
-			idea_token = SPA_emilio_esteban_infantes
-			ledger = army
-			name = SPA_emilio_esteban_infantes
-			allowed = {
-				NOT = {
-					has_dlc = "La Resistance"
-				}
-				original_tag = SPR
-			}
-			visible = {
-				has_government = fascism
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = {
-				army_logistics_2
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
 	}
 
 	SPA_agustin_munoz_grandes={
@@ -520,11 +468,7 @@ characters={
 			idea_token = SPA_agustin_munoz_grandes
 			ledger = army
 			allowed = {
-				has_dlc = "La Resistance"
-				OR = {
-					original_tag = SPR
-					original_tag = CHL
-				}
+				original_tag = SPR
 			}
 			visible = {
 				NOT = {
@@ -568,11 +512,7 @@ characters={
 			idea_token = SPA_jose_enrique_varela
 			ledger = army
 			allowed = {
-				has_dlc = "La Resistance"
-				OR = {
-					original_tag = SPR
-					original_tag = CHL
-				}
+				original_tag = SPR
 			}
 			visible = {
 				NOT = {
@@ -649,7 +589,6 @@ characters={
 			ledger = army
 			cost = 100
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -747,7 +686,6 @@ characters={
 			slot = navy_chief
 			idea_token = SPA_luis_carrero_blanco
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
