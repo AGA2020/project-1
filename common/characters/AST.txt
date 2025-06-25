@@ -783,7 +783,23 @@ characters={
 			army={
 				small="GFX_idea_AST_lance_sharkey" #small="GFX_idea_generic_communist_revolutionary_western_european_2d"
 			}
-		}		
+		}	
+		advisor={
+			slot = political_advisor
+			idea_token = AST_lance_sharkey
+			allowed = {
+				original_tag = AST
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = {
+				head_of_intelligence 
+			}
+			ai_will_do = {
+				base = 0
+			}
+		}	
 	}
 	
 	AST_arthur_calwell={

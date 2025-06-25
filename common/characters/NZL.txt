@@ -631,9 +631,25 @@ characters={
 			}
 		}		
 	}
-
-	# Ideologicy-pushing advisors auto-generated
-
-	# Illusive Gentleman auto-generated
-	
+	NZL_bill_barnard = { # R56
+		name=NZL_bill_barnard
+		portraits={
+			army={
+				small="GFX_idea_NZL_bill_barnard"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = NZL_bill_barnard
+			allowed  = {
+				original_tag  = NZL
+			}
+			available = {	
+				has_intelligence_agency = yes
+			}			
+			traits  = {
+				head_of_intelligence 
+			}
+		}		
+	}	
 }

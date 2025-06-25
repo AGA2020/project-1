@@ -1,5 +1,8 @@
 spriteTypes = {
-
+	spriteType = {
+		name = "GFX_idea_NZL_bill_barnard"
+		texturefile = "gfx/interface/ideas/nzl/advisors/r56_idea_NZL_advisor_bill_barnard.dds"
+	}
 	SpriteType = {
 		name = "GFX_news_event_ardennes_offensive"
 		texturefile = "gfx/event_pictures/news_event_ardennes_offensive.dds"
