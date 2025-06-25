@@ -2494,7 +2494,7 @@ operations = {
     #        complete_effect = {
     #        }
     #    }
-    annex_ireland = {
+    annex_irland = {
         # icon = generic_operation
         allowed = {
             tag = FRA
@@ -2504,15 +2504,11 @@ operations = {
             factor = 0
         }
         available = {
-            hidden_trigger = { always = no }
-        }
-        activation = {
-            FRA = { has_capitulated = yes }
+            always = no
         }
         visible = {
-            FRA = { has_capitulated = yes }
+            always = no
         }
-        days_mission_timeout = 1
         targets = {
             IRE
         }

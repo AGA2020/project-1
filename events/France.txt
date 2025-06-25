@@ -614,6 +614,7 @@ country_event = {
 			promote_leader = yes
 		}
 		set_country_flag = daladier_resigned
+		activate_decision = annex_irland
 	}
 }
 
