@@ -911,6 +911,26 @@ characters={
 			}
 		}
 	}
-	
-	# Illusive Gentleman auto-generated
+	MEX_leopoldo_avalos={
+		name=MEX_leopoldo_avalos
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_leopoldo_avalos
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = {
+				head_of_intelligence 
+			}
+		}
+	}	
+
 }

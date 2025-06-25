@@ -112,6 +112,7 @@ recruit_character = MEX_plutarco_calles
 recruit_character = MEX_francisco_mugica
 recruit_character = MEX_jesus_degollado_guizar
 recruit_character = MEX_valentin_campa
+recruit_character = MEX_leopoldo_avalos
 
 create_equipment_variant = {
 	name = "Mondragon M94 (MEX)"
