@@ -728,7 +728,7 @@ on_actions = {
 				remove_ideas = FRA_victors_of_wwi
 				remove_ideas = FRA_disjointed_government
 				remove_ideas = FRA_protected_by_the_maginot_line
-				activate_mission = annex_Irland					
+				activate_decision = annex_ireland					
 			}
 			if = {
 				limit = {
