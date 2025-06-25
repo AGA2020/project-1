@@ -591,4 +591,26 @@ characters={
 			}
 		}
 	}
+
+	ROM_gheorghe_gheorghiu_dej={
+		name=ROM_gheorghe_gheorghiu_dej
+		portraits={
+			army={
+				small="GFX_idea_ROM_gheorghe_gheorghiu_dej"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ROM_gheorghe_gheorghiu_dej
+			allowed  = {
+				original_tag  = ROM
+			}
+			available = {	
+				has_intelligence_agency = yes
+			}			
+			traits  = {
+				head_of_intelligence 
+			}
+		}	
+	}
 }
