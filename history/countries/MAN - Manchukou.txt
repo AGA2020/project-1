@@ -37,6 +37,7 @@ recruit_character = MAN_hesehn_tiemei
 recruit_character = MAN_xian_yuan
 recruit_character = MAN_guan_xingde
 recruit_character = MAN_megata_toshiro
+recruit_character = GER_alexander_von_falkenhausen_man
 
 create_equipment_variant = {
 	name = "Type 38 (MAN)"
