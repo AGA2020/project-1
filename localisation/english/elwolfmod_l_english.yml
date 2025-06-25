@@ -48,7 +48,6 @@
  annex_manchukuo_desc:0 "Annex Manchukuo"
  annex_siam:0 "Annex Siam"
  annex_siam_desc:0 "Annex Siam"
- annex_new_zealand:0 "Annex New Zealand"
  annex_new_zealand_desc:0 "Annex New Zealand"
  annex_canada:0 "Annex Canada"
  annex_canada_desc:0 "Annex Canada"
@@ -153,7 +152,7 @@
  RECALL_VOLUNTEERS_TOOLTIP:0 "§Y[This.GetNameWithFlag]§! §Rmust have any volunteers from us we can recall.§!"
  RECALL_VOLUNTEERS_TOOLTIP_G:0 "§Y[This.GetNameWithFlag]§! must have any volunteers from us we can recall."
 
- NEW_GROUP_ADDITIONAL_COST:0 ""
+ 
 
  fin_war_eco:0 "War Economy"
  fin_extensive_con:0 "Extensive Conscription"
