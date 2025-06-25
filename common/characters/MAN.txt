@@ -477,6 +477,24 @@ characters={
 			}
 		}
 	}
+	MAN_kim_chang_ryong = {
+		name = "Kim Chang-ryong"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_generic_political_advisor_asia_1.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MAN_kim_chang_ryong
+			allowed = {
+				original_tag  = MAN
+			}
+			traits = {
+				head_of_intelligence
+			}
+		}
+	}
 	### POLITICAL ADVISORS ###
 
 	# Girgory Semyonov in Soviet file
