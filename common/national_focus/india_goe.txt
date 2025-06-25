@@ -2954,18 +2954,6 @@ focus = {
             country_event = { id = GOE_RAJ_partition.1 days = 80 } # Unrest event
             country_event = { id = GOE_RAJ.29 days = 38 }  #April 18ish #Freeman retires
         }
-
-        hidden_effect = {
-            if = {
-                limit = {
-                    has_game_rule = {
-                        rule = obsolete_focus_branches_visibility
-                        option = HIDE
-                    }
-                }
-                mark_focus_tree_layout_dirty = yes
-            }
-        }
     }
 }
 
