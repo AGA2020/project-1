@@ -565,7 +565,23 @@ characters={
 			army={
 				small="GFX_idea_SAF_abram_fischer" #small="GFX_idea_generic_communist_revolutionary_western_european_2d"
 			}
-		}		
+		}	
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_abram_fischer
+			allowed = {
+				original_tag = SAF
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = {
+				head_of_intelligence 
+			}
+			ai_will_do = {
+				base = 0
+			}
+		}	
 	}
 
 	SAF_nicolaas_havenga={
@@ -605,7 +621,6 @@ characters={
 			}
 		}		
 	}
-	
 
 	#Illusive Gentleman auto-generated
 }
