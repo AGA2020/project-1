@@ -8,25 +8,10 @@ state = {
 	
 
 	history = {
-
         owner = WST
-
 		buildings = {
 			infrastructure = 2
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-		
 	}
 
 	provinces = {

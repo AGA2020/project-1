@@ -17,10 +17,10 @@ state={
 			arms_factory = 2
 			air_base = 3
 			9539 = {
-				bunker = 7
+				bunker = 5
 			}
 			9692 = {
-				bunker = 7
+				bunker = 5
 			}
 		}
 		victory_points = {
