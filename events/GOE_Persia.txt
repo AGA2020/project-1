@@ -3229,58 +3229,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = PER_communist_events.20
-	title = PER_communist_events.20.t
-	desc = PER_communist_events.20.desc
-	picture = GFX_report_event_generic_read_write
-	fire_only_once = no
-	is_triggered_only = yes
-	# Release the Republic of Mahabad
-	option = {
-		name = PER_communist_events.20.a
-		ai_chance = {
-			base = 50
-		}
-		custom_effect_tooltip = PER_republic_of_mahabad_tt
-		hidden_effect = {
-			SOU = {
-			release = KUR
-			puppet = KUR
-		}
-			KUR = {
-				set_politics = {
-					ruling_party = communism
-					elections_allowed = no
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.51
-				}
-				set_cosmetic_tag = KUR_republic_of_mahabad_communism
-			}
-			IRQ = {
-				IRQ_mustafa_barzani = {
-					set_nationality = KUR
-				}
-			}
-			set_global_flag = kurdistan_exists_flag
-			set_country_flag = IRQ_has_become_kurdistan_flag
-		}
-	}
-	# Do not Release the Republic of Mahabad
-	option = {
-		name = PER_communist_events.20.b
-		ai_chance = {
-			base = 10
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 100
-			}
-		}
-	}
-}
-
 # Picking a new puppet shah for the fascists
 country_event = {
 	id = PER_fascist_events.1

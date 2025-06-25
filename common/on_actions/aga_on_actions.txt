@@ -374,6 +374,7 @@ on_actions = {
 	on_startup = {
 
 		effect = {
+			448 = { add_compliance = 35 }
 			ROM = {
 				create_corps_commander = { 
 					name = "Barbu Paraianu"
