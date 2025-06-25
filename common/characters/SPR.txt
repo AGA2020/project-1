@@ -3679,6 +3679,19 @@ characters={
 				small="GFX_idea_SPA_martin_de_riquer"
 			}
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPA_martin_de_riquer
+			allowed  = {
+				original_tag  = SPR
+			}
+			available = {	
+				has_intelligence_agency = yes
+			}			
+			traits  = {
+				head_of_intelligence 
+			}
+		}	
 	}
 	
 	SPA_mauricio_de_sivatte={ #Carlist
