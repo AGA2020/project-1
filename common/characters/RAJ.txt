@@ -2102,6 +2102,9 @@ RAJ_GOE_william_rhodes_davis= {
  			allowed  = {
 				original_tag  = RAJ
 			}
+			available = {	
+				has_intelligence_agency = yes
+			}
 			traits  = {
 				head_of_intelligence 
 			}
