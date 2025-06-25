@@ -59,19 +59,3 @@ defined_text = {
 		localization_key = check_gamerules_thirtysix
 	}
 }
-
-defined_text = {
-	name = GetFreeCollabsStatus
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = free_collabs
-				option = on
-			}
-		}
-		localization_key = check_gamerules_on
-	}
-	text = {
-		localization_key = check_gamerules_off
-	}
-}
