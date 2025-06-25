@@ -1331,7 +1331,6 @@ characters={
 			idea_token = SPR_andres_garcia_la_calle
 			ledger = air
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -1363,7 +1362,6 @@ characters={
 			idea_token = SPR_alberto_bayo
 			ledger = air
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -1402,78 +1400,34 @@ characters={
 	}
 
 	SPR_luis_gonzalez_de_ubieta = { # Democratic
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			name=SPR_luis_gonzalez_de_ubieta
-			portraits={
-				army={
-					small="GFX_idea_SPR_luis_gonzalez_ubieta"
-				}
-			}
-			advisor={
-				slot = navy_chief
-				idea_token = SPR_luis_gonzalez_de_ubieta
-				ledger = navy
-				allowed = {
-					has_dlc = "La Resistance"
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						tag = SPA
-						tag = SPB
-					}
-				}
-				available = {
-					custom_trigger_tooltip = {
-						tooltip = SPR_not_nationalist_spain_tt
-						NOT = { tag = SPA }
-					}
-				}
-				traits = { navy_screen_2 }
-				cost = 100
+		name=SPR_luis_gonzalez_de_ubieta
+		portraits={
+			army={
+				small="GFX_idea_SPR_luis_gonzalez_ubieta"
 			}
 		}
-		instance = {
+		advisor={
+			slot = navy_chief
+			idea_token = SPR_luis_gonzalez_de_ubieta
+			ledger = navy
 			allowed = {
-				NOT = { has_dlc = "La Resistance" }
+				has_dlc = "La Resistance"
+				original_tag = SPR
 			}
-			name=SPR_luis_gonzalez_de_ubieta
-			portraits={
-				army={
-					small="GFX_idea_generic_navy_europe_1"
-				}
-			}
-			advisor={
-				slot = navy_chief
-				idea_token = SPR_luis_gonzalez_de_ubieta
-				name = SPR_luis_gonzalez_de_ubieta
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				available = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				traits = {
-					navy_chief_naval_aviation_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
+			visible = {
+				NOT = {
+					tag = SPA
+					tag = SPB
 				}
 			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = SPR_not_nationalist_spain_tt
+					NOT = { tag = SPA }
+				}
+			}
+			traits = { navy_screen_2 }
+			cost = 100
 		}
 	}
 
@@ -1516,7 +1470,6 @@ characters={
 			idea_token = SPR_toribio_martinez_cabrera
 			ledger = army
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -1557,7 +1510,6 @@ characters={
 			idea_token = SPR_antonio_ortega_gutierrez
 			ledger = army
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -1581,79 +1533,34 @@ characters={
 	}
 
 	SPR_antonio_azarola_y_gresillon = { # Democratic
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			name=SPR_antonio_azarola_y_gresillon
-			portraits={
-				army={
-					small="GFX_idea_SPR_antonio_azarola_y_gresillon"
-				}
-			}
-			advisor={
-				slot = high_command
-				idea_token = SPR_antonio_azarola_y_gresillon
-				ledger = army
-				allowed = {
-					has_dlc = "La Resistance"
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						tag = SPA
-						tag = SPB
-					}
-				}
-				available = {
-					custom_trigger_tooltip = {
-						tooltip = SPR_not_nationalist_spain_tt
-						NOT = { tag = SPA }
-					}
-				}
-				traits = { navy_screen_2 }
-				cost = 100
+		name=SPR_antonio_azarola_y_gresillon
+		portraits={
+			army={
+				small="GFX_idea_SPR_antonio_azarola_y_gresillon"
 			}
 		}
-		instance = {
+		advisor={
+			slot = high_command
+			idea_token = SPR_antonio_azarola_y_gresillon
+			ledger = army
 			allowed = {
-				NOT = { has_dlc = "La Resistance" }
+				has_dlc = "La Resistance"
+				original_tag = SPR
 			}
-			name=SPR_antonio_azarola_gresillon
-			portraits={
-				army={
-					small="GFX_idea_generic_navy_europe_2"
-				}
-			}
-			advisor={
-				slot = high_command
-				idea_token = SPR_antonio_azarola_gresillon
-				ledger = navy
-				name = SPR_antonio_azarola_gresillon
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-				}
-				visible = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				available = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				traits = {
-					navy_fleet_logistics_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
+			visible = {
+				NOT = {
+					tag = SPA
+					tag = SPB
 				}
 			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = SPR_not_nationalist_spain_tt
+					NOT = { tag = SPA }
+				}
+			}
+			traits = { navy_screen_2 }
+			cost = 100
 		}
 	}
 
@@ -1750,223 +1657,104 @@ characters={
 	}
 
 	SPR_augusto_barcia_trelles={
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			name=SPR_augusto_barcia_trelles
-			portraits={
-				army={
-					small="GFX_idea_SPR_augusto_barcia_trelles"
-				}
-			}
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_augusto_barcia_trelles
-				allowed = {
-					has_dlc = "La Resistance"
-					OR = {
-						original_tag = SPR
-						original_tag = SWE
-					}
-				}
-				visible = {
-					NOT = {
-						tag = SPA 
-						tag = SPB 
-					}
-				}
-				available = {
-					OR = {
-						AND = {
-							custom_trigger_tooltip = {
-								tooltip = SPR_not_nationalist_spain_tt
-								NOT = {
-									tag = SPA 
-									tag = SPB 
-								}
-							}
-						}
-
-						SWE_refuge_for_revolutionaries_trigger = yes
-					}
-				}
-				traits = {
-					leftist_freemason 
-				}
-				ai_will_do = {
-					base = 1.000
-					modifier = {
-						factor = 0.000
-						OR = {
-							has_completed_focus = SPA_a_great_spain 
-						}
-					}
-				}
+		name=SPR_augusto_barcia_trelles
+		portraits={
+			army={
+				small="GFX_idea_SPR_augusto_barcia_trelles"
 			}
 		}
-		instance = {
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_augusto_barcia_trelles
 			allowed = {
-				NOT = { has_dlc = "La Resistance" }
+				original_tag = SPR
 			}
-			name=SPR_augusto_barcia_trelles
-			portraits={
-				army={
-					small="GFX_idea_generic_army_europe_1"
+			visible = {
+				NOT = {
+					tag = SPA 
+					tag = SPB 
 				}
 			}
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_augusto_barcia_trelles
-				name = SPR_augusto_barcia_trelles 
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
+			available = {
+				OR = {
+					AND = {
+						custom_trigger_tooltip = {
+							tooltip = SPR_not_nationalist_spain_tt
+							NOT = {
+								tag = SPA 
+								tag = SPB 
+							}
+						}
 					}
-					original_tag = SPR
-					NOT = {
-						has_government = fascism 
-					}
+					SWE_refuge_for_revolutionaries_trigger = yes
 				}
-				traits = {
-					ideological_crusader 
+			}
+			traits = {
+				leftist_freemason 
+			}
+			ai_will_do = {
+				base = 1.000
+				modifier = {
+					factor = 0.000
+					OR = {
+						has_completed_focus = SPA_a_great_spain 
+					}
 				}
 			}
 		}
 	}
 
 	SPR_diego_martinez_barrio={
-		instance = {
+		name=SPR_diego_martinez_barrio
+		portraits={
+			army={
+				small="GFX_idea_SPR_diego_martinez_barrio"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_diego_martinez_barrio
 			allowed = {
-				has_dlc = "La Resistance"
+				original_tag = SPR
 			}
-			name=SPR_diego_martinez_barrio
-			portraits={
-				army={
-					small="GFX_idea_SPR_diego_martinez_barrio"
+			visible = {
+				NOT = {
+					tag = SPA 
+					tag = SPB 
 				}
 			}
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_diego_martinez_barrio
-				allowed = {
-					has_dlc = "La Resistance"
-					original_tag = SPR
-				}
-				visible = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
-						tag = SPA 
+						tag = SPA
 						tag = SPB 
 					}
 				}
-				available = {
-					custom_trigger_tooltip = {
-						tooltip = SPR_not_nationalist_spain_tt
-						NOT = {
-							tag = SPA 
-							tag = SPB 
-						}
-					}
-				}
-				traits = {
-					backroom_backstabber 
-				}
-				ai_will_do = {
-					base = 1.000
-					modifier = {
-						factor = 0.000
-						OR = {
-							has_completed_focus = SPA_a_great_spain 
-						}
-					}
-				}
 			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
+			traits = {
+				backroom_backstabber 
 			}
-			name=SPR_diego_martinez_barrio
-			portraits={
-				army={
-					small="GFX_idea_generic_navy_europe_1"
-				}
-			}
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_diego_martinez_barrio
-				name = SPR_diego_martinez_barrio 
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-					NOT = {
-						has_government = fascism 
-					}
-				}
-				traits = {
-					backroom_backstabber 
-				}
-				ai_will_do = {
+			ai_will_do = {
+				base = 1.000
+				modifier = {
 					factor = 0.000
+					OR = {
+						has_completed_focus = SPA_a_great_spain 
+					}
 				}
 			}
 		}
 	}
 
 	SPR_dolores_ibarruri={
-		instance = {
-			allowed = {
-				has_dlc = "La Resistance"
-			}
-			name=SPR_dolores_ibarruri
-			portraits={
-				army={
-					small="GFX_idea_dolores_ibarruri"
-				}
-			}
-			gender = female
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-			}
-			name=SPR_dolores_ibarruri
-			portraits={
-				army={
-					small="GFX_idea_dolores_ibarruri"
-				}
-			}
-			gender = female
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_dolores_ibarruri
-				name = SPR_dolores_ibarruri 
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-					original_tag = SPR
-					NOT = {
-						has_government = fascism 
-					}
-				}
-				available = {
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-				}
-				traits = {
-					communist_revolutionary 
-				}
+		name=SPR_dolores_ibarruri
+		portraits={
+			army={
+				small="GFX_idea_dolores_ibarruri"
 			}
 		}
+		gender = female
 	}
 
 	SPR_juan_negrin={
@@ -1980,7 +1768,6 @@ characters={
 			slot = political_advisor
 			idea_token = SPR_juan_negrin
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -2027,7 +1814,6 @@ characters={
 			slot = political_advisor
 			idea_token = SPR_juan_lopez_sanchez
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -2071,7 +1857,6 @@ characters={
 			slot = political_advisor
 			idea_token = SPR_juan_garcia_oliver
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -2105,77 +1890,43 @@ characters={
 	}
 
 	SPR_francisco_largo_caballero={
-		instance = {
+		name=SPR_francisco_largo_caballero
+		portraits={
+			army={
+				small="GFX_idea_SPR_francisco_largo_caballero"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_francisco_largo_caballero
 			allowed = {
-				has_dlc = "La Resistance"
+				original_tag = SPR
 			}
-			name=SPR_francisco_largo_caballero
-			portraits={
-				army={
-					small="GFX_idea_SPR_francisco_largo_caballero"
+			visible = {
+				NOT = {
+					tag = SPA 
+					tag = SPB 
 				}
 			}
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_francisco_largo_caballero
-				allowed = {
-					has_dlc = "La Resistance"
-					original_tag = SPR
-				}
-				visible = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
 						tag = SPA 
 						tag = SPB 
 					}
 				}
-				available = {
-					custom_trigger_tooltip = {
-						tooltip = SPR_not_nationalist_spain_tt
-						NOT = {
-							tag = SPA 
-							tag = SPB 
-						}
-					}
-				}
-				traits = {
-					silent_workhorse 
-				}
-				ai_will_do = {
-					base = 1.000
-					modifier = {
-						factor = 0.000
-						OR = {
-							has_completed_focus = SPA_a_great_spain 
-						}
-					}
-				}
 			}
-		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
+			traits = {
+				silent_workhorse 
 			}
-			name=SPR_francisco_largo_caballero
-			portraits={
-				army={
-					small="GFX_idea_generic_air_europe_1"
-				}
-			}
-			advisor={
-				slot = political_advisor
-				idea_token = SPR_francisco_largo_caballero
-				name = SPR_francisco_largo_caballero 
-				allowed = {
-					NOT = {
-						has_dlc = "La Resistance"
+			ai_will_do = {
+				base = 1.000
+				modifier = {
+					factor = 0.000
+					OR = {
+						has_completed_focus = SPA_a_great_spain 
 					}
-					original_tag = SPR
-					NOT = {
-						has_government = fascism 
-					}
-				}
-				traits = {
-					captain_of_industry 
 				}
 			}
 		}
@@ -2193,11 +1944,7 @@ characters={
 			slot = political_advisor
 			idea_token = SPR_federica_montseny
 			allowed = {
-				has_dlc = "La Resistance"
-				OR = {
-					original_tag = SWE
-					original_tag = SPR
-				}
+				original_tag = SPR
 			}
 			visible = {
 				NOT = {
@@ -2264,7 +2011,6 @@ characters={
 			slot = political_advisor
 			idea_token = SPR_jesus_hernandez_tomas
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -2274,9 +2020,7 @@ characters={
 				}
 			}
 			available = {
-				OR = {
-					has_completed_focus = SPR_new_leadership 
-				}
+				has_completed_focus = SPR_new_leadership 
 				custom_trigger_tooltip = {
 					tooltip = SPR_not_nationalist_spain_tt
 					NOT = {
@@ -2310,7 +2054,6 @@ characters={
 			slot = political_advisor
 			idea_token = SPR_alexander_orlov
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -2354,7 +2097,6 @@ characters={
 			slot = political_advisor
 			idea_token = SPR_indalecio_prieto
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -2394,19 +2136,6 @@ characters={
 				small="GFX_idea_generic_army_europe_2"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_luis_valdes_cavanillas
-			name = SPA_luis_valdes_cavanillas 
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-				original_tag = SPR
-				has_government = fascism
-			}
-			traits = {
-				prince_of_terror 
-			}
-		}
 	}
 
 	SPA_tomas_garciano_goni={
@@ -2416,19 +2145,6 @@ characters={
 				small="GFX_idea_generic_political_advisor_europe_1"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_tomas_garciano_goni
-			name = SPA_tomas_garciano_goni 
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-				original_tag = SPR
-				has_government = fascism
-			}
-			traits = {
-				compassionate_gentleman 
-			}
-		}
 	}
 
 	SPA_fidel_davila_arrondo={
@@ -2436,19 +2152,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_generic_army_europe_4"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SPA_fidel_davila_arrondo
-			name = SPA_fidel_davila_arrondo 
-			allowed = {
-				NOT = { has_dlc = "La Resistance" }
-				original_tag = SPR
-				has_government = fascism
-			}
-			traits = {
-				war_industrialist 
 			}
 		}
 	}
@@ -2465,7 +2168,6 @@ characters={
 			idea_token = SPA_jose_antonio_giron
 			name = SPA_jose_antonio_giron 
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -2498,11 +2200,7 @@ characters={
 			idea_token = SPA_manuel_hedilla
 			name = SPA_manuel_hedilla 
 			allowed = {
-				has_dlc = "La Resistance"
-				OR = {
-					original_tag = SPR
-					original_tag = CHL
-				}
+				original_tag = SPR
 			}
 
 			visible = {
@@ -2539,7 +2237,6 @@ characters={
 			idea_token = SPA_raimundo_fernandez_cuesta
 			name = SPA_raimundo_fernandez_cuesta 
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -2574,11 +2271,7 @@ characters={
 			idea_token = SPA_tomas_dominguez_arevalo
 			name = SPA_tomas_dominguez_arevalo 
 			allowed = {
-				has_dlc = "La Resistance"
-				OR = {
-					original_tag = SPR
-					original_tag = CHL
-				}
+				original_tag = SPR
 			}
 			visible = {
 				NOT = {
@@ -2618,7 +2311,6 @@ characters={
 			idea_token = SPA_diego_hidalgo_y_duran
 			name = SPA_diego_hidalgo_y_duran 
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
@@ -2647,7 +2339,6 @@ characters={
 			idea_token = SPA_ramon_serrano_suner
 			name = SPA_ramon_serrano_suner 
 			allowed = {
-				has_dlc = "La Resistance"
 				original_tag = SPR
 			}
 			visible = {
