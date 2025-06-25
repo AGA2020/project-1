@@ -421,6 +421,44 @@ characters={
 		}
 	}
 
+	MAN_yoshisuke_aikawa = {
+		name = MAN_yoshisuke_aikawa
+		portraits={
+			civilian={
+				small = "gfx/interface/ideas/idea_generic_political_advisor_asia_2.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MAN_yoshisuke_aikawa
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				captain_of_industry
+			}
+		}
+	}
+
+	MAN_nalan_shangzhi = {
+		name = MAN_nalan_shangzhi
+		portraits={
+			civilian={
+				small = "gfx/interface/ideas/idea_generic_political_advisor_asia_3.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MAN_nalan_shangzhi
+			allowed = {
+				original_tag = MAN
+			}
+			traits = {
+				fortification_engineer
+			}
+		}
+	}
+
 	### POLITICAL ADVISORS ###
 
 	# Girgory Semyonov in Soviet file

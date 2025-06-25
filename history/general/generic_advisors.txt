@@ -3,32 +3,13 @@
 
 every_possible_country = {
 	limit = {
-		has_dlc = "La Resistance"
-		# china gets a special one via focus
 		NOT = { original_tag = CHI }
-		# Germany as Wilhelm Canaris
 		NOT = { original_tag = GER }
 		NOT = { original_tag = HUN }
-		IF = {
-			limit = {
-				has_dlc = "Battle for the Bosporus"
-			}
-			NOT = {
-				tag = GRE
-			}
-		}
-
-		IF = {
-			limit = { has_dlc = "Arms Against Tyranny" }
-			NOT = { OR = { tag = SWE } }
-		}
-
-		IF = {
-			limit = { has_dlc = "Trial of Allegiance" }
-			NOT = { tag = BRA }
-		}
+		NOT = { tag = GRE }
+		NOT = { tag = SWE }
+		NOT = { tag = BRA }
 		NOT = { tag = RAJ }
-
 		NOT = {
 			has_allowed_idea_with_traits = { idea = head_of_intelligence characters = yes }
 		}
@@ -59,26 +40,6 @@ every_possible_country = {
 every_possible_country = {
 	limit = {
 		original_tag = MAN
-	}
-	generate_character = {
-		token_base = generic_captain_of_industry # token will be TAG_token_base
-		advisor = {
-			slot = political_advisor
-			traits = { captain_of_industry }
-		}
-		portraits = { 
-			army = { small = GFX_idea_generic_captain_of_industry }
-		}
-	}
-	generate_character = {
-		token_base = generic_fortification_engineer # token will be TAG_token_base
-		advisor = {
-			slot = political_advisor
-			traits = { fortification_engineer }
-		}
-		portraits = { 
-			army = { small = GFX_idea_generic_fortification_engineer }
-		}
 	}
 	generate_character = {
 		token_base = generic_war_industrialist # token will be TAG_token_base
