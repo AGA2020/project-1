@@ -2504,9 +2504,16 @@ operations = {
         ai_will_do = {
             factor = 0
         }
-        visible = {
-            always = yes
+        available = {
+            hidden_trigger = { always = no }
         }
+        activation = {
+            FRA = { has_capitulated = yes }
+        }
+        visible = {
+            FRA = { has_capitulated = yes }
+        }
+        days_mission_timeout = 1
         targets = {
             IRE
         }
