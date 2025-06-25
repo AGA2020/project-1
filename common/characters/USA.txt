@@ -1598,7 +1598,6 @@ characters={
 			}
 			allowed  = {
 				original_tag  = USA
-				has_dlc = "La Resistance"
 			}
 			traits  = {
 				head_of_intelligence 

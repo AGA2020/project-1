@@ -1886,7 +1886,6 @@ characters = {
 			idea_token = mario_roatta_political_advisor
 			allowed = {
 				original_tag = ITA
-				has_dlc = "La Resistance"
 			}
 			available = {
 				has_intelligence_agency = yes
