@@ -10,6 +10,8 @@ every_possible_country = {
 		NOT = { tag = SWE }
 		NOT = { tag = BRA }
 		NOT = { tag = RAJ }
+		NOT = { tag = MAN }
+		NOT = { tag = SOV }
 		NOT = {
 			has_allowed_idea_with_traits = { idea = head_of_intelligence characters = yes }
 		}
