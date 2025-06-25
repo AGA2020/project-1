@@ -614,7 +614,14 @@ country_event = {
 			promote_leader = yes
 		}
 		set_country_flag = daladier_resigned
-		activate_decision = annex_irland
+		if = {
+			limit = {
+				NOT = {
+					113 = {is_controlled_by = FRA }
+				}
+			}
+			activate_decision = annex_irland
+		}
 	}
 }
 

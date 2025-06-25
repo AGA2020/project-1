@@ -2504,10 +2504,7 @@ operations = {
             factor = 0
         }
         available = {
-            always = no
-        }
-        visible = {
-            always = no
+            FRA = { has_capitulated = yes }
         }
         targets = {
             IRE
