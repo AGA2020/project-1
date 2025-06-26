@@ -23,10 +23,11 @@ state = {
 			6900 2
 		}
 		buildings = {
-			infrastructure = 2 
-			arms_factory = 1
-			industrial_complex = 1
+			infrastructure = 4 
+			arms_factory = 4
+			industrial_complex = 5
 			air_base = 3
+			dockyard = 3
 			11767 = {
 				naval_base = 4
 			}
@@ -37,13 +38,7 @@ state = {
 		}
 		add_core_of = ALB
 		add_claim_by = ITA
-		1939.4.12 = {
-			owner = ITA
-			controller = ITA
-			remove_claim_by = ITA
-
-		}
-
+		add_extra_state_shared_building_slots = 10
 	}
 
 	provinces = {
