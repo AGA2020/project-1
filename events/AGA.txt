@@ -1,5 +1,40 @@
 ﻿add_namespace = aga
 
+news_event = {
+	id = aga.235
+	title = aga.235.t
+	desc = aga.235.d
+	picture = GFX_news_event_fascist_militia
+
+	fire_only_once = yes
+
+	trigger = {
+		454 = { 
+			OR = {
+				is_controlled_by = GER 
+				is_controlled_by = ITA
+			}
+		}
+		NOT = {
+			has_global_flag = haci_seized
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = haci_seized
+		}
+	}
+
+	option = {
+		name = aga.235.a
+	}
+}
+
 news_event = { #bulge
 	id = aga.29
 	title = aga.29.t
