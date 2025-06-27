@@ -28,21 +28,6 @@ defined_text = {
         localization_key = USA_amend_the_budget_cooldown_title
     }
 }
-defined_text = {
-	name = GetTechStealingStatus
-	text = {
-		trigger = {
-			has_game_rule = {
-				rule = techstealing
-				option = onehundred
-			}
-		}
-		localization_key = check_gamerules_on
-	}
-	text = {
-		localization_key = check_gamerules_off
-	}
-}
 
 defined_text = {
 	name = GetMaxSubmarineTechStatus
