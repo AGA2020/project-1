@@ -4,13 +4,13 @@ techstealing = {
 	icon = "GFX_decision_generic_research"
 	option = {
 		name = banned
-		text = "GBanned"
-		desc = "No tech stealing operations (Reccomended)"
+		text = "Banned"
+		desc = "No tech stealing operations"
 	}
 	default = {
 		name = vanillatechsteal
-		text = "R100%"
-		desc = "Only tech steal 100%'s (Not Reccomended)"
+		text = "On"
+		desc = "Vanilla Tech Steal"
 	}
 }
 
