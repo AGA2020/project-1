@@ -37,6 +37,12 @@ on_actions = {
 				}
 				free_operative = { captured_by = GRE }
 			}
+			else_if = {
+				limit = {
+					LAT = { has_captured_operative = yes }
+				}
+				free_operative = { captured_by = LAT }
+			}
 		}
 	}
 	on_monthly_BEL = {
