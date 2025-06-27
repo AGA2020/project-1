@@ -8,7 +8,7 @@ techstealing = {
 		desc = "No tech stealing operations (Reccomended)"
 	}
 	default = {
-		name = onehundred
+		name = vanilla
 		text = "R100%"
 		desc = "Only tech steal 100%'s (Not Reccomended)"
 	}
