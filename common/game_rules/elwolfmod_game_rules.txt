@@ -2,12 +2,12 @@ techstealing = {
 	name = "Tech Stealing"
 	group = "elwolfmod Rules"
 	icon = "GFX_decision_generic_research"
-	option = {
+	default = {
 		name = banned
 		text = "Banned"
 		desc = "No tech stealing operations"
 	}
-	default = {
+	option = {
 		name = vanillatechsteal
 		text = "On"
 		desc = "Vanilla Tech Steal"
