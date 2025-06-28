@@ -25,9 +25,7 @@
 			x = 0
 			y = 0
 		}
-		prerequisite = {}
-		mutually_exclusive = { }
-		cost = 5
+		cost = 10
 			ai_will_do = {
 			factor = 1
 		}
