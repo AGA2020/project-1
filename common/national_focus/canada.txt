@@ -422,7 +422,7 @@
 		y = 0
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 3.5
+		cost = 10
 
 		ai_will_do = {
 			factor = 80
@@ -919,7 +919,7 @@
 		y = 5
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 3.5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25

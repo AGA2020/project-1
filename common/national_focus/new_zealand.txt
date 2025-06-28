@@ -693,7 +693,7 @@
 		y = 1
 		relative_position_id = NZL_national_roads_board
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 25

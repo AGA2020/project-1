@@ -744,7 +744,7 @@
 		y = 4
 		relative_position_id = SAF_south_african_railways
 
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			factor = 0
