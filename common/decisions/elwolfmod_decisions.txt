@@ -214,7 +214,7 @@ operations = {
 			}
 			ROOT = {
 				annex_country = {
-					target = NZL
+					target = FIN
 					transfer_troops = yes
 				}
 			}
