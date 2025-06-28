@@ -3089,7 +3089,7 @@ focus_tree = {
 				name = ITA_brescia_small_arms_industry
 				bonus = 0.75
 				uses = 1
-				category = infantry_weapons
+				technology = improved_infantry_weapons
 			}
 		}
 	}
