@@ -219,7 +219,7 @@ characters = {
 			}
 		}
 
-		corps_commander = {
+		field_marshal = {
 			traits = { brilliant_strategist  winter_specialist panzer_leader trickster trait_engineer  cavalry_leader organizer }
 			skill = 7
 			attack_skill = 7
@@ -644,7 +644,7 @@ characters = {
 				factor = 1.000
 			}
 		}
-		corps_commander = {
+		field_marshal = {
 			traits = {  panzer_leader trickster trait_engineer skilled_staffer cavalry_leader  organizer ranger commando urban_assault_specialist}
 			skill = 6
 			attack_skill = 8
