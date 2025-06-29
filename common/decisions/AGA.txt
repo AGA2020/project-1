@@ -4012,6 +4012,7 @@ operations = {
                 170 = { add_core_of  = ITA }
                 175 = { add_core_of  = ITA } 
                 788 = { add_core_of  = ITA }  
+                GER = { transfer_state = 790 }
             }
         }
     annex_romania = {
