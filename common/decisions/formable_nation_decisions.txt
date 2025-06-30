@@ -83,27 +83,49 @@ greater_italy_category = {
 				controls_state = 114 # Sardegna
 			}  
 			custom_trigger_tooltip = {
-				tooltip = greater_italy_required_other_states 
-				AND = {
-					OR = {
-						ITA = { controls_state = 1 }
-						GER = { controls_state = 1 }
-					}
-					ITA = { controls_state = 846 }
-					OR = {
-						ITA = { controls_state = 735 }
-						GER = { controls_state = 735 }
-					}
-					ITA = { controls_state = 163 }
-					ITA = { controls_state = 103 }
-					ITA = { controls_state = 853 }
-					OR = {
-						ITA = { controls_state = 116 }
-						GER = { controls_state = 116 }
-					}
-					ITA = { controls_state = 182 }
-					ITA = { controls_state = 164 }
+				tooltip = greater_italy_required_other_states_corsica 
+				OR = {
+					ITA = { controls_state = 1 }
+					GER = { controls_state = 1 }
 				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = greater_italy_required_other_states_ticino
+				ITA = { controls_state = 846 } 
+			}
+			custom_trigger_tooltip = {
+				tooltip = greater_italy_required_other_states_savoy
+				OR = {
+					ITA = { controls_state = 735 }
+					GER = { controls_state = 735 }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = greater_italy_required_other_states_zara
+				ITA = { controls_state = 163 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = greater_italy_required_other_states_dalmatia
+				ITA = { controls_state = 103 }
+			}	
+			custom_trigger_tooltip = {
+				tooltip = greater_italy_required_other_states_ljubljana
+				ITA = { controls_state = 853 }
+			}	
+			custom_trigger_tooltip = {
+				tooltip = greater_italy_required_other_states_malta
+				OR = {
+					ITA = { controls_state = 116 }
+					GER = { controls_state = 116 }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = greater_italy_required_other_states_crete
+				ITA = { controls_state = 182 }
+			}
+			custom_trigger_tooltip = {
+				tooltip = greater_italy_required_other_states_dodecaneso
+				ITA = { controls_state = 164 }
 			}
 		}
 
