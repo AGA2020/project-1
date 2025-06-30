@@ -2930,10 +2930,6 @@ focus = {
 
     mutually_exclusive = { focus = RAJ_provincial_autonomy }
 
-    available = {
-        is_subject_of = ENG
-    }
-
     search_filters = { FOCUS_FILTER_POLITICAL }
 
     completion_reward = {
@@ -2966,7 +2962,12 @@ focus = {
     y = 1
     relative_position_id = RAJ_his_majestys_loyal_government 
     cost = 5
-
+    available = {
+        any_owned_state = {
+            is_controlled_by = ROOT
+            compliance > 74
+        }
+    }
     search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
     completion_reward = {
