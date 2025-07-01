@@ -235,6 +235,7 @@ on_actions = {
 			    every_country = {
 			        limit = {
 			            axis = yes
+			            NOT = { has_tech = survivability_studies }
 			        }
 			        set_technology = {
 			            survivability_studies = 1
@@ -248,6 +249,7 @@ on_actions = {
 			    every_country = {
 			        limit = {
 			            axis = yes
+			            NOT = { has_tech = aa_hmg }
 			        }
 			        set_technology = {
 			            aa_hmg = 1
@@ -261,6 +263,7 @@ on_actions = {
 			    every_country = {
 			        limit = {
 			            axis = yes
+			            NOT = { has_tech = give_me_at2_module }
 			        }
 			        set_technology = {
 			            give_me_at2_module = 1 popup = no
@@ -320,6 +323,7 @@ on_actions = {
 			    every_country = {
 			        limit = {
 			            allies = yes
+			            NOT = { has_tech = survivability_studies }
 			        }
 			        set_technology = {
 			            survivability_studies = 1
@@ -333,6 +337,7 @@ on_actions = {
 			    every_country = {
 			        limit = {
 			            allies = yes
+			            NOT = { has_tech = aa_hmg }
 			        }
 			        set_technology = {
 			            aa_hmg = 1
@@ -346,6 +351,7 @@ on_actions = {
 			    every_country = {
 			        limit = {
 			            allies = yes
+			            NOT = { has_tech = range_improvements }
 			        }
 			        set_technology = {
 			            range_improvements = 1
@@ -359,6 +365,7 @@ on_actions = {
 			    every_country = {
 			        limit = {
 			            allies = yes
+			            NOT = { has_tech = photo_reconnaisance }
 			        }
 			        set_technology = {
 			            photo_reconnaisance = 1
@@ -372,6 +379,7 @@ on_actions = {
 			    every_country = {
 			        limit = {
 			            allies = yes
+			            NOT = { has_tech = give_me_at2_module }
 			        }
 			        set_technology = {
 			            give_me_at2_module = 1 popup = no
