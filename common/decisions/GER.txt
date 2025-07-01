@@ -913,6 +913,32 @@ GER_operational_planning_category = {
 			}
 		}
 	}
+    give_navy_to_italy = {
+        icon = GFX_decision_SWE_set_navy_budget
+        fire_only_once = no
+        cost = 0
+        ai_will_do = {
+            factor = 0
+        }
+        allowed = {
+            tag = GER
+        }
+        complete_effect = {
+            GER = {
+                transfer_units_fraction = {
+                    target = ITA
+                    size = 0
+                    stockpile_ratio = 0
+                    army_ratio = 0
+                    navy_ratio = 1
+                    air_ratio = 0
+                    keep_unit_leaders_trigger = {
+                        always = no
+                    }
+                }
+            }
+        }
+    }
 }
 
 GER_price_controls_cat = {

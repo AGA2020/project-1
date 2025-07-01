@@ -3972,14 +3972,27 @@ operations = {
                 set_global_flag = scw_over
                 WST = { transfer_state = 178 transfer_state = 699 transfer_state = 783 transfer_state = 290 transfer_state = 297 }
                 if = { limit = { NOT = { ITA = { has_completed_focus = ITA_demand_balearic_islands_bba } } } }    
-                WST = { if = { limit = { ITA = { NOT = { has_completed_focus = ITA_demand_balearic_islands_bba } } } transfer_state = 177 } }                
+                WST = { if = { limit = { ITA = { NOT = { has_completed_focus = ITA_demand_balearic_islands_bba } } } transfer_state = 177 } }
+                SPR = {
+                    transfer_units_fraction = {
+                        target = WST
+                        size = 0
+                        stockpile_ratio = 0
+                        army_ratio = 0
+                        navy_ratio = 1
+                        air_ratio = 0
+                        keep_unit_leaders_trigger = {
+                            always = no
+                        }
+                    }
+                }             
                 SPR = {
                     transfer_units_fraction = {
                         target = ITA
                         size = 1
                         stockpile_ratio = 1
                         army_ratio = 0
-                        navy_ratio = 1
+                        navy_ratio = 0
                         air_ratio = 1
                         keep_unit_leaders_trigger = {
                             always = no
