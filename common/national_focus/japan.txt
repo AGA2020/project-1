@@ -688,7 +688,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 7
 		}
-
+		bypass = {
+			has_idea = tot_economic_mobilisation
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
