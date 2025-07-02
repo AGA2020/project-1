@@ -4,15 +4,6 @@ can_ROOT_get_wargoal_on_THIS = {
 	NOT = { is_subject_of = ROOT }
 }
 
-#Country scope
-is_JAP_or_ally_of_JAP = {
-	OR = {
-		tag = JAP
-		is_in_faction_with = JAP
-		is_subject_of = JAP
-	}
-}
-
 is_border_conflict_defender_vs_FROM = {
 	has_variable = ROOT.defender_state_vs_@FROM
 }
