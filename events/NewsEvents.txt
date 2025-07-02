@@ -9278,8 +9278,6 @@ news_event = {
 	desc = news.235.d
 	picture = GFX_news_event_generic_sign_treaty1
 
-	fire_only_once = yes
-
 	trigger = {
 		229 = { is_controlled_by = GER }
 		NOT = {
