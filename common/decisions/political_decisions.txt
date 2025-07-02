@@ -588,7 +588,6 @@ democratic_on_the_rise = {
 				has_idea_with_trait = social_reformer
 			}
 			NOT = { has_government = democratic }
-			check_has_focus_tree_to_switch_to_democratic = yes
 		}
 		
 		fire_only_once = yes
@@ -618,7 +617,7 @@ democratic_on_the_rise = {
 				has_idea_with_trait = social_reformer
 			}
 			NOT = { has_government = democratic }
-			check_has_focus_tree_to_switch_to_democratic = yes
+			 
 		}
 
 		cancel_trigger = {
@@ -655,7 +654,7 @@ democratic_on_the_rise = {
 				has_idea_with_trait = social_reformer
 			}
 			NOT = { has_government = democratic }
-			check_has_focus_tree_to_switch_to_democratic = yes
+			 
 		}
 
 		cancel_trigger = {
@@ -718,7 +717,7 @@ democratic_on_the_rise = {
 				is_field_marshal = no
 				NOT = { has_trait = hidden_sympathies }
 			}
-			check_has_focus_tree_to_switch_to_democratic = yes
+			 
 		}
 	
 		fire_only_once = yes
@@ -753,7 +752,7 @@ democratic_on_the_rise = {
 			any_army_leader = {
 				NOT = { has_trait = hidden_sympathies }
 			}
-			check_has_focus_tree_to_switch_to_democratic = yes
+			 
 			any_army_leader = {
 				is_field_marshal = yes
 				NOT = { has_unit_leader_flag = hidden_sympathies_marshal }
@@ -791,7 +790,7 @@ democratic_on_the_rise = {
 				has_idea_with_trait = social_reformer
 			}
 			NOT = { has_government = democratic }
-			check_has_focus_tree_to_switch_to_democratic = yes
+			 
 		}
 	
 		fire_only_once = no
@@ -828,7 +827,7 @@ democratic_on_the_rise = {
 				has_idea_with_trait = social_reformer
 			}
 			NOT = { has_government = democratic }
-			check_has_focus_tree_to_switch_to_democratic = yes
+			 
 		}
 	
 		fire_only_once = yes
@@ -862,7 +861,7 @@ democratic_on_the_rise = {
 				has_idea_with_trait = social_reformer
 			}
 			NOT = { has_government = democratic }
-			check_has_focus_tree_to_switch_to_democratic = yes
+			 
 			check_variable = { num_owned_states = 1 }
 		}
 	
@@ -897,7 +896,7 @@ democratic_on_the_rise = {
 				has_idea_with_trait = social_reformer
 			}
 			NOT = { has_government = democratic }
-			check_has_focus_tree_to_switch_to_democratic = yes
+			 
 			check_variable = { num_owned_states > 1 }
 		}
 	
@@ -1014,7 +1013,7 @@ democratic_on_the_rise = {
 				has_idea_with_trait = social_reformer
 			}
 			NOT = { has_government = democratic }
-			check_has_focus_tree_to_switch_to_democratic = yes
+			 
 		}
 		
 		remove_trigger = {
@@ -1052,7 +1051,7 @@ democratic_on_the_rise = {
 		visible = {
 			has_country_flag = open_up_political_discourse_democratic
 			NOT = { has_government = democratic }
-			check_has_focus_tree_to_switch_to_democratic = yes
+			 
 		}
 		
 		remove_trigger = {
@@ -1113,7 +1112,7 @@ democratic_on_the_rise = {
 				democratic > 0.6
 				has_country_flag = open_up_political_discourse_democratic
 			}
-			check_has_focus_tree_to_switch_to_democratic = yes
+			 
 			if = {
 				limit = {
 					NOR_AAT = yes 
