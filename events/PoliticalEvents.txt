@@ -15,7 +15,7 @@ country_event = {
 		NOT = { has_government = communism }
 		communism > 0.6
 		NOT = { communism > 0.7 }
-		check_has_focus_tree_to_switch_to_communism = yes
+		 
 		NOT = {
 			AND = {
 				original_tag = SPR
@@ -1192,7 +1192,7 @@ country_event = {
 			}
 		}
 		has_civil_war = no
-		check_has_focus_tree_to_switch_to_communism = yes
+		 
 		NOT = {
 			AND = {
 				original_tag = SPR
