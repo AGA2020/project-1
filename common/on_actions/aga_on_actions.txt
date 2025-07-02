@@ -315,6 +315,38 @@ on_actions = {
                		    }
                		}
 			    }
+			    JAP = {
+               		create_equipment_variant = {
+               		    name = "Fighter 1 armor 1 range"
+               		    type = cv_small_plane_airframe_2
+               		    allow_without_tech = yes
+               		    parent_version = 0
+               		    modules = {
+               		        fixed_main_weapon_slot = heavy_mg_4x
+               		        fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+               		        fixed_auxiliary_weapon_slot_2 = light_mg_4x
+               		        engine_type_slot = engine_3_1x
+               		        special_type_slot_1 = fuel_tanks_small
+               		        special_type_slot_2 = self_sealing_fuel_tanks_small
+               		        special_type_slot_3 = armor_plate_small
+               		    }
+               		}
+               		create_equipment_variant = {
+               		    name = "Fighter 2 range"
+               		    type = cv_small_plane_airframe_2
+               		    allow_without_tech = yes
+               		    parent_version = 0
+               		    modules = {
+               		        fixed_main_weapon_slot = heavy_mg_4x
+               		        fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+               		        fixed_auxiliary_weapon_slot_2 = light_mg_4x
+               		        engine_type_slot = engine_3_1x
+               		        special_type_slot_1 = self_sealing_fuel_tanks_small
+               		        special_type_slot_2 = self_sealing_fuel_tanks_small
+               		        special_type_slot_3 = self_sealing_fuel_tanks_small
+               		    }
+               		}
+			    }
 			}
 			if = {
 			    limit = {
