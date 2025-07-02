@@ -416,7 +416,6 @@ operations = {
         }
     }
    reset_allies_intel = {
-        name = intel_on_team
         # icon = generic_operation
         fire_only_once = no
         cost = 0
