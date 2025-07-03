@@ -900,11 +900,6 @@ has_aat = {
 	has_dlc = "Arms Against Tyranny"
 }
 
-is_aat_sweden = {
-		has_aat = yes
-		original_tag = SWE
-}
-
 is_trotsky_valid_for_mexico = {
 	OR = {
 		has_government = communism
