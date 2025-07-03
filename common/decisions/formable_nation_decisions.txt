@@ -106,7 +106,10 @@ greater_italy_category = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = greater_italy_required_other_states_dalmatia
-				ITA = { controls_state = 103 }
+				OR = {
+					ITA = { controls_state = 103 }
+					HUN = { controls_state = 103 }
+				}
 			}	
 			custom_trigger_tooltip = {
 				tooltip = greater_italy_required_other_states_ljubljana
