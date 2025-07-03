@@ -291,7 +291,7 @@ SPR_the_inevitable_civil_war = {
 			add_stability = 0.05
 			add_days_mission_timeout = {
 				mission = SPR_military_plot_republicans
-				days = 25
+				days = 20
 			}
 			clr_country_flag = SPR_inevitable_civil_war_in_progress_flag
 			clr_country_flag = SPA_political_assassination_flag
@@ -400,7 +400,7 @@ SPR_the_inevitable_civil_war = {
 		remove_effect = {
 			add_days_mission_timeout = {
 				mission = SPR_military_plot_republicans
-				days = 25
+				days = 20
 			}
 			random_unit_leader = {
 				limit = {
@@ -459,7 +459,7 @@ SPR_the_inevitable_civil_war = {
 		remove_effect = {
 			add_days_mission_timeout = {
 				mission = SPR_military_plot_republicans
-				days = 37
+				days = 25
 			}
 			random_army_leader = {
 				limit = {
@@ -579,7 +579,7 @@ SPR_the_inevitable_civil_war = {
 		remove_effect = {
 			add_days_mission_timeout = {
 				mission = SPR_military_plot_republicans
-				days = 30
+				days = 20
 			}
 			SPR_concessions_to_the_left_increase = yes
 			clr_country_flag = SPR_inevitable_civil_war_in_progress_flag
