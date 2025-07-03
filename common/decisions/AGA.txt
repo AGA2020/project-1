@@ -3907,67 +3907,6 @@ operations = {
             }
             complete_effect = {
             if = { limit = { NOT = { has_global_flag = scw_over } } SPR = { annex_country = { target = D01 transfer_troops = yes } } SPR = { annex_country = { target = D02 transfer_troops = yes } } SPR = { annex_country = { target = D03 transfer_troops = yes } } }
-                169 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 1048
-                        }
-                    }
-                } 
-                173 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 9979
-                        }
-                    }
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 12038
-                        }
-                    }
-                }
-                168 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 10024
-                        }
-                    }
-                } 
-                171 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 758
-                        }
-                    }
-                }
-                165 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 9764
-                        }
-                    }
-                } 
-                167 = {
-                    set_building_level = {
-                        type = naval_base
-                        level = 0
-                        province = {
-                            id = 6906
-                        }
-                    }
-                }
                 set_global_flag = scw_over
                 WST = { transfer_state = 178 transfer_state = 699 transfer_state = 783 transfer_state = 290 transfer_state = 297 }
                 if = { limit = { NOT = { ITA = { has_completed_focus = ITA_demand_balearic_islands_bba } } } }    

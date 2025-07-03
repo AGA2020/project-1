@@ -138,6 +138,45 @@ on_actions = {
 	on_weekly = {
 		effect = {
 			if = {
+				limit = { 
+					AND = {
+					    OR = {
+					        tag = GER
+					        is_in_faction_with = GER
+					    }
+					    num_divisions_in_states = {
+					        count > 1
+					        states = { 169 173 168 167 165 }
+					    }
+					}
+				}
+				169 = {
+					teleport_armies = { 
+						to_state = 64 
+					}
+				}
+				173 = {
+					teleport_armies = { 
+						to_state = 64 
+					}
+				}
+				168 = {
+					teleport_armies = { 
+						to_state = 64 
+					}
+				}
+				167 = {
+					teleport_armies = { 
+						to_state = 64 
+					}
+				}
+				165 = {
+					teleport_armies = { 
+						to_state = 64 
+					}
+				}
+			}
+			if = {
 			    limit = {
 					tag = GER
 					OR = {
