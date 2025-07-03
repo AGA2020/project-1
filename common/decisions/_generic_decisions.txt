@@ -1998,7 +1998,6 @@ economy_decisions = {
 
 		available = {
 			any_owned_state = {
-				NOT = { has_state_flag = infrastructure_building_slot_flag }
 				is_fully_controlled_by = ROOT
 				free_building_slots = {
 					building = infrastructure
@@ -2009,7 +2008,6 @@ economy_decisions = {
 	
 		visible = {
 			any_owned_state = {
-				NOT = { has_state_flag = infrastructure_building_slot_flag }
 				is_fully_controlled_by = ROOT
 				free_building_slots = {
 					building = infrastructure
@@ -2022,19 +2020,12 @@ economy_decisions = {
 			random_owned_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
-            		free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
 					free_building_slots = {
 						building = infrastructure
 						size < 1
 					}
-					NOT = { has_state_flag = infrastructure_building_slot_flag }
 				}
 				add_extra_state_shared_building_slots = 1
-				set_state_flag = infrastructure_building_slot_flag
 			}
 		}
 		ai_will_do = {
