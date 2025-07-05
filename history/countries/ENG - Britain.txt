@@ -1272,6 +1272,14 @@ create_production_license = {
 }
 
 create_production_license = {
+    target = RAJ
+	equipment = {
+		type = motorized_equipment_1
+	}
+    cost_factor = 0
+}
+
+create_production_license = {
     target = CAN
     equipment = {
     	version_name = "Vickers Wellesley"
