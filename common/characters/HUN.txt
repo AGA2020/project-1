@@ -1,232 +1,109 @@
 characters = {
 
 	HUN_miklos_horthy = {
-		instance = {
-			allowed = {
-				has_dlc = "Death or Dishonor"
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_miklos_horthy
+		portraits = {
+			navy = { #Can become Navy leader and therefore navy advisor
+				large = "GFX_Portrait_hungary_miklos_horthy_admiral"
+				small = "GFX_idea_HUN_miklos_horthy_admiral"
 			}
-
-			name = HUN_miklos_horthy
-			portraits = {
-				navy = { #Can become Navy leader and therefore navy advisor
-					large = "GFX_Portrait_hungary_miklos_horthy_admiral"
-					small = "GFX_idea_HUN_miklos_horthy_admiral"
-				}
-				civilian = {
-					large = "GFX_Portrait_hungary_miklos_horthy"
-				}
-			}
-			country_leader = {
-				ideology = oligarchism
-				traits = { fascist_sympathies anti_communist }
-				expire = "1965.1.1.1"
-				id = 500
-			}
-			country_leader = {
-				ideology = fascism_ideology
-				traits = { anti_communist }
-				expire = "1965.1.1.1"
-				id = 503
+			civilian = {
+				large = GFX_portrait_HUN_miklos_horthy
+				small = GFX_portrait_HUN_miklos_horthy_small
 			}
 		}
-		instance = {
-			allowed = {
-				NOT = { has_dlc = "Death or Dishonor" }
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
-			}
-
-			name = HUN_miklos_horthy
-			portraits = {
-				civilian = {
-					large = "GFX_Portrait_hungary_miklos_horthy"
-				}
-			}
-			country_leader = {
-				ideology = oligarchism
-				expire = "1965.1.1.1"
-				id = 500
-			}
-			country_leader = {
-				ideology = fascism_ideology
-				expire = "1965.1.1.1"
-				id = 500
-			}
+		country_leader = {
+			ideology = oligarchism
+			traits = { fascist_sympathies anti_communist HUN_the_regent }
+			expire = "1965.1.1.1"
+			id = 500
 		}
-		instance = {
+		navy_leader = {
+			traits = { gunnery_expert navy_media_personality superior_tactician }
+			skill = 3
+			legacy_id = 556 #Navy Miklos
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 4		
+			visible = {
+				OR = {
+					has_completed_focus = wuw_HUN_strengthen_horthys_reign
+					has_completed_focus = wuw_HUN_end_the_regency
+				}
+			}		
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = HUN_miklos_horthy
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_miklos_horthy
-
-			portraits = {
-				navy = { #Can become Navy leader and therefore navy advisor
-					large = "GFX_Portrait_hungary_miklos_horthy_admiral"
-					small = "GFX_idea_HUN_miklos_horthy_admiral"
-				}
-				civilian = {
-					large = GFX_portrait_HUN_miklos_horthy
-					small = GFX_portrait_HUN_miklos_horthy_small
-				}
-			}
-
-			country_leader = {
-				ideology = oligarchism
-				traits = { fascist_sympathies anti_communist HUN_the_regent }
-				expire = "1965.1.1.1"
-				id = 500
-			}
-
-			#field_marshal = {
-			#	traits = { politically_connected inflexible_strategist media_personality }
-			#	skill = 2
-			#	attack_skill = 1
-			#	defense_skill = 1
-			#	planning_skill = 2
-			#	logistics_skill = 2
-			#	legacy_id = -1 
-			#	visible = {
-			#		#has_country_leader = {
-			#		#	ruling_only = yes
-			#		#	character = HUN_miklos_horthy
-			#		#}
-			#		has_completed_focus = wuw_HUN_pass_statute_xix
-			#	}
-			#}
-
-			navy_leader = {
-				traits = { gunnery_expert navy_media_personality superior_tactician }
-				skill = 3
-				legacy_id = 556 #Navy Miklos
-				attack_skill = 2
-				defense_skill = 2
-				maneuvering_skill = 2
-				coordination_skill = 4		
-				visible = {
+			available = {
+				has_completed_focus = wuw_HUN_reinstate_the_navy
+				NOT = {
 					OR = {
-						has_completed_focus = wuw_HUN_strengthen_horthys_reign
-						has_completed_focus = wuw_HUN_end_the_regency
-					}
-				}		
-			}
-
-			advisor = {
-
-				slot = navy_chief
-
-				idea_token = HUN_miklos_horthy
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					has_completed_focus = wuw_HUN_reinstate_the_navy
-					NOT = {
-						OR = {
-							has_government = communism
-							has_government = fascism
-						}
+						has_government = communism
+						has_government = fascism
 					}
 				}
-
-				traits = {
-					navy_chief_reform_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					factor = 2
-				}
-
 			}
-
+			traits = {
+				navy_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2
+			}
 		}
+
 	}
 
 	HUN_otto_von_habsburg = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_otto_von_habsburg
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_hungary_otto_von_hapsburg"
+				small = GFX_portrait_HUN_otto_von_habsburg_small
 			}
-
-			name = HUN_otto_von_habsburg
-
-			portraits = {
-				civilian={
-					large = "GFX_Portrait_hungary_otto_von_hapsburg"
-				}
+			army = { 
+				large = GFX_portrait_HUN_otto_von_habsburg_military
+				small = GFX_portrait_HUN_otto_von_habsburg_military_small
 			}
-			
-			country_leader = {
-				ideology = despotism
-				traits = { }
-				expire = "1965.1.1.1"
-				id = -1
-			}
-
 		}
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			name = HUN_otto_von_habsburg
-
-			portraits = {
-				civilian = {
-					large = "GFX_Portrait_hungary_otto_von_hapsburg"
-					small = GFX_portrait_HUN_otto_von_habsburg_small
-				}
-				army = { 
-					large = GFX_portrait_HUN_otto_von_habsburg_military
-					small = GFX_portrait_HUN_otto_von_habsburg_military_small
-				}
-			}
-
-			country_leader = {
-				ideology = despotism
-				traits = { HUN_the_habsburg_prince }
-				expire = "1965.1.1.1"
-				id = -1
-			}
-
-			# Basically only available if country leader
-			field_marshal = {
-				traits = { politically_connected }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 2
-				legacy_id = -1 
-				visible = {
-					OR = {
-						AND = {
-							original_tag = HUN
-							has_country_leader = {
-								ruling_only = yes
-								character = HUN_otto_von_habsburg
-							}
-						}
-						AND = {
-							original_tag = AUS
-							has_country_flag = AUS_otto_on_the_battlefield_flag
+		country_leader = {
+			ideology = despotism
+			traits = { HUN_the_habsburg_prince }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		# Basically only available if country leader
+		field_marshal = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = -1 
+			visible = {
+				OR = {
+					AND = {
+						original_tag = HUN
+						has_country_leader = {
+							ruling_only = yes
+							character = HUN_otto_von_habsburg
 						}
 					}
-					
+					AND = {
+						original_tag = AUS
+						has_country_flag = AUS_otto_on_the_battlefield_flag
+					}
 				}
+				
 			}
-
 		}
+
 	}
 
 	HUN_joseph_august_von_habsburg = {
@@ -239,13 +116,6 @@ characters = {
 				small = GFX_portrait_HUN_joseph_august_von_habsburg_small
 			}
 		}
-
-		#country_leader = {
-		#	ideology = despotism
-		#	traits = { HUN_the_old_warden }
-		#	expire = "1965.1.1.1"
-		#	id = -1
-		#}
 
 		field_marshal = {
 			traits = { inflexible_strategist politically_connected old_guard }
@@ -272,13 +142,6 @@ characters = {
 				small = GFX_portrait_HUN_istvan_horthy_small
 			}
 		}
-
-		#country_leader = {
-		#	ideology = despotism
-		#	traits = { dislikes_germany HUN_popular_aviator }
-		#	expire = "1965.1.1.1"
-		#	id = -1
-		#}
 
 		advisor = {
 
@@ -361,53 +224,21 @@ characters = {
 	}
 
 	HUN_matyas_rakosi = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_matyas_rakosi
+		portraits = {
+			civilian = {
+				large = GFX_portrait_HUN_matyas_rakosi
+				small = GFX_portrait_HUN_matyas_rakosi_civilian_small
 			}
-
-			name = HUN_matyas_rakosi
-
-			portraits = {
-				civilian = {
-					large = "GFX_Portrait_hungary_matyas_rakosi"
-				}
+			army = {
+				small = GFX_portrait_HUN_matyas_rakosi_military_small
 			}
-
-			country_leader = {
-				ideology = stalinism
-				traits = { }
-				expire = "1965.1.1.1"
-				id = -1
-			}
-
 		}
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			name = HUN_matyas_rakosi
-
-			portraits = {
-				civilian = {
-					large = GFX_portrait_HUN_matyas_rakosi
-					small = GFX_portrait_HUN_matyas_rakosi_civilian_small
-				}
-				army = {
-					small = GFX_portrait_HUN_matyas_rakosi_military_small
-				}
-			}
-
-			country_leader = {
-				ideology = stalinism
-				traits = { HUN_ardent_stalinist }
-				expire = "1965.1.1.1"
-				id = -1
-			}
-
+		country_leader = {
+			ideology = stalinism
+			traits = { HUN_ardent_stalinist }
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
 
@@ -420,66 +251,27 @@ characters = {
 				large = "GFX_Portrait_hungary_bela_kun"
 			}
 		}
-
-		#country_leader = {
-		#	ideology = marxism
-		#	traits = { HUN_the_hungarian_lenin }
-		#	expire = "1965.1.1.1"
-		#	id = -1
-		#}
 		
 	}
 
 	HUN_arpad_szakasits = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_arpad_szakasits
+		portraits = {
+			civilian = {
+				large = GFX_portrait_HUN_arpad_szakasits
+				small = GFX_portrait_HUN_arpad_szakasits_small
 			}
-
-			name = HUN_arpad_szakasits
-
-			portraits = {
-				civilian = {
-					large = "GFX_portrait_HUN_arpad_szakasits"
-					small = "GFX_portrait_HUN_arpad_szakasits_small"
-				}
-			}
-
-			country_leader = {
-				ideology = socialism
-				expire = "1965.1.1.1"
-				id = -1
-			}
-
 		}
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			name = HUN_arpad_szakasits
-
-			portraits = {
-				civilian = {
-					large = GFX_portrait_HUN_arpad_szakasits
-					small = GFX_portrait_HUN_arpad_szakasits_small
-				}
-			}
-			
-			country_leader = {
-				ideology = socialism
-				traits = { HUN_socialist_bulwark }
-				expire = "1965.1.1.1"
-				id = -1
-			}
-
+		
+		country_leader = {
+			ideology = socialism
+			traits = { HUN_socialist_bulwark }
+			expire = "1965.1.1.1"
+			id = -1
 		}
 	}
 
 	HUN_mihaly_karolyi = {
-
 		name = HUN_mihaly_karolyi
 
 		portraits = {
@@ -487,13 +279,6 @@ characters = {
 				large = GFX_portrait_HUN_mihaly_karolyi
 			}
 		}
-		
-		#country_leader = {
-		#	ideology = conservatism
-		#	traits = { HUN_veteran_president }
-		#	expire = "1965.1.1.1"
-		#	id = -1
-		#}
 		
 	}
 
@@ -506,13 +291,6 @@ characters = {
 				large = GFX_portrait_HUN_janos_zichy
 			}
 		}
-		
-		#country_leader = {
-		#	ideology = liberalism
-		#	traits = { HUN_christian_academic }
-		#	expire = "1965.1.1.1"
-		#	id = -1
-		#}
 		
 	}
 
@@ -530,64 +308,16 @@ characters = {
 			}
 		}
 		
-		#country_leader = {
-		#	ideology = liberalism
-		#	traits = { HUN_duke_of_sormland_king_of_hungarians }
-		#	expire = "1965.1.1.1"
-		#	id = -1
-		#}
-		
 	}
 
 	HUN_franz_friedrich = { #Can be given country leader roles later
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_franz_friedrich
+		portraits = {
+			civilian = {
+				large = GFX_portrait_HUN_franz_friedrich
+				small = GFX_portrait_HUN_franz_friedrich_small
 			}
-
-			name = HUN_franz_friedrich
-
-			portraits = {
-
-				#army = {
-				#	large = "GFX_Portrait_hungary_friedrich_franz"
-				#}
-
-				civilian = {
-					large = "GFX_Portrait_hungary_friedrich_franz"
-				}
-
-			}
-
-		}
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			name = HUN_franz_friedrich
-
-			portraits = {
-
-				#army = {
-				#	large = "GFX_Portrait_hungary_friedrich_franz"
-				#}
-
-				civilian = {
-					large = GFX_portrait_HUN_franz_friedrich
-					small = GFX_portrait_HUN_franz_friedrich_small
-				}
-				
-			}
-
-			#country_leader = {
-			#	ideology = despotism
-			#	traits = { HUN_duke_and_king_of_mecklenburg }
-			#	expire = "1965.1.1"
-			#}
-
+			
 		}
 	}
 
@@ -607,137 +337,65 @@ characters = {
 	}
 
 	HUN_geza_lakatos = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_geza_lakatos
+		portraits = {
+			army = {
+				large = "GFX_Portrait_hungary_geza_lakatos"
+				small = "GFX_idea_HUN_geza_lakatos"
 			}
-
-			name = HUN_geza_lakatos
-
-			portraits = {
-				army = {
-					large = "GFX_Portrait_hungary_geza_lakatos"
-					small = "GFX_idea_HUN_geza_lakatos"
-				}
-			}
-
-			corps_commander={
-				skill=5
-				traits = { infantry_leader trickster hill_fighter }
-				attack_skill=4
-				defense_skill=3
-				planning_skill=3
-				logistics_skill=2
-				legacy_id=-1
-			}
-
 		}
-		instance = {
-			allowed = {
-				has_dlc = "Gotterdammerung"
-			}
-
-			name = HUN_geza_lakatos
-
-			portraits = {
-				army = {
-					large = "GFX_Portrait_hungary_geza_lakatos"
-					small = "GFX_idea_HUN_geza_lakatos"
+		
+		# Will be upgradeable through various focuses
+		corps_commander = {
+			traits = { trait_HUN_vitez infantry_leader trickster hill_fighter }
+			skill=5
+			attack_skill=4
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id = -1 
+			visible = {
+				NOT = {
+					has_government = fascism
 				}
 			}
-			
-			# Will be upgradeable through various focuses
-			corps_commander = {
-				traits = { trait_HUN_vitez infantry_leader trickster hill_fighter }
-				skill=5
-				attack_skill=4
-				defense_skill=3
-				planning_skill=3
-				logistics_skill=2
-				legacy_id = -1 
-				visible = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-			}
-
 		}
 	}
 
 	HUN_ivan_hindy = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
+		name = HUN_ivan_hindy
+		portraits = {
+			army = {
+				large = "GFX_Portrait_hungary_ivan_hindy"
+				small = "GFX_idea_HUN_ivan_hindy"
 			}
-
-			name = HUN_ivan_hindy
-
-			portraits = {
-				army = {
-					large = "GFX_Portrait_hungary_ivan_hindy"
-					small = "GFX_idea_HUN_ivan_hindy"
-				}
-			}
-
-			corps_commander = {
-				traits = { trickster }
-				skill = 4
-				attack_skill = 3
-				defense_skill = 4
-				planning_skill = 2
-				logistics_skill = 4
-				legacy_id = -1
-			}
-
 		}
-		instance = {
+		# Will be upgradeable thorugh the focus tree
+		corps_commander = {
+			traits = { trickster }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = HUN_ivan_hindy
 			allowed = {
-				has_dlc = "Gotterdammerung"
+				original_tag = HUN
 			}
-
-			name = HUN_ivan_hindy
-
-			portraits = {
-				army = {
-					large = "GFX_Portrait_hungary_ivan_hindy"
-					small = "GFX_idea_HUN_ivan_hindy"
-				}
+			available = {
+				has_completed_focus = wuw_HUN_award_military_promotions
 			}
-
-			# Will be upgradeable thorugh the focus tree
-			corps_commander = {
-				traits = { trickster }
-				skill = 2
-				attack_skill = 2
-				defense_skill = 1
-				planning_skill = 2
-				logistics_skill = 2
-				legacy_id = -1
+			traits = {
+				army_logistics_2
 			}
-
-			advisor = {
-				slot = high_command
-				idea_token = HUN_ivan_hindy
-				allowed = {
-					original_tag = HUN
-				}
-				available = {
-					has_completed_focus = wuw_HUN_award_military_promotions
-				}
-				traits = {
-					army_logistics_2
-				}
-				cost =  50
-				ai_will_do = {
-					base = 1
-				}
+			cost =  50
+			ai_will_do = {
+				base = 1
 			}
-
 		}
 	}
 
