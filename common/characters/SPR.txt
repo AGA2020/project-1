@@ -1742,13 +1742,4 @@ characters={
 			}
 		}	
 	}
-	
-	SPA_mauricio_de_sivatte={ #Carlist
-		name=SPA_mauricio_de_sivatte
-		portraits={
-			army={
-				small="GFX_idea_SPA_mauricio_de_sivatte"
-			}
-		}
-	}
 }
