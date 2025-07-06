@@ -1085,6 +1085,9 @@ if = {
 			suspension_type_slot = tank_wheeled_suspension
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_petrol_electric_engine
+			special_type_slot_1 = extra_ammo_storage
+			special_type_slot_2 = extra_ammo_storage
+			special_type_slot_3 = extra_ammo_storage
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 14
@@ -1094,7 +1097,7 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Recon(Improved light tank)"
-		type = light_tank_chassis_1
+		type = light_tank_chassis_2
 		design_team = mio:SOV_morozov_design_bureau_organization
 		parent_version = 0
 		modules = {
@@ -1103,6 +1106,9 @@ if = {
 			suspension_type_slot = tank_wheeled_suspension
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_petrol_electric_engine
+			special_type_slot_1 = extra_ammo_storage
+			special_type_slot_2 = extra_ammo_storage
+			special_type_slot_3 = extra_ammo_storage
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 14
@@ -1128,6 +1134,7 @@ if = {
 			tank_nsb_armor_upgrade = 3
 			tank_nsb_engine_upgrade = 10
 		}
+		obsolete = yes
 		icon = "GFX_SOV_basic_heavy_tank_medium"
 	}
 	create_equipment_variant = {
@@ -1150,6 +1157,7 @@ if = {
 			tank_nsb_armor_upgrade = 3
 			tank_nsb_engine_upgrade = 10
 		}
+		obsolete = yes
 		icon = "GFX_SOV_basic_heavy_tank_medium"
 	}
 }
