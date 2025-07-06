@@ -311,6 +311,53 @@ on_actions = {
 			}
 			if = {
 			    limit = {
+			        ENG = {
+			        	AND = {
+			        		has_tech = aa_hmg 
+			        		has_tech = improved_small_airframe
+			        		has_tech = survivability_studies
+			        		has_tech = engines_3
+			        		has_tech = range_improvements
+			        		NOT = { has_country_flag = designs_sent }	 
+			        	}
+			        }
+			    }
+			    ENG = { set_country_flag = designs_sent }
+			    ENG = {
+               		create_equipment_variant = {
+               		    name = "Fighter 1 armor 1 range"
+               		    type = small_plane_airframe_2
+               		    allow_without_tech = yes
+               		    parent_version = 0
+               		    modules = {
+               		        fixed_main_weapon_slot = heavy_mg_4x
+               		        fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+               		        fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+               		        engine_type_slot = engine_3_1x
+               		        special_type_slot_1 = fuel_tanks_small
+               		        special_type_slot_2 = self_sealing_fuel_tanks_small
+               		        special_type_slot_3 = armor_plate_small
+               		    }
+               		}
+               		create_equipment_variant = {
+               		    name = "Fighter 2 range"
+               		    type = small_plane_airframe_2
+               		    allow_without_tech = yes
+               		    parent_version = 0
+               		    modules = {
+               		        fixed_main_weapon_slot = heavy_mg_4x
+               		        fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+               		        fixed_auxiliary_weapon_slot_2 = heavy_mg_4x
+               		        engine_type_slot = engine_3_1x
+               		        special_type_slot_1 = self_sealing_fuel_tanks_small
+               		        special_type_slot_2 = fuel_tanks_small
+               		        special_type_slot_3 = fuel_tanks_small
+               		    }
+               		}
+			    }
+			}
+			if = {
+			    limit = {
 			        ITA = {
 			        	AND = {
 			        		has_tech = aa_hmg 
