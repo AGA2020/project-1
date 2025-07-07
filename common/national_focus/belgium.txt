@@ -38,7 +38,8 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL FOCUS_FILTER_TFV_AUTONOMY }
 
-		available = { 
+		available = {
+			NOT = { 890 = { controller = { has_war_with = ROOT } } }
 			336 = { controller = { has_war_with = ROOT } }
 			672 = { controller = { has_war_with = ROOT } }
 		} 
