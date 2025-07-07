@@ -1,0 +1,42 @@
+FIN_historical_plan = {
+
+	allowed = {
+		original_tag = FIN
+	}
+	enable = {
+		always = yes
+	}
+
+	ai_national_focuses = {
+		FIN_enhance_southern_infrastructure
+		FIN_industrial_development
+		FIN_janiskoski_power_plant
+		FIN_expand_imatra_hydropower_plant
+		FIN_vaisala_radiosonde_tests
+		FIN_increase_military_budget
+		FIN_suomen_maavoimat
+		FIN_outokumpu_for_defence_industry
+		FIN_suomen_ilmavoimat
+		FIN_tire_factory_at_nokia
+		FIN_industrial_upgrade_in_harjavalta
+
+	}		
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
