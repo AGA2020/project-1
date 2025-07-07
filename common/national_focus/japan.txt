@@ -230,7 +230,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_strike_south_doctrine
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_focus_GER_south_east_asian_natural_wealth
 		prerequisite = { focus = JAP_greater_east_asian_co_prosperity_sphere }
 		prerequisite = { focus = JAP_sign_tripartite_pact }
 		x = 0
@@ -274,7 +274,7 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = JAP_strike_south_doctrine }
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = JAP_strike_south_doctrine
 		dynamic = yes  
 
@@ -642,7 +642,7 @@ focus_tree = {
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = JAP_nationalize_war_industry }
 		x = 0
-		y = 6
+		y = 5
 		relative_position_id = JAP_guide_the_zaibatsus
 
 		cost = 10
@@ -972,7 +972,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_expand_the_showa_steel_works
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_focus_generic_steel
 		prerequisite = { focus = JAP_the_manchurian_project }
 		x = 2
 		y = 1
@@ -1083,7 +1083,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_light_industry_development
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_focus_generic_modernize_industry
 		prerequisite = { focus = JAP_expand_manchurian_railways }
 		x = -1
 		y = 1
@@ -1469,7 +1469,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_range_focus
-		icon = GFX_goal_generic_air_production
+		icon = GFX_focus_generic_long_range_aircraft
 		prerequisite = { focus = JAP_fighter_modernization }
 		x = -1
 		y = 1
@@ -1805,7 +1805,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_carrier_warfare_experiments
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_focus_generic_air_carrier
 		prerequisite = { focus = JAP_new_naval_estimates }
 		x = -1
 		y = 1
@@ -1932,7 +1932,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_supremacy_of_the_battlefleet
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_focus_generic_navy_battleship2
 		prerequisite = { focus = JAP_new_naval_estimates }
 		x = 1
 		y = 1
@@ -2085,7 +2085,7 @@ focus_tree = {
 
 	focus = {
 		id = JAP_cruiser_modernization
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_focus_generic_cruiser2
 		prerequisite = { focus = JAP_new_naval_estimates }
 		x = 3
 		y = 1
