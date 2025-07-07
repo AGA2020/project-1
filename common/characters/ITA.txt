@@ -2036,12 +2036,6 @@ characters = {
 			allowed = {
 				ITA_is_italian_tag = yes
 			}
-			available = {
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
-			}
 			traits = {
 				captain_of_industry
 			}
@@ -2094,9 +2088,6 @@ characters = {
 			idea_token = ITA_curzio_malaparte
 			allowed = {
 				ITA_is_italian_tag = yes
-			}
-			available = {
-				has_government = fascism
 			}
 			traits = {
 				editor
@@ -2295,9 +2286,7 @@ characters = {
 			logistics_skill = 1
 			legacy_id = 0
 			visible = { 
-				OR = {
-					has_completed_focus = ITA_the_carabinieri
-				}
+				has_completed_focus = ITA_the_carabinieri
 			}
 		}
 	}
@@ -2352,16 +2341,6 @@ characters = {
  
 	}
 
-	ITA_alberto_de_stefani = {
-		name = ITA_alberto_de_stefani
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_alberto_de_stefani_small
-			}
-		}
- 
-	}
-
 	### DEMOCRATIC ###
 	ITA_ivanoe_bonomi = {
 		name = ITA_ivanoe_bonomi
@@ -2404,26 +2383,6 @@ characters = {
 		portraits = {
 			army = {
 				small = GFX_portrait_ITA_mario_scelba_small
-			}
-		}
- 
-	}
-
-	ITA_guido_de_ruggiero = {
-		name = ITA_guido_de_ruggiero
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_guido_de_rugiero_small
-			}
-		}
- 
-	}
-
-	ITA_alberto_tarchiani = {
-		name = ITA_alberto_tarchiani
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_alberto_tarchiani_small
 			}
 		}
  
@@ -2677,26 +2636,6 @@ characters = {
 		}
 	}
 
-	ITA_antonio_pesenti = {
-		name = ITA_antonio_pesenti
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_antonio_pesenti_small
-			}
-		}
- 
-	}
-
-	ITA_fausto_gullo = {
-		name = ITA_fausto_gullo
-		portraits = {
-			army = {
-				small = GFX_portrait_ITA_fausto_gullo_small
-			}
-		}
- 
-	}
-
 	ITA_giulio_paggio = {
 		name = ITA_giulio_paggio
 		portraits = {
@@ -2820,17 +2759,6 @@ characters = {
  #     #  #    #  #  #       #   ##    #    #  #    #    #    #    # 
   #####    ####   #  ######  #    #    #    #   ####     #     ####  
 
-
-	
-	ITA_enrico_fermi = {
-		name = ITA_enrico_fermi
-		portraits = {
-			army = {
-				large = GFX_portrait_ITA_enrico_fermi
-				small = GFX_portrait_ITA_enrico_fermi_small
-			}
-		}
-	}
 
 	ITA_gaetano_crocco = {
 		name = ITA_gaetano_crocco
