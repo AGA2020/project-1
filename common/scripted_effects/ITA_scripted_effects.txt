@@ -2483,9 +2483,6 @@ ITA_set_up_character_cw_flags_effect = { #Using Unit leader flags when necessary
 	ITA_amadeo_bordiga = {
 		set_character_flag = ITA_cw_character_antifascist_side_flag
 	}
-	ITA_antonio_pesenti = {
-		set_character_flag = ITA_cw_character_antifascist_side_flag
-	}
 	ITA_giulio_paggio = {
 		set_character_flag = ITA_cw_character_antifascist_side_flag
 	}
