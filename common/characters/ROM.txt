@@ -1,4 +1,18 @@
 characters={
+	ROM_carol_ii={
+		name= ROM_carol_ii
+		portraits={
+			civilian={
+				large="GFX_Portrait_romania_Carol_II"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ hedonist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	ROM_gheorghe_tatarescu={
 		name=ROM_gheorghe_tatarescu
 		portraits={
@@ -81,12 +95,6 @@ characters={
 			traits = {
 				prince_of_terror 
 			}
-		}
-
-		country_leader={
-			ideology=centrism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		corps_commander={
 			traits={ harsh_leader media_personality }
