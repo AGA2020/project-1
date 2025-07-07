@@ -107,7 +107,7 @@ operations = {
    #         }
    #     }
    # }
-   cheapscientist_soviet = {
+   fin_take_partial_noob = {
         # icon = generic_operation
         fire_only_once = yes
         cost = 149

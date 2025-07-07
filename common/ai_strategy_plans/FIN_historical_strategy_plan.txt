@@ -19,7 +19,7 @@ FIN_historical_plan = {
 		FIN_suomen_ilmavoimat
 		FIN_tire_factory_at_nokia
 		FIN_industrial_upgrade_in_harjavalta
-
+		FIN_expand_mining_prospection
 	}		
 
 	research = {
