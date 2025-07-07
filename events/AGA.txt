@@ -7,21 +7,15 @@ news_event = {
 	picture = GFX_news_event_fascist_militia
 
 	trigger = {
-		454 = { 
-			OR = {
-				is_controlled_by = GER 
-				is_controlled_by = ITA
-			}
-		}
+		NOT = { 454 = { is_controlled_by = ENG } }
 		NOT = {
 			has_global_flag = haci_seized
 		}
 	}
-
 	mean_time_to_happen = {
-		months = 1
+		days = 4
 	}
-
+	major = yes
 	immediate = {
 		hidden_effect = {
 			set_global_flag = haci_seized
