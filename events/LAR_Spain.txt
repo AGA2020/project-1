@@ -2293,14 +2293,36 @@ country_event = {
 				SPD = {
 					retire_ideology_leader = fascism
 					retire_ideology_leader = neutrality
-					create_country_leader = {
-						name = "Manuel Azaña"
-						desc = "POLITICS_MANUEL_AZANA_DESC"
-						picture = GFX_portrait_Manuel_Azana
-						expire = "1965.1.1"
-						ideology = conservatism
-						traits = {
-							figurehead_president
+					IF = {
+						limit = {
+							NOT = {
+								has_country_leader = {
+									character = SPR_manuel_azana
+									ruling_only = yes
+								}
+							}
+						}
+						IF = {
+							limit = {
+								NOT = {
+									can_be_country_leader = SPR_manuel_azana
+								}
+							}
+							add_country_leader_role = {
+								character = SPR_manuel_azana
+								country_leader = {
+								 	ideology = conservatism
+								 	traits = { figurehead_president }
+								 	expire = "1965.1.1"
+								}
+								promote_leader = yes
+							}
+						}
+						ELSE = {
+							promote_character = {
+							    character = SPR_manuel_azana
+							    ideology = conservatism
+							}
 						}
 					}
 				}
