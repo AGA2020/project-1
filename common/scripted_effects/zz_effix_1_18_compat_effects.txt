@@ -1,7 +1,7 @@
-﻿# Auto-generated 1.18.2 compatibility scripted effects for effix.
-# Contains vanilla definitions that local stale/empty override files were missing.
+# Auto-generated 1.18.2 compatibility for effix.
+# Missing vanilla scripted effects referenced by copied 1.18 content.
 
-# From scripted_effects\CHI_scripted_effects.txt
+# From common\scripted_effects\CHI_scripted_effects.txt
 CHI_infiltration_flag_down_2 = {
 	hidden_effect = {	
 		every_country = {
@@ -26,7 +26,7 @@ CHI_infiltration_flag_down_2 = {
 	}
 }
 
-# From scripted_effects\CHI_scripted_effects.txt
+# From common\scripted_effects\CHI_scripted_effects.txt
 CHI_is_corruption_in_government_on_balance_good = {
 	
 	set_variable = { on_balance = 0 }  #>0 = good <=0 bad
@@ -88,7 +88,7 @@ CHI_is_corruption_in_government_on_balance_good = {
 	clear_variable = corruption_economy_cost_factor
 }
 
-# From scripted_effects\CHI_scripted_effects.txt
+# From common\scripted_effects\CHI_scripted_effects.txt
 CHI_kill_chiang_for_new_leader = {
 	IF = {
 		limit = { 
@@ -153,7 +153,7 @@ CHI_kill_chiang_for_new_leader = {
 	}
 }
 
-# From scripted_effects\CHI_scripted_effects.txt
+# From common\scripted_effects\CHI_scripted_effects.txt
 CHI_show_state_uprising_effect_after_infiltration_level_down = {
 	custom_effect_tooltip = CHI_removed_infiltration
 	if = {
@@ -187,7 +187,7 @@ CHI_show_state_uprising_effect_after_infiltration_level_down = {
 	}
 }
 
-# From scripted_effects\TOA_scripted_effects.txt
+# From common\scripted_effects\TOA_scripted_effects.txt
 CHL_anarchic_society_level_up = {
 	IF = {
 		limit = {
@@ -261,7 +261,7 @@ CHL_anarchic_society_level_up = {
 	}
 }
 
-# From scripted_effects\ETH_scripted_effects.txt
+# From common\scripted_effects\ETH_scripted_effects.txt
 ETH_BOP_centralization_large_effect = {
 	add_power_balance_value = {
 		id = ETH_centralization_balance
@@ -269,7 +269,7 @@ ETH_BOP_centralization_large_effect = {
 	}
 }
 
-# From scripted_effects\ETH_scripted_effects.txt
+# From common\scripted_effects\ETH_scripted_effects.txt
 ETH_BOP_centralization_small_effect = {
 	add_power_balance_value = {
 		id = ETH_centralization_balance
@@ -278,7 +278,7 @@ ETH_BOP_centralization_small_effect = {
 
 }
 
-# From scripted_effects\ETH_scripted_effects.txt
+# From common\scripted_effects\ETH_scripted_effects.txt
 ETH_BOP_decentralization_large_effect = {
 	add_power_balance_value = {
 		id = ETH_centralization_balance
@@ -286,7 +286,7 @@ ETH_BOP_decentralization_large_effect = {
 	}
 }
 
-# From scripted_effects\ETH_scripted_effects.txt
+# From common\scripted_effects\ETH_scripted_effects.txt
 ETH_BOP_decentralization_small_effect = {
 	add_power_balance_value = {
 		id = ETH_centralization_balance
@@ -294,7 +294,21 @@ ETH_BOP_decentralization_small_effect = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
+JAP_add_influential_imperial_faction = {
+	add_to_variable = { JAP_num_of_influential_imperial_factions = 1 }
+	#If there are already 2 Influential Factions, trigger an event to choose which one to boot
+	if = { 
+		limit = {
+			check_variable = { JAP_num_of_influential_imperial_factions > 2 }
+		}
+		hidden_effect = { set_country_flag = JAP_pending_imperial_influence_decision } #Used to block players from influencing the Imperial Influence system. Remember to clear it!
+		country_event = { id = SEA_imperial_influence_events.1 hours = 1 }
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+}
+
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_army_faction_goes_down_from_tier_2_to_tier_1 = {
 
 	IF = {
@@ -373,7 +387,7 @@ JAP_army_faction_goes_down_from_tier_2_to_tier_1 = {
 	
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_army_faction_goes_down_from_tier_3_to_tier_2 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
@@ -454,7 +468,7 @@ JAP_army_faction_goes_down_from_tier_3_to_tier_2 = {
 	
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_army_faction_goes_down_from_tier_4_to_tier_3 = {
 	
 	JAP_add_influential_imperial_faction = yes
@@ -521,7 +535,7 @@ JAP_army_faction_goes_down_from_tier_4_to_tier_3 = {
 	
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_army_faction_goes_up_from_tier_1_to_tier_2 = {
 
 	IF = {
@@ -599,7 +613,7 @@ JAP_army_faction_goes_up_from_tier_1_to_tier_2 = {
 		
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_army_faction_goes_up_from_tier_2_to_tier_3 = {
 
 	JAP_add_influential_imperial_faction = yes
@@ -679,7 +693,7 @@ JAP_army_faction_goes_up_from_tier_2_to_tier_3 = {
 	
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_army_faction_goes_up_from_tier_3_to_tier_4 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
@@ -843,7 +857,7 @@ JAP_army_faction_goes_up_from_tier_3_to_tier_4 = {
 	
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_faction_demand_activation_effects = {
 	add_to_variable = { JAP_num_of_faction_demands = 1 }
 	add_to_variable = { JAP_num_of_faction_demands_total = 1 }
@@ -855,18 +869,18 @@ JAP_faction_demand_activation_effects = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_faction_demand_add_to_failed_missions = {
 	add_to_variable = { JAP_faction_demand_failed_missions = 1 }
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_faction_demand_finalize_mission_effect = { #Sets flags and everything necessary to end a mission and keep track of ongoing missions, etc.
 	subtract_from_variable = { JAP_num_of_faction_demands = 1 }
 	add_to_variable = { JAP_faction_demand_number_of_missions_resolved = 1 }
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_government_faction_goes_down_from_tier_2_to_tier_1 = {
 	swap_ideas = {
 		remove_idea = JAP_government_faction_tier_2
@@ -874,7 +888,7 @@ JAP_government_faction_goes_down_from_tier_2_to_tier_1 = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_government_faction_goes_down_from_tier_3_to_tier_2 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
@@ -885,7 +899,7 @@ JAP_government_faction_goes_down_from_tier_3_to_tier_2 = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_government_faction_goes_down_from_tier_4_to_tier_3 = {
 	
 	JAP_add_influential_imperial_faction = yes
@@ -896,7 +910,7 @@ JAP_government_faction_goes_down_from_tier_4_to_tier_3 = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_government_faction_goes_up_from_tier_1_to_tier_2 = {
 	swap_ideas = {
 		remove_idea = JAP_government_faction_tier_1
@@ -904,7 +918,7 @@ JAP_government_faction_goes_up_from_tier_1_to_tier_2 = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_government_faction_goes_up_from_tier_2_to_tier_3 = {
 	
 	JAP_add_influential_imperial_faction = yes
@@ -915,7 +929,7 @@ JAP_government_faction_goes_up_from_tier_2_to_tier_3 = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_government_faction_goes_up_from_tier_3_to_tier_4 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
@@ -1116,7 +1130,7 @@ JAP_government_faction_goes_up_from_tier_3_to_tier_4 = {
 
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_naval_faction_goes_down_from_tier_2_to_tier_1 = {
 
 	IF = {
@@ -1195,7 +1209,7 @@ JAP_naval_faction_goes_down_from_tier_2_to_tier_1 = {
 	
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_naval_faction_goes_down_from_tier_3_to_tier_2 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
@@ -1276,7 +1290,7 @@ JAP_naval_faction_goes_down_from_tier_3_to_tier_2 = {
 	
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_naval_faction_goes_down_from_tier_4_to_tier_3 = {
 	
 	JAP_add_influential_imperial_faction = yes
@@ -1343,7 +1357,7 @@ JAP_naval_faction_goes_down_from_tier_4_to_tier_3 = {
 	
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_naval_faction_goes_up_from_tier_1_to_tier_2 = {
 
 	IF = {
@@ -1422,7 +1436,7 @@ JAP_naval_faction_goes_up_from_tier_1_to_tier_2 = {
 	
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_naval_faction_goes_up_from_tier_2_to_tier_3 = {
 	
 	JAP_add_influential_imperial_faction = yes
@@ -1502,7 +1516,7 @@ JAP_naval_faction_goes_up_from_tier_2_to_tier_3 = {
 	
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_naval_faction_goes_up_from_tier_3_to_tier_4 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
@@ -1674,7 +1688,7 @@ JAP_naval_faction_goes_up_from_tier_3_to_tier_4 = {
 	
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_one_less_member_decrease_peasants_education_strength = {
 	subtract_from_variable = { #always remove faction members
 		JAP_educating_the_peasants_modifier_allies_count = 1
@@ -1699,7 +1713,7 @@ JAP_one_less_member_decrease_peasants_education_strength = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_one_more_member_increase_peasants_education_strength = {
 	add_to_variable = { #always add a faction member
 		JAP_educating_the_peasants_modifier_allies_count = 1
@@ -1718,7 +1732,7 @@ JAP_one_more_member_increase_peasants_education_strength = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_setup_faction_wide_aoe_effects_from = {
 	
 	IF = {
@@ -1794,7 +1808,7 @@ JAP_setup_faction_wide_aoe_effects_from = {
 
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_setup_faction_wide_aoe_effects_JAP = {
 	
 	IF = {
@@ -1874,7 +1888,7 @@ JAP_setup_faction_wide_aoe_effects_JAP = {
 
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_setup_faction_wide_aoe_effects_root = {
 	
 	IF = {
@@ -1958,7 +1972,7 @@ JAP_setup_faction_wide_aoe_effects_root = {
 
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_small_army_faction_gain = {
 	if = {
 		limit = {
@@ -2014,7 +2028,7 @@ JAP_small_army_faction_gain = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_small_army_faction_loss = {
 	if = {
 		limit = {
@@ -2074,7 +2088,7 @@ JAP_small_army_faction_loss = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_small_government_faction_gain = {
 	if = {
 		limit = {
@@ -2132,7 +2146,7 @@ JAP_small_government_faction_gain = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_small_government_faction_loss = {
 	if = {
 		limit = {
@@ -2193,7 +2207,7 @@ JAP_small_government_faction_loss = {
 	subtract_from_variable = { JAP_government_faction_influence_level = JAP_small_influence_point }
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_small_naval_faction_gain = {
 	if = {
 		limit = {
@@ -2250,7 +2264,7 @@ JAP_small_naval_faction_gain = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_small_naval_faction_loss = {
 	if = {
 		limit = {
@@ -2312,7 +2326,65 @@ JAP_small_naval_faction_loss = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
+JAP_small_zaibatsu_faction_gain = {
+	if = {
+		limit = {
+			check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_4_minimum_limit }
+		}
+		if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_1
+			}
+			if = { #Zaibatsu WON'T level up
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_1_to_tier_2_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+			}
+			else = { #Zaibatsu WILL level up
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+				
+				JAP_zaibatsu_faction_goes_up_from_tier_1_to_tier_2 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_2
+			}
+			if = { #Zaibatsu WON'T level up
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_2_to_tier_3_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+			}
+			else = { #Zaibatsu WILL level up
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+
+				JAP_zaibatsu_faction_goes_up_from_tier_2_to_tier_3 = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = JAP_zaibatsu_faction_tier_3
+			}
+			if = { #Zaibatsu WON'T level up
+				limit = {
+					check_variable = { JAP_zaibatsu_faction_influence_level < JAP_tier_3_to_tier_4_small_gate }
+				}
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+			}
+			else = { #Zaibatsu WILL level up
+				custom_effect_tooltip = JAP_small_zaibatsu_faction_gain_tt
+				
+				JAP_zaibatsu_faction_goes_up_from_tier_3_to_tier_4 = yes
+			}
+		}
+		add_to_variable = { JAP_zaibatsu_faction_influence_level = JAP_small_influence_point }
+	}
+}
+
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_small_zaibatsu_faction_loss = {
 	if = {
 		limit = {
@@ -2373,7 +2445,7 @@ JAP_small_zaibatsu_faction_loss = {
 	subtract_from_variable = { JAP_zaibatsu_faction_influence_level = JAP_small_influence_point }
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_trigger_communist_civil_war = {
 	
 	# The Colonies and Imperial Protectorates Break Ties 
@@ -2855,12 +2927,12 @@ JAP_trigger_communist_civil_war = {
 	    		PREV.PREV = {
 
 	    			delete_unit_template_and_units = {
-	    				division_template = "KantÅ-gun Hohei Shidan"
+	    				division_template = "Kantō-gun Hohei Shidan"
 	    				disband = yes #if yes, will refund equipment/manpower.
 	    			}
 
 		    		division_template = {
-		    		    name = "KantÅ-gun Hohei Shidan"
+		    		    name = "Kantō-gun Hohei Shidan"
 		    		    is_locked = yes
 		    		    division_names_group = JAP_CAV_01
 						role = infantry
@@ -2883,15 +2955,15 @@ JAP_trigger_communist_civil_war = {
 	    					is_controlled_by = PREV
 	    				}
 	    				create_unit = {
-	    				    division = "name = \"1. KantÅ-gun Hohei Shidan\" division_template = \"KantÅ-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    division = "name = \"1. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 	    				    owner = PREV
 	    				}
 	    				create_unit = {
-	    				    division = "name = \"2. KantÅ-gun Hohei Shidan\" division_template = \"KantÅ-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    division = "name = \"2. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 	    				    owner = PREV
 	    				}
 	    				create_unit = {
-	    				    division = "name = \"3. KantÅ-gun Hohei Shidan\" division_template = \"KantÅ-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    division = "name = \"3. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 	    				    owner = PREV
 	    				}
 	    			}
@@ -2985,12 +3057,12 @@ JAP_trigger_communist_civil_war = {
 
     hidden_effect = {
     	delete_unit_template_and_units = {
-    		division_template = "Sanson KÅsakutai"
+    		division_template = "Sanson Kōsakutai"
     		disband = yes #if yes, will refund equipment/manpower.
     	}
 
     	division_template = {
-    	    name = "Sanson KÅsakutai"
+    	    name = "Sanson Kōsakutai"
     	    is_locked = no
     	    division_names_group = JAP_MIL_02
     	    template_counter = 118
@@ -3020,27 +3092,27 @@ JAP_trigger_communist_civil_war = {
     		}
     	}
     	create_unit = {
-    	    division = "name = \"1. Sanson KÅsakutai\" division_template = \"Sanson KÅsakutai\" start_experience_factor = 0.5"
+    	    division = "name = \"1. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
     	    owner = ROOT
     	}
     	create_unit = {
-    	    division = "name = \"2. Sanson KÅsakutai\" division_template = \"Sanson KÅsakutai\" start_experience_factor = 0.5"
+    	    division = "name = \"2. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
     	    owner = ROOT
     	}
     	create_unit = {
-    	    division = "name = \"3. Sanson KÅsakutai\" division_template = \"Sanson KÅsakutai\" start_experience_factor = 0.5"
+    	    division = "name = \"3. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
     	    owner = ROOT
     	}
     	create_unit = {
-    	    division = "name = \"4. Sanson KÅsakutai\" division_template = \"Sanson KÅsakutai\" start_experience_factor = 0.5"
+    	    division = "name = \"4. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
     	    owner = ROOT
     	}
     	create_unit = {
-    	    division = "name = \"5. Sanson KÅsakutai\" division_template = \"Sanson KÅsakutai\" start_experience_factor = 0.5"
+    	    division = "name = \"5. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
     	    owner = ROOT
     	}
     	create_unit = {
-    	    division = "name = \"6. Sanson KÅsakutai\" division_template = \"Sanson KÅsakutai\" start_experience_factor = 0.5"
+    	    division = "name = \"6. Sanson Kōsakutai\" division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.5"
     	    owner = ROOT
     	}
     }
@@ -3118,12 +3190,12 @@ JAP_trigger_communist_civil_war = {
     		}
 
     		delete_unit_template_and_units = {
-    			division_template = "KeishichÅ"
+    			division_template = "Keishichō"
     			disband = yes #if yes, will refund equipment/manpower.
     		}
 
     		division_template = {
-    		    name = "KeishichÅ"
+    		    name = "Keishichō"
     		    is_locked = no
     		    division_names_group = JAP_INF_01
     		    template_counter = 120
@@ -3141,43 +3213,43 @@ JAP_trigger_communist_civil_war = {
     		}
     		282 = {
     			create_unit = {
-    			    division = "name = \"1. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"1. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = PREV
     			}
     			create_unit = {
-    			    division = "name = \"2. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"2. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = PREV
     			}
     			create_unit = {
-    			    division = "name = \"3. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"3. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = PREV
     			}
     			create_unit = {
-    			    division = "name = \"4. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"4. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = PREV
     			}
     			create_unit = {
-    			    division = "name = \"5. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"5. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = PREV
     			}
     			create_unit = {
-    			    division = "name = \"6. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"6. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = PREV
     			}
     			create_unit = {
-    			    division = "name = \"7. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"7. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = PREV
     			}
     			create_unit = {
-    			    division = "name = \"8. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"8. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = PREV
     			}
     			create_unit = {
-    			    division = "name = \"9. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"9. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = PREV
     			}
     			create_unit = {
-    			    division = "name = \"10. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"10. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = PREV
     			}
     		}
@@ -3189,35 +3261,35 @@ JAP_trigger_communist_civil_war = {
     			}
     			282 = {
     				create_unit = {
-    				    division = "name = \"11. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    division = "name = \"11. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     				    owner = PREV
     				}
     				create_unit = {
-    				    division = "name = \"12. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    division = "name = \"12. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     				    owner = PREV
     				}
     				create_unit = {
-    				    division = "name = \"13. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    division = "name = \"13. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     				    owner = PREV
     				}
     				create_unit = {
-    				    division = "name = \"14. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    division = "name = \"14. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     				    owner = PREV
     				}
     				create_unit = {
-    				    division = "name = \"15. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    division = "name = \"15. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     				    owner = PREV
     				}
     				create_unit = {
-    				    division = "name = \"16. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    division = "name = \"16. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     				    owner = PREV
     				}
     				create_unit = {
-    				    division = "name = \"17. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    division = "name = \"17. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     				    owner = PREV
     				}
     				create_unit = {
-    				    division = "name = \"18. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    				    division = "name = \"18. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     				    owner = PREV
     				}
     			}
@@ -3328,7 +3400,7 @@ JAP_trigger_communist_civil_war = {
 
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_trigger_democratic_civil_war = {
 
 	# The Colonies and Imperial Protectorates Break Ties 
@@ -3791,12 +3863,12 @@ JAP_trigger_democratic_civil_war = {
 	    		PREV.PREV = {
 
 	    			delete_unit_template_and_units = {
-	    				division_template = "KantÅ-gun Hohei Shidan"
+	    				division_template = "Kantō-gun Hohei Shidan"
 	    				disband = yes #if yes, will refund equipment/manpower.
 	    			}
 
 		    		division_template = {
-		    		    name = "KantÅ-gun Hohei Shidan"
+		    		    name = "Kantō-gun Hohei Shidan"
 		    		    is_locked = yes
 		    		    division_names_group = JAP_CAV_01
 						role = infantry
@@ -3819,15 +3891,15 @@ JAP_trigger_democratic_civil_war = {
 	    					is_controlled_by = PREV
 	    				}
 	    				create_unit = {
-	    				    division = "name = \"1. KantÅ-gun Hohei Shidan\" division_template = \"KantÅ-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    division = "name = \"1. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 	    				    owner = PREV
 	    				}
 	    				create_unit = {
-	    				    division = "name = \"2. KantÅ-gun Hohei Shidan\" division_template = \"KantÅ-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    division = "name = \"2. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 	    				    owner = PREV
 	    				}
 	    				create_unit = {
-	    				    division = "name = \"3. KantÅ-gun Hohei Shidan\" division_template = \"KantÅ-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+	    				    division = "name = \"3. Kantō-gun Hohei Shidan\" division_template = \"Kantō-gun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 	    				    owner = PREV
 	    				}
 	    			}
@@ -3921,12 +3993,12 @@ JAP_trigger_democratic_civil_war = {
 
     hidden_effect = {
     	delete_unit_template_and_units = {
-    		division_template = "KeishichÅ"
+    		division_template = "Keishichō"
     		disband = yes #if yes, will refund equipment/manpower.
     	}
 
     	division_template = {
-    	    name = "KeishichÅ"
+    	    name = "Keishichō"
     	    is_locked = no
     	    division_names_group = JAP_INF_01
     	    template_counter = 120
@@ -3944,23 +4016,23 @@ JAP_trigger_democratic_civil_war = {
     	}
     	282 = {
     		create_unit = {
-    		    division = "name = \"1. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    		    division = "name = \"1. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     		    owner = ROOT
     		}
     		create_unit = {
-    		    division = "name = \"2. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    		    division = "name = \"2. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     		    owner = ROOT
     		}
     		create_unit = {
-    		    division = "name = \"3. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    		    division = "name = \"3. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     		    owner = ROOT
     		}
     		create_unit = {
-    		    division = "name = \"4. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    		    division = "name = \"4. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     		    owner = ROOT
     		}
     		create_unit = {
-    		    division = "name = \"5. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    		    division = "name = \"5. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     		    owner = ROOT
     		}
     	}
@@ -3971,35 +4043,35 @@ JAP_trigger_democratic_civil_war = {
     		}
     		282 = {
     			create_unit = {
-    			    division = "name = \"6. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"6. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = ROOT
     			}
     			create_unit = {
-    			    division = "name = \"7. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"7. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = ROOT
     			}
     			create_unit = {
-    			    division = "name = \"8. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"8. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = ROOT
     			}
     			create_unit = {
-    			    division = "name = \"9. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"9. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = ROOT
     			}
     			create_unit = {
-    			    division = "name = \"10. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"10. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = ROOT
     			}
     			create_unit = {
-    			    division = "name = \"11. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"11. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = ROOT
     			}
     			create_unit = {
-    			    division = "name = \"12. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"12. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = ROOT
     			}
     			create_unit = {
-    			    division = "name = \"13. KeishichÅ\" division_template = \"KeishichÅ\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
+    			    division = "name = \"13. Keishichō\" division_template = \"Keishichō\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
     			    owner = ROOT
     			}
     		}
@@ -4107,7 +4179,7 @@ JAP_trigger_democratic_civil_war = {
 
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_zaibatsu_faction_goes_down_from_tier_2_to_tier_1 = {
 	swap_ideas = {
 		remove_idea = JAP_zaibatsu_faction_tier_2
@@ -4115,7 +4187,7 @@ JAP_zaibatsu_faction_goes_down_from_tier_2_to_tier_1 = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_zaibatsu_faction_goes_down_from_tier_3_to_tier_2 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
@@ -4126,7 +4198,7 @@ JAP_zaibatsu_faction_goes_down_from_tier_3_to_tier_2 = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_zaibatsu_faction_goes_down_from_tier_4_to_tier_3 = {
 	
 	JAP_add_influential_imperial_faction = yes
@@ -4137,7 +4209,7 @@ JAP_zaibatsu_faction_goes_down_from_tier_4_to_tier_3 = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_zaibatsu_faction_goes_up_from_tier_1_to_tier_2 = {
 	swap_ideas = {
 		remove_idea = JAP_zaibatsu_faction_tier_1
@@ -4145,7 +4217,7 @@ JAP_zaibatsu_faction_goes_up_from_tier_1_to_tier_2 = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_zaibatsu_faction_goes_up_from_tier_2_to_tier_3 = {
 	
 	JAP_add_influential_imperial_faction = yes
@@ -4156,7 +4228,7 @@ JAP_zaibatsu_faction_goes_up_from_tier_2_to_tier_3 = {
 	}
 }
 
-# From scripted_effects\JAP_scripted_effects.txt
+# From common\scripted_effects\JAP_scripted_effects.txt
 JAP_zaibatsu_faction_goes_up_from_tier_3_to_tier_4 = {
 
 	subtract_from_variable = { JAP_num_of_influential_imperial_factions = 1 } #Gotta keep track of how many Influential Factions there are!
@@ -4354,7 +4426,23 @@ JAP_zaibatsu_faction_goes_up_from_tier_3_to_tier_4 = {
 
 }
 
-# From scripted_effects\NOR_scripted_effects.txt
+# From common\scripted_effects\NOR_scripted_effects.txt
+NOR_apply_resistance_to_fascists = {
+	if = {
+		limit = {
+			NOR_fascist_norway_exists = yes 
+		}
+		every_state = {
+			limit = {
+				is_core_of = NOR
+			}
+			force_enable_resistance = FNO 
+			start_resistance = FNO
+		}	
+	}
+}
+
+# From common\scripted_effects\NOR_scripted_effects.txt
 NOR_character_flag_setup_for_cw = {
 	### Country Leaders ###
 
@@ -4549,7 +4637,290 @@ NOR_character_flag_setup_for_cw = {
 	set_country_flag = NOR_sorted_characters
 }
 
-# From scripted_effects\NOR_scripted_effects.txt
+# From common\scripted_effects\NOR_scripted_effects.txt
+NOR_create_communist_templates = {
+	if = {
+		limit = {
+			any_controlled_state = {
+				check_variable = { NOR_state_preparation = 2 }
+			}
+		}
+		division_template = {    
+			name = "Våpenfolket"
+			force_allow_recruiting = yes
+			is_locked = yes
+			priority = 1
+			template_counter = 68 
+			regiments = {
+				irregular_infantry = { x = 0 y = 0 }
+				irregular_infantry = { x = 0 y = 1 }
+				irregular_infantry = { x = 0 y = 2 }
+				irregular_infantry = { x = 1 y = 0 }
+				irregular_infantry = { x = 1 y = 1 }
+			}
+			support = {
+			}
+			override_model = NOR_irregular_entity			
+		}		
+	}
+	if = {
+		limit = {
+			any_controlled_state = {
+				check_variable = { NOR_state_preparation = 3 }
+			}
+		}
+		division_template = {    
+			name = "Folkets Hær" 
+			force_allow_recruiting = yes
+			priority = 1
+			is_locked = yes
+			template_counter = 69  
+			regiments = {
+				militia = { x = 0 y = 0 }
+				militia = { x = 0 y = 1 }
+				militia = { x = 0 y = 2 }
+				militia = { x = 1 y = 0 }
+				militia = { x = 1 y = 1 }
+			}
+			support = {
+			}
+			override_model = NOR_irregular_entity
+		}
+	}
+}
+
+# From common\scripted_effects\NOR_scripted_effects.txt
+NOR_deploy_prep_comm_damage = {  
+	if = {
+		limit = {
+			check_variable = { NOR_state_preparation = 1 }
+		} 
+		damage_building = {
+			type = arms_factory 
+			damage = 1.5 
+		}
+		damage_building = {
+			type = industrial_complex 
+			damage = 1.5 
+		}
+		damage_building = {
+			type = infrastructure
+			damage = 1.5
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { NOR_state_preparation = 2 }
+		} 
+		damage_building = {
+			type = arms_factory 
+			damage = 1 
+		}
+		damage_building = {
+			type = industrial_complex 
+			damage = 1 
+		}
+		damage_building = {
+			type = infrastructure
+			damage = 1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { NOR_state_preparation = 3 }
+		} 
+		damage_building = {
+			type = arms_factory 
+			damage = 0.5 
+		}
+		damage_building = {
+			type = industrial_complex 
+			damage = 0.5 
+		}
+		damage_building = {
+			type = infrastructure
+			damage = 0.5
+		}
+	}
+}
+
+# From common\scripted_effects\NOR_scripted_effects.txt
+NOR_fcw_big_fascist_support = {
+	# Saving both Norways for later
+	random_country = {
+		limit = {
+			original_tag = NOR 
+			has_government = democratic
+			has_civil_war = yes 
+		}
+		NOR = {
+			set_variable = { NOR_cw_democratic_norway = PREV } 
+		}
+	}
+	random_country = {
+		limit = {
+			original_tag = NOR 
+			has_government = fascism
+			has_civil_war = yes
+		}
+		NOR = {
+			set_variable = { NOR_cw_fascist_norway = PREV }
+		}
+	}
+	if = {
+		limit = { # This is just in case there's some weird shenanigans 
+			var:NOR.NOR_cw_fascist_attacker = {
+				OR = {
+					has_war_with = NOR.NOR_cw_fascist_norway
+					has_war_with = NOR.NOR_cw_democratic_norway 
+				}
+			}
+		}
+		var:NOR.NOR_cw_fascist_norway = { 
+			var:NOR.NOR_cw_fascist_attacker = {
+				if = {
+					limit = {
+						has_wargoal_against = {	target = PREV }
+					}
+					remove_wargoal = { 
+						type = all
+						target = PREV
+					}
+				}
+			}
+			var:NOR.NOR_cw_democratic_norway = {
+				var:NOR.NOR_cw_fascist_attacker = {
+					add_to_war = {
+						targeted_alliance = PREV.PREV 
+						enemy = PREV 
+					}
+				}
+				var:NOR.NOR_cw_fascist_norway = {
+					create_wargoal = {
+						target = PREV
+						type = topple_government
+					}
+				} 
+			}
+			add_ideas = { NOR_contested_leadership_ns }
+		}				
+	}
+	var:NOR.NOR_cw_fascist_norway = {
+		set_cosmetic_tag = NOR_fascism
+		NOR_spawn_hirden = yes 
+
+	}	
+	var:NOR.NOR_cw_fascist_attacker = {
+		every_controlled_state = {
+			limit = {
+				is_core_of = NOR 
+			}
+			transfer_state_to = var:NOR.NOR_cw_fascist_norway
+		}
+	}
+}
+
+# From common\scripted_effects\NOR_scripted_effects.txt
+NOR_fcw_effect_democratic_player = {
+	start_civil_war = {
+		ruling_party = democratic 
+		ideology = fascism
+		size = party_popularity@fascism 
+		states = { 110 }
+		keep_all_characters = yes 
+		PREV.PREV = {
+			hidden_effect = { add_stability = 0.30 } 
+		}
+	}
+	110 = {
+		if = {
+			limit = {
+				check_variable = { NOR_state_preparation > 0 }
+			}
+			NOR_deploy_prep_fasc_basic_effects = yes 
+		}
+	}
+	set_global_flag = NOR_norwegian_fascist_cw_started	
+	random_other_country = {
+		limit = {
+			original_tag = NOR 
+			has_government = fascism
+		}
+		set_variable = { NOR.NOR_cw_fascist_norway = THIS }
+	}
+	every_character = {
+		limit = {
+			has_character_flag = NOR_anti_democratic
+		}
+		set_nationality = NOR.NOR_cw_fascist_norway 
+	}
+	var:NOR.NOR_cw_fascist_norway = {
+		NOR_vidkun_quisling = {
+			promote_character = yes  
+		}
+	}
+}
+
+# From common\scripted_effects\NOR_scripted_effects.txt
+NOR_fcw_effect_fascist_player = {
+	start_civil_war = {
+		ruling_party = fascism 
+		ideology = democratic
+		size = party_popularity@democratic 
+		states = all 
+		states_filter = {
+			 is_controlled_by = ROOT 
+			 NOT = {
+			 	state = 110
+			 } 
+		}
+		keep_all_characters = yes  
+
+		ROOT = {
+			hidden_effect = { add_stability = 0.30 } 
+		}
+	}
+	random_other_country = {
+		limit = {
+			original_tag = NOR 
+			NOT = { has_government = fascism }
+		}
+		set_variable = { NOR.NOR_cw_democratic_norway = THIS }
+	}
+	every_character = {
+		limit = {
+			has_character_flag = NOR_anti_fascist
+		}
+		set_nationality = var:NOR.NOR_cw_democratic_norway 
+	}
+	var:NOR.NOR_cw_democratic_norway = {
+		NOR_johan_nygaardsvold = {
+			promote_character = yes
+		}
+		NOR_spawn_democratic_militia = yes 
+	}
+	ROOT = {
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.60
+		}
+		add_manpower = 10000
+		set_cosmetic_tag = NOR_fascism
+	}
+
+	110 = {
+		if = {
+			limit = {
+				check_variable = { NOR_state_preparation > 0 }
+			}
+			NOR_deploy_prep_fasc_basic_effects = yes 
+		}
+		transfer_state_to = ROOT
+	}
+	set_global_flag = NOR_norwegian_fascist_cw_started	
+}
+
+# From common\scripted_effects\NOR_scripted_effects.txt
 NOR_spawn_hirden = {
 	if = {
 		limit = {
@@ -4596,7 +4967,7 @@ NOR_spawn_hirden = {
 	}
 }
 
-# From scripted_effects\NOR_scripted_effects.txt
+# From common\scripted_effects\NOR_scripted_effects.txt
 NOR_start_communist_civil_war = {
 	if = {
 		limit = {
@@ -4677,7 +5048,7 @@ NOR_start_communist_civil_war = {
 	}
 }
 
-# From scripted_effects\NOR_scripted_effects.txt
+# From common\scripted_effects\NOR_scripted_effects.txt
 NOR_start_fascist_civil_war = {
 	if = {
 		limit = {
@@ -4733,7 +5104,7 @@ NOR_start_fascist_civil_war = {
 	}
 }
 
-# From scripted_effects\NORDIC_scripted_effects.txt
+# From common\scripted_effects\NORDIC_scripted_effects.txt
 NORDIC_add_to_nordic_alliance = {  
 	if = {
 		limit = {
@@ -4792,7 +5163,7 @@ NORDIC_add_to_nordic_alliance = {
 	}
 }
 
-# From scripted_effects\NORDIC_scripted_effects.txt
+# From common\scripted_effects\NORDIC_scripted_effects.txt
 NORDIC_airforce_member_to_originator = { # Effect for upgrading the Airforce Member Dynamic Modifier to the Originator one (only after thye production ideas are added) 
 	if = {
 		limit = {
@@ -4814,7 +5185,7 @@ NORDIC_airforce_member_to_originator = { # Effect for upgrading the Airforce Mem
 	}
 }
 
-# From scripted_effects\NORDIC_scripted_effects.txt
+# From common\scripted_effects\NORDIC_scripted_effects.txt
 NORDIC_airforce_originator_to_member = { # Effect for downgrading the Airforce Originator Dynamic Modifier to the Member one (only after thye production ideas are added)
 		if = {
 			limit = {
@@ -4836,7 +5207,7 @@ NORDIC_airforce_originator_to_member = { # Effect for downgrading the Airforce O
 		}
 }
 
-# From scripted_effects\PRC_scripted_effects.txt
+# From common\scripted_effects\PRC_scripted_effects.txt
 PRC_current_china_leader_gets_small_antagonize_strategy = {
 	hidden_effect = {
 		if = {
@@ -4864,7 +5235,7 @@ PRC_current_china_leader_gets_small_antagonize_strategy = {
 	}
 }
 
-# From scripted_effects\PRC_scripted_effects.txt
+# From common\scripted_effects\PRC_scripted_effects.txt
 PRC_decrease_asian_democratic_union_modfier_strength = {
 	subtract_from_variable = { #always remove faction members
 		PRC_asian_democratic_union_num_of_members = 1
@@ -4882,7 +5253,7 @@ PRC_decrease_asian_democratic_union_modfier_strength = {
 	}
 }
 
-# From scripted_effects\PRC_scripted_effects.txt
+# From common\scripted_effects\PRC_scripted_effects.txt
 PRC_increase_asian_democratic_union_modfier_strength = {
 	add_to_variable = { #always add a faction member
 		PRC_asian_democratic_union_num_of_members = 1
@@ -4902,7 +5273,7 @@ PRC_increase_asian_democratic_union_modfier_strength = {
 	}
 }
 
-# From scripted_effects\WTT_china_political_struggle_effects.txt
+# From common\scripted_effects\WTT_china_political_struggle_effects.txt
 WTT_setup_political_struggle = {
 	#Only run setup if not already run
 	if = {
@@ -4990,4 +5361,3 @@ WTT_setup_political_struggle = {
 		#WTT_political_struggle_recalculate_support = yes
 	}
 }
-

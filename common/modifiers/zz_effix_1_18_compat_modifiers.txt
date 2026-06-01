@@ -1,0 +1,9 @@
+# Auto-generated 1.18.2 compatibility for effix.
+# Missing vanilla static modifiers referenced by copied 1.18 content.
+
+# From common\modifiers\00_static_modifiers.txt
+CHL_from_support_chile_static_modifier = {
+	send_volunteers_tension = -0.6
+	send_volunteer_divisions_required = -0.9
+	send_volunteer_factor = 0.6
+}

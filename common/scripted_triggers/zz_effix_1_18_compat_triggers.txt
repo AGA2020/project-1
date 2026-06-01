@@ -1,7 +1,7 @@
-﻿# Auto-generated 1.18.2 compatibility scripted triggers for effix.
-# Contains vanilla definitions that local stale/empty override files were missing.
+# Auto-generated 1.18.2 compatibility for effix.
+# Missing vanilla scripted triggers referenced by copied 1.18 content.
 
-# From scripted_triggers\BEL_scripted_triggers.txt
+# From common\scripted_triggers\BEL_scripted_triggers.txt
 BEL_communist_ai = {
 	OR = {
 		has_country_flag = BEL_AI_RANDOM_COMMUNIST
@@ -12,7 +12,7 @@ BEL_communist_ai = {
 	}
 }
 
-# From scripted_triggers\BEL_scripted_triggers.txt
+# From common\scripted_triggers\BEL_scripted_triggers.txt
 BEL_defensive_democrat_ai = {
 	OR = {
 		has_country_flag = BEL_AI_RANDOM_DEFENSIVE_DEMOCRAT
@@ -23,7 +23,7 @@ BEL_defensive_democrat_ai = {
 	}
 }
 
-# From scripted_triggers\BEL_scripted_triggers.txt
+# From common\scripted_triggers\BEL_scripted_triggers.txt
 BEL_expansionist_fascist_ai = {
 	OR = {
 		has_country_flag = BEL_AI_RANDOM_EXPANSIONIST_FASCIST
@@ -34,7 +34,7 @@ BEL_expansionist_fascist_ai = {
 	}
 }
 
-# From scripted_triggers\BEL_scripted_triggers.txt
+# From common\scripted_triggers\BEL_scripted_triggers.txt
 BEL_historical_ai = {
 	OR = {
 		AND = {
@@ -52,7 +52,7 @@ BEL_historical_ai = {
 	}
 }
 
-# From scripted_triggers\BEL_scripted_triggers.txt
+# From common\scripted_triggers\BEL_scripted_triggers.txt
 BEL_nationalist_fascist_ai = {
 	OR = {
 		has_country_flag = BEL_AI_RANDOM_NATIONALIST_FASCIST
@@ -63,7 +63,7 @@ BEL_nationalist_fascist_ai = {
 	}
 }
 
-# From scripted_triggers\00_scripted_triggers.txt
+# From common\scripted_triggers\00_scripted_triggers.txt
 check_allow_alternate_political_events = {
 	OR = {
 		original_tag = PHI
@@ -71,7 +71,7 @@ check_allow_alternate_political_events = {
 	}
 }
 
-# From scripted_triggers\CHL_scripted_triggers.txt
+# From common\scripted_triggers\CHL_scripted_triggers.txt
 CHL_hub_of_the_revolution_trigger = {
 	hidden_trigger = {
 		tag = CHL
@@ -85,7 +85,7 @@ CHL_hub_of_the_revolution_trigger = {
 	}
 }
 
-# From scripted_triggers\GER_scripted_triggers.txt
+# From common\scripted_triggers\GER_scripted_triggers.txt
 GER_is_historical_ai = {
 	OR = {
 		AND = {
@@ -106,7 +106,7 @@ GER_is_historical_ai = {
 	}
 }
 
-# From scripted_triggers\00_scripted_triggers.txt
+# From common\scripted_triggers\00_scripted_triggers.txt
 has_hide_rule = {
 	has_game_rule = {
 		rule = obsolete_focus_branches_visibility
@@ -114,7 +114,7 @@ has_hide_rule = {
 	}
 }
 
-# From scripted_triggers\ICE_scripted_triggers.txt
+# From common\scripted_triggers\ICE_scripted_triggers.txt
 ICE_has_communist_ai = {
 	ICE = {
 		OR = {
@@ -128,7 +128,7 @@ ICE_has_communist_ai = {
 	}
 }
 
-# From scripted_triggers\ICE_scripted_triggers.txt
+# From common\scripted_triggers\ICE_scripted_triggers.txt
 ICE_has_fascist_ai = {
 	ICE = {
 		OR = {
@@ -142,7 +142,7 @@ ICE_has_fascist_ai = {
 	}
 }
 
-# From scripted_triggers\ITA_scripted_triggers.txt
+# From common\scripted_triggers\ITA_scripted_triggers.txt
 ITA_is_christian_democracy_ai = {
 	OR = {
 		has_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY
@@ -153,7 +153,7 @@ ITA_is_christian_democracy_ai = {
 	}
 }
 
-# From scripted_triggers\ITA_scripted_triggers.txt
+# From common\scripted_triggers\ITA_scripted_triggers.txt
 ITA_is_communist_ai = {
 	OR = {
 		has_country_flag = ITA_AI_RANDOM_COMMUNIST_PLAN
@@ -164,7 +164,7 @@ ITA_is_communist_ai = {
 	}
 }
 
-# From scripted_triggers\ITA_scripted_triggers.txt
+# From common\scripted_triggers\ITA_scripted_triggers.txt
 ITA_is_socialist_ai = {
 	OR = {
 		has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_PLAN
@@ -175,7 +175,7 @@ ITA_is_socialist_ai = {
 	}
 }
 
-# From scripted_triggers\BALTIC_scripted_triggers.txt
+# From common\scripted_triggers\BALTIC_scripted_triggers.txt
 is_baltic_country = {
 	OR = {
 		original_tag = LIT
@@ -184,7 +184,7 @@ is_baltic_country = {
 	}
 }
 
-# From scripted_triggers\00_scripted_triggers.txt
+# From common\scripted_triggers\00_scripted_triggers.txt
 is_JAP_or_ally_of_JAP = {
 	OR = {
 		tag = JAP
@@ -193,7 +193,7 @@ is_JAP_or_ally_of_JAP = {
 	}
 }
 
-# From scripted_triggers\JAP_scripted_triggers.txt
+# From common\scripted_triggers\JAP_scripted_triggers.txt
 is_korean_state = {
 	OR = {
 		state = 525
@@ -205,7 +205,7 @@ is_korean_state = {
 	}
 }
 
-# From scripted_triggers\JAP_scripted_triggers.txt
+# From common\scripted_triggers\JAP_scripted_triggers.txt
 JAP_any_faction_is_tier_3_at_least = {
 	OR = {
 		JAP_army_faction_is_tier_3_at_least = yes
@@ -215,7 +215,7 @@ JAP_any_faction_is_tier_3_at_least = {
 	}
 }
 
-# From scripted_triggers\JAP_scripted_triggers.txt
+# From common\scripted_triggers\JAP_scripted_triggers.txt
 JAP_army_faction_is_tier_3_at_least = {
 	OR = {
 		JAP_army_faction_is_tier_3 = yes
@@ -223,7 +223,7 @@ JAP_army_faction_is_tier_3_at_least = {
 	}
 }
 
-# From scripted_triggers\JAP_scripted_triggers.txt
+# From common\scripted_triggers\JAP_scripted_triggers.txt
 JAP_government_faction_is_tier_3_at_least = {
 	OR = {
 		has_idea = JAP_government_faction_tier_3
@@ -231,12 +231,12 @@ JAP_government_faction_is_tier_3_at_least = {
 	}
 }
 
-# From scripted_triggers\JAP_scripted_triggers.txt
+# From common\scripted_triggers\JAP_scripted_triggers.txt
 JAP_imperial_influence_demands_ready = {
 	NOT = { has_country_flag = JAP_faction_demands_cooldown_flag }
 }
 
-# From scripted_triggers\JAP_scripted_triggers.txt
+# From common\scripted_triggers\JAP_scripted_triggers.txt
 JAP_is_home_islands_state = {
 	custom_trigger_tooltip = {
 		tooltip = JAP_is_home_islands_state_tt
@@ -260,7 +260,7 @@ JAP_is_home_islands_state = {
 	}
 }
 
-# From scripted_triggers\JAP_scripted_triggers.txt
+# From common\scripted_triggers\JAP_scripted_triggers.txt
 JAP_naval_faction_is_tier_3_at_least = {
 	OR = {
 		JAP_naval_faction_is_tier_3 = yes
@@ -268,7 +268,7 @@ JAP_naval_faction_is_tier_3_at_least = {
 	}
 }
 
-# From scripted_triggers\JAP_scripted_triggers.txt
+# From common\scripted_triggers\JAP_scripted_triggers.txt
 JAP_zaibatsu_faction_is_tier_3_at_least = {
 	OR = {
 		has_idea = JAP_zaibatsu_faction_tier_3
@@ -276,7 +276,7 @@ JAP_zaibatsu_faction_is_tier_3_at_least = {
 	}
 }
 
-# From scripted_triggers\NOR_scripted_triggers.txt
+# From common\scripted_triggers\NOR_scripted_triggers.txt
 NOR_is_fascist_ai = {
 	is_ai = yes  
 	OR = {
@@ -288,7 +288,7 @@ NOR_is_fascist_ai = {
 	}
 }
 
-# From scripted_triggers\NOR_scripted_triggers.txt
+# From common\scripted_triggers\NOR_scripted_triggers.txt
 NOR_kings_no_allow_trigger = {
 	if = {
 		limit = {
@@ -309,7 +309,7 @@ NOR_kings_no_allow_trigger = {
 	}
 }
 
-# From scripted_triggers\NORDIC_scripted_triggers.txt
+# From common\scripted_triggers\NORDIC_scripted_triggers.txt
 NORDIC_communist_alliance_viable = {
 	ROOT = {
 		OR = {
@@ -330,7 +330,29 @@ NORDIC_communist_alliance_viable = {
 	}
 }
 
-# From scripted_triggers\POL_scripted_triggers.txt
+# From common\scripted_triggers\NORDIC_scripted_triggers.txt
+NORDIC_has_started_communist_focus_tree = {
+	OR = {
+		has_completed_focus = NOR_a_resurgent_labor_movement
+		has_completed_focus = SWE_align_more_closely_with_the_landsorganisationen
+		has_completed_focus = FIN_towards_a_red_government
+	}
+}
+
+# From common\scripted_triggers\NORDIC_scripted_triggers.txt
+NORDIC_is_communist = {
+	OR = {
+		original_tag = SWE
+		original_tag = NOR
+		original_tag = FIN
+		original_tag = DEN
+		original_tag = ICE
+	}
+	has_government = communism
+	# Add more triggers if needed
+}
+
+# From common\scripted_triggers\POL_scripted_triggers.txt
 POL_is_valid_to_boost_monarchy = {
 
 	ROOT = {
@@ -393,7 +415,7 @@ POL_is_valid_to_boost_monarchy = {
 	}
 }
 
-# From scripted_triggers\POL_scripted_triggers.txt
+# From common\scripted_triggers\POL_scripted_triggers.txt
 POL_is_valid_to_reject_monarchy = {	
 	if = {	
 		limit = {
@@ -448,16 +470,15 @@ POL_is_valid_to_reject_monarchy = {
 	NOT = { has_country_flag = POL_banned_monarchy_flag }
 }
 
-# From scripted_triggers\00_scripted_triggers.txt
+# From common\scripted_triggers\00_scripted_triggers.txt
 should_play_south_american_music = {
 	capital_scope = { is_on_continent = south_america }
 }
 
-# From scripted_triggers\SOV_scripted_triggers.txt
+# From common\scripted_triggers\SOV_scripted_triggers.txt
 SOV_is_exiles = {
 	#custom_trigger_tooltip = {
 		#tooltip = SOV_is_exiles_tt
 		SOV = { has_completed_focus = SOV_beaten_but_not_defeated }
 	#}
 }
-
