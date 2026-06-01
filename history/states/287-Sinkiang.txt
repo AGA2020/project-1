@@ -6,21 +6,19 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = CHI
 		add_core_of = CHI
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 
-		}
-		victory_points = {
-			4973 1
 		}
 	}
 
 
 	provinces={
-		4973 8042 8086 10885 10911 12864 
+		5016 7790 8042 8086 10885 12864 
 	}
-	manpower=408000
+	manpower=28000
 	buildings_max_level_factor=1.000
 	state_category=wasteland
 	impassable = yes	
-	local_supplies=4.0 
+	force_link_ownership_to = 1042 # Khotan
+	local_supplies=0.0 
 }

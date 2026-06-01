@@ -1,9 +1,12 @@
 state = {
 	id = 327
 	name="STATE_327" # Luzon
-	manpower = 3548684
+	manpower = 2277042
+	resources = {
+		coal = 1 #initial distribution
+	}
 	
-	state_category = town
+	state_category = large_town
 	history= { 
 		1936.1.1.13 = { owner = WST add_core_of = WST }
 		owner = USA
@@ -22,12 +25,15 @@ state = {
 		victory_points = {
 			1221 1 
 		}
+		victory_points = {
+			4288 1 # Calapan
+		}
 		add_core_of = SWE
 		add_dynamic_modifier = { modifier =  international_city }
 	}
 
 	provinces={
-		1221 1288 7275 7323 7351 10165 10236 10265 12236 
+		1221 1288 1388 4233 4288 7323 10236 10265 10272 12236 
 	}
 
 	local_supplies=0.0 

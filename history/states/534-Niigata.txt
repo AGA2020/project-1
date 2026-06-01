@@ -25,8 +25,8 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 
 	}
 
-	provinces={
-		1117 9952 10128 11930 11989 12007 
+	provinces = {
+		1117 9952 10015 10128 11930 11989 12007 
 	}
 
 	local_supplies=0.0 
