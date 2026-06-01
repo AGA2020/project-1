@@ -11,13 +11,13 @@ PER_historical_plan = {
 			AND = {
 				is_historical_focus_on = yes 
 				has_game_rule = {
-					rule = PER_AI_BEHAVIOR
+					rule = PER_ai_behavior
 					option = DEFAULT
 				}
 			}
 			has_country_flag = PER_AI_RANDOM_HISTORICAL
 			has_game_rule = {
-				rule = PER_AI_BEHAVIOR
+				rule = PER_ai_behavior
 				option = HISTORICAL
 			}
 		}	

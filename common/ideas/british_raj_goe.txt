@@ -2530,7 +2530,7 @@ ideas = {
 			}
 
 			modifier = {
-				supply_factor = 0.075
+				supply_consumption_factor = 0.075
 			}
 		}
 		idea_RAJ_central_mughal_court = {

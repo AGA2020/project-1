@@ -11,7 +11,7 @@ AFG_historical_plan = {
 			AND = {
 				is_historical_focus_on = yes 
 				has_game_rule = {
-					rule = AFG_AI_BEHAVIOR
+					rule = AFG_ai_behavior
 					option = DEFAULT
 				}
 			}

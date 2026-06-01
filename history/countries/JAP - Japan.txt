@@ -18,7 +18,7 @@ add_ideas = {
 	# National Spirits
 	state_shintoism
 	JAP_zaibatsus
-	JAP_duplicate_research_efforts
+	JAP_separate_air_services
 	JAP_militarism
 
 }

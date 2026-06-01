@@ -1,0 +1,4644 @@
+# Focus IDs intentionally pruned from historical-only trees.
+# These hidden stubs keep 1.18 vanilla triggers valid without restoring non-historical branches.
+focus_tree = {
+    id = hist_missing_focus_stubs
+    country = {
+        factor = 0
+    }
+    default = no
+
+    focus = {
+        id = BRA_amazonian_settlement
+        icon = GFX_goal_generic_political_pressure
+        x = 0
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_anaue
+        icon = GFX_goal_generic_political_pressure
+        x = 1
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_anti_imperialism
+        icon = GFX_goal_generic_political_pressure
+        x = 2
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_estado_moderno
+        icon = GFX_goal_generic_political_pressure
+        x = 3
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_foreign_legion
+        icon = GFX_goal_generic_political_pressure
+        x = 4
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_form_mercosul
+        icon = GFX_goal_generic_political_pressure
+        x = 5
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_jaguar_diplomacy
+        icon = GFX_goal_generic_political_pressure
+        x = 6
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_reach_out_to_our_neighbors
+        icon = GFX_goal_generic_political_pressure
+        x = 7
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_romanticize_the_old_empire
+        icon = GFX_goal_generic_political_pressure
+        x = 8
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_sway_the_cangaco
+        icon = GFX_goal_generic_political_pressure
+        x = 9
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_sway_the_neighbors
+        icon = GFX_goal_generic_political_pressure
+        x = 10
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_unify_south_america
+        icon = GFX_goal_generic_political_pressure
+        x = 11
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_united_states_of_south_america
+        icon = GFX_goal_generic_political_pressure
+        x = 12
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BRA_work_with_the_integralists
+        icon = GFX_goal_generic_political_pressure
+        x = 13
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BUL_abolish_the_monarchy
+        icon = GFX_goal_generic_political_pressure
+        x = 14
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BUL_appoint_communist_ministers
+        icon = GFX_goal_generic_political_pressure
+        x = 15
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BUL_oppose_the_royal_dictatorship
+        icon = GFX_goal_generic_political_pressure
+        x = 16
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = BUL_overthrow_the_tsar
+        icon = GFX_goal_generic_political_pressure
+        x = 17
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = CHI_commit_to_korean_independence
+        icon = GFX_goal_generic_political_pressure
+        x = 18
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = CHI_overlordship_over_indochina
+        icon = GFX_goal_generic_political_pressure
+        x = 19
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ENG_a_change_in_course
+        icon = GFX_goal_generic_political_pressure
+        x = 20
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ENG_alliance_with_germany
+        icon = GFX_goal_generic_political_pressure
+        x = 21
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ENG_concessions_to_the_trade_unions
+        icon = GFX_goal_generic_political_pressure
+        x = 22
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ENG_global_defense
+        icon = GFX_goal_generic_political_pressure
+        x = 23
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ENG_no_further_appeasement
+        icon = GFX_goal_generic_political_pressure
+        x = 24
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ENG_organize_the_blackshirts
+        icon = GFX_goal_generic_political_pressure
+        x = 25
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ENG_revisit_colonial_policy
+        icon = GFX_goal_generic_political_pressure
+        x = 26
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ENG_the_fate_of_the_royal_family
+        icon = GFX_goal_generic_political_pressure
+        x = 27
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ENG_the_kings_party
+        icon = GFX_goal_generic_political_pressure
+        x = 28
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FIN_finnish_supremacy_in_the_north
+        icon = GFX_goal_generic_political_pressure
+        x = 29
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FIN_right_wing_policies
+        icon = GFX_goal_generic_political_pressure
+        x = 30
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FIN_suomalainen_sosialismi
+        icon = GFX_goal_generic_political_pressure
+        x = 31
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FIN_towards_a_red_government
+        icon = GFX_goal_generic_political_pressure
+        x = 32
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_anti_fascist_coalition
+        icon = GFX_goal_generic_political_pressure
+        x = 33
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_humanite_unie
+        icon = GFX_goal_generic_political_pressure
+        x = 34
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_invite_communist_ministers
+        icon = GFX_goal_generic_political_pressure
+        x = 35
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_leftist_rhetoric
+        icon = GFX_goal_generic_political_pressure
+        x = 36
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_loyalty_to_the_cause
+        icon = GFX_goal_generic_political_pressure
+        x = 37
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_orleanist_restoration
+        icon = GFX_goal_generic_political_pressure
+        x = 38
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_proclaim_the_third_empire
+        icon = GFX_goal_generic_political_pressure
+        x = 39
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_repeal_the_law_of_exile
+        icon = GFX_goal_generic_political_pressure
+        x = 40
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_revolution_to_the_utmost
+        icon = GFX_goal_generic_political_pressure
+        x = 41
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_right_wing_rhetoric
+        icon = GFX_goal_generic_political_pressure
+        x = 42
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_strengthen_the_little_entente
+        icon = GFX_goal_generic_political_pressure
+        x = 43
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_the_council_of_rambouillet
+        icon = GFX_goal_generic_political_pressure
+        x = 44
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_the_legitimate_heir
+        icon = GFX_goal_generic_political_pressure
+        x = 45
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = FRA_utilize_the_leagues
+        icon = GFX_goal_generic_political_pressure
+        x = 46
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_alliance_with_the_ussr
+        icon = GFX_goal_generic_political_pressure
+        x = 47
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_befriend_china
+        icon = GFX_goal_generic_political_pressure
+        x = 48
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_befriend_czechoslovakia
+        icon = GFX_goal_generic_political_pressure
+        x = 49
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_closer_sino_germanic_relations
+        icon = GFX_goal_generic_political_pressure
+        x = 50
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_danzig_for_guarantees
+        icon = GFX_goal_generic_political_pressure
+        x = 51
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_danzig_for_guarantees_ww
+        icon = GFX_goal_generic_political_pressure
+        x = 52
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_establish_a_customs_union
+        icon = GFX_goal_generic_political_pressure
+        x = 53
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_expatriate_the_communists
+        icon = GFX_goal_generic_political_pressure
+        x = 54
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_expatriate_the_communists_ww
+        icon = GFX_goal_generic_political_pressure
+        x = 55
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_focus_on_the_true_enemy
+        icon = GFX_goal_generic_political_pressure
+        x = 56
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_heed_von_neuraths_concerns
+        icon = GFX_goal_generic_political_pressure
+        x = 57
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_influence_the_benelux
+        icon = GFX_goal_generic_political_pressure
+        x = 58
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_integrate_czech_manufacturers
+        icon = GFX_goal_generic_political_pressure
+        x = 59
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_mitteleuropa
+        icon = GFX_goal_generic_political_pressure
+        x = 60
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_monarchist_sentiment
+        icon = GFX_goal_generic_political_pressure
+        x = 61
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_oppose_hitler
+        icon = GFX_goal_generic_political_pressure
+        x = 62
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_oppose_hitler_ww
+        icon = GFX_goal_generic_political_pressure
+        x = 63
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_re_establish_free_elections_ww
+        icon = GFX_goal_generic_political_pressure
+        x = 64
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_rebuild_the_high_seas_fleet
+        icon = GFX_goal_generic_political_pressure
+        x = 65
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_rebuild_the_high_seas_fleet_ww
+        icon = GFX_goal_generic_political_pressure
+        x = 66
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_reestablish_free_elections
+        icon = GFX_goal_generic_political_pressure
+        x = 67
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_revive_the_kaiserreich
+        icon = GFX_goal_generic_political_pressure
+        x = 68
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_revive_the_kaiserreich_ww
+        icon = GFX_goal_generic_political_pressure
+        x = 69
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_safeguard_poland
+        icon = GFX_goal_generic_political_pressure
+        x = 70
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_see_to_the_eastern_front
+        icon = GFX_goal_generic_political_pressure
+        x = 71
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_see_to_the_eastern_front_ww
+        icon = GFX_goal_generic_political_pressure
+        x = 72
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_strike_eastward
+        icon = GFX_goal_generic_political_pressure
+        x = 73
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_the_austrian_question
+        icon = GFX_goal_generic_political_pressure
+        x = 74
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_the_central_powers
+        icon = GFX_goal_generic_political_pressure
+        x = 75
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_the_second_naval_race
+        icon = GFX_goal_generic_political_pressure
+        x = 76
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = GER_utilize_the_nordliche_gesellschaft
+        icon = GFX_goal_generic_political_pressure
+        x = 77
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_a_greater_purpose
+        icon = GFX_goal_generic_political_pressure
+        x = 78
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_befriend_greece
+        icon = GFX_goal_generic_political_pressure
+        x = 79
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_befriend_turkey
+        icon = GFX_goal_generic_political_pressure
+        x = 80
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_bring_back_exiled_intellectuals
+        icon = GFX_goal_generic_political_pressure
+        x = 81
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_christian_democracy
+        icon = GFX_goal_generic_political_pressure
+        x = 82
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_common_ground
+        icon = GFX_goal_generic_political_pressure
+        x = 83
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_cooperate_with_moderates
+        icon = GFX_goal_generic_political_pressure
+        x = 84
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_defy_the_duce
+        icon = GFX_goal_generic_political_pressure
+        x = 85
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_disband_the_blackshirts
+        icon = GFX_goal_generic_political_pressure
+        x = 86
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_divino_duce
+        icon = GFX_goal_generic_political_pressure
+        x = 87
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_italian_socialism
+        icon = GFX_goal_generic_political_pressure
+        x = 88
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_italy_first
+        icon = GFX_goal_generic_political_pressure
+        x = 89
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_monarchia_d_italia
+        icon = GFX_goal_generic_political_pressure
+        x = 90
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_novus_ordo
+        icon = GFX_goal_generic_political_pressure
+        x = 91
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_potential_allies_in_the_balkans
+        icon = GFX_goal_generic_political_pressure
+        x = 92
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_proclaim_the_italian_empire
+        icon = GFX_goal_generic_political_pressure
+        x = 93
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_ratify_the_stresa_front
+        icon = GFX_goal_generic_political_pressure
+        x = 94
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_seek_papal_support
+        icon = GFX_goal_generic_political_pressure
+        x = 95
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_struggle_in_ethiopia
+        icon = GFX_goal_generic_political_pressure
+        x = 96
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ITA_war_with_the_uk
+        icon = GFX_goal_generic_political_pressure
+        x = 97
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_7075_aluminium_alloy
+        icon = GFX_goal_generic_political_pressure
+        x = 98
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_a_common_currency_for_all_of_asia
+        icon = GFX_goal_generic_political_pressure
+        x = 99
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_a_green_persimmon
+        icon = GFX_goal_generic_political_pressure
+        x = 100
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_a_mongol_volunteer_army
+        icon = GFX_goal_generic_political_pressure
+        x = 101
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_a_new_take_on_state_shintoism
+        icon = GFX_goal_generic_political_pressure
+        x = 102
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_adopt_new_assault_doctrine
+        icon = GFX_goal_generic_political_pressure
+        x = 103
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_advance_one_hundred_million_fireballs
+        icon = GFX_goal_generic_political_pressure
+        x = 104
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_an_expedition_to_tibet
+        icon = GFX_goal_generic_political_pressure
+        x = 105
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_an_integrated_union
+        icon = GFX_goal_generic_political_pressure
+        x = 106
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_anti_militarist_speeches_in_the_diet
+        icon = GFX_goal_generic_political_pressure
+        x = 107
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_approach_mitsubishi
+        icon = GFX_goal_generic_political_pressure
+        x = 108
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_approach_mitsui
+        icon = GFX_goal_generic_political_pressure
+        x = 109
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_approach_sumitomo
+        icon = GFX_goal_generic_political_pressure
+        x = 110
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_approach_yasuda
+        icon = GFX_goal_generic_political_pressure
+        x = 111
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_balanced_naval_approach
+        icon = GFX_goal_generic_political_pressure
+        x = 112
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_bribe_generals
+        icon = GFX_goal_generic_political_pressure
+        x = 113
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_build_an_anti_army_coalition
+        icon = GFX_goal_generic_political_pressure
+        x = 114
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_cooperate_with_anarchists
+        icon = GFX_goal_generic_political_pressure
+        x = 115
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_crackdown_on_foreign_agents
+        icon = GFX_goal_generic_political_pressure
+        x = 116
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_create_greater_east_asian_treaty_organization
+        icon = GFX_goal_generic_political_pressure
+        x = 117
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_crush_the_internal_factions
+        icon = GFX_goal_generic_political_pressure
+        x = 118
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_democratic_war_with_manchukuo
+        icon = GFX_goal_generic_political_pressure
+        x = 119
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_develop_new_fighters
+        icon = GFX_goal_generic_political_pressure
+        x = 120
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_develop_the_chinese_resources
+        icon = GFX_goal_generic_political_pressure
+        x = 121
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_develop_the_yen_bloc
+        icon = GFX_goal_generic_political_pressure
+        x = 122
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_development_for_the_undeveloped
+        icon = GFX_goal_generic_political_pressure
+        x = 123
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_east_asia_development_board
+        icon = GFX_goal_generic_political_pressure
+        x = 124
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_east_asian_cooperative_society
+        icon = GFX_goal_generic_political_pressure
+        x = 125
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_eastern_road_and_steel_expansion
+        icon = GFX_goal_generic_political_pressure
+        x = 126
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_educate_the_peasants
+        icon = GFX_goal_generic_political_pressure
+        x = 127
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_embrace_kokutai
+        icon = GFX_goal_generic_political_pressure
+        x = 128
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_enact_religious_organizations_law
+        icon = GFX_goal_generic_political_pressure
+        x = 129
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_end_the_interservice_rivalry
+        icon = GFX_goal_generic_political_pressure
+        x = 130
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_escort_efficiency
+        icon = GFX_goal_generic_political_pressure
+        x = 131
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_establish_showa_aircraft_idnsutry
+        icon = GFX_goal_generic_political_pressure
+        x = 132
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_establish_the_northern_resource_area
+        icon = GFX_goal_generic_political_pressure
+        x = 133
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_expand_hiratsuka_navy_arsenal
+        icon = GFX_goal_generic_political_pressure
+        x = 134
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_focus_on_aircraft_carriers
+        icon = GFX_goal_generic_political_pressure
+        x = 135
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_form_greater_east_asian_currency_union
+        icon = GFX_goal_generic_political_pressure
+        x = 136
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_form_greater_east_asian_customs_union
+        icon = GFX_goal_generic_political_pressure
+        x = 137
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_form_the_dai_nippon_fujinkai
+        icon = GFX_goal_generic_political_pressure
+        x = 138
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_form_the_great_japan_industrial_patriotic_association
+        icon = GFX_goal_generic_political_pressure
+        x = 139
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_form_the_jikyoku_iinkai
+        icon = GFX_goal_generic_political_pressure
+        x = 140
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_formalize_the_tonarigumi
+        icon = GFX_goal_generic_political_pressure
+        x = 141
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_found_the_boeitai
+        icon = GFX_goal_generic_political_pressure
+        x = 142
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_found_the_great_japan_press_association
+        icon = GFX_goal_generic_political_pressure
+        x = 143
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_free_asians_from_soviet_opression
+        icon = GFX_goal_generic_political_pressure
+        x = 144
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_free_colonized_asian_countries
+        icon = GFX_goal_generic_political_pressure
+        x = 145
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_fukumotoism
+        icon = GFX_goal_generic_political_pressure
+        x = 146
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_fund_propaganda_films
+        icon = GFX_goal_generic_political_pressure
+        x = 147
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_fund_resistance_groups_in_asia
+        icon = GFX_goal_generic_political_pressure
+        x = 148
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_further_rural_investments
+        icon = GFX_goal_generic_political_pressure
+        x = 149
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_ganbarou
+        icon = GFX_goal_generic_political_pressure
+        x = 150
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_give_it_your_all_for_the_emperor
+        icon = GFX_goal_generic_political_pressure
+        x = 151
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_grand_army_purge
+        icon = GFX_goal_generic_political_pressure
+        x = 152
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_greater_east_asian_federation
+        icon = GFX_goal_generic_political_pressure
+        x = 153
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_hakko_ichiu
+        icon = GFX_goal_generic_political_pressure
+        x = 154
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_implement_army_reforms
+        icon = GFX_goal_generic_political_pressure
+        x = 155
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_integrate_the_government_general
+        icon = GFX_goal_generic_political_pressure
+        x = 156
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_integrate_the_great_empire_of_manchuria
+        icon = GFX_goal_generic_political_pressure
+        x = 157
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_intensify_anti_guerilla_operations
+        icon = GFX_goal_generic_political_pressure
+        x = 158
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_invest_in_foreign_industries
+        icon = GFX_goal_generic_political_pressure
+        x = 159
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_issue_the_shinmin_no_michi_manifesto
+        icon = GFX_goal_generic_political_pressure
+        x = 160
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_join_the_london_naval_treaty
+        icon = GFX_goal_generic_political_pressure
+        x = 161
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_kantokuen
+        icon = GFX_goal_generic_political_pressure
+        x = 162
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_liberate_manchuria
+        icon = GFX_goal_generic_political_pressure
+        x = 163
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_ministry_of_colonial_affairs
+        icon = GFX_goal_generic_political_pressure
+        x = 164
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_ministry_of_greater_east_asia
+        icon = GFX_goal_generic_political_pressure
+        x = 165
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_mitsumasa_yonai_focus
+        icon = GFX_goal_generic_political_pressure
+        x = 166
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_mongol_autonomous_state
+        icon = GFX_goal_generic_political_pressure
+        x = 167
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_mountain_village_operation_units
+        icon = GFX_goal_generic_political_pressure
+        x = 168
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_nanshin_ron
+        icon = GFX_goal_generic_political_pressure
+        x = 169
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_national_defense_brotherhood
+        icon = GFX_goal_generic_political_pressure
+        x = 170
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_new_order_in_east_asia
+        icon = GFX_goal_generic_political_pressure
+        x = 171
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_okadas_military_purge_speech
+        icon = GFX_goal_generic_political_pressure
+        x = 172
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_organize_a_general_election
+        icon = GFX_goal_generic_political_pressure
+        x = 173
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_organize_the_fifth_column
+        icon = GFX_goal_generic_political_pressure
+        x = 174
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_organize_the_student_movements
+        icon = GFX_goal_generic_political_pressure
+        x = 175
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_organize_underground_resistance
+        icon = GFX_goal_generic_political_pressure
+        x = 176
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_pacific_guardian
+        icon = GFX_goal_generic_political_pressure
+        x = 177
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_preemptive_war
+        icon = GFX_goal_generic_political_pressure
+        x = 178
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_prepare_for_the_final_war
+        icon = GFX_goal_generic_political_pressure
+        x = 179
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_prepare_for_war_with_the_soviet_union
+        icon = GFX_goal_generic_political_pressure
+        x = 180
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_prepare_the_southern_front
+        icon = GFX_goal_generic_political_pressure
+        x = 181
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_project_z_bomber_project
+        icon = GFX_goal_generic_political_pressure
+        x = 182
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_promote_pan_asianism
+        icon = GFX_goal_generic_political_pressure
+        x = 183
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_promulgate_the_military_ministers_system
+        icon = GFX_goal_generic_political_pressure
+        x = 184
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_propagandize_the_nihon_shoki
+        icon = GFX_goal_generic_political_pressure
+        x = 185
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_raise_support_within_the_proletarian_class
+        icon = GFX_goal_generic_political_pressure
+        x = 186
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_raise_the_red_flag_high
+        icon = GFX_goal_generic_political_pressure
+        x = 187
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_reinforce_the_beijing_garrison
+        icon = GFX_goal_generic_political_pressure
+        x = 188
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_reorganized_national_government
+        icon = GFX_goal_generic_political_pressure
+        x = 189
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_reprimand_hamada_kunimatsu
+        icon = GFX_goal_generic_political_pressure
+        x = 190
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_rethink_armor_doctrine
+        icon = GFX_goal_generic_political_pressure
+        x = 191
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_revere_the_emperor_destroy_the_traitors
+        icon = GFX_goal_generic_political_pressure
+        x = 192
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_revisit_the_thirteen_demands
+        icon = GFX_goal_generic_political_pressure
+        x = 193
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_revoke_the_peace_preservation_law
+        icon = GFX_goal_generic_political_pressure
+        x = 194
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sea_battleship_initiative
+        icon = GFX_goal_generic_political_pressure
+        x = 195
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sea_establish_the_northern_resource_area
+        icon = GFX_goal_generic_political_pressure
+        x = 196
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sea_exploit_southern_resource_area
+        icon = GFX_goal_generic_political_pressure
+        x = 197
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sea_greater_east_asian_co_properity_sphere
+        icon = GFX_goal_generic_political_pressure
+        x = 198
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sea_long_operational_range
+        icon = GFX_goal_generic_political_pressure
+        x = 199
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sea_mil_tech_coop_with_germany
+        icon = GFX_goal_generic_political_pressure
+        x = 200
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sea_national_defense_state
+        icon = GFX_goal_generic_political_pressure
+        x = 201
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sea_national_spiritual_mobliization_movement
+        icon = GFX_goal_generic_political_pressure
+        x = 202
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sea_purge_the_kodoha_faction
+        icon = GFX_goal_generic_political_pressure
+        x = 203
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sea_state_general_mobilization_law
+        icon = GFX_goal_generic_political_pressure
+        x = 204
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sea_sturdy_aircraft
+        icon = GFX_goal_generic_political_pressure
+        x = 205
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_secretly_rebuild_the_party
+        icon = GFX_goal_generic_political_pressure
+        x = 206
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_seek_foreign_investments
+        icon = GFX_goal_generic_political_pressure
+        x = 207
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_seek_yakuza_support
+        icon = GFX_goal_generic_political_pressure
+        x = 208
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_spread_revolutionary_flames_to_south_asia
+        icon = GFX_goal_generic_political_pressure
+        x = 209
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_spread_revolutionary_flames_to_west_asia
+        icon = GFX_goal_generic_political_pressure
+        x = 210
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_strategic_offensives
+        icon = GFX_goal_generic_political_pressure
+        x = 211
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_strengthen_civilian_government
+        icon = GFX_goal_generic_political_pressure
+        x = 212
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_strike_down_the_enemy_of_the_people
+        icon = GFX_goal_generic_political_pressure
+        x = 213
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_strike_the_southern_road
+        icon = GFX_goal_generic_political_pressure
+        x = 214
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_subdue_the_kwantung_army
+        icon = GFX_goal_generic_political_pressure
+        x = 215
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_support_the_kodoha_faction
+        icon = GFX_goal_generic_political_pressure
+        x = 216
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sway_disillusioned_young_officers
+        icon = GFX_goal_generic_political_pressure
+        x = 217
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_sway_the_navy_moderates
+        icon = GFX_goal_generic_political_pressure
+        x = 218
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_technological_exchange
+        icon = GFX_goal_generic_political_pressure
+        x = 219
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_crysanthemum_throne
+        icon = GFX_goal_generic_political_pressure
+        x = 220
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_flying_geese
+        icon = GFX_goal_generic_political_pressure
+        x = 221
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_great_spiritual_evil
+        icon = GFX_goal_generic_political_pressure
+        x = 222
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_harakiri_debate
+        icon = GFX_goal_generic_political_pressure
+        x = 223
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_imperial_defense_plan
+        icon = GFX_goal_generic_political_pressure
+        x = 224
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_jeweled_spear_has_struck
+        icon = GFX_goal_generic_political_pressure
+        x = 225
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_korean_question
+        icon = GFX_goal_generic_political_pressure
+        x = 226
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_labor_farmer_faction_ascendant
+        icon = GFX_goal_generic_political_pressure
+        x = 227
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_metal_collection_order
+        icon = GFX_goal_generic_political_pressure
+        x = 228
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_minitry_of_pan_asian_development
+        icon = GFX_goal_generic_political_pressure
+        x = 229
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_pacific_union_of_soviet_socialist_republics
+        icon = GFX_goal_generic_political_pressure
+        x = 230
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_persimmon_has_ripened
+        icon = GFX_goal_generic_political_pressure
+        x = 231
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_spirit_of_the_imperial_nation
+        icon = GFX_goal_generic_political_pressure
+        x = 232
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_surrender_broadcast
+        icon = GFX_goal_generic_political_pressure
+        x = 233
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_unthinkable_option
+        icon = GFX_goal_generic_political_pressure
+        x = 234
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_the_yamato_spirit
+        icon = GFX_goal_generic_political_pressure
+        x = 235
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_tojos_premiership
+        icon = GFX_goal_generic_political_pressure
+        x = 236
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_trans_pacific_influence
+        icon = GFX_goal_generic_political_pressure
+        x = 237
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_transformation_of_nature
+        icon = GFX_goal_generic_political_pressure
+        x = 238
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_upgrade_the_oriental_development_company
+        icon = GFX_goal_generic_political_pressure
+        x = 239
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = JAP_yamamotos_premiership
+        icon = GFX_goal_generic_political_pressure
+        x = 240
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = MAN_assertiveness
+        icon = GFX_goal_generic_political_pressure
+        x = 241
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = MAN_independence_war
+        icon = GFX_goal_generic_political_pressure
+        x = 242
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = MAN_reform_the_civil_service
+        icon = GFX_goal_generic_political_pressure
+        x = 243
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = MEX_focus_international_proletarianism
+        icon = GFX_goal_generic_political_pressure
+        x = 244
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = MEX_focus_new_world_order
+        icon = GFX_goal_generic_political_pressure
+        x = 245
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = MEX_focus_revanchist_revolution
+        icon = GFX_goal_generic_political_pressure
+        x = 246
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = NZL_constitution_amendment_act
+        icon = GFX_goal_generic_political_pressure
+        x = 247
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = NZL_in_the_darkness
+        icon = GFX_goal_generic_political_pressure
+        x = 248
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = NZL_the_lee_affair
+        icon = GFX_goal_generic_political_pressure
+        x = 249
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = RAJ_every_man_a_leader
+        icon = GFX_goal_generic_political_pressure
+        x = 250
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = RAJ_forward_bloc
+        icon = GFX_goal_generic_political_pressure
+        x = 251
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = RAJ_look_to_the_past
+        icon = GFX_goal_generic_political_pressure
+        x = 252
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = RAJ_special_economic_zones
+        icon = GFX_goal_generic_political_pressure
+        x = 253
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ROM_balkans_dominance
+        icon = GFX_goal_generic_political_pressure
+        x = 254
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ROM_his_majestys_loyal_government
+        icon = GFX_goal_generic_political_pressure
+        x = 255
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = ROM_the_cordon_sanitaire
+        icon = GFX_goal_generic_political_pressure
+        x = 256
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SAF_anti_colonialist_crusade
+        icon = GFX_goal_generic_political_pressure
+        x = 257
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_anti_capitalist_policies
+        icon = GFX_goal_generic_political_pressure
+        x = 258
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_beaten_but_not_defeated
+        icon = GFX_goal_generic_political_pressure
+        x = 259
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_demand_balkan_submission
+        icon = GFX_goal_generic_political_pressure
+        x = 260
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_long_live_the_workers_government
+        icon = GFX_goal_generic_political_pressure
+        x = 261
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_memories_of_1905
+        icon = GFX_goal_generic_political_pressure
+        x = 262
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_reconcile_japan
+        icon = GFX_goal_generic_political_pressure
+        x = 263
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_spheres_of_influence_in_china
+        icon = GFX_goal_generic_political_pressure
+        x = 264
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_support_the_kuomintang
+        icon = GFX_goal_generic_political_pressure
+        x = 265
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_the_gobi_gambit
+        icon = GFX_goal_generic_political_pressure
+        x = 266
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_the_left_opposition
+        icon = GFX_goal_generic_political_pressure
+        x = 267
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_the_southern_thrust
+        icon = GFX_goal_generic_political_pressure
+        x = 268
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_the_triple_entente
+        icon = GFX_goal_generic_political_pressure
+        x = 269
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SOV_two_red_flags
+        icon = GFX_goal_generic_political_pressure
+        x = 270
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPA_defenders_of_catholicism
+        icon = GFX_goal_generic_political_pressure
+        x = 271
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPA_eliminate_the_carlists
+        icon = GFX_goal_generic_political_pressure
+        x = 272
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPA_join_the_allies
+        icon = GFX_goal_generic_political_pressure
+        x = 273
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPA_no_compromise_on_carlist_ideals
+        icon = GFX_goal_generic_political_pressure
+        x = 274
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPA_primo_de_rivera_prisoner_exchange
+        icon = GFX_goal_generic_political_pressure
+        x = 275
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPA_restore_the_iberian_union
+        icon = GFX_goal_generic_political_pressure
+        x = 276
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPA_supremacy_of_the_communion
+        icon = GFX_goal_generic_political_pressure
+        x = 277
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPA_the_iberian_pact
+        icon = GFX_goal_generic_political_pressure
+        x = 278
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPA_the_phalanx_ascendant
+        icon = GFX_goal_generic_political_pressure
+        x = 279
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_a_red_iberia
+        icon = GFX_goal_generic_political_pressure
+        x = 280
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_against_trotskyism_and_stalinism
+        icon = GFX_goal_generic_political_pressure
+        x = 281
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_all_must_bear_the_torch
+        icon = GFX_goal_generic_political_pressure
+        x = 282
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_appeal_for_increased_autonomy
+        icon = GFX_goal_generic_political_pressure
+        x = 283
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_communal_military_strategies
+        icon = GFX_goal_generic_political_pressure
+        x = 284
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_communists_in_the_government
+        icon = GFX_goal_generic_political_pressure
+        x = 285
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_crush_the_revolution
+        icon = GFX_goal_generic_political_pressure
+        x = 286
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_demand_ministerial_positions
+        icon = GFX_goal_generic_political_pressure
+        x = 287
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_hinder_nkvd_interference
+        icon = GFX_goal_generic_political_pressure
+        x = 288
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_masters_of_our_own_fate
+        icon = GFX_goal_generic_political_pressure
+        x = 289
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_regional_defense_council_of_aragon
+        icon = GFX_goal_generic_political_pressure
+        x = 290
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_the_anti_fascist_workers_revolution
+        icon = GFX_goal_generic_political_pressure
+        x = 291
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_the_stalinist_doctrine
+        icon = GFX_goal_generic_political_pressure
+        x = 292
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SPR_war_of_independence
+        icon = GFX_goal_generic_political_pressure
+        x = 293
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_align_more_closely_with_the_landsorganisationen
+        icon = GFX_goal_generic_political_pressure
+        x = 294
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_appeal_for_support
+        icon = GFX_goal_generic_political_pressure
+        x = 295
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_bofors_anti_tank_gun
+        icon = GFX_goal_generic_political_pressure
+        x = 296
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_bofors_fly_swatter
+        icon = GFX_goal_generic_political_pressure
+        x = 297
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_central_nordic_army_command
+        icon = GFX_goal_generic_political_pressure
+        x = 298
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_coalition_war_cabinet
+        icon = GFX_goal_generic_political_pressure
+        x = 299
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_decentralized_nordic_army_command
+        icon = GFX_goal_generic_political_pressure
+        x = 300
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_defense_in_depth
+        icon = GFX_goal_generic_political_pressure
+        x = 301
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_finlands_cause_is_ours
+        icon = GFX_goal_generic_political_pressure
+        x = 302
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_greater_nordic_reich
+        icon = GFX_goal_generic_political_pressure
+        x = 303
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_hemvarnet
+        icon = GFX_goal_generic_political_pressure
+        x = 304
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_jagartrupper
+        icon = GFX_goal_generic_political_pressure
+        x = 305
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_join_the_anti_soviet_pact
+        icon = GFX_goal_generic_political_pressure
+        x = 306
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_liquidate_the_monarchy
+        icon = GFX_goal_generic_political_pressure
+        x = 307
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_meet_with_the_king
+        icon = GFX_goal_generic_political_pressure
+        x = 308
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_mythologize_swedish_history
+        icon = GFX_goal_generic_political_pressure
+        x = 309
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_neither_death_nor_dishonor
+        icon = GFX_goal_generic_political_pressure
+        x = 310
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_rapid_mobilization
+        icon = GFX_goal_generic_political_pressure
+        x = 311
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_rationing
+        icon = GFX_goal_generic_political_pressure
+        x = 312
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_research_slot_1
+        icon = GFX_goal_generic_political_pressure
+        x = 313
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_sami_reconcilliation
+        icon = GFX_goal_generic_political_pressure
+        x = 314
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_socialist_reforms
+        icon = GFX_goal_generic_political_pressure
+        x = 315
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_support_danish_communists
+        icon = GFX_goal_generic_political_pressure
+        x = 316
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_support_norwegian_communists
+        icon = GFX_goal_generic_political_pressure
+        x = 317
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_swedish_shooting_movement
+        icon = GFX_goal_generic_political_pressure
+        x = 318
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_train_the_sheltered
+        icon = GFX_goal_generic_political_pressure
+        x = 319
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_undermine_the_fascists
+        icon = GFX_goal_generic_political_pressure
+        x = 320
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_urbanization
+        icon = GFX_goal_generic_political_pressure
+        x = 321
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = SWE_winter_drill
+        icon = GFX_goal_generic_political_pressure
+        x = 322
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = USA_america_first
+        icon = GFX_goal_generic_political_pressure
+        x = 323
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = USA_limited_intervention
+        icon = GFX_goal_generic_political_pressure
+        x = 324
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = USA_war_plan_red
+        icon = GFX_goal_generic_political_pressure
+        x = 325
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = USA_war_plan_white
+        icon = GFX_goal_generic_political_pressure
+        x = 326
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = wuw_HUN_a_danubian_federation
+        icon = GFX_goal_generic_political_pressure
+        x = 327
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = wuw_HUN_integrate_bohemian_and_austrian_industries
+        icon = GFX_goal_generic_political_pressure
+        x = 328
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = wuw_HUN_invite_otto_to_the_throne
+        icon = GFX_goal_generic_political_pressure
+        x = 329
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+    focus = {
+        id = wuw_HUN_the_lands_of_the_crown_of_saint_stephen
+        icon = GFX_goal_generic_political_pressure
+        x = 330
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+
+}

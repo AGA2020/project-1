@@ -35,7 +35,7 @@ ICE_has_communist_ai = {
 		OR = {
 			has_country_flag = ICE_AI_RANDOM_COMMUNIST_PLAN
 			has_game_rule = {
-				rule = ICE_AI_BEHAVIOR
+				rule = ICE_ai_behavior
 				option = ICE_COMMUNIST_PLAN
 			}
 			has_government = communism
@@ -49,7 +49,7 @@ ICE_has_fascist_ai = {
 		OR = {
 			has_country_flag = ICE_AI_RANDOM_FASCIST_PLAN
 			has_game_rule = {
-				rule = ICE_AI_BEHAVIOR
+				rule = ICE_ai_behavior
 				option = ICE_FASCIST_PLAN
 			}
 			has_government = fascism

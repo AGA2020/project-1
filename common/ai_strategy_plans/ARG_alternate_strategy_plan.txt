@@ -9,7 +9,7 @@ ARG_fascism_plan = {
 		OR = {
 			has_country_flag = ARG_AI_RANDOM_FASCISM
 			has_game_rule = {
-				rule = ARG_AI_BEHAVIOR
+				rule = ARG_ai_behavior
 				option = FASCISM
 			}	
 		}
@@ -107,7 +107,7 @@ ARG_communist_plan = {
 		OR = {
 			has_country_flag = ARG_AI_RANDOM_COMMUNIST
 			has_game_rule = {
-				rule = ARG_AI_BEHAVIOR
+				rule = ARG_ai_behavior
 				option = COMMUNIST
 			}	
 		}
@@ -205,7 +205,7 @@ ARG_democratic_plan = {
 		OR = {
 			has_country_flag = ARG_AI_RANDOM_DEMOCRATIC
 			has_game_rule = {
-				rule = ARG_AI_BEHAVIOR
+				rule = ARG_ai_behavior
 				option = DEMOCRATIC
 			}	
 		}

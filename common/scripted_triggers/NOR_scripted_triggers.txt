@@ -277,7 +277,7 @@ NOR_is_fascist_ai = {
 	is_ai = yes  
 	OR = {
 		has_game_rule = {
-			rule = NOR_AI_BEHAVIOR
+			rule = NOR_ai_behavior
 			option = NOR_FASCIST
 		}
 		has_country_flag = NOR_AI_RANDOM_FASCIST

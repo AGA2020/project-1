@@ -10,7 +10,7 @@ IRQ_fascism_plan = {
 		OR = {
 			has_country_flag = IRQ_AI_RANDOM_FASCISM
 			has_game_rule = {
-				rule = IRQ_AI_BEHAVIOR
+				rule = IRQ_ai_behavior
 				option = FASCISM
 			}	
 		}
@@ -135,7 +135,7 @@ IRQ_hashemite_plan = {
 		OR = {
 			has_country_flag = IRQ_AI_RANDOM_HASHEMITE
 			has_game_rule = {
-				rule = IRQ_AI_BEHAVIOR
+				rule = IRQ_ai_behavior
 				option = HASHEMITE_IRQ
 			}	
 		}
@@ -257,7 +257,7 @@ IRQ_Sidqi_plan = {
 		OR = {
 			has_country_flag = IRQ_AI_RANDOM_SIDQI
 			has_game_rule = {
-				rule = IRQ_AI_BEHAVIOR
+				rule = IRQ_ai_behavior
 				option = SIDQI_IRQ
 			}	
 		}
@@ -373,7 +373,7 @@ IRQ_kurdistan_plan = {
 		OR = {
 			has_country_flag = IRQ_AI_RANDOM_KURDISTAN
 			has_game_rule = {
-				rule = IRQ_AI_BEHAVIOR
+				rule = IRQ_ai_behavior
 				option = KURDISTAN_IRQ
 			}	
 		}

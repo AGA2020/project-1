@@ -16,10 +16,6 @@ history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-			10004 = { # Fangcheng
-				naval_base = 1
-				coastal_bunker = 1
-			}
 		}
 		victory_points = { 
 			7137 10 

@@ -10,7 +10,7 @@ PER_imperial_plan = {
 		OR = {
 			has_country_flag = PER_AI_RANDOM_IMPERIAL
 			has_game_rule = {
-				rule = PER_AI_BEHAVIOR
+				rule = PER_ai_behavior
 				option = IMPERIAL_PER
 			}
 		}	
@@ -132,7 +132,7 @@ PER_democratic_plan = {
 		OR = {
 			has_country_flag = PER_AI_RANDOM_DEMOCRATIC
 			has_game_rule = {
-				rule = PER_AI_BEHAVIOR
+				rule = PER_ai_behavior
 				option = DEMOCRATIC_PER
 			}
 		}	
@@ -255,7 +255,7 @@ PER_communism_plan = {
 		OR = {
 			has_country_flag = PER_AI_RANDOM_COMMUNISM
 			has_game_rule = {
-				rule = PER_AI_BEHAVIOR
+				rule = PER_ai_behavior
 				option = COMMUNISM_PER
 			}
 		}	
@@ -374,7 +374,7 @@ PER_fascism_plan = {
 		OR = {
 			has_country_flag = PER_AI_RANDOM_FASCISM
 			has_game_rule = {
-				rule = PER_AI_BEHAVIOR
+				rule = PER_ai_behavior
 				option = FASCISM_PER
 			}
 		}	

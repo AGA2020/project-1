@@ -566,7 +566,7 @@ SWI_is_historical_ai = {
 		AND = {
 			is_historical_focus_on = yes 
 			has_game_rule = {
-				rule = SWI_AI_BEHAVIOR
+				rule = SWI_ai_behavior
 				option = DEFAULT
 			}
 		}
@@ -581,7 +581,7 @@ SWI_is_historical_ai = {
 SWI_AI_is_dem_allied = {
 	OR = {		
 		has_game_rule = {
-			rule = SWI_AI_BEHAVIOR
+			rule = SWI_ai_behavior
 			option = SWI_ALLIED_DEMOCRATIC
 		}
 		has_country_flag = SWI_AI_RANDOM_ALLIED_DEMOCRATIC
@@ -590,7 +590,7 @@ SWI_AI_is_dem_allied = {
 SWI_AI_is_dem_exp = {
 	OR = {		
 		has_game_rule = {
-			rule = SWI_AI_BEHAVIOR
+			rule = SWI_ai_behavior
 			option = SWI_EXPANSIONIST_DEMOCRATIC
 		}
 		has_country_flag = SWI_AI_RANDOM_EXPANSIONIST_DEMOCRATIC
@@ -600,7 +600,7 @@ SWI_AI_is_dem_exp = {
 SWI_AI_is_imperial = {
 	OR = {		
 		has_game_rule = {
-			rule = SWI_AI_BEHAVIOR
+			rule = SWI_ai_behavior
 			option = SWI_IMPERIAL
 		}
 		has_country_flag = SWI_AI_RANDOM_IMPERIAL
@@ -609,7 +609,7 @@ SWI_AI_is_imperial = {
 SWI_AI_is_fascist = {
 	OR = {		
 		has_game_rule = {
-			rule = SWI_AI_BEHAVIOR
+			rule = SWI_ai_behavior
 			option = SWI_FASCIST
 		}
 		has_country_flag = SWI_AI_RANDOM_FASCIST

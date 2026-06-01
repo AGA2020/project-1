@@ -581,6 +581,8 @@ recruit_character = ITA_giulio_paggio
 recruit_character = ITA_ignazio_silone
 recruit_character = ITA_vittorio_emanuele_orlando
 recruit_character = ITA_mario_scelba
+recruit_character = ITA_guido_de_ruggiero
+recruit_character = ITA_alberto_tarchiani
 recruit_character = ITA_giuseppe_borea
 recruit_character = ITA_raffaele_de_courten
 

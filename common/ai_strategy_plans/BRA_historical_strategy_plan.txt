@@ -11,7 +11,7 @@ BRA_historical_plan = {
 			AND = {
 				is_historical_focus_on = yes 
 				has_game_rule = {
-					rule = BRA_AI_BEHAVIOR
+					rule = BRA_ai_behavior
 					option = DEFAULT
 				}
 			}
