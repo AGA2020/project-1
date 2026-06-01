@@ -52,4 +52,172 @@ characters={
 			id=-1
 		}
 	}
+
+
+	PHI_luis_taruc = {
+		instance = {
+
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+
+			name = PHI_luis_taruc
+
+			portraits = {
+				army = {
+					large = GFX_portrait_PHI_luis_taruc
+					small = GFX_portrait_PHI_luis_taruc_small
+				}
+			}
+			corps_commander = {
+				visible = {
+					OR = {
+						has_completed_focus = PHI_legalize_the_communist_party
+						has_completed_focus = PHI_hukbalahap
+					}
+				}
+				traits = { commando jungle_rat }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 1
+				legacy_id = -1
+			}
+		}
+	}
+
+
+	PHI_infante_juan_iii = {
+		name = PHI_juan_iii
+		portraits = {
+			civilian = {
+				large = GFX_portrait_PHI_king_juan_III
+			}
+			army = {
+				small = GFX_portrait_PHI_king_juan_III_small
+			}
+		}
+		navy_leader = {
+			traits = {
+				ironside
+				big_guns_expert
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 2
+			coordination_skill = 2
+			legacy_id = -1
+			visible = {
+				has_completed_focus = PHI_royal_exiles
+			}
+		}
+		# country_leader = {	#added by focus
+		# 	ideology = despotism
+		# 	expire = "1965.1.1.1"
+		# 	traits = { ICE_the_navy_king }
+		# }
+	}
+
+
+	PHI_vicente_lava = {
+		name = PHI_vicente_lava
+
+		portraits = {
+			civilian = {
+				small = GFX_portrait_PHI_vicente_lava_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			allowed  = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			available = {
+				has_completed_focus = PHI_legalize_the_communist_party
+			}
+			idea_token = PHI_vicente_lava
+			traits  = {
+				PHI_coconut_scientist
+			}
+		}
+	}
+
+
+	PHI_cristanto_evangelista = {
+		advisor = {
+			slot = political_advisor
+			idea_token = PHI_cristanto_evangelista
+			allowed  = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			traits  = {
+				ambitious_union_boss
+			}
+			available = {
+				is_country_leader = no
+				OR = {
+					NOT = {
+						is_subject_of = USA
+					}
+					NOT = {
+						has_character_flag = PHI_sent_away
+					}
+				}
+			}
+		}
+		name = PHI_cristanto_evangelista
+		portraits = {
+			civilian = {
+				large = GFX_portrait_PHI_cristanto_evangelista
+				small = GFX_portrait_PHI_cristanto_evangelista_small
+			}
+		}
+		# Communist Coup
+		country_leader = {
+		    ideology = marxism
+		    expire = "1965.1.1.1"
+		    traits = { PHI_radical_leader }
+		}
+	}
+
+
+	PHI_pedro_abad_santos = {
+		advisor = {
+			slot = political_advisor
+			idea_token = PHI_pedro_abad_santos
+			allowed  = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			traits  = {
+				PHI_socialist_lawyer
+			}
+			available = {
+				is_country_leader = no
+				OR = {
+					NOT = {
+						is_subject_of = USA
+					}
+					NOT = {
+						has_character_flag = PHI_sent_away
+					}
+				}
+			}
+		}
+		name = PHI_pedro_abad_santos
+		portraits = {
+			civilian = {
+				large = GFX_portrait_PHI_pedro_abad_santos
+				small = GFX_portrait_PHI_pedro_abad_santos_small
+			}
+		}
+			# Communist Coup
+#			country_leader = {
+#			    ideology = marxism
+#			    expire = "1965.1.1.1"
+#			    traits = { PHI_pioneer_marxist }
+#			}
+	}
 }

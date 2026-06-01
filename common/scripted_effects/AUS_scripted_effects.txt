@@ -10,11 +10,11 @@ AUS_fascist_vaterlandische_leader_setup = {
 			country_leader = {
 				ideology = despotism
 				expire = 1965.1.1.1
-				traits = { nazi_sympathizer } 
+				traits = { nazi_sympathizer }
 			}
 		}
 	}
-	
+
 	AUS_kurt_schuschnigg = {
 
 		remove_country_leader_role = {
@@ -29,7 +29,7 @@ AUS_fascist_vaterlandische_leader_setup = {
 				traits = { }
 			}
 		}
-	
+
 	}
 }
 
@@ -46,7 +46,7 @@ AUS_herrenhaus_and_vf_leaders_setup = {
 				id = -1
 				traits = {  }
 			}
-			promote_character = yes 
+			promote_character = yes
 		}
 	}
 	AUS_arthur_seyss-inquart = {
@@ -71,7 +71,7 @@ AUS_herrenhaus_and_vf_leaders_setup = {
 		value = party_popularity_100@democratic
 	}
 	set_popularities = {
-		democratic= party_popularity_100@democratic 
+		democratic= party_popularity_100@democratic
 		neutrality = party_popularity_100@fascism #IT IS MEANT TO BE SWAPPED!
 		fascism = party_popularity_100@neutrality #IT IS MEANT TO BE SWAPPED!
 		communism = party_popularity_100@democratic
@@ -254,7 +254,7 @@ AUS_set_austrofascism_defaults = {
 	set_variable = { AUS_austrofascism_production_speed_arms_factory_factor = 0 }
 	set_variable = { AUS_austrofascism_production_speed_infrastructure_factor = 0 }
 	set_variable = { AUS_austrofascism_conscription_factor = 0 }
-	set_variable = { AUS_austrofascism_industrial_capacity_factor = 0 }	
+	set_variable = { AUS_austrofascism_industrial_capacity_factor = 0 }
 	set_variable = { AUS_austrofascism_militia_attack = 0 }
 	set_variable = { AUS_austrofascism_militia_defence = 0 }
 	set_variable = { AUS_austrofascism_militia_speed = 0 }
@@ -395,3 +395,25 @@ AUS_set_compensation_for_guarantee_defaults = {
 	set_variable = { AUS_compensation_for_guarantee_consumer_goods_factor = 0 }
 }
 
+
+AUS_display_right_communism_spirit = {
+	IF = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = AUS_austrostalinism
+			}
+		}
+		custom_effect_tooltip = AUS_austrostalinism_intro_tt
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = AUS_austrotrotskyism
+			}
+		}
+		custom_effect_tooltip = AUS_austrotrotskyism_intro_tt
+	}
+	ELSE = {
+		custom_effect_tooltip = AUS_austromarxism_intro_tt
+	}
+}

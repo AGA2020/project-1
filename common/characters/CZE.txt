@@ -75,7 +75,7 @@ characters={
 				factor = 1.000
 			}
 		}
-		
+
 		country_leader={
 			ideology=stalinism
 			expire="1965.1.1.1"
@@ -177,11 +177,11 @@ characters={
 			allowed = {
 				original_tag = CZE
 			}
-			
+
 			traits = {
 				military_theorist
 			}
-		}		
+		}
 	}
 
 	CZE_alois_vicherek={
@@ -199,7 +199,7 @@ characters={
 			allowed = {
 				original_tag = CZE
 			}
-			
+
 			traits = {
 				air_warfare_theorist
 			}
@@ -355,9 +355,9 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
-		}		
+		}
 	}
-	
+
 	CZE_josef_frantisek={
 		name=CZE_josef_frantisek
 		portraits={
@@ -375,7 +375,7 @@ characters={
 			}
 		}
 	}
-	
+
 	CZE_frantisek_havel={
 		name=CZE_frantisek_havel
 		portraits={
@@ -402,7 +402,7 @@ characters={
 				original_tag  = CZE
 			}
 			traits  = {
-				prince_of_terror 
+				prince_of_terror
 			}
 		}
 	}
@@ -421,7 +421,7 @@ characters={
 				original_tag  = CZE
 			}
 			traits  = {
-				quartermaster_general 
+				quartermaster_general
 			}
 		}
 	}
@@ -440,12 +440,12 @@ characters={
 				original_tag  = CZE
 			}
 			traits  = {
-				backroom_backstabber 
+				backroom_backstabber
 			}
 			ai_will_do  = {
 				factor  = 0.000
 			}
-		}	
+		}
 	}
 
 	CZE_stefan_osusky={
@@ -465,7 +465,7 @@ characters={
 			}
 		}
 	}
-	
+
 	CZE_konrad_henlein={
 		name=CZE_konrad_henlein
 		portraits={
@@ -475,7 +475,399 @@ characters={
 		}
 	}
 
-	
+
 
 	# Illusive Gentleman auto-generated
+
+
+	CZE_milan_hodza = {
+		name = CZE_milan_hodza
+		portraits={
+			civilian={
+				large=GFX_portrait_CZE_milan_hodza
+				small=GFX_portrait_CZE_milan_hodza_small
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {
+				CZE_disoriented_minister_of_foreign_affairs agrarian_old_guard
+			}
+		}
+	}
+
+
+	CZE_antonin_hampl = { #Democratic faction leader during the Second Republic - party leader flavor only
+		name = CZE_antonin_hampl
+		portraits={
+			civilian={
+				large = GFX_Portrait_Europe_Generic_3
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {
+				staunch_anti_fascist
+			}
+		}
+	}
+
+
+	CZE_emil_hacha = { #Second Republic leader
+		name=CZE_emil_hacha
+		portraits = {
+			civilian={
+				large=GFX_portrait_CZE_emil_hacha
+				small=GFX_portrait_CZE_emil_hacha_small
+			}
+		}
+
+		country_leader={
+			ideology=oligarchism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+
+	CZE_karel_schwarzenberg = {
+		name = CZE_karel_schwarzenberg
+		portraits = {
+			civilian = {
+				large = GFX_portrait_CZE_karel_schwarzenberg
+				small = GFX_idea_CZE_karel_schwarzenberg
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1965.1.1.1"
+			id = -1
+			traits = { }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CZE_karel_schwarzenberg
+			allowed  = {
+				original_tag  = CZE
+			}
+			available = {
+				has_completed_focus = CZE_unify_the_fascist_parties
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = CZE_petition_the_nobles
+					has_completed_focus = CZE_increase_funding_from_moscow
+				}
+			}
+			traits  = {
+				fascist_demagogue
+			}
+			ai_will_do = {
+				base = 200
+				modifier = {
+					factor = 0
+					has_government = fascism
+					fascism > 0.7
+				}
+			}
+		}
+	}
+
+
+	CZE_bedrich_homola = {
+		name=CZE_bedrich_homola
+		portraits={
+			army={
+				large=GFX_portrait_CZE_bedrich_homola
+				small=GFX_portrait_CZE_bedrich_homola_small
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer harsh_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+
+	CZE_frantisek_hrabcik = {
+		name=CZE_frantisek_hrabcik
+		portraits={
+			army={
+				large =GFX_portrait_CZE_frantisek_hrabcik
+				small=GFX_portrait_CZE_frantisek_hrabcik_small
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer engineer_officer guerilla_fighter }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=4
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = CZE_frantisek_hrabcik
+			allowed = {
+				original_tag = CZE
+			}
+			traits = {
+				army_guerilla_organizer_2
+			}
+			cost = 100
+			available = {
+				OR = {
+					GER = {
+						has_completed_focus = GER_demand_sudetenland
+					}
+					has_defensive_war = yes
+				}
+				OR = {
+					has_war_with_major = yes
+					has_country_flag = CZE_lessons_of_war_i_had_war_with_major_flag
+				}
+				is_subject = no
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+			on_add = {
+				owner = {
+					if = {
+						limit = {
+							has_power_balance = {
+								id = CZE_bop_army_readiness
+							}
+						}
+						CZE_bop_very_low_increase_effect = yes
+						custom_effect_tooltip = generic_skip_one_line_tt
+					}
+				}
+			}
+			on_remove = {
+				owner = {
+					if = {
+						limit = {
+							has_power_balance = {
+								id = CZE_bop_army_readiness
+							}
+						}
+						CZE_bop_very_low_decrease_effect = yes
+					}
+				}
+			}
+		}
+	}
+
+
+	CZE_lev_prchala = {
+		name=CZE_lev_prchala
+		portraits={
+			army={
+				large=GFX_portrait_CZE_lev_prchala
+				small=GFX_portrait_CZE_lev_prchala_small
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer trait_reckless politically_connected }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+
+	CZE_josef_votruba = {
+		name=CZE_josef_votruba
+		portraits={
+			army={
+				large=GFX_portrait_CZE_josef_votruba
+				small=GFX_portrait_CZE_josef_votruba_small
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer inflexible_strategist }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+
+
+	CZE_karel_pavala={
+		instance = {
+			allowed = {
+				NOT = {
+					has_dlc = "Peace For Our Time"
+				}
+			}
+			name=CZE_karel_pavala
+			portraits={
+				army={
+					large="GFX_Portrait_Europe_Generic_navy_3"
+					small="GFX_idea_generic_navy_europe_1"
+				}
+			}
+			advisor={
+				slot = navy_chief
+				idea_token = CZE_karel_pavala
+				allowed = {
+					original_tag = CZE
+				}
+				traits = {
+					navy_chief_maneuver_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+			}
+			navy_leader = {
+				traits = { navy_career_officer inshore_fighter }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				maneuvering_skill = 1
+				coordination_skill = 1
+				legacy_id = -1
+			}
+		}
+		instance = {
+			allowed = {
+				has_dlc = "Peace For Our Time"
+			}
+			name=CZE_karel_pavala
+			portraits={
+				army={
+					large=GFX_portrait_CZE_karel_pavala
+					small=GFX_portrait_CZE_karel_pavala_small
+				}
+			}
+			advisor={
+				slot = navy_chief
+				idea_token = CZE_karel_pavala
+				allowed = {
+					original_tag = CZE
+				}
+				traits = {
+					navy_chief_maneuver_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+				on_add = {
+					owner = {
+						if = {
+							limit = {
+								has_power_balance = {
+									id = CZE_bop_army_readiness
+								}
+							}
+							CZE_bop_very_low_increase_effect = yes
+							custom_effect_tooltip = generic_skip_one_line_tt
+						}
+					}
+				}
+				on_remove = {
+					owner = {
+						if = {
+							limit = {
+								has_power_balance = {
+									id = CZE_bop_army_readiness
+								}
+							}
+							CZE_bop_very_low_decrease_effect = yes
+						}
+					}
+				}
+			}
+			navy_leader = {
+				traits = { navy_career_officer inshore_fighter }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				maneuvering_skill = 1
+				coordination_skill = 1
+				legacy_id = -1
+			}
+		}
+	}
+
+	CZE_karel_pavala_army={
+		instance = {
+			allowed = {
+				has_dlc = "Peace For Our Time"
+			}
+			name=CZE_karel_pavala
+			portraits={
+				army={
+					large=GFX_portrait_CZE_karel_pavala
+					small=GFX_portrait_CZE_karel_pavala_small
+				}
+			}
+			corps_commander={ #This needs to go last
+				traits={ career_officer naval_liason }
+				skill=1
+				attack_skill=1
+				defense_skill=1
+				planning_skill=1
+				logistics_skill=1
+				legacy_id=-1
+				visible = {
+					has_completed_focus = CZE_expand_the_river_monitor_fleet
+				}
+			}
+		}
+	}
+
+
+	CZE_antonin_husnik = {
+		name = CZE_antonin_husnik
+		portraits = {
+			army = {
+				large = GFX_portrait_CZE_antonin_husnik
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_aircraft_specialist }
+			skills = {
+				specialization_air = 2
+			}
+		}
+	}
+
+
+	CZE_georg_placzek = {
+		name = CZE_georg_placzek
+		portraits = {
+			army = {
+				large = GFX_portrait_CZE_georg_placzek
+			}
+		}
+
+		scientist = {
+			traits = { scientist_trait_nuclear_warfare_expert scientist_trait_fast_learner }
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+	}
 }

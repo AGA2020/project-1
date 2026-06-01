@@ -1,28 +1,28 @@
 #scripted trigger for Austria
 
-AUS_anschluss_risk_low = { 
+AUS_anschluss_risk_low = {
 	custom_trigger_tooltip = {
-		tooltip = AUS_anschluss_risk_low_tt 
-		
+		tooltip = AUS_anschluss_risk_low_tt
+
 		GER = {
 			fighting_army_strength_ratio = {
 				tag = AUS
 				ratio < global.medium_anschluss_risk
 			}
-	
+
 			has_completed_focus = GER_remilitarize_the_rhineland
 			NOT = {
 				has_completed_focus = GER_reorganize_the_wehrmacht
 			}
-		}	
+		}
 	}
 }
 
-AUS_anschluss_risk_medium = { 
-	
+AUS_anschluss_risk_medium = {
+
 	custom_trigger_tooltip = {
-		tooltip = AUS_anschluss_risk_medium_tt 
-		
+		tooltip = AUS_anschluss_risk_medium_tt
+
 		GER = {
 			OR = {
 				AND = {
@@ -36,36 +36,36 @@ AUS_anschluss_risk_medium = {
 					}
 					NOT = {
 						has_completed_focus = GER_reorganize_the_wehrmacht
-					}	
+					}
 				}
 				AND = {
 					OR = {
 						has_completed_focus = GER_reorganize_the_wehrmacht
 					}
-					
+
 					fighting_army_strength_ratio = {
 						tag = AUS
 						ratio < global.medium_anschluss_risk
 					}
 				}
 			}
-			
-			
+
+
 			has_completed_focus = GER_remilitarize_the_rhineland
 		}
 	}
 }
 
-AUS_anschluss_risk_high = { 
+AUS_anschluss_risk_high = {
 	custom_trigger_tooltip = {
-		tooltip = AUS_anschluss_risk_high_tt 
-		
+		tooltip = AUS_anschluss_risk_high_tt
+
 		GER = {
 			OR = {
 				AND = {
 					fighting_army_strength_ratio = {
 						tag = AUS
-						ratio < global.deployed_manpower_ratio_needed_for_anschluss 
+						ratio < global.deployed_manpower_ratio_needed_for_anschluss
 					}
 					fighting_army_strength_ratio = {
 						tag = AUS
@@ -91,18 +91,18 @@ AUS_anschluss_risk_high = {
 					}
 				}
 			}
-			
-			
-			
+
+
+
 			has_completed_focus = GER_remilitarize_the_rhineland
 		}
-	}	
+	}
 }
 
-AUS_anschluss_risk_critical = { 
+AUS_anschluss_risk_critical = {
 
 	custom_trigger_tooltip = {
-		tooltip = AUS_anschluss_risk_critical_tt 
+		tooltip = AUS_anschluss_risk_critical_tt
 		GER = {
 			OR = {
 				AND = {
@@ -117,10 +117,10 @@ AUS_anschluss_risk_critical = {
 
 				fighting_army_strength_ratio = {
 					tag = AUS
-					ratio > global.deployed_manpower_ratio_needed_for_anschluss 
+					ratio > global.deployed_manpower_ratio_needed_for_anschluss
 				}
 			}
-			
+
 		}
 	}
 }
@@ -130,15 +130,15 @@ AUS_danubian_communism_bypass = {
 		tooltip = AUS_danubian_communism_bypass_tt
 
 		AND = {
-			
+
 			IF = {
 				limit = { HUN = { exists = yes } }
 
-				HUN = { 
+				HUN = {
 					OR = {
-					
+
 						has_government = communism
-							
+
 						has_country_flag = AUS_this_country_refused_communism_flag
 					}
 				}
@@ -147,11 +147,11 @@ AUS_danubian_communism_bypass = {
 			IF = {
 				limit = { CZE = { exists = yes } }
 
-				CZE = { 
+				CZE = {
 					OR = {
-					
+
 						has_government = communism
-							
+
 						has_country_flag = AUS_this_country_refused_communism_flag
 					}
 				}
@@ -160,11 +160,11 @@ AUS_danubian_communism_bypass = {
 			IF = {
 				limit = { YUG = { exists = yes } }
 
-				YUG = { 
+				YUG = {
 					OR = {
-					
+
 						has_government = communism
-							
+
 						has_country_flag = AUS_this_country_refused_communism_flag
 					}
 				}
@@ -173,11 +173,11 @@ AUS_danubian_communism_bypass = {
 			IF = {
 				limit = { ROM = { exists = yes } }
 
-				ROM = { 
+				ROM = {
 					OR = {
-					
+
 						has_government = communism
-							
+
 						has_country_flag = AUS_this_country_refused_communism_flag
 					}
 				}
@@ -186,11 +186,11 @@ AUS_danubian_communism_bypass = {
 			IF = {
 				limit = { BUL = { exists = yes } }
 
-				BUL = { 
+				BUL = {
 					OR = {
-					
+
 						has_government = communism
-							
+
 						has_country_flag = AUS_this_country_refused_communism_flag
 					}
 				}
@@ -199,11 +199,11 @@ AUS_danubian_communism_bypass = {
 			IF = {
 				limit = { FRA = { exists = yes } }
 
-				FRA = { 
+				FRA = {
 					OR = {
-					
+
 						has_government = communism
-							
+
 						has_country_flag = AUS_this_country_refused_communism_flag
 					}
 				}
@@ -212,11 +212,11 @@ AUS_danubian_communism_bypass = {
 			IF = {
 				limit = { GRE = { exists = yes } }
 
-				GRE = { 
+				GRE = {
 					OR = {
-					
+
 						has_government = communism
-							
+
 						has_country_flag = AUS_this_country_refused_communism_flag
 					}
 				}
@@ -225,11 +225,11 @@ AUS_danubian_communism_bypass = {
 			IF = {
 				limit = { HOL = { exists = yes } }
 
-				HOL = { 
+				HOL = {
 					OR = {
-					
+
 						has_government = communism
-							
+
 						has_country_flag = AUS_this_country_refused_communism_flag
 					}
 				}
@@ -238,11 +238,11 @@ AUS_danubian_communism_bypass = {
 			IF = {
 				limit = { LUX = { exists = yes } }
 
-				LUX = { 
+				LUX = {
 					OR = {
-					
+
 						has_government = communism
-							
+
 						has_country_flag = AUS_this_country_refused_communism_flag
 					}
 				}
@@ -251,11 +251,11 @@ AUS_danubian_communism_bypass = {
 			IF = {
 				limit = { BEL = { exists = yes } }
 
-				BEL = { 
+				BEL = {
 					OR = {
-					
+
 						has_government = communism
-							
+
 						has_country_flag = AUS_this_country_refused_communism_flag
 					}
 				}
@@ -264,3 +264,20 @@ AUS_danubian_communism_bypass = {
 	}
 }
 
+
+AUS_is_historical_ai = {
+	OR = {
+		AND = {
+			is_historical_focus_on = yes
+			has_game_rule = {
+				rule = AUS_ai_behavior
+				option = DEFAULT
+			}
+		}
+		has_country_flag = AUS_AI_RANDOM_HISTORICAL
+		has_game_rule = {
+			rule = AUS_ai_behavior
+			option = HISTORICAL
+		}
+	}
+}

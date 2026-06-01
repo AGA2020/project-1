@@ -214,6 +214,7 @@ technology_folders = {
 	electronics_folder = {
 		ledger = civilian
 	}
+	cat_rangers_doctrine
 }
 
  

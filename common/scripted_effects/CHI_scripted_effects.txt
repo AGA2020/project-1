@@ -39,7 +39,7 @@ CHI_hyper_inflation_level_up = {
 		swap_ideas = {
 			remove_idea = CHI_hyper_inflation_1
 			add_idea = CHI_hyper_inflation_2
-		}		
+		}
 	}
 	else_if = {
 		limit = { NOT = { has_idea = CHI_hyper_inflation_1 } }
@@ -102,7 +102,7 @@ CHI_warlord_integration_up = {
 			remove_idea = CHI_warlord_integration_4
 			add_idea = CHI_warlord_integration_5
 		}
-	}	
+	}
 	else_if = {
 		limit = {
 			has_idea = CHI_warlord_integration_3
@@ -111,7 +111,7 @@ CHI_warlord_integration_up = {
 			remove_idea = CHI_warlord_integration_3
 			add_idea = CHI_warlord_integration_4
 		}
-	}	
+	}
 	else_if = {
 		limit = {
 			has_idea = CHI_warlord_integration_2
@@ -120,7 +120,7 @@ CHI_warlord_integration_up = {
 			remove_idea = CHI_warlord_integration_2
 			add_idea = CHI_warlord_integration_3
 		}
-	}	
+	}
 	else_if = {
 		limit = {
 			has_idea = CHI_warlord_integration_1
@@ -145,7 +145,7 @@ CHI_warlord_integration_down = {
 			remove_idea = CHI_warlord_integration_5
 			add_idea = CHI_warlord_integration_4
 		}
-	}	
+	}
 	else_if = {
 		limit = {
 			has_idea = CHI_warlord_integration_4
@@ -154,7 +154,7 @@ CHI_warlord_integration_down = {
 			remove_idea = CHI_warlord_integration_4
 			add_idea = CHI_warlord_integration_3
 		}
-	}	
+	}
 	else_if = {
 		limit = {
 			has_idea = CHI_warlord_integration_3
@@ -163,7 +163,7 @@ CHI_warlord_integration_down = {
 			remove_idea = CHI_warlord_integration_3
 			add_idea = CHI_warlord_integration_2
 		}
-	}	
+	}
 	else_if = {
 		limit = {
 			has_idea = CHI_warlord_integration_2
@@ -256,74 +256,357 @@ CHI_set_ally_strat_on_current_leader = {
 CHI_negative_spirit_transfer = {
 	if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_incompetent_officers }	
+			event_target:old_leader = { has_idea = CHI_incompetent_officers }
 		}
 		add_ideas = CHI_incompetent_officers
 	}
 	if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_nine_power_treaty }	
+			event_target:old_leader = { has_idea = CHI_nine_power_treaty }
 		}
 		add_ideas = CHI_nine_power_treaty
 	}
 	if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_army_corruption_3 }	
+			event_target:old_leader = { has_idea = CHI_army_corruption_3 }
 		}
 		add_ideas = CHI_army_corruption_3
 	}
 	else_if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_army_corruption_2 }	
+			event_target:old_leader = { has_idea = CHI_army_corruption_2 }
 		}
 		add_ideas = CHI_army_corruption_2
 	}
 	else_if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_army_corruption_1 }	
+			event_target:old_leader = { has_idea = CHI_army_corruption_1 }
 		}
 		add_ideas = CHI_army_corruption_1
 	}
 	if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_ineffective_bureaucracy }	
+			event_target:old_leader = { has_idea = CHI_ineffective_bureaucracy }
 		}
 		add_ideas = CHI_ineffective_bureaucracy
 	}
 	if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_hyper_inflation_none }	
+			event_target:old_leader = { has_idea = CHI_hyper_inflation_none }
 		}
 		add_ideas = CHI_hyper_inflation_none
 	}
 	else_if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_hyper_inflation_1 }	
+			event_target:old_leader = { has_idea = CHI_hyper_inflation_1 }
 		}
 		add_ideas = CHI_hyper_inflation_1
 	}
 	else_if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_hyper_inflation_2 }	
+			event_target:old_leader = { has_idea = CHI_hyper_inflation_2 }
 		}
 		add_ideas = CHI_hyper_inflation_2
 	}
 	else_if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_hyper_inflation_3 }	
+			event_target:old_leader = { has_idea = CHI_hyper_inflation_3 }
 		}
 		add_ideas = CHI_hyper_inflation_3
 	}
 	else_if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_hyper_inflation_4 }	
+			event_target:old_leader = { has_idea = CHI_hyper_inflation_4 }
 		}
 		add_ideas = CHI_hyper_inflation_4
 	}
 	else_if = {
 		limit = {
-			event_target:old_leader = { has_idea = CHI_hyper_inflation_5 }	
+			event_target:old_leader = { has_idea = CHI_hyper_inflation_5 }
 		}
 		add_ideas = CHI_hyper_inflation_5
+	}
+}
+
+
+CHI_add_or_modify_political_tutelage = {
+	IF = {
+		limit = {
+			OR = {
+				has_dynamic_modifier = { modifier = CHI_the_political_tutelage_dm }
+				NOT = {
+					has_dynamic_modifier = { modifier = CHI_the_political_tutelage_dm }
+					has_dynamic_modifier = { modifier = CHI_the_political_tutelage_upgraded_dm }
+				}
+			}
+		}
+		custom_effect_tooltip = CHI_modify_CHI_the_political_tutelage_dm_tt
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = CHI_the_political_tutelage_upgraded_dm }
+		}
+		custom_effect_tooltip = CHI_modify_CHI_the_political_tutelage_upgraded_dm_tt
+	}
+}
+
+CHI_apply_integration_cost_reduction = {
+	set_variable = { t_cost_reduction = 1 }
+	subtract_from_variable = { t_cost_reduction = CHI.political_power_warlord_integration_cost_reduction }
+
+
+	multiply_variable = { press_warlord_to_become_puppet_influence_points_trigger =  t_cost_reduction }
+	multiply_variable = { press_warlord_to_become_puppet_political_power_cost = t_cost_reduction }
+	multiply_variable = { press_warlord_to_become_puppet_influence_points_cost = t_cost_reduction }
+
+	clear_variable = t_cost_reduction
+}
+
+
+CHI_concessions_add_medium_amount_of_days = {
+	CHI = {
+		add_days_mission_timeout = {
+		    mission = CHI_kwantung_army_impatience_dummy
+		    days = CHI_concessions_medium
+		}
+	}
+	hidden_effect = {
+		JAP = {
+			add_days_mission_timeout = {
+			    mission = JAP_kwantung_army_impatience
+			    days = CHI.CHI_concessions_medium
+			}
+		}
+	}
+}
+
+
+CHI_concessions_add_small_amount_of_days = {
+	CHI = {
+		add_days_mission_timeout = {
+		    mission = CHI_kwantung_army_impatience_dummy
+		    days = CHI_concessions_small
+		}
+	}
+	hidden_effect = {
+		JAP = {
+			add_days_mission_timeout = {
+			    mission = JAP_kwantung_army_impatience
+			    days = CHI.CHI_concessions_small
+			}
+		}
+	}
+}
+
+
+CHI_corrupt_administration_improvement = {
+	if = {
+		limit = {
+			check_variable = { CHI_corrupt_administration_improved < 3 }
+		}
+		add_to_variable = { CHI_corrupt_administration_improved = 1 }
+	}
+	else_if = {
+		limit = {
+			has_dynamic_modifier = { modifier = CHI_corruption_in_the_administration }
+		}
+		hidden_effect = {
+			remove_dynamic_modifier = {	modifier = CHI_corruption_in_the_administration }
+			add_dynamic_modifier = { modifier = CHI_reorganized_administration }
+		}
+		custom_effect_tooltip = CHI_switch_administration_modifiers_tt
+	}
+}
+
+
+CHI_modify_administration_modifier = {
+	if = {
+		limit = {
+			check_variable = { CHI_corrupt_administration_improved < 3 }
+		}
+		custom_effect_tooltip = CHI_modify_corruption_in_the_administration_tt
+	}
+	else = {
+		custom_effect_tooltip = CHI_modify_reorganized_administration_tt
+	}
+}
+
+
+CHI_modify_illicit_goods_event_trigger = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = trigger_SEA_china_improvement_2 }
+		}
+		set_country_flag = trigger_SEA_china_improvement_2
+		country_event = {
+			id = SEA_china_improvement.2
+			days = 2
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = which_will_give_tt
+		event_option_tooltip = SEA_china_improvement.2.a
+	}
+	else = {
+		add_to_variable = { illicit_goods_reduction_step = 0.02 }
+		custom_effect_tooltip = illicit_good_improvement_increase
+	}
+}
+
+
+CHI_no_longer_a_warlord_idea_removal = {
+	if = {
+		limit = {
+			has_idea = CHI_warlord_state_idea
+		}
+		remove_ideas = {
+			CHI_warlord_state_idea
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_warlord_state_idea_2
+		}
+		remove_ideas = {
+			CHI_warlord_state_idea_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_warlord_state_idea_cav
+		}
+		remove_ideas = {
+			CHI_warlord_state_idea_cav
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CHI_warlord_state_idea_mnt
+		}
+		remove_ideas = {
+			CHI_warlord_state_idea_mnt
+		}
+	}
+
+}
+
+
+CHI_reduce_nine_power_malus = {
+	custom_effect_tooltip = CHI_nine_power_treaty_modify
+	add_to_variable = { nine_power_justify_war_goal_time = 0.02 tooltip =  justify_war_goal_time_tt }
+	add_to_variable = { nine_power_min_export = -0.02 tooltip = min_export_tt }
+	add_to_variable = { nine_power_treaty_cg = -0.02 tooltip = consumer_goods_factor_tt }
+	if = {
+		limit = {
+			check_variable = {
+				var = nine_power_treaty_cg
+			 	value = 0
+				compare = less_than_or_equals
+			}
+			has_dynamic_modifier = {
+				modifier = CHI_nine_power_treaty_sea
+			}
+		}
+
+		remove_dynamic_modifier = { modifier = CHI_nine_power_treaty_sea }
+	}
+}
+
+
+CHI_setup_colonized_countries_to_liberate_array = {
+	hidden_effect = {
+		for_each_scope_loop = {
+			array = global.countries
+			IF = {
+				limit = {
+					exists = no #the country does not exist
+					any_state = {
+						is_core_of = PREV #the state is a core of the non-existing country
+						NOT = {
+							is_core_of = ROOT
+						}
+						OR = {
+							is_on_continent = asia #the state is in Asia
+							is_on_continent = australia #the state is in Oceania
+						}
+						OWNER = { #the country owning the state
+							NOT = { is_ally_with = ROOT }
+							NOT = { original_tag = ROOT }
+							capital_scope = {
+								NOT = {
+									is_on_continent = asia #the state is in Asia
+									is_on_continent = australia #the state is in Oceania
+								}
+							}
+							NOT = { #don't add multiple times
+								is_in_array = {
+									array = CHI.asian_democracies_countries_to_liberate
+									value = THIS
+								}
+							}
+						}
+					}
+				}
+				add_to_array = { CHI.asian_democracies_countries_to_liberate = THIS }
+			}
+		}
+
+	}
+}
+
+
+CHI_update_claimed_and_core_states = {
+	CHI = {
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = CHI
+					is_claimed_by = CHI
+				}
+				NOT = {
+					is_in_array = {
+						array = CHI.core_and_claimed_states
+						value = THIS
+					}
+				}
+			}
+
+			add_to_array = { CHI.core_and_claimed_states = THIS }
+			set_state_flag = CHI_has_claimed_this_state_flag
+		}
+	}
+}
+
+
+CHI_upgrade_wang_trait = {
+	if = {
+		limit = {
+			has_country_leader_with_trait = CHI_civilian_unifier
+		}
+
+		swap_ruler_traits = {
+			remove = CHI_civilian_unifier
+			add = CHI_civilian_unifier_upgraded
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_leader_with_trait = CHI_civilian_unifier_upgraded
+		}
+
+		swap_ruler_traits = {
+			remove = CHI_civilian_unifier_upgraded
+			add = CHI_civilian_unifier_upgraded_2
+		}
+	}
+	else = {
+		effect_tooltip = {
+			CHI_wang_jingwei = {
+				swap_country_leader_traits = {
+					remove = CHI_civilian_unifier
+					add = CHI_civilian_unifier_upgraded
+				}
+			}
+		}
 	}
 }

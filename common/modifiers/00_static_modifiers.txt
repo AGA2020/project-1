@@ -348,7 +348,7 @@ war_support_bad_modifier = {
 	#army_noncore_attack_factor = -0.50  # Attacking or defending on non-core takes a huge penalty.
 	#army_noncore_defence_factor = -0.50
 	command_power_gain_mult = -0.95
-	surrender_limit = -0.3	
+	surrender_limit = -0.3
 }
 
 war_support_during_war = { #Applied during war, scaled from 0-100% with war support, not split.
@@ -682,7 +682,7 @@ SOV_for_the_common_good_relation = { #For Right Oppo allies
 	license_tech_difference_speed = 0.25 #less cost increase for each tech level between the license and own tech level
 }
 
-### BBA 
+### BBA
 
 ETH_league_of_nations_volunteer_resolution = {
 	send_volunteers_tension = -0.5
@@ -696,7 +696,7 @@ ETH_support_spain_static_modifier = {
 	send_volunteer_factor = 0.5
 }
 
-### AAT 
+### AAT
 
 NORDIC_allow_lendlease = {
 	lend_lease_tension = -0.5
@@ -708,7 +708,7 @@ NORDIC_allow_volunteers = {
 }
 
 NORDIC_allow_more_volunteers = {
-	send_volunteer_factor = 0.5 
+	send_volunteer_factor = 0.5
 }
 
 NORDIC_allow_more_planes = {
@@ -718,4 +718,41 @@ NORDIC_allow_more_planes = {
 FIN_organized_support_for_finland = {
 	send_volunteer_size = 3
 	air_volunteer_cap = 1
+}
+
+naval_general_support = {
+	max_organisation = 0.2
+	navy_max_range_factor = 0.2
+	naval_morale_factor = 0.2
+}
+
+naval_repair_support = {
+	naval_critical_effect_factor = -0.25
+	naval_ship_recovery_chance = 0.1
+	naval_attrition = -0.075
+}
+
+
+the_great_wall = {
+	dig_in_speed_factor = 0.15
+	max_dig_in_factor = 0.1
+}
+
+
+CZE_i_am_agreeable_to_license = { #I just like to license things
+	valid_relation_trigger = {
+		FROM = {
+			exists = yes
+			NOT = { has_war_with = ROOT}
+		}
+	}
+
+	ai_license_acceptance = 45 #more to AI acceptance value.
+	license_tech_difference_speed = 0.05 #less cost increase for each tech level between the license and own tech level
+	license_production_speed = 0.05 #speed increase for being a license
+}
+
+
+CZE_usurp_the_mantle = {
+	compliance_gain = 0.25
 }
