@@ -578,7 +578,7 @@
 		completion_reward = {
 				swap_ideas = {
 					remove_idea = MAN_five_year_plan_industry
-					add_idea = MAN_five_year_plan_industry_2
+					add_idea = MAN_five_year_plan_industry
 				}
 		}
 	}

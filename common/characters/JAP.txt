@@ -1972,4 +1972,134 @@ characters={
 		}
 
 	}
+
+	JAP_komakichi_matsuoka = {
+		name = JAP_komakichi_matsuoka
+
+		portraits = {
+			civilian = {
+				small = GFX_portrait_JAP_komakichi_matsuoka_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_komakichi_matsuoka
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			visible = {
+				NOT = {
+					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+					has_completed_focus = JAP_sea_purge_the_kodoha_faction
+				}
+			}
+
+			available = {
+				has_completed_focus = JAP_raise_support_within_the_proletarian_class
+				NOT = {
+					has_country_flag = JAP_IJA_arrested_advisors_flag
+				}
+			}
+
+			cost = 50
+
+			traits = {
+				COG_trade_unionist
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+
+	}
+
+	JAP_noboru_yamaguchi = {
+		name = JAP_noboru_yamaguchi
+
+		portraits = {
+			civilian = {
+				small = GFX_portrait_JAP_noboru_yamaguchi_small
+				# GFX_portrait_JAP_noboru_yamaguchi_imprisoned
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_noboru_yamaguchi
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			visible = {
+				NOT = {
+					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+					has_completed_focus = JAP_sea_purge_the_kodoha_faction
+				}
+			}
+
+			available = {
+				has_completed_focus = JAP_seek_yakuza_support
+				NOT = {
+					has_country_flag = JAP_IJA_arrested_advisors_flag
+				}
+			}
+
+			traits = {
+				JAP_godfather_of_the_yamaguchi_gumi
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+
+	}
+
+	JAP_kozo_sasaki = {
+		name = JAP_kozo_sasaki
+
+		portraits = {
+			civilian = {
+				small = GFX_portrait_JAP_kozo_sasaki_small
+				# GFX_portrait_JAP_kozo_sasaki_imprisoned
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_kozo_sasaki
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			cost = 50
+
+			visible = {
+				NOT = {
+					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+					has_completed_focus = JAP_organize_a_general_election
+					has_completed_focus = JAP_sea_purge_the_kodoha_faction
+				}
+			}
+
+			available = {
+				has_completed_focus = JAP_secretly_rebuild_the_party
+				NOT = {
+					has_country_flag = JAP_IJA_arrested_advisors_flag
+				}
+			}
+
+			traits = {
+				JAP_kozo_the_ogre_trait
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+
+	}
 }

@@ -4770,3 +4770,307 @@ JAP_zaibatsu_faction_goes_up_from_tier_3_to_tier_4 = {
 	
 
 }
+
+
+JAP_add_or_modify_showa_statism = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_showa_statism_modifier } }
+		}
+		custom_effect_tooltip = JAP_add_showa_statism_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_showa_statism_modifier } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_showa_statism_modifier_tt
+	}
+}
+
+
+JAP_add_or_modify_state_shintoism = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_state_shinotism_dm } }
+		}
+		custom_effect_tooltip = JAP_add_state_shinotism_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_state_shinotism_dm } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_state_shinotism_modifier_tt
+	}
+}
+
+
+JAP_add_or_modify_early_industrialization = {
+	IF = {
+		limit = {
+			NOT = { 
+				has_dynamic_modifier = { modifier = JAP_early_industrialization_efforts_dm } 
+				has_dynamic_modifier = { modifier = JAP_the_economic_mirale_dm } 
+			}
+		}
+		custom_effect_tooltip = JAP_add_early_industrialization_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_early_industrialization_efforts_dm } }
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_early_industrialization_efforts_dm }
+		}
+		custom_effect_tooltip = JAP_modify_early_industrialization_modifier_tt
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_the_economic_mirale_dm }
+		}
+		custom_effect_tooltip = JAP_modify_economic_mirale_modifier_tt
+	}
+}
+
+
+JAP_add_or_modify_imperial_army = {
+	IF = {
+		limit = {
+			NOT = { 
+				has_dynamic_modifier = { 
+					modifier = JAP_imperial_army_dm 
+				} 
+				has_dynamic_modifier = { 
+					modifier = JAP_national_army_dm 
+				} 
+			}
+		}
+		custom_effect_tooltip = JAP_add_imperial_army_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_imperial_army_dm } }
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_imperial_army_dm } 
+		}
+		custom_effect_tooltip = JAP_modify_imperial_army_modifier_tt
+	}
+	ELSE_IF = {
+		limit = {
+			has_dynamic_modifier = { modifier = JAP_national_army_dm } 
+		}
+		custom_effect_tooltip = JAP_modify_national_army_modifier_tt
+	}
+}
+
+
+JAP_add_or_modify_imperial_way = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_the_imperial_way_dm } }
+		}
+		custom_effect_tooltip = JAP_add_the_imperial_way_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_the_imperial_way_dm } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_the_imperial_way_modifier_tt
+	}
+}
+
+
+JAP_add_or_modify_communist_party_modifier = {
+	IF = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = JAP_communist_party_modifier } }
+		}
+		custom_effect_tooltip = JAP_add_communist_party_modifier_tt
+		hidden_effect = { add_dynamic_modifier = { modifier = JAP_communist_party_modifier } }
+	}
+	ELSE = {
+		custom_effect_tooltip = JAP_modify_communist_party_modifier_tt
+	}
+}
+
+JAP_setup_faction_wide_aoe_effects_root_this = {
+	
+	IF = {
+		limit = {
+			NOT = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			ROOT = {
+				has_completed_focus = JAP_the_flying_geese
+				is_in_tech_sharing_group = jap_geacps_research
+			}
+			THIS = {
+				NOT = {
+					is_in_tech_sharing_group = jap_geacps_research
+				}
+			}
+		}
+		THIS = {
+			add_to_tech_sharing_group = jap_geacps_research 
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+
+	IF = {
+		limit = {
+			ROOT = {
+				OR = {
+					has_completed_focus = JAP_develop_the_yen_bloc
+					has_completed_focus = JAP_a_common_currency_for_all_of_asia
+				}
+			}
+			THIS = {
+				NOT = {
+					has_idea = JAP_yen_bloc_idea
+				}
+			}
+		}
+		THIS = {
+			add_ideas = JAP_yen_bloc_idea
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+
+	IF = {
+		limit = {
+			ROOT = {
+				has_completed_focus = JAP_ministry_of_greater_east_asia
+			}
+			THIS = {
+				NOT = {
+					has_idea = JAP_ministry_of_greater_east_asia_idea
+				}
+			}
+		}
+		THIS = {
+			add_ideas = JAP_ministry_of_greater_east_asia_idea
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+
+	IF = {
+		limit = {
+			ROOT = {
+				has_completed_focus = JAP_the_minitry_of_pan_asian_development
+			}
+			THIS = {
+				NOT = {
+					has_idea = JAP_ministry_of_pan_asian_development_idea
+				}
+			}
+		}
+		THIS = {
+			add_ideas = JAP_ministry_of_pan_asian_development_idea
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+	}
+
+}
+
+JAP_small_naval_gain_and_small_army_loss = {
+	if = {
+		limit = {
+			#check_variable = { JAP_naval_faction_influence_level < JAP_tier_4_minimum_limit } #Can promote Army higher
+			check_variable = { JAP_army_faction_influence_level > JAP_minimum_faction_level } #Can demote Navy lower
+		}
+		if = { #Navy WON'T level up but Army MIGHT level down
+			limit = { #Checking to make sure Navy WON'T actually level up
+				OR = {
+					AND = {
+						JAP_naval_faction_is_tier_1 = yes
+						check_variable = { JAP_naval_faction_influence_level < JAP_tier_1_to_tier_2_small_gate }
+					}
+					AND = {
+						JAP_naval_faction_is_tier_2 = yes
+						check_variable = { JAP_naval_faction_influence_level < JAP_tier_2_to_tier_3_small_gate }
+					}
+					AND = {
+						JAP_naval_faction_is_tier_3 = yes
+						check_variable = { JAP_naval_faction_influence_level < JAP_tier_3_to_tier_4_small_gate }
+					}
+					JAP_naval_faction_is_tier_4 = yes						
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							JAP_naval_faction_is_tier_1 = yes
+							check_variable = { JAP_naval_faction_influence_level < JAP_tier_1_to_tier_2_small_gate }
+						}
+						AND = {
+							JAP_naval_faction_is_tier_2 = yes
+							check_variable = { JAP_naval_faction_influence_level < JAP_tier_2_to_tier_3_small_gate }
+						}
+						AND = {
+							JAP_naval_faction_is_tier_3 = yes
+							check_variable = { JAP_naval_faction_influence_level < JAP_tier_3_to_tier_4_small_gate }
+						}	
+						#No need to check if Army Faction is Tier 4 because they ain't getting anything then!			
+					}
+				}
+				custom_effect_tooltip = JAP_small_naval_faction_gain_tt
+				add_to_variable = { JAP_naval_faction_influence_level = JAP_small_influence_point }
+			}
+
+			JAP_small_army_faction_loss = yes
+			#log = "Only Army Should be Demoted"
+		}
+		else_if = { #Navy WILL level up but Army WON'T level down
+			limit = { #Checking so that Army WON'T actually level down
+				OR = {
+					AND = {
+						JAP_army_faction_is_tier_4 = yes
+						check_variable = { JAP_army_faction_influence_level > JAP_tier_4_top_limit_check }
+					}
+					AND = {
+						JAP_army_faction_is_tier_3 = yes
+						check_variable = { JAP_army_faction_influence_level > JAP_tier_3_to_tier_4_small_gate }
+					}
+					AND = {
+						JAP_army_faction_is_tier_2 = yes
+						check_variable = { JAP_army_faction_influence_level > JAP_tier_2_to_tier_3_small_gate }
+					}
+					JAP_army_faction_is_tier_1 = yes
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							JAP_army_faction_is_tier_4 = yes
+							check_variable = { JAP_army_faction_influence_level > JAP_tier_4_top_limit_check }
+						}
+						AND = {
+							JAP_army_faction_is_tier_3 = yes
+							check_variable = { JAP_army_faction_influence_level > JAP_tier_3_to_tier_4_small_gate }
+						}
+						AND = {
+							JAP_army_faction_is_tier_2 = yes
+							check_variable = { JAP_army_faction_influence_level > JAP_tier_2_to_tier_3_small_gate }
+						}
+						AND = { #Only reduce Navy Influence further if they're above the minimum limit
+							JAP_army_faction_is_tier_1 = yes
+							check_variable = { JAP_army_faction_influence_level > JAP_tier_1_minimum_limit }
+						}
+					}
+				}
+				custom_effect_tooltip = JAP_small_army_faction_loss_tt
+				subtract_from_variable = { JAP_army_faction_influence_level = JAP_small_influence_point }
+			}
+			
+			JAP_small_naval_faction_gain = yes
+			#log = "Only Navy should be promoted"
+		}
+		else = { #Navy will level UP and Army will level DOWN
+			custom_effect_tooltip = JAP_small_naval_faction_gain_tt
+			add_to_variable = { JAP_naval_faction_influence_level = JAP_small_influence_point }
+			custom_effect_tooltip = JAP_small_army_faction_loss_tt
+			subtract_from_variable = { JAP_army_faction_influence_level = JAP_small_influence_point }
+			
+			JAP_naval_faction_goes_up_and_army_goes_down = yes
+			#log = "Navy Goes up, Army goes Down"
+		}
+	}
+}
+
+
+JAP_faction_demand_add_to_successful_missions = {
+	add_to_variable = { JAP_faction_demand_successful_missions = 1 }
+	
+}

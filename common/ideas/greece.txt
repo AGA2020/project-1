@@ -348,6 +348,7 @@ ideas = {
 			}
 		}
 
+		#MM: Never used. Not localized
 		GRE_memories_of_the_anatolian_catastrophe = {
 				
 			allowed = {
@@ -970,7 +971,7 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				conscription = 0.002
+				conscription = 0.005
 			}
 		}
 
@@ -990,6 +991,7 @@ ideas = {
 				
 			modifier = {
 				army_morale_factor = 0.10
+				army_org_factor = 0.03
 			}
 		}
 
@@ -1008,8 +1010,9 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				conscription = 0.002
+				conscription = 0.005
 				army_morale_factor = 0.10 
+				army_org_factor = 0.03
 			}
 		}		
 
@@ -1028,9 +1031,33 @@ ideas = {
 			removal_cost = -1
 				
 			modifier = {
-				conscription = 0.004
+				conscription = 0.007
 				army_morale_factor = 0.10 
 				land_reinforce_rate = 0.05
+				army_org_factor = 0.03
+			}
+		}
+
+		GRE_macedonian_farmlands_idea = { 	
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = LIT_invested_in_farms
+				
+			removal_cost = -1
+				
+			modifier = {
+				attrition = -0.05
+				supply_consumption_factor = -0.05
+				supply_combat_penalties_on_core_factor = -0.1
+				supply_node_range = 0.1
+				consumer_goods_factor = -0.05
 			}
 		}
 
@@ -1057,6 +1084,7 @@ ideas = {
 			modifier = {
 				air_ace_generation_chance_factor = 0.1
 				air_accidents_factor = -0.1
+				experience_gain_air_factor = 0.05
 			}
 		}
 
@@ -1222,6 +1250,33 @@ ideas = {
 				army_core_defence_factor = 0.05
 				research_speed_factor = 0.05
 				command_power_gain_mult = 0.05				
+			}
+		}
+
+		GRE_orthodox_church_support = {
+
+			name = GRE_an_orthodox_state
+			
+			picture = YUG_orthodox_church_support
+
+			allowed = {
+				original_tag = GRE
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
 			}
 		}
 
@@ -1861,6 +1916,23 @@ ideas = {
 				resistance_damage_to_garrison = -0.25
 				resistance_decay_on_our_occupied_states = -0.25
 			}
+		}
+
+		GRE_battle_for_the_bosporus = { 
+				
+			allowed = {
+				original_tag = GRE
+			}
+
+			picture = bul_supremacy_on_the_bosphorus
+				
+			removal_cost = -1
+				
+			targeted_modifier = {
+				tag = TUR
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.15
+			}
 		}																													
 	}	 													
 
@@ -1868,6 +1940,35 @@ ideas = {
 	tank_manufacturer = { 
 		
 		designer = yes
+		
+		GRE_biamax = {
+			
+			picture = gre_biamax
+
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			available = {
+				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+				
+			ai_will_do = {
+				factor = 1
+			}
+
+			modifier = { 
+				motorized_defence_factor = 0.05
+				mechanized_defence_factor = 0.05
+			}
+		}
 
 		GRE_man = {	
 
@@ -1905,7 +2006,8 @@ ideas = {
 			}
 
 			available = {
-				always = no
+				has_completed_focus = GRE_rapprochement_with_the_italians
+				NOT = { has_war_with = ITA }
 			}
 
 			cost = 120
@@ -2051,7 +2153,7 @@ ideas = {
 						has_idea = GRE_george_ii
 						has_idea = GRE_george_ii_restrained
 						has_country_leader = { 
-							name = "George II"
+							character = GRE_king_george_ii
 							ruling_only = yes
 						}
 						custom_trigger_tooltip = {
@@ -2115,12 +2217,206 @@ ideas = {
 	}
 
 	industrial_concern = {
-	
+		
+		GRE_dep = {
+			
+			picture = gre_dep
+		
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			available = { 
+				has_completed_focus = GRE_lignite_liquefaction
+			}			
+			
+			research_bonus = {
+				synth_resources = 0.1
+			}
+			
+			traits = { refinery_concern }
+			
+			modifier = {
+				fuel_gain_factor_from_states = 0.15
+			}
+		}
+
+		GRE_english_electric = {
+			
+			picture = english_electric
+
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}			
+
+			available = { 
+				has_completed_focus = GRE_cooperate_with_foreign_monopolies
+				NOT = { has_war_with = ENG }
+			}
+
+			cost = 120
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { british_industrial_benefactor }
+			
+		}
+
+		GRE_siemens = {
+			
+			picture = siemens
+
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			available = { 
+				has_completed_focus = GRE_cooperate_with_foreign_monopolies
+				NOT = { has_war_with = GER }
+			}
+
+			cost = 120
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { german_technological_patron }
+
+			modifier = { 
+				min_export = 0.05
+			}
+		}
+
+		GRE_pitsos = {
+			
+			picture = gre_pitsos
+		
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			available = { 
+				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+			}	
+			
+			research_bonus = {
+				electronics = 0.05
+			}
+			
+			traits = { electronics_developer }
+			
+			modifier = {
+				consumer_goods_factor = -0.20
+			}
+		}
+
+		GRE_aete = {
+			
+			picture = gre_aete
+
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			available = { 
+				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+			}
+			
+			research_bonus = {
+				electronics = 0.1
+			}
+			
+			traits = { electronics_developer }
+
+			modifier = { 
+				production_speed_radar_station_factor = 0.25
+			}
+		}
+
+		GRE_neorion = {
+			
+			picture = gre_neorion
+		
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			available = { 
+				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+			}		
+			
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			traits = { construction_company }
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+			}
+		}
 	}
 
 	materiel_manufacturer = {
 		
 		designer = yes
+		
+		GRE_pyrkal = {
+
+			picture = gre_pyrkal
+			
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			available = {
+				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+				army_infantry_attack_factor = 0.05
+			}
+		}
+		
+		GRE_petropoulos = {
+
+			picture = gre_petropoulos
+			
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			available = {
+				has_completed_focus = GRE_crack_down_on_foreign_monopolies
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+
+			modifier = {
+				motorized_defence_factor = 0.1
+			}
+		}
 
 		GRE_rsaf_enfield = {
 
@@ -2186,6 +2482,29 @@ ideas = {
 			}
 			
 			traits = { motorized_equipment_manufacturer }
+		}
+
+		GRE_grabin_design_bureau = {
+
+			picture = grabin_design_bureau
+			
+			allowed = {
+				original_tag = GRE
+				has_dlc = "Battle for the Bosporus"
+			}
+
+			available = {
+				NOT = { has_war_with = SOV }
+				has_completed_focus = GRE_appeal_to_the_soviet_union
+			}
+
+			cost = 120
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
 		}
 	}
 

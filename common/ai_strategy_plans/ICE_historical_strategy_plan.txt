@@ -57,7 +57,6 @@ ICE_historical_plan = {
 
 	#Focuses never to take
 	focus_factors = {
-		# FIN_suomalainen_sosialismi = 0
 		
 	}			
 

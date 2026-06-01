@@ -3308,9 +3308,6 @@ ideas = {
 
 			removal_cost = -1
 
-			modifier = {
-				sp_land_large_caliber_kinetic_energy_sabot_speed_factor = 0.50
-			}
 		}
 
 		CZE_strike_at_the_heart_of_bolshevism_idea = {

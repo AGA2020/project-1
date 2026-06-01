@@ -29,21 +29,61 @@ ideas = {
 
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.015 group = mobilization_laws }
-				if = {
+				IF = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
+						NOT = {
+							has_dlc = "Gotterdammerung"
+						}
 					}
-					if = {
+					IF = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					else = {
+					ELSE = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
+				ELSE_IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Gotterdammerung"
+					}
+					IF = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+						}
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_aat_wuw 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff 
+								}
+							}
+							
+						}		
+					}
+					ELSE = {
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_wuw 
+									has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff 
+								}
+							}
+						}
+					}
+				}
+
 				if = {
 					limit = {
 						DEN_aat_is_subject = yes
@@ -105,26 +145,75 @@ ideas = {
 					is_subject = no
 				}
 
-				if = {
+				IF = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
+						NOT = {
+							has_dlc = "Gotterdammerung"
+						}
 					}
-					if = {
+					IF = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					else = {
+					ELSE = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
+				}
+				ELSE_IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Gotterdammerung"
+					}
+					IF = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+						}
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_aat_wuw 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff 
+								}
+							}
+							
+						}		
+					}
+					ELSE = {
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_wuw 
+									has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff 
+								}
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						original_tag = ENG
+						has_dlc = "Man the Guns"
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+					}
+					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
 				if = {
 					limit = {
 						original_tag = SPR
 						has_dlc = "La Resistance"
 					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
 				}
 				if = {
 					limit = {
@@ -150,6 +239,21 @@ ideas = {
 						DEN_aat_is_subject = yes
 					}
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
+				}
+				if = {
+					limit = {
+						original_tag = AUS
+					}
+					NOT = {
+						has_idea = AUS_treaty_of_saint_germain_en_laye
+					}
+				}
+				IF = {
+					limit = {
+						has_dlc	= "Graveyard of Empires"
+						original_tag = AFG
+					}
+					has_completed_focus = AFG_adopt_nufus
 				}
 			}
 
@@ -178,6 +282,10 @@ ideas = {
 					tag = ENG
 					AND = {
 						is_historical_focus_on = yes
+						has_game_rule = {
+							rule = ENG_ai_behavior
+							option = DEFAULT
+						}
 					}
 					date > 1939.1.1
 					date < 1939.9.1
@@ -191,8 +299,24 @@ ideas = {
 					factor = 3
 				}
 				modifier = {
+					tag = SOV
+					is_historical_focus_on = yes
+					date > 1939.1.1
+					has_idea = volunteer_only
+					factor = 201
+				}
+				modifier = {
 					factor = 0
 					NOT = { has_idea = volunteer_only }
+				}
+				modifier = {
+					original_tag = JAP
+					has_idea = volunteer_only
+					OR = {
+						has_active_mission = JAP_army_faction_demands_conscription_law_change
+						has_active_mission = JAP_naval_faction_demands_conscription_law_change
+					}
+					factor = 10
 				}
 			}
 
@@ -202,11 +326,67 @@ ideas = {
 		extensive_conscription = {
 
 			available = {
+				#has_manpower_for_recruit_change_to = { value = 0.05 group = mobilization_laws }
 				OR = {
 					has_government = fascism
 					has_government = communism
+					if = {
+						limit = {
+							PHI_SEA = yes
+						}
+						if = {
+							limit = {
+								has_idea = PHI_ties_with_republican_spain
+							}
+							has_idea = PHI_ties_with_republican_spain
+						}
+						else_if = {
+							limit = {
+								has_idea = PHI_ties_with_republican_spain_2
+							}
+							has_idea = PHI_ties_with_republican_spain_2
+						}
+						else = {
+							hidden_trigger = { always = no } #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
+						}
+					}
+					else = {
+						hidden_trigger = { always = no } #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
+					}
+					SWE_rapid_mob_manpower_law_trigger = yes 
+					if = {
+						limit = {
+							original_tag = DEN
+							has_dlc = "Arms Against Tyranny"
+						}
+						has_country_leader = {
+							ruling_only = yes
+							character = DEN_christian_x
+						}
+					}
+					else = {
+						hidden_trigger = { always = no } #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
+					}
 					AND = {
 						has_war = yes
+						enemies_strength_ratio > 0.5
+						#any_enemy_country = {
+						#	strength_ratio = {
+						#		tag = ROOT
+						#		ratio > 0.5
+						#	}
+						#}
+					}
+
+					if = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+							has_autonomy_state = autonomy_aat_defense_council_member
+							is_subject_of = SWE
+						}
+					}
+					else = {
+						hidden_trigger = { always = no }  #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
 					}
 				}
 				has_war_support > 0.2
@@ -235,20 +415,75 @@ ideas = {
 					is_subject = no
 				}
 
-				if = {
+				IF = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
+						NOT = {
+							has_dlc = "Gotterdammerung"
+						}
 					}
-					if = {
+					IF = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					else = {
+					ELSE = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
+				}
+				ELSE_IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Gotterdammerung"
+					}
+					IF = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+						}
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_aat_wuw 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff 
+								}
+							}
+							
+						}		
+					}
+					ELSE = {
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_wuw 
+									has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff 
+								}
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						original_tag = ENG
+						has_dlc = "Man the Guns"
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+					}
+					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
+				}
+				if = {
+					limit = {
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
 				}
 				if = {
 					limit = {
@@ -269,7 +504,27 @@ ideas = {
 						}
 					}
 				}
-				
+				if = {
+					limit = {
+						DEN_aat_is_subject = yes
+					}
+					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
+				}
+				if = {
+					limit = {
+						original_tag = AUS
+					}
+					NOT = {
+						has_idea = AUS_treaty_of_saint_germain_en_laye
+					}
+				}
+				IF = {
+					limit = {
+						has_dlc	= "Graveyard of Empires"
+						original_tag = AFG
+					}
+					has_completed_focus = AFG_adopt_nufus
+				}				
 			}
 			ai_will_do = {
    				factor = 1
@@ -284,6 +539,12 @@ ideas = {
 					#Prio if low on manpower
 					factor = 20
 					manpower_per_military_factory <  800
+				}
+
+				modifier = {
+					tag = TUR
+					has_dlc = "Battle for the Bosporus"
+					factor = 50
 				}
 
 				# china relies a lot on throwing bodies at the enemy
@@ -315,6 +576,25 @@ ideas = {
 					NOT = { has_idea = limited_conscription }
 				}
 
+				modifier = {
+					factor = 100
+					OR = {
+						original_tag = URG
+						original_tag = PAR
+					}
+					has_completed_focus = GUAY_coup_detat
+				}
+
+				modifier = {
+					original_tag = JAP
+					has_idea = limited_conscription
+					OR = {
+						has_active_mission = JAP_army_faction_demands_conscription_law_change
+						has_active_mission = JAP_naval_faction_demands_conscription_law_change
+					}
+					factor = 10
+				}
+
 			}
 
 			cost = 150
@@ -339,8 +619,39 @@ ideas = {
 				OR = {
 					has_government = fascism
 					has_government = communism
+					if = {
+						limit = {
+							PHI_SEA = yes
+						}
+						if = {
+							limit = {
+								has_idea = PHI_ties_with_republican_spain
+							}
+							has_idea = PHI_ties_with_republican_spain
+						}
+						else_if = {
+							limit = {
+								has_idea = PHI_ties_with_republican_spain_2
+							}
+							has_idea = PHI_ties_with_republican_spain_2
+						}
+						else = {
+							hidden_trigger = { always = no } #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
+						}
+					}
+					else = {
+						hidden_trigger = { always = no } #NEED TO HAVE AN ALWAYS AS AN END STATEMENT IF URE USING AN IF ELSE IN AN OR STATEMENT OTHERWISE THE EVALUATION BREAKS!!
+					}
+					SWE_rapid_mob_manpower_law_trigger = yes
 					AND = {
 						has_war = yes
+						enemies_strength_ratio > 0.6
+						#any_enemy_country = {
+						#	strength_ratio = {
+						#		tag = ROOT
+						#		ratio > 0.6
+						#	}
+						#}
 					}
 				}
 				OR = {
@@ -375,20 +686,75 @@ ideas = {
 					is_subject = no
 				}
 
-				if = {
+				IF = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
+						NOT = {
+							has_dlc = "Gotterdammerung"
+						}
 					}
-					if = {
+					IF = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					else = {
+					ELSE = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
+				}
+				ELSE_IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Gotterdammerung"
+					}
+					IF = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+						}
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_aat_wuw 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff 
+								}
+							}
+							
+						}		
+					}
+					ELSE = {
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_wuw 
+									has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff 
+								}
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						original_tag = ENG
+						has_dlc = "Man the Guns"
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+					}
+					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
+				}
+				if = {
+					limit = {
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
 				}
 				if = {
 					limit = {
@@ -409,6 +775,27 @@ ideas = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						DEN_aat_is_subject = yes
+					}
+					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
+				}
+				if = {
+					limit = {
+						original_tag = AUS
+					}
+					NOT = {
+						has_idea = AUS_treaty_of_saint_germain_en_laye
+					}
+				}
+				IF = {
+					limit = {
+						has_dlc	= "Graveyard of Empires"
+						original_tag = AFG
+					}
+					has_completed_focus = AFG_adopt_nufus
+				}
 			}
 
 			ai_will_do = {
@@ -428,6 +815,7 @@ ideas = {
 					factor = 0
 					NOT = { tag = CHI }
 					NOT = { tag = SOV }
+					NOT = { AND = { tag = GER date > 1940.11.1 } }
 					manpower_per_military_factory >  3000
 				}
 
@@ -452,9 +840,35 @@ ideas = {
 					has_manpower < 2000000
 				}
 
+				modifier = { # germany needs this before russia, badly
+					factor = 10
+
+					original_tag = GER
+					date > 1941.1.1
+				}
+
 				modifier = {
 					factor = 0
 					NOT = { has_idea = extensive_conscription }
+				}
+
+				modifier = {
+					factor = 100
+					OR = {
+						original_tag = URG
+						original_tag = PAR
+					}
+					has_completed_focus = GUAY_coup_detat
+				}
+
+				modifier = {
+					original_tag = JAP
+					has_idea = extensive_conscription
+					OR = {
+						has_active_mission = JAP_army_faction_demands_conscription_law_change
+						has_active_mission = JAP_naval_faction_demands_conscription_law_change
+					}
+					factor = 5
 				}
 
 			}
@@ -519,26 +933,75 @@ ideas = {
 					is_subject = no
 				}
 
-				if = {
+				IF = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
+						NOT = {
+							has_dlc = "Gotterdammerung"
+						}
 					}
-					if = {
+					IF = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					else = {
+					ELSE = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
+				}
+				ELSE_IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Gotterdammerung"
+					}
+					IF = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+						}
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_aat_wuw 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff 
+								}
+							}
+							
+						}		
+					}
+					ELSE = {
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_wuw 
+									has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff 
+								}
+							}
+						}
+					}
+				}
+
+				if = {
+					limit = {
+						original_tag = ENG
+						has_dlc = "Man the Guns"
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+					}
+					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
 				if = {
 					limit = {
 						original_tag = SPR
 						has_dlc = "La Resistance"
 					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
 				}
 				if = {
 					limit = {
@@ -564,6 +1027,21 @@ ideas = {
 						DEN_aat_is_subject = yes
 					}
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
+				}
+				if = {
+					limit = {
+						original_tag = AUS
+					}
+					NOT = {
+						has_idea = AUS_treaty_of_saint_germain_en_laye
+					}
+				}
+				IF = {
+					limit = {
+						has_dlc	= "Graveyard of Empires"
+						original_tag = AFG
+					}
+					has_completed_focus = AFG_adopt_nufus
 				}
 			}
 
@@ -602,6 +1080,16 @@ ideas = {
 				modifier = {
 					factor = 0
 					NOT = { has_idea = service_by_requirement }
+				}
+
+				modifier = {
+					original_tag = JAP
+					has_idea = service_by_requirement
+					OR = {
+						has_active_mission = JAP_army_faction_demands_conscription_law_change
+						has_active_mission = JAP_naval_faction_demands_conscription_law_change
+					}
+					factor = 3
 				}
 
 			}
@@ -677,26 +1165,75 @@ ideas = {
 					is_subject = no
 				}
 
-				if = {
+				IF = {
 					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
+						NOT = {
+							has_dlc = "Gotterdammerung"
+						}
 					}
-					if = {
+					IF = {
 						limit = {
 							has_dlc = "Arms Against Tyranny"
 						}
 						NOT = { has_idea = HUN_treaty_of_triannon_aat }
 					}
-					else = {
+					ELSE = {
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
+				}
+				ELSE_IF = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Gotterdammerung"
+					}
+					IF = {
+						limit = {
+							has_dlc = "Arms Against Tyranny"
+						}
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_aat_wuw 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff 
+								}
+							}
+							
+						}		
+					}
+					ELSE = {
+						custom_trigger_tooltip = {
+							tooltip = wuw_HUN_not_has_trianon_for_laws_tt
+							NOT = { 
+								OR = {
+									has_idea = HUN_treaty_of_triannon_wuw 
+									has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff 
+									has_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff 
+								}
+							}
+						}
+					}
+				}
+				
+				if = {
+					limit = {
+						original_tag = ENG
+						has_dlc = "Man the Guns"
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+					}
+					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
 				if = {
 					limit = {
 						original_tag = SPR
 						has_dlc = "La Resistance"
 					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
 				}
 				if = {
 					limit = {
@@ -723,6 +1260,21 @@ ideas = {
 					}
 					NOT = { has_country_flag = DEN_cannot_increase_conscription_law }
 				}
+				if = {
+					limit = {
+						original_tag = AUS
+					}
+					NOT = {
+						has_idea = AUS_treaty_of_saint_germain_en_laye
+					}
+				}
+				IF = {
+					limit = {
+						has_dlc	= "Graveyard of Empires"
+						original_tag = AFG
+					}
+					has_completed_focus = AFG_adopt_nufus
+				}	
 			}
 
 			ai_will_do = {
@@ -746,6 +1298,16 @@ ideas = {
 				modifier = {
 					factor = 0
 					NOT = { has_idea = all_adults_serve }
+				}
+
+				modifier = {
+					original_tag = JAP
+					has_idea = all_adults_serve
+					OR = {
+						has_active_mission = JAP_army_faction_demands_conscription_law_change
+						has_active_mission = JAP_naval_faction_demands_conscription_law_change
+					}
+					factor = 2
 				}
 
 			}
@@ -836,6 +1398,60 @@ ideas = {
 			default = yes
 
 			cancel_if_invalid = no
+		}
+
+		### Swiss Citizen Militia ###
+
+		SWI_citizen_militia_1 = {
+			cost = 200
+			picture = citizen_militia_1
+			removal_cost = -1
+			level = 6
+
+			allowed = {
+				always = no
+			}
+			allowed_to_remove = {
+				has_completed_focus = SWI_professionalize_militias
+				has_completed_focus = SWI_join_the_allies
+				has_completed_focus = SWI_join_france
+				has_completed_focus = SWI_jump_into_action
+			}
+			ai_will_do = {
+				factor = 0
+			}
+
+			modifier = {
+				conscription = 0.1
+				custom_modifier_tooltip = SWI_army_limitations_TT
+				ai_desired_divisions_factor = 1
+			}
+		}
+
+		SWI_citizen_militia_2 = {
+			picture = citizen_militia_2
+			cost = 200
+			removal_cost = -1
+			level = 6
+
+			allowed = {
+				always = no
+			}
+			allowed_to_remove = {
+ 				has_completed_focus = SWI_professionalize_militias
+				has_completed_focus = SWI_join_the_allies
+				has_completed_focus = SWI_join_france
+				has_completed_focus = SWI_jump_into_action
+			}
+			ai_will_do = {
+				factor = 0
+			}
+
+			modifier = {
+				conscription = 0.2
+				custom_modifier_tooltip = SWI_army_limitations_TT
+				ai_desired_divisions_factor = 2
+			}
 		}
 	}
 
