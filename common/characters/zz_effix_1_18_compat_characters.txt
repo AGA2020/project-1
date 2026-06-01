@@ -1,0 +1,1417 @@
+﻿# Auto-generated 1.18.2 character compatibility for effix.
+# Contains vanilla characters referenced by newer copied content but missing from local stale character files.
+
+characters = {
+	# From characters\CHI.txt
+	CHI_t_v_soong = {
+			instance = {
+				allowed = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				name = CHI_t_v_soong
+				portraits = {
+					army = { small="GFX_idea_CHI_t_v_soong" }
+				}
+	
+				name = CHI_t_v_soong
+				portraits = {
+					army = { small="GFX_idea_CHI_t_v_soong" }
+				}
+				advisor={
+					slot = political_advisor
+					visible = {
+						NOT = {
+							has_completed_focus = CHI_end_military_primacy
+						}
+					}
+					available  = {
+						has_completed_focus = CHI_draw_support_from_the_big_families
+					}
+					idea_token = CHI_t_v_soong
+					traits  = {
+						financial_expert 
+					}
+				}
+			}
+	
+			instance = {
+				allowed = {
+					NOT = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+	
+				name = CHI_t_v_soong
+				portraits = {
+					army = { small="GFX_idea_CHI_t_v_soong" }
+				}
+				advisor={
+					slot = political_advisor
+					allowed = {
+						OR = {
+							original_tag = CHI
+							is_chinese_warlord = yes 
+						}
+					}
+					available  = {
+						has_completed_focus  = CHI_financial_policy 
+					}
+					idea_token = CHI_t_v_soong
+					traits  = {
+						financial_expert 
+					}
+				}
+			}
+		}
+
+	# From characters\CHI.txt
+	CHI_wan_fulin = {
+			name = CHI_wan_fulin
+			portraits = {
+				army = {
+					large = GFX_portrait_CHI_wan_fulin
+					small = GFX_portrait_CHI_wan_fulin_small
+				}
+			}
+			corps_commander = {
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 3
+				legacy_id = -1
+				traits = { infantry_officer winter_specialist }
+			}
+		}
+
+	# From characters\CZE.txt
+	CZE_augustin_voloshyn = {
+			name = RUT_augustin_voloshyn
+			portraits = {
+				civilian = {
+					large = GFX_portrait_RUT_augustin_voloshyn
+					small = GFX_portrait_RUT_augustin_voloshyn_small
+				}
+			}
+			advisor={
+				slot = political_advisor
+				idea_token = CZE_augustin_voloshyn
+				allowed  = {
+					original_tag  = CZE
+				}
+				available = {
+					has_completed_focus = CZE_comprise_with_the_carpathians
+				}
+				visible = {
+					CZE_RUT_is_not_its_own_thing = yes
+					NOT = {
+						OR = {
+							has_completed_focus = CZE_appeal_to_the_castle
+							has_completed_focus = CZE_placate_benes_faction
+							has_completed_focus = CZE_increase_funding_from_moscow
+						}
+					}
+				}
+				traits  = {
+					CZE_prime_minister_of_carpathian_ukraine
+				}
+				ai_will_do = {
+					factor = 0
+				}
+			}
+			corps_commander={ #Only for unit leader event. SHOULD NEVER BE VISIBLE
+				traits={ politically_connected }
+				skill=1
+				attack_skill=1
+				defense_skill=1
+				planning_skill=1
+				logistics_skill=1
+				legacy_id=-1
+				visible = {
+					always = no
+				}
+			}
+		}
+
+	# From characters\CZE.txt
+	CZE_jan_syrovy = {
+			name=CZE_jan_syrovy
+			portraits={
+				army={
+					large=GFX_portrait_CZE_jan_syrovy
+					small=GFX_portrait_CZE_jan_syrovy_small
+				}
+			}
+			field_marshal={
+				traits={ winter_specialist war_hero media_personality }
+				skill=4
+				attack_skill=3
+				defense_skill=3
+				planning_skill=4
+				logistics_skill=3
+				legacy_id=-1
+			}
+			advisor={
+				slot = army_chief
+				idea_token = CZE_jan_syrovy
+				allowed = {
+					original_tag = CZE
+				}
+				traits = {
+					army_chief_morale_2
+				}
+				on_add = {
+					owner = {
+						if = {
+							limit = {
+								has_power_balance = {
+									id = CZE_bop_army_readiness
+								}
+							}
+							CZE_bop_very_low_increase_effect = yes
+							custom_effect_tooltip = generic_skip_one_line_tt
+						}
+					}
+				}
+				on_remove = {
+					owner = {
+						if = {
+							limit = {
+								has_power_balance = {
+									id = CZE_bop_army_readiness
+								}
+							}
+							CZE_bop_very_low_decrease_effect = yes
+						}
+					}
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 0
+				}
+			}
+		}
+
+	# From characters\DEN.txt
+	DEN_cay_lembcke = {
+			name = DEN_cay_lembcke
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_cay_lembcke
+					small = GFX_portrait_DEN_cay_lembcke_small
+				}
+			}
+			country_leader = {
+				ideology = fascism_ideology
+				traits = { DEN_fascist_militarist }
+				expire = "1965.1.1.1"
+				id = -1
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = DEN_cay_lembcke
+				allowed = {
+					original_tag = DEN
+					has_dlc = "Arms Against Tyranny"	
+				}
+				available = {
+					is_country_leader = no
+					OR = {
+						has_completed_focus = DEN_strengthen_the_officer_corp
+						has_government = fascism
+					}	
+					NOT = {
+						has_government = communism
+						has_character_flag = DEN_political_agitator_flag
+						has_country_flag = DEN_banned_fascism_flag
+					}
+				}
+				traits = {
+					prince_of_terror 
+				}
+				ai_will_do = {
+					base = 0
+				}
+				on_add = {
+					owner = {
+						DEN_advisor_low_BOP_increase_effect = yes
+					}
+				}
+				on_remove = {
+					owner = {
+						DEN_advisor_low_BOP_decrease_effect = yes
+					}
+				}
+			}
+		}
+
+	# From characters\DEN.txt
+	DEN_christmas_moller = {
+			name = DEN_christmas_moller
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_christmas_moller
+					small = GFX_portrait_DEN_christmas_moller_small
+				}
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = DEN_christmas_moller
+				allowed = {
+					original_tag = DEN
+					has_dlc = "Arms Against Tyranny"
+				}
+				available = {
+					is_country_leader = no
+					NOT = { has_character_flag = DEN_political_agitator_flag }
+					NOT = { has_completed_focus = DEN_policy_of_disarmament }
+					NOT = { DEN_peter_rochegune_munch = { is_hired_as_advisor = yes }}
+				}
+				traits = {
+					rearmament_proponent 
+				}
+				ai_will_do = {
+					base = 5
+					modifier = {
+						factor = 0.5
+						DEN_historical_ai = yes
+					}
+					modifier = {
+						factor = 5
+						is_subject = yes
+					}
+					modifier = {
+						factor = 10
+						OR = {
+							DEN_rearming_ai = yes
+							DEN_royal_ai = yes					
+							DEN_fascist_ai = yes
+						}
+					}
+				}
+				on_add = {
+					owner = {
+						DEN_advisor_medium_BOP_increase_effect = yes
+					}
+				}
+				on_remove = {
+					owner = {
+						DEN_advisor_medium_BOP_decrease_effect = yes
+					}
+				}
+			}
+		}
+
+	# From characters\ETH.txt
+	ETH_mulugeta_yeggazu_of_illubabor = {
+			name = ETH_mulugeta_yeggazu_of_illubabor
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			portraits = {
+				army = {
+					large = GFX_portrait_ETH_mulugeta_yeggazu_of_illubabor
+					small = GFX_portrait_ETH_mulugeta_yeggazu_of_illubabor_small
+				}
+			}
+			corps_commander = {
+				traits = { politically_connected infantry_leader }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				legacy_id = -1
+			}
+			advisor = {
+				slot = army_chief
+				ledger = army
+				idea_token = ETH_mulugeta_yeggazu_of_illubabor
+				traits = {
+					army_chief_morale_2
+				}
+				available = {
+					has_country_leader = {
+						ruling_only = yes
+						character = ETH_haile_selassie
+					}
+				}
+				cost = 50
+				on_add = {
+					owner = {
+						ETH_BOP_decentralization_large_effect = yes
+					}
+				}
+				on_remove = {
+					owner = {
+						ETH_BOP_centralization_large_effect = yes
+					}
+				}
+			}
+		}
+
+	# From characters\IRQ.txt
+	IRQ_abd_al_ilah = {
+							is_hired_as_advisor = no
+						}
+
+	# From characters\IRQ.txt
+	IRQ_ahmed_barzani = { 
+			
+			name = IRQ_ahmed_barzani
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRQ_ahmed_barzani
+					small = GFX_portrait_IRQ_ahmed_barzani_small
+				}
+			}
+			#country_leader = {
+			#	ideology = despotism
+			#	expire = "1965.1.1.1"
+			#	id = -1
+			#}
+	
+			field_marshal = {
+				traits = { hill_fighter organizer }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 3
+				legacy_id = -1 
+				visible = {
+					OR = {
+						has_completed_focus = IRQ_reapproachment_with_the_tribes
+						has_completed_focus = IRQ_kurdish_revolt
+					}
+				}
+			}
+					
+		}
+
+	# From characters\IRQ.txt
+	IRQ_hikmat_suleiman = { #Installed in the Golden Square coup
+			name = IRQ_hikmat_suleiman
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRQ_hikmat_suleiman
+					small = GFX_portrait_IRQ_hikmat_suleiman_small
+				}
+			}
+			#country_leader={
+			#	ideology = fascism_ideology
+			#	expire = "1965.1.1.1"
+			#	id = -1
+			#}
+			advisor = {
+				slot = political_advisor
+				idea_token = IRQ_hikmat_suleiman
+				allowed = {
+					original_tag = IRQ
+				}
+				traits = {
+					IRQ_minister_of_the_interior
+				}
+			}
+		}
+
+	# From characters\IRQ.txt
+	IRQ_mustafa_barzani = { 
+			
+			name = IRQ_mustafa_barzani
+			portraits = {
+				civilian = {
+					large = GFX_portrait_IRQ_mustafa_barzani
+					small = GFX_portrait_IRQ_mustafa_barzani_small
+				}
+			}
+			
+			corps_commander = {
+				traits = { hill_fighter desert_fox }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+				legacy_id = -1 
+				visible = {
+					OR = {
+						has_completed_focus = IRQ_reapproachment_with_the_tribes
+						has_completed_focus = IRQ_kurdish_revolt
+					}
+				}
+			}
+					
+		}
+
+	# From characters\IRQ.txt
+	IRQ_naji_al_suwaidi = {
+			name = IRQ_naji_al_suwaidi
+			portraits = {
+				army = {
+					small = GFX_portrait_IRQ_naji_al_suwaidi_small
+				}
+			}
+	
+			advisor = {
+				allowed = {
+					has_dlc = "Graveyard of Empires" 
+				} 
+				slot = political_advisor
+				idea_token = IRQ_naji_al_suwaidi
+				
+				traits  = {
+					IRQ_great_iraqi_statesman
+				}
+				available = {
+					
+				}
+				ai_will_do  = {
+					factor  = 0.000
+				}
+			}
+		}
+
+	# From characters\IRQ.txt
+	IRQ_saib_shawkat = {
+			name = IRQ_saib_shawkat
+			portraits = {
+				civilian = {
+					small= GFX_portrait_IRQ_saib_shawkat_small
+				}
+			}
+	
+			advisor = {
+				allowed = {
+					has_dlc = "Graveyard of Empires" 
+				} 
+				slot = political_advisor
+				idea_token = IRQ_saib_shawkat
+	
+				traits  = {
+					# led the Arab nationalist party/group Nadi al-Muthanna
+					IRQ_al_muthanna_leader
+				}
+				available = {
+					# Very fascist so somewhere there
+					has_completed_focus = IRQ_al_muthanna_club
+				}
+				ai_will_do  = {
+					factor  = 0.000
+				}
+			}
+		}
+
+	# From characters\IRQ.txt
+	IRQ_salah_al_din_al_sabbagh = { #This guy could be both a general/CoA and advisor.
+			name = IRQ_salah_al_din_al_sabbagh
+			portraits = {
+				army = {
+					large = GFX_portrait_IRQ_salah_al_din_al_sabbagh
+					small = GFX_portrait_IRQ_salah_al_din_al_sabbagh_military_small
+				}
+				civilian = {
+					small = GFX_portrait_IRQ_salah_al_din_al_sabbagh_civilian_small
+				}
+			}
+	
+			advisor = {
+				allowed = {
+					has_dlc = "Graveyard of Empires" 
+				} 
+				slot = political_advisor
+				idea_token = IRQ_salah_al_din_al_sabbagh
+	
+				traits  = {
+					IRQ_knight_of_arabism
+				}
+				available = {
+					#Golden Square
+					has_government = fascism
+					NOT = { has_completed_focus = IRQ_kurdish_revolt}
+				}
+				visible = {
+					NOT = { has_completed_focus = IRQ_kurdish_revolt}
+				}
+				ai_will_do  = {
+					base = 1
+				}
+			}
+	
+			advisor = {
+				slot = high_command
+				ledger = air
+				idea_token = IRQ_salah_al_din_al_sabbagh_ahc
+				cost = 100
+				traits = {
+					air_air_superiority_2
+				}
+				visible = {
+					NOT = { has_completed_focus = IRQ_kurdish_revolt}
+				}
+				available = {
+					NOT = { has_completed_focus = IRQ_kurdish_revolt}
+				}
+				ai_will_do  = {
+					base = 1
+				}
+			}
+	
+			corps_commander = {
+				traits = { infantry_leader IRQ_golden_square_member }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+				visible = {
+					#likely from start,  but might not stick around if going anything but golden square
+					NOT = { has_completed_focus = IRQ_kurdish_revolt}
+				}
+			}
+		}
+
+	# From characters\IRQ.txt
+	IRQ_sharaf_bin_rajeh = {
+			instance = {
+				allowed = {
+					has_dlc = "Graveyard of Empires" 
+				}
+				name = IRQ_sharaf_bin_rajeh
+				portraits = {
+					army = {
+						small = GFX_portrait_IRQ_sharaf_bin_rajeh_small
+					}
+				}
+				advisor = {
+					slot = political_advisor
+					idea_token = IRQ_sharaf_bin_rajeh
+					
+					traits  = {
+						IRQ_emir_of_taif
+					}
+					available = {
+						#Under Golden Square path
+						has_government = fascism
+					}
+					allowed = { 
+						original_tag = IRQ
+					}
+					ai_will_do = {
+						factor = 0.000
+					}
+				}
+			}
+			
+			instance = {
+				allowed = {
+					NOT = { has_dlc = "Graveyard of Empires" }
+				}
+	
+				name=IRQ_sharaf_bin_rajeh
+				portraits={
+					army={
+						small="GFX_idea_generic_political_advisor_arab_2"
+					}
+				}
+	
+				advisor = {
+					slot = political_advisor
+					idea_token = IRQ_sharaf_bin_rajeh
+	
+					traits  = {
+						backroom_backstabber 
+					}
+					allowed = { 
+						original_tag = IRQ
+					}
+					ai_will_do  = {
+						factor  = 0.000
+					}
+				}
+			}
+		}
+
+	# From characters\JAP.txt
+	JAP_chikuhei_nakajima = {
+			name = JAP_chikuhei_nakajima
+	
+			portraits = {
+				civilian = {
+					small = GFX_portrait_JAP_chikuhei_nakajima_small
+				}
+			}
+	
+			advisor = {
+				slot = political_advisor
+				idea_token = JAP_chikuhei_nakajima
+	
+				allowed = {
+					original_tag = JAP
+				}
+	
+				visible = {
+					NOT = {
+						has_government = communism
+					}
+				}
+	
+				available = {
+					NOT = {						
+						has_government = communism
+					}
+				}
+	
+				traits = {
+					JAP_nakajima_president
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+	
+		}
+
+	# From characters\JAP.txt
+	JAP_jinzaburo_masaki = {
+			name = JAP_jinzaburo_masaki
+	
+			portraits = {
+				civilian = {
+					large = GFX_portrait_JAP_jinzaburo_masaki
+					small = GFX_portrait_JAP_jinzaburo_masaki_civilian_small
+				}
+				army = {
+					small = GFX_portrait_JAP_jinzaburo_masaki_military_small
+				}
+			}
+	
+			#country_leader = {
+			#	ideology = japan_militarism_ideology
+			#	traits = { JAP_military_prime_minister }
+			#	expire = "1952.1.1.1"
+			#	id = -1
+			#}
+	
+			corps_commander = {
+				traits = { organizer infantry_leader trait_JAP_kodoha_sympathizer }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+				legacy_id = -1
+				visible = {
+					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+				}
+			}
+	
+			advisor = {
+				slot = army_chief
+				idea_token = JAP_jinzaburo_masaki
+				allowed = {
+					original_tag = JAP
+				}
+				visible = {
+					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+				}
+				available = {
+					has_completed_focus = JAP_grand_army_purge
+				}
+				traits = {
+					army_chief_organizational_1
+				}
+				cost = 100
+				ai_will_do = {
+					base = 2
+					modifier = {
+						factor = 15
+						has_active_mission = JAP_army_faction_demands_military_factories
+					}
+				}
+			}
+	
+		}
+
+	# From characters\JAP.txt
+	JAP_kenjiro_matsumoto = {
+			name = JAP_kenjiro_matsumoto
+	
+			portraits = {
+				civilian = {
+					small = GFX_portrait_JAP_kenjiro_matsumoto_small
+				}
+			}
+	
+			advisor = {
+				slot = political_advisor
+				idea_token = JAP_kenjiro_matsumoto
+	
+				allowed = {
+					original_tag = JAP
+				}
+	
+				visible = {
+					NOT = {
+						has_government = communism
+					}
+				}
+	
+				available = {
+					NOT = {
+						has_government = communism
+					}
+				}
+	
+				traits = {
+					JAP_yasukawa_zaibatsu_president
+				}
+				ai_will_do = {
+					base = 1
+				}
+	
+				on_add = {
+					JAP_small_zaibatsu_faction_gain = yes
+				}
+				on_remove = {
+					JAP_small_zaibatsu_faction_loss = yes
+				}
+	
+			}
+	
+		}
+
+	# From characters\JAP.txt
+	JAP_koyata_iwasaki = {
+			name = JAP_koyata_iwasaki
+	
+			portraits = {
+				civilian = {
+					small = GFX_portrait_JAP_koyata_iwasaki_small
+				}
+			}
+	
+			advisor = {
+				slot = political_advisor
+				idea_token = JAP_koyata_iwasaki
+	
+				allowed = {
+					original_tag = JAP
+				}
+	
+				visible = {
+	
+				}
+	
+				available = {
+					has_completed_focus = JAP_approach_mitsubishi
+				}
+	
+				traits = {
+					JAP_mitsubishi_president
+				}
+				ai_will_do = {
+					base = 1
+				}
+	
+				on_add = {
+					JAP_small_zaibatsu_faction_gain = yes
+				}
+				on_remove = {
+					JAP_small_zaibatsu_faction_loss = yes
+				}
+	
+			}
+	
+		}
+
+	# From characters\JAP.txt
+	JAP_naoki_hoshino = {
+			name = JAP_naoki_hoshino
+	
+			portraits = {
+				civilian = {
+					small = GFX_portrait_JAP_naoki_hoshino_small
+				}
+			}
+	
+			advisor = {
+				slot = political_advisor
+				idea_token = JAP_naoki_hoshino
+	
+				allowed = {
+					OR = {
+						original_tag = JAP
+						original_tag = MAN
+					}
+				}
+	
+				visible = {
+					NOT = {
+						has_completed_focus = JAP_okadas_military_purge_speech
+						has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+					}
+				}
+	
+				available = {
+					OR = {
+						has_completed_focus = JAP_form_the_great_japan_industrial_patriotic_association
+						tag = MAN
+					}
+				}
+	
+				traits = {
+					FRA_national_syndicalist
+				}
+				ai_will_do = {
+					base = 2
+				}
+			}
+	
+		}
+
+	# From characters\JAP.txt
+	JAP_yoshisuke_aikawa = {
+			name = JAP_yoshisuke_aikawa
+	
+			portraits = {
+				civilian = {
+					small = GFX_portrait_JAP_yoshisuke_aikawa_small
+				}
+			}
+	
+			advisor = {
+				slot = political_advisor
+				idea_token = JAP_yoshisuke_aikawa
+	
+				allowed = {
+					original_tag = JAP
+				}
+	
+				visible = {
+					NOT = {
+						has_government = communism
+					}
+				}
+	
+				available = {
+					NOT = {
+						has_government = communism
+					}
+				}
+	
+				traits = {
+					JAP_nissan_president
+				}
+				ai_will_do = {
+					base = 0.5
+				}
+			}
+	
+		}
+
+	# From characters\JAP.txt
+	JAP_yosuke_matsuoka = {
+			name = JAP_yosuke_matsuoka
+	
+			portraits = {
+				civilian = {
+					small = GFX_portrait_JAP_yosuke_matsuoka_small
+					# GFX_portrait_JAP_komakichi_matsuoka_imprisoned
+				}
+			}
+	
+			advisor = {
+				slot = political_advisor
+				idea_token = JAP_yosuke_matsuoka
+	
+				allowed = {
+					original_tag = JAP
+				}
+	
+				visible = {
+	
+				}
+	
+				available = {
+					has_completed_focus = JAP_eastern_road_and_steel_expansion
+				}
+	
+				traits = {
+					JAP_south_manchuria_railway_president
+				}
+				ai_will_do = {
+					base = 1
+				}
+			}
+	
+		}
+
+	# From characters\LAT.txt
+	LAT_alberts_kvesis={
+			name=LAT_alberts_kvesis
+			portraits={
+				civilian={
+					large="GFX_portrait_LAT_alberts_kviesis"
+				}
+				army={
+					small="GFX_idea_LAT_alberts_kviesis"
+				}
+			}
+			advisor={
+				slot = political_advisor
+				idea_token = LAT_alberts_kvesis
+				allowed = {
+					original_tag = LAT
+					has_dlc = "No Step Back"
+				}
+				available = {
+					has_completed_focus = LAT_renew_kviesis_term 
+				}
+				traits = {
+					subservient_democrat
+				}
+				ai_will_do = {
+					factor = 10.000
+				}
+			}
+	
+			country_leader={
+				ideology=conservatism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+
+	# From characters\MEX.txt
+	MEX_indigenous_council = { 
+			name = MEX_indigenous_council
+			portraits = {
+				civilian = {
+					large = GFX_portrait_indigenous_mexico_council
+				}
+				
+			}
+			
+		}
+
+	# From characters\PHI.txt
+	PHI_artemio_ricarte = {
+			advisor = {
+				slot = political_advisor
+				idea_token = PHI_artemio_ricarte
+				allowed  = {
+						has_dlc = "No Compromise, No Surrender"
+	 				}
+				traits  = {
+					PHI_philippine_nationalist
+				}
+				cost = 150
+				ai_will_do = {
+					base = 1
+					modifier = {
+						factor = 5
+						has_completed_focus = PHI_slippery_slope 
+					}
+				}
+				available = {
+					is_country_leader = no
+				}
+			}
+			name = PHI_artemio_ricarte
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PHI_artemio_ricarte
+					small = GFX_portrait_PHI_artemio_ricarte_small
+				}
+			}
+			# Fascist Coup
+			country_leader = {
+			    ideology = fascism_ideology
+			    expire = "1965.1.1.1"
+			    traits = { PHI_philippine_nationalist_leader }
+			}			
+		}
+
+	# From characters\PHI.txt
+	PHI_emilio_aguinaldo = {
+			instance = {
+				allowed = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				advisor = {
+					slot = political_advisor
+					idea_token = PHI_emilio_aguinaldo
+					allowed  = {
+						original_tag  = PHI
+					}
+					traits  = {
+						PHI_revolutionary_hero 
+					}
+					available = {
+						is_country_leader = no
+					}
+				}
+				name = PHI_emilio_aguinaldo
+				portraits={
+					civilian = {
+						large = GFX_portrait_PHI_emilio_aguinaldo
+						small = GFX_portrait_PHI_emilio_aguinaldo_small
+					}
+				}
+				country_leader = {
+				    ideology = despotism						#better than centrism I guess
+				    expire = "1965.1.1.1"
+				    traits = { PHI_revolutionary_president }	#no drift or anything, works here too
+				}
+				# Fascist Coup
+	#			country_leader = {
+	#			    ideology = falangism
+	#			    expire = "1965.1.1.1"
+	#			    traits = { PHI_revolutionary_president }
+	#			}				
+			}
+	
+			instance = {
+				allowed = {
+					NOT = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+				advisor = {
+					slot = political_advisor
+					idea_token = PHI_emilio_aguinaldo
+					traits  = {
+						popular_figurehead 
+					}
+				}
+				name = PHI_emilio_aguinaldo
+				portraits={
+					army={
+						small="GFX_idea_generic_political_advisor_asia_3"
+					}
+				}
+			}
+		}
+
+	# From characters\PHI.txt
+	PHI_jose_laurel={
+			instance = {
+				allowed = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+	
+				name = PHI_jose_laurel
+				portraits = {
+					civilian = {
+						large = GFX_portrait_PHI_jose_laurel
+						small = GFX_portrait_PHI_jose_laurel_small 
+					}
+				}
+				# 1941 Election
+	#			country_leader = {
+	#				ideology = conservatism
+	#				expire = "1965.1.1.1"
+	#				id = -1
+	#				traits = { PHI_social_reformer }
+	#			}
+	
+				# Puppet
+	#			country_leader = {
+	#				ideology = falangism
+	#				expire = "1965.1.1.1"
+	#				id = -1
+	#				traits = { PHI_puppet_president }
+	#			}
+				advisor = {
+					slot = political_advisor
+					idea_token = PHI_jose_laurel
+					allowed  = {
+						original_tag  = PHI
+						has_dlc = "No Compromise, No Surrender"
+					}
+					traits  = {
+						PHI_social_reformer 
+					}
+					available = {
+						is_country_leader = no
+					}
+				}			
+			}
+	
+			instance = {
+				allowed = {
+					NOT = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+				
+				name = PHI_jose_laurel
+				portraits = {
+					civilian = {
+						large = "gfx/leaders/Asia/Portrait_Asia_Generic_democracy.dds"
+					}
+				}
+			}
+		}
+
+	# From characters\PHI.txt
+	PHI_manuel_luis_quezon = {
+			instance = {
+				allowed = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+	
+				name = PHI_manuel_luis_quezon
+				portraits = {
+					civilian = {
+						large = GFX_portrait_PHI_manuel_quezon
+					}
+				}
+	
+				country_leader = {
+					ideology = conservatism
+					expire = "1965.1.1.1"
+					id = -1
+					traits = { PHI_nation_builder }
+				}
+			}
+			instance = {
+				allowed = {
+					NOT = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+				name = PHI_manuel_luis_quezon
+				portraits = {
+					civilian = {
+						large = GFX_portrait_Manuel_Luis_Quezon
+					}
+				}
+				country_leader = {
+					ideology = conservatism
+					expire = "1965.1.1.1"
+					id = -1
+				}
+			}
+		}
+
+	# From characters\PHI.txt
+	PHI_manuel_roxas = {
+			advisor = {
+				slot = political_advisor
+				idea_token = PHI_manuel_roxas
+				allowed  = {
+						has_dlc = "No Compromise, No Surrender"
+	 				}
+				available = {
+					is_country_leader = no
+					NOT = { 
+						has_completed_focus = PHI_anti_hacendados 
+					}
+				}
+				ai_will_do = {
+					base = 1
+					modifier = {
+						factor = 0
+						has_completed_focus = PHI_slippery_slope 
+					}
+				}
+				traits  = {
+					PHI_hacendado
+				}
+			}
+			name= PHI_manuel_roxas
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PHI_manuel_roxas
+					small = GFX_portrait_PHI_manuel_roxas_small
+				}
+			}
+						# Democratic Candidate
+			#			country_leader = {
+			#				ideology = conservatism
+			#				expire = "1965.1.1.1"
+			#				id = -1
+			#				traits = { PHI_political_hacendado }
+			#			}
+		}
+
+	# From characters\SWE.txt
+	SWE_ebba_palmstierna={
+			advisor={
+				#visible = { has_government = democratic }
+				available = {
+					OR = {
+						has_government = democratic 
+						has_government = communism
+					}
+				}
+				slot = political_advisor
+				cost = 75
+				idea_token = SWE_ebba_palmstierna
+				allowed  = {
+					original_tag  = SWE
+				}
+				traits  = {
+					SWE_suffragette 
+				}
+				on_add = {
+					SWE = {
+						if = {
+							limit = {
+								SWE_ebba_palmstierna = {
+									NOT = { has_character_flag = is_hired }
+								}
+							}
+	
+							unlock_decision_tooltip = {
+							 	decision = SWE_ebba_add_research
+							 	show_effect_tooltip = yes # default is no
+							 	show_modifiers = yes # default is no
+							 }
+	
+							unlock_decision_tooltip = {
+							 	decision = SWE_ebba_add_production
+							 	show_effect_tooltip = yes # default is no
+							 	show_modifiers = yes # default is no
+							 }
+							unlock_decision_tooltip = {
+							 	decision = SWE_ebba_political_clout
+							 	show_effect_tooltip = yes # default is no
+							 	show_modifiers = yes # default is no
+							 } 
+						}
+						else = {
+							unlock_decision_tooltip = {
+							 	decision = SWE_ebba_add_research
+							 }
+	
+							unlock_decision_tooltip = {
+							 	decision = SWE_ebba_add_production
+							 }
+							unlock_decision_tooltip = {
+							 	decision = SWE_ebba_political_clout
+							 } 
+						}
+	
+					}
+					set_character_flag = is_hired
+				}
+	
+				on_remove = {
+					clr_character_flag = is_hired
+				}
+			}
+			name=SWE_ebba_palmstierna
+			portraits={
+				civilian={
+					small="GFX_portrait_SWE_ebba_palmstierna_small"
+				}
+			}
+		}
+
+	# From characters\SWE.txt
+	SWE_herman_eriksson={
+			advisor={
+				slot = political_advisor
+				cost = 75
+				idea_token = SWE_herman_eriksson
+				visible = { 
+					OR = {
+						has_government = democratic 
+						has_government = communism
+						has_government = neutrality
+					}
+				}
+	
+				available = {
+					OR = {
+						has_government = democratic 
+						has_government = communism
+						has_government = neutrality
+					}
+				}
+				allowed  = {
+					original_tag  = SWE
+				}
+				traits  = {
+					SWE_minister_of_trade 
+				}
+	
+				on_add = {
+					set_character_flag = is_hired
+				}
+	
+				on_remove = {
+					clr_character_flag = is_hired
+				}
+			}
+			name=SWE_herman_eriksson
+			portraits={
+				civilian={
+					small="GFX_portrait_portrait_SWE_herman_eriksson_small"
+				}
+			}
+		}
+
+	# From characters\SWE.txt
+	SWE_king_gustaf_v = {
+			name=SWE_king_gustaf_v
+			portraits={
+				civilian={
+					small="GFX_idea_SWE_king_gustaf"
+				}
+	
+				army = {
+					large = "GFX_portrait_SWE_king_gustaf_v"
+				}
+	
+			}
+	
+			advisor={
+				slot = political_advisor
+				cost = 200
+				idea_token = SWE_king_gustaf_v
+				visible = { 
+	
+				}
+	
+				visible = {
+					is_country_leader = no
+				}
+				available = { 
+					is_country_leader = no
+					NOT = {
+						has_completed_focus = SWE_liquidate_the_monarchy
+					}
+				}
+				allowed  = {
+					original_tag  = SWE
+				}
+				traits  = {
+					SWE_ardent_conservative 
+				}
+			}
+			#country_leader={
+			#	ideology=centrism
+			#	expire="1965.1.1.1"
+			#	id = -1
+			#}
+	
+		}
+
+	# From characters\USA.txt
+	USA_native_american_council = {
+			name = USA_native_american_council
+			portraits = {
+				civilian = {
+					large = GFX_portrait_native_american_usa_council
+					#small = GFX_portrait_AFA_mohamed_yayyo_small
+				}
+	
+			}
+	
+		}
+}
+

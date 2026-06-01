@@ -71,6 +71,11 @@ SPD = {
 	}
 }
 
+VIC = {
+	original_tag = FRA
+	has_focus_tree = vichy_french_focus
+}
+
 BUZ = {
 	original_tag = BUL
 	has_country_flag = BUL_zveno_bulgaria_flag
@@ -152,6 +157,33 @@ SB3 = {
 
 SB4 = {
 	variable = SWI.SWI_country_to_appease_4
+}
+
+#### AAT ####
+
+FNO = {
+	original_tag = NOR
+	has_government = fascism
+}
+
+FGR = {
+	original_tag = GER
+	country_score = {
+		base = 1
+		modifier = {
+			add = 1
+			has_government = neutrality
+		}
+		modifier = {
+			add = 1
+			tag = var:GLOBAL.platonic_fascist_bully
+		}
+		modifier = {
+			add = 5
+			has_government = fascism
+			exists = yes
+		}
+	}
 }
 
 # operative operation target

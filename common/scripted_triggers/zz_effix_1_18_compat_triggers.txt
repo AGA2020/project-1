@@ -1,0 +1,463 @@
+﻿# Auto-generated 1.18.2 compatibility scripted triggers for effix.
+# Contains vanilla definitions that local stale/empty override files were missing.
+
+# From scripted_triggers\BEL_scripted_triggers.txt
+BEL_communist_ai = {
+	OR = {
+		has_country_flag = BEL_AI_RANDOM_COMMUNIST
+		has_game_rule = {
+			rule = BEL_AI_BEHAVIOR
+			option = COMMUNIST
+		}
+	}
+}
+
+# From scripted_triggers\BEL_scripted_triggers.txt
+BEL_defensive_democrat_ai = {
+	OR = {
+		has_country_flag = BEL_AI_RANDOM_DEFENSIVE_DEMOCRAT
+		has_game_rule = {
+			rule = BEL_AI_BEHAVIOR
+			option = DEFENSIVE_DEMOCRAT
+		}
+	}
+}
+
+# From scripted_triggers\BEL_scripted_triggers.txt
+BEL_expansionist_fascist_ai = {
+	OR = {
+		has_country_flag = BEL_AI_RANDOM_EXPANSIONIST_FASCIST
+		has_game_rule = {
+			rule = BEL_AI_BEHAVIOR
+			option = EXPANSIONIST_FASCIST
+		}
+	}
+}
+
+# From scripted_triggers\BEL_scripted_triggers.txt
+BEL_historical_ai = {
+	OR = {
+		AND = {
+			is_historical_focus_on = yes
+			has_game_rule = {
+				rule = BEL_AI_BEHAVIOR
+				option = DEFAULT
+			}
+		}
+		has_country_flag = BEL_AI_RANDOM_HISTORICAL
+		has_game_rule = {
+			rule = BEL_AI_BEHAVIOR
+			option = HISTORICAL
+		}
+	}
+}
+
+# From scripted_triggers\BEL_scripted_triggers.txt
+BEL_nationalist_fascist_ai = {
+	OR = {
+		has_country_flag = BEL_AI_RANDOM_NATIONALIST_FASCIST
+		has_game_rule = {
+			rule = BEL_AI_BEHAVIOR
+			option = NATIONALIST_FASCIST
+		}
+	}
+}
+
+# From scripted_triggers\00_scripted_triggers.txt
+check_allow_alternate_political_events = {
+	OR = {
+		original_tag = PHI
+		#
+	}
+}
+
+# From scripted_triggers\CHL_scripted_triggers.txt
+CHL_hub_of_the_revolution_trigger = {
+	hidden_trigger = {
+		tag = CHL
+		has_dlc = "Trial of Allegiance"
+		CHL = { 
+			has_completed_focus = CHL_hub_of_the_world_revolution 
+			exists = yes
+			is_subject = no
+			has_government = communism
+		}
+	}
+}
+
+# From scripted_triggers\GER_scripted_triggers.txt
+GER_is_historical_ai = {
+	OR = {
+		AND = {
+			is_historical_focus_on = yes
+			OR = {
+				NOT = { has_dlc = "Waking the Tiger" }
+				has_game_rule = {
+					rule = GER_ai_behavior
+					option = DEFAULT
+				}
+			}	
+		}
+		has_country_flag = GER_AI_RANDOM_FASCIST
+		has_game_rule = {
+			rule = GER_ai_behavior
+			option = FASCIST
+		}
+	}
+}
+
+# From scripted_triggers\00_scripted_triggers.txt
+has_hide_rule = {
+	has_game_rule = {
+		rule = obsolete_focus_branches_visibility
+		option = HIDE
+	}
+}
+
+# From scripted_triggers\ICE_scripted_triggers.txt
+ICE_has_communist_ai = {
+	ICE = {
+		OR = {
+			has_country_flag = ICE_AI_RANDOM_COMMUNIST_PLAN
+			has_game_rule = {
+				rule = ICE_AI_BEHAVIOR
+				option = ICE_COMMUNIST_PLAN
+			}
+			has_government = communism
+		}
+	}
+}
+
+# From scripted_triggers\ICE_scripted_triggers.txt
+ICE_has_fascist_ai = {
+	ICE = {
+		OR = {
+			has_country_flag = ICE_AI_RANDOM_FASCIST_PLAN
+			has_game_rule = {
+				rule = ICE_AI_BEHAVIOR
+				option = ICE_FASCIST_PLAN
+			}
+			has_government = fascism
+		}
+	}
+}
+
+# From scripted_triggers\ITA_scripted_triggers.txt
+ITA_is_christian_democracy_ai = {
+	OR = {
+		has_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_CHRISTIAN_DEMOCRACY
+		}
+	}
+}
+
+# From scripted_triggers\ITA_scripted_triggers.txt
+ITA_is_communist_ai = {
+	OR = {
+		has_country_flag = ITA_AI_RANDOM_COMMUNIST_PLAN
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_COMMUNIST_PLAN
+		}
+	}
+}
+
+# From scripted_triggers\ITA_scripted_triggers.txt
+ITA_is_socialist_ai = {
+	OR = {
+		has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_PLAN
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_DEMOCRATIC_PLAN
+		}
+	}
+}
+
+# From scripted_triggers\BALTIC_scripted_triggers.txt
+is_baltic_country = {
+	OR = {
+		original_tag = LIT
+		original_tag = LAT
+		original_tag = EST
+	}
+}
+
+# From scripted_triggers\00_scripted_triggers.txt
+is_JAP_or_ally_of_JAP = {
+	OR = {
+		tag = JAP
+		is_in_faction_with = JAP
+		is_subject_of = JAP
+	}
+}
+
+# From scripted_triggers\JAP_scripted_triggers.txt
+is_korean_state = {
+	OR = {
+		state = 525
+		state = 1029
+		state = 1031
+		state = 1030
+		state = 527
+		state = 1028
+	}
+}
+
+# From scripted_triggers\JAP_scripted_triggers.txt
+JAP_any_faction_is_tier_3_at_least = {
+	OR = {
+		JAP_army_faction_is_tier_3_at_least = yes
+		JAP_naval_faction_is_tier_3_at_least = yes
+		JAP_zaibatsu_faction_is_tier_3_at_least = yes
+		JAP_government_faction_is_tier_3_at_least = yes
+	}
+}
+
+# From scripted_triggers\JAP_scripted_triggers.txt
+JAP_army_faction_is_tier_3_at_least = {
+	OR = {
+		JAP_army_faction_is_tier_3 = yes
+		JAP_army_faction_is_tier_4 = yes
+	}
+}
+
+# From scripted_triggers\JAP_scripted_triggers.txt
+JAP_government_faction_is_tier_3_at_least = {
+	OR = {
+		has_idea = JAP_government_faction_tier_3
+		has_idea = JAP_government_faction_tier_4
+	}
+}
+
+# From scripted_triggers\JAP_scripted_triggers.txt
+JAP_imperial_influence_demands_ready = {
+	NOT = { has_country_flag = JAP_faction_demands_cooldown_flag }
+}
+
+# From scripted_triggers\JAP_scripted_triggers.txt
+JAP_is_home_islands_state = {
+	custom_trigger_tooltip = {
+		tooltip = JAP_is_home_islands_state_tt
+		OR = {
+			state = 536 # Hokkaido 
+			state = 533 # Kita-Tohoku
+			state = 1019 # Minami-Tohoku
+			state = 534 # Koshinetsu
+			state = 535 # Hokuriku
+			state = 282 # Kanto
+			state = 532 # Tokai
+			state = 531 # Kansai
+			state = 530 # Shikoku
+			state = 529 # Sanyo
+			state = 1020 # Sanin
+			state = 528 # Hokubu Kyushu
+			state = 1018 # Minami Kyushu
+			state = 526 # Okinawa
+			#state = 537 # Karafuto
+		}
+	}
+}
+
+# From scripted_triggers\JAP_scripted_triggers.txt
+JAP_naval_faction_is_tier_3_at_least = {
+	OR = {
+		JAP_naval_faction_is_tier_3 = yes
+		JAP_naval_faction_is_tier_4 = yes
+	}
+}
+
+# From scripted_triggers\JAP_scripted_triggers.txt
+JAP_zaibatsu_faction_is_tier_3_at_least = {
+	OR = {
+		has_idea = JAP_zaibatsu_faction_tier_3
+		has_idea = JAP_zaibatsu_faction_tier_4
+	}
+}
+
+# From scripted_triggers\NOR_scripted_triggers.txt
+NOR_is_fascist_ai = {
+	is_ai = yes  
+	OR = {
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = NOR_FASCIST
+		}
+		has_country_flag = NOR_AI_RANDOM_FASCIST
+	}
+}
+
+# From scripted_triggers\NOR_scripted_triggers.txt
+NOR_kings_no_allow_trigger = {
+	if = {
+		limit = {
+			has_mtg = yes
+		}
+		if = {
+			limit = {
+				has_hide_rule = yes 
+			}
+			NOT = {
+				has_completed_focus = NOR_the_stumbling_storting
+				has_completed_focus = NOR_a_resurgent_labor_movement
+			}
+		}
+	}
+	else = {
+		always = no 
+	}
+}
+
+# From scripted_triggers\NORDIC_scripted_triggers.txt
+NORDIC_communist_alliance_viable = {
+	ROOT = {
+		OR = {
+			has_global_flag = NORDIC_communist_alliance_formed
+			has_dynamic_modifier = { modifier = NORDIC_communist_alliance_leader_dmod }
+			has_dynamic_modifier = { modifier = NORDIC_communist_alliance_member_dmod }
+			AND = {
+				NORDIC_is_communist = yes 
+				NORDIC_alliance_created_already = no 
+				NORDIC_has_started_democratic_focus_tree = no
+				NORDIC_has_started_monarchist_focus_tree = no
+			}
+			AND = {
+				NORDIC_has_started_communist_focus_tree = yes
+				NORDIC_alliance_created_already = no 
+			} 
+		}
+	}
+}
+
+# From scripted_triggers\POL_scripted_triggers.txt
+POL_is_valid_to_boost_monarchy = {
+
+	ROOT = {
+		is_subject = no
+		has_government = neutrality
+	}
+	OR = {
+		has_completed_focus = POL_support_monarchism_in_LIT
+		has_completed_focus = POL_support_monarchy_in_CZE
+		has_completed_focus = POL_internal_romanian_support
+		has_completed_focus = LIT_support_monarchism_in_POL
+	}
+	if = {
+		limit = {
+			has_completed_focus = POL_support_monarchism_in_LIT
+		}
+		NOT = { has_country_flag = attempted_royal_takeover_in_LIT }
+		LIT = { NOT = { has_completed_focus = LIT_a_king_for_our_people } }
+		FROM = {
+			original_tag = LIT
+		}
+	}
+	if = {
+		limit = {
+			has_completed_focus = POL_support_monarchy_in_CZE
+		}
+		NOT = { has_country_flag = attempted_royal_takeover_in_CZE }			
+		FROM = {
+			original_tag = CZE
+		}
+	}
+	if = {
+		limit = {
+			has_completed_focus = POL_internal_romanian_support
+		}
+		NOT = { has_country_flag = attempted_royal_takeover_in_ROM }
+		FROM = {
+			original_tag = ROM
+		}
+	}
+	if = {
+		limit = {
+			has_completed_focus = LIT_support_monarchism_in_POL
+		}
+		NOT = { has_country_flag = attempted_royal_takeover_in_POL }
+		POL = { NOT = { has_country_flag = achievement_POL_elected_monarch } } 
+		FROM = {
+			original_tag = POL
+		}
+	}
+	NOT = {
+		FROM = {
+			has_country_flag = POL_banned_monarchy_flag
+		}
+	}
+	NOT = {
+		FROM = {
+			is_subject_of = ROOT
+		}
+	}
+}
+
+# From scripted_triggers\POL_scripted_triggers.txt
+POL_is_valid_to_reject_monarchy = {	
+	if = {	
+		limit = {
+			original_tag = POL
+		}
+		LIT = { 
+			has_completed_focus = LIT_support_monarchism_in_POL
+			NOT = { has_country_flag = attempted_royal_takeover_in_POL }
+		}
+		NOT = { has_country_flag = achievement_POL_elected_monarch }
+		FROM = {
+			original_tag = LIT
+		}
+	}
+	if = {
+		limit = {
+			original_tag = LIT 
+		}
+		NOT = { has_completed_focus = LIT_a_king_for_our_people }
+		POL = { 
+			has_completed_focus = POL_support_monarchism_in_LIT 
+			NOT = { has_country_flag = attempted_royal_takeover_in_LIT }
+		} 
+		FROM = {
+			original_tag = POL
+		}
+	}
+	if = {
+		limit = {
+			original_tag = CZE
+		}
+		POL = {
+			has_completed_focus = POL_support_monarchy_in_CZE
+			NOT = { has_country_flag = attempted_royal_takeover_in_CZE }
+		}
+		FROM = {
+			original_tag = POL
+		}
+	}
+	if = { 
+		limit = {
+			original_tag = ROM
+		}
+		POL = {
+			has_completed_focus = POL_internal_romanian_support
+			NOT = { has_country_flag = attempted_royal_takeover_in_ROM }
+		}
+		FROM = {
+			original_tag = POL
+		}
+	}
+	NOT = { has_country_flag = POL_banned_monarchy_flag }
+}
+
+# From scripted_triggers\00_scripted_triggers.txt
+should_play_south_american_music = {
+	capital_scope = { is_on_continent = south_america }
+}
+
+# From scripted_triggers\SOV_scripted_triggers.txt
+SOV_is_exiles = {
+	#custom_trigger_tooltip = {
+		#tooltip = SOV_is_exiles_tt
+		SOV = { has_completed_focus = SOV_beaten_but_not_defeated }
+	#}
+}
+
