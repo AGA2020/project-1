@@ -1,4 +1,4 @@
-﻿capital = 289
+capital = 289
 
 oob = "SIA_1936"
 if = {
@@ -157,7 +157,7 @@ set_convoys = 15
 			early_ship_hull_submarine = 1
 			basic_ship_hull_submarine = 1
 			early_ship_hull_cruiser = 1
-			basic_medium_battery = 1
+			#basic_medium_battery = 1
 		}
 	}
 }

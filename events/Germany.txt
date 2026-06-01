@@ -1,4 +1,4 @@
-﻿#####################
+#####################
 # German Events
 ###########################
 
@@ -374,7 +374,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_tech = basic_medium_battery
+				always = no # basic_medium_battery removed in 1.18
 			}
 			create_equipment_variant = {
 				name = "Hipper Class"

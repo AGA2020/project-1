@@ -1,4 +1,4 @@
-﻿capital = 41
+capital = 41
 
 oob = "SPR_1936"
 if = {
@@ -233,7 +233,7 @@ set_technology = {
 	basic_ship_hull_cruiser = 1
 	early_ship_hull_heavy = 1
 	basic_battery = 1
-	basic_medium_battery = 1
+	#basic_medium_battery = 1
 	basic_torpedo = 1
 	basic_depth_charges = 1
 	mtg_transport = 1
