@@ -35,7 +35,6 @@ HUN_WW_alternate_AH = {
 	ai_national_focuses = {
 
 		#Things to do ASAP
-		wuw_HUN_seek_an_alliance_with_the_kaiser #35 If Germany has gone Kaiserreich they will want ot join them
 		HABSBURG_part_of_something_bigger #35 They should want to initiate this tree as soon as possible
 
 		#1936
@@ -43,9 +42,6 @@ HUN_WW_alternate_AH = {
 		wuw_HUN_crack_down_on_radicals #35
 		wuw_HUN_subvert_gombos_troops #35
 		wuw_HUN_reach_out_to_candidates #70
-		wuw_HUN_reinstate_the_pragmatic_sanction #70
-		wuw_HUN_invite_otto_to_the_throne #35
-		wuw_HUN_the_lands_of_the_crown_of_saint_stephen #70
 
 		#1937
 		wuw_HUN_secret_rearmament #70
@@ -53,26 +49,14 @@ HUN_WW_alternate_AH = {
 		wuw_HUN_avoid_interventionalist_destablilization #70		
 		wuw_HUN_reintigrate_the_imperial_railroads #70
 		wuw_HUN_negotiate_the_restrictions #70
-		wuw_HUN_demand_austrian_restoration #70
 
 		#1938
-		wuw_HUN_a_grand_habsburg_alliance #35
-		wuw_HUN_attempt_economic_independence #70
-		wuw_HUN_protect_czechoslovakia #70
 		wuw_HUN_expand_the_ganz_muvek #35
 		wuw_HUN_announce_the_gyor_program #70
-		wuw_HUN_secure_army_loyalty #70
 
 		#1939
-		wuw_HUN_royal_hussars #70
-		wuw_HUN_reenlist_the_sich_riflemen #70
-		wuw_HUN_reintigrate_slovakia #35
-		wuw_HUN_the_triple_kingdom #70
-		wuw_HUN_reclaim_transylvania #70
-		wuw_HUN_a_hungarian_galicia #70
 
 		#1940
-		wuw_HUN_demand_wiedist_restoration #35 If Albania still exists they will attempt to "puppet" them 
 
 		#1941
 		
@@ -142,7 +126,6 @@ HUN_alternate_DEM = {
 	ai_national_focuses = {
 
 		#Things to do ASAP
-		wuw_HUN_a_responsible_government #70 DO THIS ASAP
 		wuw_HUN_support_for_our_finnish_brothers #35 pretty much as soon as Finland is at war basically
 
 		wuw_HUN_announce_the_gyor_program # 70 do this as soon as it becomes available
@@ -158,15 +141,12 @@ HUN_alternate_DEM = {
 
 		#1937
 		wuw_HUN_abide_by_the_little_ententes_stipulations #70
-		wuw_HUN_elect_a_democratic_king #35
-		wuw_HUN_cancel_the_german_trade_deal #70
 		wuw_HUN_promote_increased_urbanization # 70
 		wuw_HUN_devalue_the_pengo #70
 
 		#1938
 		wuw_HUN_negotiate_the_restrictions #70 Usually bypassed. Mostly in case they get a no for rearming first try
 		wuw_HUN_manred_weiss_steel_and_metal_works #70
-		wuw_HUN_guarantee_religious_liberties #70
 
 		# The rest is up to them
 
@@ -253,10 +233,8 @@ HUN_alternate_FAS = {
 		wuw_HUN_license_fiat_tankettes #35
 		wuw_HUN_economic_intervention #70
 		wuw_HUN_renew_the_rome_protocols #35
-		wuw_HUN_protect_austria #35
 
 		#1938
-		wuw_HUN_an_alliance_with_italy #35
 		wuw_HUN_hold_war_games #35
 		wuw_HUN_reintigrate_the_imperial_railroads #70
 		wuw_HUN_expand_the_ganz_muvek #35
@@ -332,17 +310,9 @@ HUN_alternate_COM = {
 	ai_national_focuses = {
 		
 		#Things to do ASAP
-		wuw_HUN_officialize_the_rakosi_battalion #35 do this as soon as they are out of their cw if SPR still ahs theirs basically
 		wuw_HUN_expand_the_army #70 Once they have completed focuses and have enough war support to do this
 
 		#1936
-		wuw_HUN_end_the_white_terror #35
-		wuw_HUN_parade_istvan_bethlens_platform #35
-		wuw_HUN_politicize_the_levente_associations #70
-		wuw_HUN_undermine_the_volksbund #70
-		wuw_HUN_salami_slicing_tactics #35
-		wuw_HUN_reviving_the_spirit_of_1848 #70
-		wuw_HUN_elections_in_the_revolutionary_council #35
 
 		#1937
 		wuw_HUN_economic_intervention #70
@@ -353,28 +323,16 @@ HUN_alternate_COM = {
 		wuw_HUN_negotiate_the_restrictions #70
 
 		wuw_HUN_reintigrate_the_imperial_railroads #70
-		wuw_HUN_join_the_comintern #35
-		wuw_HUN_goulash_communism #70
-		wuw_HUN_restore_the_hungarian_red_army #70
 
 		#1938
-		wuw_HUN_joint_hungarian_soviet_research_effort #70
-		wuw_HUN_soviet_hungarian_military_academy #70
-		wuw_HUN_state_protection_authority #70
-		wuw_HUN_central_military_planning_committee #70
-		wuw_HUN_soviet_hungarian_war_indsutry #70
 
 		#1939
 		wuw_HUN_promote_increased_urbanization #70
 		wuw_HUN_announce_the_gyor_program #70
 		wuw_HUN_invest_in_ludovica_academy #35
 		wuw_HUN_doctrinal_studies #35
-		wuw_HUN_kadars_hussars #70
 
 		#1940
-		wuw_HUN_a_cult_of_personality #70
-		wuw_HUN_pressure_romania #70
-		wuw_HUN_the_bulwark_against_the_west #70
 		wuw_HUN_expand_the_hungarian_academy_of_sciences #70
 		wuw_HUN_expand_the_diosgyor_machinery_factory #70
 
@@ -455,17 +413,8 @@ HUN_alternate_COM_FEDERATIVE_REPUBLIC = {
 	ai_national_focuses = {
 		
 		#Things to do ASAP
-		wuw_HUN_officialize_the_rakosi_battalion #35 do this as soon as they are out of their CW if SPR still has theirs basically
-		wuw_HUN_a_revolutionary_greater_hungary #70 If they ever can, they should want to!
 
 		#1936
-		wuw_HUN_end_the_white_terror #35
-		wuw_HUN_parade_istvan_bethlens_platform #35
-		wuw_HUN_salami_slicing_tactics #35
-		wuw_HUN_politicize_the_levente_associations #70
-		wuw_HUN_undermine_the_volksbund #70
-		wuw_HUN_reviving_the_spirit_of_1848 #70
-		wuw_HUN_elections_in_the_revolutionary_council #35
 
 		#1937
 		wuw_HUN_economic_intervention #70
@@ -476,16 +425,8 @@ HUN_alternate_COM_FEDERATIVE_REPUBLIC = {
 		wuw_HUN_secret_rearmament # 70
 		wuw_HUN_negotiate_the_restrictions #70
 
-		wuw_HUN_restore_the_socialist_federative_republic #35
-		wuw_HUN_instate_a_socialist_economy #70
-		wuw_HUN_restore_the_hungarian_red_army #70
 
 		#1938
-		wuw_HUN_nationalize_key_industries #70
-		wuw_HUN_invest_in_universal_education #70
-		wuw_HUN_reinstate_the_lenin_boys #70
-		wuw_HUN_kadars_hussars #70
-		wuw_HUN_promote_revanchist_sentiment #70
 
 		#1939
 		wuw_HUN_invest_in_ludovica_academy #35
@@ -493,7 +434,6 @@ HUN_alternate_COM_FEDERATIVE_REPUBLIC = {
 		wuw_HUN_make_the_magyar_legiero_known #35
 		wuw_HUN_announce_the_gyor_program #70
 		wuw_HUN_expand_the_ganz_muvek #35
-		wuw_HUN_revenge_for_the_romanian_humiliations #70
 		wuw_HUN_expand_the_diosgyor_machinery_factory #70
 
 		#1940
@@ -501,13 +441,11 @@ HUN_alternate_COM_FEDERATIVE_REPUBLIC = {
 		wuw_HUN_manred_weiss_steel_and_metal_works #70
 		wuw_HUN_initiate_army_maneuvers #70
 		wuw_HUN_form_the_gyorshadtest #35
-		wuw_HUN_the_second_northern_campaign #70
 		wuw_HUN_magyar_kiralyi_csendorseg #35
 
 		#1941
 		wuw_HUN_expand_the_hungarian_academy_of_sciences #70
 		wuw_HUN_expand_the_army #70
-		wuw_HUN_march_south #70
 		
 		# It is up to them what to do from here on out
 
@@ -689,16 +627,8 @@ HUN_danubian_federation = {
 	ai_national_focuses = {
 		
 		#Things to do ASAP
-		wuw_HUN_the_cult_of_arpad # If they can, they should want to!
 
 		#1936
-		wuw_HUN_end_the_white_terror #35
-		wuw_HUN_parade_istvan_bethlens_platform #35
-		wuw_HUN_politicize_the_levente_associations #70
-		wuw_HUN_undermine_the_volksbund #70
-		wuw_HUN_salami_slicing_tactics #35
-		wuw_HUN_reviving_the_spirit_of_1848 #70
-		wuw_HUN_elections_in_the_revolutionary_council #35
 
 		#1937
 		wuw_HUN_economic_intervention #70
@@ -709,14 +639,8 @@ HUN_danubian_federation = {
 		wuw_HUN_secret_rearmament # 70
 		wuw_HUN_negotiate_the_restrictions #70
 
-		wuw_HUN_establish_the_second_republic #35
-		wuw_HUN_reverse_the_brain_drain #70
-		wuw_HUN_promote_entrepreneurship #70
 
 		#1938
-		wuw_HUN_the_spirit_of_the_aster_revolution #70
-		wuw_HUN_a_danubian_federation #70
-		wuw_HUN_uplift_the_dragon_movement # 70
 
 		# It is up to them from here on out
 
@@ -772,7 +696,6 @@ HUN_danubian_federation = {
 
 	# Focuses never to take
 	focus_factors = {
-		wuw_HUN_uplift_the_dragon_movement = 0
 
 	}
 
@@ -805,16 +728,8 @@ HUN_expansionist_republic = {
 	ai_national_focuses = {
 		
 		#Things to do ASAP
-		wuw_HUN_the_cult_of_arpad # If they can, they should want to!
 
 		#1936
-		wuw_HUN_end_the_white_terror #35
-		wuw_HUN_parade_istvan_bethlens_platform #35
-		wuw_HUN_politicize_the_levente_associations #70
-		wuw_HUN_undermine_the_volksbund #70
-		wuw_HUN_salami_slicing_tactics #35
-		wuw_HUN_reviving_the_spirit_of_1848 #70
-		wuw_HUN_elections_in_the_revolutionary_council #35
 
 		#1937
 		wuw_HUN_economic_intervention #70
@@ -825,15 +740,8 @@ HUN_expansionist_republic = {
 		wuw_HUN_secret_rearmament # 70
 		wuw_HUN_negotiate_the_restrictions #70
 
-		wuw_HUN_establish_the_second_republic #35
-		wuw_HUN_reverse_the_brain_drain #70
-		wuw_HUN_promote_entrepreneurship #70
 
 		#1938
-		wuw_HUN_the_spirit_of_the_aster_revolution #70
-		wuw_HUN_uplift_the_dragon_movement #70
-		wuw_HUN_approach_the_diasporas #70
-		wuw_HUN_revive_the_tribal_consolidation # 70
 		wuw_HUN_make_the_magyar_legiero_known # 35
 		wuw_HUN_invest_in_ludovica_academy # 35
 
@@ -847,7 +755,6 @@ HUN_expansionist_republic = {
 		wuw_HUN_expand_the_army # 70
 
 		#1940
-		wuw_HUN_reclaim_the_pannonian_steppe # 70
 
 		# It is up to them from here on out
 
@@ -1017,44 +924,29 @@ HUN_habsburg_king = {
 		wuw_HUN_crack_down_on_radicals #35
 		wuw_HUN_subvert_gombos_troops #35
 		wuw_HUN_reach_out_to_candidates #70
-		wuw_HUN_reinstate_the_pragmatic_sanction #70
-		wuw_HUN_the_old_habsburg_king #35
 
 		#1937
-		wuw_HUN_attempt_economic_independence #70
-		wuw_HUN_secure_army_loyalty #70
-		wuw_HUN_the_bastion_of_catholicism #70
-		wuw_HUN_enact_agrarian_reform #35
-		wuw_HUN_purchase_burgenland #35
-		wuw_HUN_honor_the_great_war_veterans #70
 
 		#1938
 		wuw_HUN_avoid_interventionalist_destablilization #70
 		wuw_HUN_reintigrate_the_imperial_railroads #70
-		wuw_HUN_the_legacy_of_arpad_andrew_and_matthias #70
-		wuw_HUN_the_legacy_of_the_isonzo_front #70
-		wuw_HUN_revenge_for_the_brusilov_offensive #70
 
 		#1939
-		wuw_HUN_a_declaration_of_intentions #35
 		wuw_HUN_hold_war_games #35
 		wuw_HUN_expand_the_ganz_muvek #35
 		wuw_HUN_announce_the_gyor_program #70
 		wuw_HUN_make_the_magyar_legiero_known #35
 		
 		#1940
-		wuw_HUN_revenge_for_1919 #35
 		wuw_HUN_expand_the_diosgyor_machinery_factory #70
 		wuw_HUN_invest_in_ludovica_academy #35
 		wuw_HUN_magyar_kiralyi_csendorseg #35
 		wuw_HUN_initiate_army_maneuvers #70
 		wuw_HUN_light_infantry_divisions_doctrine #70
-		wuw_HUN_undoing_the_yugoslav_mistake #35
 
 		#1941
 		wuw_HUN_legacy_of_the_black_legion #70
 		wuw_HUN_expand_the_hungarian_academy_of_sciences #70
-		wuw_HUN_on_a_high_horse #70
 	}
 
 	research = {
@@ -1113,12 +1005,6 @@ HUN_horthy_king = {
 	ai_national_focuses = {
 
 		#Things to do ASAP
-		wuw_HUN_royalist_education_initiative #35
-		wuw_HUN_a_unifying_heritage #70
-		wuw_HUN_anglo_hungarian_alliance #35 #Once they get to it
-		wuw_HUN_stage_an_uprising_in_leitha #35
-		wuw_HUN_a_declaration_of_intentions #35
-		wuw_HUN_a_bulwark_against_communism #70
 
 		#1936
 		wuw_HUN_end_the_regency #35
@@ -1126,13 +1012,8 @@ HUN_horthy_king = {
 		wuw_HUN_subvert_gombos_troops #35
 		wuw_HUN_reach_out_to_candidates #70
 		wuw_HUN_abide_by_the_little_ententes_stipulations #70
-		wuw_HUN_establishing_a_new_dynasty #35
-		wuw_HUN_establishing_a_royal_guard #35
-		wuw_HUN_dissolve_the_volksbund #35
 
 		#1937
-		wuw_HUN_magyar_cserkeszszovetseg #70
-		wuw_HUN_cancel_the_german_trade_deal #70
 
 		#1938
 		
@@ -1173,7 +1054,6 @@ HUN_horthy_king = {
 
 	# Focuses never to take
 	focus_factors = {
-		wuw_HUN_on_a_high_horse = 0
 	}
 
 }

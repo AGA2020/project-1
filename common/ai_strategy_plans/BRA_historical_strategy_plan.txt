@@ -33,7 +33,6 @@ BRA_historical_plan = {
 		BRA_tribunal_de_seguranca_nacional
 		BRA_coffee_crisis_aftermath
 		BRA_ensure_continued_military_support
-		BRA_work_with_the_integralists
 		SMB_army
 		SMB_navy
 		BRA_desenvolvimentismo

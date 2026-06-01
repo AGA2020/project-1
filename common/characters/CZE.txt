@@ -870,4 +870,111 @@ characters={
 			}
 		}
 	}
+
+	CZE_augustin_voloshyn = {
+		name = RUT_augustin_voloshyn
+		portraits = {
+			civilian = {
+				large = GFX_portrait_RUT_augustin_voloshyn
+				small = GFX_portrait_RUT_augustin_voloshyn_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CZE_augustin_voloshyn
+			allowed  = {
+				original_tag  = CZE
+			}
+			available = {
+				has_completed_focus = CZE_comprise_with_the_carpathians
+			}
+			visible = {
+				CZE_RUT_is_not_its_own_thing = yes
+				NOT = {
+					OR = {
+						has_completed_focus = CZE_appeal_to_the_castle
+						has_completed_focus = CZE_placate_benes_faction
+						has_completed_focus = CZE_increase_funding_from_moscow
+					}
+				}
+			}
+			traits  = {
+				CZE_prime_minister_of_carpathian_ukraine
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		corps_commander={ #Only for unit leader event. SHOULD NEVER BE VISIBLE
+			traits={ politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+			visible = {
+				always = no
+			}
+		}
+	}
+
+
+	CZE_jan_syrovy = {
+		name=CZE_jan_syrovy
+		portraits={
+			army={
+				large=GFX_portrait_CZE_jan_syrovy
+				small=GFX_portrait_CZE_jan_syrovy_small
+			}
+		}
+		field_marshal={
+			traits={ winter_specialist war_hero media_personality }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=-1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = CZE_jan_syrovy
+			allowed = {
+				original_tag = CZE
+			}
+			traits = {
+				army_chief_morale_2
+			}
+			on_add = {
+				owner = {
+					if = {
+						limit = {
+							has_power_balance = {
+								id = CZE_bop_army_readiness
+							}
+						}
+						CZE_bop_very_low_increase_effect = yes
+						custom_effect_tooltip = generic_skip_one_line_tt
+					}
+				}
+			}
+			on_remove = {
+				owner = {
+					if = {
+						limit = {
+							has_power_balance = {
+								id = CZE_bop_army_readiness
+							}
+						}
+						CZE_bop_very_low_decrease_effect = yes
+					}
+				}
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
 }

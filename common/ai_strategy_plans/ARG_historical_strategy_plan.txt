@@ -86,7 +86,6 @@ ARG_historical_plan = {
 		SMB_construct_naval_bases
 		SMB_naval_foreign_advisors
 		SMB_domestic_production
-		SMB_tierra_del_fuego_training
 		SMB_foreign_advisors
 		SMB_purchase_destroyers_and_subs
 		SMB_expand_repair_yards

@@ -756,3 +756,9 @@ CZE_i_am_agreeable_to_license = { #I just like to license things
 CZE_usurp_the_mantle = {
 	compliance_gain = 0.25
 }
+
+CHL_from_support_chile_static_modifier = {
+	send_volunteers_tension = -0.6
+	send_volunteer_divisions_required = -0.9
+	send_volunteer_factor = 0.6
+}

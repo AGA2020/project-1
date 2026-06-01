@@ -220,4 +220,246 @@ characters={
 #			    traits = { PHI_pioneer_marxist }
 #			}
 	}
+
+
+	PHI_artemio_ricarte = {
+		advisor = {
+			slot = political_advisor
+			idea_token = PHI_artemio_ricarte
+			allowed  = {
+					has_dlc = "No Compromise, No Surrender"
+ 				}
+			traits  = {
+				PHI_philippine_nationalist
+			}
+			cost = 150
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 5
+					has_completed_focus = PHI_slippery_slope 
+				}
+			}
+			available = {
+				is_country_leader = no
+			}
+		}
+		name = PHI_artemio_ricarte
+		portraits = {
+			civilian = {
+				large = GFX_portrait_PHI_artemio_ricarte
+				small = GFX_portrait_PHI_artemio_ricarte_small
+			}
+		}
+		# Fascist Coup
+		country_leader = {
+		    ideology = fascism_ideology
+		    expire = "1965.1.1.1"
+		    traits = { PHI_philippine_nationalist_leader }
+		}			
+	}
+
+
+	PHI_emilio_aguinaldo = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = PHI_emilio_aguinaldo
+				allowed  = {
+					original_tag  = PHI
+				}
+				traits  = {
+					PHI_revolutionary_hero 
+				}
+				available = {
+					is_country_leader = no
+				}
+			}
+			name = PHI_emilio_aguinaldo
+			portraits={
+				civilian = {
+					large = GFX_portrait_PHI_emilio_aguinaldo
+					small = GFX_portrait_PHI_emilio_aguinaldo_small
+				}
+			}
+			country_leader = {
+			    ideology = despotism						#better than centrism I guess
+			    expire = "1965.1.1.1"
+			    traits = { PHI_revolutionary_president }	#no drift or anything, works here too
+			}
+			# Fascist Coup
+#			country_leader = {
+#			    ideology = falangism
+#			    expire = "1965.1.1.1"
+#			    traits = { PHI_revolutionary_president }
+#			}				
+		}
+
+		instance = {
+			allowed = {
+				NOT = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = PHI_emilio_aguinaldo
+				traits  = {
+					popular_figurehead 
+				}
+			}
+			name = PHI_emilio_aguinaldo
+			portraits={
+				army={
+					small="GFX_idea_generic_political_advisor_asia_3"
+				}
+			}
+		}
+	}
+
+
+	PHI_jose_laurel={
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+
+			name = PHI_jose_laurel
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PHI_jose_laurel
+					small = GFX_portrait_PHI_jose_laurel_small 
+				}
+			}
+			# 1941 Election
+#			country_leader = {
+#				ideology = conservatism
+#				expire = "1965.1.1.1"
+#				id = -1
+#				traits = { PHI_social_reformer }
+#			}
+
+			# Puppet
+#			country_leader = {
+#				ideology = falangism
+#				expire = "1965.1.1.1"
+#				id = -1
+#				traits = { PHI_puppet_president }
+#			}
+			advisor = {
+				slot = political_advisor
+				idea_token = PHI_jose_laurel
+				allowed  = {
+					original_tag  = PHI
+					has_dlc = "No Compromise, No Surrender"
+				}
+				traits  = {
+					PHI_social_reformer 
+				}
+				available = {
+					is_country_leader = no
+				}
+			}			
+		}
+
+		instance = {
+			allowed = {
+				NOT = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+			}
+			
+			name = PHI_jose_laurel
+			portraits = {
+				civilian = {
+					large = "gfx/leaders/Asia/Portrait_Asia_Generic_democracy.dds"
+				}
+			}
+		}
+	}
+
+
+	PHI_manuel_luis_quezon = {
+		instance = {
+			allowed = {
+				has_dlc = "No Compromise, No Surrender"
+			}
+
+			name = PHI_manuel_luis_quezon
+			portraits = {
+				civilian = {
+					large = GFX_portrait_PHI_manuel_quezon
+				}
+			}
+
+			country_leader = {
+				ideology = conservatism
+				expire = "1965.1.1.1"
+				id = -1
+				traits = { PHI_nation_builder }
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+			}
+			name = PHI_manuel_luis_quezon
+			portraits = {
+				civilian = {
+					large = GFX_portrait_Manuel_Luis_Quezon
+				}
+			}
+			country_leader = {
+				ideology = conservatism
+				expire = "1965.1.1.1"
+				id = -1
+			}
+		}
+	}
+
+
+	PHI_manuel_roxas = {
+		advisor = {
+			slot = political_advisor
+			idea_token = PHI_manuel_roxas
+			allowed  = {
+					has_dlc = "No Compromise, No Surrender"
+ 				}
+			available = {
+				is_country_leader = no
+				NOT = { 
+					has_completed_focus = PHI_anti_hacendados 
+				}
+			}
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 0
+					has_completed_focus = PHI_slippery_slope 
+				}
+			}
+			traits  = {
+				PHI_hacendado
+			}
+		}
+		name= PHI_manuel_roxas
+		portraits = {
+			civilian = {
+				large = GFX_portrait_PHI_manuel_roxas
+				small = GFX_portrait_PHI_manuel_roxas_small
+			}
+		}
+					# Democratic Candidate
+		#			country_leader = {
+		#				ideology = conservatism
+		#				expire = "1965.1.1.1"
+		#				id = -1
+		#				traits = { PHI_political_hacendado }
+		#			}
+	}
 }

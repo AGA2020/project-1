@@ -1647,4 +1647,329 @@ characters={
 		}
 	}
 
+	JAP_machida_chuuji = {
+		name = JAP_machida_chuuji
+
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_machida_chuuji
+				small = GFX_portrait_JAP_machida_chuuji_small
+			}
+		}
+
+		#country_leader = {
+		#	ideology = liberalism
+		#	expire = "1989.1.1.1"
+		#	id = -1
+		#}
+
+	}
+
+	JAP_chikuhei_nakajima = {
+		name = JAP_chikuhei_nakajima
+
+		portraits = {
+			civilian = {
+				small = GFX_portrait_JAP_chikuhei_nakajima_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_chikuhei_nakajima
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			available = {
+				NOT = {						
+					has_government = communism
+				}
+			}
+
+			traits = {
+				JAP_nakajima_president
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+
+	}
+
+	JAP_jinzaburo_masaki = {
+		name = JAP_jinzaburo_masaki
+
+		portraits = {
+			civilian = {
+				large = GFX_portrait_JAP_jinzaburo_masaki
+				small = GFX_portrait_JAP_jinzaburo_masaki_civilian_small
+			}
+			army = {
+				small = GFX_portrait_JAP_jinzaburo_masaki_military_small
+			}
+		}
+
+		#country_leader = {
+		#	ideology = japan_militarism_ideology
+		#	traits = { JAP_military_prime_minister }
+		#	expire = "1952.1.1.1"
+		#	id = -1
+		#}
+
+		corps_commander = {
+			traits = { organizer infantry_leader trait_JAP_kodoha_sympathizer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+			visible = {
+				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+			}
+		}
+
+		advisor = {
+			slot = army_chief
+			idea_token = JAP_jinzaburo_masaki
+			allowed = {
+				original_tag = JAP
+			}
+			visible = {
+				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+			}
+			available = {
+				has_completed_focus = JAP_grand_army_purge
+			}
+			traits = {
+				army_chief_organizational_1
+			}
+			cost = 100
+			ai_will_do = {
+				base = 2
+				modifier = {
+					factor = 15
+					has_active_mission = JAP_army_faction_demands_military_factories
+				}
+			}
+		}
+
+	}
+
+	JAP_kenjiro_matsumoto = {
+		name = JAP_kenjiro_matsumoto
+
+		portraits = {
+			civilian = {
+				small = GFX_portrait_JAP_kenjiro_matsumoto_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_kenjiro_matsumoto
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			traits = {
+				JAP_yasukawa_zaibatsu_president
+			}
+			ai_will_do = {
+				base = 1
+			}
+
+			on_add = {
+				JAP_small_zaibatsu_faction_gain = yes
+			}
+			on_remove = {
+				JAP_small_zaibatsu_faction_loss = yes
+			}
+
+		}
+
+	}
+
+	JAP_koyata_iwasaki = {
+		name = JAP_koyata_iwasaki
+
+		portraits = {
+			civilian = {
+				small = GFX_portrait_JAP_koyata_iwasaki_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_koyata_iwasaki
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			visible = {
+
+			}
+
+			available = {
+				has_completed_focus = JAP_approach_mitsubishi
+			}
+
+			traits = {
+				JAP_mitsubishi_president
+			}
+			ai_will_do = {
+				base = 1
+			}
+
+			on_add = {
+				JAP_small_zaibatsu_faction_gain = yes
+			}
+			on_remove = {
+				JAP_small_zaibatsu_faction_loss = yes
+			}
+
+		}
+
+	}
+
+	JAP_naoki_hoshino = {
+		name = JAP_naoki_hoshino
+
+		portraits = {
+			civilian = {
+				small = GFX_portrait_JAP_naoki_hoshino_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_naoki_hoshino
+
+			allowed = {
+				OR = {
+					original_tag = JAP
+					original_tag = MAN
+				}
+			}
+
+			visible = {
+				NOT = {
+					has_completed_focus = JAP_okadas_military_purge_speech
+					has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+				}
+			}
+
+			available = {
+				OR = {
+					has_completed_focus = JAP_form_the_great_japan_industrial_patriotic_association
+					tag = MAN
+				}
+			}
+
+			traits = {
+				FRA_national_syndicalist
+			}
+			ai_will_do = {
+				base = 2
+			}
+		}
+
+	}
+
+	JAP_yoshisuke_aikawa = {
+		name = JAP_yoshisuke_aikawa
+
+		portraits = {
+			civilian = {
+				small = GFX_portrait_JAP_yoshisuke_aikawa_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_yoshisuke_aikawa
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			traits = {
+				JAP_nissan_president
+			}
+			ai_will_do = {
+				base = 0.5
+			}
+		}
+
+	}
+
+	JAP_yosuke_matsuoka = {
+		name = JAP_yosuke_matsuoka
+
+		portraits = {
+			civilian = {
+				small = GFX_portrait_JAP_yosuke_matsuoka_small
+				# GFX_portrait_JAP_komakichi_matsuoka_imprisoned
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = JAP_yosuke_matsuoka
+
+			allowed = {
+				original_tag = JAP
+			}
+
+			visible = {
+
+			}
+
+			available = {
+				has_completed_focus = JAP_eastern_road_and_steel_expansion
+			}
+
+			traits = {
+				JAP_south_manchuria_railway_president
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+
+	}
 }

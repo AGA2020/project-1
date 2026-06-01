@@ -1362,3 +1362,76 @@ CHL_set_up_american_resistance_states = {
 		}
 	#}
 }
+
+CHL_anarchic_society_level_up = {
+	IF = {
+		limit = {
+			NOT = {
+				has_country_flag = CHL_no_more_anarchy_flag
+			}
+		}
+		custom_effect_tooltip = CHL_anarchic_society_up_tt
+	}
+	
+	IF = {
+		limit = {
+			has_idea = idea_CHL_near_anarchic_society
+			NOT = {
+				has_country_flag = CHL_no_more_anarchy_flag
+			}
+		}
+		add_war_support = -0.05
+		add_stability = -0.05
+		add_political_power = -50
+	}
+	ELSE_IF = {
+		limit = { 
+			has_idea = idea_CHL_near_anarchic_society_2 
+			NOT = {
+				has_country_flag = CHL_no_more_anarchy_flag
+			}
+		}
+		swap_ideas = {
+			remove_idea = idea_CHL_near_anarchic_society_2
+			add_idea = idea_CHL_near_anarchic_society
+		}
+	}
+	ELSE_IF = {
+		limit = { 
+			has_idea = idea_CHL_near_anarchic_society_3 
+			NOT = {
+				has_country_flag = CHL_no_more_anarchy_flag
+			}
+		}
+		swap_ideas = {
+			remove_idea = idea_CHL_near_anarchic_society_3
+			add_idea = idea_CHL_near_anarchic_society_2
+		}
+	}
+	ELSE_IF = {
+		limit = { 
+			has_idea = idea_CHL_near_anarchic_society_4 
+			NOT = {
+				has_country_flag = CHL_no_more_anarchy_flag
+			}
+		}
+		swap_ideas = {
+			remove_idea = idea_CHL_near_anarchic_society_4
+			add_idea = idea_CHL_near_anarchic_society_3
+		}
+	}
+	ELSE_IF = {
+		limit = { 
+			NOT = { 
+				OR = {
+					has_idea = idea_CHL_near_anarchic_society_4 
+					has_idea = idea_CHL_near_anarchic_society
+				}
+			} 
+			NOT = {
+				has_country_flag = CHL_no_more_anarchy_flag
+			}
+		}
+		add_ideas = idea_CHL_near_anarchic_society_4
+	}
+}

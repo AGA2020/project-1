@@ -910,4 +910,47 @@ characters={
 			}
 		}
 	}
+
+
+	NOR_carsten_tank_nielsen={
+		name="Carsten Tank-Nielsen"
+		portraits={
+			army={
+				large=GFX_portrait_carsten_tank_nielsen
+				small=GFX_portrait_carsten_tank_nielsen_small
+			}
+		}
+
+		allowed_civil_war = {
+			NOR_char_cw_loyalist = yes 
+		}
+
+		navy_leader={
+			traits={ inshore_fighter seawolf }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			maneuvering_skill=2
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+
+
+	NOR_queen_mathilde_i={ # The Queen 
+		portraits={
+			civilian={
+				large=GFX_portrait_NOR_queen_mathilde_i
+			}
+		}
+		allowed_civil_war = {
+			NOR_char_cw_loyalist = yes
+		}		
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			traits = { NOR_queen_of_norway }
+			id=-1
+		}
+	}
 }

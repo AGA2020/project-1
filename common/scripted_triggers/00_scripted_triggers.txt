@@ -1276,3 +1276,31 @@ is_allied_seller_trigger = {
 	}
 }
 
+
+check_allow_alternate_political_events = {
+	OR = {
+		original_tag = PHI
+		#
+	}
+}
+
+
+has_hide_rule = {
+	has_game_rule = {
+		rule = obsolete_focus_branches_visibility
+		option = HIDE
+	}
+}
+
+is_JAP_or_ally_of_JAP = {
+	OR = {
+		tag = JAP
+		is_in_faction_with = JAP
+		is_subject_of = JAP
+	}
+}
+
+
+should_play_south_american_music = {
+	capital_scope = { is_on_continent = south_america }
+}

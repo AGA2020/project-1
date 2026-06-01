@@ -38,9 +38,6 @@ SPD_historical_plan = {
 		SPR_new_leadership
 		SPR_the_future_of_the_republic
 		SPR_petition_for_french_aid
-		SPR_reaffirm_the_popular_front_strategy
-		SPR_crush_the_revolution
-		SPR_relocate_the_gold_reserves
 		SPR_strengthen_the_euzko_gudarostea
 		SPR_fortify_the_iron_ring
 		SPR_ensure_loyalty

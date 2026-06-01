@@ -574,3 +574,69 @@ PRC_USA_lend_lease_strategy = {
 		}
 	}
 }
+
+
+PRC_current_china_leader_gets_small_antagonize_strategy = {
+	hidden_effect = {
+		if = {
+			limit = {
+				event_target:WTT_current_china_leader = {
+					NOT = {
+						tag = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			event_target:WTT_current_china_leader = {
+				add_ai_strategy = {
+					type = antagonize
+					id = ROOT
+					value = 10
+				}
+				add_ai_strategy = {
+					type = contain
+					id = ROOT
+					value = 10
+				}
+			}
+		}
+	}
+}
+
+
+PRC_decrease_asian_democratic_union_modfier_strength = {
+	subtract_from_variable = { #always remove faction members
+		PRC_asian_democratic_union_num_of_members = 1
+	}
+	if = {
+		limit = {
+			check_variable = { #Gotta have at least one ally
+				var = PRC_asian_democratic_union_num_of_members
+				value = 1
+				compare = greater_than
+			}	
+		}
+		subtract_from_variable = { PRC_asian_democratic_union_modifier_research_speed_factor = 0.01 }
+		add_to_variable = { PRC_asian_democratic_union_modifier_consumer_goods_factor = 0.02 }
+	}
+}
+
+
+PRC_increase_asian_democratic_union_modfier_strength = {
+	add_to_variable = { #always add a faction member
+		PRC_asian_democratic_union_num_of_members = 1
+	}
+	if = {
+		limit = {
+			check_variable = { #only add bonuses if you haven't reached the maximum amout yet
+				var = PRC_asian_democratic_union_num_of_members
+				value = 10
+				compare = less_than
+			}	
+		}
+		
+		add_to_variable = { PRC_asian_democratic_union_modifier_research_speed_factor = 0.01 }
+
+		subtract_from_variable = { PRC_asian_democratic_union_modifier_consumer_goods_factor = 0.02 }
+	}
+}

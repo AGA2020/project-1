@@ -58,3 +58,28 @@ hashemite_federation_cat = {
 		
 	}
 }
+
+
+IRQ_flood_the_plains_cat = {
+	icon = GFX_decision_category_border_conflicts
+	
+	allowed = {
+		original_tag = IRQ
+	}
+}
+
+
+KUR_syrian_border_skrimish_cat = {
+	
+	icon = GFX_decision_category_infiltration
+	priority = 100
+
+	allowed = {
+		original_tag = IRQ
+	}
+
+	visible = {
+		has_completed_focus = IRQ_kurdish_reject_ankara_treaty
+	}
+
+}

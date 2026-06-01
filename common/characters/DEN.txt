@@ -403,4 +403,114 @@ characters={
 			}
 		}
 	}
+
+
+	DEN_cay_lembcke = {
+		name = DEN_cay_lembcke
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DEN_cay_lembcke
+				small = GFX_portrait_DEN_cay_lembcke_small
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { DEN_fascist_militarist }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = DEN_cay_lembcke
+			allowed = {
+				original_tag = DEN
+				has_dlc = "Arms Against Tyranny"	
+			}
+			available = {
+				is_country_leader = no
+				OR = {
+					has_completed_focus = DEN_strengthen_the_officer_corp
+					has_government = fascism
+				}	
+				NOT = {
+					has_government = communism
+					has_character_flag = DEN_political_agitator_flag
+					has_country_flag = DEN_banned_fascism_flag
+				}
+			}
+			traits = {
+				prince_of_terror 
+			}
+			ai_will_do = {
+				base = 0
+			}
+			on_add = {
+				owner = {
+					DEN_advisor_low_BOP_increase_effect = yes
+				}
+			}
+			on_remove = {
+				owner = {
+					DEN_advisor_low_BOP_decrease_effect = yes
+				}
+			}
+		}
+	}
+
+
+	DEN_christmas_moller = {
+		name = DEN_christmas_moller
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DEN_christmas_moller
+				small = GFX_portrait_DEN_christmas_moller_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = DEN_christmas_moller
+			allowed = {
+				original_tag = DEN
+				has_dlc = "Arms Against Tyranny"
+			}
+			available = {
+				is_country_leader = no
+				NOT = { has_character_flag = DEN_political_agitator_flag }
+				NOT = { has_completed_focus = DEN_policy_of_disarmament }
+				NOT = { DEN_peter_rochegune_munch = { is_hired_as_advisor = yes }}
+			}
+			traits = {
+				rearmament_proponent 
+			}
+			ai_will_do = {
+				base = 5
+				modifier = {
+					factor = 0.5
+					DEN_historical_ai = yes
+				}
+				modifier = {
+					factor = 5
+					is_subject = yes
+				}
+				modifier = {
+					factor = 10
+					OR = {
+						DEN_rearming_ai = yes
+						DEN_royal_ai = yes					
+						DEN_fascist_ai = yes
+					}
+				}
+			}
+			on_add = {
+				owner = {
+					DEN_advisor_medium_BOP_increase_effect = yes
+				}
+			}
+			on_remove = {
+				owner = {
+					DEN_advisor_medium_BOP_decrease_effect = yes
+				}
+			}
+		}
+	}
 }

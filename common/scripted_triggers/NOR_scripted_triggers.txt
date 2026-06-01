@@ -271,3 +271,36 @@ NOR_has_40_convoys = {
 		convoy > 39
 	}
 }
+
+
+NOR_is_fascist_ai = {
+	is_ai = yes  
+	OR = {
+		has_game_rule = {
+			rule = NOR_AI_BEHAVIOR
+			option = NOR_FASCIST
+		}
+		has_country_flag = NOR_AI_RANDOM_FASCIST
+	}
+}
+
+
+NOR_kings_no_allow_trigger = {
+	if = {
+		limit = {
+			has_mtg = yes
+		}
+		if = {
+			limit = {
+				has_hide_rule = yes 
+			}
+			NOT = {
+				has_completed_focus = NOR_the_stumbling_storting
+				has_completed_focus = NOR_a_resurgent_labor_movement
+			}
+		}
+	}
+	else = {
+		always = no 
+	}
+}

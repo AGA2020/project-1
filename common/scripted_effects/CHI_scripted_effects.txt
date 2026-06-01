@@ -610,3 +610,187 @@ CHI_upgrade_wang_trait = {
 		}
 	}
 }
+
+CHI_infiltration_flag_down_2 = {
+	hidden_effect = {	
+		every_country = {
+			limit = { is_potentially_communist_china = yes }
+			PREV = {
+				modify_state_flag = {
+					flag = PRC_infiltration_@PREV
+					value = -2
+				}
+				if = {
+					limit = {
+						has_state_flag = {
+							flag = PRC_infiltration_@PREV
+							value < 1
+						}
+					}
+					clr_state_flag = PRC_infiltration_@PREV
+					clr_state_flag = discovered_infiltration
+				}
+			}
+		}	
+	}
+}
+
+
+CHI_is_corruption_in_government_on_balance_good = {
+	
+	set_variable = { on_balance = 0 }  #>0 = good <=0 bad
+
+
+	#PP GAIN
+	set_variable = { corruption_pp_gain = CHI_corruption_pp_gain } #more = negative lore wise
+	multiply_variable = { corruption_pp_gain = 0.95 }
+	multiply_variable = { corruption_pp_gain = -1 }
+	add_to_variable = { on_balance = corruption_pp_gain }
+
+	#CG
+	set_variable = { corruption_consumer_goods = CHI_corruption_consumer_goods }
+	multiply_variable = { corruption_consumer_goods = -1 }
+	add_to_variable = { on_balance = corruption_consumer_goods }
+	
+
+	#CONSTRUCTION SPEED
+	set_variable = { corruption_construction_speed = CHI_corruption_construction_speed }
+	add_to_variable = { on_balance = corruption_construction_speed }
+
+
+
+	#ARMS FACTORY
+	set_variable = { corruption_production_speed_arms_factory_factor = CHI_corruption_production_speed_arms_factory_factor }
+	add_to_variable = { on_balance = corruption_production_speed_arms_factory_factor }
+
+	
+	#CIC BOOST FACTOR
+	set_variable = { corruption_cic_construction_boost_factor = CHI_corruption_cic_construction_boost_factor }
+	multiply_variable = { corruption_cic_construction_boost_factor = 0.9 } #Weigh less in total
+	add_to_variable = { on_balance = corruption_cic_construction_boost_factor }
+
+
+	#FREE REPAIR FACTOR
+	set_variable = { corruption_free_repair_factor = CHI_corruption_free_repair_factor }
+	multiply_variable = { corruption_free_repair_factor = 0.4 } #Weigh way less
+	add_to_variable = { on_balance = corruption_free_repair_factor }
+
+	#FREE REPAIR FACTOR
+	set_variable = { corruption_conversion_cost_civ_to_mil_factor = CHI_corruption_conversion_cost_civ_to_mil_factor }
+	multiply_variable = { corruption_conversion_cost_civ_to_mil_factor = 0.4 } #Weigh less
+	add_to_variable = { on_balance = corruption_conversion_cost_civ_to_mil_factor }
+
+
+	set_variable = { corruption_economy_cost_factor = CHI_corruption_economy_cost_factor }
+	multiply_variable = { corruption_economy_cost_factor = 0.3 } #Weigh less
+	multiply_variable = { corruption_economy_cost_factor = -1 } #Weigh less
+	add_to_variable = { on_balance = corruption_economy_cost_factor }
+
+
+	clear_variable = corruption_pp_gain
+	clear_variable = corruption_consumer_goods
+	clear_variable = corruption_construction_speed
+	clear_variable = corruption_production_speed_arms_factory_factor
+	clear_variable = corruption_cic_construction_boost_factor
+	clear_variable = corruption_free_repair_factor
+	clear_variable = corruption_conversion_cost_civ_to_mil_factor
+	clear_variable = corruption_economy_cost_factor
+}
+
+
+CHI_kill_chiang_for_new_leader = {
+	IF = {
+		limit = { 
+			NOT = { has_dlc = "No Compromise, No Surrender" } 
+		}
+		kill_country_leader = yes
+		IF = {
+			limit = {
+				NOT = {
+					has_global_flag = CHI_wang_defects
+				}
+			}
+			create_country_leader = {
+				name = "Wang Jingwei"
+				desc = "POLITICS_WANG_JINGWEI_DESC"
+				picture = "GFX_portrait_chi_wang_jingwei"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+	ELSE = {
+		retire_character = CHI_chiang_kaishek
+		IF = {
+			limit = {
+				has_completed_focus = CHI_prepare_for_a_change_in_leadership
+			}
+			promote_character = {
+				character = CHI_wang_jingwei 
+				ideology = despotism 
+			}
+		}
+		ELSE_IF = {
+			limit = { has_completed_focus = CHI_strengthening_our_resolve }
+			
+			add_country_leader_role = {
+				character = CHI_dai_li 
+				promote_leader = yes
+				country_leader = {
+					ideology = despotism
+					expire = "1965.1.1.1"
+					traits = { CHI_leader_of_the_chinese_brotherhood_trait }
+				}
+			}
+			
+		}
+		ELSE_IF = {
+			limit = {
+				NOT = {
+					has_completed_focus = CHI_prepare_for_a_change_in_leadership
+					has_completed_focus = CHI_strengthening_our_resolve
+				}
+			}
+			promote_character = {
+				character = CHI_soong_mei_ling 
+				ideology = despotism 
+			}
+		}
+	}
+}
+
+CHI_show_state_uprising_effect_after_infiltration_level_down = {
+	custom_effect_tooltip = CHI_removed_infiltration
+	if = {
+		limit = {
+			any_country = {
+				is_potentially_communist_china = yes
+				PREV = {
+					has_state_flag = {
+						flag = PRC_infiltration_@PREV
+						value < 3
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = CHI_infiltration_not_detected
+	}
+	else_if = {
+		limit = {
+			any_country = {
+				is_potentially_communist_china = yes
+				PREV = {
+					has_state_flag = {
+						flag = PRC_infiltration_@PREV
+						value > 2
+					}
+				}
+			}
+		}
+		custom_effect_tooltip = PRC_infiltrate_uprising_header
+		custom_effect_tooltip = PRC_infiltrate_uprising_effect_1
+	}
+}

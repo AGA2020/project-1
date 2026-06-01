@@ -573,3 +573,36 @@ ITA_is_appropriate_cw_side_for_character_split = {
 		}
 	}
 }
+
+
+ITA_is_christian_democracy_ai = {
+	OR = {
+		has_country_flag = ITA_AI_RANDOM_CHRISTIAN_DEMOCRACY
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_CHRISTIAN_DEMOCRACY
+		}
+	}
+}
+
+
+ITA_is_communist_ai = {
+	OR = {
+		has_country_flag = ITA_AI_RANDOM_COMMUNIST_PLAN
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_COMMUNIST_PLAN
+		}
+	}
+}
+
+
+ITA_is_socialist_ai = {
+	OR = {
+		has_country_flag = ITA_AI_RANDOM_DEMOCRATIC_PLAN
+		has_game_rule = {
+			rule = ITA_ai_behavior
+			option = ITA_DEMOCRATIC_PLAN
+		}
+	}
+}

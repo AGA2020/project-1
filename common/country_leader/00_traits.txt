@@ -13324,3 +13324,275 @@ leader_traits = {
 		}
 	}
 }
+
+
+	AUS_embraced_fascism = {
+		random = no #Schuschnigg's fascist trait
+
+		fascism_acceptance = 50
+		fascism_drift = 0.03
+		war_support_factor = 0.05
+		surrender_limit = 0.1
+
+	}
+
+
+	AUS_king_of_austria = {
+		random = no #given to either Otto or Ernst Rüdiger Starhemberg in AUS_bring_back_the_habsburg_rule
+
+		political_power_factor = 0.1
+		neutrality_drift = 0.03
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		conscription = 0.005
+	}
+
+
+	AUS_prince_of_starhemberg = {
+		random = no #this is only for Ernst Rudiger Starhemberg
+		sprite = 13
+
+		neutrality_drift = 0.03
+		fascism_drift = 0.02
+		war_support_factor = 0.05
+	}
+
+
+	
+
+	AUS_under_german_pressure = {
+		random = no #Schuschnigg's starting trait
+
+		fascism_acceptance = 50
+		fascism_drift = 0.03
+		stability_factor = -0.1
+		surrender_limit = -0.15
+	}
+
+	BEL_belgian_fuhrer = { 
+		sprite = 10
+		random = no
+		fascism_drift = 0.05
+		war_support_factor = 0.10
+	}
+
+	BEL_belgian_inquisitor = { 
+		sprite = 10
+		random = no
+		fascism_drift = 0.03
+		war_support_factor = 0.05
+	}
+
+
+	blue_shirt_connections_0 = {
+		random = no
+		war_support_factor = 0.05
+		stability_factor = 0.05
+		fascism_drift = 0.02
+	}
+
+
+	blue_shirt_connections_1 = {
+		random = no
+		war_support_factor = 0.05
+		stability_factor = 0.05
+		fascism_drift = 0.05
+	}
+
+
+	CHI_all_china_generalisimo = {
+		sprite = 1
+		random = no
+
+		defensive_war_stability_factor = 0.4
+		max_surrender_limit_offset = 0.1
+		political_power_factor = 0.1 
+		neutrality_drift = 0.1
+		surrender_limit = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	CHI_asian_unifier_and_liberator = {
+		sprite = 10
+		random = no
+
+		subjects_autonomy_gain = -0.08
+		political_power_factor = 0.05
+		annex_subject_cost_factor = -0.25
+		compliance_gain = 0.01
+		surrender_limit = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	
+	CHI_civilian_unifier = {
+		sprite = 10
+		random = no
+
+		subjects_autonomy_gain = -0.02
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	CHI_civilian_unifier_upgraded = {
+		sprite = 10
+		random = no
+
+		subjects_autonomy_gain = -0.04
+		political_power_factor = 0.05
+		annex_subject_cost_factor = -0.15
+		surrender_limit = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	CHI_civilian_unifier_upgraded_2 = {
+		sprite = 10
+		random = no
+
+		subjects_autonomy_gain = -0.06
+		political_power_factor = 0.05
+		annex_subject_cost_factor = -0.25
+		surrender_limit = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	CHI_generallissimo_sea = {
+		random = no
+		defensive_war_stability_factor = 0.4
+		max_surrender_limit_offset = 0.1 
+		surrender_limit = 0.05
+	}
+
+
+	CHI_tsr_son_of_heaven = {
+		random = no
+		sprite = 14
+
+		drift_defence_factor = 0.15
+		party_popularity_stability_factor = 0.1
+
+	}
+
+
+	CHI_tsr_the_celestial_emperor = {
+		random = no
+		sprite = 14
+
+		drift_defence_factor = 0.5
+		party_popularity_stability_factor = 0.15
+		justify_war_goal_time = -0.25
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+
+	}
+
+
+	JAP_socialist_revolutionary = {
+		random = no
+		sprite = 13
+
+		communism_drift = 0.05
+		political_power_factor = 0.1
+		war_support_factor = 0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	KHM_governor_of_sinkiang = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.1
+		production_speed_buildings_factor = 0.05
+
+	}
+
+
+	KUM_champion_father_of_the_faithful = {
+		random = no
+		sprite = 13
+
+		political_power_factor = 0.1
+		production_speed_buildings_factor = 0.05
+		war_support_factor = 0.1
+		army_attack_factor = 0.1
+		army_defence_factor = 0.1
+
+	}
+
+
+	PRC_de_facto_leader = {
+		random = no #Mao 
+
+		political_power_gain = 0.1
+		stability_factor = 0.1
+		war_stability_factor = 0.05
+		army_morale_factor = 0.075
+
+	}
+
+
+	PRC_head_of_the_personality_cult = { 
+		random = no #Mao if Maoism is enforced
+
+		equipment_capture_factor = 0.15 #unsure how powerful this is
+		political_power_gain = 0.15
+		stability_factor = 0.1
+		war_stability_factor = 0.05
+		army_core_attack_factor = 0.05
+		army_defence_factor = 0.05
+		army_morale_factor = 0.1
+		conscription = 0.01
+
+	}
+
+
+	SIK_communist_in_name_only = {
+		random = no
+		sprite = 13
+
+		communism_acceptance = -40
+		war_support_factor = 0.05
+
+	}
+
+
+	SIK_duban = {
+		random = no
+		sprite = 13
+
+		conscription_factor = 0.05
+
+	}
+
+
+	SIK_the_king_of_sinkiang = {
+		random = no
+		sprite = 13
+
+		conscription_factor = 0.1
+		drift_defence_factor = 0.5
+		army_core_defence_factor = 0.05
+		justify_war_goal_time = -0.15
+
+	}

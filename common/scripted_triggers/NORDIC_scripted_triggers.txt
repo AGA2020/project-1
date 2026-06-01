@@ -241,3 +241,45 @@ NORDIC_valid_decision_target = {
 		has_war_with = ROOT 
 	}
 }
+
+
+NORDIC_communist_alliance_viable = {
+	ROOT = {
+		OR = {
+			has_global_flag = NORDIC_communist_alliance_formed
+			has_dynamic_modifier = { modifier = NORDIC_communist_alliance_leader_dmod }
+			has_dynamic_modifier = { modifier = NORDIC_communist_alliance_member_dmod }
+			AND = {
+				NORDIC_is_communist = yes 
+				NORDIC_alliance_created_already = no 
+				NORDIC_has_started_democratic_focus_tree = no
+				NORDIC_has_started_monarchist_focus_tree = no
+			}
+			AND = {
+				NORDIC_has_started_communist_focus_tree = yes
+				NORDIC_alliance_created_already = no 
+			} 
+		}
+	}
+}
+
+
+NORDIC_has_started_communist_focus_tree = {
+	OR = {
+		has_completed_focus = NOR_a_resurgent_labor_movement
+		has_completed_focus = SWE_align_more_closely_with_the_landsorganisationen
+		has_completed_focus = FIN_towards_a_red_government
+	}
+}
+
+NORDIC_is_communist = {
+	OR = {
+		original_tag = SWE
+		original_tag = NOR
+		original_tag = FIN
+		original_tag = DEN
+		original_tag = ICE
+	}
+	has_government = communism
+	# Add more triggers if needed
+}

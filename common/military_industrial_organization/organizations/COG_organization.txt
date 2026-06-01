@@ -75,3 +75,36 @@ COG_sabena_organization = {
 
 # They can also use BEL_minerva_imperia_motorized_organization found in BEL_organization
 
+
+COG_explosifs_congo_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_idea_societe_africain_de_explosifes
+	allowed = { 
+		tag = COG
+		has_dlc = "Gotterdammerung"
+	}
+
+	available = {
+		FROM = {
+			has_completed_focus = COG_societe_africaine_dexplosifs_congo
+		}
+	}
+
+	initial_trait = {
+		name = HUN_mio_trait_army_ammunition_and_wepaons_works
+		
+		limit_to_equipment_type = { 
+			infantry_equipment 
+		}
+		
+		equipment_bonus = {
+			reliability = 0.05
+			breakthrough = 0.03
+		}
+
+		production_bonus = {
+			production_cost_factor = -0.1
+		}
+	}
+
+}

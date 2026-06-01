@@ -199,9 +199,6 @@ FRA_alternate_plan_3_regular = {
 	}
 
 	ai_national_focuses = {
-		FRA_leftist_rhetoric						#October 10 1936
-		FRA_national_mobilization					#October 10 1936	
-		FRA_join_comintern 							#December 20 1936	
 		FRA_metropolitan_france 					#February 30 1937	
 		FRA_industrial_expansion 					#May 10 1937	
 		#FRA_initiate_government_reform 				#July 20 1937	
@@ -278,19 +275,11 @@ FRA_alternate_plan_3_lar = {
 
 	ai_national_focuses = {
 		FRA_form_the_popular_front
-		FRA_invite_communist_ministers
 		FRA_reform_the_labour_laws
-		FRA_strengthen_the_unions
-		FRA_womens_suffrage
-		FRA_legal_equality
-		FRA_force_the_issue
 		FRA_invest_in_the_metropole
 		FRA_metropolitan_france 					#February 30 1937	
 		FRA_algerie_france 							#June 30 1939
 		FRA_industrial_expansion 					#May 10 1937		
-		FRA_reconciliation 								#September 30 1937	
-		FRA_constitutional_convention
-		FRA_loyalty_to_moscow
 		FRA_capital_ship_focus 						#December 10 1937
 		FRA_defensive_focus 						#February 20 1938	
 		FRA_fortification_focus 					#April 30 1938	
@@ -363,11 +352,6 @@ FRA_alternate_plan_4_regular = {
 	}
 
 	focus_factors = {
-        FRA_leftist_rhetoric = 500    
-        FRA_national_mobilization = 500    
-        FRA_right_wing_rhetoric = 500    
-        FRA_army_of_aggression = 500    
-        FRA_woo_italy = 500
         FRA_military_factories = 10
         FRA_extra_research_slot = 100
         FRA_extra_research_slot_2 = 100                                                             
@@ -413,19 +397,12 @@ FRA_alternate_plan_4_lar = {
 	}
 	ai_national_focuses = {
 		FRA_revive_the_national_bloc
-		FRA_utilize_the_leagues
-		FRA_national_regeneration
 		FRA_agricultural_protectionism
 		FRA_economic_devolution
-		FRA_diplomatic_freedom
-		FRA_latin_entente
 		FRA_invest_in_the_metropole
 		FRA_metropolitan_france 					#February 30 1937	
 		FRA_algerie_france 							#June 30 1939
 		FRA_industrial_expansion 					#May 10 1937		
-		FRA_reconciliation 								#September 30 1937	
-		FRA_constitutional_convention
-		FRA_loyalty_to_moscow
 		FRA_capital_ship_focus 						#December 10 1937
 		FRA_defensive_focus 						#February 20 1938	
 		FRA_fortification_focus 					#April 30 1938	
@@ -457,12 +434,6 @@ FRA_alternate_plan_4_lar = {
 		 #July 30 1943		
 	}
 	focus_factors = {
-        FRA_reach_out_to_spain = 10
-        FRA_compensate_italy = 10
-        FRA_invite_portugal = 10
-        FRA_intervention_in_greece = 10
-        FRA_the_congress_of_paris = 10
-        FRA_the_natural_borders_of_france = 10                                                          
     }   
 	research = {
 
@@ -519,7 +490,6 @@ FRA_alternate_plan_little_entente = {
 	ai_national_focuses = {
 
 	
-		FRA_strengthen_the_little_entente
 		FRA_strengthen_government_support
 		FRA_metropolitan_france
 		#1937
@@ -531,8 +501,6 @@ FRA_alternate_plan_little_entente = {
 		#1938
 		FRA_defensive_strategems
 		FRA_defensive_focus
-		FRA_invite_yugoslavia
-		FRA_invite_romania
 		#1939
 		FRA_fortification_focus
 		FRA_alpine_forts
@@ -604,10 +572,7 @@ FRA_alternate_plan_fascist_regular = {
 		#1938
 		FRA_aggressive_focus
 		FRA_extra_research_slot_2
-		FRA_right_wing_rhetoric
 		#1939
-		FRA_army_of_aggression
-		FRA_join_germany
 		FRA_motorized_focus
 		FRA_mechanized_focus
 		FRA_light_medium_armor
@@ -673,7 +638,6 @@ FRA_alternate_plan_fascist_lar = {
 		FRA_invest_in_the_metropole
 		FRA_revive_the_national_bloc
 		FRA_agricultural_protectionism
-		FRA_utilize_the_leagues
 		
 		#1937
 		FRA_economic_devolution
@@ -684,29 +648,18 @@ FRA_alternate_plan_fascist_lar = {
 		#1938
 		FRA_military_factories
 		FRA_extra_research_slot
-		FRA_national_regeneration
-		FRA_diplomatic_freedom
-		FRA_towards_a_new_europe
 		#1939
 		FRA_aggressive_focus
 		FRA_extra_research_slot_2
-		FRA_political_unity
-		FRA_establish_spheres_of_influence
-		FRA_align_belgium
 		#1940
-		FRA_grow_the_empire
-		FRA_integralism
-		FRA_work
 		FRA_battle_of_maneuver
 		FRA_motorized_focus
 		#1941
 		FRA_mechanized_focus
 		FRA_light_medium_armor
 		FRA_army_reform
-		FRA_expand_to_the_suez
 		FRA_extra_research_slot_2
 		#1942
-		FRA_dominate_the_middle_east
 		FRA_naval_rearmament
 		FRA_capital_ship_focus
 		FRA_fighter_focus
@@ -762,10 +715,7 @@ FRA_alternate_plan_communist_regular = {
 		#1938
 		FRA_aggressive_focus
 		FRA_extra_research_slot_2
-		FRA_leftist_rhetoric
 		#1939
-		FRA_national_mobilization
-		FRA_join_comintern
 		FRA_motorized_focus
 		FRA_mechanized_focus
 		FRA_light_medium_armor
@@ -819,7 +769,6 @@ FRA_alternate_plan_communist_lar = {
 		FRA_devalue_the_franc
 		FRA_form_the_popular_front
 		FRA_reform_the_labour_laws
-		FRA_invite_communist_ministers
 		FRA_invest_in_the_metropole
 		#1937
 		FRA_invest_in_the_colonies
@@ -838,22 +787,16 @@ FRA_alternate_plan_communist_lar = {
 		FRA_form_the_state_arsenals
 		FRA_extend_the_maginot_line
 		FRA_army_reform
-		FRA_strengthen_the_unions
 		#1940
 		FRA_general_work_council
-		FRA_celebrate_the_commune
 		FRA_invest_in_indochina
 		FRA_invest_in_syria
 		FRA_invest_in_west_africa
 		#1941
 		FRA_colonial_industry
 		FRA_military_factories
-		FRA_force_the_issue
 		FRA_extra_research_slot_2
-		FRA_reconciliation
 		#1942
-		FRA_constitutional_convention
-		FRA_loyalty_to_moscow
 		FRA_naval_rearmament
 		FRA_capital_ship_focus
 		FRA_fighter_focus
@@ -902,7 +845,6 @@ FRA_alternate_plan_monarchist_orleans = {
 		FRA_devalue_the_franc
 		FRA_revive_the_national_bloc
 		FRA_agricultural_protectionism
-		FRA_utilize_the_leagues
 		FRA_invest_in_the_metropole
 		#1937
 		FRA_invest_in_the_colonies
@@ -912,9 +854,7 @@ FRA_alternate_plan_monarchist_orleans = {
 		FRA_algerie_france
 		#1938
 		FRA_industrial_expansion
-		FRA_the_council_of_rambouillet
 		FRA_extra_research_slot
-		FRA_revise_the_constitution
 		FRA_economic_devolution
 		#1939
 		FRA_methodical_battle
@@ -924,20 +864,14 @@ FRA_alternate_plan_monarchist_orleans = {
 		FRA_extend_the_maginot_line
 		#1940
 		FRA_army_reform
-		FRA_repeal_the_law_of_exile
 		FRA_invest_in_indochina
-		FRA_orleanist_restoration
 		FRA_invest_in_syria
 		FRA_invest_in_west_africa
 		#1941
 		FRA_colonial_industry
 		FRA_military_factories
-		FRA_the_first_citizen_of_the_state
 		FRA_extra_research_slot_2
-		FRA_counter_action
 		#1942
-		FRA_slum_clearing
-		FRA_no_further_humiliations
 		FRA_naval_rearmament
 		FRA_capital_ship_focus
 		FRA_fighter_focus
@@ -986,7 +920,6 @@ FRA_alternate_plan_monarchist_legitimate = {
 		FRA_devalue_the_franc
 		FRA_revive_the_national_bloc
 		FRA_agricultural_protectionism
-		FRA_utilize_the_leagues
 		FRA_invest_in_the_metropole
 		#1937
 		FRA_invest_in_the_colonies
@@ -996,9 +929,7 @@ FRA_alternate_plan_monarchist_legitimate = {
 		FRA_algerie_france
 		#1938
 		FRA_industrial_expansion
-		FRA_the_council_of_rambouillet
 		FRA_extra_research_slot
-		FRA_revise_the_constitution
 		FRA_economic_devolution
 		#1939
 		FRA_methodical_battle
@@ -1008,17 +939,13 @@ FRA_alternate_plan_monarchist_legitimate = {
 		FRA_extend_the_maginot_line
 		#1940
 		FRA_army_reform
-		FRA_repeal_the_law_of_exile
 		FRA_invest_in_indochina
-		FRA_the_legitimate_heir
 		FRA_invest_in_syria
 		FRA_invest_in_west_africa
 		#1941
 		FRA_colonial_industry
 		FRA_military_factories
-		FRA_secure_the_crown_of_spain
 		FRA_extra_research_slot_2
-		FRA_two_countries_two_crowns
 		#1942
 		FRA_naval_rearmament
 		FRA_capital_ship_focus
@@ -1067,11 +994,8 @@ FRA_alternate_plan_monarchist_bonaparte = {
 	ai_national_focuses = {
 		FRA_devalue_the_franc
 		FRA_revive_the_national_bloc
-		FRA_utilize_the_leagues
-		FRA_the_council_of_rambouillet
 		FRA_agricultural_protectionism
 		#1937
-		FRA_revise_the_constitution
 		FRA_invest_in_the_metropole
 		FRA_begin_rearmament
 		FRA_invest_in_the_colonies
@@ -1079,8 +1003,6 @@ FRA_alternate_plan_monarchist_bonaparte = {
 		#1938
 		FRA_metropolitan_france
 		FRA_algerie_france
-		FRA_repeal_the_law_of_exile
-		FRA_proclaim_the_third_empire
 		FRA_industrial_expansion
 		FRA_extra_research_slot
 		FRA_economic_devolution
@@ -1093,22 +1015,17 @@ FRA_alternate_plan_monarchist_bonaparte = {
 		#1940
 		FRA_army_reform
 		FRA_invest_in_indochina
-		FRA_avenge_waterloo
 		FRA_invest_in_syria
 		FRA_invest_in_west_africa
 		#1941
 		FRA_colonial_industry
 		FRA_military_factories
-		FRA_retribution_for_sedan
 		FRA_extra_research_slot_2
-		FRA_disunite_germany
 		#1942
 		FRA_naval_rearmament
 		FRA_capital_ship_focus
 		FRA_fighter_focus
 		FRA_cas_focus
-		FRA_return_to_borodino
-		FRA_je_suis_la_deluge
 	}			
 	research = {
 

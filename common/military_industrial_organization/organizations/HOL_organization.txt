@@ -75,3 +75,41 @@ HOL_hih_siderius_organization = {
 		tag = HOL
 	}
 }
+
+
+HOL_artillerie_inrichtingen_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_artillerie_inrichtingen
+	allowed = { 
+		has_dlc = "Man the Guns"
+		tag = HOL
+	}
+	available = {
+		owner = { has_completed_focus = HOL_expand_the_artillerieinrichtingen }
+	}
+}
+
+
+HOL_daf_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_HOL_daf
+	allowed = { 
+		has_dlc = "Man the Guns"
+		tag = HOL
+	}
+	available = {
+	}
+}
+
+
+HOL_fokker_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_idea_fokker
+	allowed = { 
+		has_dlc = "Man the Guns"
+		tag = HOL
+	}
+	available = {
+		
+	}
+}
