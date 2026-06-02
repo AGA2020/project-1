@@ -5,18 +5,43 @@ characters={
 			civilian={
 				large=GFX_portrait_MAN_aisin_gioro_puyi
 			}
+			army = {
+				small = GFX_idea_MAN_manchuria_henry_pu_yi 
+			}
 		}
-		country_leader={
-			ideology=rexism
-			traits={ warrior_code }
-			expire="1960.1.1.1"
-			id=-1
-		}
+
 		country_leader={
 			ideology=despotism
 			traits={ warrior_code }
 			expire="1960.1.1.1"
 			id=-1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = MAN_aisin_gioro_puyi
+			ledger = army
+			allowed = {
+				original_tag = MAN
+				NOT = {
+					has_country_leader = {
+						ruling_only = yes
+						character = MAN_aisin_gioro_puyi
+					}
+				}
+				has_dlc = "No Compromise, No Surrender"
+			}
+			visible = {
+				NOT = {
+					OR = {
+						has_completed_focus = MAN_tsr_the_question_of_leadership
+						has_completed_focus = MAN_tsr_question_the_emperors_authority
+						has_completed_focus = MAN_tsr_purge_the_general_affairs_council
+					}
+				}
+			}
+			traits = {
+				MAN_supreme_commander
+			}
 		}
 	}
 	MAN_zhang_haipeng={
@@ -44,6 +69,16 @@ characters={
 				large="GFX_portrait_man_zhang_jinghui"
 				small="GFX_idea_MAN_zhang_jinghui"
 			}
+			civilian = {
+				large = GFX_portrait_MAN_zhang_jinghui_civilian
+				small = GFX_portrait_MAN_zhang_jinghui_civilian_small
+			}
+		}
+		country_leader = {
+			ideology = rexism
+			traits = { MAN_japanese_puppet }
+			expire = "1960.1.1.1"
+			id = -1
 		}
 		corps_commander={
 			traits={ brilliant_strategist politically_connected trickster trait_engineer organizer infantry_leader panzer_leader trickster commando }

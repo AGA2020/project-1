@@ -13983,20 +13983,20 @@ JAP_the_peoples_state_decisions = {
 		timeout_effect = {
 
 			custom_effect_tooltip = JAP_tokko_arresting_anti_army_disidents_mission_tt
-			show_ideas_tooltip = JAP_kozo_sasaki
+			#show_ideas_tooltip = JAP_kozo_sasaki
 			show_ideas_tooltip = JAP_komakichi_matsuoka
 			show_ideas_tooltip = JAP_mitsumasa_yonai
 			show_ideas_tooltip = JAP_noboru_yamaguchi
 
 			hidden_effect = {
 				set_country_flag = JAP_IJA_arrested_advisors_flag
-				JAP_kozo_sasaki = {
-					set_portraits = {
-						civilian = {
-							small = GFX_portrait_JAP_kozo_sasaki_imprisoned
-						}
-					}
-				}
+				#JAP_kozo_sasaki = {
+				#	set_portraits = {
+				#		civilian = {
+				#			small = GFX_portrait_JAP_kozo_sasaki_imprisoned
+				#		}
+				#	}
+				#}
 				JAP_komakichi_matsuoka = {
 					set_portraits = {
 						civilian = {

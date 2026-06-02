@@ -10282,19 +10282,19 @@ country_event = {
 				NOT = {
 					has_country_leader = {
 						ruling_only = yes
-						character = JAP_machida_chuuji
+						name = "Deleted"
 					}	
 				}
 			}
-			add_country_leader_role = {
-				character = JAP_machida_chuuji
-				promote_leader = yes
-				country_leader = {
-					ideology = liberalism
-					expire = "1989.1.1.1"
-					traits = { HUN_popular_liberal } 
-				}
-			}
+			#add_country_leader_role = {
+			#	character = JAP_machida_chuuji
+			#	promote_leader = yes
+			#	country_leader = {
+			#		ideology = liberalism
+			#		expire = "1989.1.1.1"
+			#		traits = { HUN_popular_liberal } 
+			#	}
+			#}
 			set_party_name = {
 				ideology = democratic
 				long_name = JAP_unity_cabinet_party_long
@@ -12208,7 +12208,7 @@ country_event = {
 				}	
 				has_country_leader = {
 					ruling_only = yes
-					character = JAP_seigo_nakano
+					name = "Deleted"
 				}	
 			}
 		}
@@ -12331,11 +12331,11 @@ country_event = {
 		set_country_flag = JAP_kyujo_incident_rebels_lost_flag 
 
 		hidden_effect = {
-			JAP_tetsu_katayama = {
-				promote_character = {
-				    ideology = liberalism
-				}
-			}
+			#JAP_tetsu_katayama = {
+			#	promote_character = {
+			#	    ideology = liberalism
+			#	}
+			#}
 		}
 
 	}
@@ -12369,11 +12369,11 @@ country_event = {
 		set_country_flag = JAP_kyujo_incident_rebels_won_flag 
 
 		hidden_effect = {
-			JAP_tetsu_katayama = {
-				promote_character = {
-				    ideology = liberalism
-				}
-			}
+			#JAP_tetsu_katayama = {
+			#	promote_character = {
+			#	    ideology = liberalism
+			#	}
+			#}
 		}
 
 	}
@@ -12560,7 +12560,7 @@ country_event = {
 
 		has_country_leader = {
 			ruling_only = yes
-			character = JAP_tokugawa_iesato
+			name = "Deleted"
 		}	
 		
 		has_civil_war = no
