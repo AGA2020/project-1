@@ -1,0 +1,689 @@
+# Hidden compatibility stubs for 1.18 decision IDs referenced by imported focus/AI files.
+# These do not restore non-historical gameplay branches; they only keep references valid.
+MAN_march_on_beijing_decisions = {
+	icon = generic_decision
+	allowed = { always = no }
+	visible = { always = no }
+}
+
+VIC_concessions_to_the_germans = {
+	icon = generic_decision
+	allowed = { always = no }
+	visible = { always = no }
+}
+
+hist_missing_decision_stubs = {
+	icon = generic_decision
+	allowed = { always = no }
+	visible = { always = no }
+
+	ETH_conquer_addis_ababa_mission = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_mission_timeout = 1
+		is_good = no
+		timeout_effect = { }
+	}
+
+	ETH_conquer_harar_mission = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_mission_timeout = 1
+		is_good = no
+		timeout_effect = { }
+	}
+
+	form_baltic_federation = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	CHI_develop_hunan_tungsten_mines = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	CHI_develop_jiangxi_tungsten_mines = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	form_east_africa = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	form_hre = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	form_commonwealth = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	expand_greenlands_mines = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_bop_occupation_criticize_collaboration = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_bop_occupation_strikes = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_bop_occupation_resistance_coordination = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_bop_occupation_underground_factories = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_bop_occupation_raid_depots = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_seek_danish_brigades_host = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_bop_occupation_funnel_resources_danish_brigade = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_buy_foreign_destroyers = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_seek_foreign_support_decision = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_ask_for_weapons_decision = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_bop_ban_all_political_uniforms = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_bop_speak_out_in_favor_of_rearmament = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_bop_hold_a_military_parade = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_bop_landstorm = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_army_drills = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_navy_drills = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_air_drills = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_seek_guarantor = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_seek_an_alliance = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_demand_icelandic_territory = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_integrate_sweden = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_demand_swedish_territory = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_integrate_finland = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_integrate_norway = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_rally_the_icelanders = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_rally_the_swedes = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_rally_the_finnish = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_rally_the_norwegians = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	DEN_deploy_the_home_guard = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	form_nordic_league = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_prepare_coup_in_north_africa = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_promise_independence_to_north_africa = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_prepare_coup_in_west_africa = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_promise_independence_to_west_africa = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_invasion_in_west_africa = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_prepare_coup_in_syria = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_promise_independence_to_syria = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_invasion_in_syria = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_prepare_coup_in_indochina = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_promise_independence_to_indochina = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_invasion_in_indochina = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_prepare_coup_in_central_africa = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_promise_independence_to_central_africa = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_invasion_in_central_africa = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_prepare_coup_in_madagascar = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	FRA_promise_independence_to_madagascar = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	form_greater_greece = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	byz_restore_byzantium = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	form_the_horn_of_africa = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	JAP_pressure_france = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	MAN_establish_the_erdaojiang_special_steel_experimental_plant = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	MAN_request_full_control_over_china = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	MAN_fund_underground_gun_shops = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	MAN_recruit_bandits_generic = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	MAN_raise_manchu_banner = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	MAN_prepare_to_seize_arms = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	PAR_appoint_estigarribia_as_leader = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	PAR_flip_to_fascism = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	SOV_set_up_puppet_state_in_turkey = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	SOV_preparations_for_operation_countenance = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_mission_timeout = 1
+		is_good = no
+		timeout_effect = { }
+	}
+
+	HUN_place_wied_on_the_albanian_throne = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	HUN_place_a_habsburg_on_the_polish_throne = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	HUN_place_a_habsburg_on_the_spanish_throne = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	HUN_place_a_habsburg_on_the_mexican_throne = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+	HUN_place_a_habsburg_on_the_lombardo_venetian_throne = {
+		icon = generic_decision
+		visible = { always = no }
+		available = { always = no }
+		cost = 0
+		days_remove = 1
+		complete_effect = { }
+	}
+
+}

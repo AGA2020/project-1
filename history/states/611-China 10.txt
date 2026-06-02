@@ -7,8 +7,10 @@ state={
 	state_category = pastoral
 
 history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = MAN
-		add_core_of = MAN
+		owner = MEN
+		add_core_of = MEN
+		add_core_of = CHI
+		add_core_of = PRC
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = canadian_focus
 	
 	country = {
@@ -2551,7 +2551,7 @@
 				bonus = 0.5
 				ahead_reduction = 2
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 			}
 			add_tech_bonus = {
 				name = CAN_light_cruiser_effort

@@ -678,3 +678,49 @@ JUNO_immigration_promoted = {
 	local_manpower = 0.4
 	state_production_speed_buildings_factor = 0.05
 }
+
+idea_URG_ruralism_good = { #STATE MODIFIER
+	remove_trigger = { 
+		URG = { has_capitulated = yes } 
+
+	}
+
+	icon = GFX_modifiers_ETH_state_development
+	local_building_slots_factor = 0.5
+
+	local_manpower = 2
+	local_resources_factor = 0.5
+	state_production_speed_buildings_factor = 0.25
+}
+
+idea_URG_ruralism_good_2 = { #STATE MODIFIER
+	remove_trigger = { 
+		URG = { has_capitulated = yes } 
+
+	}
+
+	icon = GFX_modifiers_ETH_state_development
+	local_building_slots_factor = 0.75
+
+	local_manpower = 3
+	local_resources_factor = 1
+	state_production_speed_buildings_factor = 0.35
+}
+
+idea_URG_ruralism_bad = { #STATE MODIFIER
+	remove_trigger = { 
+		URG = { has_capitulated = yes } 
+
+	}
+	icon = BRA_neglected_state_dynamic_modifier
+	state_production_speed_buildings_factor = -0.1
+}
+
+idea_URG_ruralism_bad_2 = { #STATE MODIFIER
+	remove_trigger = { 
+		URG = { has_capitulated = yes } 
+
+	}
+	icon = BRA_neglected_state_dynamic_modifier
+	state_production_speed_buildings_factor = -0.18
+}

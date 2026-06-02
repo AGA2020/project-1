@@ -1,4 +1,4 @@
-﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -1954,7 +1954,7 @@ focus_tree = {
 				name = SPA_restart_small_scale_shipbuilding
 				bonus = 1
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 				category = ca_tech
 			}
 			add_tech_bonus = {
@@ -3016,7 +3016,7 @@ focus_tree = {
 				name = SPR_navy_modernization
 				bonus = 1
 				uses = 2
-				category = cl_tech
+				category = ca_tech
 				category = ca_tech
 			}
 		}

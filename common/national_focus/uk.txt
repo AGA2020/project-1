@@ -1,4 +1,4 @@
-﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_POLITICAL}
 ### search_filters = {FOCUS_FILTER_RESEARCH}
 ### search_filters = {FOCUS_FILTER_INDUSTRY}
 ### search_filters = {FOCUS_FILTER_STABILITY}
@@ -1390,7 +1390,7 @@ focus_tree = {
 				name = ENG_secure_the_imperial_shipping_routes
 				bonus = 1
 				uses = 2
-				category = cl_tech
+				category = ca_tech
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = ENG_secure_the_imperial_shipping_routes

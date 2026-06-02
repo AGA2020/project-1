@@ -1889,7 +1889,7 @@ focus_tree = {
 				name = BUL_an_aegean_sea_fleet
 			    bonus = 1.0
 			    uses = 2
-			    category = cl_tech
+			    category = ca_tech
 			    category = ca_tech
 			}
 			BUL_replace_national_naval_designer = yes

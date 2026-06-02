@@ -1664,7 +1664,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			remove_ideas = JAP_duplicate_research_efforts
+			remove_ideas = JAP_separate_air_services
 		}
 	}
 
@@ -2107,7 +2107,7 @@ focus_tree = {
 				name = JAP_cruiser_modernization
 				bonus = 2.0
 				uses = 1
-				category = cl_tech	
+				category = ca_tech	
 				category = ca_tech	
 			}
 		}
