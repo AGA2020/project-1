@@ -43,7 +43,7 @@ focus_tree = {
 			tag = ETH
 		}
 		modifier = {
-			add = 10
+			add = 1000
 			tag = CHI
 		}
 		modifier = {

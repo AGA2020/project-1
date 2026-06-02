@@ -408,11 +408,6 @@ bookmarks = {
 				CHI_corruption_in_the_armed_forces_fake_ns
 				CHI_nine_power_treaty_sea_fake_ns
 			}
-			focuses = {
-				CHI_denounce_feudalism
-				CHI_prepare_for_a_change_in_leadership
-				CHI_strengthening_our_resolve
-			}
 		}
 		PRC = {
 			minor = yes

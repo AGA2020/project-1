@@ -20,11 +20,6 @@ focus_tree = {
 	
 	country = {
 		factor = 0
-		modifier = {
-			add = 1000
-			tag = CHI
-			has_dlc = "No Compromise, No Surrender"
-		}
 	}
 	initial_show_position = {
 		x = 40
