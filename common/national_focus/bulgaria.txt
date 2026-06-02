@@ -1890,7 +1890,6 @@ focus_tree = {
 			    bonus = 1.0
 			    uses = 2
 			    category = ca_tech
-			    category = ca_tech
 			}
 			BUL_replace_national_naval_designer = yes
 

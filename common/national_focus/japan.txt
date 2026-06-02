@@ -2108,7 +2108,6 @@ focus_tree = {
 				bonus = 2.0
 				uses = 1
 				category = ca_tech	
-				category = ca_tech	
 			}
 		}
 	}

@@ -20,12 +20,12 @@ tech_license = {
 	icon = "GFX_decision_generic_tank"
 	default = {
 		name = on
-		text = "GOn"
+		text = "§GOn"
 		desc = "You will be able to take tech licenses via decision so minors cant cuck you (Recommmended)"
 	}
 	option = {
 		name = off
-		text = "ROff"
+		text = "§ROff"
 		desc = "You cant be able to take tech licenses via decision (Not Recommended)"
 	}
 }
@@ -36,17 +36,17 @@ max_submarine_tech = {
 	icon = "GFX_decision_generic_research"
 	default = {
 		name = sub2
-		text = "G1936"
+		text = "§G1936"
 		desc = "Submarine 3 and Snorkel 1 banned (Reccomended)"
 	}
 	option = {
 		name = sub3
-		text = "R1940"
+		text = "§R1940"
 		desc = "Submarine 3 and Snorkel 1 allowed (Not Reccomended)"
 	}
 	option = {
 		name = sub4
-		text = "R1944"
+		text = "§R1944"
 		desc = "Submarine 4 and Snorkel 2 allowed (Not Reccomended)"
 	}
 }
@@ -57,12 +57,12 @@ anti_fascist = {
 	icon = "GFX_decision_eng_trade_unions_support"
 	option = {
 		name = on
-		text = "ROn"
+		text = "§ROn"
 		desc = "Soviet Can Select Anti-Fascist Focuses (%10 Stat)"
 	}
 	default = {
 		name = off
-		text = "GOff"
+		text = "§GOff"
 		desc = "Soviet Can't Select Anti-Fascist Focuses (%10 Stat)"
 	}
 }
@@ -73,17 +73,17 @@ tradebacks = {
 	icon = "GFX_decision_eng_trade_unions_support"
 	default = {
 		name = off
-		text = "GOff"
+		text = "§GOff"
 		desc = "No tradeback idea (Reccomended)"
 	}
 	option = {
 		name = on
-		text = "ROn"
+		text = "§ROn"
 		desc = "Everyone has a tradeback idea that givens -100% missing resource penalty until September 1939 (Not Reccomended)"
 	}
 	option = {
 		name = not_allies
-		text = "RNot Allies"
+		text = "§RNot Allies"
 		desc = "Everyone has no tradeback idea except for Allies (Not Reccomended)"
 	}
 }
@@ -94,12 +94,12 @@ elwolf_guerrilla_tactics = {
 	icon = "GFX_decision_hol_war_on_pacifism"
 	default = {
 		name = ALLOWED
-		text = "GAllowed"
+		text = "§GAllowed"
 		desc = "Gurilla Tatics are able to be Selected"
 	}
 	option = {
 		name = BLOCKED
-		text = "RBanned"
+		text = "§RBanned"
 		desc = "Gurilla Tatics are not able to be Selected"
 	}
 }

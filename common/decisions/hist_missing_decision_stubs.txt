@@ -1,27 +1,10 @@
 # Hidden compatibility stubs for 1.18 decision IDs referenced by imported focus/AI files.
 # These do not restore non-historical gameplay branches; they only keep references valid.
-MAN_march_on_beijing_decisions = {
-	icon = generic_decision
-	allowed = { always = no }
-	visible = { always = no }
-}
-
-VIC_concessions_to_the_germans = {
-	icon = generic_decision
-	allowed = { always = no }
-	visible = { always = no }
-}
-
 hist_missing_decision_stubs = {
-	icon = generic_decision
-	allowed = { always = no }
-	visible = { always = no }
-
 	ETH_conquer_addis_ababa_mission = {
 		icon = generic_decision
 		visible = { always = no }
 		available = { always = no }
-		cost = 0
 		days_mission_timeout = 1
 		is_good = no
 		timeout_effect = { }
@@ -31,7 +14,6 @@ hist_missing_decision_stubs = {
 		icon = generic_decision
 		visible = { always = no }
 		available = { always = no }
-		cost = 0
 		days_mission_timeout = 1
 		is_good = no
 		timeout_effect = { }
@@ -635,7 +617,6 @@ hist_missing_decision_stubs = {
 		icon = generic_decision
 		visible = { always = no }
 		available = { always = no }
-		cost = 0
 		days_mission_timeout = 1
 		is_good = no
 		timeout_effect = { }

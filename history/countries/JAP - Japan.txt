@@ -377,7 +377,7 @@ create_equipment_variant = {
 	name = "Arisaka Type 99"
 	type = infantry_equipment_1
 	parent_version = 0
-	design_team = mio:JAP_tokyo_arsenal_organization
+	design_team = mio:JAP_kokura_arsenal_organization
 }
 
 

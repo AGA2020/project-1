@@ -1,0 +1,19 @@
+# Hidden compatibility categories for references kept out of the historical ruleset.
+
+hist_missing_decision_stubs = {
+	icon = generic_decision
+	allowed = { always = no }
+	visible = { always = no }
+}
+
+MAN_march_on_beijing_decisions = {
+	icon = generic_decision
+	allowed = { always = no }
+	visible = { always = no }
+}
+
+VIC_concessions_to_the_germans = {
+	icon = generic_decision
+	allowed = { always = no }
+	visible = { always = no }
+}

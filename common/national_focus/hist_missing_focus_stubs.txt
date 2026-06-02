@@ -4640,5 +4640,56 @@ focus_tree = {
         available_if_capitulated = no
         completion_reward = { }
     }
-
+    focus = {
+        id = JAP_foreign_tank_modernization_cooperation
+        icon = GFX_goal_generic_political_pressure
+        x = 331
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+    focus = {
+        id = JAP_seek_strength_in_numbers
+        icon = GFX_goal_generic_political_pressure
+        x = 332
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+    focus = {
+        id = JAP_sea_unify_the_air_forces
+        icon = GFX_goal_generic_political_pressure
+        x = 333
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
+    focus = {
+        id = JAP_improve_the_type_91_aerial_torpedo
+        icon = GFX_goal_generic_political_pressure
+        x = 334
+        y = 0
+        cost = 10
+        available = { always = no }
+        ai_will_do = { factor = 0 }
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+        completion_reward = { }
+    }
 }

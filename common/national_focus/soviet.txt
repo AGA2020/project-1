@@ -2068,7 +2068,6 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = ca_tech
-				category = ca_tech
 			}
 			create_equipment_variant = {
 				name = "Kronshtadt Class"		

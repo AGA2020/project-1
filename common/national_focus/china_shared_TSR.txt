@@ -1,4 +1,4 @@
-﻿#	shared_focus = {
+#	shared_focus = {
 #		id = CHI_sea_
 #		icon = GFX_
 #		prerequisite = { focus = }
@@ -1669,7 +1669,7 @@ shared_focus = {
 				}
 			}
 			create_corps_commander = {
-				name = "Thierry BÃ©nÃ©dicte"
+				name = "Thierry Bénédicte"
 				gfx = GFX_europe_generic_land_3
 				attack_skill = 2
 				defense_skill = 3
