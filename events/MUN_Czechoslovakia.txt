@@ -177,8 +177,8 @@ country_event = {
 			GER = {
 				OR = {
 					has_completed_focus = GER_remilitarize_the_rhineland
-					has_completed_focus = GER_oppose_hitler
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
+					always = no
 				}
 			}
 			HUN = { 
@@ -201,7 +201,7 @@ country_event = {
 				}
 			}
 			ROM = {
-				has_completed_focus = ROM_balkans_dominance
+				always = no
 			}
 			date > 1936.10.10 #Okay, enough waiting for this to trigger
 		}

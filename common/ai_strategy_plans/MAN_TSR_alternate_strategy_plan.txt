@@ -32,7 +32,7 @@ MAN_default_plan = {
 		}
 	}
 	abort = {
-		has_completed_focus = MAN_assertiveness
+		always = no
 		
 	}
 

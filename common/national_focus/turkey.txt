@@ -2604,7 +2604,7 @@ focus_tree = {
 			every_country_with_original_tag = {
 				original_tag_to_check = GER
 				limit = {
-					has_completed_focus = GER_revive_the_kaiserreich
+					always = no
 				}
 				add_opinion_modifier = {
 					target = TUR
@@ -2614,7 +2614,7 @@ focus_tree = {
 			every_country_with_original_tag = {
 				original_tag_to_check = ENG
 				limit = {
-					has_completed_focus = ENG_the_kings_party
+					always = no
 				}
 				add_opinion_modifier = {
 					target = TUR
@@ -2634,7 +2634,7 @@ focus_tree = {
 			every_country_with_original_tag = {
 				original_tag_to_check = FRA
 				limit = {
-					has_completed_focus = FRA_repeal_the_law_of_exile
+					always = no
 				}
 				add_opinion_modifier = {
 					target = TUR
@@ -2674,7 +2674,7 @@ focus_tree = {
 			every_country_with_original_tag = {
 				original_tag_to_check = ROM
 				limit = {
-					has_completed_focus = ROM_his_majestys_loyal_government
+					always = no
 				}
 				add_opinion_modifier = {
 					target = TUR
@@ -2765,19 +2765,19 @@ focus_tree = {
 			OR = {
 				GER = { 
 					AND = {
-						has_completed_focus = GER_the_central_powers 
+						always = no
 						has_government = neutrality
 					}
 				}
 				GER = {
 					AND = {
 						has_government = neutrality
-						has_completed_focus = GER_mitteleuropa
+						always = no
 					}
 				}
 				HUN = { 
 					OR = {
-						has_completed_focus = wuw_HUN_the_lands_of_the_crown_of_saint_stephen
+						always = no
 						has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary 
 					}
 				}
@@ -2803,7 +2803,7 @@ focus_tree = {
 				limit = {
 					GER = { 
 						has_government = neutrality
-						has_completed_focus = GER_the_central_powers
+						always = no
 					}
 				}
 				GER = {
@@ -2814,7 +2814,7 @@ focus_tree = {
 				limit = {
 					GER = { 
 						has_government = neutrality
-						NOT = { has_completed_focus = GER_the_central_powers }
+						always = yes
 					}
 				}
 				GER = {
@@ -2831,7 +2831,7 @@ focus_tree = {
 				limit = {
 					HUN = { 
 						OR = {
-							has_completed_focus = wuw_HUN_the_lands_of_the_crown_of_saint_stephen
+							always = no
 							has_completed_focus = HUN_proclaim_the_restoration_of_austria_hungary 
 						}
 					}
@@ -5659,8 +5659,8 @@ focus_tree = {
 				is_faction_leader = yes
 				NOT = {
 					OR = {
-						has_completed_focus = ENG_the_kings_party
-						has_completed_focus = ENG_concessions_to_the_trade_unions
+						always = no
+						always = no
 					}
 				}
 			}
@@ -5758,7 +5758,7 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				ENG = { has_completed_focus = ENG_revisit_colonial_policy }
+				always = no
 				ENG = {
 					NOT = {
 						controls_state = 455
@@ -6063,7 +6063,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			ENG = { has_completed_focus = ENG_revisit_colonial_policy }
+			always = no
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }

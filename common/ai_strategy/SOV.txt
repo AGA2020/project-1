@@ -371,7 +371,7 @@ southern_thrust = {
 		original_tag = SOV
 	}
 	enable = {
-		has_completed_focus = SOV_the_southern_thrust
+		always = no
 		OR = {
 			country_exists = IRQ
 			country_exists = PER
@@ -458,7 +458,7 @@ claims_on_sinkiang = {
 		original_tag = SOV
 	}
 	enable = {
-		has_completed_focus = SOV_spheres_of_influence_in_china
+		always = no
 		country_exists = CHI
 	}
 	abort = {
@@ -479,7 +479,7 @@ japan_ally = {
 		original_tag = SOV
 	}
 	enable = {
-		has_completed_focus = SOV_reconcile_japan
+		always = no
 		country_exists = JAP
 	}
 	abort = {
@@ -504,8 +504,8 @@ germany_ally = {
 	}
 	enable = {
 		OR = {
-			has_completed_focus = SOV_anti_capitalist_policies
-			GER = { has_completed_focus = GER_alliance_with_the_ussr }
+			always = no
+			always = no
 		}
 		country_exists = GER
 	}
@@ -1008,17 +1008,17 @@ SOV_dont_send_volunteers_that_early_to_china = {
 		OR = {
 			#Soviet focus plans are set so that they support a Chinese tag in 39-40
 			AND = {
-				has_completed_focus = SOV_the_gobi_gambit
+				always = no
 				country_exists = SIK
 				SIK = { has_war_with = JAP }
 			}
 			AND = {
-				has_completed_focus = SOV_two_red_flags
+				always = no
 				country_exists = PRC
 				PRC = { has_war_with = JAP }
 			}
 			AND = {
-				has_completed_focus = SOV_support_the_kuomintang
+				always = no
 				country_exists = CHI
 				CHI = { has_war_with = JAP }
 			}

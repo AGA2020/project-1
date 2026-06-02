@@ -5009,10 +5009,10 @@ focus_tree = {
 						limit = {
 							NOT = { has_dlc = "Gotterdammerung" }
 						}
-						has_completed_focus = GER_oppose_hitler
+						always = no
 					}
 					else = {
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
 					}
 					exists = no
 				}
@@ -6221,11 +6221,8 @@ focus_tree = {
 					SOU = {					
 						NOT = {
 							OR = {
-								focus_progress = { 
-									focus = SOV_the_left_opposition
-									progress > 0	
-								}
-								has_completed_focus = SOV_the_left_opposition
+								always = no
+								always = no
 							} 
 						}
 					}

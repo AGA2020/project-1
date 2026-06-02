@@ -42,8 +42,8 @@ country_event = {
 			factor = 20
 			modifier = {
 				OR = {
-					has_completed_focus = ENG_revisit_colonial_policy
-					has_completed_focus = ENG_concessions_to_the_trade_unions
+					always = no
+					always = no
 				}
 				factor = 80
 			}
@@ -230,7 +230,7 @@ country_event = {
 		ai_chance = {
 			factor = 30
 			modifier = {
-				has_completed_focus = ENG_global_defense
+				always = no
 				factor = 80
 			}
 		}
@@ -3325,7 +3325,7 @@ country_event = {
 		trigger = {
 			ENG = { 
 				OR = { 
-					has_completed_focus = ENG_global_defense 
+					always = no
 					has_completed_focus = ENG_prepare_for_the_inevitable
 				}
 			}
@@ -3339,8 +3339,8 @@ country_event = {
 		name = bftb_turkey.75.c #the divine right of kings must be protected
 		trigger = {
 			ENG = { 
-				has_completed_focus = ENG_the_kings_party
-				NOT = { has_completed_focus = ENG_alliance_with_germany }
+				always = no
+				always = yes
 			}
 		}
 		create_wargoal = {
@@ -3352,7 +3352,7 @@ country_event = {
 		name = bftb_turkey.75.d #we would like our oil back, thanks
 		trigger = {
 			ENG = { 
-				has_completed_focus = ENG_alliance_with_germany
+				always = no
 			}
 		}
 		IRQ = { country_event = { id = bftb_turkey.77 } }

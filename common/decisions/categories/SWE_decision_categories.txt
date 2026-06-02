@@ -110,7 +110,7 @@ SWE_appeal_for_support_cat = {
 	icon = GFX_decision_category_SOV_propaganda
 	priority = 70
 	visible = {
-		has_completed_focus = SWE_appeal_for_support
+		always = no
 		has_capitulated = no
 	}
 	visible_when_empty = no
@@ -126,7 +126,7 @@ SWE_coalition_war_cabinet_cat = {
 		icon = GFX_decision_category_eng_appeal_to_imperial_loyalists
 		priority = 50
 		visible = {
-			has_completed_focus = SWE_coalition_war_cabinet
+			always = no
 			NOT = { has_country_flag = SWE_has_picked_war_cabinet_trait }
 		}
 }
@@ -139,7 +139,7 @@ SWE_coax_nordic_defense_council_cat = {
 	}
 	priority = 50
 	visible = {
-		has_completed_focus = SWE_central_nordic_army_command
+		always = no
 		exists = yes
 		has_capitulated = no
 		is_subject = no
@@ -191,8 +191,8 @@ SWE_communist_foreign_influence = {
 	icon = GFX_decision_category_generic_communism
 	visible = {
 		OR = {
-			has_completed_focus = SWE_support_norwegian_communists
-			has_completed_focus = SWE_support_danish_communists
+			always = no
+			always = no
 		}
 	}
 	priority = 10
@@ -226,8 +226,8 @@ SWE_military_matters ={
 	priority = 80
 	visible = {
 		OR = {
-			has_completed_focus = SWE_jagartrupper
-			has_completed_focus = SWE_hemvarnet
+			always = no
+			always = no
 
 		}
 
@@ -248,7 +248,7 @@ SWE_rationing_policies = {
 	visible = {
 		has_capitulated = no
 		exists = yes
-		has_completed_focus = SWE_rationing
+		always = no
 	}
 }
 
@@ -260,7 +260,7 @@ SWE_royalist_buildup = {
 	icon = GFX_decision_category_eng_appeal_to_imperial_loyalists
 	priority = 80
 	visible = {
-		has_completed_focus = SWE_undermine_the_fascists
+		always = no
 		has_capitulated = no
 	}
 	visible_when_empty = no
@@ -276,7 +276,7 @@ SWE_train_the_sheltered_cat = {
 	scripted_gui = swe_train_the_sheltered_scripted_ui
 	visible_when_empty = yes
 	visible = {
-		has_completed_focus = SWE_train_the_sheltered
+		always = no
 		has_capitulated = no
 		exists = yes
 		NOT = {

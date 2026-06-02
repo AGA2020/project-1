@@ -2918,7 +2918,7 @@ focus_tree = {
 			modifier = {
 				add = 5
 				GER = {
-					has_completed_focus = GER_befriend_czechoslovakia
+					always = no
 				}
 			}
 		}
@@ -7025,12 +7025,12 @@ focus_tree = {
 						limit = {
 							has_dlc = "Gotterdammerung"
 						}
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
 					}
 					else = {
-						has_completed_focus = GER_oppose_hitler
+						always = no
 					}
-					has_completed_focus = GER_befriend_czechoslovakia
+					always = no
 					has_completed_focus = GER_demand_sudetenland
 					is_subject = yes
 				}
@@ -7122,9 +7122,9 @@ focus_tree = {
 						GER = {
 							OR = {
 								exists = no
-								has_completed_focus = GER_oppose_hitler
-								has_completed_focus = GER_oppose_hitler_ww
-								has_completed_focus = GER_befriend_czechoslovakia
+								always = no
+								always = no
+								always = no
 								has_completed_focus = GER_demand_sudetenland
 								is_subject = yes
 							}
@@ -7287,12 +7287,12 @@ focus_tree = {
 						limit = {
 							has_dlc = "Gotterdammerung"
 						}
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
 					}
 					else = {
-						has_completed_focus = GER_oppose_hitler
+						always = no
 					}
-					has_completed_focus = GER_befriend_czechoslovakia
+					always = no
 					has_completed_focus = GER_demand_sudetenland
 					is_subject = yes
 				}
@@ -7391,9 +7391,9 @@ focus_tree = {
 						GER = {
 							OR = {
 								exists = no
-								has_completed_focus = GER_oppose_hitler
-								has_completed_focus = GER_oppose_hitler_ww
-								has_completed_focus = GER_befriend_czechoslovakia
+								always = no
+								always = no
+								always = no
 								has_completed_focus = GER_demand_sudetenland
 								is_subject = yes
 							}
@@ -7466,12 +7466,12 @@ focus_tree = {
 						limit = {
 							has_dlc = "Gotterdammerung"
 						}
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
 					}
 					else = {
-						has_completed_focus = GER_oppose_hitler
+						always = no
 					}
-					has_completed_focus = GER_befriend_czechoslovakia
+					always = no
 					has_completed_focus = GER_demand_sudetenland
 					is_subject = yes
 				}
@@ -7550,9 +7550,9 @@ focus_tree = {
 						GER = {
 							OR = {
 								exists = no
-								has_completed_focus = GER_oppose_hitler
-								has_completed_focus = GER_oppose_hitler_ww
-								has_completed_focus = GER_befriend_czechoslovakia
+								always = no
+								always = no
+								always = no
 								has_completed_focus = GER_demand_sudetenland
 								is_subject = yes
 							}
@@ -7996,7 +7996,7 @@ focus_tree = {
 			modifier = {
 				add = 9
 				GER = {
-					has_completed_focus = GER_befriend_czechoslovakia
+					always = no
 				}
 			}
 		}
@@ -8793,12 +8793,12 @@ focus_tree = {
 					has_dlc = "Gotterdammerung"
 				}
 				GER = {
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
 				}
 			}
 			else = {
 				GER = {
-					has_completed_focus = GER_oppose_hitler
+					always = no
 				}
 			}
 		}
@@ -11412,7 +11412,7 @@ focus_tree = {
 					}
 					AND = {
 						has_government = communism
-						has_completed_focus = FRA_anti_fascist_coalition
+						always = no
 					}
 				}
 				OR = {	#pulling them out of the allies might be a bit silly

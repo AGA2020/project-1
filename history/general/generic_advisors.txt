@@ -52,7 +52,7 @@ every_possible_country = {
 						original_tag = NZL
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = NZL_the_lee_affair
+					always = no
 				}
 				IF = {
 					limit = { has_dlc = "Man the Guns" }	
@@ -120,7 +120,7 @@ every_possible_country = {
 					}
 					OR = {
 						has_completed_focus = NZL_strengthen_the_commonwealth
-						has_completed_focus = NZL_constitution_amendment_act
+						always = no
 					}
 				}
 				IF = {
@@ -186,7 +186,7 @@ every_possible_country = {
 						original_tag = NZL
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = NZL_in_the_darkness
+					always = no
 				}
 				IF = {
 					limit = { has_dlc = "Man the Guns" }	

@@ -15,7 +15,7 @@ GRE_monarchist_plan = {
 		}
 	}
 	abort = {
-		ENG = { has_completed_focus = ENG_concessions_to_the_trade_unions }
+		always = no
 	}
 
 	ai_national_focuses = {
@@ -450,8 +450,8 @@ GRE_fascist_plan = {
 			}
 			AND = { 
 				ITA = { 
-					has_completed_focus = ITA_italy_first
-					has_completed_focus = ITA_befriend_turkey
+					always = no
+					always = no
 				}
 				GER = { 
 					NOT = { has_government = fascism }

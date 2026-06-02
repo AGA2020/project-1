@@ -7,8 +7,8 @@ FRA_alternate_plan_1 = {
 	}
 	enable = {
 		OR = {
-			GER = { has_completed_focus = GER_oppose_hitler }
-			GER = { has_completed_focus = GER_oppose_hitler_ww }
+			always = no
+			always = no
 		}
 		has_game_rule = {
 			rule = FRA_ai_behavior
@@ -17,12 +17,12 @@ FRA_alternate_plan_1 = {
 	}
 	abort = {
 		OR = {
-			GER = { has_completed_focus = GER_reestablish_free_elections }
-			GER = { has_completed_focus = GER_re_establish_free_elections_ww }
-			GER = { has_completed_focus = GER_expatriate_the_communists }
-			GER = { has_completed_focus = GER_expatriate_the_communists_ww }
-			GER = { has_completed_focus = GER_focus_on_the_true_enemy }
-			GER = { has_completed_focus = GER_the_second_naval_race }
+			always = no
+			always = no
+			always = no
+			always = no
+			always = no
+			always = no
 		}
 	}
 
@@ -96,10 +96,10 @@ FRA_alternate_plan_2 = {
 	enable = {
 		GER = { 
 			OR = {
-				has_completed_focus = GER_focus_on_the_true_enemy 
+				always = no
 				AND = {
-					has_completed_focus = GER_the_second_naval_race
-					has_completed_focus = GER_revive_the_kaiserreich_ww
+					always = no
+					always = no
 				}
 			}
 		}
@@ -186,8 +186,8 @@ FRA_alternate_plan_3_regular = {
 	enable = {
 		GER = { 
 			OR = {
-				has_completed_focus = GER_expatriate_the_communists 
-				has_completed_focus = GER_expatriate_the_communists_ww 
+				always = no
+				always = no
 			}
 		}
 		has_game_rule = {
@@ -261,8 +261,8 @@ FRA_alternate_plan_3_lar = {
 	enable = {
 		GER = { 
 			OR = {
-				has_completed_focus = GER_expatriate_the_communists 
-				has_completed_focus = GER_expatriate_the_communists_ww 
+				always = no
+				always = no
 			}
 		}
 		has_game_rule = {
@@ -339,8 +339,8 @@ FRA_alternate_plan_4_regular = {
 	enable = {
 		GER = { 
 			OR = {
-				has_completed_focus = GER_reestablish_free_elections
-				has_completed_focus = GER_re_establish_free_elections_ww 
+				always = no
+				always = no
 			}
 		}
 		has_game_rule = {
@@ -384,8 +384,8 @@ FRA_alternate_plan_4_lar = {
 	enable = {
 		GER = { 
 			OR = {
-				has_completed_focus = GER_reestablish_free_elections
-				has_completed_focus = GER_re_establish_free_elections_ww 
+				always = no
+				always = no
 			}
 		}
 		has_game_rule = {
@@ -463,12 +463,12 @@ FRA_alternate_plan_little_entente = {
 	enable = {
 		OR = {
 			AND = {
-				ENG = { has_completed_focus = ENG_a_change_in_course }
+				always = no
 				NOT = { 
 					GER = { 
 						OR = {
-							has_completed_focus = GER_oppose_hitler
-							has_completed_focus = GER_oppose_hitler_ww
+							always = no
+							always = no
 						}
 					} 
 				}
@@ -548,13 +548,13 @@ FRA_alternate_plan_fascist_regular = {
 	}
 	abort = {
 		OR = {
-			GER = { has_completed_focus = GER_oppose_hitler }
-			GER = { has_completed_focus = GER_oppose_hitler_ww }
+			always = no
+			always = no
 			AND = {
-				ENG = { has_completed_focus = ENG_a_change_in_course }
+				always = no
 				NOT = { 
-					GER = { has_completed_focus = GER_oppose_hitler }
-					GER = { has_completed_focus = GER_oppose_hitler_ww }
+					always = no
+					always = no
 				}
 			}
 		}
@@ -620,13 +620,13 @@ FRA_alternate_plan_fascist_lar = {
 	}
 	abort = {
 		OR = {
-			GER = { has_completed_focus = GER_oppose_hitler }
-			GER = { has_completed_focus = GER_oppose_hitler_ww }
+			always = no
+			always = no
 			AND = {
-				ENG = { has_completed_focus = ENG_a_change_in_course }
+				always = no
 				NOT = { 
-					GER = { has_completed_focus = GER_oppose_hitler }
-					GER = { has_completed_focus = GER_oppose_hitler_ww }
+					always = no
+					always = no
 				}
 			}
 		}

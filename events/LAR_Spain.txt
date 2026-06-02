@@ -6059,8 +6059,6 @@ country_event = {
 				unlock_national_focus = SPA_secure_the_northern_garrisons
 				complete_national_focus = SPA_secure_the_national_defense_council
 				complete_national_focus = SPA_suspend_the_constitution
-				unlock_national_focus = SPA_eliminate_the_carlists
-				complete_national_focus = SPA_primo_de_rivera_prisoner_exchange
 				complete_national_focus = SPA_establish_the_directory
 				add_timed_idea = { idea = SPA_death_before_surrender days = 900 }
 			}
@@ -6784,8 +6782,6 @@ country_event = {
 						has_global_flag = SOV_covert_support_for_poum_flag
 					}
 					complete_national_focus = SPR_arm_the_workers_militias
-					complete_national_focus = SPR_demand_ministerial_positions
-					unlock_national_focus = SPR_hinder_nkvd_interference
 				}
 				else = { #REGULAR ANARCHIST UPRISING
 					complete_national_focus = SPR_arm_the_people
@@ -7463,7 +7459,6 @@ country_event = {
 				complete_national_focus = SPR_new_leadership
 				complete_national_focus = SPR_the_future_of_the_republic
 				complete_national_focus = SPR_reaffirm_the_popular_front_strategy
-				unlock_national_focus = SPR_crush_the_revolution
 				add_timed_idea = { idea = SPR_death_before_surrender days = 900 }
 			}
 
@@ -8760,10 +8755,7 @@ country_event = {
 			base = 95
 			modifier = {
 				factor = 0
-				focus_progress = {
-					focus = FRA_the_legitimate_heir
-					progress > 0
-				}
+				always = no
 			}
 			modifier = {
 				factor = 0.8

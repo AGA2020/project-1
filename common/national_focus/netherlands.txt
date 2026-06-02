@@ -3426,10 +3426,10 @@ focus_tree = {
 						limit = {
 							NOT = { has_dlc = "Gotterdammerung" }
 						}
-						has_completed_focus = GER_oppose_hitler
+						always = no
 					}
 					else = {
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
 					}
 				}
 				has_war_with = ENG
@@ -4996,9 +4996,9 @@ focus_tree = {
 			NOT = { has_war_with = FRA }
 			FRA = {
 				OR = {
-					has_completed_focus = FRA_humanite_unie
-					has_completed_focus = FRA_loyalty_to_the_cause
-					has_completed_focus = FRA_anti_fascist_coalition
+					always = no
+					always = no
+					always = no
 				}
 				has_government = ROOT
 				is_faction_leader = yes
@@ -5826,7 +5826,7 @@ focus_tree = {
 						}
 					}
 					GER = {
-						has_completed_focus = GER_revive_the_kaiserreich 
+						always = no
 						is_faction_leader = yes
 					}
 				}
@@ -5854,7 +5854,7 @@ focus_tree = {
 					is_in_faction = yes
 					NOT = { has_war_with = GER }
 					GER = {
-						has_completed_focus = GER_revive_the_kaiserreich
+						always = no
 					}
 				}
 				leave_faction = yes
@@ -5865,7 +5865,7 @@ focus_tree = {
 					is_in_faction = no
 					NOT = { has_war_with = GER }
 					GER = {
-						has_completed_focus = GER_revive_the_kaiserreich
+						always = no
 					}
 				}
 				GER = { country_event = { id = generic.2 } }
@@ -5940,7 +5940,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = { has_war_with = GER }
-					NOT = { GER = { has_completed_focus = GER_revive_the_kaiserreich } }
+					always = yes
 				}
 				effect_tooltip = {
 					every_country = {

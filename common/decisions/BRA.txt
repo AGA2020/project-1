@@ -128,7 +128,7 @@ BRA_ensure_support_cat = {
 			}
 		}
 		visible = {
-			has_completed_focus = BRA_work_with_the_integralists
+			always = no
 			NOT = {
 				has_completed_focus = BRA_estado_novo
 			}
@@ -201,7 +201,7 @@ BRA_ensure_support_cat = {
 		}
 		
 		visible = {
-			has_completed_focus = BRA_anaue
+			always = no
 		}
 		state_target = any_controlled_state
 		target_trigger = {
@@ -275,7 +275,7 @@ BRA_ensure_support_cat = {
 		}	
 		available = {
 			OR = {
-				has_completed_focus = BRA_estado_moderno
+				always = no
 				has_completed_focus = BRA_estado_novo
 			}
 		}
@@ -335,7 +335,7 @@ BRA_cangaceiro_decision_cat = {
 			NOT = {
 				OR = {
 					has_country_flag = BRA_anti_cangaceiro_op_in_progress
-					has_completed_focus = BRA_sway_the_cangaco
+					always = no
 				}
 			}
 			has_completed_focus = BRA_deal_with_the_cangaceiro
@@ -343,7 +343,7 @@ BRA_cangaceiro_decision_cat = {
 		
 		visible = {
 			NOT = {
-				has_completed_focus = BRA_sway_the_cangaco
+				always = no
 			}
 		}
 
@@ -427,9 +427,9 @@ BRA_cangaceiro_decision_cat = {
 							modifier = BRA_cangaceiro_state
 						}
 					}
-					has_completed_focus = BRA_sway_the_cangaco
+					always = no
 				}
-				has_completed_focus = BRA_sway_the_cangaco
+				always = no
 			}
 		}
 		#visible = {
@@ -446,7 +446,7 @@ BRA_cangaceiro_decision_cat = {
 					}
 				}
 				NOT = {
-					has_completed_focus = BRA_sway_the_cangaco
+					always = no
 				}
 			}
 		}
@@ -536,10 +536,10 @@ BRA_mercosul_decisions = {
 			original_tag = BRA
 		}
 		visible = {
-			has_completed_focus	= BRA_form_mercosul
+			always = no
 		}
 		available = {
-			has_completed_focus	= BRA_form_mercosul
+			always = no
 			FROM = {
 				has_opinion = {
 					target = ROOT
@@ -606,14 +606,14 @@ BRA_amazonian_settlement_cat = {
 		}
 
 		available = {
-			has_completed_focus = BRA_amazonian_settlement
+			always = no
 			NOT = {
 				has_country_flag = BRA_amazonian_settlement_in_progress
 			}
 		}
 
 		visible = {
-			has_completed_focus = BRA_amazonian_settlement
+			always = no
 		}
 
 		state_target = any_owned_state
@@ -676,11 +676,11 @@ BRA_jaguar_diplomacy_cat = {
 		}
 
 		visible = {
-			has_completed_focus = BRA_jaguar_diplomacy		
+			always = no
 		}
 
 		available = {
-			has_completed_focus = BRA_jaguar_diplomacy
+			always = no
 			NOT = {
 				has_country_flag = BRA_jaguar_diplomacy_in_progress
 			}
@@ -827,7 +827,7 @@ BRA_sway_the_neighbors_cat = {
 		}
 
 		available = {
-			has_completed_focus = BRA_sway_the_neighbors
+			always = no
 			FROM = {
 				OWNER = {
 					NOT = {
@@ -1025,7 +1025,7 @@ BRA_america_do_sul_cat = {
 			NOT = {
 				has_country_flag = BRA_core_decision_active
 			}
-			has_completed_focus = BRA_unify_south_america
+			always = no
 		}
 		
 		visible = {
@@ -1081,7 +1081,7 @@ BRA_us_of_south_america_cat = {
 			original_tag = BRA
 		}
 		visible = {
-			has_completed_focus = BRA_united_states_of_south_america
+			always = no
 		}
 		available = {
 			NOT = {
@@ -1193,10 +1193,10 @@ BRA_us_of_south_america_cat = {
 			original_tag = BRA
 		}
 		visible = {
-			has_completed_focus	= BRA_reach_out_to_our_neighbors
+			always = no
 		}
 		available = {
-			has_completed_focus	= BRA_reach_out_to_our_neighbors
+			always = no
 			FROM = {
 				has_opinion = {
 					target = ROOT
@@ -1257,7 +1257,7 @@ BRA_foreign_legion_cat = {
 		}
 
 		visible = {
-			has_completed_focus = BRA_foreign_legion
+			always = no
 		}
 
 		available = {

@@ -6751,7 +6751,7 @@ focus_tree = {
 						has_dlc = "By Blood Alone"
 						ITA = {
 							exists = yes 
-							has_completed_focus = ITA_seek_papal_support
+							always = no
 						}
 					}
 				}
@@ -6785,7 +6785,7 @@ focus_tree = {
 					AND = {
 						has_dlc = "La Resistance"
 						SPR = {
-							has_completed_focus = SPA_defenders_of_catholicism
+							always = no
 						}
 					}
 				}
@@ -8368,7 +8368,7 @@ focus_tree = {
 			is_subject = no
 			GER = {
 				NOT = {
-					has_completed_focus = GER_monarchist_sentiment
+					always = no
 				}
 			}
 		}

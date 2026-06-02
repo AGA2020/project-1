@@ -1046,6 +1046,6 @@ SOV_we_want_to_send_ultimatums = {
 SOV_is_exiles = {
 	#custom_trigger_tooltip = {
 		#tooltip = SOV_is_exiles_tt
-		SOV = { has_completed_focus = SOV_beaten_but_not_defeated }
+		always = no
 	#}
 }

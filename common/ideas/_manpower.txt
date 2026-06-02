@@ -204,7 +204,7 @@ ideas = {
 					limit = {
 						original_tag = ENG
 						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
+						always = no
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
@@ -213,7 +213,7 @@ ideas = {
 						original_tag = SPR
 						has_dlc = "La Resistance"
 					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+					always = yes
 				}
 				if = {
 					limit = {
@@ -474,7 +474,7 @@ ideas = {
 					limit = {
 						original_tag = ENG
 						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
+						always = no
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
@@ -483,7 +483,7 @@ ideas = {
 						original_tag = SPR
 						has_dlc = "La Resistance"
 					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+					always = yes
 				}
 				if = {
 					limit = {
@@ -745,7 +745,7 @@ ideas = {
 					limit = {
 						original_tag = ENG
 						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
+						always = no
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
@@ -754,7 +754,7 @@ ideas = {
 						original_tag = SPR
 						has_dlc = "La Resistance"
 					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+					always = yes
 				}
 				if = {
 					limit = {
@@ -992,7 +992,7 @@ ideas = {
 					limit = {
 						original_tag = ENG
 						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
+						always = no
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
@@ -1001,7 +1001,7 @@ ideas = {
 						original_tag = SPR
 						has_dlc = "La Resistance"
 					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+					always = yes
 				}
 				if = {
 					limit = {
@@ -1224,7 +1224,7 @@ ideas = {
 					limit = {
 						original_tag = ENG
 						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
+						always = no
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
@@ -1233,7 +1233,7 @@ ideas = {
 						original_tag = SPR
 						has_dlc = "La Resistance"
 					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+					always = yes
 				}
 				if = {
 					limit = {

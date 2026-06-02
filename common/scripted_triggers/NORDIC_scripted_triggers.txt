@@ -267,8 +267,8 @@ NORDIC_communist_alliance_viable = {
 NORDIC_has_started_communist_focus_tree = {
 	OR = {
 		has_completed_focus = NOR_a_resurgent_labor_movement
-		has_completed_focus = SWE_align_more_closely_with_the_landsorganisationen
-		has_completed_focus = FIN_towards_a_red_government
+		always = no
+		always = no
 	}
 }
 

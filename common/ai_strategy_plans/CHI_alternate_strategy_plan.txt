@@ -119,7 +119,7 @@ CHI_alternate_plan_2 = {
 			}
 		}
 		GER = {
-			has_completed_focus = GER_befriend_china
+			always = no
 		}
 	}
 	abort = {

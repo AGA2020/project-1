@@ -2656,7 +2656,7 @@ focus_tree = {
 						has_dlc = "By Blood Alone"
 						ITA = {
 							exists = yes 
-							has_completed_focus = ITA_seek_papal_support
+							always = no
 						}
 					}
 				}
@@ -2690,7 +2690,7 @@ focus_tree = {
 					AND = {
 						has_dlc = "La Resistance"
 						SPR = {
-							has_completed_focus = SPA_defenders_of_catholicism
+							always = no
 						}
 					}
 				}
@@ -5953,7 +5953,7 @@ focus_tree = {
 					original_tag_to_check = SPR # Add other triggers as needed
 					NOT = {
 						has_completed_focus = SPA_a_great_spain
-						has_completed_focus = SPR_regional_defense_council_of_aragon
+						always = no
 					}
 				}
 			}
@@ -7577,7 +7577,7 @@ focus_tree = {
 						has_dlc = "By Blood Alone"
 						ITA = {
 							exists = yes 
-							has_completed_focus = ITA_seek_papal_support
+							always = no
 						}
 					}
 				}
@@ -7611,7 +7611,7 @@ focus_tree = {
 					AND = {
 						has_dlc = "La Resistance"
 						SPR = {
-							has_completed_focus = SPA_defenders_of_catholicism
+							always = no
 						}
 					}
 				}
@@ -7669,7 +7669,7 @@ focus_tree = {
 						has_dlc = "By Blood Alone"
 						ITA = {
 							exists = yes 
-							has_completed_focus = ITA_seek_papal_support
+							always = no
 						}
 					}
 				}
@@ -7703,7 +7703,7 @@ focus_tree = {
 					AND = {
 						has_dlc = "La Resistance"
 						SPR = {
-							has_completed_focus = SPA_defenders_of_catholicism
+							always = no
 						}
 					}
 				}

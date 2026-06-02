@@ -601,7 +601,7 @@ SWE_bofors_organization = {
 
 		all_parents = { generic_mio_trait_improved_hydraulic_recoil_system }
 		available = {
-			SWE = { has_completed_focus = SWE_bofors_fly_swatter }
+			always = no
 		}
 
 		limit_to_equipment_type = {
@@ -624,7 +624,7 @@ SWE_bofors_organization = {
 
 		all_parents = { generic_mio_trait_improved_hydraulic_recoil_system }
 		available = {
-			SWE = { has_completed_focus = SWE_bofors_anti_tank_gun }
+			always = no
 		}
 
 		limit_to_equipment_type = {
@@ -652,7 +652,7 @@ SWE_bofors_organization = {
 
 		all_parents = { generic_mio_trait_sliding_breech_block }
 		available = {
-			SWE = { has_completed_focus = SWE_defense_in_depth }
+			always = no
 		}
 
 		equipment_bonus = {

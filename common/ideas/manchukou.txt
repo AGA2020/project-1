@@ -1354,14 +1354,14 @@ ideas = {
 					}
 					hidden_trigger = {
 						OR = {
-							has_completed_focus = MAN_reform_the_civil_service
+							always = no
 							has_completed_focus = MAN_tsr_reform_the_civil_service
 						}
 					}
 					custom_trigger_tooltip = {
 						tooltip = MAN_manchukuo_film_association_2_tt
 						OR = {
-							has_completed_focus = MAN_reform_the_civil_service
+							always = no
 							has_completed_focus = MAN_tsr_reform_the_civil_service
 						}
 					}

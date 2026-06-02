@@ -2264,7 +2264,7 @@ focus_tree = {
 			ELSE_IF = {
 				limit = {
 					SOU = {
-						has_completed_focus = SOV_long_live_the_workers_government
+						always = no
 						has_government = communism
 					}
 				}

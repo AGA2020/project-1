@@ -5648,7 +5648,7 @@ focus_tree = {
 						hidden_trigger = {
 							NOT = {
 								OR = {
-									has_completed_focus = MAN_assertiveness
+									always = no
 									has_completed_focus = MAN_tsr_assertiveness
 								}
 							}
@@ -5657,7 +5657,7 @@ focus_tree = {
 							tooltip = MAN_not_assertiveness_tt
 							NOT = {
 								OR = {
-									has_completed_focus = MAN_assertiveness
+									always = no
 									has_completed_focus = MAN_tsr_assertiveness
 								}
 							}
@@ -23226,7 +23226,7 @@ focus_tree = {
 								is_subject_of = ROOT
 								NOT = {
 									OR = {
-										has_completed_focus = MAN_assertiveness
+										always = no
 										has_completed_focus = MAN_tsr_assertiveness
 									}
 								}

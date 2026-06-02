@@ -83,17 +83,17 @@ German_historical = {
 			any_country_with_original_tag = {
 				original_tag_to_check = FRA
 				OR = {
-					has_completed_focus = FRA_utilize_the_leagues
-					has_completed_focus = FRA_invite_communist_ministers
-					has_completed_focus = FRA_leftist_rhetoric
-					has_completed_focus = FRA_right_wing_rhetoric
+					always = no
+					always = no
+					always = no
+					always = no
 				}
 			}
 			any_country_with_original_tag = {
 				original_tag_to_check = USA
 				OR = {
-					has_completed_focus = USA_war_plan_red
-					has_completed_focus = USA_war_plan_white
+					always = no
+					always = no
 				}
 			}
 			is_subject = yes

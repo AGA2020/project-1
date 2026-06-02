@@ -1493,7 +1493,7 @@ GRE_investment_decisions_category = {
 					has_capitulated = yes
 					is_puppet = yes
 					NOT = { has_government = communism }
-					has_completed_focus = SOV_demand_balkan_submission
+					always = no
 				}
 			}
 		}
@@ -1558,7 +1558,7 @@ GRE_investment_decisions_category = {
 					has_capitulated = yes
 					is_puppet = yes
 					NOT = { has_government = communism }
-					has_completed_focus = SOV_demand_balkan_submission
+					always = no
 				}
 			}
 		}
@@ -1625,7 +1625,7 @@ GRE_investment_decisions_category = {
 					has_capitulated = yes
 					is_puppet = yes
 					NOT = { has_government = communism }
-					has_completed_focus = SOV_demand_balkan_submission
+					always = no
 				}
 			}
 		}
@@ -1813,7 +1813,7 @@ GRE_pay_back_debt_to_the_ifc_category = {
 			}
 			modifier = {
 				factor = 0
-				ENG = { has_completed_focus = ENG_concessions_to_the_trade_unions }
+				always = no
 			}
 		}
 
@@ -1990,7 +1990,7 @@ GRE_pay_back_debt_to_the_ifc_category = {
 				ITA = { 
 					OR = { 
 						has_completed_focus = ITA_war_with_greece
-						has_completed_focus = ITA_befriend_turkey
+						always = no
 					}
 				}
 			}
@@ -2082,7 +2082,7 @@ GRE_pay_back_debt_to_the_ifc_category = {
 			}
 			modifier = {
 				factor = 0
-				ENG = { has_completed_focus = ENG_concessions_to_the_trade_unions }
+				always = no
 			}
 		}
 
@@ -2261,7 +2261,7 @@ GRE_pay_back_debt_to_the_ifc_category = {
 				ITA = { 
 					OR = { 
 						has_completed_focus = ITA_war_with_greece
-						has_completed_focus = ITA_befriend_turkey
+						always = no
 					}
 				}
 			}
@@ -2690,7 +2690,7 @@ GRE_hellenic_academy_category = {
 		visible = {
 			has_completed_focus = GRE_hellenic_armed_forces
 			ROM = { 
-				has_completed_focus = ROM_balkans_dominance
+				always = no
 			}
 		}
 
@@ -2732,7 +2732,7 @@ GRE_hellenic_academy_category = {
 			BUL = { 
 				OR = {
 					has_completed_focus = BUL_power_to_the_tsar
-					has_completed_focus = BUL_appoint_communist_ministers
+					always = no
 				}
 			}
 		}

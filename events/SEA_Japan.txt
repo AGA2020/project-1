@@ -4738,7 +4738,7 @@ country_event = {
 				    	limit = {
 				    		PREV = {
 				    			NOT = {
-				    				has_completed_focus = RAJ_forward_bloc
+				    				always = no
 				    			}
 				    		}
 				    	}
@@ -4832,7 +4832,7 @@ country_event = {
 				    	limit = {
 				    		PREV = {
 				    			NOT = {
-				    				has_completed_focus = RAJ_forward_bloc
+				    				always = no
 				    			}
 				    		}
 				    	}
@@ -4922,7 +4922,7 @@ country_event = {
 				    	limit = {
 				    		PREV = {
 				    			NOT = {
-				    				has_completed_focus = RAJ_forward_bloc
+				    				always = no
 				    			}
 				    		}
 				    	}
@@ -5039,7 +5039,7 @@ country_event = {
 					    	limit = {
 					    		PREV = {
 					    			NOT = {
-					    				has_completed_focus = RAJ_forward_bloc
+					    				always = no
 					    			}
 					    		}
 					    	}
@@ -5133,7 +5133,7 @@ country_event = {
 					    	limit = {
 					    		PREV = {
 					    			NOT = {
-					    				has_completed_focus = RAJ_forward_bloc
+					    				always = no
 					    			}
 					    		}
 					    	}
@@ -5223,7 +5223,7 @@ country_event = {
 					    	limit = {
 					    		PREV = {
 					    			NOT = {
-					    				has_completed_focus = RAJ_forward_bloc
+					    				always = no
 					    			}
 					    		}
 					    	}
@@ -10655,7 +10655,7 @@ country_event = {
 						is_subject_of = ROOT
 						NOT = {
 							OR = {
-								has_completed_focus = MAN_assertiveness
+								always = no
 								has_completed_focus = MAN_tsr_assertiveness
 							}
 						}

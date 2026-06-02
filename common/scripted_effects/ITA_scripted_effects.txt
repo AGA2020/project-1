@@ -1747,7 +1747,6 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 
 			#COMPLETE FOCUS
 			unlock_national_focus = ITA_unite_the_opposition
-			unlock_national_focus = ITA_defy_the_duce
 			hidden_effect = { #Just doing the key thing we're missing from the unlocked focus above
 				set_politics = {
 					ruling_party = neutrality
@@ -1773,7 +1772,6 @@ ITA_start_civil_war_effect = { #The one triggered via BoP
 				unlock_national_focus = ITA_conspiracies_in_the_shadows
 			}
 			unlock_national_focus = ITA_depose_mussolini
-			unlock_national_focus = ITA_monarchia_d_italia
 		}
 
 		ITA_manage_national_spirits_in_civil_war = yes

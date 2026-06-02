@@ -3788,7 +3788,7 @@ focus_tree = {
 			has_civil_war = no
 			RAJ = {
 				NOT = {
-					has_completed_focus = RAJ_look_to_the_past
+					always = no
 				}
 			}
 			is_subject = no

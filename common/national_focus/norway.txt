@@ -398,7 +398,7 @@ focus_tree = {
 				}
 				if = {
 					limit = { #Checking if SOV is Trotskyist  
-						SOU = { has_completed_focus = SOV_the_left_opposition }
+						always = no
 					}
 					add_opinion_modifier = { # SOV loves Trotsky so we hate you 
 						target = ROOT 
@@ -499,7 +499,7 @@ focus_tree = {
 				if = {
 					limit = {
 						SOU = { # SOV Not Trotskyists   
-							NOT = { has_completed_focus = SOV_the_left_opposition } 
+							always = yes
 						}
 					}
 					SOU = { # How dare you prosecute our boys 
@@ -957,7 +957,7 @@ focus_tree = {
 					is_historical_focus_on = yes 
 					SOU = {
 						exists = yes 
-						NOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+						always = yes
 					}
 				}
 				SOU = {
@@ -1023,7 +1023,7 @@ focus_tree = {
 					is_historical_focus_on = yes 
 					SOU = {
 						exists = yes 
-						NOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+						always = yes
 					}
 				}
 				SOU = {
@@ -1138,7 +1138,7 @@ focus_tree = {
 				limit = {
 					ENG = {
 						exists = yes 
-						NOT = { has_completed_focus = ENG_the_fate_of_the_royal_family }
+						always = yes
 					}
 				}
 				ENG = {
@@ -1160,7 +1160,7 @@ focus_tree = {
 				limit = {
 					SWE = {
 						exists = yes
-						NOT = { has_completed_focus = SWE_liquidate_the_monarchy }
+						always = yes
 					}
 				}
 				SWE = {
@@ -1657,7 +1657,7 @@ focus_tree = {
 					any_other_country = { 
 						original_tag = SOV
 						has_government = communism
-						NOT = { has_completed_focus = SOV_the_left_opposition }
+						always = yes
 						has_capitulated = no
 					}
 				}
@@ -1736,7 +1736,7 @@ focus_tree = {
 					any_other_country = { 
 						original_tag = SOV
 						has_government = communism
-						NOT = { has_completed_focus = SOV_the_left_opposition }
+						always = yes
 						has_capitulated = no
 					}
 				}

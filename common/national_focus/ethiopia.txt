@@ -7731,7 +7731,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					always = no
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -7931,7 +7931,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					always = no
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -7960,7 +7960,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					always = no
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -8078,7 +8078,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					always = no
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -8109,7 +8109,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					always = no
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -8300,7 +8300,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					always = no
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -8499,7 +8499,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					always = no
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -8545,7 +8545,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					always = no
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}
@@ -8624,7 +8624,7 @@ focus_tree = {
 				has_civil_war = no
 				OR = {
 					has_government = fascism
-					has_completed_focus = ITA_monarchia_d_italia
+					always = no
 					hidden_trigger = {
 						has_government = neutrality # if ITA has been couped to be a monarchy
 					}

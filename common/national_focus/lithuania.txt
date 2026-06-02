@@ -277,8 +277,8 @@ focus_tree = {
 				limit = {
 					GER = { 
 						NOT = { 
-							has_completed_focus = GER_oppose_hitler
-							has_completed_focus = GER_oppose_hitler_ww
+							always = no
+							always = no
 						}
 					}
 					SOU = { has_government = communism } 
@@ -290,8 +290,8 @@ focus_tree = {
 				limit = {
 					GER = { 
 						OR = {
-							has_completed_focus = GER_oppose_hitler
-							has_completed_focus = GER_oppose_hitler_ww
+							always = no
+							always = no
 						}
 					}
 					SOU = { NOT = { has_war_with = POL } }

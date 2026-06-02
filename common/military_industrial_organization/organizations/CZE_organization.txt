@@ -498,7 +498,7 @@ CZE_ceska_zbrojovka_uhersky_brod_organization = {
 				}
 			}
 			FROM = {
-				has_completed_focus = GER_integrate_czech_manufacturers
+				always = no
 			}
 		}
 		if = {

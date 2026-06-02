@@ -1278,7 +1278,7 @@ country_event = {
 			base = 100
 			modifier = {	# Not Stalinist - After Anarchist CW
 				add = 15
-				has_completed_focus = SPR_hinder_nkvd_interference
+				always = no
 			}
 		}
 
@@ -1329,15 +1329,15 @@ country_event = {
 			}
 			modifier = {	# Democratic III
 				add = 5
-				has_completed_focus = SPR_war_of_independence
+				always = no
 			}
 			modifier = {	# Stalinist I
 				add = 10
-				has_completed_focus = SPR_the_stalinist_doctrine
+				always = no
 			}
 			modifier = {	# Stalinist II
 				add = 5
-				has_completed_focus = SPR_appeal_for_increased_autonomy
+				always = no
 			}
 			modifier = { # Spanish Releasables will be reluctant to accept if they have different Ideology
 				add = 100
@@ -2393,7 +2393,7 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 0.2
-				has_completed_focus = SPA_restore_the_iberian_union
+				always = no
 			}
 		}
 

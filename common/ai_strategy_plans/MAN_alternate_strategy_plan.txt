@@ -16,7 +16,7 @@ MAN_default_plan = {
 		}
 	}
 	abort = {
-		has_completed_focus = MAN_assertiveness
+		always = no
 		
 	}
 
@@ -61,7 +61,7 @@ MAN_alternate_plan_assertive = {
 		original_tag = MAN
 	}
 	enable = {
-		has_completed_focus = MAN_assertiveness
+		always = no
 	}
 	abort = {
 		always = no
@@ -118,7 +118,7 @@ MAN_alternate_plan_independent = {
 		original_tag = MAN
 	}
 	enable = {
-		has_completed_focus = MAN_independence_war
+		always = no
 		not = {
 			has_war_with = JAP
 		}

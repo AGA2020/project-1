@@ -4669,7 +4669,7 @@ ideas = {
 			}
 					
 			available = {
-				has_completed_focus = GER_integrate_czech_manufacturers
+				always = no
 				9 = {
 					is_controlled_by_ROOT_or_ally = yes
 				}
@@ -4677,8 +4677,8 @@ ideas = {
 
 			visible = { #We don't need to hide these right away since these ton of space in the GUI for Manufacturers
 				NOT = {
-					has_completed_focus = GER_oppose_hitler
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
+					always = no
 				}
 			}
 
@@ -4710,7 +4710,7 @@ ideas = {
 			}
 					
 			available = {
-				has_completed_focus = GER_integrate_czech_manufacturers
+				always = no
 				9 = {
 					is_controlled_by_ROOT_or_ally = yes
 				}
@@ -4718,8 +4718,8 @@ ideas = {
 
 			visible = { #We don't need to hide these since these ton of space in the GUI for Manufacturers
 				NOT = {
-					has_completed_focus = GER_oppose_hitler
-					has_completed_focus = GER_oppose_hitler_ww
+					always = no
+					always = no
 				}
 			}
 
@@ -5035,7 +5035,7 @@ ideas = {
 					limit = {
 						original_tag = GER
 					}
-					has_completed_focus = GER_integrate_czech_manufacturers
+					always = no
 				}
 			}
 			
@@ -5053,8 +5053,8 @@ ideas = {
 						original_tag = GER
 					}
 					NOT = {
-						has_completed_focus = GER_oppose_hitler
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
+						always = no
 					}
 				}
 			}
@@ -5386,7 +5386,7 @@ ideas = {
 					limit = {
 						original_tag = GER
 					}
-					has_completed_focus = GER_integrate_czech_manufacturers
+					always = no
 				}
 				if = {
 					limit = {
@@ -5402,8 +5402,8 @@ ideas = {
 						original_tag = GER
 					}
 					NOT = {
-						has_completed_focus = GER_oppose_hitler
-						has_completed_focus = GER_oppose_hitler_ww
+						always = no
+						always = no
 					}
 				}
 				if = {
@@ -6213,7 +6213,7 @@ ideas = {
 					limit = {
 						original_tag = GER
 					}
-					has_completed_focus = GER_establish_a_customs_union
+					always = no
 					9 = {
 						is_controlled_by_ROOT_or_ally = yes
 					}
@@ -6237,7 +6237,7 @@ ideas = {
 					limit = {
 						original_tag = GER
 					}
-					has_completed_focus = GER_establish_a_customs_union
+					always = no
 				}
 			}
 			

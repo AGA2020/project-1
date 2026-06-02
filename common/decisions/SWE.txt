@@ -311,7 +311,7 @@ SWE_politics = {
 		}
 		cost = 0
 		visible = {
-			has_completed_focus = SWE_finlands_cause_is_ours
+			always = no
 			NOT = { has_war_with = ROOT }
 		}
 
@@ -364,13 +364,13 @@ SWE_politics = {
 		}
 		
 		visible = {
-			has_completed_focus = SWE_urbanization
+			always = no
 		}
 
 		state_target = yes
 		targets = { 138 140 141 }
 		target_root_trigger = {
-			has_completed_focus = SWE_urbanization
+			always = no
 		}
 		target_trigger = {
 			FROM = {
@@ -885,7 +885,7 @@ SWE_politics = {
 		}
 		
 		visible = {
-			has_completed_focus = SWE_greater_nordic_reich
+			always = no
 
 		}
 		activation = {
@@ -952,7 +952,7 @@ SWE_politics = {
 		}
 		
 		visible = {
-			has_completed_focus = SWE_greater_nordic_reich
+			always = no
 
 		}
 		activation = {
@@ -1017,7 +1017,7 @@ SWE_politics = {
 		}
 		
 		visible = {
-			has_completed_focus = SWE_greater_nordic_reich
+			always = no
 
 		}
 		activation = {
@@ -1081,7 +1081,7 @@ SWE_politics = {
 		}
 		
 		visible = {
-			has_completed_focus = SWE_greater_nordic_reich
+			always = no
 
 		}
 		activation = {
@@ -1231,7 +1231,7 @@ SWE_politics = {
 		}
 		
 		visible = {
-			has_completed_focus = SWE_greater_nordic_reich
+			always = no
 			has_country_leader = {
 				character = SWE_king_gustaf_v
 			}
@@ -1394,7 +1394,7 @@ SWE_politics = {
 		}
 		
 		visible = {
-			has_completed_focus = SWE_greater_nordic_reich
+			always = no
 			has_country_leader = {
 				character = SWE_king_gustaf_v
 			}
@@ -1457,9 +1457,9 @@ SWE_politics = {
 		allowed = {
 			original_tag = SWE
 		}
-		visible = { has_completed_focus = SWE_socialist_reforms }
+		visible = { always = no }
 		available = {
-			has_completed_focus = SWE_socialist_reforms
+			always = no
 		}
 		cancel_trigger = {  
 			has_capitulated = yes 
@@ -1507,7 +1507,7 @@ SWE_train_the_sheltered_cat = {
 		#}
 		
 		visible = {
-			has_completed_focus = SWE_train_the_sheltered
+			always = no
 			check_variable = { SWE_sheltered_training_level < 4 }
 		}
 		custom_cost_text = SWE_train_the_sheltered_cost
@@ -1869,7 +1869,7 @@ SWE_rationing_policies = {
 		}
 		
 		visible = {
-			has_completed_focus = SWE_rationing
+			always = no
 			SWE_herman_eriksson = { NOT = { has_trait = SWE_minister_of_supply }}
 		}
 		cost = 75
@@ -2219,14 +2219,14 @@ SWE_military_matters = {
 		}
 		
 		visible = {
-			has_completed_focus = SWE_jagartrupper
+			always = no
 		}
 
 		days_re_enable = 90
 		on_map_mode = map_and_decisions_view
 		state_target = yes
 		target_root_trigger = {
-			has_completed_focus = SWE_jagartrupper
+			always = no
 		}
 		target_trigger = {
 			FROM = {
@@ -2300,7 +2300,7 @@ SWE_military_matters = {
 		}
 
 		visible = {
-			has_completed_focus = SWE_hemvarnet
+			always = no
 			FROM = {
 				NOT = { has_state_flag = has_activated_home_guard }
 			}
@@ -2357,7 +2357,7 @@ SWE_military_matters = {
 		}
 
 		visible = {
-			has_completed_focus = SWE_hemvarnet
+			always = no
 			FROM = {
 				NOT = { has_state_flag = has_activated_home_guard }
 			}
@@ -2395,7 +2395,7 @@ SWE_military_matters = {
 					subtract_from_variable = { SWE_has_added_home_guard = 1 }
 					if = {
 						limit = {
-							NOT = { SWE = { has_completed_focus = SWE_swedish_shooting_movement }}
+							always = yes
 						}
 						create_unit = {
 							division = "name = \"Hemvärn\" division_template = \"Hemvärn\" start_experience_factor = 0.1 start_equipment_factor = 0.6 start_manpower_factor = 0.7"
@@ -2423,7 +2423,7 @@ SWE_military_matters = {
 		}
 
 		visible = {
-			has_completed_focus = SWE_hemvarnet
+			always = no
 			any_core_state = {
 				check_variable = { SWE_has_added_home_guard > 0 }
 			}
@@ -2451,7 +2451,7 @@ SWE_military_matters = {
 					subtract_from_variable = { SWE_has_added_home_guard = 1 }
 					if = {
 						limit = {
-							NOT = { SWE = { has_completed_focus = SWE_swedish_shooting_movement }}
+							always = yes
 						}
 						create_unit = {
 							division = "name = \"Hemvärn\" division_template = \"Hemvärn\" start_experience_factor = 0.1 start_equipment_factor = 0.6 start_manpower_factor = 0.7"
@@ -2695,7 +2695,7 @@ SWE_ball_bearings_cat = {
 SWE_appeal_for_support_cat = {
 	SWE_appeal_to_aristocracy = {
 		visible = {
-			has_completed_focus = SWE_appeal_for_support
+			always = no
 			NOT = { 
 				has_country_flag = SWE_aristocratic_support 
 			}
@@ -2726,7 +2726,7 @@ SWE_appeal_for_support_cat = {
 
 	SWE_appeal_to_industrialists = {
 		visible = {
-			has_completed_focus = SWE_appeal_for_support
+			always = no
 			NOT = { 
 				has_country_flag = SWE_appeal_to_industrialists_flag 
 				#has_country_flag = SWE_appeal_for_support_in_progress
@@ -2757,7 +2757,7 @@ SWE_appeal_for_support_cat = {
 
 	SWE_appeal_to_military = {
 		visible = {
-			has_completed_focus = SWE_appeal_for_support
+			always = no
 			NOT = { 
 				has_country_flag = SWE_appeal_to_military_flag 
 				#has_country_flag = SWE_appeal_for_support_in_progress
@@ -2788,7 +2788,7 @@ SWE_appeal_for_support_cat = {
 
 	SWE_appeal_to_rural_people = {
 		visible = {
-			has_completed_focus = SWE_appeal_for_support
+			always = no
 			NOT = { 
 				has_country_flag = SWE_appeal_to_rural_flag
 				#has_country_flag = SWE_appeal_for_support_in_progress
@@ -2833,7 +2833,7 @@ SWE_appeal_for_support_cat = {
 		
 		visible = {
 			has_country_flag = SWE_aristocratic_support
-			has_completed_focus	= SWE_mythologize_swedish_history
+			always = no
 		}
 		activation = {
 			always = no
@@ -2863,7 +2863,7 @@ SWE_appeal_for_support_cat = {
 		
 		visible = {
 			has_country_flag = SWE_appeal_to_industrialists_flag
-			has_completed_focus	= SWE_mythologize_swedish_history
+			always = no
 		}
 		activation = {
 			always = no
@@ -2893,7 +2893,7 @@ SWE_appeal_for_support_cat = {
 		
 		visible = {
 			has_country_flag = SWE_appeal_to_military_flag
-			has_completed_focus	= SWE_mythologize_swedish_history
+			always = no
 		}
 		activation = {
 			always = no
@@ -2922,7 +2922,7 @@ SWE_appeal_for_support_cat = {
 		
 		visible = {
 			has_country_flag = SWE_appeal_to_rural_flag
-			has_completed_focus	= SWE_mythologize_swedish_history
+			always = no
 		}
 		activation = {
 			always = no
@@ -3122,7 +3122,7 @@ SWE_appeal_for_support_cat = {
 SWE_royalist_buildup = {
 	SWE_royal_visit = {
 		visible = {
-			has_completed_focus = SWE_meet_with_the_king
+			always = no
 		    neutrality < 0.55
 		}
 		available = {
@@ -3179,7 +3179,7 @@ SWE_communist_foreign_influence = {
 		SWE_pull_the_trigger_nor = {
 			icon = generic_civil_support
 			visible = {
-				has_completed_focus = SWE_support_norwegian_communists
+				always = no
 				NOT = { has_country_flag = SWE_has_triggered_nor_com_uprising }
 				NOR = { NOT = { has_completed_focus = NOR_a_resurgent_labor_movement }}
 			}
@@ -3373,7 +3373,7 @@ SWE_communist_foreign_influence = {
 		SWE_pull_the_trigger_den = {
 			icon = generic_civil_support
 			visible = {
-				has_completed_focus = SWE_support_danish_communists
+				always = no
 				NOT = { has_country_flag = SWE_has_triggered_den_com_uprising }
 			}
 
@@ -3576,7 +3576,7 @@ SWE_coalition_war_cabinet_cat = {
 				has_country_flag = SWE_has_picked_war_cabinet_trait
 			}
 
-			has_completed_focus = SWE_sami_reconcilliation
+			always = no
 		}
 
 		ai_will_do = {
@@ -3596,7 +3596,7 @@ SWE_coalition_war_cabinet_cat = {
 				has_country_flag = SWE_has_picked_war_cabinet_trait
 			}
 
-			has_completed_focus = SWE_research_slot_1
+			always = no
 		}
 		ai_will_do = {
 			factor = 1
@@ -3614,7 +3614,7 @@ SWE_coalition_war_cabinet_cat = {
 				has_country_flag = SWE_has_picked_war_cabinet_trait
 			}
 
-			has_completed_focus = SWE_rationing
+			always = no
 		}
 
 		ai_will_do = {
@@ -3643,7 +3643,7 @@ SWE_coax_nordic_defense_council_cat = {
 					option = SWE_DEMOCRATIC_NORDIC_DEFENCE_COUNCIL
 				}
 			}
-			has_completed_focus = SWE_central_nordic_army_command
+			always = no
 		}
 
 		ai_will_do ={
@@ -3740,7 +3740,7 @@ SWE_coax_nordic_defense_council_cat = {
 				if = {
 					limit = { 
 						NOT = { has_dynamic_modifier = { modifier = SWE_nordic_defense_council_military_overhead }}
-						NOT = { has_completed_focus = SWE_neither_death_nor_dishonor }
+						always = yes
 					}
 					hidden_effect = {
 						add_dynamic_modifier = { modifier = SWE_nordic_defense_council_military_overhead }
@@ -3749,7 +3749,7 @@ SWE_coax_nordic_defense_council_cat = {
 
 				if = {
 					limit = {
-						has_completed_focus = SWE_neither_death_nor_dishonor
+						always = no
 					}
 
 					for_each_scope_loop = {

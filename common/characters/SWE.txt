@@ -615,7 +615,7 @@ characters={
 			available = { 
 				is_country_leader = no
 				NOT = {
-					has_completed_focus = SWE_liquidate_the_monarchy
+					always = no
 				}
 			}
 			allowed  = {

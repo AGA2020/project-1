@@ -590,7 +590,7 @@ AFG_mughal_plan = {
 		OR = {
 			is_subject = yes 
 			RAJ = {
-				has_completed_focus = RAJ_look_to_the_past
+				always = no
 			}
 		}
 	}

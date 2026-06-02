@@ -3748,7 +3748,7 @@ focus_tree = {
 			modifier = {
 				factor = 100
 				has_completed_focus = POR_join_the_comintern
-				SPD = { has_completed_focus = SPR_against_trotskyism_and_stalinism }
+				always = no
 			}
 		}
 
@@ -4400,10 +4400,10 @@ focus_tree = {
 						has_war = no 
 						is_in_faction = no
 						OR = {
-							has_completed_focus = SPA_the_phalanx_ascendant
+							always = no
 							AND = {
 								has_completed_focus = SPA_unify_the_nationalist_front
-								NOT = { has_completed_focus = SPA_the_iberian_pact }
+								always = yes
 							}
 						}
 					}
@@ -6272,7 +6272,7 @@ focus_tree = {
 				OR = { 
 					exists = no
 					has_capitulated = yes 
-					has_completed_focus = BRA_romanticize_the_old_empire
+					always = no
 				}
 			}
 		}
@@ -6396,7 +6396,7 @@ focus_tree = {
 				OR = { 
 					exists = no
 					has_capitulated = yes 
-					has_completed_focus = BRA_romanticize_the_old_empire
+					always = no
 				}
 			}
 		}

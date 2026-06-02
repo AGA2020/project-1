@@ -36,7 +36,7 @@ CHI_anti_imperialism = {
 				exists = no
 			}
 			OR = {
-				has_completed_focus = CHI_commit_to_korean_independence
+				always = no
 				has_completed_focus = CHI_sea_commit_to_korean_independence
 			}
 		}
@@ -48,7 +48,7 @@ CHI_anti_imperialism = {
 				exists = no
 			}
 			OR = {
-				has_completed_focus = CHI_commit_to_korean_independence
+				always = no
 				has_completed_focus = CHI_sea_commit_to_korean_independence
 			}
 		}
@@ -4650,7 +4650,7 @@ operations = {
 		fire_only_once = yes
 
 		activation = {
-			has_completed_focus = CHI_overlordship_over_indochina
+			always = no
 		}
 		
 		complete_effect = {

@@ -209,11 +209,8 @@ on_actions = {
 					}
 					#FOCUS TREE
 					load_focus_tree = { tree = bulgarian_focus keep_completed = no }
-					unlock_national_focus = BUL_oppose_the_royal_dictatorship
-					unlock_national_focus = BUL_appoint_communist_ministers
 					unlock_national_focus = BUL_unify_the_bourgeois_movement
 					unlock_national_focus = BUL_united_front_against_fascism
-					unlock_national_focus = BUL_overthrow_the_tsar
 					unlock_national_focus = BUL_the_peoples_republic_of_bulgaria
 					unlock_national_focus = BUL_condemn_macedonian_organizations
 					unlock_national_focus = BUL_acquire_modern_tools

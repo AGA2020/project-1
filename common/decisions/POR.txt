@@ -2057,10 +2057,10 @@ POR_iberian_summit = {
 			SPA = {
 				is_in_faction = no
 				OR = {
-					has_completed_focus = SPA_the_phalanx_ascendant
+					always = no
 					AND = {
 						has_completed_focus = SPA_unify_the_nationalist_front
-						NOT = { has_completed_focus = SPA_the_iberian_pact }
+						always = yes
 					}
 				}
 			}
@@ -2165,7 +2165,7 @@ POR_iberian_summit = {
 				SPA = {
 					is_in_faction = no
 					has_completed_focus = SPA_unify_the_nationalist_front
-					NOT = { has_completed_focus = SPA_the_iberian_pact }
+					always = yes
 				}
 			}
 			else = {
@@ -2367,7 +2367,7 @@ POR_monarchist_cause = {
 				
 					NOT = {
 						has_country_flag = BRA_rejected_monarchism
-						has_completed_focus = BRA_romanticize_the_old_empire
+						always = no
 					}
 				}
 			}

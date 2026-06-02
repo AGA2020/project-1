@@ -19,7 +19,7 @@ AUS_monarchist_puppet_plan = {
 		is_subject = yes 
 		OR = {
 			HUN = {
-				has_completed_focus = wuw_HUN_invite_otto_to_the_throne
+				always = no
 			}
 			HUN = {
 				AND = {
@@ -123,7 +123,7 @@ AUS_monarchist_annex_plan = {
 		is_subject = yes 
 		OR = {
 			HUN = {
-				has_completed_focus = wuw_HUN_invite_otto_to_the_throne
+				always = no
 			}
 			HUN = {
 				AND = {
@@ -228,7 +228,7 @@ AUS_neutrality_federative_plan = {
 		is_subject = yes 
 		OR = {
 			HUN = {
-				has_completed_focus = wuw_HUN_invite_otto_to_the_throne
+				always = no
 			}
 			HUN = {
 				AND = {

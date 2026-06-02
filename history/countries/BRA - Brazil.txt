@@ -364,7 +364,6 @@ recruit_character = BRA_random_army_chief
 		complete_national_focus = BRA_tribunal_de_seguranca_nacional
 		complete_national_focus = BRA_coffee_crisis_aftermath
 		complete_national_focus = BRA_ensure_continued_military_support #35
-		complete_national_focus = BRA_work_with_the_integralists #35
 		complete_national_focus = SMB_army #35
 		complete_national_focus = SMB_navy #35
 		complete_national_focus = BRA_desenvolvimentismo

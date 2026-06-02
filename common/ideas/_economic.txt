@@ -38,7 +38,7 @@ ideas = {
 					OR = {
 						has_war_support > 0.5
 						has_war = yes
-						has_completed_focus = USA_limited_intervention
+						always = no
 					}
 				}
 				ELSE = {
@@ -84,7 +84,7 @@ ideas = {
 					OR = {
 						has_war_support > 0.75
 						has_war = yes
-						has_completed_focus = USA_limited_intervention
+						always = no
 					}
 				}
 				ELSE = {
@@ -182,7 +182,7 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.3
@@ -221,7 +221,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -315,7 +315,7 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.5
@@ -367,7 +367,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -519,7 +519,7 @@ ideas = {
 
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.75
@@ -571,7 +571,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -718,7 +718,7 @@ ideas = {
 				
 				if = {
 					limit = {
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					has_war_support > 0.9
@@ -757,7 +757,7 @@ ideas = {
 				if = {
 					limit = {
 						tag = USA
-						has_completed_focus = USA_limited_intervention
+						always = no
 						has_defensive_war = no
 					}
 					USA_congress_large_opposition = yes
@@ -1115,7 +1115,7 @@ ideas = {
 						original_tag = SPR
 						has_dlc = "La Resistance"
 					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+					always = yes
 				}
 				if = {
 					limit = {
@@ -1200,7 +1200,7 @@ ideas = {
 						original_tag = SPR
 						has_dlc = "La Resistance"
 					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+					always = yes
 				}
 				if = {
 					limit = {
@@ -1317,7 +1317,7 @@ ideas = {
 						original_tag = SPR
 						has_dlc = "La Resistance"
 					}
-					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+					always = yes
 				}
 			}
 
@@ -1594,7 +1594,7 @@ ideas = {
 			}
 			visible = {
 				original_tag = RAJ
-				has_completed_focus = RAJ_special_economic_zones
+				always = no
 			}
 			available = {
 

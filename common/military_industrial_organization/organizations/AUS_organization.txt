@@ -55,7 +55,7 @@ AUS_stabilimento_tecnico_triestino_organization = {
 			limit = {
 				FROM = { original_tag = HUN }
 			}
-			FROM = { has_completed_focus = wuw_HUN_integrate_bohemian_and_austrian_industries }
+			always = no
 		}
 	}
 
@@ -146,7 +146,7 @@ AUS_ELIN_organization = {
 			limit = {
 				FROM = { original_tag = HUN }
 			}
-			FROM = { has_completed_focus = wuw_HUN_integrate_bohemian_and_austrian_industries }
+			always = no
 		}
 	}
 
@@ -416,7 +416,7 @@ AUS_osterreichische_fleugzeugfabrik_organization = {
 			limit = {
 				FROM = { original_tag = HUN }
 			}
-			FROM = { has_completed_focus = wuw_HUN_integrate_bohemian_and_austrian_industries }
+			always = no
 		}
 	}
 

@@ -68,10 +68,7 @@ characters={
 					}
 				}
 				NOT  = {
-					focus_progress  = {
-						focus  = USA_limited_intervention 
-						progress > 0.000
-					}
+					always = no
 				}
 			}
 			traits  = {

@@ -710,7 +710,7 @@ leader_traits = {
 			modifier = { #ITALY
 				factor = 2
 				FROM = {
-					has_completed_focus = ITA_proclaim_the_italian_empire
+					always = no
 				}
 			}
 		}
@@ -773,7 +773,7 @@ leader_traits = {
 			modifier = { #ITALY
 				factor = 2
 				FROM = {
-					has_completed_focus = ITA_novus_ordo
+					always = no
 				}
 			}
 		}
@@ -854,8 +854,8 @@ leader_traits = {
 				factor = 2
 				FROM = {
 					OR = {
-						has_completed_focus = ITA_divino_duce
-						has_completed_focus = ITA_a_greater_purpose
+						always = no
+						always = no
 					}
 				}
 			}
@@ -3300,8 +3300,8 @@ leader_traits = {
 				FROM = {
 					OR = {
 						neutrality < 0.05
-						has_completed_focus = BUL_overthrow_the_tsar
-						has_completed_focus = BUL_abolish_the_monarchy
+						always = no
+						always = no
 						has_completed_focus = BUL_depose_the_tsar
 						AND = {
 							has_completed_focus = BUL_plot_against_boris
