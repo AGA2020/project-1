@@ -7,7 +7,7 @@ state = {
 
 	history = {
 
-		owner = PRC
+		owner = CHI
 		add_core_of = PRC
 		add_core_of = CHI
 
@@ -16,7 +16,7 @@ state = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
-				transfer_state_to = XIC
+				transfer_state_to = CHI
 				add_core_of = XIC
 			}
 		}
@@ -46,8 +46,8 @@ state = {
 		}
 
 		1938.10.25 = {
-			owner = PRC
-			controller = PRC	
+			owner = CHI
+			controller = CHI	
 			add_victory_points = {
 				province = 8049
 				value = 2

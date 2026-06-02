@@ -12,7 +12,7 @@ state={
 	}
 
 history={ 1936.1.1.13 = { owner = WST add_core_of = WST }
-		owner = INS
+		owner = HOL
 		add_core_of = INS
 		victory_points = {
 			7381 5
