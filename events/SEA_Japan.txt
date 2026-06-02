@@ -1,4 +1,4 @@
-﻿##############################
+##############################
 #### Japanese Country Events ####
 #################################
 
@@ -149,14 +149,12 @@ country_event = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
-			complete_national_focus = JAP_revere_the_emperor_destroy_the_traitors
 			#custom_effect_tooltip = focus_effects_are_as_follows_tt
 			#effect_tooltip = {
 			#	
 			#}
 		}
 		ELSE = {
-			complete_national_focus = JAP_support_the_kodoha_faction
 		}
 
 		hidden_effect = {
@@ -251,7 +249,6 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
-		complete_national_focus = JAP_okadas_military_purge_speech
 		custom_effect_tooltip = focus_effects_are_as_follows_tt
 		effect_tooltip = {
 			JAP_small_government_faction_gain = yes
@@ -311,7 +308,6 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
-		complete_national_focus = JAP_strengthen_civilian_government
 
 		hidden_effect = {
 			set_country_flag = JAP_aizawas_trial_over_flag
@@ -363,7 +359,6 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
-		complete_national_focus = JAP_the_unthinkable_option
 
 		hidden_effect = {
 			set_country_flag = JAP_aizawas_trial_over_flag
@@ -6403,15 +6398,9 @@ country_event = {
 	option = {
 		name = SEA_japan_foreign_policy.84.a
 
-		uncomplete_national_focus = {
-			focus = JAP_utilize_our_polish_friendship
-			uncomplete_children = no
-			refund_political_power = no
-		}	
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		complete_national_focus = JAP_return_to_sakoku_ron
 
 	}
 }
@@ -10145,7 +10134,7 @@ country_event = {
 		
 		# So that you are going down a branch that actually has the specified focus 
 		OR = {
-			has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+			always = no
 			has_completed_focus = JAP_sea_purge_the_kodoha_faction
 		}
 
@@ -10612,8 +10601,8 @@ country_event = {
 		IF = {
 			limit = {
 				NOT = {
-					has_completed_focus = JAP_subdue_the_kwantung_army
-					has_completed_focus = JAP_revoke_the_peace_preservation_law
+					always = no
+					always = no
 				}
 			}
 			custom_effect_tooltip = JAP_first_strike_blocked_due_to_kwantung_army_tt
@@ -10636,8 +10625,8 @@ country_event = {
 				IF = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
-							has_completed_focus = JAP_revoke_the_peace_preservation_law
+							always = no
+							always = no
 						}
 					}
 					CHI = {
@@ -10686,8 +10675,8 @@ country_event = {
 				IF = {
 					limit = {
 						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
-							has_completed_focus = JAP_revoke_the_peace_preservation_law
+							always = no
+							always = no
 						}
 					}
 					613 = {
@@ -10941,10 +10930,6 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		complete_national_focus = {
-			focus = JAP_rikken_minseito_victory
-			use_side_message = yes
-		}
 
 	}
 
@@ -10959,10 +10944,6 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		complete_national_focus = {
-			focus = JAP_rikken_seiyukai_victory
-			use_side_message = yes
-		}
 
 	}
 
@@ -12585,7 +12566,7 @@ country_event = {
 		has_civil_war = no
 		has_war = yes
 
-		has_completed_focus = JAP_crush_the_internal_factions
+		always = no
 
 		any_core_state = {
 			JAP_is_home_islands_state = yes
@@ -12647,7 +12628,7 @@ country_event = {
 
 		has_civil_war = no
 
-		has_completed_focus = JAP_mitsumasa_yonai_focus
+		always = no
 
 		JAP_army_faction_is_tier_4 = yes
 

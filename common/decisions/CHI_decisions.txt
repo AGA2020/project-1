@@ -9385,7 +9385,7 @@ CHI_avoid_another_crisis_cat = {
 			NOT = { has_war_with = JAP }
 			JAP = {
 				NOT = {
-					has_completed_focus = JAP_subdue_the_kwantung_army
+					always = no
 				}
 			}
 		}

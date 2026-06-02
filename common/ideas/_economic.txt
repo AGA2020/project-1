@@ -646,7 +646,7 @@ ideas = {
 					}
 					NOT = { 
 						has_completed_focus = JAP_sea_national_defense_state 
-						has_completed_focus = JAP_prepare_for_the_final_war 
+						always = no 
 					}
 				}
 			}
@@ -872,14 +872,14 @@ ideas = {
 			visible = {
 				original_tag = JAP
 				OR = {
-					has_completed_focus = JAP_prepare_for_the_final_war
+					always = no
 					has_completed_focus = JAP_sea_national_defense_state
 				}
 			}
 
 			available = {
 				OR = {
-					has_completed_focus = JAP_prepare_for_the_final_war
+					always = no
 					has_completed_focus = JAP_sea_national_defense_state
 				}
 				OR = {

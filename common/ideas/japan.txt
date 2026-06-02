@@ -6854,8 +6854,8 @@ ideas = {
 			available = {
 				OR = {
 					has_completed_focus = JAP_found_the_great_japan_press_association
-					has_completed_focus = JAP_propagandize_the_nihon_shoki
-					#has_completed_focus = JAP_reform_the_education_system
+					always = no
+					#always = no
 				}
 			}
 			

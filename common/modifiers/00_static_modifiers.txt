@@ -608,6 +608,12 @@ operative_nationality_operation = {
 	operation_cost = -0.1
 }
 
+JAP_support_ethiopia_static_modifier = {
+	send_volunteers_tension = -0.5
+	send_volunteer_divisions_required = -0.25
+	send_volunteer_factor = 0.25
+}
+
 #LaR Compliance
 
 FRA_host_the_german_exiles = {
