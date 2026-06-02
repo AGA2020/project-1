@@ -1,4 +1,4 @@
-characters = {
+﻿characters = {
 
 	# Hirohito
 	JAP_emperor_hirohito = {
@@ -144,158 +144,20 @@ characters = {
 	}
 
 	# Kyūichi Tokuda
-	JAP_kyuichi_tokuda = {
-		name = JAP_kyuichi_tokuda
-
-		portraits = {
-			civilian = {
-				large = GFX_Portrait_kyuichi_tokuda
-			}
-		}
-
-		country_leader = {
-			ideology = marxism
-			traits = { JAP_chairman_of_the_jcp_trait }
-			expire = "1989.1.1.1"
-			id = -1
-		}
-
-	}
 
 	# Hitoshi Yamakawa
-	JAP_hitoshi_yamakawa = {
-		name = JAP_hitoshi_yamakawa
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_JAP_hitoshi_yamakawa
-				small = GFX_portrait_JAP_hitoshi_yamakawa_small
-			}
-		}
-
-		#country_leader = {
-		#	ideology = marxism
-		#	expire = "1989.1.1.1"
-		#	id = -1
-		#}
-
-	}
 
 	# Kanson Arahata
-	JAP_kanson_arahata = {
-		name = JAP_kanson_arahata
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_JAP_kanson_arahata
-				small = GFX_portrait_JAP_kanson_arahata_small
-			}
-		}
-
-		#country_leader = {
-		#	ideology = marxism
-		#	expire = "1989.1.1.1"
-		#	id = -1
-		#}
-
-	}
 
 	# Yamakawa Kikue
-	JAP_yamakawa_kikue = {
-		name = JAP_yamakawa_kikue
-
-		gender = female
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_JAP_yamakawa_kikue
-				small = GFX_portrait_JAP_yamakawa_kikue_small
-			}
-		}
-
-		#country_leader = {
-		#	ideology = marxism
-		#	expire = "1989.1.1.1"
-		#	id = -1
-		#}
-
-	}
 
 	# Tetsu Katayama
-	JAP_tetsu_katayama = {
-		name = JAP_tetsu_katayama
-
-		portraits = {
-			civilian = {
-				large = GFX_Portrait_tetsu_katayama
-			}
-		}
-
-		country_leader = {
-			ideology = liberalism
-			expire = "1989.1.1.1"
-			id = -1
-			traits = { resolute_social_democrat }
-		}
-
-	}
 
 	# Ichirō Hatoyama
-	JAP_ichiro_hatoyama = {
-		name = JAP_ichiro_hatoyama
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_JAP_ichiro_hatoyama
-				small = GFX_portrait_JAP_ichiro_hatoyama_small
-			}
-		}
-
-		#country_leader = {
-		#	ideology = liberalism
-		#	expire = "1989.1.1.1"
-		#	id = -1
-		#}
-
-	}
 
 	# Machida Chūji
-	JAP_machida_chuuji = {
-		name = JAP_machida_chuuji
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_JAP_machida_chuuji
-				small = GFX_portrait_JAP_machida_chuuji_small
-			}
-		}
-
-		#country_leader = {
-		#	ideology = liberalism
-		#	expire = "1989.1.1.1"
-		#	id = -1
-		#}
-
-	}
 
 	# Abe Isoo
-	JAP_abe_isoo = {
-		name = JAP_abe_isoo
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_JAP_abe_isoo
-				small = GFX_portrait_JAP_abe_isoo_smalll
-			}
-		}
-
-		#country_leader = {
-		#	ideology = liberalism
-		#	expire = "1989.1.1.1"
-		#	id = -1
-		#}
-
-	}
 
 	# Keisuke Okada
 	JAP_keisuke_okada = {
@@ -422,23 +284,6 @@ characters = {
 	}
 
 	# Tokugawa Iesato
-	JAP_tokugawa_iesato = {
-		name = JAP_tokugawa_iesato
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_JAP_tokugawa_iesato
-				small = GFX_portrait_JAP_tokugawa_iesato_small
-			}
-		}
-
-		#country_leader = {
-		#	ideology = liberalism
-		#	expire = "1989.1.1.1"
-		#	id = -1
-		#}
-
-	}
 
 	# Adachi Kenzō
 	JAP_adachi_kenzo = {
@@ -461,24 +306,6 @@ characters = {
 	}
 
 	# Seigō Nakano
-	JAP_seigo_nakano = {
-		name = JAP_seigo_nakano
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_JAP_seigo_nakano
-				small = GFX_portrait_JAP_seigo_nakano_small
-			}
-		}
-
-		#country_leader = {
-		#	ideology = gen_nazism
-		#	traits = {  }
-		#	expire = "1952.1.1.1"
-		#	id = -1
-		#}
-
-	}
 
 	# Prince Tsuneyoshi Takeda
 	JAP_tsuneyoshi_takeda = {
@@ -2880,183 +2707,8 @@ characters = {
 	### POLITICAL ADVISORS ###
 
 	# Sanzō Nosaka
-	JAP_sanzo_nosaka = {
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-			}
-
-			name = JAP_sanzo_nosaka
-
-			portraits = {
-				army = {
-					small = GFX_idea_sanzo_nosaka
-				}
-			}
-
-			advisor = {
-				slot = political_advisor
-				idea_token = sanzo_nosaka
-				available = {
-					if = {
-						limit = {
-							has_dlc = "Waking the Tiger"
-						}
-						always = no 
-					}
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-				}
-				allowed = {
-					original_tag = JAP
-				}
-				traits = {
-					communist_revolutionary 
-				}
-				do_effect = {
-					NOT = {
-						has_government = communism 
-					}
-				}
-				ai_will_do = {
-					base = 1
-				}
-			}
-		}
-		instance = {
-			allowed = {
-				has_dlc = "No Compromise, No Surrender"
-			}
-
-			name = JAP_sanzo_nosaka
-
-			portraits = {
-				army = {
-					large = GFX_portrait_JAP_sanzo_nosaka
-					small = GFX_portrait_JAP_sanzo_nosaka_military_small
-				}
-				civilian = {
-					small = GFX_portrait_JAP_sanzo_nosaka_civilian_small
-				}
-			}
-
-			# Will be a potential Kozaha country leader
-			#country_leader = {
-			#	ideology = marxism
-			#	expire = "1989.1.1.1"
-			#	id = -1
-			#}
-
-		}
-
-	}
 
 	# Kijūrō Shidehara
-	JAP_kijuro_shidehara = {
-
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-			}
-			name = JAP_kijuro_shidehara
-
-			portraits = {
-				civilian = {
-					small = GFX_idea_kijuro_shidehara
-				}
-			}
-
-			advisor = {
-				slot = political_advisor
-				idea_token = kijuro_shidehara
-				available = {
-					if = {
-						limit = {
-							has_dlc = "Waking the Tiger"
-						}
-						always = no 
-					}
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-				}
-				allowed = {
-					original_tag = JAP
-				}
-				traits = {
-					democratic_reformer 
-				}
-				do_effect = {
-					NOT = {
-						has_government = democratic 
-					}
-				}
-				ai_will_do = {
-					base = 0.5
-				}
-			}
-		}
-		instance = {
-			allowed = {
-				has_dlc = "No Compromise, No Surrender"
-			}
-			name = JAP_kijuro_shidehara
-
-			portraits = {
-				civilian = {
-					small = GFX_idea_kijuro_shidehara
-				}
-			}
-
-			advisor = {
-
-				slot = political_advisor
-				idea_token = kijuro_shidehara
-
-				allowed = {
-					original_tag = JAP
-				}
-
-				visible = {
-					NOT = {
-						has_government = fascism
-						has_government = communism
-						always = no
-					}
-				}
-
-				available = {
-					has_government = democratic
-				}
-				
-				traits = {
-					JAP_pacifist_baron 
-				}
-
-				ai_will_do = {
-					base = 0.5
-				}
-
-			}
-
-		}
-
-	}
 
 	# Kingoro Hashimoto
 	JAP_kingoro_hashimoto = {
@@ -3674,45 +3326,6 @@ characters = {
 	}
 
 	# Fukumoto Kazuo
-	JAP_fukumoto_kazuo = {
-		name = JAP_fukumoto_kazuo
-
-		portraits = {
-			civilian = {
-				small = GFX_portrait_JAP_fukumoto_kazuo_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = JAP_fukumoto_kazuo
-
-			allowed = {
-				original_tag = JAP
-			}
-
-			visible = {
-				NOT = {
-					always = no
-					always = no
-					has_completed_focus = JAP_sea_purge_the_kodoha_faction
-				}
-			}
-
-			available = {
-				always = no
-			}
-
-			traits = {
-				JAP_marxist_theoretician
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-		}
-
-	}
 
 	# Kōichi Kido
 	JAP_koichi_kido = {
@@ -4417,44 +4030,6 @@ characters = {
 	}
 
 	# Yoshio Shiga
-	JAP_yoshio_shiga = {
-		name = JAP_yoshio_shiga
-
-		portraits = {
-			civilian = {
-				small = GFX_portrait_JAP_yoshio_shiga_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = JAP_yoshio_shiga
-
-			allowed = {
-				original_tag = JAP
-			}
-
-			visible = {
-				NOT = {
-					always = no
-					always = no
-					has_completed_focus = JAP_sea_purge_the_kodoha_faction
-				}
-			}
-
-			available = {
-				always = no
-			}
-
-			traits = {
-				devoted_communist
-			}
-			ai_will_do = {
-				base = 1
-			}
-		}
-
-	}
 
 	# Hisachi Aso
 	JAP_hisachi_aso = {
@@ -4582,43 +4157,6 @@ characters = {
 	}
 
 	# Hakamada Satomi
-	JAP_hakamada_satomi = {
-		name = JAP_hakamada_satomi
-
-		portraits = {
-			civilian = {
-				small = GFX_portrait_JAP_hakamada_satomi_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = JAP_hakamada_satomi
-
-			allowed = {
-				original_tag = JAP
-			}
-
-			visible = {
-				NOT = {
-					has_completed_focus = JAP_sea_purge_the_kodoha_faction
-					always = no
-				}
-			}
-
-			available = {
-				has_government = communism
-			}
-
-			traits = {
-				marxist_fundamentalist
-			}
-			ai_will_do = {
-				base = 1
-			}
-		}
-
-	}
 
 	# Koyata Iwasaki
 	JAP_koyata_iwasaki = {
@@ -5076,43 +4614,6 @@ characters = {
 	}
 
 	# Kojiro Fukushi
-	JAP_kojiro_fukushi = {
-		name = JAP_kojiro_fukushi
-
-		portraits = {
-			civilian = {
-				small = GFX_portrait_JAP_kojiro_fukushi_small
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = JAP_kojiro_fukushi
-
-			allowed = {
-				original_tag = JAP
-			}
-
-			visible = {
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
-			}
-
-			available = {
-				has_government = fascism
-			}
-
-			traits = {
-				JAP_fascist_poet
-			}
-			ai_will_do = {
-				base = 1
-			}
-		}
-
-	}
 
 	# Gōtarō Ogawa
 	JAP_gotaro_ogawa = {
@@ -5197,101 +4698,8 @@ characters = {
 	}
 
 	# Kōzō Sasaki
-	JAP_kozo_sasaki = {
-		name = JAP_kozo_sasaki
-
-		portraits = {
-			civilian = {
-				small = GFX_portrait_JAP_kozo_sasaki_small
-				# GFX_portrait_JAP_kozo_sasaki_imprisoned
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = JAP_kozo_sasaki
-
-			allowed = {
-				original_tag = JAP
-			}
-
-			cost = 50
-
-			visible = {
-				NOT = {
-					always = no
-					always = no
-					has_completed_focus = JAP_sea_purge_the_kodoha_faction
-				}
-			}
-
-			available = {
-				always = no
-				NOT = {
-					has_country_flag = JAP_IJA_arrested_advisors_flag
-				}
-			}
-
-			traits = {
-				JAP_kozo_the_ogre_trait
-			}
-			ai_will_do = {
-				base = 1
-			}
-		}
-
-	}
 
 	# Girō Seno'o
-	JAP_giro_senoo = {
-		name = JAP_giro_senoo
-
-		portraits = {
-			civilian = {
-				large = GFX_portrait_JAP_giro_senoo
-				small = GFX_portrait_JAP_giro_senoo_small
-			}
-		}
-
-		#country_leader = {
-		#	ideology = buddhist_socialism
-		#	expire = "1989.1.1.1"
-		#	id = -1
-		#}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = JAP_giro_senoo
-
-			allowed = {
-				original_tag = JAP
-			}
-
-			visible = {
-				NOT = {
-					always = no
-					always = no
-					has_completed_focus = JAP_sea_purge_the_kodoha_faction
-					has_country_leader = {
-						ruling_only = yes
-						character = JAP_giro_senoo
-					}	
-				}
-			}
-
-			available = {
-				always = no
-			}
-
-			traits = {
-				JAP_buddhist_socialist_trait
-			}
-			ai_will_do = {
-				base = 1
-			}
-		}
-
-	}
 
 	# Kiichirō Hiranuma
 	JAP_kiichiro_hiranuma = {
